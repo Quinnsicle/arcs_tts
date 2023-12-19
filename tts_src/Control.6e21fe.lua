@@ -6,46 +6,90 @@ control_GUID = Global.getVar("control_GUID")
 -- font_color = {0.8, 0.58, 0.27}, GOLD
 local blue = {0.4, 0.6, 0.6}
 
-local toggleLeaders_params = {
+local toggleLeadersWITHOUT_params = {
     index = 0,
     click_function = "toggleLeaders",
     function_owner = self,
     label = "Play\nWITHOUT\nLeaders & Lore",
+    tooltip = "Recommended for beginners",
     position = {0, 0.5, -1.17},
     width = 820,
     height = 260,
     font_size = 72,
     scale = {1, 1, 1},
     color = {0.85, 0.3, 0.2},
-    font_color = {0, 0, 0},
-    tooltip = "Recommended for beginners"
+    font_color = {0, 0, 0}
 }
 
-local toggleExpansion_params = {
+local toggleLeadersWITH_params = {
+    index = 0,
+    click_function = "toggleLeaders",
+    function_owner = self,
+    label = "Play\nWITHOUT\nLeaders & Lore",
+    tooltip = "Recommended for experienced players",
+    position = {0, 0.5, -1.17},
+    width = 820,
+    height = 260,
+    font_size = 72,
+    scale = {1, 1, 1},
+    color = {0.28, 0.52, 0.18},
+    font_color = {0, 0, 0}
+}
+
+local toggleExpansionEXCLUDE_params = {
     index = 1,
     click_function = "toggleExpansion",
     function_owner = self,
     label = "EXCLUDE\nLeaders & Lore\nExpansion",
+    tooltip = "Exclude additional Leaders & Lore",
     position = {-0.45, 0.5, -0.59},
     width = 440,
     height = 260,
     font_size = 60,
     scale = {1, 1, 1},
-    color = {0.85, 0.3, 0.2},
-    tooltip = "Exclude additional Leaders & Lore"
+    color = {0.85, 0.3, 0.2}
 }
 
-local splitDiscard_params = {
+local toggleExpansionINCLUDE_params = {
+    index = 1,
+    click_function = "toggleExpansion",
+    function_owner = self,
+    label = "INCLUDE\nLeaders & Lore\nExpansion",
+    tooltip = "Include additional Leaders & Lore",
+    position = {-0.45, 0.5, -0.59},
+    width = 440,
+    height = 260,
+    font_size = 60,
+    scale = {1, 1, 1},
+    color = {0.28, 0.52, 0.18}
+}
+
+local splitDiscardFACEDOWN_params = {
     index = 5,
     function_owner = self,
     click_function = "toggleSplitDiscard",
     label = "Discard\nFACEDOWN",
+    tooltip = "Discard all cards facedown",
     position = {0.45, 0.5, -0.59},
     width = 440,
     height = 260,
     font_size = 60,
     scale = {1, 1, 1},
     color = {0.85, 0.3, 0.2}
+}
+
+local splitDiscardFACEUP_params = {
+    index = 5,
+    function_owner = self,
+    click_function = "toggleSplitDiscard",
+    label = "Discard\nFACEUP",
+    tooltip = "Discard faceup cards in a separate pile",
+    position = {0.45, 0.5, -0.59},
+    width = 440,
+    height = 260,
+    font_size = 60,
+    scale = {1, 1, 1},
+    color = {0.28, 0.52, 0.18}
 }
 
 local setupBaseGame_params = {
@@ -144,12 +188,12 @@ local takeInitiative_params = {
 }
 
 function onload()
-    self.createButton(toggleLeaders_params)
-    self.createButton(toggleExpansion_params)
+    self.createButton(toggleLeadersWITHOUT_params)
+    self.createButton(toggleExpansionEXCLUDE_params)
     self.createButton(setupBaseGame_params)
     self.createButton(setupCampaignGame_params)
     self.createButton(showControls_params)
-    self.createButton(splitDiscard_params)
+    self.createButton(splitDiscardFACEDOWN_params)
 end
 
 function toggleLeaders()
@@ -159,19 +203,9 @@ function toggleLeaders()
     Global.setVar("with_leaders", toggle)
 
     if (toggle) then
-        self.editButton({
-            index = 0,
-            color = {0.28, 0.52, 0.18},
-            label = "Play\nWITH\nLeaders & Lore",
-            tooltip = "Recommended for experienced players"
-        })
+        self.editButton(toggleLeadersWITH_params)
     else
-        self.editButton({
-            index = 0,
-            color = {0.85, 0.3, 0.2},
-            label = "Play\nWITHOUT\nLeaders & Lore",
-            tooltip = "Recommended for beginners"
-        })
+        self.editButton(toggleLeadersWITHOUT_params)
     end
 end
 
@@ -182,19 +216,9 @@ function toggleExpansion()
     Global.setVar("with_more_to_explore", toggle)
 
     if (toggle) then
-        self.editButton({
-            index = 1,
-            color = {0.28, 0.52, 0.18},
-            label = "INCLUDE\nLeaders & Lore\nExpansion",
-            tooltip = "Include additional Leaders & Lore"
-        })
+        self.editButton(toggleExpansionINCLUDE_params)
     else
-        self.editButton({
-            index = 1,
-            color = {0.85, 0.3, 0.2},
-            label = "EXCLUDE\nLeaders & Lore\nExpansion",
-            tooltip = "Exclude additional Leaders & Lore"
-        })
+        self.editButton(toggleExpansionEXCLUDE_params)
     end
 end
 
@@ -203,21 +227,12 @@ function toggleSplitDiscard()
 
     toggle = not toggle
     Global.setVar("with_split_discard", toggle)
+    print(Global.getVar("with_split_discard"))
 
     if (toggle) then
-        self.editButton({
-            index = 5,
-            color = {0.28, 0.52, 0.18},
-            label = "Discard\nFACEUP",
-            tooltip = "Include additional Leaders & Lore"
-        })
+        self.editButton(splitDiscardFACEUP_params)
     else
-        self.editButton({
-            index = 5,
-            color = {0.85, 0.3, 0.2},
-            label = "Discard\nFACEDOWN",
-            tooltip = "Exclude additional Leaders & Lore"
-        })
+        self.editButton(splitDiscardFACEDOWN_params)
     end
 end
 
@@ -285,12 +300,31 @@ function toggleControls()
 end
 
 function setStartupButtons()
-    self.editButton(toggleLeaders_params)
-    self.editButton(toggleExpansion_params)
+
+    local with_leaders = Global.getVar("with_leaders")
+    if (with_leaders) then
+        self.editButton(toggleLeadersWITH_params)
+    else
+        self.editButton(toggleLeadersWITHOUT_params)
+    end
+
+    local with_more_to_explore = Global.getVar("with_more_to_explore")
+    if (with_more_to_explore) then
+        self.editButton(toggleExpansionINCLUDE_params)
+    else
+        self.editButton(toggleExpansionEXCLUDE_params)
+    end
+
     self.editButton(setupBaseGame_params)
     self.editButton(setupCampaignGame_params)
     self.editButton(showControls_params)
-    self.editButton(splitDiscard_params)
+
+    local with_split_discard = Global.getVar("with_split_discard")
+    if (with_split_discard) then
+        self.editButton(splitDiscardFACEUP_params)
+    else
+        self.editButton(splitDiscardFACEDOWN_params)
+    end
 end
 
 function setLeaderControls()
@@ -344,15 +378,10 @@ function setLeaderControls()
 end
 
 function setControlButtons()
-    print("test1")
     self.editButton(controls_params)
-    print("test2")
     self.editButton(dealHand_params)
-    print("test3")
     self.editButton(cleanupCards_params)
-    print("test4")
     self.editButton(takeInitiative_params)
-    print("test5")
     self.editButton({
         index = 5,
         height = 1,
@@ -362,7 +391,6 @@ function setControlButtons()
         tooltip = ""
     })
     if (not showing_controls) then
-        print("test6")
         self.editButton({
             index = 4,
             height = 1,
@@ -372,7 +400,6 @@ function setControlButtons()
             tooltip = ""
         })
     end
-    print("test7")
 end
 
 function doNothing()
@@ -424,13 +451,35 @@ function cleanupCards()
 
     -- clean up
     broadcastToAll("Cleanup action card area")
+
+    local with_split_discard = Global.getVar("with_split_discard")
+
     for i, obj in ipairs(action_zone_objects) do
         if obj.getTags()[1] == "Action" then
             -- action cards
-            obj.setPositionSmooth({action_deck_pos.x,
-                                   action_deck_pos.y + 1,
-                                   action_deck_pos.z})
-            obj.setRotationSmooth({0.00, 90.00, 180.00})
+            if (with_split_discard) then
+                -- discard faceup cards in separate pile
+                local facedown_discard_pos = {
+                    x = -16.34,
+                    y = 2,
+                    z = 6.94
+                }
+
+                if (obj.getRotation().z < 90) then -- faceup (rotation z=0)
+                    obj.setPositionSmooth(facedown_discard_pos)
+                else -- facedown (rotation z=180)
+                    obj.setPositionSmooth(
+                        {action_deck_pos.x, action_deck_pos.y + 1,
+                         action_deck_pos.z})
+                end
+
+            else
+                -- discard all cards facedown
+                obj.setPositionSmooth(
+                    {action_deck_pos.x, action_deck_pos.y + 1,
+                     action_deck_pos.z})
+                obj.setRotationSmooth({0.00, 90.00, 180.00})
+            end
         elseif obj.getTags()[1] == "AmbitionDeclared" then
             -- ambition marker
             obj.setPositionSmooth(marker_zone_pos)

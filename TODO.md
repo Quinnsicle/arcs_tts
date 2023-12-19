@@ -8,4 +8,6 @@
 - [ ] Add Blight to gates on campaign setup
 - [ ] Custom right click options to return things to supply 
 - [ ] Supply number bug for non hosts, I think I just need to recreate the supply tokens.
+- [ ] Dice rolling area
+- [ ] Spectate toggle buttons for each player area
 - [ ] Remove print statements
