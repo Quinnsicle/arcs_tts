@@ -32,6 +32,13 @@ function BaseGame.setup()
     return true
 end
 
+function BaseGame.dispersePlayerPieces()
+
+    print("disperse starting pieces")
+
+    setupPlayers(Global.getVar("active_players"), chosen_setup_card)
+end
+
 -- D
 function BaseGame.setupActionDeck(player_count)
     print("Base Game Setup Action Deck")
