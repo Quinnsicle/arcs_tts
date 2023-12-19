@@ -255,7 +255,7 @@ function assignPlayerToAvailableColor(player, color)
 end
 
 function onPlayerConnect(player)
-    assignPlayerToAvailableColor(player)
+    -- assignPlayerToAvailableColor(player)
 end
 
 function onPlayerDisconnect(player)
@@ -273,7 +273,7 @@ function onObjectLeaveContainer(container, leave_object)
 end
 
 ----------------------------------------------------
-
+-- returns a table of colors in order
 function getOrderedPlayers()
     local seated_players = getSeatedPlayers()
 
@@ -1254,8 +1254,8 @@ starting_pieces = {
 
 function onLoad()
     -- Assign all connected players to a color spot.
-    for _, player in ipairs(Player.getPlayers()) do
-        assignPlayerToAvailableColor(player)
-    end
+    -- for _, player in ipairs(Player.getPlayers()) do
+    --     assignPlayerToAvailableColor(player)
+    -- end
 
 end
