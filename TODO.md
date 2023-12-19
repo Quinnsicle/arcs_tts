@@ -1,0 +1,11 @@
+- [ ] Create supply token and counter for the Blight 
+- [ ] Create supply token and counter for the free cities 
+- [ ] Create supply token and counter for the free starports
+- [ ] Split discard toggle button and function in cleanup
+- [ ] Restructure player colors so that the seating is random
+- [ ] Give first regent title to player with initiative on campaign setup
+- [ ] Give initiative buttons?
+- [ ] Add Blight to gates on campaign setup
+- [ ] Custom right click options to return things to supply 
+- [ ] Supply number bug for non hosts, I think I just need to recreate the supply tokens.
+- [ ] Remove print statements
