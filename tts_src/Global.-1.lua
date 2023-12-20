@@ -273,6 +273,13 @@ function onObjectLeaveContainer(container, leave_object)
     end
 end
 
+function tryObjectEnterContainer(container, object)
+  if object.getStateId() == 2 then
+    object.setState(1)
+  end
+  return container.hasMatchingTag(object)
+end
+
 ----------------------------------------------------
 -- returns a table of colors in order
 function getOrderedPlayers()
