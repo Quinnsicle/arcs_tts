@@ -5,7 +5,7 @@
 - [ ] Restructure player colors so that the seating is random
 - [ ] Give first regent title to player with initiative on campaign setup
 - [ ] Give initiative buttons?
-- [ ] Add Blight to gates on campaign setup
+- [x] Add Blight to gates on campaign setup
 - [ ] Custom right click options to return things to supply 
 - [ ] Supply number bug for non hosts, I think I just need to recreate the supply tokens.
 - [ ] Dice rolling area
@@ -15,7 +15,7 @@
 
 
 
-- [ ] red and blue are out of order on setup
+- [x] red and blue are out of order on setup
 - [ ] give starting resources
 - [ ] agent snap points for outrage
 

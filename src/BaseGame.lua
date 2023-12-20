@@ -28,20 +28,18 @@ function BaseGame.setup()
     end
 
     Global.setVar("active_players", active_players)
-    print("end")
     return true
 end
 
 function BaseGame.dispersePlayerPieces()
-
-    print("disperse starting pieces")
+    -- print("disperse starting pieces")
 
     setupPlayers(Global.getVar("active_players"), chosen_setup_card)
 end
 
 -- D
 function BaseGame.setupActionDeck(player_count)
-    print("Base Game Setup Action Deck")
+    -- print("Base Game Setup Action Deck")
 
     -- Add 7s and 1s to the action deck for 4 players
     local four_player_action_deck =
@@ -62,7 +60,7 @@ end
 
 -- H
 function BaseGame.setupBaseCourt(player_count)
-    print("Setup Base Court")
+    -- print("Setup Base Court")
 
     local court_zone = getObjectFromGUID(Global.getVar(
         "court_deck_zone_GUID"))
@@ -81,7 +79,7 @@ end
 
 -- I
 function BaseGame.chooseSetupCard(player_count)
-    print("Choose Setup Card")
+    -- print("Choose Setup Card")
 
     local player_colors = {"White", "Yellow", "Red", "Teal"}
 
@@ -184,7 +182,7 @@ end
 
 -- J
 function BaseGame.setupOutOfPlayClusters(setup_card)
-    print("Setup Out of Play Clusters")
+    -- print("Setup Out of Play Clusters")
 
     local cluster_zone_guids = Global.getVar("cluster_zone_GUIDs")
 
@@ -271,7 +269,7 @@ end
 
 -- K
 function BaseGame.setup2PMerchant(setup_card)
-    print("Setup 2P Merchant")
+    -- print("Setup 2P Merchant")
     local merchant_params
 
     for _, gate_num in ipairs(setup_card.out_of_play_clusters) do
@@ -338,7 +336,7 @@ function BaseGame.dealLeaders(player_count)
 end
 
 function BaseGame.setupPlayers(ordered_players, setup_card)
-    print("Setup Players")
+    -- print("Setup Players")
 
     local player_leaders = {
         [1] = "Default",

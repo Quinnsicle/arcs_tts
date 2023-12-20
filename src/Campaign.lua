@@ -284,23 +284,26 @@ function Campaign.setupClusters(player_count)
                         end
 
                         -- Blight
-                        if (system ~= "gate") then
+                        if (system == "gate") then
+                            system_ship_zone =
+                                getObjectFromGUID(system_value)
+                        else
                             system_ship_zone =
                                 getObjectFromGUID(
                                     system_value["ships"])
-                            local blight =
-                                getObjectFromGUID(Global.getVar(
-                                    "blight_GUID"))
-                            blight.takeObject({
-                                position = system_ship_zone.getPosition(),
-                                rotation = {
-                                    x = 0,
-                                    y = 180,
-                                    z = 180
-                                }
-                            })
-
                         end
+
+                        local blight =
+                            getObjectFromGUID(Global.getVar(
+                                "blight_GUID"))
+                        blight.takeObject({
+                            position = system_ship_zone.getPosition(),
+                            rotation = {
+                                x = 0,
+                                y = 180,
+                                z = 180
+                            }
+                        })
 
                     end
                 end

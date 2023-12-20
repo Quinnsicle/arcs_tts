@@ -227,7 +227,6 @@ function toggleSplitDiscard()
 
     toggle = not toggle
     Global.setVar("with_split_discard", toggle)
-    print(Global.getVar("with_split_discard"))
 
     if (toggle) then
         self.editButton(splitDiscardFACEUP_params)
@@ -241,7 +240,6 @@ function setupBaseGame()
 
     if (base_setup_success) then
         setControlButtons()
-        print("setup success")
     elseif (Global.getVar("with_leaders")) then
         setLeaderControls()
     end
