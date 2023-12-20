@@ -1,0 +1,35 @@
+<Defaults>
+  <Button fontStyle='Bold' fontSize='10' colors='#dddddd|#ffffff|#808080|#606060' />
+</Defaults>
+
+<Panel height='80' width='280' position='0 140 -20' rotation='0 0 180'>
+    <VerticalLayout padding='5 5 5 5' spacing='5'>
+      <HorizontalLayout>
+        <Button text='Skirmish' onClick='SpawnCombatDie(skirmish)' colors='#4e7d84|#80adb4|#808080|#606060'/>
+        <Button text='Assault' onClick='SpawnCombatDie(assault)' colors='#83271C|#d75343|#808080|#606060'/>
+        <Button text='Raid' onClick='SpawnCombatDie(raid)' colors='#d07430|#db9561|#808080|#606060'/>
+        <Button text='Cluster' onClick='SpawnSpecialDie(cluster)' textColor='#ffffff' colors='#000000|#717171|#808080|#606060'/>
+        <Button text='Event' onClick='SpawnSpecialDie(event)' textColor='#ffffff' colors='#000000|#717171|#808080|#606060'/>
+      </HorizontalLayout>
+      <HorizontalLayout>
+        <Button text='Roll' onClick='RollDice'/>
+        <Button text='Clear' onClick='ClearDice'/>
+      </HorizontalLayout>
+    </VerticalLayout>
+</Panel>
+
+<Panel height='80' width='280' position='0 -140 -20' rotation='0 0 0'>
+    <VerticalLayout padding='5 5 5 5' spacing='5'>
+      <HorizontalLayout>
+        <Button text='Skirmish' onClick='SpawnCombatDie(skirmish)' colors='#4e7d84|#80adb4|#808080|#606060'/>
+        <Button text='Assault' onClick='SpawnCombatDie(assault)' colors='#83271C|#d75343|#808080|#606060'/>
+        <Button text='Raid' onClick='SpawnCombatDie(raid)' colors='#d07430|#db9561|#808080|#606060'/>
+        <Button text='Cluster' onClick='SpawnSpecialDie(cluster)' textColor='#ffffff' colors='#000000|#717171|#808080|#606060'/>
+        <Button text='Event' onClick='SpawnSpecialDie(event)' textColor='#ffffff' colors='#000000|#717171|#808080|#606060'/>
+      </HorizontalLayout>
+      <HorizontalLayout>
+        <Button text='Roll' onClick='RollDice'/>
+        <Button text='Clear' onClick='ClearDice'/>
+      </HorizontalLayout>
+    </VerticalLayout>
+</Panel>

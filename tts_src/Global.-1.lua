@@ -272,12 +272,19 @@ function onObjectLeaveContainer(container, leave_object)
     end
 end
 
+function tryObjectEnterContainer(container, object)
+  if object.getStateId() == 2 then
+    object.setState(1)
+  end
+  return container.hasMatchingTag(object)
+end
+
 ----------------------------------------------------
 -- returns a table of colors in order
 function getOrderedPlayers()
     local seated_players = getSeatedPlayers()
 
-    local player_count = #seated_players + 1
+    local player_count = #seated_players
 
     if (player_count > 4 or player_count < 2) then
         msg = "This game only supports 2-4 players"
@@ -289,7 +296,7 @@ function getOrderedPlayers()
         return {""}
     end
 
-    local players = {"White", "Yellow", "Teal", "Red"}
+    local players = {"White", "Yellow", "Red", "Teal"}
     local ordered_players = {}
     local i = math.random(player_count)
     local count = 0

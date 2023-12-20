@@ -1,4 +1,4 @@
-supply_GUID = Global.getVar("imperial_ships_GUID")
+--[[ supply_GUID = Global.getVar("imperial_ships_GUID")
 supply = getObjectFromGUID(supply_GUID)
 
 function onLoad()
@@ -58,4 +58,4 @@ function filterObjectEnter(obj)
 end
 
 function doNothing()
-end
+end --]]

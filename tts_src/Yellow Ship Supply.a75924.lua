@@ -1,4 +1,4 @@
-supply_GUID = Global.getVar("player_pieces_GUIDs")["Yellow"]["ships"]
+--[[ supply_GUID = Global.getVar("player_pieces_GUIDs")["Yellow"]["ships"]
 supply = getObjectFromGUID(supply_GUID)
 
 function onLoad()
@@ -55,4 +55,4 @@ function filterObjectEnter(obj)
         obj.setState(1)
     end
     return self.hasMatchingTag(obj)
-end
+end --]]
