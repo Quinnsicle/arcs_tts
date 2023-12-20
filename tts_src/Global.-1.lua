@@ -240,8 +240,9 @@ die_zone_GUID = "1b45bb"
 
 imperial_ships_GUID = "beb54d"
 imperial_ships_text_GUID = "6daaa3"
-free_cities_GUID = "1205b0"
-blight_GUID = "3c61d2"
+free_cities_GUID = "80742e"
+free_starports_GUID = "c79cb8"
+blight_GUID = "ff61a8"
 
 A_Fates_GUID = "0ac7d1"
 
@@ -277,7 +278,7 @@ end
 function getOrderedPlayers()
     local seated_players = getSeatedPlayers()
 
-    local player_count = #seated_players + 1
+    local player_count = #seated_players
 
     if (player_count > 4 or player_count < 2) then
         msg = "This game only supports 2-4 players"
@@ -289,7 +290,7 @@ function getOrderedPlayers()
         return {""}
     end
 
-    local players = {"White", "Yellow", "Teal", "Red"}
+    local players = {"White", "Yellow", "Red", "Teal"}
     local ordered_players = {}
     local i = math.random(player_count)
     local count = 0
