@@ -151,49 +151,38 @@ function ObjectCounters.setup()
     }
   }
 
+  -- Begin implementing buttons
   for _, counter in ipairs(Counters) do
     Has_Counter[counter.GUID] = true
-    ObjectCounters.CreateShadow(counter)
-    ObjectCounters.CreateCounter(counter)
+    local container = getObjectFromGUID(counter.GUID)
+    container.createButton({
+      function_owner  = self,
+      click_function  = "doNothing",
+      label           = ""..#container.getObjects(),
+      position        = counter.shadow,
+      rotation        = counter.rotation and counter.rotation or {0,0,0},
+      width           = counter.width,
+      height          = counter.height,
+      scale           = counter.scale,
+      font_size       = counter.font_size,
+      font_color      = {0, 0, 0}
+    })
+    container.createButton({
+      function_owner  = self,
+      click_function  = "doNothing",
+      label           = ""..#container.getObjects(),
+      position        = counter.position,
+      rotation        = counter.rotation and counter.rotation or {0,0,0},
+      width           = counter.width,
+      height          = counter.height,
+      scale           = counter.scale,
+      font_size       = counter.font_size,
+      font_color      = counter.font_color
+    })
     --log("Attached counter to: "..getObjectFromGUID(counter.GUID).getName())
   end
 
 end
-
-
-function ObjectCounters.CreateShadow(counter)
-  local container = getObjectFromGUID(counter.GUID)
-  container.createButton({
-    function_owner  = self,
-    click_function  = "doNothing",
-    label           = ""..#container.getObjects(),
-    position        = counter.shadow,
-    rotation        = counter.rotation and counter.rotation or {0,0,0},
-    width           = counter.width,
-    height          = counter.height,
-    scale           = counter.scale,
-    font_size       = counter.font_size,
-    font_color      = {0, 0, 0}
-  })
-
-end
-
-function ObjectCounters.CreateCounter(counter)
-  local container = getObjectFromGUID(counter.GUID)
-  container.createButton({
-    function_owner  = self,
-    click_function  = "doNothing",
-    label           = ""..#container.getObjects(),
-    position        = counter.position,
-    rotation        = counter.rotation and counter.rotation or {0,0,0},
-    width           = counter.width,
-    height          = counter.height,
-    scale           = counter.scale,
-    font_size       = counter.font_size,
-    font_color      = counter.font_color
-  })
-end
-
 
 function onObjectEnterContainer(container, object) ObjectCounters.Update(container) end
 function onObjectLeaveContainer(container, object) ObjectCounters.Update(container) end
