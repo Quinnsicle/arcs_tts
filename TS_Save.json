@@ -3624,11 +3624,11 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": 16.9712124,
-        "posY": 1.03686416,
+        "posY": 1.03686428,
         "posZ": -13.0190945,
         "rotX": 0.0047545,
         "rotY": 179.984436,
-        "rotZ": 359.9913,
+        "rotZ": 359.991333,
         "scaleX": 0.273848951,
         "scaleY": 1.0,
         "scaleZ": 0.273848951
@@ -3819,8 +3819,8 @@
       "GUID": "33577c",
       "Name": "Custom_Token",
       "Transform": {
-        "posX": -10.5624151,
-        "posY": 1.03635013,
+        "posX": -10.5624123,
+        "posY": 1.03635025,
         "posZ": 18.38906,
         "rotX": 0.00497674244,
         "rotY": 179.982925,
@@ -3917,7 +3917,7 @@
       "GUID": "b0b4d0",
       "Name": "Custom_Tile",
       "Transform": {
-        "posX": 18.9292679,
+        "posX": 18.9292717,
         "posY": 0.987284958,
         "posZ": 5.81114531,
         "rotX": -0.0008360708,
@@ -6719,7 +6719,7 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": 13.8480387,
-        "posY": 1.03639114,
+        "posY": 1.036391,
         "posZ": -13.0190983,
         "rotX": 0.0047557815,
         "rotY": 180.007629,
@@ -6817,7 +6817,7 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": 20.0940285,
-        "posY": 1.03733861,
+        "posY": 1.03733873,
         "posZ": -13.00062,
         "rotX": 0.004761362,
         "rotY": 179.977737,
@@ -6915,7 +6915,7 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": -7.437482,
-        "posY": 1.036846,
+        "posY": 1.03684616,
         "posZ": 18.3902225,
         "rotX": 0.004960687,
         "rotY": 180.023422,
@@ -7013,7 +7013,7 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": -9.311319,
-        "posY": 1.03654873,
+        "posY": 1.03654861,
         "posZ": 18.3890648,
         "rotX": 0.004975608,
         "rotY": 180.005219,
@@ -7307,7 +7307,7 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": 16.96595,
-        "posY": 1.03688693,
+        "posY": 1.03688681,
         "posZ": 18.3714447,
         "rotX": 0.00239872327,
         "rotY": 180.001434,
@@ -7601,7 +7601,7 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": 13.8382454,
-        "posY": 1.0371033,
+        "posY": 1.03710341,
         "posZ": 18.3742275,
         "rotX": 0.00239289552,
         "rotY": 180.015747,
@@ -7699,7 +7699,7 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": -10.5698738,
-        "posY": 1.03712571,
+        "posY": 1.03712583,
         "posZ": -13.04995,
         "rotX": 0.00207740255,
         "rotY": 179.96962,
@@ -8279,7 +8279,7 @@
       "Name": "Custom_Tile_Stack",
       "Transform": {
         "posX": -16.1747932,
-        "posY": 1.16,
+        "posY": 1.16000009,
         "posZ": -6.33237839,
         "rotX": 9.958347E-06,
         "rotY": 89.98882,
@@ -8762,12 +8762,12 @@
           "GUID": "8946d4",
           "Name": "Card",
           "Transform": {
-            "posX": -12.2621136,
-            "posY": 1.2438314,
-            "posZ": 6.943097,
-            "rotX": -0.0007472043,
-            "rotY": 90.00055,
-            "rotZ": 179.99971,
+            "posX": -12.2062321,
+            "posY": 1.11296463,
+            "posZ": -4.72336864,
+            "rotX": -0.0008455561,
+            "rotY": 89.99439,
+            "rotZ": 178.837662,
             "scaleX": 1.04603565,
             "scaleY": 1.0,
             "scaleZ": 1.04603565
@@ -10171,9 +10171,9 @@
         "posX": -53.431694,
         "posY": 0.7801889,
         "posZ": -36.0410957,
-        "rotX": 8.671139E-08,
-        "rotY": 2.72140351E-05,
-        "rotZ": 6.67012756E-09,
+        "rotX": 8.33763352E-08,
+        "rotY": 2.7320757E-05,
+        "rotZ": 3.33507333E-09,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -14285,7 +14285,7 @@
       "Bag": {
         "Order": 0
       },
-      "LuaScript": "",
+      "LuaScript": "supply_GUID = Global.getVar(\"player_pieces_GUIDs\")[\"White\"][\"agents\"]\r\nsupply = getObjectFromGUID(supply_GUID)\r\n\r\nfunction onLoad()\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.53, 0.06, 0.05}, -- drop shadow bottom right\r\n        -- position = {0.48, 0.06, 0.04}, --drop shadow bottom left\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 365,\r\n        scale = {1, 1, 1},\r\n        font_color = {0, 0, 0}\r\n    })\r\n\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.5, 0.06, 0.03},\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 360,\r\n        scale = {1, 1, 1},\r\n        font_color = {1, 1, 1}\r\n    })\r\nend\r\n\r\nfunction onObjectEnterContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction onObjectLeaveContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction filterObjectEnter(obj)\r\n    return self.hasMatchingTag(obj)\r\nend",
       "LuaScriptState": "",
       "XmlUI": "",
       "ContainedObjects": [
@@ -14940,7 +14940,7 @@
       "Bag": {
         "Order": 0
       },
-      "LuaScript": "",
+      "LuaScript": "supply_GUID =\r\n    Global.getVar(\"player_pieces_GUIDs\")[\"White\"][\"starports\"]\r\nsupply = getObjectFromGUID(supply_GUID)\r\n\r\nfunction onLoad()\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.53, 0.06, 0.05}, -- drop shadow bottom right\r\n        -- position = {0.48, 0.06, 0.04}, --drop shadow bottom left\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 365,\r\n        scale = {1, 1, 1},\r\n        font_color = {0, 0, 0}\r\n    })\r\n\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.5, 0.06, 0.03},\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 360,\r\n        scale = {1, 1, 1},\r\n        font_color = {1, 1, 1}\r\n    })\r\nend\r\n\r\nfunction onObjectEnterContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction onObjectLeaveContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction filterObjectEnter(obj)\r\n    return self.hasMatchingTag(obj)\r\nend",
       "LuaScriptState": "",
       "XmlUI": "",
       "ContainedObjects": [
@@ -15505,7 +15505,7 @@
       "Bag": {
         "Order": 0
       },
-      "LuaScript": "",
+      "LuaScript": "supply_GUID = Global.getVar(\"player_pieces_GUIDs\")[\"White\"][\"ships\"]\r\nsupply = getObjectFromGUID(supply_GUID)\r\n\r\nfunction onLoad()\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.53, 0.06, 0.05}, -- drop shadow bottom right\r\n        -- position = {0.48, 0.06, 0.04}, --drop shadow bottom left\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 365,\r\n        scale = {1, 1, 1},\r\n        font_color = {0, 0, 0}\r\n    })\r\n\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.5, 0.06, 0.03},\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 360,\r\n        scale = {1, 1, 1},\r\n        font_color = {1, 1, 1}\r\n    })\r\nend\r\n\r\nfunction onObjectEnterContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction onObjectLeaveContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction filterObjectEnter(obj)\r\n    if obj.getStateId() == 2 then\r\n        obj.setState(1)\r\n    end\r\n    return self.hasMatchingTag(obj)\r\nend",
       "LuaScriptState": "",
       "XmlUI": "",
       "ContainedObjects": [
@@ -17305,7 +17305,7 @@
       "Bag": {
         "Order": 0
       },
-      "LuaScript": "",
+      "LuaScript": "supply_GUID = Global.getVar(\"player_pieces_GUIDs\")[\"Teal\"][\"agents\"]\r\nsupply = getObjectFromGUID(supply_GUID)\r\n\r\nfunction onLoad()\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.53, 0.06, 0.05}, -- drop shadow bottom right\r\n        -- position = {0.48, 0.06, 0.04}, --drop shadow bottom left\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 365,\r\n        scale = {1, 1, 1},\r\n        font_color = {0, 0, 0}\r\n    })\r\n\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.5, 0.06, 0.03},\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 360,\r\n        scale = {1, 1, 1},\r\n        font_color = {1, 1, 1}\r\n    })\r\nend\r\n\r\nfunction onObjectEnterContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction onObjectLeaveContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction filterObjectEnter(obj)\r\n    return self.hasMatchingTag(obj)\r\nend",
       "LuaScriptState": "",
       "XmlUI": "",
       "ContainedObjects": [
@@ -17960,7 +17960,7 @@
       "Bag": {
         "Order": 0
       },
-      "LuaScript": "",
+      "LuaScript": "supply_GUID = Global.getVar(\"player_pieces_GUIDs\")[\"Teal\"][\"ships\"]\r\nsupply = getObjectFromGUID(supply_GUID)\r\n\r\nfunction onLoad()\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.53, 0.06, 0.05}, -- drop shadow bottom right\r\n        -- position = {0.48, 0.06, 0.04}, --drop shadow bottom left\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 365,\r\n        scale = {1, 1, 1},\r\n        font_color = {0, 0, 0}\r\n    })\r\n\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.5, 0.06, 0.03},\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 360,\r\n        scale = {1, 1, 1},\r\n        font_color = {1, 1, 1}\r\n    })\r\nend\r\n\r\nfunction onObjectEnterContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction onObjectLeaveContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction filterObjectEnter(obj)\r\n    if obj.getStateId() == 2 then\r\n        obj.setState(1)\r\n    end\r\n    return self.hasMatchingTag(obj)\r\nend",
       "LuaScriptState": "",
       "XmlUI": "",
       "ContainedObjects": [
@@ -19578,12 +19578,12 @@
           "GUID": "940362",
           "Name": "Custom_Model",
           "Transform": {
-            "posX": -1.20451534,
-            "posY": 1.07638049,
-            "posZ": -12.2325974,
-            "rotX": 1.48035053E-06,
+            "posX": -1.03137076,
+            "posY": 1.0771215,
+            "posZ": -12.7181263,
+            "rotX": -1.81338169E-06,
             "rotY": 180.000748,
-            "rotZ": 7.712338E-09,
+            "rotZ": 2.806465E-07,
             "scaleX": 1.15,
             "scaleY": 1.15,
             "scaleZ": 1.15
@@ -19760,7 +19760,7 @@
       "Bag": {
         "Order": 0
       },
-      "LuaScript": "",
+      "LuaScript": "supply_GUID =\r\n    Global.getVar(\"player_pieces_GUIDs\")[\"Teal\"][\"starports\"]\r\nsupply = getObjectFromGUID(supply_GUID)\r\n\r\nfunction onLoad()\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.53, 0.06, 0.05}, -- drop shadow bottom right\r\n        -- position = {0.48, 0.06, 0.04}, --drop shadow bottom left\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 365,\r\n        scale = {1, 1, 1},\r\n        font_color = {0, 0, 0}\r\n    })\r\n\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.5, 0.06, 0.03},\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 360,\r\n        scale = {1, 1, 1},\r\n        font_color = {1, 1, 1}\r\n    })\r\nend\r\n\r\nfunction onObjectEnterContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction onObjectLeaveContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction filterObjectEnter(obj)\r\n    return self.hasMatchingTag(obj)\r\nend",
       "LuaScriptState": "",
       "XmlUI": "",
       "ContainedObjects": [
@@ -20325,7 +20325,7 @@
       "Bag": {
         "Order": 0
       },
-      "LuaScript": "",
+      "LuaScript": "supply_GUID = Global.getVar(\"player_pieces_GUIDs\")[\"Red\"][\"starports\"]\r\nsupply = getObjectFromGUID(supply_GUID)\r\n\r\nfunction onLoad()\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.53, 0.06, 0.05}, -- drop shadow bottom right\r\n        -- position = {0.48, 0.06, 0.04}, --drop shadow bottom left\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 365,\r\n        scale = {1, 1, 1},\r\n        font_color = {0, 0, 0}\r\n    })\r\n\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.5, 0.06, 0.03},\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 360,\r\n        scale = {1, 1, 1},\r\n        font_color = {1, 1, 1}\r\n    })\r\nend\r\n\r\nfunction onObjectEnterContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction onObjectLeaveContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction filterObjectEnter(obj)\r\n    return self.hasMatchingTag(obj)\r\nend",
       "LuaScriptState": "",
       "XmlUI": "",
       "ContainedObjects": [
@@ -20890,7 +20890,7 @@
       "Bag": {
         "Order": 0
       },
-      "LuaScript": "",
+      "LuaScript": "supply_GUID = Global.getVar(\"player_pieces_GUIDs\")[\"Red\"][\"agents\"]\r\nsupply = getObjectFromGUID(supply_GUID)\r\n\r\nfunction onLoad()\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.53, 0.06, 0.05}, -- drop shadow bottom right\r\n        -- position = {0.48, 0.06, 0.04}, --drop shadow bottom left\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 365,\r\n        scale = {1, 1, 1},\r\n        font_color = {0, 0, 0}\r\n    })\r\n\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.5, 0.06, 0.03},\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 360,\r\n        scale = {1, 1, 1},\r\n        font_color = {1, 1, 1}\r\n    })\r\nend\r\n\r\nfunction onObjectEnterContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction onObjectLeaveContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction filterObjectEnter(obj)\r\n    return self.hasMatchingTag(obj)\r\nend",
       "LuaScriptState": "",
       "XmlUI": "",
       "ContainedObjects": [
@@ -21420,12 +21420,12 @@
           "GUID": "e1d01c",
           "Name": "Custom_Model",
           "Transform": {
-            "posX": -1.26002157,
-            "posY": 1.09693456,
-            "posZ": 17.15754,
-            "rotX": 1.92391435E-05,
-            "rotY": 179.999634,
-            "rotZ": -9.549951E-07,
+            "posX": 0.09788601,
+            "posY": 1.08891714,
+            "posZ": 17.7230148,
+            "rotX": 0.00550021976,
+            "rotY": 179.919662,
+            "rotZ": 0.4421521,
             "scaleX": 1.34999979,
             "scaleY": 1.34999979,
             "scaleZ": 1.34999979
@@ -21440,8 +21440,8 @@
           },
           "ColorDiffuse": {
             "r": 0.882353,
-            "g": 0.324966133,
-            "b": 0.23921448
+            "g": 0.3249662,
+            "b": 0.23921454
           },
           "Tags": [
             "Agent"
@@ -21450,7 +21450,7 @@
           "Value": 0,
           "Locked": false,
           "Grid": true,
-          "Snap": true,
+          "Snap": false,
           "IgnoreFoW": false,
           "MeasureMovement": false,
           "DragSelectable": true,
@@ -21545,7 +21545,7 @@
       "Bag": {
         "Order": 0
       },
-      "LuaScript": "",
+      "LuaScript": "supply_GUID = Global.getVar(\"player_pieces_GUIDs\")[\"Red\"][\"ships\"]\r\nsupply = getObjectFromGUID(supply_GUID)\r\n\r\nfunction onLoad()\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.53, 0.06, 0.05}, -- drop shadow bottom right\r\n        -- position = {0.48, 0.06, 0.04}, --drop shadow bottom left\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 365,\r\n        scale = {1, 1, 1},\r\n        font_color = {0, 0, 0}\r\n    })\r\n\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.5, 0.06, 0.03},\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 360,\r\n        scale = {1, 1, 1},\r\n        font_color = {1, 1, 1}\r\n    })\r\nend\r\n\r\nfunction onObjectEnterContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction onObjectLeaveContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction filterObjectEnter(obj)\r\n    if obj.getStateId() == 2 then\r\n        obj.setState(1)\r\n    end\r\n    return self.hasMatchingTag(obj)\r\nend",
       "LuaScriptState": "",
       "XmlUI": "",
       "ContainedObjects": [
@@ -23163,12 +23163,12 @@
           "GUID": "e84e67",
           "Name": "Custom_Model",
           "Transform": {
-            "posX": -1.03423214,
-            "posY": 1.076223,
-            "posZ": 18.3682156,
-            "rotX": -1.28664362E-06,
-            "rotY": 179.988083,
-            "rotZ": 3.24902345E-07,
+            "posX": 0.124228269,
+            "posY": 1.01547348,
+            "posZ": 19.5702267,
+            "rotX": 4.00522877E-05,
+            "rotY": 179.9881,
+            "rotZ": -2.58520026E-06,
             "scaleX": 1.19999993,
             "scaleY": 1.19999993,
             "scaleZ": 1.19999993
@@ -23183,8 +23183,8 @@
           },
           "ColorDiffuse": {
             "r": 0.882353,
-            "g": 0.324966133,
-            "b": 0.23921448
+            "g": 0.3249662,
+            "b": 0.23921454
           },
           "Tags": [
             "Ship"
@@ -23345,7 +23345,7 @@
       "Bag": {
         "Order": 0
       },
-      "LuaScript": "",
+      "LuaScript": "supply_GUID = Global.getVar(\"player_pieces_GUIDs\")[\"Yellow\"][\"ships\"]\r\nsupply = getObjectFromGUID(supply_GUID)\r\n\r\nfunction onLoad()\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.53, 0.06, 0.05}, -- drop shadow bottom right\r\n        -- position = {0.48, 0.06, 0.04}, --drop shadow bottom left\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 365,\r\n        scale = {1, 1, 1},\r\n        font_color = {0, 0, 0}\r\n    })\r\n\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.5, 0.06, 0.03},\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 360,\r\n        scale = {1, 1, 1},\r\n        font_color = {1, 1, 1}\r\n    })\r\nend\r\n\r\nfunction onObjectEnterContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction onObjectLeaveContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction filterObjectEnter(obj)\r\n    if obj.getStateId() == 2 then\r\n        obj.setState(1)\r\n    end\r\n    return self.hasMatchingTag(obj)\r\nend",
       "LuaScriptState": "",
       "XmlUI": "",
       "ContainedObjects": [
@@ -25145,7 +25145,7 @@
       "Bag": {
         "Order": 0
       },
-      "LuaScript": "",
+      "LuaScript": "supply_GUID =\r\n    Global.getVar(\"player_pieces_GUIDs\")[\"Yellow\"][\"starports\"]\r\nsupply = getObjectFromGUID(supply_GUID)\r\n\r\nfunction onLoad()\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.53, 0.06, 0.05}, -- drop shadow bottom right\r\n        -- position = {0.48, 0.06, 0.04}, --drop shadow bottom left\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 365,\r\n        scale = {1, 1, 1},\r\n        font_color = {0, 0, 0}\r\n    })\r\n\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.5, 0.06, 0.03},\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 360,\r\n        scale = {1, 1, 1},\r\n        font_color = {1, 1, 1}\r\n    })\r\nend\r\n\r\nfunction onObjectEnterContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction onObjectLeaveContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction filterObjectEnter(obj)\r\n    return self.hasMatchingTag(obj)\r\nend",
       "LuaScriptState": "",
       "XmlUI": "",
       "ContainedObjects": [
@@ -25710,7 +25710,7 @@
       "Bag": {
         "Order": 0
       },
-      "LuaScript": "",
+      "LuaScript": "supply_GUID = Global.getVar(\"player_pieces_GUIDs\")[\"Yellow\"][\"agents\"]\r\nsupply = getObjectFromGUID(supply_GUID)\r\n\r\nfunction onLoad()\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.53, 0.06, 0.05}, -- drop shadow bottom right\r\n        -- position = {0.48, 0.06, 0.04}, --drop shadow bottom left\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 365,\r\n        scale = {1, 1, 1},\r\n        font_color = {0, 0, 0}\r\n    })\r\n\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.5, 0.06, 0.03},\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 360,\r\n        scale = {1, 1, 1},\r\n        font_color = {1, 1, 1}\r\n    })\r\nend\r\n\r\nfunction onObjectEnterContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction onObjectLeaveContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction filterObjectEnter(obj)\r\n    return self.hasMatchingTag(obj)\r\nend",
       "LuaScriptState": "",
       "XmlUI": "",
       "ContainedObjects": [
@@ -27157,7 +27157,7 @@
       "Name": "Custom_Tile_Stack",
       "Transform": {
         "posX": -16.141222,
-        "posY": 1.160001,
+        "posY": 1.16000092,
         "posZ": -4.30609131,
         "rotX": -9.529932E-05,
         "rotY": 90.0000153,
@@ -30072,11 +30072,11 @@
       "GUID": "d5e298",
       "Name": "Custom_Dice",
       "Transform": {
-        "posX": -36.3080254,
-        "posY": 1.50604713,
-        "posZ": 27.3329239,
-        "rotX": 6.83018925E-06,
-        "rotY": 220.3935,
+        "posX": -36.2539673,
+        "posY": 1.50604689,
+        "posZ": 28.18511,
+        "rotX": 0.0,
+        "rotY": 220.393051,
         "rotZ": 270.0,
         "scaleX": 1.6499995,
         "scaleY": 1.6499995,
@@ -30176,11 +30176,11 @@
       "GUID": "684608",
       "Name": "Custom_Dice",
       "Transform": {
-        "posX": -34.9723969,
-        "posY": 1.506047,
-        "posZ": 27.4271336,
+        "posX": -34.9182739,
+        "posY": 1.50604689,
+        "posZ": 28.2791519,
         "rotX": 90.0,
-        "rotY": 160.1383,
+        "rotY": 160.137909,
         "rotZ": 0.0,
         "scaleX": 1.6499995,
         "scaleY": 1.6499995,
@@ -32527,12 +32527,12 @@
           "GUID": "375ed4",
           "Name": "Deck",
           "Transform": {
-            "posX": -44.8195724,
-            "posY": 3.08959413,
-            "posZ": 25.5424461,
-            "rotX": 359.73703,
-            "rotY": 180.003433,
-            "rotZ": 0.05593029,
+            "posX": -44.65429,
+            "posY": 3.090878,
+            "posZ": 25.2039433,
+            "rotX": 359.975159,
+            "rotY": 180.0103,
+            "rotZ": 0.07923615,
             "scaleX": 1.35717392,
             "scaleY": 1.0,
             "scaleZ": 1.35717392
@@ -33382,12 +33382,12 @@
               "GUID": "71c906",
               "Name": "CardCustom",
               "Transform": {
-                "posX": -28.52581,
-                "posY": 1.05884135,
-                "posZ": 18.1445789,
-                "rotX": 0.0005031569,
-                "rotY": 180.003571,
-                "rotZ": -0.000213263149,
+                "posX": -21.84869,
+                "posY": 1.0588131,
+                "posZ": 20.5017128,
+                "rotX": -0.000397833326,
+                "rotY": 180.010315,
+                "rotZ": -0.000158209354,
                 "scaleX": 1.35717392,
                 "scaleY": 1.0,
                 "scaleZ": 1.35717392
@@ -33487,7 +33487,7 @@
                     "z": -0.15999724
                   },
                   "Rotation": {
-                    "x": -7.36497032E-06,
+                    "x": -7.36497168E-06,
                     "y": 0.0420437,
                     "z": 9.440502E-06
                   },
@@ -33503,7 +33503,7 @@
                     "z": -0.1600099
                   },
                   "Rotation": {
-                    "x": -1.1374842E-05,
+                    "x": -1.137484E-05,
                     "y": 0.00552950939,
                     "z": 1.21740632E-05
                   },
@@ -33521,7 +33521,7 @@
                   "Rotation": {
                     "x": -1.53402325E-05,
                     "y": 359.974243,
-                    "z": 1.45142758E-05
+                    "z": 1.45142731E-05
                   },
                   "Tags": [
                     "City",
@@ -33535,7 +33535,7 @@
                     "z": -0.16000022
                   },
                   "Rotation": {
-                    "x": 1.29776856E-06,
+                    "x": 1.29776879E-06,
                     "y": 0.0367161557,
                     "z": 9.839658E-06
                   },
@@ -33567,9 +33567,9 @@
                     "z": -1.0021925
                   },
                   "Rotation": {
-                    "x": 8.223609E-06,
+                    "x": 8.223607E-06,
                     "y": 0.0245720819,
-                    "z": -1.657096E-05
+                    "z": -1.65709571E-05
                   },
                   "Tags": [
                     "City",
@@ -33631,7 +33631,7 @@
                     "z": -1.00216866
                   },
                   "Rotation": {
-                    "x": 8.67907147E-06,
+                    "x": 8.679073E-06,
                     "y": 0.03671616,
                     "z": 9.840355E-06
                   },
@@ -33648,12 +33648,12 @@
           "GUID": "f6f6a4",
           "Name": "Custom_Model",
           "Transform": {
-            "posX": -45.24296,
-            "posY": 2.88744664,
-            "posZ": 24.5199566,
-            "rotX": 0.9062354,
-            "rotY": 0.432095379,
-            "rotZ": 0.245510459,
+            "posX": -45.7431145,
+            "posY": 3.009463,
+            "posZ": 25.09426,
+            "rotX": 0.900978,
+            "rotY": 179.99144,
+            "rotZ": 358.231842,
             "scaleX": 1.64999962,
             "scaleY": 1.64999962,
             "scaleZ": 1.64999962
@@ -33700,15 +33700,15 @@
           "XmlUI": ""
         },
         {
-          "GUID": "a8047e",
+          "GUID": "f39d4a",
           "Name": "Custom_Model",
           "Transform": {
-            "posX": -45.2172852,
-            "posY": 2.87347078,
-            "posZ": 25.982296,
-            "rotX": 0.0091117,
-            "rotY": 180.0,
-            "rotZ": 5.684114E-06,
+            "posX": -44.0799866,
+            "posY": 2.969395,
+            "posZ": 25.373476,
+            "rotX": 8.782202E-06,
+            "rotY": 180.004822,
+            "rotZ": -4.37663448E-06,
             "scaleX": 1.64999962,
             "scaleY": 1.64999962,
             "scaleZ": 1.64999962
@@ -33722,9 +33722,9 @@
             "z": 0.0
           },
           "ColorDiffuse": {
-            "r": 1.0,
-            "g": 0.716666639,
-            "b": 0.0
+            "r": 0.0,
+            "g": 0.58431375,
+            "b": 0.6627451
           },
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -33758,12 +33758,12 @@
           "GUID": "b87511",
           "Name": "Custom_Model",
           "Transform": {
-            "posX": -46.837204,
-            "posY": 2.87329149,
-            "posZ": 27.4525566,
-            "rotX": -0.00459412672,
-            "rotY": -4.34577851E-06,
-            "rotZ": -2.89730156E-06,
+            "posX": -45.1446152,
+            "posY": 2.96939468,
+            "posZ": 25.7390518,
+            "rotX": 3.212186E-05,
+            "rotY": 180.00058,
+            "rotZ": -1.5697442E-05,
             "scaleX": 1.64999962,
             "scaleY": 1.64999962,
             "scaleZ": 1.64999962
@@ -33778,8 +33778,8 @@
           },
           "ColorDiffuse": {
             "r": 0.882353,
-            "g": 0.324964017,
-            "b": 0.239212364
+            "g": 0.324964136,
+            "b": 0.239212513
           },
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -33810,15 +33810,15 @@
           "XmlUI": ""
         },
         {
-          "GUID": "f39d4a",
+          "GUID": "a8047e",
           "Name": "Custom_Model",
           "Transform": {
-            "posX": -46.8400421,
-            "posY": 2.873895,
-            "posZ": 26.2154865,
-            "rotX": 1.32103642E-05,
-            "rotY": 359.97348,
-            "rotZ": 0.02653545,
+            "posX": -46.20067,
+            "posY": 2.97952271,
+            "posZ": 23.8678055,
+            "rotX": -4.262778E-06,
+            "rotY": 180.001068,
+            "rotZ": -4.842784E-05,
             "scaleX": 1.64999962,
             "scaleY": 1.64999962,
             "scaleZ": 1.64999962
@@ -33832,9 +33832,9 @@
             "z": 0.0
           },
           "ColorDiffuse": {
-            "r": 0.0,
-            "g": 0.58431375,
-            "b": 0.6627451
+            "r": 1.0,
+            "g": 0.716666639,
+            "b": 0.0
           },
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -36805,7 +36805,7 @@
       "Name": "Bag",
       "Transform": {
         "posX": -49.6750145,
-        "posY": 0.780189157,
+        "posY": 0.7801892,
         "posZ": 35.7678452,
         "rotX": 9.29641E-11,
         "rotY": 179.972931,
@@ -38157,7 +38157,7 @@
       "Name": "Bag",
       "Transform": {
         "posX": -47.7859459,
-        "posY": 0.7801896,
+        "posY": 0.780189455,
         "posZ": 35.7752228,
         "rotX": 9.140821E-11,
         "rotY": 179.972809,
@@ -40881,7 +40881,7 @@
       "Name": "Bag",
       "Transform": {
         "posX": -42.0429955,
-        "posY": 0.776183546,
+        "posY": 0.77618295,
         "posZ": 35.7678566,
         "rotX": 4.269319E-07,
         "rotY": 179.975418,
@@ -42002,11 +42002,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -43.951,
-        "posY": 0.780189,
+        "posY": 0.780188859,
         "posZ": 35.7679749,
         "rotX": 2.1122813E-14,
         "rotY": 180.000015,
-        "rotZ": -2.65136748E-07,
+        "rotZ": -1.30067079E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -44395,7 +44395,7 @@
         "posZ": 32.2304878,
         "rotX": 4.07127977E-11,
         "rotY": 179.965881,
-        "rotZ": 7.0369606E-07,
+        "rotZ": 1.36737171E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -45425,7 +45425,7 @@
       "Name": "Bag",
       "Transform": {
         "posX": -44.0728226,
-        "posY": 0.7801891,
+        "posY": 0.7801889,
         "posZ": 32.23086,
         "rotX": 3.91549518E-14,
         "rotY": 180.000015,
@@ -46516,11 +46516,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -45.97748,
-        "posY": 0.7801891,
+        "posY": 0.7801894,
         "posZ": 32.2304878,
-        "rotX": -9.92994055E-12,
+        "rotX": 5.46140477E-12,
         "rotY": 179.965881,
-        "rotZ": -3.335053E-08,
+        "rotZ": 1.83427922E-08,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -47256,7 +47256,7 @@
       "Name": "Bag",
       "Transform": {
         "posX": -51.7014961,
-        "posY": 0.780189,
+        "posY": 0.780188859,
         "posZ": 32.2305946,
         "rotX": 4.27089873E-07,
         "rotY": 179.962585,
@@ -53327,7 +53327,7 @@
       "Name": "Bag",
       "Transform": {
         "posX": -49.86602,
-        "posY": 0.7801892,
+        "posY": 0.7801891,
         "posZ": 28.805748,
         "rotX": -4.271716E-07,
         "rotY": 179.96579,
@@ -53646,7 +53646,7 @@
       "Name": "Bag",
       "Transform": {
         "posX": -47.9012032,
-        "posY": 0.7801887,
+        "posY": 0.780189157,
         "posZ": 28.7836227,
         "rotX": -1.00464456E-10,
         "rotY": 179.965988,
@@ -54387,7 +54387,7 @@
       "Name": "Bag",
       "Transform": {
         "posX": -53.6252,
-        "posY": 0.7801891,
+        "posY": 0.7801892,
         "posZ": 28.7836437,
         "rotX": 4.367428E-11,
         "rotY": 179.9659,
@@ -54660,7 +54660,7 @@
         "posX": -44.0932159,
         "posY": 0.7801891,
         "posZ": 28.7836418,
-        "rotX": 4.10397153E-14,
+        "rotX": -4.268868E-07,
         "rotY": 180.0,
         "rotZ": -7.720648E-07,
         "scaleX": 1.0,
@@ -56242,7 +56242,7 @@
         "posZ": 28.7837143,
         "rotX": -9.628112E-11,
         "rotY": 179.9659,
-        "rotZ": -5.00257933E-08,
+        "rotZ": -3.23500132E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -56722,7 +56722,7 @@
       "GUID": "fbefe9",
       "Name": "Custom_Model",
       "Transform": {
-        "posX": -34.3105,
+        "posX": -34.1138344,
         "posY": 1.02486026,
         "posZ": 30.2305336,
         "rotX": 7.472493E-07,
@@ -56777,7 +56777,7 @@
       "GUID": "1dcf64",
       "Name": "Custom_Model",
       "Transform": {
-        "posX": -36.07052,
+        "posX": -35.8737946,
         "posY": 1.02486026,
         "posZ": 30.2305984,
         "rotX": -4.58120127E-07,
@@ -56832,7 +56832,7 @@
       "GUID": "69b09b",
       "Name": "Custom_Model",
       "Transform": {
-        "posX": -36.9504929,
+        "posX": -36.7538261,
         "posY": 1.02486026,
         "posZ": 30.2305317,
         "rotX": 5.13940734E-07,
@@ -56887,7 +56887,7 @@
       "GUID": "edc149",
       "Name": "Custom_Model",
       "Transform": {
-        "posX": -35.190464,
+        "posX": -34.9938,
         "posY": 1.02486026,
         "posZ": 30.2306,
         "rotX": -2.19182283E-07,
@@ -58436,7 +58436,7 @@
       "Name": "Deck",
       "Transform": {
         "posX": -52.95868,
-        "posY": 1.0535506,
+        "posY": 1.05355048,
         "posZ": -15.0610847,
         "rotX": -6.58460237E-08,
         "rotY": 180.0,
@@ -59927,7 +59927,7 @@
       "GUID": "ab0ffc",
       "Name": "Deck",
       "Transform": {
-        "posX": -52.9436836,
+        "posX": -52.9436531,
         "posY": 1.13538909,
         "posZ": -18.7041874,
         "rotX": 1.541034E-07,
@@ -60020,12 +60020,12 @@
           "GUID": "bd2dd4",
           "Name": "Card",
           "Transform": {
-            "posX": -53.69581,
-            "posY": 1.6693151,
-            "posZ": -18.9486752,
-            "rotX": 0.005394389,
-            "rotY": 179.976852,
-            "rotZ": 192.538712,
+            "posX": 10.3778419,
+            "posY": 2.00341535,
+            "posZ": 6.963849,
+            "rotX": -1.84020351E-07,
+            "rotY": 179.9951,
+            "rotZ": 180.0,
             "scaleX": 1.0,
             "scaleY": 1.0,
             "scaleZ": 1.0
@@ -60081,12 +60081,12 @@
           "GUID": "8fbe9e",
           "Name": "Card",
           "Transform": {
-            "posX": -53.6183,
-            "posY": 1.55209339,
-            "posZ": -18.4325733,
-            "rotX": 0.00495746825,
-            "rotY": 180.008362,
-            "rotZ": 192.537857,
+            "posX": 7.99784,
+            "posY": 2.00341535,
+            "posZ": 6.963849,
+            "rotX": -1.60613936E-07,
+            "rotY": 179.9951,
+            "rotZ": 180.0,
             "scaleX": 1.0,
             "scaleY": 1.0,
             "scaleZ": 1.0
@@ -62157,7 +62157,7 @@
       "GUID": "beb54d",
       "Name": "Custom_Model_Bag",
       "Transform": {
-        "posX": -35.6486778,
+        "posX": -35.8000069,
         "posY": 1.028717,
         "posZ": 35.0,
         "rotX": 1.09568738E-07,
@@ -62222,7 +62222,7 @@
       "Bag": {
         "Order": 0
       },
-      "LuaScript": "",
+      "LuaScript": "supply_GUID = Global.getVar(\"imperial_ships_GUID\")\r\nsupply = getObjectFromGUID(supply_GUID)\r\n\r\nfunction onLoad()\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.53, 0.06, 0.05}, -- drop shadow bottom right\r\n        -- position = {0.48, 0.06, 0.04}, --drop shadow bottom left\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 365,\r\n        scale = {1, 1, 1},\r\n        font_color = {0, 0, 0}\r\n    })\r\n\r\n    self.createButton({\r\n        function_owner = self,\r\n        click_function = \"doNothing\",\r\n        label = \"\" .. #supply.getObjects(),\r\n        position = {0.5, 0.06, 0.03},\r\n        width = 1,\r\n        height = 1,\r\n        font_size = 360,\r\n        scale = {1, 1, 1},\r\n        font_color = {0.8, 0.58, 0.27}\r\n    })\r\nend\r\n\r\nfunction onObjectEnterContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction onObjectLeaveContainer(container, object)\r\n    self.editButton({\r\n        index = 0,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        label = \"\" .. #supply.getObjects()\r\n    })\r\nend\r\n\r\nfunction filterObjectEnter(obj)\r\n    if obj.getStateId() == 2 then\r\n        obj.setState(1)\r\n    end\r\n    return self.hasMatchingTag(obj)\r\nend\r\n\r\nfunction doNothing()\r\nend",
       "LuaScriptState": "",
       "XmlUI": "",
       "ContainedObjects": [
@@ -63958,7 +63958,7 @@
       "Name": "Bag",
       "Transform": {
         "posX": 49.15223,
-        "posY": 0.7761832,
+        "posY": 0.7761831,
         "posZ": 26.69775,
         "rotX": -7.670622E-08,
         "rotY": 4.81648422E-05,
@@ -65304,7 +65304,7 @@
       "Name": "Deck",
       "Transform": {
         "posX": -46.77118,
-        "posY": 1.02466631,
+        "posY": 1.02466643,
         "posZ": 13.0872974,
         "rotX": 4.563E-07,
         "rotY": 180.000015,
@@ -65993,7 +65993,7 @@
       "Name": "Deck",
       "Transform": {
         "posX": -47.9981651,
-        "posY": 1.00059617,
+        "posY": 1.00059628,
         "posZ": 21.0000229,
         "rotX": 1.728611E-08,
         "rotY": 180.009781,
@@ -66231,7 +66231,7 @@
       "Name": "Card",
       "Transform": {
         "posX": -50.7485771,
-        "posY": 0.978828251,
+        "posY": 0.978828669,
         "posZ": 20.9960842,
         "rotX": -1.22796109E-07,
         "rotY": 180.012009,
@@ -66289,7 +66289,7 @@
       "Name": "Card",
       "Transform": {
         "posX": -53.5038757,
-        "posY": 0.978828251,
+        "posY": 0.9788285,
         "posZ": 20.99978,
         "rotX": -5.06175937E-08,
         "rotY": 180.0098,
@@ -66350,7 +66350,7 @@
       "Name": "Deck",
       "Transform": {
         "posX": -45.4622,
-        "posY": 1.00541008,
+        "posY": 1.00541019,
         "posZ": 21.0197258,
         "rotX": -2.0374452E-07,
         "rotY": 179.988892,
