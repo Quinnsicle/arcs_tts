@@ -1,3 +1,5 @@
+
+
 available_colors = {"White", "Yellow", "Red", "Teal"}
 
 setup_table_GUID = "95f3f9"
@@ -65,7 +67,7 @@ is_player_setup = {
 -- Players Pieces
 player_pieces_GUIDs = {
     ["White"] = {
-        player_board = "",
+        player_board = "999dbd",
         resource = {"822a9c", "00ee1b"},
         city = {"822a9c", "00ee1b"},
         ships = "6883e6",
@@ -75,7 +77,7 @@ player_pieces_GUIDs = {
         area_zone = "a952c1"
     },
     ["Yellow"] = {
-        player_board = "",
+        player_board = "5aa44c",
         resource = {"dbf4de", "799077"},
         city = {"dbf4de", "799077"},
         ships = "a75924",
@@ -85,7 +87,7 @@ player_pieces_GUIDs = {
         area_zone = "238a92"
     },
     ["Red"] = {
-        player_board = "",
+        player_board = "c0c8a1",
         resource_one = {"33577c", "cf5b95"},
         city = {"33577c", "cf5b95"},
         ships = "7e0fe2",
@@ -95,7 +97,7 @@ player_pieces_GUIDs = {
         area_zone = "c2bf05"
     },
     ["Teal"] = {
-        player_board = "",
+        player_board = "ae512a",
         resource = {"79b799", "f3da7f"},
         city = {"79b799", "f3da7f"},
         ships = "2da385",
@@ -240,14 +242,16 @@ die_zone_GUID = "1b45bb"
 
 imperial_ships_GUID = "beb54d"
 imperial_ships_text_GUID = "6daaa3"
-free_cities_GUID = "80742e"
-free_starports_GUID = "c79cb8"
-blight_GUID = "ff61a8"
+free_cities_GUID = "1205b0"
+blight_GUID = "3c61d2"
 
 A_Fates_GUID = "0ac7d1"
 
 ----------------------------------------------------
+local Counters = require("src/Counters")
+local Supplies = require("src/Supplies")
 
+-- Player Events --
 function assignPlayerToAvailableColor(player, color)
     local color = table.remove(available_colors, 1)
     broadcastToAll(
@@ -263,21 +267,38 @@ function onPlayerDisconnect(player)
     table.insert(available_colors, 1, player.color)
 end
 
+
+-- Container Events --
 function onObjectLeaveContainer(container, leave_object)
     if container.type == "Deck" or container.type == "Bag" or
         container.type == "Infinite" then
+
         leave_object.setTags(container.getTags())
 
         -- set snap
         leave_object.use_snap_points = true
+
+        Counters.update(container)
+
+        Supplies.addMenuToObject(leave_object)
+
     end
 end
 
 function tryObjectEnterContainer(container, object)
-  if object.getStateId() == 2 then
-    object.setState(1)
-  end
-  return container.hasMatchingTag(object)
+    if object.getStateId() == 2 then
+        object.setState(1)
+    end
+    return container.hasMatchingTag(object)
+end
+
+function onObjectEnterContainer(container, object)
+    if container.type == "Deck" or container.type == "Bag" or
+        container.type == "Infinite" then
+
+        Counters.update(container)
+
+    end
 end
 
 ----------------------------------------------------
@@ -1261,6 +1282,8 @@ starting_pieces = {
 ----------------------------------------------------
 
 function onLoad()
+    Counters.setup()
+    Supplies.addMenuToAllObjects()
     -- Assign all connected players to a color spot.
     -- for _, player in ipairs(Player.getPlayers()) do
     --     assignPlayerToAvailableColor(player)
