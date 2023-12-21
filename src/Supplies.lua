@@ -42,11 +42,11 @@ supplies = {
     origin = Global.getVar("player_pieces_GUIDs")["White"]["player_board"],
     face_up = true,
     set={
-      ["5b7217"]=city_row[1],
+      ["822a9c"]=city_row[1],
       ["00ee1b"]=city_row[2],
-      ["0d5b8d"]=city_row[3],
-      ["b8bd28"]=city_row[4],
-      ["25add2"]=city_row[5]
+      ["a50d56"]=city_row[3],
+      ["06f4a8"]=city_row[4],
+      ["81c3a7"]=city_row[5]
     }
   },
   ["Blue City"] =   {
@@ -64,22 +64,22 @@ supplies = {
     origin = Global.getVar("player_pieces_GUIDs")["Yellow"]["player_board"],
     face_up = true,
     set={
-      ["1286e8"]=city_row[1],
-      ["f046a6"]=city_row[2],
-      ["fc4012"]=city_row[3],
-      ["790fdc"]=city_row[4],
-      ["8fdc11"]=city_row[5]
+      ["dbf4de"]=city_row[1],
+      ["799077"]=city_row[2],
+      ["acfa72"]=city_row[3],
+      ["ac28fb"]=city_row[4],
+      ["b41592"]=city_row[5]
     }
   },
   ["Red City"] =    {
-    origin = Global.getVar("player_pieces_GUIDs")["Yellow"]["player_board"],
+    origin = Global.getVar("player_pieces_GUIDs")["Red"]["player_board"],
     face_up = true,
     set={
-      ["6eede0"]=city_row[1],
-      ["33577c"]=city_row[2],
-      ["6b3882"]=city_row[3],
-      ["186dbd"]=city_row[4],
-      ["d21c7c"]=city_row[5]
+      ["33577c"]=city_row[1],
+      ["cf5b95"]=city_row[2],
+      ["0ac3c2"]=city_row[3],
+      ["6e36ca"]=city_row[4],
+      ["282f37"]=city_row[5]
     }
   },
 

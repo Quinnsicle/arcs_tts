@@ -301,6 +301,10 @@ function onObjectEnterContainer(container, object)
     end
 end
 
+function onObjectStateChange(changed_object)
+    Supplies.addMenuToObject(changed_object)
+end
+
 ----------------------------------------------------
 -- returns a table of colors in order
 function getOrderedPlayers()
