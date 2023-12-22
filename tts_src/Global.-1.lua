@@ -17,6 +17,7 @@ action_deck_4P_GUID = "9128ca"
 action_card_zone_GUID = "e6eca7"
 with_split_discard = false
 ambition_marker_zone_GUID = "3984e4"
+ambition_declared_marker_GUID = "65f9a2"
 court_deck_zone_GUID = "7a33ff"
 
 fate_GUID = "f96461"
@@ -298,7 +299,10 @@ function tryObjectEnterContainer(container, object)
     if object.getStateId() == 2 then
         object.setState(1)
     end
+    --log(">"..container.getTags().."<")
     return container.hasMatchingTag(object)
+        or #container.getTags() == 0
+
 end
 
 function onObjectEnterContainer(container, object)
