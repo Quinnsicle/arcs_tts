@@ -174,12 +174,18 @@ end
 function SupplyManager.addMenuToObject(object)
   --log("Adding return context menu option to "..object.getName())
   if object.getName() ~= "" and supplies[object.getName()] then
-    object.addContextMenuItem("Return "..object.getName(), SupplyManager.returnFromMenu)
+    object.addContextMenuItem("Return to supply", SupplyManager.returnFromMenu)
   end
 end
 
 function SupplyManager.returnFromMenu(player_color, position, object)
-  SupplyManager.returnObject(object)
+  for _, i in pairs(Player.getPlayers()) do
+    if i.color == player_color then
+      for _, k in pairs(i.getSelectedObjects()) do
+        SupplyManager.returnObject(k)
+      end
+    end
+  end
 end
 
 return SupplyManager
