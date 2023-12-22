@@ -1,9 +1,8 @@
 local Campaign = require("src/Campaign")
 local BaseGame = require("src/BaseGame")
---local Counters = require("src/Counters")
-local Supplies = require("src/Supplies")
 
 control_GUID = Global.getVar("control_GUID")
+ambition_declared_marker_GUID = Global.getVar("ambition_declared_marker_GUID")
 
 -- font_color = {0.8, 0.58, 0.27}, GOLD
 local blue = {0.4, 0.6, 0.6}
@@ -189,6 +188,15 @@ local takeInitiative_params = {
     hover_color = {0.34, 0.38, 0.38}
 }
 
+local ambitionDeclared_params = { 
+    click_function = 'declareAmbition',
+    function_owner = self,
+    position = {0, 0.05, 0},
+    rotation = {0, 0, 0},
+    width = 3800,
+    height = 950
+}
+
 function onload()
     self.createButton(toggleLeadersWITHOUT_params)
     self.createButton(toggleExpansionEXCLUDE_params)
@@ -196,6 +204,7 @@ function onload()
     self.createButton(setupCampaignGame_params)
     self.createButton(showControls_params)
     self.createButton(splitDiscardFACEDOWN_params)
+    getObjectFromGUID(ambition_declared_marker_GUID).createButton(ambitionDeclared_params)
 end
 
 function toggleLeaders()
@@ -490,6 +499,12 @@ function cleanupCards()
         end
     end
 
+end
+
+function declareAmbition()
+    local ambition_declared = getObjectFromGUID(ambition_declared_marker_GUID)
+    ambition_declared.setPositionSmooth({-13.51, 0.99, -4.72})
+    ambition_declared.setRotationSmooth({0.00, 90.00, 0.00})
 end
 
 function takeInitiative(objectButtonClicked, playerColorClicked)
