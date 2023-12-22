@@ -210,6 +210,14 @@ resources_GUID = {
     materials = "1b8490"
 }
 
+resources_markers_GUID = {
+    psionics = "a89706",
+    relics = "473675",
+    weapons = "2fdfa3",
+    fuel = "5cb321",
+    materials = "eb1cba"
+}
+
 merchant_tycoon_GUID = "612aa9"
 merchant_GUID = {
     tycoon = "612aa9",
@@ -267,6 +275,9 @@ function onPlayerDisconnect(player)
     table.insert(available_colors, 1, player.color)
 end
 
+function onObjectSpawn(object)
+    Supplies.addMenuToObject(object)
+end
 
 -- Container Events --
 function onObjectLeaveContainer(container, leave_object)
@@ -279,8 +290,6 @@ function onObjectLeaveContainer(container, leave_object)
         leave_object.use_snap_points = true
 
         Counters.update(container)
-
-        Supplies.addMenuToObject(leave_object)
 
     end
 end
@@ -295,15 +304,10 @@ end
 function onObjectEnterContainer(container, object)
     if container.type == "Deck" or container.type == "Bag" or
         container.type == "Infinite" then
-
         Counters.update(container)
-
     end
 end
 
-function onObjectStateChange(changed_object)
-    Supplies.addMenuToObject(changed_object)
-end
 
 ----------------------------------------------------
 -- returns a table of colors in order
