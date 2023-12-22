@@ -150,7 +150,6 @@ local the_counters = {
 }
 
 function ObjectCounters.setup()
-  log("test")
   for _, counter in pairs(the_counters) do
     ObjectCounters.add(getObjectFromGUID(counter.container_GUID), counter)
   end
