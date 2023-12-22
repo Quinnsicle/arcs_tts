@@ -83,6 +83,13 @@ supplies = {
     }
   },
 
+  -- Resources
+  ["Psionic"]   = {pos = {0,2,0}, origin = Global.getVar("resources_markers_GUID")["psionics"]},
+  ["Relic"]     = {pos = {0,2,0}, origin = Global.getVar("resources_markers_GUID")["relics"]},
+  ["Weapon"]    = {pos = {0,2,0}, origin = Global.getVar("resources_markers_GUID")["weapons"]},
+  ["Fuel"]      = {pos = {0,2,0}, origin = Global.getVar("resources_markers_GUID")["fuel"]},
+  ["Material"]  = {pos = {0,2,0}, origin = Global.getVar("resources_markers_GUID")["materials"]},
+
   -- Miscallaneous
   [""]                          = {ignore = true},
 
@@ -133,7 +140,7 @@ function SupplyManager.returnObject(object,is_bottom_deck)
       local rot = origin.getRotation()
       object.setRotation({x=0,y=rot.y,z=0})
     end
-    object.setPosition(pos)
+    object.setPositionSmooth(pos,false,true)
   end
 
 end
