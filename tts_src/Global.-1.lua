@@ -58,7 +58,8 @@ oop_large_gate2_GUID = "9bd528"
 oop_planet_GUIDs = {"6ecb02", "795637", "ae5114", "d5fe1a", "0d3d0c",
                     "4d14cb"}
 
-initiative_GUID = "ab621a"
+initiative_GUID = "0bf104"
+initiative_seized_GUID = "6303e3"
 chapter_pawn_GUID = "9c3ac8"
 
 active_players = {}
@@ -310,6 +311,10 @@ function tryObjectEnterContainer(container, object)
 
 end
 
+function onObjectEnterContainer(container, leave_object)
+    Counters.update(container)
+end
+
 function onObjectEnterZone(zone, object)
     Counters.update(zone)
 end
@@ -385,7 +390,9 @@ function takeInitiative(color)
     local first_player_initiative_zone =
         getObjectFromGUID(player_pieces_GUIDs[color].initiative_zone)
     local initiative_pos = first_player_initiative_zone.getPosition()
-    initiative_marker.setPositionSmooth(initiative_pos)
+    if initiative_marker then
+        initiative_marker.setPositionSmooth(initiative_pos)
+    end
 end
 
 function dealGuildCards(qty)
