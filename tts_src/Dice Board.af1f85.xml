@@ -18,7 +18,7 @@
     </VerticalLayout>
 </Panel>
 
-<Panel height='80' width='280' position='0 -140 -20' rotation='0 0 0'>
+<Panel height='80' width='280' position='0 -140 -20' rotation='0 0 0' active="false">
     <VerticalLayout padding='5 5 5 5' spacing='5'>
       <HorizontalLayout>
         <Button text='Skirmish' onClick='SpawnCombatDie(skirmish)' colors='#4e7d84|#80adb4|#808080|#606060'/>

@@ -10,8 +10,8 @@ BOARD_AREA = {x=2.00, y=5.00, z=3.00}
 
 GRID_COMBAT = {
   area    =   BOARD_AREA,
-  rows    =   5,
-  columns =   4
+  rows    =   6,
+  columns =   3
 }
 
 GRID_SPECIAL = {
