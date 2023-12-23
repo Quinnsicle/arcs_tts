@@ -6,6 +6,7 @@ debug_player_count = 2
 
 setup_table_GUID = "95f3f9"
 reach_board_GUID = "bb7d21"
+removed_from_game_GUID = "9795fb"
 -- leaders and lore
 more_to_explore_expansion_button_GUID = "9ff1fd"
 more_to_explore_fate_GUID = "bbd744"
@@ -222,13 +223,6 @@ resources_markers_GUID = {
     materials = "eb1cba"
 }
 
-merchant_tycoon_GUID = "612aa9"
-merchant_GUID = {
-    tycoon = "612aa9",
-    warlord = "07c555",
-    keeper = "975e47",
-    empath = "99b2ba"
-}
 ----------------------------------------------------
 -- campaign
 ----------------------------------------------------
