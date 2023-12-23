@@ -78,6 +78,13 @@ player_pieces_GUIDs = {
         city = {"822a9c", "00ee1b"},
         ships = "6883e6",
         starports = "b96445",
+        cities = {
+            "822a9c",
+            "00ee1b",
+            "a50d56",
+            "06f4a8",
+            "81c3a7"
+        },
         agents = "c863eb",
         initiative_zone = "2e1cd3",
         area_zone = "a952c1",
@@ -90,6 +97,13 @@ player_pieces_GUIDs = {
         city = {"dbf4de", "799077"},
         ships = "a75924",
         starports = "b9ebd3",
+        cities = {
+            "dbf4de",
+            "799077",
+            "acfa72",
+            "ac28fb",
+            "b41592"
+        },
         agents = "7b3749",
         initiative_zone = "3fc6fd",
         area_zone = "238a92",
@@ -102,6 +116,13 @@ player_pieces_GUIDs = {
         city = {"33577c", "cf5b95"},
         ships = "7e0fe2",
         starports = "51a8f5",
+        cities = {
+            "33577c",
+            "cf5b95",
+            "0ac3c2",
+            "6e36ca",
+            "282f37"
+        },
         agents = "bbb3aa",
         initiative_zone = "32f290",
         area_zone = "c2bf05",
@@ -114,6 +135,13 @@ player_pieces_GUIDs = {
         city = {"79b799", "f3da7f"},
         ships = "2da385",
         starports = "7e625d",
+        cities = {
+            "f3da7f",
+            "5e753e",
+            "79b799",
+            "fad0f1",
+            "45c804"
+        },
         agents = "791097",
         initiative_zone = "cdc545",
         area_zone = "ee4b6e",
