@@ -1,8 +1,13 @@
 local Campaign = {}
 
 local merchant = require("src/Merchant")
+local supplies = require("src/Supplies")
 
 function Campaign.setup()
+
+    for _, obj in pairs(getObjectsWithTag("Base Game Only")) do
+        supplies.removeFromGame(obj)
+    end
 
     local ordered_players = Global.call("getOrderedPlayers")
     if (#ordered_players < 2 or #ordered_players > 4) then

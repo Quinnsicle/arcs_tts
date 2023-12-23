@@ -160,7 +160,7 @@ end
 
 -- Remove from game shortcut
 function SupplyManager.removeFromGame(object)
-  local bin = getObjectFromGUID(Global.getVar("TBD"))
+  local bin = getObjectFromGUID(Global.getVar("removed_from_game_GUID"))
   bin.putObject(object)
 end
 
