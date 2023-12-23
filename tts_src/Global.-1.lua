@@ -2,7 +2,10 @@
 
 available_colors = {"White", "Yellow", "Red", "Teal"}
 
+debug_player_count = 2
+
 setup_table_GUID = "95f3f9"
+reach_board_GUID = "bb7d21"
 -- leaders and lore
 more_to_explore_expansion_button_GUID = "9ff1fd"
 more_to_explore_fate_GUID = "bbd744"
@@ -318,7 +321,7 @@ end
 function getOrderedPlayers()
     local seated_players = getSeatedPlayers()
 
-    local player_count = #seated_players
+    local player_count = debug_player_count and debug_player_count or #seated_players
 
     if (player_count > 4 or player_count < 2) then
         msg = "This game only supports 2-4 players"
@@ -399,45 +402,6 @@ function dealGuildCards(qty)
         })
     end
 
-end
-
--- params = {"psionics", "relics",  "weapons", "fuel", "materials"}
-function merchantSetup(params)
-
-    for _, resource in ipairs(params) do
-        local zone_pos
-
-        if (resource == "materials") then
-            local ambition_zone = getObjectFromGUID(
-                merchant_GUID["tycoon"])
-            zone_pos = ambition_zone.getPosition()
-            zone_pos.z = zone_pos.z - 0.5
-        elseif (resource == "fuel") then
-            local ambition_zone = getObjectFromGUID(
-                merchant_GUID["tycoon"])
-            zone_pos = ambition_zone.getPosition()
-            zone_pos.z = zone_pos.z + 0.8
-        elseif (resource == "weapons") then
-            local ambition_zone = getObjectFromGUID(
-                merchant_GUID["warlord"])
-            zone_pos = ambition_zone.getPosition()
-        elseif (resource == "relics") then
-            local ambition_zone = getObjectFromGUID(
-                merchant_GUID["keeper"])
-            zone_pos = ambition_zone.getPosition()
-        elseif (resource == "psionics") then
-            local ambition_zone = getObjectFromGUID(
-                merchant_GUID["empath"])
-            zone_pos = ambition_zone.getPosition()
-        end
-
-        local token = getObjectFromGUID(resources_GUID[resource])
-
-        token.takeObject({
-            position = {zone_pos.x, zone_pos.y, zone_pos.z}
-        })
-
-    end
 end
 
 ----------------------------------------------------
@@ -1296,6 +1260,7 @@ starting_pieces = {
 function onLoad()
     Counters.setup()
     Supplies.addMenuToAllObjects()
+    --macros.RecordDecalsToNotes(getObjectFromGUID("27a866"))
     -- Assign all connected players to a color spot.
     -- for _, player in ipairs(Player.getPlayers()) do
     --     assignPlayerToAvailableColor(player)

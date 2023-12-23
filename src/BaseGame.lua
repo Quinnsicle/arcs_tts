@@ -1,4 +1,5 @@
 local BaseGame = {}
+local merchant = require("src/Merchant")
 
 function BaseGame.setup()
 
@@ -16,7 +17,7 @@ function BaseGame.setup()
     chosen_setup_card = BaseGame.chooseSetupCard(#active_players)
     BaseGame.setupOutOfPlayClusters(chosen_setup_card)
     if (#active_players == 2) then
-        BaseGame.setup2PMerchant(chosen_setup_card)
+        merchant.setup(chosen_setup_card.out_of_play_clusters)
     end
 
     if (Global.getVar("with_leaders")) then
@@ -264,30 +265,6 @@ function BaseGame.setupOutOfPlayClusters(setup_card)
             smooth = true
         })
 
-    end
-end
-
--- K
-function BaseGame.setup2PMerchant(setup_card)
-    -- print("Setup 2P Merchant")
-    local merchant_params
-
-    for _, gate_num in ipairs(setup_card.out_of_play_clusters) do
-        if (gate_num == 1) then
-            merchant_params = {"weapons", "fuel", "materials"}
-        elseif (gate_num == 2) then
-            merchant_params = {"psionics", "relics", "weapons"}
-        elseif (gate_num == 3) then
-            merchant_params = {"weapons", "fuel", "materials"}
-        elseif (gate_num == 4) then
-            merchant_params = {"relics", "fuel", "materials"}
-        elseif (gate_num == 5) then
-            merchant_params = {"psionics", "relics", "weapons"}
-        elseif (gate_num == 6) then
-            merchant_params = {"psionics", "fuel", "materials"}
-        end
-
-        Global.call("merchantSetup", merchant_params)
     end
 end
 
