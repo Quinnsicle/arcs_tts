@@ -68,7 +68,7 @@ is_player_setup = {
     Red = false,
     Teal = false
 }
-
+ 
 -- Players Pieces
 player_pieces_GUIDs = {
     ["White"] = {
@@ -79,7 +79,9 @@ player_pieces_GUIDs = {
         starports = "b96445",
         agents = "c863eb",
         initiative_zone = "2e1cd3",
-        area_zone = "a952c1"
+        area_zone = "a952c1",
+        trophies_zone = "b20496",
+        captives_zone = "eae940"
     },
     ["Yellow"] = {
         player_board = "5aa44c",
@@ -89,7 +91,9 @@ player_pieces_GUIDs = {
         starports = "b9ebd3",
         agents = "7b3749",
         initiative_zone = "3fc6fd",
-        area_zone = "238a92"
+        area_zone = "238a92",
+        trophies_zone = "7ca64c",
+        captives_zone = "06c0f1"
     },
     ["Red"] = {
         player_board = "c0c8a1",
@@ -99,7 +103,9 @@ player_pieces_GUIDs = {
         starports = "51a8f5",
         agents = "bbb3aa",
         initiative_zone = "32f290",
-        area_zone = "c2bf05"
+        area_zone = "c2bf05",
+        trophies_zone = "54c5a4",
+        captives_zone = "029b18"
     },
     ["Teal"] = {
         player_board = "ae512a",
@@ -109,7 +115,9 @@ player_pieces_GUIDs = {
         starports = "7e625d",
         agents = "791097",
         initiative_zone = "cdc545",
-        area_zone = "ee4b6e"
+        area_zone = "ee4b6e",
+        trophies_zone = "e7e73b",
+        captives_zone = "0bf109"
     }
 }
 
@@ -302,13 +310,14 @@ function tryObjectEnterContainer(container, object)
 
 end
 
-function onObjectEnterContainer(container, object)
-    if container.type == "Deck" or container.type == "Bag" or
-        container.type == "Infinite" then
-        Counters.update(container)
-    end
+function onObjectEnterZone(zone, object)
+    Counters.update(zone)
 end
 
+-- Container Events --
+function onObjectLeaveZone(zone, object)
+    Counters.update(zone)
+end
 
 ----------------------------------------------------
 -- returns a table of colors in order
