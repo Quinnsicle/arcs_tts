@@ -411,8 +411,15 @@ function dealHand()
     -- if condition then
     -- end
 
-    broadcastToAll("Shuffle and deal 6 cards to all players")
+    for _, player in pairs(Player.getPlayers()) do
+        if #player.getHandObjects() > 0 then
+            broadcastToAll("Player still has cards in hand!", Color.Red)
+            return
+        end
+    end
 
+    broadcastToAll("Shuffle and deal 6 cards to all players")
+    
     local action_deck = getObjectFromGUID(Global.getVar(
         "action_deck_GUID"))
 
