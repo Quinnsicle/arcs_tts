@@ -34,7 +34,7 @@ function clearPlayed()
     -- Error on union card
     for _, obj in pairs(played_objects) do
         if obj.hasTag("Union") then
-            broadcastToAll("Resolve Union card before cleanup!", Red)
+            broadcastToAll("Resolve Union card before cleanup!", Color.Red)
             return
         end
     end
