@@ -1,28 +1,34 @@
-- [ ] Create supply token and counter for the Blight 
-- [ ] Create supply token and counter for the free cities 
-- [ ] Create supply token and counter for the free starports
-- [x] Create new imperial ship model
-- [x] Update imperial ship supply token with new imperial ship model
+### Graphics
+- [ ] Blight supply token and counter for the Blight 
+- [ ] Free Cities supply token and counter for the free cities 
+- [ ] Free Starports supply token and counter for the free starports
+- [x] Update imperial ship model
+- [x] Update imperial ship supply token
 - [x] Counters for trophies and captives
-- [ ] Context menu commands
-    - [x] Return to supply
-    - [ ] Take as trophy
-    - [ ] Take as captive
-    - [ ] Return to supply
-- [x] Split discard toggle button and function in cleanup
+- [x] Update initiative marker
+- [ ] Player scoreboard
+### Automated Setup
 - [ ] Restructure player colors so that the seating is random
-- [ ] Give first regent title to player with initiative on campaign setup
-- [ ] Give initiative buttons?
 - [x] Add Blight to gates on campaign setup
-- [x] Custom right click options to return things to supply 
-- [ ] Supply number bug for non hosts, I think I just need to recreate the supply tokens.
-- [x] Dice rolling area
+- [ ] Give first regent title to player with initiative on campaign setup
+- [ ] Give starting resources
 - [ ] Spectate toggle buttons for each player area
+### Automated Gameplay
+- [x] _Return to supply_ context menu item
+- [ ] _Take as trophy_ context menu item
+- [ ] _Take as captive_ context menu item
+- [x] Split discard toggle button and function in cleanup
+- [ ] Give initiative buttons?
+- [x] Dice rolling area
+- [ ] Agent snap points for outrage
+- [ ] Building snap points on flagship boards
+### Bugs
+- [ ] Supply number bug for non hosts, I think I just need to recreate the supply tokens.
 - [ ] Remove print statements
 - [ ] Change cleanup function to move to discard area instead of to the position of the discard deck. In case the discard deck gets exhausted.
 - [x] red and blue are out of order on setup
-- [ ] Give starting resources
-- [ ] Agent snap points for outrage
-- [ ] Building snap points on flagship boards
+- [ ] More robust supply management for cards and decks
+    - Account for deck being despawned
+    - Add option to bury cards at bottom of the deck
 
 
