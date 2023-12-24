@@ -4,6 +4,9 @@ available_colors = {"White", "Yellow", "Red", "Teal"}
 
 debug_player_count = 2
 
+FUDiscard_zone_GUID = "c56672"
+FUDiscard_marker_GUID = "000207"
+
 setup_table_GUID = "95f3f9"
 reach_board_GUID = "bb7d21"
 removed_from_game_GUID = "9795fb"
@@ -16,10 +19,9 @@ with_more_to_explore = false
 include_fates_GUID = "be0e27"
 with_leaders = false
 
-action_deck_GUID = "855643"
-action_deck_4P_GUID = "9128ca"
+action_deck_GUID = "cf0c25"
+action_deck_4P_GUID = "22a45c"
 action_card_zone_GUID = "e6eca7"
-with_split_discard = false
 ambition_marker_zone_GUID = "3984e4"
 ambition_declared_marker_GUID = "65f9a2"
 court_deck_zone_GUID = "7a33ff"
@@ -268,7 +270,7 @@ control_GUID = "6e21fe"
 
 campaign_setup_GUID = "4c00fe"
 
-event_deck_GUID = "7be749"
+event_deck_GUID = "ad423d"
 chapter_track_GUID = "4d34d7"
 chapter_zone_GUID = "2d2c49"
 

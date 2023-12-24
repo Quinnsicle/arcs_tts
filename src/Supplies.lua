@@ -70,14 +70,27 @@ supplies = {
   ["Fuel"]      = {pos = {0,2,0}, origin = Global.getVar("resources_markers_GUID")["fuel"]},
   ["Material"]  = {pos = {0,2,0}, origin = Global.getVar("resources_markers_GUID")["materials"]},
 
-  -- Miscallaneous
-  [""]                          = {ignore = true},
 
+
+  -- Campaing Components
   --["Blight"]                    = {bag = Global.getVar("")},
   ["Imperial Ship (Damaged)"]   = {bag = Global.getVar("imperial_ships_GUID"), state = 1},
   ["Imperial Ship (Fresh)"]     = {bag = Global.getVar("imperial_ships_GUID")},
   --["Free City"]                 = {bag = Global.getVar("")},
   --["Free Starport"]             = {bag = Global.getVar("")},
+
+  -- Cards
+  ["Action Card"] = {
+    pos = {-12.26, 3.10, 6.94},
+    rot = {0.00, 90.01, 180.00} 
+  },
+
+  -- Miscallaneous
+  [""]                          = {ignore = true},
+  ["Declare Ambition"] = {
+    pos = {-12.24, 0.99, -7.23},
+    rot = {0.00, 180.00, 0.00}
+  }
 }
 
 -- Main return

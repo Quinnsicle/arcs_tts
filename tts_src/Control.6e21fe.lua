@@ -234,16 +234,7 @@ function toggleExpansion()
 end
 
 function toggleSplitDiscard()
-    local toggle = Global.getVar("with_split_discard")
-
-    toggle = not toggle
-    Global.setVar("with_split_discard", toggle)
-
-    if (toggle) then
-        self.editButton(splitDiscardFACEUP_params)
-    else
-        self.editButton(splitDiscardFACEDOWN_params)
-    end
+    getObjectFromGUID(Global.getVar("action_card_zone_GUID")).call("toggleFUDiscard")
 end
 
 function setupBaseGame()
@@ -433,71 +424,9 @@ function dealHand()
 end
 
 function cleanupCards()
-    -- ambition marker
-    local ambition_marker_zone = getObjectFromGUID(Global.getVar(
-        "ambition_marker_zone_GUID"))
-    local marker_zone_pos = ambition_marker_zone.getPosition()
 
-    -- resources
-
-    local action_card_zone = getObjectFromGUID(Global.getVar(
-        "action_card_zone_GUID"))
-    local action_zone_objects = action_card_zone.getObjects()
-    local action_deck_pos = getObjectFromGUID(Global.getVar(
-        "action_deck_GUID")).getPosition()
-
-    -- Error on union card
-    for i, obj in ipairs(action_zone_objects) do
-        if obj.getTags()[2] == "Union" then
-            broadcastToAll("Resolve Union card before cleanup!", {
-                r = 1,
-                g = 0,
-                b = 0
-            })
-            return
-        end
-    end
-
-    -- clean up
-    broadcastToAll("Cleanup action card area")
-
-    local with_split_discard = Global.getVar("with_split_discard")
-
-    for i, obj in ipairs(action_zone_objects) do
-        if obj.getTags()[1] == "Action" then
-            -- action cards
-            if (with_split_discard) then
-                -- discard faceup cards in separate pile
-                local facedown_discard_pos = {
-                    x = -16.34,
-                    y = 2,
-                    z = 6.94
-                }
-
-                if (obj.getRotation().z < 90) then -- faceup (rotation z=0)
-                    obj.setPositionSmooth(facedown_discard_pos)
-                else -- facedown (rotation z=180)
-                    obj.setPositionSmooth(
-                        {action_deck_pos.x, action_deck_pos.y + 1,
-                         action_deck_pos.z})
-                end
-
-            else
-                -- discard all cards facedown
-                obj.setPositionSmooth(
-                    {action_deck_pos.x, action_deck_pos.y + 1,
-                     action_deck_pos.z})
-                obj.setRotationSmooth({0.00, 90.00, 180.00})
-            end
-        elseif obj.getTags()[1] == "AmbitionDeclared" then
-            -- ambition marker
-            obj.setPositionSmooth(marker_zone_pos)
-            obj.setRotationSmooth({0.00, 180.00, 180.00})
-        elseif obj.getTags()[1] == "Resource" then
-            -- resources 
-            -- TODO: move to respective supply
-        end
-    end
+    getObjectFromGUID(Global.getVar("action_card_zone_GUID")).call("clearPlayed")
+    --return
 
 end
 
