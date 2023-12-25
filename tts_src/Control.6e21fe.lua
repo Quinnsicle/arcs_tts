@@ -1,5 +1,6 @@
 local Campaign = require("src/Campaign")
 local BaseGame = require("src/BaseGame")
+local Supplies = require("src/Supplies")
 
 control_GUID = Global.getVar("control_GUID")
 ambition_declared_marker_GUID = Global.getVar("ambition_declared_marker_GUID")
@@ -423,11 +424,15 @@ function dealHand()
     local action_deck = getObjectFromGUID(Global.getVar(
         "action_deck_GUID"))
 
-    action_deck.randomize()
+    Supplies.returnZone(getObjectFromGUID(Global.getVar("FUDiscard_zone_GUID")))
+
+    Wait.time(function()
+        action_deck.randomize()
+    end, 1)
 
     Wait.time(function()
         action_deck.deal(6)
-    end, 0.5)
+    end, 1.5)
 end
 
 function cleanupCards()
