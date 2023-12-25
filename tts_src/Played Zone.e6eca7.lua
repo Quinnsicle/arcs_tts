@@ -6,24 +6,25 @@ FUDiscard_active = true
 
 function onLoad()
 
-    FUDiscard_zone.setPosition(FUDiscard_marker.getPosition())
-
-    FUD_card_pos            = FUDiscard_zone.getPosition()
-    FUD_card_rot            = FUDiscard_zone.getRotation()
+    FUDiscard_zone.setPosition(FUDiscard_marker.positionToWorld({0,0.4,0}))
+    FUDiscard_zone.setRotation(FUDiscard_marker.getRotation()+Vector(0,180,0))
 
     FUDsicard_zone_pos      = FUDiscard_zone.getPosition()
     FUDiscard_marker_pos    = FUDiscard_marker.getPosition()
 
+    FUD_card_pos            = FUDiscard_zone.getPosition()
+    FUD_card_rot            = FUDiscard_zone.getRotation()+Vector(0,180,0)
+
 end
 
 function toggleFUDiscard()
-    FUDiscard_active = not FUDiscard
+    FUDiscard_active = not FUDiscard_active
     if FUDiscard_active then
         FUDiscard_zone.setPosition(FUDsicard_zone_pos)
         FUDiscard_marker.setPosition(FUDiscard_marker_pos)
     else
-        FUDiscard_zone.setPosition(FUDsicard_zone_pos + Vector(0,-5,0))
-        FUDiscard_marker.setPosition(FUDiscard_marker_pos + Vector(0,-5,0))
+        FUDiscard_zone.setPosition(FUDsicard_zone_pos + Vector(0,-2,0))
+        FUDiscard_marker.setPosition(FUDiscard_marker_pos + Vector(0,-2,0))
     end
 end
 
@@ -56,7 +57,7 @@ function clearPlayed()
         end
     end
 
-    Wait.frames(function() FUDiscard_zone.LayoutZone.layout() end, 5)
+    Wait.frames(function() FUDiscard_zone.LayoutZone.layout() end, 50)
 
 end
 
