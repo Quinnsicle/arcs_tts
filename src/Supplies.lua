@@ -129,9 +129,11 @@ function SupplyManager.returnObject(object,is_bottom_deck)
   elseif supply.deck then
     local deck = getObjectFromGUID(supply.deck)
     if deck then
-      supply.deck = deck.putObject(object)
+      supply.deck = deck.putObject(object).getGUID()
       supply.pos = deck.getPosition() + deck_pos*Vector(0,2,0)
       supply.rot = deck.getRotation()
+      object.setPosition(supply.pos)
+      object.setRotation(supply.rot)
     else
       supply.deck = object.getGUID()
       object.setPosition(supply.pos)
@@ -187,6 +189,9 @@ function SupplyManager.addMenuToObject(object)
   --log("Adding return context menu option to "..object.getName())
   if object.getName() ~= "" and all_supplies[object.getName()] then
     object.addContextMenuItem("Return to supply", SupplyManager.returnFromMenu)
+    if object.type == "Card" then
+      object.addContextMenuItem("Card to deck bottom", SupplyManager.buryFromMenu)
+    end
   end
 end
 
@@ -195,6 +200,18 @@ function SupplyManager.returnFromMenu(player_color, position, object)
     if i.color == player_color then
       for _, k in pairs(i.getSelectedObjects()) do
         SupplyManager.returnObject(k)
+      end
+    end
+  end
+end
+
+function SupplyManager.buryFromMenu(player_color, position, object)
+  for _, i in pairs(Player.getPlayers()) do
+    if i.color == player_color then
+      for _, k in pairs(i.getSelectedObjects()) do
+        if k.type == "Card" then
+          SupplyManager.returnObject(k,true)
+        end
       end
     end
   end
