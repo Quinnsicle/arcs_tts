@@ -81,12 +81,13 @@ supplies = {
 
   -- Cards
   ["Action Card"] = {
-    pos = {-12.26, 3.10, 6.94},
-    rot = {0.00, 90.01, 180.00} 
+    deck  = Global.getVar("action_deck_GUID"),
+    pos   = {-12.26, 3.10, 6.94},
+    rot   = {0.00, 90.00, 180.00} 
   },
 
   -- Miscallaneous
-  [""]                          = {ignore = true},
+  [""] = {ignore = true},
   ["Declare Ambition"] = {
     pos = {-12.24, 0.99, -7.23},
     rot = {0.00, 180.00, 0.00}
@@ -113,17 +114,31 @@ function SupplyManager.returnObject(object,is_bottom_deck)
     object.flip()
   end
 
-  -- Complete return based on type
+  -- Complete return based on type --
+
+  -- Ignore return
   if supply.ignore then
     return
 
+  -- Return to bag
   elseif supply.bag then
     getObjectFromGUID(supply.bag).putObject(object)
 
+  -- Return to deck
+  -- If deck doesn't exist then put card where deck was and make it the deck
   elseif supply.deck then
-    object.setPosition(object.getPosition()+vector(0,5,0)*deck_pos)
-    getObjectFromGUID(supply.GUID).putObject(object)
+    local deck = getObjectFromGUID(supply.deck)
+    if deck then
+      supply.deck = deck.putObject(object)
+      supply.pos = deck.getPosition() + deck_pos*Vector(0,2,0)
+      supply.rot = deck.getRotation()
+    else
+      supply.deck = object.getGUID()
+      object.setPosition(supply.pos)
+      object.setRotation(supply.rot)
+    end
 
+  -- Return a set of objects to a set of positions
   elseif supply.set then
     for ct, obj_GUID in ipairs(supply.set) do
       if object.getGUID() == obj_GUID then
@@ -133,6 +148,7 @@ function SupplyManager.returnObject(object,is_bottom_deck)
       end
     end
 
+  -- Return an object to a position
   elseif supply.pos then
     local pos = supply.pos[ct]
     pos = supply.origin and getObjectFromGUID(supply.origin).positionToWorld(pos)
@@ -144,13 +160,13 @@ end
 -- Expanded returns
 function SupplyManager.returnEverything()
   for _,i in pairs(getObjects()) do 
-    ReturnObject(i) 
+    SupplyManager.returnObject(i) 
   end
 end
 
 function SupplyManager.returnZone(zone) 
   for _,i in pairs(zone.getObjects()) do 
-    ReturnObject(i) 
+    SupplyManager.returnObject(i) 
   end
 end
 
