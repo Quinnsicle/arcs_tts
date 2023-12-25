@@ -11,7 +11,7 @@ city_row = {
   {1.02, 2.00, -2.00}
 }
 
-supplies = {
+local all_supplies = {
 
   -- Player Agents
   ["White Agent"]   = {bag = Global.getVar("player_pieces_GUIDs")["White"]["agents"]},
@@ -88,7 +88,7 @@ supplies = {
 
   -- Miscallaneous
   [""] = {ignore = true},
-  ["Declare Ambition"] = {
+  ["Zero Marker"] = {
     pos = {-12.24, 0.99, -7.23},
     rot = {0.00, 180.00, 0.00}
   }
@@ -98,10 +98,10 @@ supplies = {
 function SupplyManager.returnObject(object,is_bottom_deck)
 
   local deck_pos = is_bottom_deck and -1 or 1
-  local supply = supplies[object.getName()]
+  local supply = all_supplies[object.getName()]
 
   if not supply then
-    print("Unable to return "..object.getName().." to a supply.")
+    print("Unable to return '"..object.getName().."' to a supply.")
     return
   end
 
@@ -185,7 +185,7 @@ end
 
 function SupplyManager.addMenuToObject(object)
   --log("Adding return context menu option to "..object.getName())
-  if object.getName() ~= "" and supplies[object.getName()] then
+  if object.getName() ~= "" and all_supplies[object.getName()] then
     object.addContextMenuItem("Return to supply", SupplyManager.returnFromMenu)
   end
 end

@@ -1,4 +1,4 @@
-supplies = require("src/Supplies")
+local Supplies = require("src/Supplies")
 
 FUDiscard_zone = getObjectFromGUID(Global.getVar("FUDiscard_zone_GUID"))
 FUDiscard_marker = getObjectFromGUID(Global.getVar("FUDiscard_marker_GUID"))
@@ -52,11 +52,11 @@ function clearPlayed()
 
         -- Attempt to return anything else to its supply
         else
-            supplies.returnObject(obj)
+            Supplies.returnObject(obj)
         end
     end
 
-    Wait.frames(function() FUDiscard_zone.LayoutZone.layout() end, 100)
+    Wait.frames(function() FUDiscard_zone.LayoutZone.layout() end, 5)
 
 end
 
