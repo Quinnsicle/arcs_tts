@@ -454,10 +454,23 @@ function cleanupCards()
 
 end
 
-function takeInitiative(objectButtonClicked, playerColorClicked)
+function takeInitiative(_, player_color)
 
-    broadcastToAll(playerColorClicked .. " takes initiative")
-    Global.call("takeInitiative", playerColorClicked)
+    --broadcastToAll(playerColorClicked .. " takes initiative")
+    --Global.call("takeInitiative", player_color)
+
+    local initiative_marker = getObjectFromGUID(Global.getVar("initiative_GUID"))
+    local initiative_seized_marker = getObjectFromGUID(Global.getVar("initiative_seized_GUID"))
+    local player_board = getObjectFromGUID(Global.getTable("player_pieces_GUIDs")[player_color]["player_board"])
+    local pos = player_board.positionToWorld(Global.getVar("initiative_pos"))
+
+    --local initiative_pos = first_player_initiative_zone.getPosition()
+    if initiative_marker then
+        initiative_marker.setPositionSmooth(pos)
+        broadcastToAll(player_color .. " takes initiative")
+    elseif initiative_seized_marker then
+        broadcastToColor("Initiative is already seized",player_color)
+    end
 
 end
 

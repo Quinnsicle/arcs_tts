@@ -23,6 +23,7 @@ with_leaders = false
 action_deck_GUID = "cf0c25"
 action_deck_4P_GUID = "22a45c"
 action_card_zone_GUID = "e6eca7"
+
 ambition_marker_zone_GUID = "3984e4"
 ambition_declared_marker_GUID = "65f9a2"
 ambition_marker_GUIDs = {
@@ -97,16 +98,10 @@ oop_components = {
     }
 }
 
-oop_pieces_GUID = "7cbd3a"
-oop_small_gate1_GUID = "136d54"
-oop_small_gate2_GUID = "e4823d"
-oop_large_gate1_GUID = "af1d03"
-oop_large_gate2_GUID = "9bd528"
-oop_planet_GUIDs = {"6ecb02", "795637", "ae5114", "d5fe1a", "0d3d0c",
-                    "4d14cb"}
-
 initiative_GUID = "0bf104"
 initiative_seized_GUID = "6303e3"
+initiative_pos = {-2,0,0}
+
 chapter_pawn_GUID = "0a5781"
 
 active_players = {}
@@ -455,21 +450,6 @@ function getOrderedPlayers()
     end
 
     return ordered_players
-end
-
-function takeInitiative(color)
-    if color == "" then
-        return
-    end
-
-    local initiative_marker = getObjectFromGUID(initiative_GUID)
-
-    local first_player_initiative_zone =
-        getObjectFromGUID(player_pieces_GUIDs[color].initiative_zone)
-    local initiative_pos = first_player_initiative_zone.getPosition()
-    if initiative_marker then
-        initiative_marker.setPositionSmooth(initiative_pos)
-    end
 end
 
 function dealGuildCards(qty)
