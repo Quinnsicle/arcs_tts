@@ -1,13 +1,13 @@
 local AmbitionControls = {}
 
-local ambition_declared_marker = getObjectFromGUID(Global.getVar("ambition_declared_marker_GUID"))
+local declared_marker = getObjectFromGUID(Global.getVar("ambition_declared_marker_GUID"))
 local lead_card_zone = getObjectFromGUID(Global.getVar("lead_card_zone_GUID"))
-local ambition_markers = {
+local power_markers = {
     getObjectFromGUID(Global.getTable("ambition_marker_GUIDs")[1]),
     getObjectFromGUID(Global.getTable("ambition_marker_GUIDs")[2]),
     getObjectFromGUID(Global.getTable("ambition_marker_GUIDs")[3])
 }
-local ambition_map = {
+local names = {
     [2] = "Tycoon",
     [3] = "Tyrant",
     [4] = "Warlord",
@@ -25,11 +25,12 @@ function AmbitionControls.declare(player_color)
         broadcastToAll(player_color.." is declaring ambition of choice", Color[player_color])
         broadcastToColor("Move highest available ambition marker to desired ambition", player_color)
     else
-        broadcastToAll(player_color.." has declared "..ambition_map[declared_ambition].." ambition", Color[player_color])
+        broadcastToAll(player_color.." has declared "..name[declared_ambition].." ambition", Color[player_color])
+        broadcastToColor("Move highest available ambition marker to "..name[declared_ambition], player_color)
     end
 
-    ambition_declared_marker.setPositionSmooth({-13.51, 0.99, -4.72})
-    ambition_declared_marker.setRotationSmooth({0.00, 90.00, 0.00})
+    declared_marker.setPositionSmooth({-13.51, 0.99, -4.72})
+    declared_marker.setRotationSmooth({0.00, 90.00, 0.00})
 end
 
 return AmbitionControls
