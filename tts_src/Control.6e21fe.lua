@@ -207,6 +207,8 @@ function onload()
     self.createButton(showControls_params)
     self.createButton(splitDiscardFACEDOWN_params)
     getObjectFromGUID(ambition_declared_marker_GUID).createButton(ambitionDeclared_params)
+    getObjectFromGUID(Global.getVar("initiative_GUID")).addContextMenuItem("Take Initiative", takeInitiative)
+    getObjectFromGUID(Global.getVar("initiative_GUID")).addContextMenuItem("Seize Initiative", seizeInitiative)
 end
 
 function toggleLeaders(first,second,third)
@@ -398,7 +400,7 @@ function setControlButtons()
     self.editButton(controls_params)
     self.editButton(dealHand_params)
     self.editButton(cleanupCards_params)
-    self.editButton(takeInitiative_params)
+    --self.editButton(takeInitiative_params)
     self.editButton({
         index = 5,
         height = 1,
@@ -433,8 +435,12 @@ function dealHand()
 
     broadcastToAll("Shuffle and deal 6 cards to all players")
 
-    local action_deck = getObjectFromGUID(Global.getVar(
-        "action_deck_GUID"))
+    local initiative = getObjectFromGUID(Global.getVar("initiative_seized_GUID"))
+    if initiative then
+        initiative.setState(1)
+    end
+
+    local action_deck = getObjectFromGUID(Global.getVar("action_deck_GUID"))
 
     Supplies.returnZone(getObjectFromGUID(Global.getVar("FUDiscard_zone_GUID")))
 
@@ -454,23 +460,27 @@ function cleanupCards()
 
 end
 
-function takeInitiative(_, player_color)
-
-    --broadcastToAll(playerColorClicked .. " takes initiative")
-    --Global.call("takeInitiative", player_color)
+function seizeInitiative(player_color)
 
     local initiative_marker = getObjectFromGUID(Global.getVar("initiative_GUID"))
-    local initiative_seized_marker = getObjectFromGUID(Global.getVar("initiative_seized_GUID"))
     local player_board = getObjectFromGUID(Global.getTable("player_pieces_GUIDs")[player_color]["player_board"])
     local pos = player_board.positionToWorld(Global.getVar("initiative_pos"))
 
-    --local initiative_pos = first_player_initiative_zone.getPosition()
-    if initiative_marker then
-        initiative_marker.setPositionSmooth(pos)
-        broadcastToAll(player_color .. " takes initiative")
-    elseif initiative_seized_marker then
-        broadcastToColor("Initiative is already seized",player_color)
-    end
+    initiative_marker.setPositionSmooth(pos)
+    Wait.time(function() initiative_marker.setState(2) end, 2)
+    broadcastToAll(player_color .. " seizes initiative")
+
+
+end
+
+function takeInitiative(player_color)
+
+    local initiative_marker = getObjectFromGUID(Global.getVar("initiative_GUID"))
+    local player_board = getObjectFromGUID(Global.getTable("player_pieces_GUIDs")[player_color]["player_board"])
+    local pos = player_board.positionToWorld(Global.getVar("initiative_pos"))
+
+    initiative_marker.setPositionSmooth(pos)
+    broadcastToAll(player_color .. " takes initiative")
 
 end
 
