@@ -190,88 +190,23 @@ end
 -- J
 function BaseGame.setupOutOfPlayClusters(setup_card)
     -- print("Setup Out of Play Clusters")
+    local oop_components = Global.getTable("oop_components")
+    local board = getObjectFromGUID(Global.getVar("reach_board_GUID"))
 
-    local cluster_zone_guids = Global.getVar("cluster_zone_GUIDs")
-
-    local oop_pieces = getObjectFromGUID(Global.getVar(
-        "oop_pieces_GUID"))
-
-    for _, gate_num in ipairs(setup_card.out_of_play_clusters) do
-        local gate = getObjectFromGUID(
-            cluster_zone_guids[gate_num]["gate"])
-        local gate_cover
-        local planet_cover
-        local cover_rotation
-        -- Cover planets
-        local oop_pieces = getObjectFromGUID(Global.getVar(
-            "oop_pieces_GUID"))
-        local abc = {"a", "b", "c"}
-        for i = 1, 3, 1 do
-            local planet = getObjectFromGUID(
-                cluster_zone_guids[gate_num][abc[i]]["buildings"][1])
-            local marker_guid = table.remove(Global.getVar(
-                "oop_planet_GUIDs"))
-            local pos = planet.getPosition()
-            oop_pieces.takeObject({
-                position = pos,
-                guid = marker_guid,
-                smooth = true
+    for _, cluster_num in pairs(setup_card.out_of_play_clusters) do
+        for _, component in pairs(oop_components[cluster_num]) do
+            local object = spawnObject({
+                type = "Custom_Token",
+                position = board.positionToWorld(component.pos),
+                rotation = component.rot,
+                scale = component.scale,
+                sound = false
             })
+            object.setCustomObject({image = component.img})
+            object.setLock(true)
         end
-
-        -- Cover gates
-        if (gate_num == 1) then
-            gate_cover = Global.getVar("oop_large_gate1_GUID")
-            cover_rotation = {
-                x = 0,
-                y = 190,
-                z = 0
-            }
-        elseif (gate_num == 2) then
-            gate_cover = Global.getVar("oop_small_gate1_GUID")
-            cover_rotation = {
-                x = 0,
-                y = 250,
-                z = 0
-            }
-        elseif (gate_num == 3) then
-            gate_cover = Global.getVar("oop_small_gate2_GUID")
-            cover_rotation = {
-                x = 0,
-                y = 310,
-                z = 0
-            }
-        elseif (gate_num == 4) then
-            gate_cover = Global.getVar("oop_large_gate2_GUID")
-            cover_rotation = {
-                x = 0,
-                y = 10,
-                z = 0
-            }
-        elseif (gate_num == 5) then
-            gate_cover = Global.getVar("oop_small_gate2_GUID")
-            cover_rotation = {
-                x = 0,
-                y = 70,
-                z = 0
-            }
-        elseif (gate_num == 6) then
-            gate_cover = Global.getVar("oop_small_gate1_GUID")
-            cover_rotation = {
-                x = 0,
-                y = 125,
-                z = 0
-            }
-        end
-        local zone_pos = gate.getPosition()
-        oop_pieces.takeObject({
-            position = {zone_pos.x, zone_pos.y, zone_pos.z},
-            rotation = cover_rotation,
-            guid = gate_cover,
-            smooth = true
-        })
-
     end
+
 end
 
 function BaseGame.dealLeaders(player_count)

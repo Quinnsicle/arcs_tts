@@ -408,10 +408,6 @@ end
 
 function dealHand()
 
-    -- TODO: check each hand to see if theres cards then error
-    -- if condition then
-    -- end
-
     for _, player in pairs(Player.getPlayers()) do
         if #player.getHandObjects() > 0 then
             broadcastToAll("Player still has cards in hand!", Color.Red)
@@ -420,7 +416,7 @@ function dealHand()
     end
 
     broadcastToAll("Shuffle and deal 6 cards to all players")
-    
+
     local action_deck = getObjectFromGUID(Global.getVar(
         "action_deck_GUID"))
 
