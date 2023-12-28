@@ -15,7 +15,7 @@ function Campaign.setup()
     end
 
     -- B
-    Global.call("takeInitiative", ordered_players[1])
+    takeInitiative(ordered_players[1])
 
     Campaign.setupActionDeck(#ordered_players)
     Campaign.setupChapterTrack()

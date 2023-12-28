@@ -207,8 +207,7 @@ function onload()
     self.createButton(showControls_params)
     self.createButton(splitDiscardFACEDOWN_params)
     getObjectFromGUID(ambition_declared_marker_GUID).createButton(ambitionDeclared_params)
-    getObjectFromGUID(Global.getVar("initiative_GUID")).addContextMenuItem("Take Initiative", takeInitiative)
-    getObjectFromGUID(Global.getVar("initiative_GUID")).addContextMenuItem("Seize Initiative", seizeInitiative)
+    applyInitiativeMenus()
 end
 
 function toggleLeaders(first,second,third)
@@ -444,13 +443,8 @@ function dealHand()
 
     Supplies.returnZone(getObjectFromGUID(Global.getVar("FUDiscard_zone_GUID")))
 
-    Wait.time(function()
-        action_deck.randomize()
-    end, 1)
-
-    Wait.time(function()
-        action_deck.deal(6)
-    end, 1.5)
+    Wait.time(function() action_deck.randomize() end, 1)
+    Wait.time(function() action_deck.deal(6) end, 1.5)
 end
 
 function cleanupCards()
@@ -458,6 +452,11 @@ function cleanupCards()
     getObjectFromGUID(Global.getVar("action_card_zone_GUID")).call("clearPlayed")
     --return
 
+end
+
+function applyInitiativeMenus()
+    getObjectFromGUID(Global.getVar("initiative_GUID")).addContextMenuItem("Take Initiative", takeInitiative)
+    getObjectFromGUID(Global.getVar("initiative_GUID")).addContextMenuItem("Seize Initiative", seizeInitiative)
 end
 
 function seizeInitiative(player_color)
