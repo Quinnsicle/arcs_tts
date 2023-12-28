@@ -1,5 +1,6 @@
 local Campaign = require("src/Campaign")
 local BaseGame = require("src/BaseGame")
+local Ambitions = require("src/Ambitions")
 local Supplies = require("src/Supplies")
 
 control_GUID = Global.getVar("control_GUID")
@@ -10,7 +11,7 @@ local blue = {0.4, 0.6, 0.6}
 
 local toggleLeadersWITHOUT_params = {
     index = 0,
-    click_function = "toggleLeaders",
+    click_function = "toggleLeaders(with_leaders)",
     function_owner = self,
     label = "Play\nWITHOUT\nLeaders & Lore",
     tooltip = "Recommended for beginners",
@@ -25,7 +26,7 @@ local toggleLeadersWITHOUT_params = {
 
 local toggleLeadersWITH_params = {
     index = 0,
-    click_function = "toggleLeaders",
+    click_function = "toggleLeaders(with_leaders)",
     function_owner = self,
     label = "Play\nWITHOUT\nLeaders & Lore",
     tooltip = "Recommended for experienced players",
@@ -208,7 +209,10 @@ function onload()
     getObjectFromGUID(ambition_declared_marker_GUID).createButton(ambitionDeclared_params)
 end
 
-function toggleLeaders()
+function toggleLeaders(first,second,third)
+    log(first)
+    log(second)
+    log(third)
     local toggle = Global.getVar("with_leaders")
 
     toggle = not toggle
@@ -235,7 +239,19 @@ function toggleExpansion()
 end
 
 function toggleSplitDiscard()
+    
+    local toggle = Global.getVar("with_split_discard")
+    toggle = not toggle
+    Global.setVar("with_split_discard", toggle)
+
+    if (toggle) then
+        self.editButton(splitDiscardFACEUP_params)
+    else
+        self.editButton(splitDiscardFACEDOWN_params)
+    end
+
     getObjectFromGUID(Global.getVar("action_card_zone_GUID")).call("toggleFUDiscard")
+
 end
 
 function setupBaseGame()
@@ -438,15 +454,13 @@ function cleanupCards()
 
 end
 
-function declareAmbition()
-    local ambition_declared = getObjectFromGUID(ambition_declared_marker_GUID)
-    ambition_declared.setPositionSmooth({-13.51, 0.99, -4.72})
-    ambition_declared.setRotationSmooth({0.00, 90.00, 0.00})
-end
-
 function takeInitiative(objectButtonClicked, playerColorClicked)
 
     broadcastToAll(playerColorClicked .. " takes initiative")
     Global.call("takeInitiative", playerColorClicked)
 
+end
+
+function declareAmbition(_,player_color)
+    Ambitions.declare(player_color)
 end

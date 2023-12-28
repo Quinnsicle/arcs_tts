@@ -6,6 +6,7 @@ debug_player_count = 2
 
 FUDiscard_zone_GUID = "c56672"
 FUDiscard_marker_GUID = "000207"
+lead_card_zone_GUID = "629039"
 
 setup_table_GUID = "95f3f9"
 reach_board_GUID = "bb7d21"
@@ -24,6 +25,11 @@ action_deck_4P_GUID = "22a45c"
 action_card_zone_GUID = "e6eca7"
 ambition_marker_zone_GUID = "3984e4"
 ambition_declared_marker_GUID = "65f9a2"
+ambition_marker_GUIDs = {
+    "c9e0ee",
+    "a9b02a",
+    "b0b4d0"
+}
 court_deck_zone_GUID = "7a33ff"
 
 fate_GUID = "f96461"
@@ -52,6 +58,45 @@ mix_up_1_2P_GUID = "850244"
 mix_up_2_2P_GUID = "ddc074"
 
 -- out of play pieces
+oop_components = {
+    {
+        Sector = { pos = {-0.17,0.97,-1.04}, rot = {0,180,-0.01}, scale = {2.48,1,2.48},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769502/1D85B9468BB538D788FCF7576A05606918CD0DD4/" },
+        Gate = { pos = {-0.04,0.97,-0.63}, rot = {0,189.24,-0.01}, scale = {0.71,1,0.71},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769214/A4AD66554742C2FFA93612948C38641B813947FB/" }
+    },
+    {
+        Sector = { pos = {-0.51,0.97,-0.66}, rot = {0,180,-0.01}, scale = {2.48,1,2.48},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769605/A40A0C79B27F1F1C45E0570E46BA8A7B253F356E/" },
+        Gate = { pos = {-0.23,0.97,-0.21}, rot = {0,252.52,0}, scale = {0.44,1,0.44},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/" }
+    },
+    {
+        Sector = { pos = {-0.47,0.97,0.73}, rot = {0,179.99,-0.01}, scale = {2.36,1,2.36},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769710/C408A11914F7F4DEA83686851730DDF10A8BD5D4/" },
+        Gate = { pos = {-0.2,0.97,0.28}, rot = {0,305.16,0}, scale = {0.44,1,0.44},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/" }
+    },
+    {
+        Sector = { pos = {0.17,0.97,0.91}, rot = {0,180,-0.01}, scale = {2.54,1,2.54},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769816/0AA42154550040133E7D6740F85CD487D5F6967B/" },
+        Gate = { pos = {0.05,0.97,0.52}, rot = {-0.01,12.02,0}, scale = {0.71,1,0.71},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769214/A4AD66554742C2FFA93612948C38641B813947FB/" }
+    },
+    {
+        Sector = { pos = {0.5,0.97,0.55}, rot = {0,179.99,-0.01}, scale = {2.48,1,2.48},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445770194/8600421030523070B8E2F05CECC3281DF24989AC/" },
+        Gate = { pos = {0.24,0.97,0.1}, rot = {-0.01,72.87,-0.01}, scale = {0.44,1,0.44},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/" }
+    },
+    {
+        Sector = { pos = {0.46,0.97,-0.85}, rot = {0,179.99,-0.01}, scale = {2.29,1,2.29},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445770362/76677A077FC1D6CD3672DCC036646ABFD2881F62/" },
+        Gate = { pos = {0.2,0.97,-0.39}, rot = {-0.01,125.02,-0.01}, scale = {0.44,1,0.44},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/" }
+    }
+}
+
 oop_pieces_GUID = "7cbd3a"
 oop_small_gate1_GUID = "136d54"
 oop_small_gate2_GUID = "e4823d"
@@ -62,7 +107,7 @@ oop_planet_GUIDs = {"6ecb02", "795637", "ae5114", "d5fe1a", "0d3d0c",
 
 initiative_GUID = "0bf104"
 initiative_seized_GUID = "6303e3"
-chapter_pawn_GUID = "9c3ac8"
+chapter_pawn_GUID = "0a5781"
 
 active_players = {}
 is_player_setup = {
@@ -337,7 +382,9 @@ function tryObjectEnterContainer(container, object)
     end
     --log(">"..container.getTags().."<")
     return container.hasMatchingTag(object)
-        or #container.getTags() == 0
+        or not container.hasAnyTag()
+        or true
+        
 
 end
 
@@ -1300,10 +1347,8 @@ starting_pieces = {
 function onLoad()
     Counters.setup()
     Supplies.addMenuToAllObjects()
-    --macros.RecordDecalsToNotes(getObjectFromGUID("27a866"))
     -- Assign all connected players to a color spot.
     -- for _, player in ipairs(Player.getPlayers()) do
     --     assignPlayerToAvailableColor(player)
     -- end
-
 end
