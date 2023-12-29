@@ -154,7 +154,7 @@ function SupplyManager.returnObject(object,is_bottom_deck)
 
   -- Return an object to a position
   elseif supply.pos then
-    local pos = supply.pos[ct]
+    local pos = supply.pos
     pos = supply.origin and getObjectFromGUID(supply.origin).positionToWorld(pos)
     object.setPositionSmooth(pos,false,true)
   end
