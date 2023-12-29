@@ -1,11 +1,11 @@
 ### Graphics
-- [ ] Blight supply token and counter for the Blight 
-- [ ] Free Cities supply token and counter for the free cities 
-- [ ] Free Starports supply token and counter for the free starports
+- [ ] Blight supply token and counter
+- [ ] Free Cities supply token and counter
+- [ ] Free Starports supply token and counter
 - [x] Update imperial ship model
 - [x] Update imperial ship supply token
 - [x] Counters for trophies and captives
-- [x] Update initiative marker
+- [x] Update initiative marker model
 - [ ] Player scoreboard
 ### Automated Setup
 - [ ] Restructure player colors so that the seating is random
@@ -17,18 +17,18 @@
 - [x] _Return to supply_ context menu item
 - [ ] _Take as trophy_ context menu item
 - [ ] _Take as captive_ context menu item
+- [x] _Bury card_ context menu item
 - [x] Split discard toggle button and function in cleanup
 - [ ] Give initiative buttons?
 - [x] Dice rolling area
 - [ ] Agent snap points for outrage
 - [ ] Building snap points on flagship boards
+- [x] Added check for cards when pressing draw
 ### Bugs
 - [ ] Supply number bug for non hosts, I think I just need to recreate the supply tokens.
 - [ ] Remove print statements
 - [ ] Change cleanup function to move to discard area instead of to the position of the discard deck. In case the discard deck gets exhausted.
 - [x] red and blue are out of order on setup
-- [ ] More robust supply management for cards and decks
-    - Account for deck being despawned
-    - Add option to bury cards at bottom of the deck
+- [x] Update supplies to use deck but also account for deck despawning
 
 
