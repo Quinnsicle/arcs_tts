@@ -17693,8 +17693,8 @@
           },
           "ColorDiffuse": {
             "r": 0.882353,
-            "g": 0.324966133,
-            "b": 0.23921448
+            "g": 0.3249662,
+            "b": 0.23921454
           },
           "Tags": [
             "Agent"
@@ -17703,7 +17703,7 @@
           "Value": 0,
           "Locked": false,
           "Grid": true,
-          "Snap": true,
+          "Snap": false,
           "IgnoreFoW": false,
           "MeasureMovement": false,
           "DragSelectable": true,
@@ -28126,7 +28126,7 @@
       "Name": "Bag",
       "Transform": {
         "posX": -45.31114,
-        "posY": 0.780189157,
+        "posY": 0.7801891,
         "posZ": 25.1835613,
         "rotX": 1.71755246E-07,
         "rotY": -2.1270971E-05,
@@ -39440,7 +39440,7 @@
       "Name": "Bag",
       "Transform": {
         "posX": -47.8854866,
-        "posY": 0.780190051,
+        "posY": 0.7801894,
         "posZ": 32.2304878,
         "rotX": -8.53883762E-07,
         "rotY": 179.965866,
@@ -44406,7 +44406,7 @@
         "posZ": 32.237854,
         "rotX": 7.141283E-11,
         "rotY": 179.965927,
-        "rotZ": 2.40123825E-07,
+        "rotZ": 1.88430491E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -59755,7 +59755,7 @@
       "Name": "Bag",
       "Transform": {
         "posX": 49.15223,
-        "posY": 0.7761832,
+        "posY": 0.7761831,
         "posZ": 26.69775,
         "rotX": -2.2511648E-07,
         "rotY": 3.80929778E-05,
