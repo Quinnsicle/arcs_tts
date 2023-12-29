@@ -7,7 +7,7 @@ FUDiscard_active = true
 function onLoad()
 
     FUDiscard_zone.setPosition(FUDiscard_marker.positionToWorld({0,0.4,0}))
-    FUDiscard_zone.setRotation(FUDiscard_marker.getRotation()+Vector(0,180,0))
+    FUDiscard_zone.setRotation(FUDiscard_marker.getRotation())
 
     FUDsicard_zone_pos      = FUDiscard_zone.getPosition()
     FUDiscard_marker_pos    = FUDiscard_marker.getPosition()

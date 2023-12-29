@@ -259,7 +259,8 @@ function setupBaseGame()
     if (base_setup_success) then
         setControlButtons()
     elseif (Global.getVar("with_leaders")) then
-        setLeaderControls()
+        setControlButtons()
+        --setLeaderControls()
     end
 end
 
@@ -396,7 +397,15 @@ function setControlButtons()
     self.editButton(controls_params)
     self.editButton(dealHand_params)
     self.editButton(cleanupCards_params)
-    --self.editButton(takeInitiative_params)
+ --   self.editButton(takeInitiative_params)
+    self.editButton({
+        index = 3,
+        height = 1,
+        width = 1,
+        click_function = "doNothing",
+        label = "",
+        tooltip = ""
+    })
     self.editButton({
         index = 5,
         height = 1,
