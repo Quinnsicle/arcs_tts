@@ -40,8 +40,7 @@ end
 
 function BaseGame.dispersePlayerPieces()
     -- print("disperse starting pieces")
-
-    setupPlayers(Global.getVar("active_players"), chosen_setup_card)
+    BaseGame.setupPlayers(Global.getTable("active_players"), chosen_setup_card)
 end
 
 -- D
@@ -255,7 +254,7 @@ end
 
 function BaseGame.setupPlayers(ordered_players, setup_card)
     -- print("Setup Players")
-
+    log("test")
     local player_leaders = {
         [1] = "Default",
         [2] = "Default",

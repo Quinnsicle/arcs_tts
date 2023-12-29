@@ -16,17 +16,25 @@ local names = {
 }
 
 function AmbitionControls.declare(player_color)
-    local declared_ambition = tonumber(string.sub(lead_card_zone.getObjects()[1].getDescription(),-1))
+
+    local lead_card = lead_card_zone.getObjects()[1]
+
+    if not lead_card then
+        broadcastToColor("No lead card has been played", player_color)
+        return
+    end
+
+    local declared_ambition = tonumber(string.sub(lead_card.getDescription(),-1))
 
     if declared_ambition == 1 then
         broadcastToColor("Actions numbered 1 cannot be declared", player_color)
         return
     elseif declared_ambition == 7 then
-        broadcastToAll(player_color.." is declaring ambition of choice", Color[player_color])
+        broadcastToAll(player_color.." is declaring ambition of choice", player_color)
         broadcastToColor("Move highest available ambition marker to desired ambition", player_color)
     else
-        broadcastToAll(player_color.." has declared "..name[declared_ambition].." ambition", Color[player_color])
-        broadcastToColor("Move highest available ambition marker to "..name[declared_ambition], player_color)
+        broadcastToAll(player_color.." has declared "..names[declared_ambition].." ambition", player_color)
+        broadcastToColor("Move highest available ambition marker to "..names[declared_ambition], player_color)
     end
 
     declared_marker.setPositionSmooth({-13.51, 0.99, -4.72})

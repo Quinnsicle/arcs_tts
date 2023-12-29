@@ -11,7 +11,7 @@ local blue = {0.4, 0.6, 0.6}
 
 local toggleLeadersWITHOUT_params = {
     index = 0,
-    click_function = "toggleLeaders(with_leaders)",
+    click_function = "toggleLeaders",
     function_owner = self,
     label = "Play\nWITHOUT\nLeaders & Lore",
     tooltip = "Recommended for beginners",
@@ -26,7 +26,7 @@ local toggleLeadersWITHOUT_params = {
 
 local toggleLeadersWITH_params = {
     index = 0,
-    click_function = "toggleLeaders(with_leaders)",
+    click_function = "toggleLeaders",
     function_owner = self,
     label = "Play\nWITHOUT\nLeaders & Lore",
     tooltip = "Recommended for experienced players",
@@ -210,10 +210,8 @@ function onload()
     applyInitiativeMenus()
 end
 
-function toggleLeaders(first,second,third)
-    log(first)
-    log(second)
-    log(third)
+function toggleLeaders()
+
     local toggle = Global.getVar("with_leaders")
 
     toggle = not toggle
@@ -266,8 +264,7 @@ function setupBaseGame()
 end
 
 function placeStartingPieces()
-    BaseGame.dispersePlayerPieces()
-
+    --BaseGame.dispersePlayerPieces()
     setControlButtons()
 end
 
@@ -467,7 +464,7 @@ function seizeInitiative(player_color)
 
     initiative_marker.setPositionSmooth(pos)
     Wait.time(function() initiative_marker.setState(2) end, 2)
-    broadcastToAll(player_color .. " seizes initiative")
+    broadcastToAll(player_color .. " seizes initiative",player_color)
 
 
 end
@@ -479,7 +476,7 @@ function takeInitiative(player_color)
     local pos = player_board.positionToWorld(Global.getVar("initiative_pos"))
 
     initiative_marker.setPositionSmooth(pos)
-    broadcastToAll(player_color .. " takes initiative")
+    broadcastToAll(player_color .. " takes initiative",player_color)
 
 end
 

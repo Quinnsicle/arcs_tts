@@ -350,10 +350,6 @@ end
 
 function onObjectSpawn(object)
     Supplies.addMenuToObject(object)
-    if object.getGUID() == initiative_GUID then
-        local controls = getObjectFromGUID(control_GUID)
-        controls.call("applyInitiativeMenus")
-    end
 end
 
 -- Container Events --
