@@ -200,8 +200,8 @@ end
 function SupplyManager.returnFromMenu(player_color, position, object)
   for _, i in pairs(Player.getPlayers()) do
     if i.color == player_color then
-      for _, k in pairs(i.getSelectedObjects()) do
-        SupplyManager.returnObject(k)
+      for ct, k in ipairs(i.getSelectedObjects()) do
+        Wait.frames(function() SupplyManager.returnObject(k) end, ct*2)
       end
     end
   end
