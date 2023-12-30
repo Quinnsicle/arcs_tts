@@ -51,7 +51,8 @@ oop_large_gate2_GUID = "9bd528"
 oop_planet_GUIDs = {"6ecb02", "795637", "ae5114", "d5fe1a", "0d3d0c",
                     "4d14cb"}
 
-initiative_GUID = "ab621a"
+initiative_GUID = "b3b3d0"
+seized_initiative_GUID = "e0f490"
 chapter_pawn_GUID = "9c3ac8"
 
 active_players = {}
@@ -63,6 +64,7 @@ is_player_setup = {
 }
 
 -- Players Pieces
+-- Players Pieces
 player_pieces_GUIDs = {
     ["White"] = {
         player_board = "",
@@ -71,6 +73,13 @@ player_pieces_GUIDs = {
         ships = "6883e6",
         starports = "b96445",
         agents = "c863eb",
+        cities = {
+            "822a9c",
+            "00ee1b",
+            "a50d56",
+            "06f4a8",
+            "81c3a7"
+        },
         initiative_zone = "2e1cd3",
         area_zone = "a952c1"
     },
@@ -81,6 +90,13 @@ player_pieces_GUIDs = {
         ships = "a75924",
         starports = "b9ebd3",
         agents = "7b3749",
+        cities = {
+            "dbf4de",
+            "799077",
+            "acfa72",
+            "ac28fb",
+            "b41592"
+        },
         initiative_zone = "3fc6fd",
         area_zone = "238a92"
     },
@@ -91,6 +107,13 @@ player_pieces_GUIDs = {
         ships = "7e0fe2",
         starports = "51a8f5",
         agents = "bbb3aa",
+        cities = {
+            "33577c",
+            "cf5b95",
+            "0ac3c2",
+            "6e36ca",
+            "282f37"
+        },
         initiative_zone = "32f290",
         area_zone = "c2bf05"
     },
@@ -101,6 +124,13 @@ player_pieces_GUIDs = {
         ships = "2da385",
         starports = "7e625d",
         agents = "791097",
+        cities = {
+            "f3da7f",
+            "5e753e",
+            "79b799",
+            "fad0f1",
+            "45c804"
+        },
         initiative_zone = "cdc545",
         area_zone = "ee4b6e"
     }
@@ -240,9 +270,8 @@ die_zone_GUID = "1b45bb"
 
 imperial_ships_GUID = "beb54d"
 imperial_ships_text_GUID = "6daaa3"
-free_cities_GUID = "80742e"
-free_starports_GUID = "c79cb8"
-blight_GUID = "ff61a8"
+free_cities_GUID = "1205b0"
+blight_GUID = "3c61d2"
 
 A_Fates_GUID = "0ac7d1"
 
@@ -274,10 +303,10 @@ function onObjectLeaveContainer(container, leave_object)
 end
 
 function tryObjectEnterContainer(container, object)
-  if object.getStateId() == 2 then
-    object.setState(1)
-  end
-  return container.hasMatchingTag(object)
+    if object.getStateId() == 2 then
+        object.setState(1)
+    end
+    return container.hasMatchingTag(object)
 end
 
 ----------------------------------------------------
