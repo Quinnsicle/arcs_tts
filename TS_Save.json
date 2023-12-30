@@ -1,7 +1,7 @@
 {
   "SaveName": "Arcs Scripted (WIP)",
-  "EpochTime": 1703895381,
-  "Date": "12/29/2023 7:16:21 PM",
+  "EpochTime": 1703910943,
+  "Date": "12/29/2023 10:35:43 PM",
   "VersionNumber": "v13.2.2",
   "GameMode": "Cards",
   "GameType": "",
@@ -282,8 +282,8 @@
         "normalized": "chapter"
       },
       {
-        "displayed": "",
-        "normalized": ""
+        "displayed": "Blight",
+        "normalized": "blight"
       },
       {
         "displayed": "",
@@ -816,7 +816,7 @@
         "z": 13.36
       },
       "Rotation": {
-        "x": -2.78951084E-08,
+        "x": -2.7895112E-08,
         "y": 180.233017,
         "z": 180.0
       },
@@ -832,7 +832,7 @@
         "z": -18.01
       },
       "Rotation": {
-        "x": -8.807412E-08,
+        "x": -8.8074124E-08,
         "y": 180.011932,
         "z": 180.0
       },
@@ -896,7 +896,7 @@
         "z": 10.2
       },
       "Rotation": {
-        "x": -4.2970294E-09,
+        "x": -4.297031E-09,
         "y": 179.743027,
         "z": 180.0
       },
@@ -1248,7 +1248,7 @@
         "z": -21.20081
       },
       "Rotation": {
-        "x": -4.992865E-08,
+        "x": -4.9928655E-08,
         "y": 179.98407,
         "z": 180.0
       },
@@ -1296,7 +1296,7 @@
         "z": -21.20081
       },
       "Rotation": {
-        "x": 2.25907684E-08,
+        "x": 2.259077E-08,
         "y": 179.984543,
         "z": 180.0
       },
@@ -1372,9 +1372,9 @@
         "z": -8.4
       },
       "Rotation": {
-        "x": 5.802662E-06,
+        "x": 5.8026626E-06,
         "y": 270.0,
-        "z": 3.18820571E-06
+        "z": 3.18820526E-06
       },
       "Tags": [
         "Council"
@@ -1461,12 +1461,12 @@
       "GUID": "4c96ac",
       "Name": "BlockSquare",
       "Transform": {
-        "posX": -13.9473667,
-        "posY": 1.19922209,
+        "posX": -13.9473648,
+        "posY": 1.199222,
         "posZ": -9.359736,
-        "rotX": 0.0003831715,
-        "rotY": 179.977417,
-        "rotZ": -0.0009268187,
+        "rotX": 0.000397372671,
+        "rotY": 179.977661,
+        "rotZ": -0.0009012771,
         "scaleX": 0.425000459,
         "scaleY": 0.425000459,
         "scaleZ": 0.425000459
@@ -1481,8 +1481,8 @@
       },
       "ColorDiffuse": {
         "r": 0.882353,
-        "g": 0.32495144,
-        "b": 0.239199787
+        "g": 0.3249514,
+        "b": 0.239199758
       },
       "Tags": [
         "Power"
@@ -1510,11 +1510,11 @@
       "Name": "BlockSquare",
       "Transform": {
         "posX": -13.183712,
-        "posY": 1.19923341,
+        "posY": 1.19923329,
         "posZ": -9.356181,
-        "rotX": 0.000272344449,
-        "rotY": 180.063782,
-        "rotZ": -0.0008456495,
+        "rotX": 0.0003161107,
+        "rotY": 180.063934,
+        "rotZ": -0.0007890743,
         "scaleX": 0.425000459,
         "scaleY": 0.425000459,
         "scaleZ": 0.425000459
@@ -1557,12 +1557,12 @@
       "GUID": "404b46",
       "Name": "BlockSquare",
       "Transform": {
-        "posX": -13.948638,
+        "posX": -13.948637,
         "posY": 1.62422132,
-        "posZ": -9.360504,
-        "rotX": 0.0009104434,
-        "rotY": 180.006546,
-        "rotZ": -0.00139638607,
+        "posZ": -9.360506,
+        "rotX": 0.000888214854,
+        "rotY": 180.006683,
+        "rotZ": -0.00134304608,
         "scaleX": 0.425000459,
         "scaleY": 0.425000459,
         "scaleZ": 0.425000459
@@ -1605,12 +1605,12 @@
       "GUID": "38ef71",
       "Name": "BlockSquare",
       "Transform": {
-        "posX": -13.1889038,
+        "posX": -13.1889048,
         "posY": 1.62423265,
-        "posZ": -9.356175,
-        "rotX": -0.0001298874,
-        "rotY": 180.005737,
-        "rotZ": 179.998749,
+        "posZ": -9.356174,
+        "rotX": -8.569128E-05,
+        "rotY": 180.005859,
+        "rotZ": 179.99881,
         "scaleX": 0.425000459,
         "scaleY": 0.425000459,
         "scaleZ": 0.425000459
@@ -1654,11 +1654,11 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": -7.44700766,
-        "posY": 1.03694463,
+        "posY": 1.03694439,
         "posZ": -13.050025,
-        "rotX": 0.002079293,
-        "rotY": 180.1054,
-        "rotZ": 0.00332868239,
+        "rotX": 0.00208467967,
+        "rotY": 180.105362,
+        "rotZ": 0.00335164135,
         "scaleX": 0.273848951,
         "scaleY": 1.0,
         "scaleZ": 0.273848951
@@ -1752,11 +1752,11 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": 16.9712124,
-        "posY": 1.03686416,
+        "posY": 1.03686428,
         "posZ": -13.0190945,
-        "rotX": 0.004750209,
+        "rotX": 0.00474974373,
         "rotY": 179.9844,
-        "rotZ": 359.9913,
+        "rotZ": 359.991333,
         "scaleX": 0.273848951,
         "scaleY": 1.0,
         "scaleZ": 0.273848951
@@ -1852,9 +1852,9 @@
         "posX": 15.0855875,
         "posY": 1.03701687,
         "posZ": 18.37011,
-        "rotX": 0.00239484361,
-        "rotY": 180.007843,
-        "rotZ": 0.003962092,
+        "rotX": 0.00239296886,
+        "rotY": 180.007828,
+        "rotZ": 0.003967905,
         "scaleX": 0.273848951,
         "scaleY": 1.0,
         "scaleZ": 0.273848951
@@ -1948,9 +1948,9 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": -10.5624123,
-        "posY": 1.03635013,
+        "posY": 1.03635,
         "posZ": 18.38906,
-        "rotX": 0.00496575935,
+        "rotX": 0.0049712467,
         "rotY": 179.983,
         "rotZ": 359.9909,
         "scaleX": 0.273848951,
@@ -2048,9 +2048,9 @@
         "posX": 18.929266,
         "posY": 0.987284958,
         "posZ": 5.811137,
-        "rotX": -0.0008366891,
-        "rotY": 89.97862,
-        "rotZ": -0.000317513826,
+        "rotX": -0.000831346551,
+        "rotY": 89.9785461,
+        "rotZ": -0.0003131879,
         "scaleX": 0.721743345,
         "scaleY": 1.0,
         "scaleZ": 0.721743345
@@ -2105,12 +2105,12 @@
       "GUID": "c9e0ee",
       "Name": "Custom_Tile",
       "Transform": {
-        "posX": 16.2769928,
+        "posX": 16.27699,
         "posY": 0.9872467,
-        "posZ": 5.810137,
-        "rotX": -0.000836702762,
-        "rotY": 90.0163345,
-        "rotZ": -0.0003187345,
+        "posZ": 5.810136,
+        "rotX": -0.0008363143,
+        "rotY": 90.01635,
+        "rotZ": -0.000319258164,
         "scaleX": 0.721743345,
         "scaleY": 1.0,
         "scaleZ": 0.721743345
@@ -2167,8 +2167,8 @@
       "Transform": {
         "posX": 17.5950356,
         "posY": 1.08726573,
-        "posZ": 5.810416,
-        "rotX": -0.000817847264,
+        "posZ": 5.81041574,
+        "rotX": -0.0008178068,
         "rotY": 90.0295258,
         "rotZ": 179.99968,
         "scaleX": 0.721743345,
@@ -2288,7 +2288,7 @@
           "Rotation": {
             "x": 3.337347E-07,
             "y": 359.9589,
-            "z": 3.56504142E-06
+            "z": 3.565041E-06
           },
           "Tags": [
             "Resource"
@@ -2303,7 +2303,7 @@
           "Rotation": {
             "x": 8.027976E-08,
             "y": 359.9585,
-            "z": 3.60015019E-06
+            "z": 3.60014974E-06
           },
           "Tags": [
             "Resource"
@@ -2318,7 +2318,7 @@
           "Rotation": {
             "x": 2.34310346E-06,
             "y": 359.9589,
-            "z": 3.56515443E-06
+            "z": 3.5651542E-06
           },
           "Tags": [
             "Resource"
@@ -2333,7 +2333,7 @@
           "Rotation": {
             "x": 1.33375613E-06,
             "y": 359.958649,
-            "z": 3.585524E-06
+            "z": 3.58552347E-06
           },
           "Tags": [
             "Resource"
@@ -2348,7 +2348,7 @@
           "Rotation": {
             "x": 2.340689E-06,
             "y": 359.9588,
-            "z": 3.57349086E-06
+            "z": 3.57349063E-06
           },
           "Tags": [
             "Resource"
@@ -2363,7 +2363,7 @@
           "Rotation": {
             "x": -1.13109559E-06,
             "y": 359.9586,
-            "z": 3.59141654E-06
+            "z": 3.591416E-06
           },
           "Tags": [
             "Resource"
@@ -2391,7 +2391,7 @@
             "z": -0.824652433
           },
           "Rotation": {
-            "x": 7.490214E-06,
+            "x": 7.49021456E-06,
             "y": 359.9371,
             "z": 5.4537E-06
           },
@@ -2421,9 +2421,9 @@
             "z": -0.826131642
           },
           "Rotation": {
-            "x": -8.79183E-06,
+            "x": -8.791831E-06,
             "y": 359.9745,
-            "z": 2.21310438E-06
+            "z": 2.21310461E-06
           },
           "Tags": [
             "City"
@@ -2736,7 +2736,7 @@
             "z": -0.7407142
           },
           "Rotation": {
-            "x": 2.24637E-07,
+            "x": 2.24637034E-07,
             "y": 359.9721,
             "z": -2.50012836E-05
           },
@@ -2766,7 +2766,7 @@
             "z": -0.741876662
           },
           "Rotation": {
-            "x": 6.36599054E-07,
+            "x": 6.365991E-07,
             "y": 359.972046,
             "z": 2.3210423E-06
           },
@@ -2781,7 +2781,7 @@
             "z": -0.741586268
           },
           "Rotation": {
-            "x": 1.9802944E-07,
+            "x": 1.98029454E-07,
             "y": 359.971924,
             "z": -2.498709E-05
           },
@@ -2796,7 +2796,7 @@
             "z": -0.741296
           },
           "Rotation": {
-            "x": 5.689928E-07,
+            "x": 5.68992846E-07,
             "y": 359.971924,
             "z": 2.33273045E-06
           },
@@ -2826,9 +2826,9 @@
             "z": -0.8270587
           },
           "Rotation": {
-            "x": 4.59200737E-06,
+            "x": 4.592008E-06,
             "y": 359.9744,
-            "z": -2.51949E-05
+            "z": -2.51949023E-05
           },
           "Tags": [
             "City"
@@ -2841,7 +2841,7 @@
             "z": -0.827349842
           },
           "Rotation": {
-            "x": -1.90623189E-06,
+            "x": -1.90623211E-06,
             "y": 359.9502,
             "z": 4.13629459E-06
           },
@@ -2991,7 +2991,7 @@
             "z": -0.7633947
           },
           "Rotation": {
-            "x": 2.26549E-07,
+            "x": 2.26549034E-07,
             "y": 0.0255312473,
             "z": 180.0
           },
@@ -3006,7 +3006,7 @@
             "z": -0.7636476
           },
           "Rotation": {
-            "x": 6.77877665E-07,
+            "x": 6.778777E-07,
             "y": 0.0257634744,
             "z": 180.0
           },
@@ -3021,7 +3021,7 @@
             "z": -0.7639005
           },
           "Rotation": {
-            "x": -1.38968915E-06,
+            "x": -1.38968926E-06,
             "y": 0.0255585685,
             "z": 180.0
           },
@@ -3066,7 +3066,7 @@
             "z": -0.8238208
           },
           "Rotation": {
-            "x": -3.06037055E-06,
+            "x": -3.06037077E-06,
             "y": 0.0473605357,
             "z": 180.000015
           },
@@ -3144,9 +3144,9 @@
         "z": 0.0
       },
       "ColorDiffuse": {
-        "r": 0.229947835,
-        "g": 0.229947835,
-        "b": 0.229947835
+        "r": 0.2299478,
+        "g": 0.2299478,
+        "b": 0.2299478
       },
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -4139,7 +4139,7 @@
             "z": 1.21061885
           },
           "Rotation": {
-            "x": -3.67915413E-06,
+            "x": -3.67915459E-06,
             "y": 0.024779927,
             "z": -9.007903E-06
           },
@@ -4158,7 +4158,7 @@
           "Rotation": {
             "x": -2.91552351E-06,
             "y": 0.0221844539,
-            "z": -2.763912E-05
+            "z": -2.76391238E-05
           },
           "Tags": [
             "City",
@@ -4173,9 +4173,9 @@
             "z": 1.06542432
           },
           "Rotation": {
-            "x": -1.43280258E-05,
+            "x": -1.43280276E-05,
             "y": 0.0333859622,
-            "z": 1.38509768E-05
+            "z": 1.38509749E-05
           },
           "Tags": [
             "City",
@@ -4192,7 +4192,7 @@
           "Rotation": {
             "x": -3.272484E-05,
             "y": 0.0251077749,
-            "z": 4.399192E-05
+            "z": 4.3991924E-05
           },
           "Tags": [
             "City",
@@ -4207,7 +4207,7 @@
             "z": 1.00237584
           },
           "Rotation": {
-            "x": 2.67696578E-05,
+            "x": 2.676966E-05,
             "y": 0.0257088318,
             "z": 2.89533614E-06
           },
@@ -4226,7 +4226,7 @@
           "Rotation": {
             "x": -2.25375152E-05,
             "y": 359.9937,
-            "z": -4.574292E-05
+            "z": -4.57429232E-05
           },
           "Tags": [
             "City",
@@ -4309,7 +4309,7 @@
             "z": -0.8033496
           },
           "Rotation": {
-            "x": -1.15445919E-05,
+            "x": -1.15445928E-05,
             "y": 359.993561,
             "z": 2.2385213E-05
           },
@@ -4328,7 +4328,7 @@
           "Rotation": {
             "x": -2.31874765E-06,
             "y": 0.0377846062,
-            "z": -1.42975377E-05
+            "z": -1.4297535E-05
           },
           "Tags": [
             "City",
@@ -4461,7 +4461,7 @@
             "z": -0.401752055
           },
           "Rotation": {
-            "x": 5.734288E-06,
+            "x": 5.734289E-06,
             "y": 0.03174677,
             "z": 2.12569175E-05
           },
@@ -4495,9 +4495,9 @@
             "z": 0.5040256
           },
           "Rotation": {
-            "x": 1.83906855E-06,
+            "x": 1.83906877E-06,
             "y": 190.024765,
-            "z": -3.881099E-06
+            "z": -3.88109947E-06
           },
           "Tags": [
             "oop_gate"
@@ -4601,12 +4601,12 @@
       "GUID": "9c3ac8",
       "Name": "PlayerPawn",
       "Transform": {
-        "posX": 15.8096733,
-        "posY": 0.989265859,
+        "posX": 15.8096724,
+        "posY": 0.989265561,
         "posZ": -8.311884,
-        "rotX": 0.000831831945,
-        "rotY": 269.954834,
-        "rotZ": 0.000337282225,
+        "rotX": 0.0008312131,
+        "rotY": 269.9549,
+        "rotZ": 0.000335033226,
         "scaleX": 1.14999986,
         "scaleY": 1.14999986,
         "scaleZ": 1.14999986
@@ -4653,9 +4653,9 @@
         "posX": 18.8463039,
         "posY": 1.03714824,
         "posZ": -13.0190887,
-        "rotX": 0.004747718,
+        "rotX": 0.00475664251,
         "rotY": 179.991928,
-        "rotZ": 359.991333,
+        "rotZ": 359.9913,
         "scaleX": 0.273848951,
         "scaleY": 1.0,
         "scaleZ": 0.273848951
@@ -4751,7 +4751,7 @@
         "posX": 15.0991535,
         "posY": 1.03658056,
         "posZ": -13.0190926,
-        "rotX": 0.00477477768,
+        "rotX": 0.004761383,
         "rotY": 179.99678,
         "rotZ": 359.9913,
         "scaleX": 0.273848951,
@@ -4849,7 +4849,7 @@
         "posX": 13.8480377,
         "posY": 1.036391,
         "posZ": -13.0190983,
-        "rotX": 0.00476047,
+        "rotX": 0.00475080544,
         "rotY": 180.007568,
         "rotZ": 359.991333,
         "scaleX": 0.273848951,
@@ -4947,9 +4947,9 @@
         "posX": 20.0940285,
         "posY": 1.03733873,
         "posZ": -13.00062,
-        "rotX": 0.00475876033,
+        "rotX": 0.004739238,
         "rotY": 179.977722,
-        "rotZ": 359.991333,
+        "rotZ": 359.9913,
         "scaleX": 0.273848951,
         "scaleY": 1.0,
         "scaleZ": 0.273848951
@@ -5043,11 +5043,11 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": -7.4374814,
-        "posY": 1.03684592,
+        "posY": 1.036846,
         "posZ": 18.3902225,
-        "rotX": 0.00497323368,
-        "rotY": 180.023438,
-        "rotZ": 359.990936,
+        "rotX": 0.00496594,
+        "rotY": 180.023422,
+        "rotZ": 359.9909,
         "scaleX": 0.273848951,
         "scaleY": 1.0,
         "scaleZ": 0.273848951
@@ -5141,10 +5141,10 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": -9.311319,
-        "posY": 1.03654861,
+        "posY": 1.03654873,
         "posZ": 18.3890648,
-        "rotX": 0.004968878,
-        "rotY": 180.005219,
+        "rotX": 0.0049816044,
+        "rotY": 180.0052,
         "rotZ": 359.9909,
         "scaleX": 0.273848951,
         "scaleY": 1.0,
@@ -5239,10 +5239,10 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": -4.31834,
-        "posY": 1.03734136,
+        "posY": 1.03734148,
         "posZ": 18.3954086,
-        "rotX": 0.0049772053,
-        "rotY": 180.075333,
+        "rotX": 0.00498237927,
+        "rotY": 180.075378,
         "rotZ": 359.990936,
         "scaleX": 0.273848951,
         "scaleY": 1.0,
@@ -5337,9 +5337,9 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": -5.56398439,
-        "posY": 1.03714323,
+        "posY": 1.03714311,
         "posZ": 18.38906,
-        "rotX": 0.004963282,
+        "rotX": 0.004963372,
         "rotY": 179.955978,
         "rotZ": 359.9909,
         "scaleX": 0.273848951,
@@ -5435,11 +5435,11 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": 16.96595,
-        "posY": 1.03688681,
+        "posY": 1.03688669,
         "posZ": 18.3714447,
-        "rotX": 0.00240338151,
-        "rotY": 180.00145,
-        "rotZ": 0.0039591,
+        "rotX": 0.00239615771,
+        "rotY": 180.001434,
+        "rotZ": 0.003975088,
         "scaleX": 0.273848951,
         "scaleY": 1.0,
         "scaleZ": 0.273848951
@@ -5535,9 +5535,9 @@
         "posX": 20.0954323,
         "posY": 1.03667021,
         "posZ": 18.3720341,
-        "rotX": 0.002394736,
-        "rotY": 180.014175,
-        "rotZ": 0.003976505,
+        "rotX": 0.00238758279,
+        "rotY": 180.01416,
+        "rotZ": 0.00396851776,
         "scaleX": 0.273848951,
         "scaleY": 1.0,
         "scaleZ": 0.273848951
@@ -5633,9 +5633,9 @@
         "posX": 18.8473339,
         "posY": 1.03675663,
         "posZ": 18.370842,
-        "rotX": 0.0023956534,
+        "rotX": 0.00240353169,
         "rotY": 180.004059,
-        "rotZ": 0.00396875665,
+        "rotZ": 0.003965355,
         "scaleX": 0.273848951,
         "scaleY": 1.0,
         "scaleZ": 0.273848951
@@ -5729,11 +5729,11 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": 13.8382454,
-        "posY": 1.03710341,
+        "posY": 1.0371033,
         "posZ": 18.3742275,
-        "rotX": 0.00239525829,
-        "rotY": 180.015747,
-        "rotZ": 0.00396424625,
+        "rotX": 0.00239363825,
+        "rotY": 180.015762,
+        "rotZ": 0.00395905273,
         "scaleX": 0.273848951,
         "scaleY": 1.0,
         "scaleZ": 0.273848951
@@ -5827,11 +5827,11 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": -10.5698738,
-        "posY": 1.03712571,
+        "posY": 1.03712583,
         "posZ": -13.04995,
-        "rotX": 0.002095592,
-        "rotY": 179.969666,
-        "rotZ": 0.00333365262,
+        "rotX": 0.00208407454,
+        "rotY": 179.969681,
+        "rotZ": 0.00333258323,
         "scaleX": 0.273848951,
         "scaleY": 1.0,
         "scaleZ": 0.273848951
@@ -5925,11 +5925,11 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": -4.30912,
-        "posY": 1.03676236,
+        "posY": 1.03676248,
         "posZ": -13.0481434,
-        "rotX": 0.00209502853,
+        "rotX": 0.002086284,
         "rotY": 179.997223,
-        "rotZ": 0.00332265068,
+        "rotZ": 0.00333460676,
         "scaleX": 0.273848951,
         "scaleY": 1.0,
         "scaleZ": 0.273848951
@@ -6023,11 +6023,11 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": -5.57169628,
-        "posY": 1.03683555,
+        "posY": 1.03683567,
         "posZ": -13.0500059,
-        "rotX": 0.0020791057,
+        "rotX": 0.0020880287,
         "rotY": 180.010818,
-        "rotZ": 0.00331057562,
+        "rotZ": 0.003336215,
         "scaleX": 0.273848951,
         "scaleY": 1.0,
         "scaleZ": 0.273848951
@@ -6121,11 +6121,11 @@
       "Name": "Custom_Token",
       "Transform": {
         "posX": -9.318762,
-        "posY": 1.03705311,
+        "posY": 1.037053,
         "posZ": -13.0499783,
-        "rotX": 0.00209093443,
+        "rotX": 0.002086854,
         "rotY": 180.003128,
-        "rotZ": 0.00332484138,
+        "rotZ": 0.00332120527,
         "scaleX": 0.273848951,
         "scaleY": 1.0,
         "scaleZ": 0.273848951
@@ -6407,11 +6407,11 @@
       "Name": "Custom_Tile_Stack",
       "Transform": {
         "posX": -16.1747932,
-        "posY": 1.16,
+        "posY": 1.16000009,
         "posZ": -6.33237839,
-        "rotX": 9.310653E-06,
+        "rotX": 1.09913308E-05,
         "rotY": 89.98882,
-        "rotZ": -2.096971E-06,
+        "rotZ": -3.550702E-06,
         "scaleX": 0.5842339,
         "scaleY": 1.0,
         "scaleZ": 0.5842339
@@ -6470,11 +6470,11 @@
       "Name": "Custom_Tile_Stack",
       "Transform": {
         "posX": -16.0858727,
-        "posY": 1.16000068,
-        "posZ": -2.335242,
-        "rotX": 2.39542023E-05,
+        "posY": 1.16000056,
+        "posZ": -2.33524227,
+        "rotX": 2.37717541E-05,
         "rotY": 269.97052,
-        "rotZ": -3.888501E-05,
+        "rotZ": -4.16516377E-05,
         "scaleX": 0.5842339,
         "scaleY": 1.0,
         "scaleZ": 0.5842339
@@ -6808,10 +6808,10 @@
       "GUID": "855643",
       "Name": "Deck",
       "Transform": {
-        "posX": -12.2522011,
+        "posX": -12.2522,
         "posY": 1.1040529,
-        "posZ": 6.94272137,
-        "rotX": -0.000827159442,
+        "posZ": 6.942721,
+        "rotX": -0.000827216136,
         "rotY": 90.00064,
         "rotZ": 179.999664,
         "scaleX": 1.04603565,
@@ -8297,11 +8297,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -53.431694,
-        "posY": 0.780189037,
+        "posY": 0.7801889,
         "posZ": -36.0410957,
-        "rotX": 9.17139644E-08,
-        "rotY": 2.70005912E-05,
-        "rotZ": 1.33402356E-08,
+        "rotX": 9.504901E-08,
+        "rotY": 2.689387E-05,
+        "rotZ": 1.66752887E-08,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -10975,9 +10975,9 @@
         "posX": -52.4045,
         "posY": 1.02466631,
         "posZ": -3.411055,
-        "rotX": 1.8818449E-08,
+        "rotX": 1.50420671E-08,
         "rotY": 89.99998,
-        "rotZ": 4.572861E-08,
+        "rotZ": 5.972816E-08,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -11534,8 +11534,8 @@
       "Transform": {
         "posX": -52.4473152,
         "posY": 1.04392242,
-        "posZ": -6.14678144,
-        "rotX": 1.16050018E-07,
+        "posZ": -6.146782,
+        "rotX": 5.47433636E-08,
         "rotY": 90.00148,
         "rotZ": 180.0,
         "scaleX": 1.0,
@@ -18909,7 +18909,7 @@
         "posX": -1.51821041,
         "posY": 1.0275,
         "posZ": 17.2264233,
-        "rotX": 2.18228465E-07,
+        "rotX": 2.18228521E-07,
         "rotY": 179.983078,
         "rotZ": -2.882255E-07,
         "scaleX": 1.34999979,
@@ -23164,9 +23164,9 @@
         "posX": 22.88969,
         "posY": 1.0275,
         "posZ": -15.725729,
-        "rotX": 3.265113E-07,
+        "rotX": 3.26511355E-07,
         "rotY": 179.877213,
-        "rotZ": -2.603682E-07,
+        "rotZ": -2.60368267E-07,
         "scaleX": 1.34999979,
         "scaleY": 1.34999979,
         "scaleZ": 1.34999979
@@ -23729,7 +23729,7 @@
         "posX": 22.8898544,
         "posY": 1.0275,
         "posZ": -14.18573,
-        "rotX": -6.063493E-07,
+        "rotX": -6.06349431E-07,
         "rotY": 179.923691,
         "rotZ": -5.808494E-07,
         "scaleX": 1.34999979,
@@ -24797,10 +24797,10 @@
       "Transform": {
         "posX": -16.0836868,
         "posY": 1.15999961,
-        "posZ": -0.3155094,
-        "rotX": 0.000131268709,
+        "posZ": -0.315509349,
+        "rotX": 0.000130003318,
         "rotY": 89.99986,
-        "rotZ": 2.26302545E-05,
+        "rotZ": 2.148557E-05,
         "scaleX": 0.5842339,
         "scaleY": 1.0,
         "scaleZ": 0.5842339
@@ -25238,11 +25238,11 @@
       "Name": "Custom_Tile_Stack",
       "Transform": {
         "posX": -16.141222,
-        "posY": 1.160001,
+        "posY": 1.16000092,
         "posZ": -4.30609131,
-        "rotX": -9.538576E-05,
+        "rotX": -9.45750144E-05,
         "rotY": 90.0000153,
-        "rotZ": -1.77964685E-05,
+        "rotZ": -1.865175E-05,
         "scaleX": 0.5842339,
         "scaleY": 1.0,
         "scaleZ": 0.5842339
@@ -25303,7 +25303,7 @@
         "posX": -31.5385857,
         "posY": 1.05435836,
         "posZ": 31.7498474,
-        "rotX": -7.47476463E-07,
+        "rotX": -5.988261E-08,
         "rotY": 179.9877,
         "rotZ": 180.0,
         "scaleX": 1.0,
@@ -26140,12 +26140,12 @@
       "GUID": "3c61d2",
       "Name": "Bag",
       "Transform": {
-        "posX": -53.1782074,
-        "posY": 0.770938039,
-        "posZ": 17.5983276,
-        "rotX": 5.737919E-07,
-        "rotY": 269.999023,
-        "rotZ": 3.317697E-07,
+        "posX": -53.17698,
+        "posY": 0.7698271,
+        "posZ": 17.5976543,
+        "rotX": 359.822723,
+        "rotY": 270.000549,
+        "rotZ": 0.161682829,
         "scaleX": 1.05,
         "scaleY": 1.05,
         "scaleZ": 1.05
@@ -26159,7 +26159,7 @@
         "z": 0.0
       },
       "ColorDiffuse": {
-        "r": 0.122246318,
+        "r": 0.122246288,
         "g": 0.7648083,
         "b": 0.0
       },
@@ -26179,1393 +26179,24 @@
       "Hands": false,
       "MaterialIndex": -1,
       "MeshIndex": -1,
+      "Number": 0,
       "Bag": {
         "Order": 0
       },
       "LuaScript": "",
       "LuaScriptState": "",
-      "XmlUI": "",
-      "ContainedObjects": [
-        {
-          "GUID": "249f87",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -24.8927174,
-            "posY": 3.704227,
-            "posZ": 3.4312923,
-            "rotX": 0.155914426,
-            "rotY": 179.99324,
-            "rotZ": 0.105073191,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "2386d7",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -26.5941772,
-            "posY": 3.70682073,
-            "posZ": 5.852767,
-            "rotX": 0.0172483549,
-            "rotY": 179.976288,
-            "rotZ": 0.08009622,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "1767c2",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -25.7692051,
-            "posY": 3.75791073,
-            "posZ": 5.87731457,
-            "rotX": 0.016826082,
-            "rotY": 179.996658,
-            "rotZ": 7.019324,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "164fab",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -24.8596268,
-            "posY": 3.704409,
-            "posZ": 5.89068365,
-            "rotX": 0.0172951445,
-            "rotY": 179.972321,
-            "rotZ": 0.07902761,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "a289a2",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -24.0917225,
-            "posY": 3.759437,
-            "posZ": 5.87788963,
-            "rotX": 0.0174142439,
-            "rotY": 179.97142,
-            "rotZ": 7.53549862,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "bfc984",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -23.24682,
-            "posY": 3.753451,
-            "posZ": 5.87795,
-            "rotX": 0.0174180921,
-            "rotY": 179.982285,
-            "rotZ": 6.893214,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "cf9820",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -26.59407,
-            "posY": 3.706412,
-            "posZ": 4.90343,
-            "rotX": 0.0333087631,
-            "rotY": 179.98764,
-            "rotZ": 0.08358841,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "368b9b",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -25.7690983,
-            "posY": 3.75749969,
-            "posZ": 4.927876,
-            "rotX": 0.0348620228,
-            "rotY": 179.971451,
-            "rotZ": 7.01563549,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "cee8d4",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -24.8597412,
-            "posY": 3.70386171,
-            "posZ": 4.94141674,
-            "rotX": 0.08354846,
-            "rotY": 179.96225,
-            "rotZ": 0.110993713,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "ee3b3d",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -24.0915146,
-            "posY": 3.758689,
-            "posZ": 4.928313,
-            "rotX": 0.07348092,
-            "rotY": 179.9546,
-            "rotZ": 7.56237173,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "496c3c",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -23.2461147,
-            "posY": 3.75322819,
-            "posZ": 4.928562,
-            "rotX": 0.01612298,
-            "rotY": 179.984177,
-            "rotZ": 6.90345573,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "f20db6",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -26.7045918,
-            "posY": 3.775947,
-            "posZ": 4.284915,
-            "rotX": 9.27356,
-            "rotY": 180.033646,
-            "rotZ": 0.08864112,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "d69161",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -25.87745,
-            "posY": 3.83735132,
-            "posZ": 4.3036,
-            "rotX": 9.941294,
-            "rotY": 181.235962,
-            "rotZ": 7.121986,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "700020",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -24.966486,
-            "posY": 3.77902317,
-            "posZ": 4.32599926,
-            "rotX": 9.36986,
-            "rotY": 180.11026,
-            "rotZ": 0.722797751,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "b3b896",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -24.19834,
-            "posY": 3.8383882,
-            "posZ": 4.31126165,
-            "rotX": 10.5231714,
-            "rotY": 181.40918,
-            "rotZ": 7.69635868,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "baed81",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -23.35411,
-            "posY": 3.83209038,
-            "posZ": 4.303579,
-            "rotX": 10.5724354,
-            "rotY": 181.2943,
-            "rotZ": 7.14624262,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "dc97af",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -26.6294727,
-            "posY": 3.706157,
-            "posZ": 3.38007021,
-            "rotX": 0.01651177,
-            "rotY": 180.01416,
-            "rotZ": 0.08076578,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "5425e3",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -25.8050861,
-            "posY": 3.75727963,
-            "posZ": 3.40936112,
-            "rotX": 0.0181137659,
-            "rotY": 180.0026,
-            "rotZ": 7.02272224,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "172a00",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -24.1263,
-            "posY": 3.7590878,
-            "posZ": 3.41707468,
-            "rotX": 0.09538482,
-            "rotY": 180.01506,
-            "rotZ": 7.632969,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "8e579a",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -23.28335,
-            "posY": 3.75295115,
-            "posZ": 3.41939354,
-            "rotX": 0.031369634,
-            "rotY": 179.985336,
-            "rotZ": 6.92214,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "9ddbfd",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -26.7325783,
-            "posY": 3.706004,
-            "posZ": 2.41186714,
-            "rotX": 0.0175878219,
-            "rotY": 179.973358,
-            "rotZ": 0.08040103,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "d43c08",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -25.90753,
-            "posY": 3.75710154,
-            "posZ": 2.43641686,
-            "rotX": 0.0166630112,
-            "rotY": 179.998062,
-            "rotZ": 7.01669359,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "7365a5",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -33.3277779,
-            "posY": 3.71349025,
-            "posZ": 0.302507639,
-            "rotX": 0.3515631,
-            "rotY": 179.99501,
-            "rotZ": 0.248577341,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        },
-        {
-          "GUID": "57d57c",
-          "Name": "Custom_Tile",
-          "Transform": {
-            "posX": -53.3668327,
-            "posY": 3.145875,
-            "posZ": 17.550808,
-            "rotX": 0.5888041,
-            "rotY": 179.986053,
-            "rotZ": 357.479034,
-            "scaleX": 0.432334363,
-            "scaleY": 1.0,
-            "scaleZ": 0.432334363
-          },
-          "Nickname": "",
-          "Description": "",
-          "GMNotes": "",
-          "AltLookAngle": {
-            "x": 0.0,
-            "y": 0.0,
-            "z": 0.0
-          },
-          "ColorDiffuse": {
-            "r": 1.0,
-            "g": 1.0,
-            "b": 1.0
-          },
-          "LayoutGroupSortIndex": 0,
-          "Value": 0,
-          "Locked": false,
-          "Grid": true,
-          "Snap": true,
-          "IgnoreFoW": false,
-          "MeasureMovement": false,
-          "DragSelectable": true,
-          "Autoraise": true,
-          "Sticky": true,
-          "Tooltip": true,
-          "GridProjection": false,
-          "HideWhenFaceDown": false,
-          "Hands": false,
-          "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
-            "ImageScalar": 1.0,
-            "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
-              "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
-            }
-          },
-          "LuaScript": "",
-          "LuaScriptState": "",
-          "XmlUI": ""
-        }
-      ]
+      "XmlUI": ""
     },
     {
       "GUID": "1205b0",
       "Name": "Infinite_Bag",
       "Transform": {
         "posX": -50.4329338,
-        "posY": 0.9482234,
+        "posY": 0.948223352,
         "posZ": 17.4478512,
-        "rotX": -6.2078567E-07,
-        "rotY": -3.91379435E-05,
-        "rotZ": 7.771978E-07,
+        "rotX": 5.83515956E-08,
+        "rotY": -3.91272151E-05,
+        "rotZ": 2.23229648E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -27708,11 +26339,11 @@
       "Name": "Infinite_Bag",
       "Transform": {
         "posX": -47.8281059,
-        "posY": 0.948223233,
+        "posY": 0.9482233,
         "posZ": 17.4427567,
-        "rotX": -3.95384262E-07,
-        "rotY": -9.32372641E-05,
-        "rotZ": 5.16880334E-07,
+        "rotX": -4.222233E-07,
+        "rotY": -9.3210685E-05,
+        "rotZ": 7.795935E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -27855,11 +26486,11 @@
       "Name": "Deck",
       "Transform": {
         "posX": -31.4741039,
-        "posY": 0.996589839,
+        "posY": 0.9965898,
         "posZ": 28.4731026,
-        "rotX": 5.38620846E-08,
+        "rotX": 8.68735555E-08,
         "rotY": 179.99971,
-        "rotZ": -7.08168457E-08,
+        "rotZ": -1.22330007E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -28098,9 +26729,9 @@
         "posX": -48.4809265,
         "posY": 0.978828251,
         "posZ": 25.35007,
-        "rotX": -8.204131E-08,
+        "rotX": -3.88796053E-08,
         "rotY": 180.009186,
-        "rotZ": -2.40138736E-08,
+        "rotZ": 1.11802095E-07,
         "scaleX": 1.19100153,
         "scaleY": 1.0,
         "scaleZ": 1.19100153
@@ -28153,11 +26784,11 @@
       "GUID": "d5e298",
       "Name": "Custom_Dice",
       "Transform": {
-        "posX": -36.2539673,
-        "posY": 1.50604689,
-        "posZ": 28.18511,
-        "rotX": 0.0,
-        "rotY": 220.393051,
+        "posX": -36.35593,
+        "posY": 1.506047,
+        "posZ": 27.2381725,
+        "rotX": 1.70754731E-06,
+        "rotY": 220.393,
         "rotZ": 270.0,
         "scaleX": 1.6499995,
         "scaleY": 1.6499995,
@@ -28257,11 +26888,11 @@
       "GUID": "684608",
       "Name": "Custom_Dice",
       "Transform": {
-        "posX": -34.9182739,
-        "posY": 1.50604689,
-        "posZ": 28.2791519,
+        "posX": -35.020237,
+        "posY": 1.506047,
+        "posZ": 27.3322144,
         "rotX": 90.0,
-        "rotY": 160.137909,
+        "rotY": 160.137878,
         "rotZ": 0.0,
         "scaleX": 1.6499995,
         "scaleY": 1.6499995,
@@ -28362,11 +26993,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -40.1539345,
-        "posY": 0.776182532,
+        "posY": 0.776183665,
         "posZ": 35.7752342,
-        "rotX": -4.26824E-07,
+        "rotX": -1.01581181E-10,
         "rotY": 180.027161,
-        "rotZ": -2.65237929E-07,
+        "rotZ": 4.285543E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -30262,11 +28893,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -45.31114,
-        "posY": 0.780189157,
+        "posY": 0.7801892,
         "posZ": 25.1835613,
-        "rotX": -2.0010323E-07,
-        "rotY": -2.30985788E-05,
-        "rotZ": -1.334021E-07,
+        "rotX": -2.067733E-07,
+        "rotY": -2.29384968E-05,
+        "rotZ": 7.337122E-08,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -31952,11 +30583,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -53.7425041,
-        "posY": 0.7801902,
+        "posY": 0.7801898,
         "posZ": 35.729866,
-        "rotX": -1.28078614E-06,
+        "rotX": -4.268366E-07,
         "rotY": 179.965851,
-        "rotZ": -4.215026E-07,
+        "rotZ": 1.68547345E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -33395,11 +32026,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -51.58301,
-        "posY": 0.780189633,
+        "posY": 0.7801895,
         "posZ": 35.7678528,
-        "rotX": 5.29944942E-11,
+        "rotX": 2.185338E-12,
         "rotY": 180.037552,
-        "rotZ": -1.61750066E-07,
+        "rotZ": -6.670106E-09,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -34886,11 +33517,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -49.6750145,
-        "posY": 0.780189157,
+        "posY": 0.7801892,
         "posZ": 35.7678452,
-        "rotX": 2.40290184E-11,
+        "rotX": 4.25428963E-11,
         "rotY": 179.972931,
-        "rotZ": 1.01719124E-07,
+        "rotZ": 1.80092883E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -36238,11 +34869,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -47.7859459,
-        "posY": 0.7801894,
+        "posY": 0.7801896,
         "posZ": 35.7752228,
-        "rotX": -8.535753E-07,
+        "rotX": 8.537886E-07,
         "rotY": 179.972809,
-        "rotZ": 8.3563333E-07,
+        "rotZ": 6.31634052E-08,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -37565,11 +36196,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -45.859,
-        "posY": 0.780189157,
+        "posY": 0.7801906,
         "posZ": 35.7678528,
-        "rotX": 8.53619667E-07,
+        "rotX": -6.7741E-11,
         "rotY": 179.964737,
-        "rotZ": -5.005207E-07,
+        "rotZ": -2.20113463E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -38962,11 +37593,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -42.0429955,
-        "posY": 0.77618295,
+        "posY": 0.776183069,
         "posZ": 35.7678566,
-        "rotX": -4.26924373E-07,
+        "rotX": -4.26878614E-07,
         "rotY": 179.975418,
-        "rotZ": -1.74998732E-07,
+        "rotZ": 3.84446928E-08,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -40083,11 +38714,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -43.951,
-        "posY": 0.780189,
+        "posY": 0.7801889,
         "posZ": 35.7679749,
-        "rotX": -6.12965353E-14,
+        "rotX": 3.91549518E-14,
         "rotY": 180.000015,
-        "rotZ": 3.568507E-07,
+        "rotZ": -2.43458885E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -41552,11 +40183,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -47.90443,
-        "posY": 0.780189335,
+        "posY": 0.780190051,
         "posZ": 32.237854,
-        "rotX": -2.03643734E-11,
+        "rotX": 2.09107065E-10,
         "rotY": 179.965866,
-        "rotZ": -6.83685855E-08,
+        "rotZ": 7.020285E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -42474,9 +41105,9 @@
         "posX": -49.7934875,
         "posY": 0.7801893,
         "posZ": 32.2304878,
-        "rotX": 5.16343357E-10,
+        "rotX": 1.98597652E-10,
         "rotY": 179.965881,
-        "rotZ": 1.73422757E-06,
+        "rotZ": 6.67010568E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -43506,11 +42137,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -44.0728226,
-        "posY": 0.7801891,
+        "posY": 0.780189,
         "posZ": 32.23086,
-        "rotX": 1.21393569E-14,
+        "rotX": 1.14105121E-14,
         "rotY": 180.000015,
-        "rotZ": -7.837375E-08,
+        "rotZ": -7.003612E-08,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -44597,11 +43228,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -45.9964256,
-        "posY": 0.780189335,
+        "posY": 0.780190051,
         "posZ": 32.2378578,
-        "rotX": -1.9859784E-11,
+        "rotX": 2.09519763E-10,
         "rotY": 179.965881,
-        "rotZ": -6.670106E-08,
+        "rotZ": 7.0369606E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -45337,11 +43968,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -51.7014961,
-        "posY": 0.780189,
+        "posY": 0.780188739,
         "posZ": 32.2305946,
-        "rotX": -4.2688518E-07,
+        "rotX": 1.32832481E-10,
         "rotY": 179.962585,
-        "rotZ": 5.141943E-09,
+        "rotZ": 4.068765E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -46499,11 +45130,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -53.64738,
-        "posY": 0.7801906,
+        "posY": 0.7801893,
         "posZ": 32.245224,
-        "rotX": 4.26798522E-07,
+        "rotX": 9.47161E-11,
         "rotY": 179.965927,
-        "rotZ": -2.96946638E-07,
+        "rotZ": 3.1849757E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -47884,11 +46515,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -42.2181435,
-        "posY": 0.7761833,
+        "posY": 0.776183248,
         "posZ": 32.2526627,
-        "rotX": -4.26659739E-07,
+        "rotX": 2.00758049E-10,
         "rotY": 179.965942,
-        "rotZ": 7.638539E-07,
+        "rotZ": 6.753481E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -48813,11 +47444,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -40.27226,
-        "posY": 0.7761837,
+        "posY": 0.7761831,
         "posZ": 32.23793,
-        "rotX": 4.26880348E-07,
+        "rotX": 4.26871964E-07,
         "rotY": 179.965973,
-        "rotZ": -2.180459E-08,
+        "rotZ": -5.015254E-08,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -50525,11 +49156,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -51.75508,
-        "posY": 0.7801891,
+        "posY": 0.7801892,
         "posZ": 28.7983761,
-        "rotX": -8.53670429E-07,
+        "rotX": -4.26844622E-07,
         "rotY": 179.965881,
-        "rotZ": 3.470997E-07,
+        "rotZ": 1.41866863E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -51408,11 +50039,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -49.86602,
-        "posY": 0.7801891,
+        "posY": 0.7801892,
         "posZ": 28.805748,
-        "rotX": -4.27371759E-07,
+        "rotX": -2.79810286E-10,
         "rotY": 179.96579,
-        "rotZ": -1.62404331E-06,
+        "rotZ": -9.371499E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -51727,11 +50358,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -47.9012032,
-        "posY": 0.780189157,
+        "posY": 0.7801892,
         "posZ": 28.7836227,
-        "rotX": -4.273679E-07,
+        "rotX": -2.134642E-06,
         "rotY": 179.965988,
-        "rotZ": -1.620709E-06,
+        "rotZ": -6.9972765E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -52092,11 +50723,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -45.9931831,
-        "posY": 0.7801895,
+        "posY": 0.780189157,
         "posZ": 28.7836437,
-        "rotX": 2.74948425E-10,
+        "rotX": 7.245906E-11,
         "rotY": 179.9659,
-        "rotZ": 9.238097E-07,
+        "rotZ": 2.43458857E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -52468,11 +51099,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -53.6252,
-        "posY": 0.7801892,
+        "posY": 0.780189,
         "posZ": 28.7836437,
-        "rotX": -8.542516E-07,
+        "rotX": -4.270774E-07,
         "rotY": 179.9659,
-        "rotZ": -1.60557386E-06,
+        "rotZ": -6.402031E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -52739,11 +51370,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -44.0932159,
-        "posY": 0.780189157,
+        "posY": 0.780189037,
         "posZ": 28.7836418,
-        "rotX": -4.26886885E-07,
+        "rotX": 1.15811486E-14,
         "rotY": 180.0,
-        "rotZ": 1.0972326E-06,
+        "rotZ": -2.7180684E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -53496,11 +52127,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": -42.17686,
-        "posY": 0.7761829,
+        "posY": 0.77618295,
         "posZ": 28.78378,
-        "rotX": -8.8408815E-11,
+        "rotX": -8.539342E-07,
         "rotY": 179.966064,
-        "rotZ": -2.98487237E-07,
+        "rotZ": -5.416932E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -54321,9 +52952,9 @@
         "posX": -40.2690277,
         "posY": 0.7761829,
         "posZ": 28.7837143,
-        "rotX": -4.26632226E-07,
+        "rotX": 6.154045E-11,
         "rotY": 179.9659,
-        "rotZ": 8.555681E-07,
+        "rotZ": 2.06773279E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -54674,12 +53305,12 @@
       "GUID": "4d34d7",
       "Name": "Custom_Tile",
       "Transform": {
-        "posX": -35.580452,
-        "posY": 0.9612173,
-        "posZ": 32.6875954,
-        "rotX": 2.91008575E-07,
-        "rotY": 180.000122,
-        "rotZ": -8.409657E-08,
+        "posX": -35.6679878,
+        "posY": 0.961217344,
+        "posZ": 30.3762951,
+        "rotX": 2.11865611E-07,
+        "rotY": 180.000076,
+        "rotZ": -2.426694E-07,
         "scaleX": 1.0513531,
         "scaleY": 1.0,
         "scaleZ": 1.0513531
@@ -54806,7 +53437,7 @@
         "posX": -49.4945068,
         "posY": 1.02466631,
         "posZ": -10.4461908,
-        "rotX": -2.13775166E-08,
+        "rotX": -2.28382291E-08,
         "rotY": 180.0,
         "rotZ": 180.0,
         "scaleX": 1.70316041,
@@ -55365,9 +53996,9 @@
       "Name": "Deck",
       "Transform": {
         "posX": -49.43321,
-        "posY": 1.05355048,
+        "posY": 1.0535506,
         "posZ": -15.0664215,
-        "rotX": 1.00732755E-07,
+        "rotX": -1.37846037E-08,
         "rotY": 179.991577,
         "rotZ": 180.0,
         "scaleX": 1.0,
@@ -56297,9 +54928,9 @@
       "Name": "Deck",
       "Transform": {
         "posX": -52.95868,
-        "posY": 1.0535506,
+        "posY": 1.05355048,
         "posZ": -15.0610847,
-        "rotX": -1.27369461E-07,
+        "rotX": -8.763428E-08,
         "rotY": 180.0,
         "rotZ": 180.0,
         "scaleX": 1.0,
@@ -57231,7 +55862,7 @@
         "posX": -52.98652,
         "posY": 1.02466631,
         "posZ": -10.4459085,
-        "rotX": 5.36219531E-08,
+        "rotX": 5.04839761E-08,
         "rotY": 180.0,
         "rotZ": 180.0,
         "scaleX": 1.70316041,
@@ -57791,7 +56422,7 @@
         "posX": -52.9436531,
         "posY": 1.13538909,
         "posZ": -18.7041874,
-        "rotX": -1.33423555E-07,
+        "rotX": 1.0007917E-07,
         "rotY": 179.995087,
         "rotZ": 180.0,
         "scaleX": 1.0,
@@ -59820,11 +58451,11 @@
       "GUID": "0289cb",
       "Name": "Custom_Tile",
       "Transform": {
-        "posX": -12.2899427,
+        "posX": -12.28994,
         "posY": 1.08675861,
-        "posZ": -7.210414,
-        "rotX": 0.000334669981,
-        "rotY": 179.971832,
+        "posZ": -7.21041346,
+        "rotX": 0.000336634082,
+        "rotY": 179.971909,
         "rotZ": 179.999176,
         "scaleX": 0.278148234,
         "scaleY": 1.0,
@@ -60018,12 +58649,12 @@
       "GUID": "beb54d",
       "Name": "Custom_Model_Bag",
       "Transform": {
-        "posX": -35.8002052,
-        "posY": 1.028717,
-        "posZ": 34.9978333,
-        "rotX": -8.00491051E-08,
-        "rotY": 179.979675,
-        "rotZ": -2.71138816E-07,
+        "posX": -35.6018829,
+        "posY": 1.02871716,
+        "posZ": 36.70535,
+        "rotX": -1.16095464E-06,
+        "rotY": 179.97966,
+        "rotZ": -1.34895856E-07,
         "scaleX": 1.34999979,
         "scaleY": 1.34999979,
         "scaleZ": 1.34999979
@@ -61819,11 +60450,11 @@
       "Name": "Bag",
       "Transform": {
         "posX": 49.15223,
-        "posY": 0.7761834,
+        "posY": 0.7761833,
         "posZ": 26.69775,
-        "rotX": -4.46897616E-07,
-        "rotY": 4.5943696E-05,
-        "rotZ": 1.12724786E-06,
+        "rotX": -5.002779E-09,
+        "rotY": 4.55101363E-05,
+        "rotZ": 5.019255E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -62023,12 +60654,12 @@
       "GUID": "6e21fe",
       "Name": "CardCustom",
       "Transform": {
-        "posX": -20.5961876,
-        "posY": 0.9736049,
+        "posX": -20.5961914,
+        "posY": 0.973605156,
         "posZ": -4.199424,
-        "rotX": -3.65195447E-08,
+        "rotX": -2.5219439E-08,
         "rotY": 180.000778,
-        "rotZ": -7.9360575E-08,
+        "rotZ": -3.82218026E-08,
         "scaleX": 2.92801237,
         "scaleY": 1.0,
         "scaleZ": 2.92801237
@@ -62074,7 +60705,8 @@
         }
       },
       "LuaScript": "-- Bundled by luabundle {\"rootModuleName\":\"Control.6e21fe.lua\",\"version\":\"1.6.0\"}\nlocal __bundle_require, __bundle_loaded, __bundle_register, __bundle_modules = (function(superRequire)\n\tlocal loadingPlaceholder = {[{}] = true}\n\n\tlocal register\n\tlocal modules = {}\n\n\tlocal require\n\tlocal loaded = {}\n\n\tregister = function(name, body)\n\t\tif not modules[name] then\n\t\t\tmodules[name] = body\n\t\tend\n\tend\n\n\trequire = function(name)\n\t\tlocal loadedModule = loaded[name]\n\n\t\tif loadedModule then\n\t\t\tif loadedModule == loadingPlaceholder then\n\t\t\t\treturn nil\n\t\t\tend\n\t\telse\n\t\t\tif not modules[name] then\n\t\t\t\tif not superRequire then\n\t\t\t\t\tlocal identifier = type(name) == 'string' and '\\\"' .. name .. '\\\"' or tostring(name)\n\t\t\t\t\terror('Tried to require ' .. identifier .. ', but no such module has been registered')\n\t\t\t\telse\n\t\t\t\t\treturn superRequire(name)\n\t\t\t\tend\n\t\t\tend\n\n\t\t\tloaded[name] = loadingPlaceholder\n\t\t\tloadedModule = modules[name](require, loaded, register, modules)\n\t\t\tloaded[name] = loadedModule\n\t\tend\n\n\t\treturn loadedModule\n\tend\n\n\treturn require, loaded, register, modules\nend)(nil)\n__bundle_register(\"Control.6e21fe.lua\", function(require, _LOADED, __bundle_register, __bundle_modules)\nlocal Campaign = require(\"src/Campaign\")\r\nlocal BaseGame = require(\"src/BaseGame\")\r\n\r\ncontrol_GUID = Global.getVar(\"control_GUID\")\r\n\r\n-- font_color = {0.8, 0.58, 0.27}, GOLD\r\nlocal blue = {0.4, 0.6, 0.6}\r\n\r\nlocal toggleLeadersWITHOUT_params = {\r\n    index = 0,\r\n    click_function = \"toggleLeaders\",\r\n    function_owner = self,\r\n    label = \"Play\\nWITHOUT\\nLeaders & Lore\",\r\n    tooltip = \"Recommended for beginners\",\r\n    position = {0, 0.5, -1.17},\r\n    width = 820,\r\n    height = 260,\r\n    font_size = 72,\r\n    scale = {1, 1, 1},\r\n    color = {0.85, 0.3, 0.2},\r\n    font_color = {0, 0, 0}\r\n}\r\n\r\nlocal toggleLeadersWITH_params = {\r\n    index = 0,\r\n    click_function = \"toggleLeaders\",\r\n    function_owner = self,\r\n    label = \"Play\\nWITHOUT\\nLeaders & Lore\",\r\n    tooltip = \"Recommended for experienced players\",\r\n    position = {0, 0.5, -1.17},\r\n    width = 820,\r\n    height = 260,\r\n    font_size = 72,\r\n    scale = {1, 1, 1},\r\n    color = {0.28, 0.52, 0.18},\r\n    font_color = {0, 0, 0}\r\n}\r\n\r\nlocal toggleExpansionEXCLUDE_params = {\r\n    index = 1,\r\n    click_function = \"toggleExpansion\",\r\n    function_owner = self,\r\n    label = \"EXCLUDE\\nLeaders & Lore\\nExpansion\",\r\n    tooltip = \"Exclude additional Leaders & Lore\",\r\n    position = {-0.45, 0.5, -0.59},\r\n    width = 440,\r\n    height = 260,\r\n    font_size = 60,\r\n    scale = {1, 1, 1},\r\n    color = {0.85, 0.3, 0.2}\r\n}\r\n\r\nlocal toggleExpansionINCLUDE_params = {\r\n    index = 1,\r\n    click_function = \"toggleExpansion\",\r\n    function_owner = self,\r\n    label = \"INCLUDE\\nLeaders & Lore\\nExpansion\",\r\n    tooltip = \"Include additional Leaders & Lore\",\r\n    position = {-0.45, 0.5, -0.59},\r\n    width = 440,\r\n    height = 260,\r\n    font_size = 60,\r\n    scale = {1, 1, 1},\r\n    color = {0.28, 0.52, 0.18}\r\n}\r\n\r\nlocal splitDiscardFACEDOWN_params = {\r\n    index = 5,\r\n    function_owner = self,\r\n    click_function = \"toggleSplitDiscard\",\r\n    label = \"Discard\\nFACEDOWN\",\r\n    tooltip = \"Discard all cards facedown\",\r\n    position = {0.45, 0.5, -0.59},\r\n    width = 440,\r\n    height = 260,\r\n    font_size = 60,\r\n    scale = {1, 1, 1},\r\n    color = {0.85, 0.3, 0.2}\r\n}\r\n\r\nlocal splitDiscardFACEUP_params = {\r\n    index = 5,\r\n    function_owner = self,\r\n    click_function = \"toggleSplitDiscard\",\r\n    label = \"Discard\\nFACEUP\",\r\n    tooltip = \"Discard faceup cards in a separate pile\",\r\n    position = {0.45, 0.5, -0.59},\r\n    width = 440,\r\n    height = 260,\r\n    font_size = 60,\r\n    scale = {1, 1, 1},\r\n    color = {0.28, 0.52, 0.18}\r\n}\r\n\r\nlocal setupBaseGame_params = {\r\n    index = 2,\r\n    click_function = \"setupBaseGame\",\r\n    function_owner = self,\r\n    label = \"Start Base Game\",\r\n    position = {0, 0.5, -0.01},\r\n    width = 820,\r\n    height = 260,\r\n    font_size = 90,\r\n    scale = {1, 1, 1},\r\n    color = {0.4, 0.6, 0.6},\r\n    hover_color = {0.34, 0.38, 0.38}\r\n}\r\n\r\nlocal setupCampaignGame_params = {\r\n    index = 3,\r\n    click_function = \"setupCampaignGame\",\r\n    function_owner = self,\r\n    label = \"Start Campaign\",\r\n    position = {0, 0.5, 0.57},\r\n    width = 820,\r\n    height = 260,\r\n    font_size = 90,\r\n    scale = {1, 1, 1},\r\n    color = {0.4, 0.6, 0.6},\r\n    hover_color = {0.34, 0.38, 0.38}\r\n}\r\n\r\nlocal showControls_params = {\r\n    index = 4,\r\n    click_function = \"toggleControls\",\r\n    function_owner = self,\r\n    label = \"Show Controls\",\r\n    position = {0, 0.5, 1.15},\r\n    width = 820,\r\n    height = 260,\r\n    font_size = 90,\r\n    scale = {1, 1, 1},\r\n    color = {0.4, 0.6, 0.6},\r\n    hover_color = {0.34, 0.38, 0.38}\r\n}\r\nlocal showing_controls = false\r\n\r\n-- Control Buttons\r\nlocal controls_params = {\r\n    index = 0,\r\n    height = 1,\r\n    width = 1,\r\n    click_function = \"doNothing\",\r\n    label = \"Controls\",\r\n    tooltip = \"\",\r\n    font_size = 160,\r\n    color = {0, 0, 0},\r\n    hover_color = {0, 0, 0},\r\n    font_color = {0.8, 0.58, 0.27}\r\n}\r\n\r\nlocal dealHand_params = {\r\n    index = 1,\r\n    height = 260,\r\n    width = 820,\r\n    position = {0, 0.5, -0.59},\r\n    click_function = \"dealHand\",\r\n    label = \"Deal Hand\",\r\n    tooltip = \"\",\r\n    font_size = 90,\r\n    font_color = {0, 0, 0},\r\n    color = {0.4, 0.6, 0.6},\r\n    hover_color = {0.34, 0.38, 0.38}\r\n}\r\n\r\nlocal cleanupCards_params = {\r\n    index = 2,\r\n    height = 260,\r\n    width = 820,\r\n    click_function = \"cleanupCards\",\r\n    label = \"Cleanup Cards\",\r\n    tooltip = \"\",\r\n    font_size = 90,\r\n    color = {0.4, 0.6, 0.6},\r\n    hover_color = {0.34, 0.38, 0.38}\r\n}\r\n\r\nlocal takeInitiative_params = {\r\n    index = 3,\r\n    height = 260,\r\n    width = 820,\r\n    click_function = \"takeInitiative\",\r\n    label = \"Take Initiative\",\r\n    tooltip = \"\",\r\n    font_size = 90,\r\n    color = {0.4, 0.6, 0.6},\r\n    hover_color = {0.34, 0.38, 0.38}\r\n}\r\n\r\nfunction onload()\r\n    self.createButton(toggleLeadersWITHOUT_params)\r\n    self.createButton(toggleExpansionEXCLUDE_params)\r\n    self.createButton(setupBaseGame_params)\r\n    self.createButton(setupCampaignGame_params)\r\n    self.createButton(showControls_params)\r\n    self.createButton(splitDiscardFACEDOWN_params)\r\nend\r\n\r\nfunction toggleLeaders()\r\n    local toggle = Global.getVar(\"with_leaders\")\r\n\r\n    toggle = not toggle\r\n    Global.setVar(\"with_leaders\", toggle)\r\n\r\n    if (toggle) then\r\n        self.editButton(toggleLeadersWITH_params)\r\n    else\r\n        self.editButton(toggleLeadersWITHOUT_params)\r\n    end\r\nend\r\n\r\nfunction toggleExpansion()\r\n    local toggle = Global.getVar(\"with_more_to_explore\")\r\n\r\n    toggle = not toggle\r\n    Global.setVar(\"with_more_to_explore\", toggle)\r\n\r\n    if (toggle) then\r\n        self.editButton(toggleExpansionINCLUDE_params)\r\n    else\r\n        self.editButton(toggleExpansionEXCLUDE_params)\r\n    end\r\nend\r\n\r\nfunction toggleSplitDiscard()\r\n    local toggle = Global.getVar(\"with_split_discard\")\r\n\r\n    toggle = not toggle\r\n    Global.setVar(\"with_split_discard\", toggle)\r\n\r\n    if (toggle) then\r\n        self.editButton(splitDiscardFACEUP_params)\r\n    else\r\n        self.editButton(splitDiscardFACEDOWN_params)\r\n    end\r\nend\r\n\r\nfunction setupBaseGame()\r\n    local base_setup_success = BaseGame.setup()\r\n\r\n    if (base_setup_success) then\r\n        setControlButtons()\r\n    elseif (Global.getVar(\"with_leaders\")) then\r\n        setLeaderControls()\r\n    end\r\nend\r\n\r\nfunction placeStartingPieces()\r\n    BaseGame.dispersePlayerPieces()\r\n\r\n    setControlButtons()\r\nend\r\n\r\nfunction setupCampaignGame()\r\n    local campaign_setup_success = Campaign.setup()\r\n\r\n    if (campaign_setup_success) then\r\n        setControlButtons()\r\n    end\r\nend\r\n\r\nfunction toggleControls()\r\n\r\n    local purple_grey = {0.2, 0.22, 0.33}\r\n    local blue = {0.4, 0.6, 0.6}\r\n\r\n    if (showing_controls) then\r\n        showing_controls = false\r\n        setStartupButtons()\r\n        self.editButton({\r\n            index = 4,\r\n            height = 260,\r\n            width = 820,\r\n            label = \"Show Control\",\r\n            tooltip = \"\",\r\n            font_size = 90,\r\n            color = blue,\r\n            font_color = {0, 0, 0},\r\n            hover_color = {0.34, 0.38, 0.38}\r\n        })\r\n    else\r\n        showing_controls = true\r\n        setControlButtons()\r\n        self.editButton({\r\n            index = 4,\r\n            height = 260,\r\n            width = 820,\r\n            click_function = \"toggleControls\",\r\n            label = \"Show Setup\",\r\n            tooltip = \"\",\r\n            font_size = 90,\r\n            color = blue,\r\n            font_color = {0, 0, 0},\r\n            hover_color = {0.34, 0.38, 0.38}\r\n        })\r\n    end\r\n\r\nend\r\n\r\nfunction setStartupButtons()\r\n\r\n    local with_leaders = Global.getVar(\"with_leaders\")\r\n    if (with_leaders) then\r\n        self.editButton(toggleLeadersWITH_params)\r\n    else\r\n        self.editButton(toggleLeadersWITHOUT_params)\r\n    end\r\n\r\n    local with_more_to_explore = Global.getVar(\"with_more_to_explore\")\r\n    if (with_more_to_explore) then\r\n        self.editButton(toggleExpansionINCLUDE_params)\r\n    else\r\n        self.editButton(toggleExpansionEXCLUDE_params)\r\n    end\r\n\r\n    self.editButton(setupBaseGame_params)\r\n    self.editButton(setupCampaignGame_params)\r\n    self.editButton(showControls_params)\r\n\r\n    local with_split_discard = Global.getVar(\"with_split_discard\")\r\n    if (with_split_discard) then\r\n        self.editButton(splitDiscardFACEUP_params)\r\n    else\r\n        self.editButton(splitDiscardFACEDOWN_params)\r\n    end\r\nend\r\n\r\nfunction setLeaderControls()\r\n    self.editButton({\r\n        index = 0,\r\n        height = 1,\r\n        width = 1,\r\n        click_function = \"doNothing\",\r\n        label = \"\",\r\n        tooltip = \"\"\r\n    })\r\n    self.editButton({\r\n        index = 1,\r\n        height = 1,\r\n        width = 1,\r\n        click_function = \"doNothing\",\r\n        label = \"\",\r\n        tooltip = \"\"\r\n    })\r\n    self.editButton({\r\n        index = 2,\r\n        font_size = 88,\r\n        click_function = \"placeStartingPieces\",\r\n        label = \"Place Starting Pieces\",\r\n        tooltip = \"\"\r\n    })\r\n    self.editButton({\r\n        index = 3,\r\n        height = 1,\r\n        width = 1,\r\n        click_function = \"doNothing\",\r\n        label = \"\",\r\n        tooltip = \"\"\r\n    })\r\n    self.editButton({\r\n        index = 4,\r\n        height = 1,\r\n        width = 1,\r\n        click_function = \"doNothing\",\r\n        label = \"\",\r\n        tooltip = \"\"\r\n    })\r\n    self.editButton({\r\n        index = 5,\r\n        height = 1,\r\n        width = 1,\r\n        click_function = \"doNothing\",\r\n        label = \"\",\r\n        tooltip = \"\"\r\n    })\r\nend\r\n\r\nfunction setControlButtons()\r\n    self.editButton(controls_params)\r\n    self.editButton(dealHand_params)\r\n    self.editButton(cleanupCards_params)\r\n    self.editButton(takeInitiative_params)\r\n    self.editButton({\r\n        index = 5,\r\n        height = 1,\r\n        width = 1,\r\n        click_function = \"doNothing\",\r\n        label = \"\",\r\n        tooltip = \"\"\r\n    })\r\n    if (not showing_controls) then\r\n        self.editButton({\r\n            index = 4,\r\n            height = 1,\r\n            width = 1,\r\n            click_function = \"doNothing\",\r\n            label = \"\",\r\n            tooltip = \"\"\r\n        })\r\n    end\r\nend\r\n\r\nfunction doNothing()\r\nend\r\n\r\nfunction dealHand()\r\n\r\n    -- TODO: check each hand to see if theres cards then error\r\n    -- if condition then\r\n    -- end\r\n\r\n    broadcastToAll(\"Shuffle and deal 6 cards to all players\")\r\n\r\n    local action_deck = getObjectFromGUID(Global.getVar(\r\n        \"action_deck_GUID\"))\r\n\r\n    action_deck.randomize()\r\n\r\n    Wait.time(function()\r\n        action_deck.deal(6)\r\n    end, 0.5)\r\nend\r\n\r\nfunction cleanupCards()\r\n    -- ambition marker\r\n    local ambition_marker_zone = getObjectFromGUID(Global.getVar(\r\n        \"ambition_marker_zone_GUID\"))\r\n    local marker_zone_pos = ambition_marker_zone.getPosition()\r\n\r\n    -- resources\r\n\r\n    local action_card_zone = getObjectFromGUID(Global.getVar(\r\n        \"action_card_zone_GUID\"))\r\n    local action_zone_objects = action_card_zone.getObjects()\r\n    local action_deck_pos = getObjectFromGUID(Global.getVar(\r\n        \"action_deck_GUID\")).getPosition()\r\n\r\n    -- Error on union card\r\n    for i, obj in ipairs(action_zone_objects) do\r\n        if obj.getTags()[2] == \"Union\" then\r\n            broadcastToAll(\"Resolve Union card before cleanup!\", {\r\n                r = 1,\r\n                g = 0,\r\n                b = 0\r\n            })\r\n            return\r\n        end\r\n    end\r\n\r\n    -- clean up\r\n    broadcastToAll(\"Cleanup action card area\")\r\n\r\n    local with_split_discard = Global.getVar(\"with_split_discard\")\r\n\r\n    for i, obj in ipairs(action_zone_objects) do\r\n        if obj.getTags()[1] == \"Action\" then\r\n            -- action cards\r\n            if (with_split_discard) then\r\n                -- discard faceup cards in separate pile\r\n                local facedown_discard_pos = {\r\n                    x = -16.34,\r\n                    y = 2,\r\n                    z = 6.94\r\n                }\r\n\r\n                if (obj.getRotation().z < 90) then -- faceup (rotation z=0)\r\n                    obj.setPositionSmooth(facedown_discard_pos)\r\n                else -- facedown (rotation z=180)\r\n                    obj.setPositionSmooth(\r\n                        {action_deck_pos.x, action_deck_pos.y + 1,\r\n                         action_deck_pos.z})\r\n                end\r\n\r\n            else\r\n                -- discard all cards facedown\r\n                obj.setPositionSmooth(\r\n                    {action_deck_pos.x, action_deck_pos.y + 1,\r\n                     action_deck_pos.z})\r\n                obj.setRotationSmooth({0.00, 90.00, 180.00})\r\n            end\r\n        elseif obj.getTags()[1] == \"AmbitionDeclared\" then\r\n            -- ambition marker\r\n            obj.setPositionSmooth(marker_zone_pos)\r\n            obj.setRotationSmooth({0.00, 180.00, 180.00})\r\n        elseif obj.getTags()[1] == \"Resource\" then\r\n            -- resources \r\n            -- TODO: move to respective supply\r\n        end\r\n    end\r\n\r\nend\r\n\r\nfunction takeInitiative(objectButtonClicked, playerColorClicked)\r\n\r\n    broadcastToAll(playerColorClicked .. \" takes initiative\")\r\n    Global.call(\"takeInitiative\", playerColorClicked)\r\n\r\nend\r\n\nend)\n__bundle_register(\"src/BaseGame\", function(require, _LOADED, __bundle_register, __bundle_modules)\nlocal BaseGame = {}\r\n\r\nfunction BaseGame.setup()\r\n\r\n    local active_players = Global.call(\"getOrderedPlayers\")\r\n    if (#active_players < 2 or #active_players > 4) then\r\n        return false\r\n    end\r\n\r\n    -- B\r\n    Global.call(\"takeInitiative\", active_players[1])\r\n\r\n    BaseGame.setupActionDeck(#active_players)\r\n    BaseGame.setupBaseCourt(#active_players)\r\n\r\n    chosen_setup_card = BaseGame.chooseSetupCard(#active_players)\r\n    BaseGame.setupOutOfPlayClusters(chosen_setup_card)\r\n    if (#active_players == 2) then\r\n        BaseGame.setup2PMerchant(chosen_setup_card)\r\n    end\r\n\r\n    if (Global.getVar(\"with_leaders\")) then\r\n        BaseGame.dealLeaders(#active_players)\r\n        Global.setVar(\"active_players\", active_players)\r\n        return false\r\n    else\r\n        BaseGame.setupPlayers(active_players, chosen_setup_card)\r\n    end\r\n\r\n    Global.setVar(\"active_players\", active_players)\r\n    return true\r\nend\r\n\r\nfunction BaseGame.dispersePlayerPieces()\r\n    -- print(\"disperse starting pieces\")\r\n\r\n    setupPlayers(Global.getVar(\"active_players\"), chosen_setup_card)\r\nend\r\n\r\n-- D\r\nfunction BaseGame.setupActionDeck(player_count)\r\n    -- print(\"Base Game Setup Action Deck\")\r\n\r\n    -- Add 7s and 1s to the action deck for 4 players\r\n    local four_player_action_deck =\r\n        getObjectFromGUID(Global.getVar(\"action_deck_4P_GUID\"))\r\n    local action_deck = getObjectFromGUID(Global.getVar(\r\n        \"action_deck_GUID\"))\r\n    local event_deck = getObjectFromGUID(Global.getVar(\r\n        \"event_deck_GUID\"))\r\n\r\n    if (player_count == 4) then\r\n        action_deck.putObject(four_player_action_deck)\r\n    end\r\n\r\n    Wait.time(function()\r\n        action_deck.randomize()\r\n    end, 1.5)\r\nend\r\n\r\n-- H\r\nfunction BaseGame.setupBaseCourt(player_count)\r\n    -- print(\"Setup Base Court\")\r\n\r\n    local court_zone = getObjectFromGUID(Global.getVar(\r\n        \"court_deck_zone_GUID\"))\r\n    local court_zone_pos = court_zone.getPosition()\r\n    local base_court = getObjectFromGUID(Global.getVar(\r\n        \"base_court_deck_GUID\"))\r\n\r\n    base_court.setPosition(court_zone_pos)\r\n    base_court.setRotation({0, 270, 180})\r\n\r\n    Wait.time(function()\r\n        -- deal guild cards\r\n        Global.call(\"dealGuildCards\", player_count == 2 and 3 or 4)\r\n    end, 1)\r\nend\r\n\r\n-- I\r\nfunction BaseGame.chooseSetupCard(player_count)\r\n    -- print(\"Choose Setup Card\")\r\n\r\n    local player_colors = {\"White\", \"Yellow\", \"Red\", \"Teal\"}\r\n\r\n    local two_player_setup_cards = {{\r\n        name = \"FRONTIERS *For Experienced Players*\",\r\n        guid = Global.getVar(\"frontiers_2P_GUID\"),\r\n        out_of_play_clusters = {1, 6},\r\n        player_colors = 2\r\n    }, {\r\n        name = \"HOMELANDS\",\r\n        guid = Global.getVar(\"homelands_2P_GUID\"),\r\n        out_of_play_clusters = {1, 4},\r\n        player_colors = 2\r\n    }, {\r\n        name = \"MIX UP 1\",\r\n        guid = Global.getVar(\"mix_up_1_2P_GUID\"),\r\n        out_of_play_clusters = {2, 5},\r\n        player_colors = 2\r\n    }, {\r\n        name = \"MIX UP 2\",\r\n        guid = Global.getVar(\"mix_up_2_2P_GUID\"),\r\n        out_of_play_clusters = {1, 4},\r\n        player_colors = 2\r\n    }}\r\n\r\n    local three_player_setup_cards = {{\r\n        name = \"FRONTIERS\",\r\n        guid = Global.getVar(\"frontiers_3P_GUID\"),\r\n        out_of_play_clusters = {2, 3},\r\n        player_colors = 3\r\n    }, {\r\n        name = \"HOMELANDS\",\r\n        guid = Global.getVar(\"homelands_3P_GUID\"),\r\n        out_of_play_clusters = {5, 6},\r\n        player_colors = 3\r\n    }, {\r\n        name = \"CORE CONFLICT *For Experienced Players*\",\r\n        guid = Global.getVar(\"core_conflict_3P_GUID\"),\r\n        out_of_play_clusters = {3, 6},\r\n        player_colors = 3\r\n    }, {\r\n        name = \"MIX UP\",\r\n        guid = Global.getVar(\"mix_up_3P_GUID\"),\r\n        out_of_play_clusters = {1, 4},\r\n        player_colors = 3\r\n    }}\r\n\r\n    local four_player_setup_cards = {{\r\n        name = \"FRONTIERS\",\r\n        guid = Global.getVar(\"frontiers_4P_GUID\"),\r\n        out_of_play_clusters = {5},\r\n        player_colors = 4\r\n    }, {\r\n        name = \"MIX UP 1\",\r\n        guid = Global.getVar(\"mix_up_1_4P_GUID\"),\r\n        out_of_play_clusters = {3},\r\n        player_colors = 4\r\n    }, {\r\n        name = \"MIX UP 2\",\r\n        guid = Global.getVar(\"mix_up_2_4P_GUID\"),\r\n        out_of_play_clusters = {4},\r\n        player_colors = 4\r\n    }, {\r\n        name = \"MIX UP 3\",\r\n        guid = Global.getVar(\"mix_up_3_4P_GUID\"),\r\n        out_of_play_clusters = {6},\r\n        player_colors = 4\r\n    }}\r\n\r\n    local setup_cards = {two_player_setup_cards,\r\n                         three_player_setup_cards,\r\n                         four_player_setup_cards}\r\n\r\n    local chosen_setup_card =\r\n        setup_cards[player_count - 1][math.random(\r\n            #setup_cards[player_count - 1])]\r\n\r\n    local setup_deck = getObjectFromGUID(Global.getVar(\r\n        \"setup_deck_GUID\"))\r\n    setup_deck.takeObject({\r\n        guid = chosen_setup_card.guid,\r\n        flip = true,\r\n        position = {0, 4, 0},\r\n        callback_function = function(spawnedObject)\r\n            Wait.frames(function()\r\n                -- We've just waited a frame, which has given the object time to unfreeze.\r\n                -- However, it's also given the object time to enter another container, if\r\n                -- it spawned on one. Thus, we must confirm the object is not destroyed.\r\n                if not spawnedObject.isDestroyed() then\r\n                    spawnedObject.setPositionSmooth({-30, 1, 16})\r\n                end\r\n            end)\r\n        end\r\n    })\r\n\r\n    getObjectFromGUID(chosen_setup_card.guid).setScale({5, 5, 5})\r\n    return chosen_setup_card\r\n\r\nend\r\n\r\n-- J\r\nfunction BaseGame.setupOutOfPlayClusters(setup_card)\r\n    -- print(\"Setup Out of Play Clusters\")\r\n\r\n    local cluster_zone_guids = Global.getVar(\"cluster_zone_GUIDs\")\r\n\r\n    local oop_pieces = getObjectFromGUID(Global.getVar(\r\n        \"oop_pieces_GUID\"))\r\n\r\n    for _, gate_num in ipairs(setup_card.out_of_play_clusters) do\r\n        local gate = getObjectFromGUID(\r\n            cluster_zone_guids[gate_num][\"gate\"])\r\n        local gate_cover\r\n        local planet_cover\r\n        local cover_rotation\r\n        -- Cover planets\r\n        local oop_pieces = getObjectFromGUID(Global.getVar(\r\n            \"oop_pieces_GUID\"))\r\n        local abc = {\"a\", \"b\", \"c\"}\r\n        for i = 1, 3, 1 do\r\n            local planet = getObjectFromGUID(\r\n                cluster_zone_guids[gate_num][abc[i]][\"buildings\"][1])\r\n            local marker_guid = table.remove(Global.getVar(\r\n                \"oop_planet_GUIDs\"))\r\n            local pos = planet.getPosition()\r\n            oop_pieces.takeObject({\r\n                position = pos,\r\n                guid = marker_guid,\r\n                smooth = true\r\n            })\r\n        end\r\n\r\n        -- Cover gates\r\n        if (gate_num == 1) then\r\n            gate_cover = Global.getVar(\"oop_large_gate1_GUID\")\r\n            cover_rotation = {\r\n                x = 0,\r\n                y = 190,\r\n                z = 0\r\n            }\r\n        elseif (gate_num == 2) then\r\n            gate_cover = Global.getVar(\"oop_small_gate1_GUID\")\r\n            cover_rotation = {\r\n                x = 0,\r\n                y = 250,\r\n                z = 0\r\n            }\r\n        elseif (gate_num == 3) then\r\n            gate_cover = Global.getVar(\"oop_small_gate2_GUID\")\r\n            cover_rotation = {\r\n                x = 0,\r\n                y = 310,\r\n                z = 0\r\n            }\r\n        elseif (gate_num == 4) then\r\n            gate_cover = Global.getVar(\"oop_large_gate2_GUID\")\r\n            cover_rotation = {\r\n                x = 0,\r\n                y = 10,\r\n                z = 0\r\n            }\r\n        elseif (gate_num == 5) then\r\n            gate_cover = Global.getVar(\"oop_small_gate2_GUID\")\r\n            cover_rotation = {\r\n                x = 0,\r\n                y = 70,\r\n                z = 0\r\n            }\r\n        elseif (gate_num == 6) then\r\n            gate_cover = Global.getVar(\"oop_small_gate1_GUID\")\r\n            cover_rotation = {\r\n                x = 0,\r\n                y = 125,\r\n                z = 0\r\n            }\r\n        end\r\n        local zone_pos = gate.getPosition()\r\n        oop_pieces.takeObject({\r\n            position = {zone_pos.x, zone_pos.y, zone_pos.z},\r\n            rotation = cover_rotation,\r\n            guid = gate_cover,\r\n            smooth = true\r\n        })\r\n\r\n    end\r\nend\r\n\r\n-- K\r\nfunction BaseGame.setup2PMerchant(setup_card)\r\n    -- print(\"Setup 2P Merchant\")\r\n    local merchant_params\r\n\r\n    for _, gate_num in ipairs(setup_card.out_of_play_clusters) do\r\n        if (gate_num == 1) then\r\n            merchant_params = {\"weapons\", \"fuel\", \"materials\"}\r\n        elseif (gate_num == 2) then\r\n            merchant_params = {\"psionics\", \"relics\", \"weapons\"}\r\n        elseif (gate_num == 3) then\r\n            merchant_params = {\"weapons\", \"fuel\", \"materials\"}\r\n        elseif (gate_num == 4) then\r\n            merchant_params = {\"relics\", \"fuel\", \"materials\"}\r\n        elseif (gate_num == 5) then\r\n            merchant_params = {\"psionics\", \"relics\", \"weapons\"}\r\n        elseif (gate_num == 6) then\r\n            merchant_params = {\"psionics\", \"fuel\", \"materials\"}\r\n        end\r\n\r\n        Global.call(\"merchantSetup\", merchant_params)\r\n    end\r\nend\r\n\r\nfunction BaseGame.dealLeaders(player_count)\r\n\r\n    local leader_deck = getObjectFromGUID(Global.getVar(\"fate_GUID\"))\r\n    local lore_deck = getObjectFromGUID(Global.getVar(\"lore_GUID\"))\r\n    local mte_fate = getObjectFromGUID(Global.getVar(\r\n        \"more_to_explore_fate_GUID\"))\r\n    local mte_lore = getObjectFromGUID(Global.getVar(\r\n        \"more_to_explore_lore_GUID\"))\r\n\r\n    if (Global.getVar(\"with_more_to_explore\")) then\r\n        broadcastToAll(\"Playing with the Leaders & Lore Expansion\")\r\n\r\n        leader_deck.putObject(mte_fate)\r\n        lore_deck.putObject(mte_lore)\r\n    end\r\n\r\n    leader_deck.randomize()\r\n    lore_deck.randomize()\r\n\r\n    local leader_pos = {\r\n        x = -39,\r\n        y = 1,\r\n        z = 7\r\n    }\r\n    local lore_pos = {\r\n        x = -39,\r\n        y = 1,\r\n        z = 2.5\r\n    }\r\n\r\n    for i = 1, player_count + 1 do\r\n        leader_deck.takeObject({\r\n            flip = true,\r\n            position = {leader_pos.x + (i * 3.2), leader_pos.y,\r\n                        leader_pos.z}\r\n        })\r\n        lore_deck.takeObject({\r\n            flip = true,\r\n            position = {lore_pos.x + (i * 3.2), lore_pos.y, lore_pos.z}\r\n        })\r\n\r\n    end\r\nend\r\n\r\nfunction BaseGame.setupPlayers(ordered_players, setup_card)\r\n    -- print(\"Setup Players\")\r\n\r\n    local player_leaders = {\r\n        [1] = \"Default\",\r\n        [2] = \"Default\",\r\n        [3] = \"Default\",\r\n        [4] = \"Default\"\r\n    }\r\n    local player_pieces_guids = Global.getVar(\"player_pieces_GUIDs\")\r\n    local cluster_zone_guids = Global.getVar(\"cluster_zone_GUIDs\")\r\n\r\n    for i, player in ipairs(ordered_players) do\r\n        local player_zones = getObjectFromGUID(\r\n                                 player_pieces_guids[player][\"area_zone\"]).getObjects()\r\n\r\n        for _, obj in pairs(player_zones) do\r\n            if (obj.hasTag(\"Leader\")) then\r\n                player_leaders[i] = obj.guid\r\n            end\r\n        end\r\n    end\r\n\r\n    local locations =\r\n        Global.getVar(\"starting_locations\")[setup_card.guid]\r\n\r\n    for player_number, ABC in pairs(locations) do\r\n        local player_color = ordered_players[player_number]\r\n\r\n        -- get player ship and starport bags and city objects\r\n        local ship_bag = getObjectFromGUID(\r\n            player_pieces_guids[player_color][\"ships\"])\r\n        local starport_bag = getObjectFromGUID(\r\n            player_pieces_guids[player_color][\"starports\"])\r\n        local city1 = getObjectFromGUID(\r\n            player_pieces_guids[player_color][\"city\"][1])\r\n        local city2 = getObjectFromGUID(\r\n            player_pieces_guids[player_color][\"city\"][2])\r\n\r\n        -- get starting pieces\r\n        local pieces =\r\n            Global.getVar(\"starting_pieces\")[player_leaders[player_number]]\r\n\r\n        -- iterate through setup card's ABCs\r\n        for starting_letter, cluster_system in pairs(ABC) do\r\n            local cluster = cluster_system[\"cluster\"]\r\n            local system = cluster_system[\"system\"]\r\n\r\n            -- get building/ship/gate zones in cluster and system\r\n            local building_zone\r\n            local ship_zone\r\n            local gate_zone\r\n\r\n            -- TODO determine a different condition to determine a gate system\r\n            if (system == \"gate\") then -- a gate system\r\n                gate_zone = getObjectFromGUID(\r\n                                cluster_zone_guids[cluster][system]).getPosition()\r\n\r\n                -- move ships to gate zone\r\n                local ship_qty = pieces[starting_letter][\"ships\"]\r\n                local ship_place_offset = 0\r\n                for i = 1, ship_qty, 1 do\r\n                    ship_bag.takeObject({\r\n                        position = {gate_zone.x, gate_zone.y,\r\n                                    gate_zone.z + ship_place_offset}\r\n                    })\r\n                    ship_place_offset = ship_place_offset + 0.3\r\n                end\r\n            else -- this is a planetary system\r\n                building_zone = getObjectFromGUID(\r\n                                    cluster_zone_guids[cluster][system][\"buildings\"][1]).getPosition()\r\n\r\n                -- get building type to move\r\n                local building_type =\r\n                    pieces[starting_letter][\"building\"]\r\n\r\n                -- move building to building zone one\r\n                if (building_type == \"city\") then\r\n                    if (starting_letter == \"A\") then\r\n                        city1.setPositionSmooth(building_zone)\r\n                    else\r\n                        city2.setPositionSmooth(building_zone)\r\n                    end\r\n                elseif (building_type == \"starport\") then\r\n                    starport_bag.takeObject({\r\n                        position = building_zone,\r\n                        rotation = {0, 180, 0}\r\n                    })\r\n                end\r\n\r\n                -- move ships to ship zone\r\n                ship_zone = getObjectFromGUID(\r\n                                cluster_zone_guids[cluster][system][\"ships\"]).getPosition()\r\n                local ship_qty = pieces[starting_letter][\"ships\"]\r\n                local ship_place_offset = 0\r\n                for i = 1, ship_qty, 1 do\r\n                    ship_bag.takeObject({\r\n                        position = {ship_zone.x, ship_zone.y,\r\n                                    ship_zone.z + ship_place_offset}\r\n                    })\r\n                    ship_place_offset = ship_place_offset + 0.3\r\n                end\r\n            end\r\n\r\n        end\r\n    end\r\nend\r\n\r\nreturn BaseGame\r\n\nend)\n__bundle_register(\"src/Campaign\", function(require, _LOADED, __bundle_register, __bundle_modules)\nlocal Campaign = {}\r\n\r\nfunction Campaign.setup()\r\n\r\n    local ordered_players = Global.call(\"getOrderedPlayers\")\r\n    if (#ordered_players < 2 or #ordered_players > 4) then\r\n        return false\r\n    end\r\n\r\n    -- B\r\n    Global.call(\"takeInitiative\", ordered_players[1])\r\n\r\n    Campaign.setupActionDeck(#ordered_players)\r\n    Campaign.setupChapterTrack()\r\n    Campaign.setupCampaignGuildCards(#ordered_players)\r\n    Campaign.setupImperialCouncil()\r\n    Campaign.setupImperialRules(#ordered_players)\r\n    Campaign.setupClusters(#ordered_players)\r\n\r\n    Wait.time(function()\r\n        Campaign.dealPlayerFates()\r\n    end, 5)\r\n\r\n    return true\r\nend\r\n\r\n-- C,D,E\r\nfunction Campaign.setupActionDeck(player_count)\r\n\r\n    -- Add 7s and 1s to the action deck for 4 players\r\n    local four_player_action_deck =\r\n        getObjectFromGUID(Global.getVar(\"action_deck_4P_GUID\"))\r\n    local action_deck = getObjectFromGUID(Global.getVar(\r\n        \"action_deck_GUID\"))\r\n    local event_deck = getObjectFromGUID(Global.getVar(\r\n        \"event_deck_GUID\"))\r\n\r\n    if (player_count == 4) then\r\n        action_deck.putObject(four_player_action_deck)\r\n\r\n        event_deck.putObject(four_player_action_deck)\r\n    else\r\n        local action_deck_pos = action_deck.getPosition()\r\n        event_deck.takeObject({\r\n            position = {\r\n                x = action_deck_pos.x,\r\n                y = action_deck_pos.y + 1,\r\n                z = action_deck_pos.z\r\n            },\r\n            rotation = {0, 90, 0},\r\n            flip = true\r\n            -- smooth = false\r\n        })\r\n        event_deck.takeObject({\r\n            position = {\r\n                x = action_deck_pos.x,\r\n                y = action_deck_pos.y + 1,\r\n                z = action_deck_pos.z\r\n            },\r\n            rotation = {0, 90, 0},\r\n            flip = true\r\n            -- smooth = false\r\n        })\r\n\r\n        destroyObject(event_deck)\r\n\r\n        destroyObject(four_player_action_deck)\r\n    end\r\n\r\n    Wait.time(function()\r\n        action_deck.shuffle()\r\n    end, 1.5)\r\nend\r\n\r\n-- G\r\nfunction Campaign.setupChapterTrack()\r\n\r\n    local chapter_track = getObjectFromGUID(Global.getVar(\r\n        \"chapter_track_GUID\"))\r\n    local chapter_zone = getObjectFromGUID(Global.getVar(\r\n        \"chapter_zone_GUID\"))\r\n    local chapter_zone_pos = chapter_zone.getPosition()\r\n\r\n    chapter_track.setPosition(chapter_zone_pos)\r\n\r\n    local pawn = getObjectFromGUID(Global.getVar(\"chapter_pawn_GUID\"))\r\n    pawn.setPositionSmooth({16.79, 1.8, -8.23})\r\n\r\nend\r\n\r\n-- I,J\r\nfunction Campaign.setupCampaignGuildCards(player_count)\r\n    local court_zone = getObjectFromGUID(Global.getVar(\r\n        \"court_deck_zone_GUID\"))\r\n    local court_zone_pos = court_zone.getPosition()\r\n    local campaign_court = getObjectFromGUID(Global.getVar(\r\n        \"campaign_court_GUID\"))\r\n\r\n    campaign_court.setPosition(court_zone_pos)\r\n    campaign_court.setRotation({0, 270, 180})\r\n\r\n    Wait.time(function()\r\n        -- deal guild cards\r\n        Global.call(\"dealGuildCards\", player_count == 2 and 3 or 4)\r\n\r\n        -- add lore cards\r\n        local lore_deck =\r\n            getObjectFromGUID(Global.getVar(\"lore_GUID\"))\r\n\r\n        if (Global.getVar(\"with_more_to_explore\")) then\r\n            broadcastToAll(\"Playing with the Leaders & Lore Expansion\")\r\n\r\n            local mte_lore = getObjectFromGUID(Global.getVar(\r\n                \"more_to_explore_lore_GUID\"))\r\n\r\n            lore_deck.putObject(mte_lore)\r\n        end\r\n\r\n        lore_deck.randomize()\r\n\r\n        for i = 1, player_count, 1 do\r\n            lore_deck.takeObject({\r\n                position = {court_zone_pos.x, court_zone_pos.y + 1,\r\n                            court_zone_pos.z},\r\n                rotation = {0, 270, 180},\r\n                flip = false,\r\n                smooth = false\r\n            })\r\n        end\r\n\r\n        Wait.time(function()\r\n            campaign_court.randomize()\r\n        end, 1)\r\n\r\n    end, 1)\r\nend\r\n\r\n-- K\r\nfunction Campaign.setupImperialCouncil()\r\n\r\n    local imperial_council = getObjectFromGUID(Global.getVar(\r\n        \"imperial_council_GUID\"))\r\n    imperial_council.setPositionSmooth({22, 1, -8.40})\r\n    imperial_council.setRotation({0, 270, 0})\r\n\r\n    local imperial_ships = getObjectFromGUID(Global.getVar(\r\n        \"imperial_ships_GUID\"))\r\n    imperial_ships.setPosition({-16.8, 1, 2.2})\r\n\r\nend\r\n\r\n-- L,M\r\nfunction Campaign.setupImperialRules(player_count)\r\n\r\n    local laws = getObjectFromGUID(Global.getVar(\"laws_GUID\"))\r\n\r\n    laws.setPositionSmooth({34, 1, 5})\r\n    laws.setRotation({0, 270, 0})\r\n\r\n    local next_law_pos_z = 5 - 2.4\r\n    local next_law_pos = {\r\n        x = 34,\r\n        y = 1,\r\n        z = next_law_pos_z\r\n    }\r\n\r\n    if (player_count == 2) then\r\n        local guild_envoys_depart =\r\n            getObjectFromGUID(Global.getVar(\"guild_envoys_depart_GUID\"))\r\n        guild_envoys_depart.setRotation({0, 270, 0})\r\n        guild_envoys_depart.setPositionSmooth(next_law_pos)\r\n        next_law_pos_z = next_law_pos_z - 2.4\r\n        next_law_pos.z = next_law_pos_z\r\n    end\r\n\r\n    local govern = getObjectFromGUID(Global.getVar(\"govern_GUID\"))\r\n    govern.setRotation({0, 270, 0})\r\n    govern.setPositionSmooth(next_law_pos)\r\n    next_law_pos_z = next_law_pos_z - 2.4\r\n    next_law_pos.z = next_law_pos_z\r\n\r\n    govern.randomize()\r\n\r\nend\r\n\r\n-- N,O,P\r\nfunction Campaign.setupClusters(player_count)\r\n    -- Roll Dice\r\n    local number_die = getObjectFromGUID(Global.getVar(\r\n        \"number_die_GUID\"))\r\n    local die_zone_pos = getObjectFromGUID(Global.getVar(\r\n        \"die_zone_GUID\")).getPosition()\r\n    number_die.setPosition({\r\n        x = die_zone_pos.x - 1.2,\r\n        y = die_zone_pos.y,\r\n        z = die_zone_pos.z\r\n    })\r\n\r\n    local event_die = getObjectFromGUID(\r\n        Global.getVar(\"event_die_GUID\"))\r\n    local die_zone_pos = getObjectFromGUID(Global.getVar(\r\n        \"die_zone_GUID\")).getPosition()\r\n    event_die.setPosition({\r\n        x = die_zone_pos.x + 1.2,\r\n        y = die_zone_pos.y,\r\n        z = die_zone_pos.z\r\n    })\r\n\r\n    number_die.randomize()\r\n    event_die.randomize()\r\n\r\n    -- Imperial Cluster\r\n    local is_imperial_cluster = {\r\n        [1] = false,\r\n        [2] = false,\r\n        [3] = false,\r\n        [4] = false,\r\n        [5] = false,\r\n        [6] = false\r\n    }\r\n\r\n    Wait.condition(function() -- Executed after our condition is met\r\n        local imperial_clusters = {}\r\n        local cluster_zones = Global.getVar(\"cluster_zone_GUIDs\")\r\n        local system_ship_zone\r\n\r\n        if number_die.isDestroyed() or event_die.isDestroyed() then\r\n            print(\"Die was destroyed before it came to rest.\")\r\n        else\r\n            imperial_clusters[1] = number_die.getRotationValue()\r\n            imperial_clusters[2] = imperial_clusters[1] == 6 and 1 or\r\n                                       imperial_clusters[1] + 1\r\n\r\n            local imperial_ships = getObjectFromGUID(Global.getVar(\r\n                \"imperial_ships_GUID\"))\r\n\r\n            for system, v in\r\n                pairs(cluster_zones[imperial_clusters[1]]) do\r\n                system_ship_zone = (system == \"gate\") and\r\n                                       getObjectFromGUID(v) or\r\n                                       getObjectFromGUID(v[\"ships\"])\r\n                imperial_ships.takeObject({\r\n                    position = system_ship_zone.getPosition()\r\n                })\r\n            end\r\n\r\n            for system, v in\r\n                pairs(cluster_zones[imperial_clusters[2]]) do\r\n                system_ship_zone = (system == \"gate\") and\r\n                                       getObjectFromGUID(v) or\r\n                                       getObjectFromGUID(v[\"ships\"])\r\n                imperial_ships.takeObject({\r\n                    position = system_ship_zone.getPosition()\r\n                })\r\n            end\r\n\r\n            is_imperial_cluster[imperial_clusters[1]] = true\r\n            is_imperial_cluster[imperial_clusters[2]] = true\r\n\r\n            local system_city_zone\r\n\r\n            local event_die_planets = {\"b\", \"c\", \"a\", \"a\", \"b\", \"c\"}\r\n            local free_cities = getObjectFromGUID(Global.getVar(\r\n                \"free_cities_GUID\"))\r\n\r\n            for cluster, value in pairs(cluster_zones) do\r\n                if (not is_imperial_cluster[cluster]) then\r\n                    for system, system_value in pairs(value) do\r\n                        -- Free Cities\r\n                        local free_system =\r\n                            event_die_planets[event_die.getRotationValue()]\r\n                        if (system == free_system) then\r\n                            system_city_zone =\r\n                                getObjectFromGUID(\r\n                                    system_value[\"buildings\"][1])\r\n                            free_cities.takeObject({\r\n                                position = system_city_zone.getPosition(),\r\n                                rotation = {\r\n                                    x = 0,\r\n                                    y = 180,\r\n                                    z = 0\r\n                                }\r\n                            })\r\n                        end\r\n\r\n                        -- Blight\r\n                        if (system == \"gate\") then\r\n                            system_ship_zone =\r\n                                getObjectFromGUID(system_value)\r\n                        else\r\n                            system_ship_zone =\r\n                                getObjectFromGUID(\r\n                                    system_value[\"ships\"])\r\n                        end\r\n\r\n                        local blight =\r\n                            getObjectFromGUID(Global.getVar(\r\n                                \"blight_GUID\"))\r\n                        blight.takeObject({\r\n                            position = system_ship_zone.getPosition(),\r\n                            rotation = {\r\n                                x = 0,\r\n                                y = 180,\r\n                                z = 180\r\n                            }\r\n                        })\r\n\r\n                    end\r\n                end\r\n            end\r\n\r\n            -- Merchant\r\n            if (player_count == 2) then\r\n                Campaign.setup2PResources(is_imperial_cluster)\r\n            end\r\n        end\r\n    end, function() -- Condition function\r\n        return number_die.isDestroyed() or event_die.isDestroyed() or\r\n                   (number_die.resting and event_die.resting)\r\n    end)\r\n\r\nend\r\n\r\n-- O\r\nfunction Campaign.setupFreeCities()\r\n\r\nend\r\n\r\n-- P\r\nfunction Campaign.setupBlight()\r\n\r\nend\r\n\r\n-- Q\r\nfunction Campaign.setup2PResources(is_imperial_cluster)\r\n    local merchant_params\r\n\r\n    for cluster, is_imperial in pairs(is_imperial_cluster) do\r\n        if (cluster == 1) then\r\n            merchant_params = {\"weapons\", \"fuel\", \"materials\"}\r\n        elseif (cluster == 2) then\r\n            merchant_params = {\"psionics\", \"relics\", \"weapons\"}\r\n        elseif (cluster == 3) then\r\n            merchant_params = {\"weapons\", \"fuel\", \"materials\"}\r\n        elseif (cluster == 4) then\r\n            merchant_params = {\"relics\", \"fuel\", \"materials\"}\r\n        elseif (cluster == 5) then\r\n            merchant_params = {\"psionics\", \"relics\", \"weapons\"}\r\n        elseif (cluster == 6) then\r\n            merchant_params = {\"psionics\", \"fuel\", \"materials\"}\r\n        end\r\n\r\n        if (is_imperial) then\r\n            Global.call(\"merchantSetup\", merchant_params)\r\n        end\r\n\r\n    end\r\nend\r\n\r\n-- Setup Players\r\n\r\n-- B\r\nfunction Campaign.dealPlayerFates()\r\n    local A_Fates = getObjectFromGUID(Global.getVar(\"A_Fates_GUID\"))\r\n\r\n    A_Fates.shuffle()\r\n    A_Fates.deal(2)\r\n\r\n    broadcastToAll(\"Choose a Fate secretly, discard the other.\", {\r\n        r = 1,\r\n        g = 0,\r\n        b = 0\r\n    })\r\n\r\n    Wait.time(function()\r\n        broadcastToAll(\r\n            \"When everyone has chosen one, reveal them and take the matching fate bag.\",\r\n            {\r\n                r = 1,\r\n                g = 0,\r\n                b = 0\r\n            })\r\n    end, 2)\r\nend\r\n\r\n-- D\r\nfunction Campaign.dealObjectiveMarkers()\r\n\r\nend\r\n\r\n-- F\r\nfunction Campaign.takeTitleCard()\r\n\r\nend\r\n\r\n-- G, H\r\nfunction Campaign.playersPlacePieces()\r\n\r\nend\r\n\r\n-- I\r\nfunction Campaign.placeFreeCities()\r\n\r\nend\r\n\r\nreturn Campaign\r\n\nend)\nreturn __bundle_require(\"Control.6e21fe.lua\")",
-      "LuaScriptState": ""
+      "LuaScriptState": "",
+      "XmlUI": ""
     },
     {
       "GUID": "0ac7d1",
@@ -62083,7 +60715,7 @@
         "posX": -52.4452324,
         "posY": 1.02466631,
         "posZ": 13.0874109,
-        "rotX": -8.467092E-08,
+        "rotX": -9.121357E-08,
         "rotY": 180.0039,
         "rotZ": 180.0,
         "scaleX": 1.53204679,
@@ -62631,7 +61263,7 @@
         "posX": -49.6081047,
         "posY": 1.02466631,
         "posZ": 13.0872974,
-        "rotX": -1.12021631E-07,
+        "rotX": -1.00891448E-07,
         "rotY": 180.0,
         "rotZ": 180.0,
         "scaleX": 1.53204679,
@@ -63167,7 +61799,7 @@
         "posX": -46.77118,
         "posY": 1.02466631,
         "posZ": 13.0872974,
-        "rotX": -8.072621E-08,
+        "rotX": 1.604696E-08,
         "rotY": 180.000015,
         "rotZ": 180.0,
         "scaleX": 1.53204679,
@@ -63805,7 +62437,7 @@
         "posX": 2.73987722,
         "posY": 0.9612175,
         "posZ": 31.8091869,
-        "rotX": 5.45762635E-09,
+        "rotX": 5.457628E-09,
         "rotY": 179.967041,
         "rotZ": -2.18955183E-08,
         "scaleX": 2.720043,
@@ -63856,9 +62488,9 @@
         "posX": -47.9981651,
         "posY": 1.00059617,
         "posZ": 21.0000229,
-        "rotX": 2.1386704E-08,
+        "rotX": 4.77961564E-08,
         "rotY": 180.009781,
-        "rotZ": 5.07480529E-08,
+        "rotZ": 1.68559865E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -64094,9 +62726,9 @@
         "posX": -50.7485771,
         "posY": 0.978828251,
         "posZ": 20.9960842,
-        "rotX": -5.90896434E-08,
+        "rotX": -8.07851137E-08,
         "rotY": 180.012009,
-        "rotZ": -1.91722052E-07,
+        "rotZ": 3.924714E-07,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -64152,9 +62784,9 @@
         "posX": -53.5038757,
         "posY": 0.978828251,
         "posZ": 20.99978,
-        "rotX": 1.19328663E-08,
+        "rotX": -4.98541262E-08,
         "rotY": 180.0098,
-        "rotZ": -1.45445426E-07,
+        "rotZ": -4.34430838E-08,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -64213,9 +62845,9 @@
         "posX": -45.4622,
         "posY": 1.00541008,
         "posZ": 21.0197258,
-        "rotX": 7.38562562E-08,
+        "rotX": 2.37589024E-08,
         "rotY": 179.988892,
-        "rotZ": -7.004889E-08,
+        "rotZ": -1.78619857E-08,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -64525,9 +63157,9 @@
         "posX": -16.1694889,
         "posY": 1.16000032,
         "posZ": -8.50188351,
-        "rotX": -6.32559158E-06,
+        "rotX": -5.438337E-06,
         "rotY": 89.99988,
-        "rotZ": -2.48605352E-06,
+        "rotZ": -2.88895967E-06,
         "scaleX": 0.5842339,
         "scaleY": 1.0,
         "scaleZ": 0.5842339
@@ -64586,11 +63218,11 @@
       "Name": "Custom_Tile",
       "Transform": {
         "posX": -53.2552719,
-        "posY": 0.9652238,
+        "posY": 0.965223551,
         "posZ": 24.92587,
-        "rotX": -1.71286E-08,
+        "rotX": 1.80423125E-08,
         "rotY": 179.985123,
-        "rotZ": -1.401516E-07,
+        "rotZ": -1.30713715E-07,
         "scaleX": 2.18048358,
         "scaleY": 1.0,
         "scaleZ": 2.18048358
@@ -64700,11 +63332,11 @@
       "Name": "Custom_Model",
       "Transform": {
         "posX": -16.4414444,
-        "posY": 0.956678152,
+        "posY": 0.9566779,
         "posZ": 4.82885551,
-        "rotX": -1.20316963E-05,
+        "rotX": -1.198188E-05,
         "rotY": 180.000473,
-        "rotZ": 1.32083951E-05,
+        "rotZ": 1.06076022E-05,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -64811,12 +63443,12 @@
       "GUID": "3c2ffc",
       "Name": "Custom_Model",
       "Transform": {
-        "posX": -35.1915627,
+        "posX": -35.292,
         "posY": 1.07871211,
-        "posZ": 30.6966934,
-        "rotX": -3.34095461E-07,
-        "rotY": 179.97377,
-        "rotZ": -6.189014E-08,
+        "posZ": 28.6585846,
+        "rotX": -7.472175E-07,
+        "rotY": 179.973709,
+        "rotZ": 7.409501E-07,
         "scaleX": 0.800017059,
         "scaleY": 1.8,
         "scaleZ": 1.0757581
@@ -64889,12 +63521,12 @@
       "GUID": "c5bc19",
       "Name": "Custom_Model",
       "Transform": {
-        "posX": -35.93158,
+        "posX": -36.0320168,
         "posY": 1.07871211,
-        "posZ": 30.6966934,
-        "rotX": 4.42416933E-07,
-        "rotY": 179.9777,
-        "rotZ": -4.40637166E-07,
+        "posZ": 28.6585846,
+        "rotX": 2.00456952E-06,
+        "rotY": 179.977661,
+        "rotZ": 5.114888E-07,
         "scaleX": 0.800017059,
         "scaleY": 1.8,
         "scaleZ": 1.0757581
@@ -64910,7 +63542,7 @@
       "ColorDiffuse": {
         "r": 0.9647059,
         "g": 0.78039217,
-        "b": 0.270581484
+        "b": 0.270581424
       },
       "Tags": [
         "Power"
@@ -64967,12 +63599,12 @@
       "GUID": "59d36b",
       "Name": "Custom_Model",
       "Transform": {
-        "posX": -34.45155,
+        "posX": -34.5519867,
         "posY": 1.07871211,
-        "posZ": 30.6966934,
-        "rotX": 1.3999859E-07,
-        "rotY": 179.9813,
-        "rotZ": -3.40433957E-07,
+        "posZ": 28.6585846,
+        "rotX": 1.09343887E-06,
+        "rotY": 179.981232,
+        "rotZ": -1.220419E-06,
         "scaleX": 0.800017059,
         "scaleY": 1.8,
         "scaleZ": 1.0757581
@@ -65045,12 +63677,12 @@
       "GUID": "8d76b7",
       "Name": "Custom_Model",
       "Transform": {
-        "posX": -36.6715927,
+        "posX": -36.7719879,
         "posY": 1.07871211,
-        "posZ": 30.6966934,
-        "rotX": -2.937667E-07,
-        "rotY": 179.9661,
-        "rotZ": 8.953989E-07,
+        "posZ": 28.6586952,
+        "rotX": 6.04953E-07,
+        "rotY": 179.965973,
+        "rotZ": -4.935617E-07,
         "scaleX": 0.800017059,
         "scaleY": 1.8,
         "scaleZ": 1.0757581
@@ -65065,8 +63697,8 @@
       },
       "ColorDiffuse": {
         "r": 0.882352948,
-        "g": 0.325483441,
-        "b": 0.2392089
+        "g": 0.325483382,
+        "b": 0.239208847
       },
       "Tags": [
         "Power"
@@ -65486,6 +64118,1861 @@
       "LuaScript": "",
       "LuaScriptState": "",
       "XmlUI": ""
+    },
+    {
+      "GUID": "526940",
+      "Name": "Custom_Model_Bag",
+      "Transform": {
+        "posX": -35.6018829,
+        "posY": 1.02871716,
+        "posZ": 35.255352,
+        "rotX": 6.7323424E-07,
+        "rotY": 179.968521,
+        "rotZ": 5.553596E-08,
+        "scaleX": 1.34999979,
+        "scaleY": 1.34999979,
+        "scaleZ": 1.34999979
+      },
+      "Nickname": "Blight Supply",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0
+      },
+      "Tags": [
+        "Blight"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "MaterialIndex": -1,
+      "MeshIndex": -1,
+      "CustomMesh": {
+        "MeshURL": "http://cloud-3.steamusercontent.com/ugc/2113932866684489450/988F32864A1BF5790DBEB9EF135DF20642F60C83/",
+        "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/2318855440943253212/BDEC3F6B64A529C11C2CF57135144E4AE1A34CC4/",
+        "NormalURL": "",
+        "ColliderURL": "",
+        "Convex": true,
+        "MaterialIndex": 3,
+        "TypeIndex": 6,
+        "CustomShader": {
+          "SpecularColor": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "SpecularIntensity": 0.0,
+          "SpecularSharpness": 2.0,
+          "FresnelStrength": 0.0
+        },
+        "CastShadows": true
+      },
+      "Bag": {
+        "Order": 0
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "ContainedObjects": [
+        {
+          "GUID": "f20db6",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -33.90697,
+            "posY": 1.1085546,
+            "posZ": 22.1431427,
+            "rotX": 0.06825075,
+            "rotY": 180.00592,
+            "rotZ": 359.9941,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "249f87",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -36.52097,
+            "posY": 1.09032345,
+            "posZ": 21.1863747,
+            "rotX": -1.09255825E-06,
+            "rotY": 180.0028,
+            "rotZ": 8.349927E-06,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "2386d7",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -35.2125244,
+            "posY": 1.09441161,
+            "posZ": 21.18725,
+            "rotX": 1.01085079,
+            "rotY": 179.982162,
+            "rotZ": 358.380035,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "1767c2",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -33.9069176,
+            "posY": 1.10157561,
+            "posZ": 21.188303,
+            "rotX": 2.2256465,
+            "rotY": 179.994186,
+            "rotZ": 359.9669,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "164fab",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -32.59988,
+            "posY": 1.10232162,
+            "posZ": 21.18844,
+            "rotX": 2.382321,
+            "rotY": 179.991623,
+            "rotZ": 359.984,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "a289a2",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -31.2928219,
+            "posY": 1.09032226,
+            "posZ": 21.1863728,
+            "rotX": 4.95866561E-06,
+            "rotY": 179.999542,
+            "rotZ": 1.65495408E-06,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "cf9820",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -29.9857674,
+            "posY": 1.09032214,
+            "posZ": 21.1863728,
+            "rotX": 1.06470661E-05,
+            "rotY": 179.999,
+            "rotZ": -6.956568E-06,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "368b9b",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -28.6787052,
+            "posY": 1.09032309,
+            "posZ": 21.1863728,
+            "rotX": -3.46155662E-06,
+            "rotY": 180.0004,
+            "rotZ": -1.04549542E-06,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "cee8d4",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -27.3716545,
+            "posY": 1.09032345,
+            "posZ": 21.1863689,
+            "rotX": -0.00017562382,
+            "rotY": 179.999756,
+            "rotZ": 0.000122626661,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "ee3b3d",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -36.520977,
+            "posY": 1.09032321,
+            "posZ": 22.1430988,
+            "rotX": -6.62721732E-06,
+            "rotY": 180.00235,
+            "rotZ": -3.04464811E-05,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "496c3c",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -35.2121239,
+            "posY": 1.09627938,
+            "posZ": 22.1431122,
+            "rotX": 0.0157699641,
+            "rotY": 180.006454,
+            "rotZ": 357.913544,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "d69161",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -32.599926,
+            "posY": 1.10927045,
+            "posZ": 22.1431,
+            "rotX": 0.0202884637,
+            "rotY": 179.998917,
+            "rotZ": 0.000631283154,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "700020",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -31.2928181,
+            "posY": 1.09032238,
+            "posZ": 22.1431065,
+            "rotX": -1.62111894E-06,
+            "rotY": 180.00238,
+            "rotZ": 1.12962562E-05,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "b3b896",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -29.98576,
+            "posY": 1.09032321,
+            "posZ": 22.1431046,
+            "rotX": -1.53506717E-05,
+            "rotY": 179.99762,
+            "rotZ": -5.114915E-06,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "baed81",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -28.6787,
+            "posY": 1.09032249,
+            "posZ": 22.1431046,
+            "rotX": -1.33155536E-05,
+            "rotY": 179.998184,
+            "rotZ": 3.317452E-05,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "dc97af",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -27.37164,
+            "posY": 1.09032273,
+            "posZ": 22.1431065,
+            "rotX": 1.074774E-05,
+            "rotY": 179.995041,
+            "rotZ": -1.93013125E-06,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "5425e3",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -36.52097,
+            "posY": 1.09032273,
+            "posZ": 23.09983,
+            "rotX": -2.383976E-05,
+            "rotY": 179.997162,
+            "rotZ": 2.4331157E-05,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "172a00",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -35.2139168,
+            "posY": 1.09032321,
+            "posZ": 23.0998268,
+            "rotX": 2.21965479E-06,
+            "rotY": 180.0002,
+            "rotZ": 4.540268E-06,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "8e579a",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -33.90694,
+            "posY": 1.09471369,
+            "posZ": 23.09792,
+            "rotX": 357.814056,
+            "rotY": 180.0089,
+            "rotZ": 0.0323204622,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "9ddbfd",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -32.5998764,
+            "posY": 1.0947001,
+            "posZ": 23.09793,
+            "rotX": 357.828766,
+            "rotY": 180.00441,
+            "rotZ": 0.0218781717,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "d43c08",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -31.29282,
+            "posY": 1.090323,
+            "posZ": 23.09983,
+            "rotX": -1.8194316E-05,
+            "rotY": 179.998291,
+            "rotZ": 1.46861839E-06,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "7365a5",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -29.9857616,
+            "posY": 1.09032285,
+            "posZ": 23.0998287,
+            "rotX": -4.43008648E-05,
+            "rotY": 180.0002,
+            "rotZ": -3.24750035E-05,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "57d57c",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -28.6787071,
+            "posY": 1.090323,
+            "posZ": 23.0998268,
+            "rotX": 4.483998E-06,
+            "rotY": 180.0001,
+            "rotZ": 1.1976219E-05,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "bfc984",
+          "Name": "Custom_Tile",
+          "Transform": {
+            "posX": -27.3716412,
+            "posY": 1.09032381,
+            "posZ": 23.0998287,
+            "rotX": 0.000100853926,
+            "rotY": 179.9986,
+            "rotZ": -0.000466295634,
+            "scaleX": 0.432334363,
+            "scaleY": 1.0,
+            "scaleZ": 0.432334363
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "Tags": [
+            "Blight"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/8f2flyv3eu1gh09/zMapPunch26.jpg?dl=0",
+            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/8q0bsfw2zxle5ik/zMapPunch27.jpg?dl=0",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomTile": {
+              "Type": 2,
+              "Thickness": 0.1,
+              "Stackable": false,
+              "Stretch": true
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        }
+      ]
+    },
+    {
+      "GUID": "6ef4b7",
+      "Name": "Custom_Model_Infinite_Bag",
+      "Transform": {
+        "posX": -35.6018829,
+        "posY": 1.02871716,
+        "posZ": 33.80535,
+        "rotX": 5.883524E-07,
+        "rotY": 179.9685,
+        "rotZ": -7.92491128E-10,
+        "scaleX": 1.34999979,
+        "scaleY": 1.34999979,
+        "scaleZ": 1.34999979
+      },
+      "Nickname": "Free City Supply",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0
+      },
+      "Tags": [
+        "City"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "MaterialIndex": -1,
+      "MeshIndex": -1,
+      "CustomMesh": {
+        "MeshURL": "http://cloud-3.steamusercontent.com/ugc/2113932866684489450/988F32864A1BF5790DBEB9EF135DF20642F60C83/",
+        "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/2318855440943276087/91F1000EFBAF72777E349BE991F0D16C69811DCB/",
+        "NormalURL": "",
+        "ColliderURL": "",
+        "Convex": true,
+        "MaterialIndex": 3,
+        "TypeIndex": 7,
+        "CustomShader": {
+          "SpecularColor": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "SpecularIntensity": 0.0,
+          "SpecularSharpness": 2.0,
+          "FresnelStrength": 0.0
+        },
+        "CastShadows": true
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "ContainedObjects": [
+        {
+          "GUID": "e9f9cd",
+          "Name": "Custom_Token",
+          "Transform": {
+            "posX": -34.01394,
+            "posY": 1.15953362,
+            "posZ": 19.7416458,
+            "rotX": 0.003988771,
+            "rotY": 0.03167144,
+            "rotZ": 0.00091070513,
+            "scaleX": 0.273848951,
+            "scaleY": 1.0,
+            "scaleZ": 0.273848951
+          },
+          "Nickname": "Free City",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.7648083,
+            "g": 0.7648083,
+            "b": 0.7648083
+          },
+          "Tags": [
+            "City"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": false,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/rqrg2vn46ur4r3p/building%20mask.png?dl=0",
+            "ImageSecondaryURL": "",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomToken": {
+              "Thickness": 0.1,
+              "MergeDistancePixels": 15.0,
+              "StandUp": false,
+              "Stackable": false
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "AttachedDecals": [
+            {
+              "Transform": {
+                "posX": 0.0033888598,
+                "posY": 0.06000004,
+                "posZ": 0.007159278,
+                "rotX": 90.0,
+                "rotY": 180.005035,
+                "rotZ": 0.0,
+                "scaleX": 3.7,
+                "scaleY": 3.7,
+                "scaleZ": 1.21000028
+              },
+              "CustomDecal": {
+                "Name": "comp",
+                "ImageURL": "https://dl.dropboxusercontent.com/s/iwju95j80n7uqfa/gray%20city.png?dl=0",
+                "Size": 1.0
+              }
+            },
+            {
+              "Transform": {
+                "posX": -0.00191759469,
+                "posY": -0.0600000173,
+                "posZ": 0.0173036866,
+                "rotX": 270.0,
+                "rotY": -0.002189558,
+                "rotZ": 0.0,
+                "scaleX": 3.7,
+                "scaleY": 3.7,
+                "scaleZ": 1.21000016
+              },
+              "CustomDecal": {
+                "Name": "exta",
+                "ImageURL": "https://dl.dropboxusercontent.com/s/lmlefxpe2ypk4h6/gray%20city%20dmg.png?dl=0",
+                "Size": 1.0
+              }
+            }
+          ]
+        }
+      ]
+    },
+    {
+      "GUID": "efe8f9",
+      "Name": "Custom_Model_Infinite_Bag",
+      "Transform": {
+        "posX": -35.6018829,
+        "posY": 1.02871716,
+        "posZ": 32.3553543,
+        "rotX": -1.36253539E-06,
+        "rotY": 179.967743,
+        "rotZ": -7.256215E-08,
+        "scaleX": 1.34999979,
+        "scaleY": 1.34999979,
+        "scaleZ": 1.34999979
+      },
+      "Nickname": "Free Starport Supply",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0
+      },
+      "Tags": [
+        "Starport"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "MaterialIndex": -1,
+      "MeshIndex": -1,
+      "CustomMesh": {
+        "MeshURL": "http://cloud-3.steamusercontent.com/ugc/2113932866684489450/988F32864A1BF5790DBEB9EF135DF20642F60C83/",
+        "DiffuseURL": "http://cloud-3.steamusercontent.com/ugc/2318855440943278329/F0F8394C713A3D0A4AF6518B7D6859C9B7F3888E/",
+        "NormalURL": "",
+        "ColliderURL": "",
+        "Convex": true,
+        "MaterialIndex": 3,
+        "TypeIndex": 7,
+        "CustomShader": {
+          "SpecularColor": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "SpecularIntensity": 0.0,
+          "SpecularSharpness": 2.0,
+          "FresnelStrength": 0.0
+        },
+        "CastShadows": true
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "ContainedObjects": [
+        {
+          "GUID": "6cc093",
+          "Name": "Custom_Token",
+          "Transform": {
+            "posX": -33.9056664,
+            "posY": 1.15949869,
+            "posZ": 16.4249687,
+            "rotX": 0.00444135442,
+            "rotY": 0.0317790434,
+            "rotZ": 0.00121884211,
+            "scaleX": 0.273848951,
+            "scaleY": 1.0,
+            "scaleZ": 0.273848951
+          },
+          "Nickname": "Free Starport",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.7648083,
+            "g": 0.7648083,
+            "b": 0.7648083
+          },
+          "Tags": [
+            "Starport"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": false,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomImage": {
+            "ImageURL": "https://dl.dropboxusercontent.com/s/rqrg2vn46ur4r3p/building%20mask.png?dl=0",
+            "ImageSecondaryURL": "",
+            "ImageScalar": 1.0,
+            "WidthScale": 0.0,
+            "CustomToken": {
+              "Thickness": 0.1,
+              "MergeDistancePixels": 15.0,
+              "StandUp": false,
+              "Stackable": false
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "AttachedDecals": [
+            {
+              "Transform": {
+                "posX": 0.0033888598,
+                "posY": 0.06000004,
+                "posZ": 0.007159278,
+                "rotX": 90.0,
+                "rotY": 180.005035,
+                "rotZ": 0.0,
+                "scaleX": 3.7,
+                "scaleY": 3.7,
+                "scaleZ": 1.21000028
+              },
+              "CustomDecal": {
+                "Name": "comp",
+                "ImageURL": "https://dl.dropboxusercontent.com/s/d9ctherfscil1md/gray%20ship.png?dl=0",
+                "Size": 1.0
+              }
+            },
+            {
+              "Transform": {
+                "posX": -0.00191759469,
+                "posY": -0.0600000173,
+                "posZ": 0.0173036866,
+                "rotX": 270.0,
+                "rotY": -0.002189558,
+                "rotZ": 0.0,
+                "scaleX": 3.7,
+                "scaleY": 3.7,
+                "scaleZ": 1.21000016
+              },
+              "CustomDecal": {
+                "Name": "exta",
+                "ImageURL": "https://dl.dropboxusercontent.com/s/ad7ljmgcib8k7rn/gray%20ship%20dmg.png?dl=0",
+                "Size": 1.0
+              }
+            }
+          ]
+        }
+      ]
     }
   ]
 }

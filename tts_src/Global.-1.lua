@@ -73,13 +73,7 @@ player_pieces_GUIDs = {
         ships = "6883e6",
         starports = "b96445",
         agents = "c863eb",
-        cities = {
-            "822a9c",
-            "00ee1b",
-            "a50d56",
-            "06f4a8",
-            "81c3a7"
-        },
+        cities = {"822a9c", "00ee1b", "a50d56", "06f4a8", "81c3a7"},
         initiative_zone = "2e1cd3",
         trophies_zone = "275a50",
         captives_zone = "0c07a0",
@@ -92,13 +86,7 @@ player_pieces_GUIDs = {
         ships = "a75924",
         starports = "b9ebd3",
         agents = "7b3749",
-        cities = {
-            "dbf4de",
-            "799077",
-            "acfa72",
-            "ac28fb",
-            "b41592"
-        },
+        cities = {"dbf4de", "799077", "acfa72", "ac28fb", "b41592"},
         initiative_zone = "3fc6fd",
         trophies_zone = "7f5014",
         captives_zone = "31a56f",
@@ -111,13 +99,7 @@ player_pieces_GUIDs = {
         ships = "7e0fe2",
         starports = "51a8f5",
         agents = "bbb3aa",
-        cities = {
-            "33577c",
-            "cf5b95",
-            "0ac3c2",
-            "6e36ca",
-            "282f37"
-        },
+        cities = {"33577c", "cf5b95", "0ac3c2", "6e36ca", "282f37"},
         initiative_zone = "32f290",
         trophies_zone = "48b6fb",
         captives_zone = "7b011e",
@@ -130,13 +112,7 @@ player_pieces_GUIDs = {
         ships = "2da385",
         starports = "7e625d",
         agents = "791097",
-        cities = {
-            "f3da7f",
-            "5e753e",
-            "79b799",
-            "fad0f1",
-            "45c804"
-        },
+        cities = {"f3da7f", "5e753e", "79b799", "fad0f1", "45c804"},
         initiative_zone = "cdc545",
         trophies_zone = "3085c9",
         captives_zone = "fe0b0d",
@@ -286,8 +262,9 @@ die_zone_GUID = "1b45bb"
 
 imperial_ships_GUID = "beb54d"
 imperial_ships_text_GUID = "6daaa3"
-free_cities_GUID = "1205b0"
-blight_GUID = "3c61d2"
+free_cities_GUID = "6ef4b7"
+free_starports_GUID = "efe8f9"
+blight_GUID = "526940"
 
 A_Fates_GUID = "0ac7d1"
 
@@ -310,7 +287,7 @@ function onPlayerDisconnect(player)
     table.insert(available_colors, 1, player.color)
 end
 
-function onObjectEnterZone(zone,object)
+function onObjectEnterZone(zone, object)
     Counters.update(zone)
 end
 
@@ -318,11 +295,11 @@ function onObjectSpawn(object)
     Supplies.addMenuToObject(object)
 end
 
-function onObjectLeaveZone(zone,object)
+function onObjectLeaveZone(zone, object)
     Counters.update(zone)
 end
 
-function onObjectEnterContainer(container,object)
+function onObjectEnterContainer(container, object)
     Counters.update(container)
 end
 
