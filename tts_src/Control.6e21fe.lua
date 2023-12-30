@@ -1,6 +1,5 @@
 local Campaign = require("src/Campaign")
 local BaseGame = require("src/BaseGame")
-local Counters = require("src/Counters")
 
 control_GUID = Global.getVar("control_GUID")
 
@@ -189,7 +188,6 @@ local takeInitiative_params = {
 }
 
 function onload()
-    Counters.setup()
     self.createButton(toggleLeadersWITHOUT_params)
     self.createButton(toggleExpansionEXCLUDE_params)
     self.createButton(setupBaseGame_params)

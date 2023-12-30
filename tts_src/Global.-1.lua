@@ -81,6 +81,8 @@ player_pieces_GUIDs = {
             "81c3a7"
         },
         initiative_zone = "2e1cd3",
+        trophies_zone = "275a50",
+        captives_zone = "0c07a0",
         area_zone = "a952c1"
     },
     ["Yellow"] = {
@@ -98,6 +100,8 @@ player_pieces_GUIDs = {
             "b41592"
         },
         initiative_zone = "3fc6fd",
+        trophies_zone = "7f5014",
+        captives_zone = "31a56f",
         area_zone = "238a92"
     },
     ["Red"] = {
@@ -115,6 +119,8 @@ player_pieces_GUIDs = {
             "282f37"
         },
         initiative_zone = "32f290",
+        trophies_zone = "48b6fb",
+        captives_zone = "7b011e",
         area_zone = "c2bf05"
     },
     ["Teal"] = {
@@ -132,6 +138,8 @@ player_pieces_GUIDs = {
             "45c804"
         },
         initiative_zone = "cdc545",
+        trophies_zone = "3085c9",
+        captives_zone = "fe0b0d",
         area_zone = "ee4b6e"
     }
 }
@@ -276,6 +284,7 @@ blight_GUID = "3c61d2"
 A_Fates_GUID = "0ac7d1"
 
 ----------------------------------------------------
+local Counters = require("src/Counters")
 
 function assignPlayerToAvailableColor(player, color)
     local color = table.remove(available_colors, 1)
@@ -292,7 +301,20 @@ function onPlayerDisconnect(player)
     table.insert(available_colors, 1, player.color)
 end
 
+function onObjectEnterZone(zone,object)
+    Counters.update(zone)
+end
+
+function onObjectLeaveZone(zone,object)
+    Counters.update(zone)
+end
+
+function onObjectEnterContainer(container,object)
+    Counters.update(container)
+end
+
 function onObjectLeaveContainer(container, leave_object)
+    Counters.update(container)
     if container.type == "Deck" or container.type == "Bag" or
         container.type == "Infinite" then
         leave_object.setTags(container.getTags())
@@ -1290,6 +1312,7 @@ starting_pieces = {
 ----------------------------------------------------
 
 function onLoad()
+    Counters.setup()
     -- Assign all connected players to a color spot.
     -- for _, player in ipairs(Player.getPlayers()) do
     --     assignPlayerToAvailableColor(player)
