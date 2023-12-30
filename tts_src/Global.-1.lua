@@ -246,6 +246,14 @@ resources_GUID = {
     materials = "1b8490"
 }
 
+resources_markers_GUID = {
+    psionics = "a89706",
+    relics = "473675",
+    weapons = "2fdfa3",
+    fuel = "5cb321",
+    materials = "eb1cba"
+}
+
 merchant_tycoon_GUID = "612aa9"
 merchant_GUID = {
     tycoon = "612aa9",
@@ -284,6 +292,7 @@ blight_GUID = "3c61d2"
 A_Fates_GUID = "0ac7d1"
 
 ----------------------------------------------------
+local Supplies = require("src/Supplies")
 local Counters = require("src/Counters")
 
 function assignPlayerToAvailableColor(player, color)
@@ -303,6 +312,10 @@ end
 
 function onObjectEnterZone(zone,object)
     Counters.update(zone)
+end
+
+function onObjectSpawn(object)
+    Supplies.addMenuToObject(object)
 end
 
 function onObjectLeaveZone(zone,object)
