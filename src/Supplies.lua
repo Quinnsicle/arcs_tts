@@ -109,7 +109,7 @@ function SupplyManager.returnObject(object,is_bottom_deck)
 
   -- Check for additional changes that should be made when returning to supply
   if supply.state then
-    object.setState(supply.state)
+    object = object.setState(supply.state)
   elseif supply.face_up and object.is_face_down then
     object.flip()
   elseif supply.face_down and not object.is_face_down then
