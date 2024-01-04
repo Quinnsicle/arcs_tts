@@ -131,11 +131,14 @@ function SupplyManager.returnObject(object,is_bottom_deck)
   elseif supply.deck then
     local deck = getObjectFromGUID(supply.deck)
     if deck then
-      supply.deck = deck.putObject(object).getGUID()
-      supply.pos = deck.getPosition() + deck_pos*Vector(0,2,0)
-      supply.rot = deck.getRotation()
       object.setPosition(supply.pos)
       object.setRotation(supply.rot)
+      local new_deck = deck.putObject(object)
+      if new_deck then
+        supply.deck = new_deck.getGUID()
+        supply.pos = new_deck.getPosition() + deck_pos*Vector(0,2,0)
+        supply.rot = new_deck.getRotation()
+      end
     else
       supply.deck = object.getGUID()
       object.setPosition(supply.pos)
