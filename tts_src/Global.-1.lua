@@ -1,5 +1,3 @@
-
-
 available_colors = {"White", "Yellow", "Red", "Teal"}
 
 debug_player_count = 2
@@ -59,6 +57,15 @@ mix_up_1_2P_GUID = "850244"
 mix_up_2_2P_GUID = "ddc074"
 
 -- out of play pieces
+oop_pieces_GUID = "7cbd3a"
+oop_small_gate1_GUID = "136d54"
+oop_small_gate2_GUID = "e4823d"
+oop_large_gate1_GUID = "af1d03"
+oop_large_gate2_GUID = "9bd528"
+oop_planet_GUIDs = {"6ecb02", "795637", "ae5114", "d5fe1a", "0d3d0c",
+                    "4d14cb"}
+
+-- new out of play pieces
 oop_components = {
     {
         Sector = { pos = {-0.17,0.97,-1.04}, rot = {0,180,-0.01}, scale = {2.48,1,2.48},
@@ -98,11 +105,11 @@ oop_components = {
     }
 }
 
-initiative_GUID = "0bf104"
-initiative_seized_GUID = "6303e3"
+initiative_GUID = "b3b3d0"
+seized_initiative_GUID = "e0f490"
 initiative_pos = {-2,0,0}
 
-chapter_pawn_GUID = "0a5781"
+chapter_pawn_GUID = "9c3ac8"
 
 active_players = {}
 is_player_setup = {
@@ -111,7 +118,6 @@ is_player_setup = {
     Red = false,
     Teal = false
 }
- 
 -- Players Pieces
 player_pieces_GUIDs = {
     ["White"] = {
@@ -128,9 +134,10 @@ player_pieces_GUIDs = {
             "81c3a7"
         },
         agents = "c863eb",
-        area_zone = "a952c1",
-        trophies_zone = "b20496",
-        captives_zone = "eae940"
+        initiative_zone = "2e1cd3",
+        trophies_zone = "275a50",
+        captives_zone = "0c07a0",
+        area_zone = "a952c1"
     },
     ["Yellow"] = {
         player_board = "5aa44c",
@@ -146,9 +153,10 @@ player_pieces_GUIDs = {
             "b41592"
         },
         agents = "7b3749",
-        area_zone = "238a92",
-        trophies_zone = "7ca64c",
-        captives_zone = "06c0f1"
+        initiative_zone = "3fc6fd",
+        trophies_zone = "7f5014",
+        captives_zone = "31a56f",
+        area_zone = "238a92"
     },
     ["Red"] = {
         player_board = "c0c8a1",
@@ -164,9 +172,10 @@ player_pieces_GUIDs = {
             "282f37"
         },
         agents = "bbb3aa",
-        area_zone = "c2bf05",
-        trophies_zone = "54c5a4",
-        captives_zone = "029b18"
+        initiative_zone = "32f290",
+        trophies_zone = "48b6fb",
+        captives_zone = "7b011e",
+        area_zone = "c2bf05"
     },
     ["Teal"] = {
         player_board = "ae512a",
@@ -182,9 +191,10 @@ player_pieces_GUIDs = {
             "45c804"
         },
         agents = "791097",
-        area_zone = "ee4b6e",
-        trophies_zone = "e7e73b",
-        captives_zone = "0bf109"
+        initiative_zone = "cdc545",
+        trophies_zone = "48b6fb",
+        captives_zone = "7b011e",
+        area_zone = "ee4b6e"
     }
 }
 
@@ -368,28 +378,11 @@ function onObjectLeaveContainer(container, leave_object)
 end
 
 function tryObjectEnterContainer(container, object)
-    if object.getStateId() == 2 then
-        object.setState(1)
-    end
-    --log(">"..container.getTags().."<")
-    return container.hasMatchingTag(object)
-        or not container.hasAnyTag()
-        or true
-        
-
-end
-
-function onObjectEnterContainer(container, leave_object)
-    Counters.update(container)
-end
-
-function onObjectEnterZone(zone, object)
-    Counters.update(zone)
-end
-
--- Container Events --
-function onObjectLeaveZone(zone, object)
-    Counters.update(zone)
+  if object.getStateId() == 2 then
+    object.setState(1)
+  end
+  return container.hasMatchingTag(object)
+    or not container.hasAnyTag()
 end
 
 ----------------------------------------------------
