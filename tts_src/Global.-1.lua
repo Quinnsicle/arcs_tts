@@ -1,6 +1,6 @@
 available_colors = {"White", "Yellow", "Red", "Teal"}
 
-debug_player_count = 2
+--debug_player_count = 2
 
 reach_board_GUID = "bb7d21"
 setup_table_GUID = "95f3f9"
