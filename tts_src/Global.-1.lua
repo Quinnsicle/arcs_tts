@@ -1,5 +1,8 @@
 available_colors = {"White", "Yellow", "Red", "Teal"}
 
+debug_player_count = 2
+
+reach_board_GUID = "bb7d21"
 setup_table_GUID = "95f3f9"
 -- leaders and lore
 more_to_explore_expansion_button_GUID = "9ff1fd"
@@ -50,6 +53,45 @@ oop_large_gate1_GUID = "af1d03"
 oop_large_gate2_GUID = "9bd528"
 oop_planet_GUIDs = {"6ecb02", "795637", "ae5114", "d5fe1a", "0d3d0c",
                     "4d14cb"}
+
+oop_components = {
+    {
+        Sector = { pos = {-0.17,0.97,-1.04}, rot = {0,180,-0.01}, scale = {2.48,1,2.48},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769502/1D85B9468BB538D788FCF7576A05606918CD0DD4/" },
+        Gate = { pos = {-0.04,0.97,-0.63}, rot = {0,189.24,-0.01}, scale = {0.71,1,0.71},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769214/A4AD66554742C2FFA93612948C38641B813947FB/" }
+    },
+    {
+        Sector = { pos = {-0.51,0.97,-0.66}, rot = {0,180,-0.01}, scale = {2.48,1,2.48},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769605/A40A0C79B27F1F1C45E0570E46BA8A7B253F356E/" },
+        Gate = { pos = {-0.23,0.97,-0.21}, rot = {0,252.52,0}, scale = {0.44,1,0.44},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/" }
+    },
+    {
+        Sector = { pos = {-0.47,0.97,0.73}, rot = {0,179.99,-0.01}, scale = {2.36,1,2.36},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769710/C408A11914F7F4DEA83686851730DDF10A8BD5D4/" },
+        Gate = { pos = {-0.2,0.97,0.28}, rot = {0,305.16,0}, scale = {0.44,1,0.44},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/" }
+    },
+    {
+        Sector = { pos = {0.17,0.97,0.91}, rot = {0,180,-0.01}, scale = {2.54,1,2.54},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769816/0AA42154550040133E7D6740F85CD487D5F6967B/" },
+        Gate = { pos = {0.05,0.97,0.52}, rot = {-0.01,12.02,0}, scale = {0.71,1,0.71},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769214/A4AD66554742C2FFA93612948C38641B813947FB/" }
+    },
+    {
+        Sector = { pos = {0.5,0.97,0.55}, rot = {0,179.99,-0.01}, scale = {2.48,1,2.48},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445770194/8600421030523070B8E2F05CECC3281DF24989AC/" },
+        Gate = { pos = {0.24,0.97,0.1}, rot = {-0.01,72.87,-0.01}, scale = {0.44,1,0.44},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/" }
+    },
+    {
+        Sector = { pos = {0.46,0.97,-0.85}, rot = {0,179.99,-0.01}, scale = {2.29,1,2.29},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445770362/76677A077FC1D6CD3672DCC036646ABFD2881F62/" },
+        Gate = { pos = {0.2,0.97,-0.39}, rot = {-0.01,125.02,-0.01}, scale = {0.44,1,0.44},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/" }
+    }
+}
 
 initiative_GUID = "b3b3d0"
 seized_initiative_GUID = "e0f490"
@@ -350,7 +392,10 @@ end
 function getOrderedPlayers()
     local seated_players = getSeatedPlayers()
 
-    local player_count = #seated_players
+    local player_count = debug_player_count and debug_player_count or #seated_players
+    if (debug_player_count) then
+        broadcastToAll("Debugging enabled for "..debug_player_count.." players.")
+    end
 
     if (player_count > 4 or player_count < 2) then
         msg = "This game only supports 2-4 players"
