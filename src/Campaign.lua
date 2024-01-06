@@ -1,6 +1,13 @@
 local Campaign = {}
 
+local merchant = require("src/Merchant")
+local supplies = require("src/Supplies")
+
 function Campaign.setup()
+
+    for _, obj in pairs(getObjectsWithTag("Base Game Only")) do
+        supplies.removeFromGame(obj)
+    end
 
     local ordered_players = Global.call("getOrderedPlayers")
     if (#ordered_players < 2 or #ordered_players > 4) then
@@ -8,7 +15,7 @@ function Campaign.setup()
     end
 
     -- B
-    Global.call("takeInitiative", ordered_players[1])
+    takeInitiative(ordered_players[1])
 
     Campaign.setupActionDeck(#ordered_players)
     Campaign.setupChapterTrack()
@@ -311,7 +318,7 @@ function Campaign.setupClusters(player_count)
 
             -- Merchant
             if (player_count == 2) then
-                Campaign.setup2PResources(is_imperial_cluster)
+                merchant.setup(imperial_clusters)
             end
         end
     end, function() -- Condition function
@@ -329,32 +336,6 @@ end
 -- P
 function Campaign.setupBlight()
 
-end
-
--- Q
-function Campaign.setup2PResources(is_imperial_cluster)
-    local merchant_params
-
-    for cluster, is_imperial in pairs(is_imperial_cluster) do
-        if (cluster == 1) then
-            merchant_params = {"weapons", "fuel", "materials"}
-        elseif (cluster == 2) then
-            merchant_params = {"psionics", "relics", "weapons"}
-        elseif (cluster == 3) then
-            merchant_params = {"weapons", "fuel", "materials"}
-        elseif (cluster == 4) then
-            merchant_params = {"relics", "fuel", "materials"}
-        elseif (cluster == 5) then
-            merchant_params = {"psionics", "relics", "weapons"}
-        elseif (cluster == 6) then
-            merchant_params = {"psionics", "fuel", "materials"}
-        end
-
-        if (is_imperial) then
-            Global.call("merchantSetup", merchant_params)
-        end
-
-    end
 end
 
 -- Setup Players

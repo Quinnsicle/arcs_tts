@@ -1,8 +1,10 @@
 local Campaign = require("src/Campaign")
 local BaseGame = require("src/BaseGame")
-local Counters = require("src/Counters")
+local Ambitions = require("src/Ambitions")
+local Supplies = require("src/Supplies")
 
 control_GUID = Global.getVar("control_GUID")
+ambition_declared_marker_GUID = Global.getVar("ambition_declared_marker_GUID")
 
 -- font_color = {0.8, 0.58, 0.27}, GOLD
 local blue = {0.4, 0.6, 0.6}
@@ -188,17 +190,28 @@ local takeInitiative_params = {
     hover_color = {0.34, 0.38, 0.38}
 }
 
+local ambitionDeclared_params = { 
+    click_function = 'declareAmbition',
+    function_owner = self,
+    position = {0, 0.05, 0},
+    rotation = {0, 0, 0},
+    width = 3800,
+    height = 950
+}
+
 function onload()
-    Counters.setup()
     self.createButton(toggleLeadersWITHOUT_params)
     self.createButton(toggleExpansionEXCLUDE_params)
     self.createButton(setupBaseGame_params)
     self.createButton(setupCampaignGame_params)
     self.createButton(showControls_params)
     self.createButton(splitDiscardFACEDOWN_params)
+    getObjectFromGUID(ambition_declared_marker_GUID).createButton(ambitionDeclared_params)
+    applyInitiativeMenus()
 end
 
 function toggleLeaders()
+
     local toggle = Global.getVar("with_leaders")
 
     toggle = not toggle
@@ -225,8 +238,8 @@ function toggleExpansion()
 end
 
 function toggleSplitDiscard()
+    
     local toggle = Global.getVar("with_split_discard")
-
     toggle = not toggle
     Global.setVar("with_split_discard", toggle)
 
@@ -235,6 +248,9 @@ function toggleSplitDiscard()
     else
         self.editButton(splitDiscardFACEDOWN_params)
     end
+
+    getObjectFromGUID(Global.getVar("action_card_zone_GUID")).call("toggleFUDiscard")
+
 end
 
 function setupBaseGame()
@@ -243,13 +259,13 @@ function setupBaseGame()
     if (base_setup_success) then
         setControlButtons()
     elseif (Global.getVar("with_leaders")) then
-        setLeaderControls()
+        setControlButtons()
+        --setLeaderControls()
     end
 end
 
 function placeStartingPieces()
-    BaseGame.dispersePlayerPieces()
-
+    --BaseGame.dispersePlayerPieces()
     setControlButtons()
 end
 
@@ -381,7 +397,15 @@ function setControlButtons()
     self.editButton(controls_params)
     self.editButton(dealHand_params)
     self.editButton(cleanupCards_params)
-    self.editButton(takeInitiative_params)
+ --   self.editButton(takeInitiative_params)
+    self.editButton({
+        index = 3,
+        height = 1,
+        width = 1,
+        click_function = "doNothing",
+        label = "",
+        tooltip = ""
+    })
     self.editButton({
         index = 5,
         height = 1,
@@ -407,94 +431,64 @@ end
 
 function dealHand()
 
-    -- TODO: check each hand to see if theres cards then error
-    -- if condition then
-    -- end
-
-    broadcastToAll("Shuffle and deal 6 cards to all players")
-
-    local action_deck = getObjectFromGUID(Global.getVar(
-        "action_deck_GUID"))
-
-    action_deck.randomize()
-
-    Wait.time(function()
-        action_deck.deal(6)
-    end, 0.5)
-end
-
-function cleanupCards()
-    -- ambition marker
-    local ambition_marker_zone = getObjectFromGUID(Global.getVar(
-        "ambition_marker_zone_GUID"))
-    local marker_zone_pos = ambition_marker_zone.getPosition()
-
-    -- resources
-
-    local action_card_zone = getObjectFromGUID(Global.getVar(
-        "action_card_zone_GUID"))
-    local action_zone_objects = action_card_zone.getObjects()
-    local action_deck_pos = getObjectFromGUID(Global.getVar(
-        "action_deck_GUID")).getPosition()
-
-    -- Error on union card
-    for i, obj in ipairs(action_zone_objects) do
-        if obj.getTags()[2] == "Union" then
-            broadcastToAll("Resolve Union card before cleanup!", {
-                r = 1,
-                g = 0,
-                b = 0
-            })
+    for _, player in pairs(Player.getPlayers()) do
+        if #player.getHandObjects() > 0 then
+            broadcastToAll("Player still has cards in hand!", Color.Red)
             return
         end
     end
 
-    -- clean up
-    broadcastToAll("Cleanup action card area")
+    broadcastToAll("Shuffle and deal 6 cards to all players")
 
-    local with_split_discard = Global.getVar("with_split_discard")
-
-    for i, obj in ipairs(action_zone_objects) do
-        if obj.getTags()[1] == "Action" then
-            -- action cards
-            if (with_split_discard) then
-                -- discard faceup cards in separate pile
-                local facedown_discard_pos = {
-                    x = -16.34,
-                    y = 2,
-                    z = 6.94
-                }
-
-                if (obj.getRotation().z < 90) then -- faceup (rotation z=0)
-                    obj.setPositionSmooth(facedown_discard_pos)
-                else -- facedown (rotation z=180)
-                    obj.setPositionSmooth(
-                        {action_deck_pos.x, action_deck_pos.y + 1,
-                         action_deck_pos.z})
-                end
-
-            else
-                -- discard all cards facedown
-                obj.setPositionSmooth(
-                    {action_deck_pos.x, action_deck_pos.y + 1,
-                     action_deck_pos.z})
-                obj.setRotationSmooth({0.00, 90.00, 180.00})
-            end
-        elseif obj.getTags()[1] == "AmbitionDeclared" then
-            -- ambition marker
-            obj.setPositionSmooth(marker_zone_pos)
-            obj.setRotationSmooth({0.00, 180.00, 180.00})
-        elseif obj.getTags()[1] == "Resource" then
-            -- resources 
-            -- TODO: move to respective supply
-        end
+    local initiative = getObjectFromGUID(Global.getVar("initiative_seized_GUID"))
+    if initiative then
+        initiative.setState(1)
     end
+
+    local action_deck = getObjectFromGUID(Global.getVar("action_deck_GUID"))
+
+    Supplies.returnZone(getObjectFromGUID(Global.getVar("FUDiscard_zone_GUID")))
+
+    Wait.time(function() action_deck.randomize() end, 1)
+    Wait.time(function() action_deck.deal(6) end, 1.5)
+end
+
+function cleanupCards()
+
+    getObjectFromGUID(Global.getVar("action_card_zone_GUID")).call("clearPlayed")
+    --return
 
 end
 
-function takeInitiative(objectButtonClicked, playerColorClicked)
+function applyInitiativeMenus()
+    getObjectFromGUID(Global.getVar("initiative_GUID")).addContextMenuItem("Take Initiative", takeInitiative)
+    getObjectFromGUID(Global.getVar("initiative_GUID")).addContextMenuItem("Seize Initiative", seizeInitiative)
+end
 
-    broadcastToAll(playerColorClicked .. " takes initiative")
-    Global.call("takeInitiative", playerColorClicked)
+function seizeInitiative(player_color)
 
+    local initiative_marker = getObjectFromGUID(Global.getVar("initiative_GUID"))
+    local player_board = getObjectFromGUID(Global.getTable("player_pieces_GUIDs")[player_color]["player_board"])
+    local pos = player_board.positionToWorld(Global.getVar("initiative_pos"))
+
+    initiative_marker.setPositionSmooth(pos)
+    Wait.time(function() initiative_marker.setState(2) end, 2)
+    broadcastToAll(player_color .. " seizes initiative",player_color)
+
+
+end
+
+function takeInitiative(player_color)
+
+    local initiative_marker = getObjectFromGUID(Global.getVar("initiative_GUID"))
+    local player_board = getObjectFromGUID(Global.getTable("player_pieces_GUIDs")[player_color]["player_board"])
+    local pos = player_board.positionToWorld(Global.getVar("initiative_pos"))
+
+    initiative_marker.setPositionSmooth(pos)
+    broadcastToAll(player_color .. " takes initiative",player_color)
+
+end
+
+function declareAmbition(_,player_color)
+    Ambitions.declare(player_color)
 end

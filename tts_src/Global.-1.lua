@@ -53,6 +53,8 @@ oop_planet_GUIDs = {"6ecb02", "795637", "ae5114", "d5fe1a", "0d3d0c",
 
 initiative_GUID = "b3b3d0"
 seized_initiative_GUID = "e0f490"
+initaitive_player_position = {-2,0,0}
+
 chapter_pawn_GUID = "9c3ac8"
 
 active_players = {}
@@ -64,10 +66,9 @@ is_player_setup = {
 }
 
 -- Players Pieces
--- Players Pieces
 player_pieces_GUIDs = {
     ["White"] = {
-        player_board = "",
+        player_board = "999dbd",
         resource = {"822a9c", "00ee1b"},
         city = {"822a9c", "00ee1b"},
         ships = "6883e6",
@@ -81,10 +82,12 @@ player_pieces_GUIDs = {
             "81c3a7"
         },
         initiative_zone = "2e1cd3",
+        trophies_zone = "275a50",
+        captives_zone = "0c07a0",
         area_zone = "a952c1"
     },
     ["Yellow"] = {
-        player_board = "",
+        player_board = "5aa44c",
         resource = {"dbf4de", "799077"},
         city = {"dbf4de", "799077"},
         ships = "a75924",
@@ -98,10 +101,12 @@ player_pieces_GUIDs = {
             "b41592"
         },
         initiative_zone = "3fc6fd",
+        trophies_zone = "7f5014",
+        captives_zone = "31a56f",
         area_zone = "238a92"
     },
     ["Red"] = {
-        player_board = "",
+        player_board = "c0c8a1",
         resource_one = {"33577c", "cf5b95"},
         city = {"33577c", "cf5b95"},
         ships = "7e0fe2",
@@ -115,10 +120,12 @@ player_pieces_GUIDs = {
             "282f37"
         },
         initiative_zone = "32f290",
+        trophies_zone = "48b6fb",
+        captives_zone = "7b011e",
         area_zone = "c2bf05"
     },
     ["Teal"] = {
-        player_board = "",
+        player_board = "ae512a",
         resource = {"79b799", "f3da7f"},
         city = {"79b799", "f3da7f"},
         ships = "2da385",
@@ -132,6 +139,8 @@ player_pieces_GUIDs = {
             "45c804"
         },
         initiative_zone = "cdc545",
+        trophies_zone = "3085c9",
+        captives_zone = "fe0b0d",
         area_zone = "ee4b6e"
     }
 }
@@ -238,6 +247,14 @@ resources_GUID = {
     materials = "1b8490"
 }
 
+resources_markers_GUID = {
+    psionics = "a89706",
+    relics = "473675",
+    weapons = "2fdfa3",
+    fuel = "5cb321",
+    materials = "eb1cba"
+}
+
 merchant_tycoon_GUID = "612aa9"
 merchant_GUID = {
     tycoon = "612aa9",
@@ -276,6 +293,8 @@ blight_GUID = "3c61d2"
 A_Fates_GUID = "0ac7d1"
 
 ----------------------------------------------------
+local Supplies = require("src/Supplies")
+local Counters = require("src/Counters")
 
 function assignPlayerToAvailableColor(player, color)
     local color = table.remove(available_colors, 1)
@@ -292,7 +311,24 @@ function onPlayerDisconnect(player)
     table.insert(available_colors, 1, player.color)
 end
 
+function onObjectEnterZone(zone,object)
+    Counters.update(zone)
+end
+
+function onObjectSpawn(object)
+    Supplies.addMenuToObject(object)
+end
+
+function onObjectLeaveZone(zone,object)
+    Counters.update(zone)
+end
+
+function onObjectEnterContainer(container,object)
+    Counters.update(container)
+end
+
 function onObjectLeaveContainer(container, leave_object)
+    Counters.update(container)
     if container.type == "Deck" or container.type == "Bag" or
         container.type == "Infinite" then
         leave_object.setTags(container.getTags())
@@ -371,10 +407,8 @@ function takeInitiative(color)
     end
 
     local initiative_marker = getObjectFromGUID(initiative_GUID)
-
-    local first_player_initiative_zone =
-        getObjectFromGUID(player_pieces_GUIDs[color].initiative_zone)
-    local initiative_pos = first_player_initiative_zone.getPosition()
+    local player_board = getObjectFromGUID(player_pieces_GUIDs[color]["player_board"])
+    local initiative_pos = player_board.positionToWorld(initaitive_player_position)
     initiative_marker.setPositionSmooth(initiative_pos)
 end
 
@@ -1290,6 +1324,7 @@ starting_pieces = {
 ----------------------------------------------------
 
 function onLoad()
+    Counters.setup()
     -- Assign all connected players to a color spot.
     -- for _, player in ipairs(Player.getPlayers()) do
     --     assignPlayerToAvailableColor(player)
