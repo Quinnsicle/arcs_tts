@@ -5,10 +5,6 @@ local supplies = require("src/Supplies")
 
 function BaseGame.setup()
 
-    for _, obj in pairs(getObjectsWithTag("Campaign Only")) do
-        supplies.removeFromGame(obj)
-    end
-
     local active_players = Global.call("getOrderedPlayers")
     if (#active_players < 2 or #active_players > 4) then
         return false
