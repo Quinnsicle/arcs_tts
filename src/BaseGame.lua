@@ -11,7 +11,7 @@ function BaseGame.setup()
     end
 
     -- B
-    takeInitiative(active_players[1])
+    Global.call("takeInitiative", active_players[1])
 
     BaseGame.setupActionDeck(#active_players)
     BaseGame.setupBaseCourt(#active_players)
