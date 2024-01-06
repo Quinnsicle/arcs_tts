@@ -5,17 +5,13 @@ local supplies = require("src/Supplies")
 
 function BaseGame.setup()
 
-    for _, obj in pairs(getObjectsWithTag("Campaign Only")) do
-        supplies.removeFromGame(obj)
-    end
-
     local active_players = Global.call("getOrderedPlayers")
     if (#active_players < 2 or #active_players > 4) then
         return false
     end
 
     -- B
-    takeInitiative(active_players[1])
+    Global.call("takeInitiative", active_players[1])
 
     BaseGame.setupActionDeck(#active_players)
     BaseGame.setupBaseCourt(#active_players)
@@ -254,7 +250,7 @@ end
 
 function BaseGame.setupPlayers(ordered_players, setup_card)
     -- print("Setup Players")
-    log("test")
+
     local player_leaders = {
         [1] = "Default",
         [2] = "Default",
