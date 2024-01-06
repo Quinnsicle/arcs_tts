@@ -250,7 +250,7 @@ end
 
 function BaseGame.setupPlayers(ordered_players, setup_card)
     -- print("Setup Players")
-    log("test")
+
     local player_leaders = {
         [1] = "Default",
         [2] = "Default",
