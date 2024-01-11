@@ -1,26 +1,136 @@
-TAG = self.getName().." Spawned Die"
+local DiceBoard = {}
 
-SCALE_COMBAT = {1.50,1.50,1.50}
-SCALE_SPECIAL = {2.50,2.50,2.50}
+local DICE_BOARD = self
 
-MAX_COMBAT = 6
-MAX_SPECIAL = 1
+local MESSAGE_COLOR = {
+  ["skirmish"]        = { 0.31, 0.49, 0.51 },
+  ["skirmish_hover"]  = { 0.41, 0.59, 0.61 },
+  ["assault"]         = { 0.51, 0.15, 0.11 },
+  ["assault_hover"]   = { 0.61, 0.25, 0.21 },
+  ["raid"]            = { 0.82, 0.45, 0.18 },
+  ["raid_hover"]      = { 0.92, 0.55, 0.28 },
+}
 
-BOARD_AREA = {x=2.00, y=5.00, z=3.00}
+-- UI Variables--
+local UI_POS = Vector({0.00,0.20,1.20})
 
-GRID_COMBAT = {
-  area    =   BOARD_AREA,
+local UI_skirmish = {
+  click_function = "SpawnSkirmishDie",
+  function_owner = DICE_BOARD,
+  label = "Skirmish",
+  position = Vector({-1.20,0.00,0.00}) + UI_POS,
+  width = 310,
+  height = 130,
+  font_size = 60,
+  scale = {1, 1, 1},
+  color = MESSAGE_COLOR["skirmish"],
+  hover_color = MESSAGE_COLOR["skirmish_hover"],
+  font_color = {0, 0, 0}
+}
+
+local UI_assault = {
+  click_function = "SpawnAssaultDie",
+  function_owner = DICE_BOARD,
+  label = "Assault",
+  position = Vector({-0.60,0.00,0.00}) + UI_POS,
+  width = 310,
+  height = 130,
+  font_size = 60,
+  scale = {1, 1, 1},
+  color = MESSAGE_COLOR["assault"],
+  hover_color = MESSAGE_COLOR["assault_hover"],
+  font_color = {0, 0, 0}
+}
+
+local UI_raid = {
+  click_function = "SpawnRaidDie",
+  function_owner = DICE_BOARD,
+  label = "Raid",
+  position = Vector({0.00,0.00,0.00}) + UI_POS,
+  width = 310,
+  height = 130,
+  font_size = 60,
+  scale = {1, 1, 1},
+  color = MESSAGE_COLOR["raid"],
+  hover_color = MESSAGE_COLOR["raid_hover"],
+  font_color = {0, 0, 0}
+}
+
+local UI_cluster = {
+  click_function = "SpawnClusterDie",
+  function_owner = DICE_BOARD,
+  label = "Cluster",
+  position = Vector({0.60,0.00,0.00}) + UI_POS,
+  width = 310,
+  height = 130,
+  font_size = 60,
+  scale = {1, 1, 1},
+  color = {0.1, 0.1, 0.1},
+  font_color = {1, 1, 1}
+}
+
+local UI_event = {
+  click_function = "SpawnEventDie",
+  function_owner = DICE_BOARD,
+  label = "Event",
+  position = Vector({1.20,0.00,0.00}) + UI_POS,
+  width = 310,
+  height = 130,
+  font_size = 60,
+  scale = {1, 1, 1},
+  color = {0.1, 0.1, 0.1},
+  font_color = {1, 1, 1}
+}
+
+local UI_roll = {
+  click_function = "RollDice",
+  function_owner = DICE_BOARD,
+  label = "Roll",
+  position = Vector({-0.70,0.00,0.30}) + UI_POS,
+  width = 650,
+  height = 130,
+  font_size = 72,
+  scale = {1, 1, 1},
+  color = {0.8, 0.8, 0.8},
+  font_color = {0, 0, 0}
+}
+
+local UI_reset = {
+  click_function = "ClearDice",
+  function_owner = DICE_BOARD,
+  label = "Reset",
+  position = Vector({0.70,0.00,0.30}) + UI_POS,
+  width = 650,
+  height = 130,
+  font_size = 72,
+  scale = {1, 1, 1},
+  color = {0.8, 0.8, 0.8},
+  font_color = {0, 0, 0}
+}
+
+-- Dice Layout --
+local GRID_COMBAT = {
+  area    =   {x=2.00, y=5.00, z=3.00},
   rows    =   6,
   columns =   3
 }
 
-GRID_SPECIAL = {
-  area    =   BOARD_AREA,
+local GRID_SPECIAL = {
+  area    =   {x=2.00, y=5.00, z=3.00},
   rows    =   2,
   columns =   1
 }
 
-DICE = {
+-- Functional Variables --
+local TAG = "Spawned Die"
+
+local SCALE_COMBAT = {1.50,1.50,1.50}
+local SCALE_SPECIAL = {2.50,2.50,2.50}
+
+local MAX_COMBAT = 6
+local MAX_SPECIAL = 1
+
+local DICE = {
   ["skirmish"] = {
     custom = {image="https://dl.dropboxusercontent.com/s/3kr0xkvssrwuckb/bombard-die.png", type=1},
     scale = SCALE_COMBAT,
@@ -48,22 +158,23 @@ DICE = {
   }
 }
 
-MESSAGE_COLOR = {
-  ["skirmish"]  = { r=0.31, g=0.49, b=0.51 },
-  ["assault"]   = { r=0.51, g=0.15, b=0.11 },
-  ["raid"]      = { r=0.82, g=0.45, b=0.18 }
-}
-
-function onLoad()
-  spawns_combat = CreatePositioningGrid(GRID_COMBAT)
-  spawns_special = CreatePositioningGrid(GRID_SPECIAL)
-  ClearDice()
+function DiceBoard.setup(object)
+  DICE_BOARD.createButton(UI_skirmish)
+  DICE_BOARD.createButton(UI_assault)
+  DICE_BOARD.createButton(UI_raid)
+  DICE_BOARD.createButton(UI_cluster)
+  DICE_BOARD.createButton(UI_event)
+  DICE_BOARD.createButton(UI_roll)
+  DICE_BOARD.createButton(UI_reset)
+  spawns_combat = DiceBoard.CreatePositioningGrid(GRID_COMBAT)
+  spawns_special = DiceBoard.CreatePositioningGrid(GRID_SPECIAL)
+  DiceBoard.ClearDice()
 end
 
-function SpawnCombatDie(_,type)
+function DiceBoard.SpawnCombatDie(type)
 
   if is_special then
-    ClearDice()
+    DiceBoard.ClearDice()
     is_special = not is_special
   end
 
@@ -72,15 +183,15 @@ function SpawnCombatDie(_,type)
     broadcastToAll("Maximum "..type.." dice reached.",MESSAGE_COLOR[type])
     return
   else
-    SpawnDie(die, spawns_combat)
+    DiceBoard.SpawnDie(die, spawns_combat)
   end
 
 end
 
-function SpawnSpecialDie(_,type)
+function DiceBoard.SpawnSpecialDie(type)
 
   if not is_special then
-    ClearDice()
+    DiceBoard.ClearDice()
     is_special = not is_special
   end
 
@@ -88,14 +199,14 @@ function SpawnSpecialDie(_,type)
   if die_count[die] == die.max then
     return
   else
-    SpawnDie(die, spawns_special)
+    DiceBoard.SpawnDie(die, spawns_special)
   end
 
 end
 
-function SpawnDie(die, spawn_points)
+function DiceBoard.SpawnDie(die, spawn_points)
 
-  local pos = spawn_points[#GetDiePool()+1]; pos = self.positionToWorld(pos)
+  local pos = spawn_points[#DiceBoard.GetDiePool()+1]; pos = DICE_BOARD.positionToWorld(pos)
   die_count[die] = die_count[die] and die_count[die] + 1 or 1
 
   local new_die = spawnObject({
@@ -108,18 +219,22 @@ function SpawnDie(die, spawn_points)
 
 end
 
-function RollDice() for _, die in ipairs(GetDiePool()) do die.randomize() end end
+function DiceBoard.RollDice() 
+    for _, die in pairs(DiceBoard.GetDiePool()) do 
+        die.randomize() 
+    end 
+end
 
-function ClearDice()
-    for _,die in pairs(GetDiePool()) do die.destruct() end
+function DiceBoard.ClearDice()
+    for _,die in pairs(DiceBoard.GetDiePool()) do die.destruct() end
     die_count = {}
 end
 
-function GetDiePool()
+function DiceBoard.GetDiePool()
   return getObjectsWithTag(TAG)
 end
 
-function CreatePositioningGrid(parems)
+function DiceBoard.CreatePositioningGrid(parems)
 
   local r_ct, c_ct        = parems.rows, parems.columns
   local r_space, c_space  = parems.area.z / (parems.rows), parems.area.x / (parems.columns)
@@ -139,3 +254,16 @@ function CreatePositioningGrid(parems)
   return grid
 
 end
+
+-- Begin Object Code --
+function onLoad()           DiceBoard.setup()                       end  
+function SpawnSkirmishDie() DiceBoard.SpawnCombatDie("skirmish")    end
+function SpawnAssaultDie()  DiceBoard.SpawnCombatDie("assault")     end
+function SpawnRaidDie()     DiceBoard.SpawnCombatDie("raid")        end
+function SpawnClusterDie()  DiceBoard.SpawnSpecialDie("cluster")    end
+function SpawnEventDie()    DiceBoard.SpawnSpecialDie("event")      end
+function RollDice()         DiceBoard.RollDice()                    end
+function ClearDice()        DiceBoard.ClearDice()                   end
+-- End Object Code --
+
+return DiceBoard
