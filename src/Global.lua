@@ -1093,6 +1093,10 @@ starting_pieces = {
 
 function onLoad()
     Counters.setup()
+
+    for _, obj in pairs(getObjectsWithTag("Noninteractable")) do
+        obj.interactable = false
+    end
     -- Assign all connected players to a color spot.
     -- for _, player in ipairs(Player.getPlayers()) do
     --     assignPlayerToAvailableColor(player)
