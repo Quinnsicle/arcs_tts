@@ -171,6 +171,30 @@ local the_counters = {
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {0.8, 0.58, 0.27}
+  },
+  {
+    container_GUID = Global.getVar("blight_GUID"),
+    position = {0.5, 0.06, 0.03},
+    shadow = {0.03, 0.06, 0.02},
+    scale = {1, 1, 1},
+    font_size = 365,
+    font_color = {0.8, 0.58, 0.27}
+  },
+  {
+    container_GUID = Global.getVar("free_cities_GUID"),
+    position = {0.5, 0.06, 0.03},
+    shadow = {0.03, 0.06, 0.02},
+    scale = {1, 1, 1},
+    font_size = 365,
+    font_color = {0.8, 0.58, 0.27}
+  },
+  {
+    container_GUID = Global.getVar("free_starports_GUID"),
+    position = {0.5, 0.06, 0.03},
+    shadow = {0.03, 0.06, 0.02},
+    scale = {1, 1, 1},
+    font_size = 365,
+    font_color = {0.8, 0.58, 0.27}
   }
 }
 

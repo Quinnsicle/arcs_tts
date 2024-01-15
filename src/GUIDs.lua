@@ -274,7 +274,8 @@ die_zone_GUID = "1b45bb"
 
 imperial_ships_GUID = "beb54d"
 imperial_ships_text_GUID = "6daaa3"
-free_cities_GUID = "1205b0"
-blight_GUID = "3c61d2"
+free_cities_GUID = "80742e"
+free_starports_GUID = "c79cb8"
+blight_GUID = "ff61a8"
 
 A_Fates_GUID = "0ac7d1"
