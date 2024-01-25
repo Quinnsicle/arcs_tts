@@ -194,7 +194,7 @@ function onload()
     self.createButton(setupBaseGame_params)
     self.createButton(setupCampaignGame_params)
     self.createButton(showControls_params)
-    self.createButton(splitDiscardFACEDOWN_params)
+    self.createButton(splitDiscardFACEUP_params)
 end
 
 function toggleLeaders()
@@ -224,11 +224,7 @@ function toggleExpansion()
 end
 
 function toggleSplitDiscard()
-    local toggle = Global.getVar("with_split_discard")
-
-    toggle = not toggle
-    Global.setVar("with_split_discard", toggle)
-
+    local toggle = ActionCards.toggleFUD()
     if (toggle) then
         self.editButton(splitDiscardFACEUP_params)
     else
