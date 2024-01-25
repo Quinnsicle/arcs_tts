@@ -75,11 +75,11 @@ local all_supplies = {
 
 
   -- Campaing Components
-  --["Blight"]                    = {bag = Global.getVar("")},
+  ["Blight"]                    = {bag = global_vars["blight_GUID"]},
   ["Imperial Ship (Damaged)"]   = {bag = global_vars["imperial_ships_GUID"], state = 1},
   ["Imperial Ship (Fresh)"]     = {bag = global_vars["imperial_ships_GUID"]},
-  --["Free City"]                 = {bag = Global.getVar("")},
-  --["Free Starport"]             = {bag = Global.getVar("")},
+  ["Free City"]                 = {bag = global_vars["free_cities_GUID"]},
+  ["Free Starport"]             = {bag = global_vars["free_starports_GUID"]},
 
   -- Cards
   ["Action Card"] = {
