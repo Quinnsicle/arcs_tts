@@ -8,7 +8,7 @@ local played_zone   = getObjectFromGUID(action_card_zone_GUID)
 local lead_zone     = getObjectFromGUID(lead_card_zone_GUID)
 
 -- Face Down Discard
-local FDD_pos   = Vector({0.94, 3.00, -1.26})
+local FDD_pos   = Vector({0.94, 10.00, -1.26})
 local FDD_rot   = Vector({0.00, 90.00, 180.00})
 
 -- Face Up Discard
@@ -47,7 +47,7 @@ function ActionCards.isFUDActive()
     return is_FUD_active
 end
 
-function ActionCards.dealHand(is_campaign)
+function ActionCards.dealHand()
     broadcastToAll("Shuffle and deal 6 action cards to all players")
     deck.randomize()
     Wait.time(function() deck.deal(6) end, 1)
@@ -76,9 +76,9 @@ function ActionCards.clearPlayed()
 
     -- Error on union card
     for _, obj in pairs(played_objects) do
-        if obj.hasTag("Union") then
-            broadcastToAll("Resolve Union card before cleanup!", Color.Red)
-            return
+        if obj.hasTag("Guild") then
+            broadcastToAll("Resolve Guild card before cleanup!", Color.Red)
+            return false
         end
     end
 
@@ -95,10 +95,12 @@ function ActionCards.clearPlayed()
         end
     end
 
-end
+    return true
 
+end
+ 
 function ActionCards.FDDiscard(card)
-    local reach_map = require("src/ReachBoard")
+    local reach_map = getObjectFromGUID(reach_board_GUID)
     local pos = reach_map.positionToWorld(FDD_pos)
     local rot = FDD_rot
     card.setPositionSmooth(pos)
