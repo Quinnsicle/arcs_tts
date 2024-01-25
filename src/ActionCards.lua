@@ -19,21 +19,23 @@ local FUD_offset        = Vector({0.50,0.50,0.00})
 local FUD_tag           = "Face Up Discard Action"
 local is_FUD_active     = true
 
-function ActionCards.setupFourPlayer()
+function ActionCards.setupFourPlayer(player_ct)
     local four_player_deck = getObjectFromGUID(action_deck_4P_GUID)
-    if (#getSeatedPlayers() == 4) then
+    if (player_ct == 4) then
         deck.putObject(four_player_deck)
+        Wait.time(function() deck.randomize() end, 1.5)
     else
         destroyObject(four_player_deck)
     end
 end
 
-function ActionCards.setupEvents()
+function ActionCards.setupEvents(player_ct)
     local event_deck = getObjectFromGUID(event_deck_GUID)
-    if (#getSeatedPlayers() == 4) then
+    if (player_ct == 4) then
         event_deck.takeObject().destroy()
     end
     deck.putObject(event_deck)
+    Wait.time(function() deck.randomize() end, 1.5)
 end
 
 function ActionCards.toggleFUD()
