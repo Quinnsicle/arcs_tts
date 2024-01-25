@@ -6,9 +6,11 @@ more_to_explore_fate_GUID = "bbd744"
 more_to_explore_lore_GUID = "4a9cd9"
 
 include_fates_GUID = "be0e27"
-action_deck_GUID = "855643"
-action_deck_4P_GUID = "9128ca"
+action_deck_GUID = "cf0c25"
+action_deck_4P_GUID = "22a45c"
 action_card_zone_GUID = "e6eca7"
+lead_card_zone_GUID = "9e5eae"
+FUDiscard_marker_GUID = "000207"
 
 ambition_marker_zone_GUID = "3984e4"
 court_deck_zone_GUID = "7a33ff"
@@ -257,7 +259,7 @@ control_GUID = "6e21fe"
 
 campaign_setup_GUID = "4c00fe"
 
-event_deck_GUID = "7be749"
+event_deck_GUID = "ad423d"
 chapter_track_GUID = "4d34d7"
 chapter_zone_GUID = "2d2c49"
 
