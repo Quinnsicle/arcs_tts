@@ -1,7 +1,8 @@
 local BaseGame = {}
 
-local merchant = require("src/Merchant")
-local supplies = require("src/Supplies")
+local merchant      = require("src/Merchant")
+local supplies      = require("src/Supplies")
+local action_cards  = require("src/ActionCards")
 
 function BaseGame.setup()
 
@@ -13,7 +14,8 @@ function BaseGame.setup()
     -- B
     Global.call("takeInitiative", active_players[1])
 
-    BaseGame.setupActionDeck(#active_players)
+    -- D
+    action_cards.setupFourPlayer(#active_players)
     BaseGame.setupBaseCourt(#active_players)
 
     chosen_setup_card = BaseGame.chooseSetupCard(#active_players)
@@ -37,27 +39,6 @@ end
 function BaseGame.dispersePlayerPieces()
     -- print("disperse starting pieces")
     BaseGame.setupPlayers(Global.getTable("active_players"), chosen_setup_card)
-end
-
--- D
-function BaseGame.setupActionDeck(player_count)
-    -- print("Base Game Setup Action Deck")
-
-    -- Add 7s and 1s to the action deck for 4 players
-    local four_player_action_deck =
-        getObjectFromGUID(Global.getVar("action_deck_4P_GUID"))
-    local action_deck = getObjectFromGUID(Global.getVar(
-        "action_deck_GUID"))
-    local event_deck = getObjectFromGUID(Global.getVar(
-        "event_deck_GUID"))
-
-    if (player_count == 4) then
-        action_deck.putObject(four_player_action_deck)
-    end
-
-    Wait.time(function()
-        action_deck.randomize()
-    end, 1.5)
 end
 
 -- H
