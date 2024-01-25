@@ -1,3 +1,5 @@
+require("src/GUIDs")
+
 local SupplyManager = {}
 -- TODO
 -- stack management algorithm
@@ -68,7 +70,7 @@ local all_supplies = {
   -- Resources
   ["Psionic"]   = {pos = {0,2,0}, origin = global_vars["resources_markers_GUID"]["psionics"]},
   ["Relic"]     = {pos = {0,2,0}, origin = global_vars["resources_markers_GUID"]["relics"]},
-  ["Weapon"]    = {pos = {0,2,0}, origin = global_vars["resources_markers_GUID"]["weapons"]},
+  ["Weapons"]   = {pos = {0,2,0}, origin = global_vars["resources_markers_GUID"]["weapons"]},
   ["Fuel"]      = {pos = {0,2,0}, origin = global_vars["resources_markers_GUID"]["fuel"]},
   ["Material"]  = {pos = {0,2,0}, origin = global_vars["resources_markers_GUID"]["materials"]},
 
@@ -81,18 +83,12 @@ local all_supplies = {
   ["Free City"]                 = {bag = global_vars["free_cities_GUID"]},
   ["Free Starport"]             = {bag = global_vars["free_starports_GUID"]},
 
-  -- Cards
-  ["Action Card"] = {
-    deck  = global_vars["action_deck_GUID"],
-    pos   = {-12.26, 3.10, 6.94},
-    rot   = {0.00, 90.00, 180.00} 
-  },
-
   -- Miscallaneous
   [""] = {ignore = true},
   ["Zero Marker"] = {
-    pos = {-12.24, 0.99, -7.23},
-    rot = {0.00, 180.00, 0.00}
+    pos = {0.938,1.747,1.091},
+    rot = {0.00, 180.00, 0.00},
+    origin = reach_board_GUID
   }
 }
 
@@ -158,8 +154,11 @@ function SupplyManager.returnObject(object,is_bottom_deck)
   -- Return an object to a position
   elseif supply.pos then
     local pos = supply.pos
-    pos = supply.origin and getObjectFromGUID(supply.origin).positionToWorld(pos)
+    pos = supply.origin and getObjectFromGUID(supply.origin).positionToWorld(pos) or pos
     object.setPositionSmooth(pos,false,true)
+    if (supply.rot) then
+      object.setRotationSmooth(supply.rot)
+    end
   end
 
 end
