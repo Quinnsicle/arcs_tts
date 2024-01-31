@@ -156,4 +156,18 @@ function ActionCards.getLeadInfo()
     return nil
 end
 
+function ActionCards.drawBottomSetup()
+    log(played_zone)
+    deck.addContextMenuItem("Draw bottom card", ActionCards.drawBottom)
+end
+
+function ActionCards.drawBottom(player_color, position, object)
+    local hand_zone = Player[player_color].getHandTransform()
+    deck.takeObject({
+        top = false,
+        position = hand_zone.position,
+        rotation = hand_zone.rotation + Vector({0,180,0})
+    })
+end
+
 return ActionCards

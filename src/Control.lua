@@ -189,6 +189,7 @@ local takeInitiative_params = {
 }
 
 function onload()
+    ActionCards.drawBottomSetup()
     self.createButton(toggleLeadersWITHOUT_params)
     self.createButton(toggleExpansionEXCLUDE_params)
     self.createButton(setupBaseGame_params)
