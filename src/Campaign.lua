@@ -1,7 +1,8 @@
 local Campaign = {}
 
-local merchant = require("src/Merchant")
-local supplies = require("src/Supplies")
+local merchant      = require("src/Merchant")
+local supplies      = require("src/Supplies")
+local action_cards  = require("src/ActionCards")
 
 function Campaign.setup()
 
@@ -13,7 +14,10 @@ function Campaign.setup()
     -- B
     Global.call("takeInitiative", ordered_players[1])
 
-    Campaign.setupActionDeck(#ordered_players)
+    -- C, D, E
+    action_cards.setupFourPlayer(#ordered_players)
+    action_cards.setupEvents(#ordered_players)
+
     Campaign.setupChapterTrack()
     Campaign.setupCampaignGuildCards(#ordered_players)
     Campaign.setupImperialCouncil()
@@ -25,54 +29,6 @@ function Campaign.setup()
     end, 5)
 
     return true
-end
-
--- C,D,E
-function Campaign.setupActionDeck(player_count)
-
-    -- Add 7s and 1s to the action deck for 4 players
-    local four_player_action_deck =
-        getObjectFromGUID(Global.getVar("action_deck_4P_GUID"))
-    local action_deck = getObjectFromGUID(Global.getVar(
-        "action_deck_GUID"))
-    local event_deck = getObjectFromGUID(Global.getVar(
-        "event_deck_GUID"))
-
-    if (player_count == 4) then
-        action_deck.putObject(four_player_action_deck)
-
-        event_deck.putObject(four_player_action_deck)
-    else
-        local action_deck_pos = action_deck.getPosition()
-        event_deck.takeObject({
-            position = {
-                x = action_deck_pos.x,
-                y = action_deck_pos.y + 1,
-                z = action_deck_pos.z
-            },
-            rotation = {0, 90, 0},
-            flip = true
-            -- smooth = false
-        })
-        event_deck.takeObject({
-            position = {
-                x = action_deck_pos.x,
-                y = action_deck_pos.y + 1,
-                z = action_deck_pos.z
-            },
-            rotation = {0, 90, 0},
-            flip = true
-            -- smooth = false
-        })
-
-        destroyObject(event_deck)
-
-        destroyObject(four_player_action_deck)
-    end
-
-    Wait.time(function()
-        action_deck.shuffle()
-    end, 1.5)
 end
 
 -- G
