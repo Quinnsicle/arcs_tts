@@ -8,22 +8,11 @@ local reach_board       = getObjectFromGUID(reach_board_GUID)
 local marker_zone       = getObjectFromGUID(ambition_marker_zone_GUID)
 local declared_marker   = getObjectFromGUID(ambition_declared_marker_GUID)
 
-local ambitionDeclared_params = { 
-    click_function = 'declareAmbition',
-    function_owner = declared_marker,
-    position = {0, 0.05, 0},
-    width = 3800,
-    height = 950,
-    tooltip = "Declare Ambition"
-}
-
-local marker_GUIDs = Global.getTable("ambition_marker_GUIDs")
-
 -- is_face_down = false = blue side is face up
 -- is_face_down = true  = yellow side is face up
 local markers = {
     {
-        object = getObjectFromGUID(marker_GUIDs[1]),
+        object = getObjectFromGUID(ambition_marker_GUIDs[1]),
         column_pos = Vector({-0.84,0.2,0}),
         [false] = {
             first_power = 5,
@@ -37,7 +26,7 @@ local markers = {
         }
     },
     {
-        object = getObjectFromGUID(marker_GUIDs[2]),
+        object = getObjectFromGUID(ambition_marker_GUIDs[2]),
         column_pos = Vector({-0.92,0.2,0}),
         [false] = {
             first_power = 3,
@@ -51,7 +40,7 @@ local markers = {
         }
     },
     {
-        object = getObjectFromGUID(marker_GUIDs[3]),
+        object = getObjectFromGUID(ambition_marker_GUIDs[3]),
         column_pos = Vector({-1.00,0.2,0}),
         [false] = {
             first_power = 2,
@@ -76,7 +65,14 @@ local ambitions = {
 }
 
 function AmbitionMarkers.setup()
-    declared_marker.createButton(ambitionDeclared_params)
+    declared_marker.createButton({ 
+        click_function = 'declareAmbition',
+        function_owner = declared_marker,
+        position = {0, 0.05, 0},
+        width = 3800,
+        height = 950,
+        tooltip = "Declare Ambition"
+    })
 end
 
 function AmbitionMarkers.declare(player_color)
@@ -125,7 +121,6 @@ end
 function AmbitionMarkers.resetMarkers()
     for _, marker in pairs(markers) do
         local pos = marker.column_pos + ambitions[1].row_pos; pos = reach_board.positionToWorld(pos)
-
         marker.object.setPosition(pos)
     end
 end
@@ -141,9 +136,9 @@ function AmbitionMarkers.highestUndeclared()
     local high_points = 0
     local high_marker = nil
     local marker_mapping = {
-        [marker_GUIDs[1]] = markers[1],
-        [marker_GUIDs[2]] = markers[2],
-        [marker_GUIDs[3]] = markers[3],
+        [ambition_marker_GUIDs[1]] = markers[1],
+        [ambition_marker_GUIDs[2]] = markers[2],
+        [ambition_marker_GUIDs[3]] = markers[3],
     }
 
     for _, marker in pairs(available_markers) do
