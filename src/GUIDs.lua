@@ -12,7 +12,9 @@ action_card_zone_GUID = "e6eca7"
 lead_card_zone_GUID = "9e5eae"
 FUDiscard_marker_GUID = "000207"
 
-ambition_marker_zone_GUID = "3984e4"
+ambition_declared_marker_GUID = "0289cb"
+ambition_marker_GUIDs = {"c9e0ee","a9b02a","b0b4d0"}
+ambition_marker_zone_GUID = "cad54f"
 court_deck_zone_GUID = "7a33ff"
 
 fate_GUID = "f96461"
