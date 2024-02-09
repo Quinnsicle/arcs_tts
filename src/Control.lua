@@ -1,6 +1,7 @@
-local Campaign      = require("src/Campaign")
-local BaseGame      = require("src/BaseGame")
-local ActionCards   = require("src/ActionCards")
+local Campaign          = require("src/Campaign")
+local BaseGame          = require("src/BaseGame")
+local ActionCards       = require("src/ActionCards")
+local AmbitionMarkers   = require("src/AmbitionMarkers")
 
 control_GUID = Global.getVar("control_GUID")
 
@@ -414,6 +415,7 @@ end
 function cleanupCards()
 
     ActionCards.clearPlayed()
+    AmbitionMarkers.resetZeroMarker()
 
 end
 

@@ -157,7 +157,6 @@ function ActionCards.getLeadInfo()
 end
 
 function ActionCards.drawBottomSetup()
-    log(played_zone)
     deck.addContextMenuItem("Draw bottom card", ActionCards.drawBottom)
 end
 
