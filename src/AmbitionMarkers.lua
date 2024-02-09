@@ -1,5 +1,4 @@
--- Used in all aspects of manipulating the ambition markers
--- Also includes some manipulation of the declared ambition markers
+-- Used in all aspects of manipulating zero marker and 3 ambition markers
 require("src/GUIDs")
 
 local AmbitionMarkers = {}
