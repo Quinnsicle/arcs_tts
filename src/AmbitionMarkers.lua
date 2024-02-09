@@ -64,14 +64,30 @@ local ambitions = {
     {name = "Empath",     row_pos = Vector({0,0,0.84})}
 }
 
-function AmbitionMarkers.setup()
+function AmbitionMarkers.addButton()
     zero_marker.createButton({ 
         click_function = 'declareAmbition',
         function_owner = zero_marker,
         position = {0, 0.05, 0},
         width = 3800,
         height = 950,
-        tooltip = "Declare Ambition"
+        tooltip = 'Declare Ambition'
+    })
+end
+
+function AmbitionMarkers.declareButton()
+    zero_marker.editButton({
+        index = 0,
+        click_function = 'declareAmbition',
+        tooltip = 'Declare Ambition'
+    })
+end
+
+function AmbitionMarkers.resetButton()
+    zero_marker.editButton({ 
+        index = 0,
+        click_function = 'resetZeroMarker',
+        tooltip = 'Reset Zero Marker'
     })
 end
 
@@ -116,6 +132,7 @@ function AmbitionMarkers.declare(player_color)
 
     zero_marker.setPositionSmooth(reach_board.positionToWorld({1.02,0.2,0.67}))
     zero_marker.setRotationSmooth({0.00, 90.00, 0.00})
+    AmbitionMarkers.resetButton()
 end
 
 function AmbitionMarkers.highestUndeclared()
@@ -145,32 +162,13 @@ end
 function AmbitionMarkers.resetZeroMarker()
     zero_marker.setPositionSmooth(reach_board.positionToWorld({0.94,0.2,1.09}))
     zero_marker.setRotationSmooth({0.00, 180.00, 0.00})
-end
-
-function AmbitionMarkers.resetMarkers()
-    for _, marker in pairs(markers) do
-        local pos = marker.column_pos + ambitions[1].row_pos; pos = reach_board.positionToWorld(pos)
-        marker.object.setPosition(pos)
-    end
-end
-
-function AmbitionMarkers.flipLowest()
-    local up_marker
-    if not markers[3].object.is_face_down then
-        markers[3].object.flip()
-        broadcastToAll(markers[3][false].power_desc.." ambition flipped to "..markers[3][true].power_desc)
-    elseif not markers[2].object.is_face_down then
-        markers[2].object.flip()
-        broadcastToAll(markers[2][false].power_desc.." ambition flipped to "..markers[2][true].power_desc)
-    else
-        markers[1].object.flip()
-        broadcastToAll(markers[1][false].power_desc.." ambition flipped to "..markers[1][true].power_desc)
-    end
+    AmbitionMarkers.declareButton()
 end
 
 -- Begin Object Code --
-function onLoad()                           AmbitionMarkers.setup()                 end
+function onLoad()                           AmbitionMarkers.addButton()             end
 function declareAmbition(_,player_color)    AmbitionMarkers.declare(player_color)   end
+function resetZeroMarker()                  AmbitionMarkers.resetZeroMarker()       end
 -- End Object Code --
 
 return AmbitionMarkers
