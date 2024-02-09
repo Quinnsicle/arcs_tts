@@ -4,9 +4,9 @@ require("src/GUIDs")
 
 local AmbitionMarkers = {}
 
-local reach_board       = getObjectFromGUID(reach_board_GUID)
-local marker_zone       = getObjectFromGUID(ambition_marker_zone_GUID)
-local declared_marker   = getObjectFromGUID(ambition_declared_marker_GUID)
+local reach_board = getObjectFromGUID(reach_board_GUID)
+local marker_zone = getObjectFromGUID(ambition_marker_zone_GUID)
+local zero_marker = getObjectFromGUID(zero_marker_GUID)
 
 -- is_face_down = false = blue side is face up
 -- is_face_down = true  = yellow side is face up
@@ -65,9 +65,9 @@ local ambitions = {
 }
 
 function AmbitionMarkers.setup()
-    declared_marker.createButton({ 
+    zero_marker.createButton({ 
         click_function = 'declareAmbition',
-        function_owner = declared_marker,
+        function_owner = zero_marker,
         position = {0, 0.05, 0},
         width = 3800,
         height = 950,
@@ -114,20 +114,8 @@ function AmbitionMarkers.declare(player_color)
         broadcastToAll(player_color.." has declared "..this_ambition.name.." ambition for "..power, player_color)
     end
 
-    declared_marker.setPositionSmooth(reach_board.positionToWorld({1.02,0.2,0.67}))
-    declared_marker.setRotationSmooth({0.00, 90.00, 0.00})
-end
-
-function AmbitionMarkers.resetMarkers()
-    for _, marker in pairs(markers) do
-        local pos = marker.column_pos + ambitions[1].row_pos; pos = reach_board.positionToWorld(pos)
-        marker.object.setPosition(pos)
-    end
-end
-
-function AmbitionMarkers.resetDeclared()
-    declared_marker.setPositionSmooth(reach_board.positionToWorld({0.94,0.2,1.09}))
-    declared_marker.setRotationSmooth({0.00, 180.00, 0.00})
+    zero_marker.setPositionSmooth(reach_board.positionToWorld({1.02,0.2,0.67}))
+    zero_marker.setRotationSmooth({0.00, 90.00, 0.00})
 end
 
 function AmbitionMarkers.highestUndeclared()
@@ -152,6 +140,18 @@ function AmbitionMarkers.highestUndeclared()
 
     return high_marker
 
+end
+
+function AmbitionMarkers.resetZeroMarker()
+    zero_marker.setPositionSmooth(reach_board.positionToWorld({0.94,0.2,1.09}))
+    zero_marker.setRotationSmooth({0.00, 180.00, 0.00})
+end
+
+function AmbitionMarkers.resetMarkers()
+    for _, marker in pairs(markers) do
+        local pos = marker.column_pos + ambitions[1].row_pos; pos = reach_board.positionToWorld(pos)
+        marker.object.setPosition(pos)
+    end
 end
 
 function AmbitionMarkers.flipLowest()
