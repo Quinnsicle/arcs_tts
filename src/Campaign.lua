@@ -1,8 +1,11 @@
+local LOG = require("src/LOG")
+local merchant = require("src/Merchant")
+
 local Campaign = {}
 
-local merchant      = require("src/Merchant")
-local supplies      = require("src/Supplies")
-local action_cards  = require("src/ActionCards")
+local merchant = require("src/Merchant")
+local supplies = require("src/Supplies")
+local action_cards = require("src/ActionCards")
 
 function Campaign.setup()
 
@@ -19,10 +22,15 @@ function Campaign.setup()
     action_cards.setupEvents(#ordered_players)
 
     Campaign.setupChapterTrack()
+    LOG.INFO("setupChapterTrack Complete")
     Campaign.setupCampaignGuildCards(#ordered_players)
+    LOG.INFO("setupCampaignGuildCards Complete")
     Campaign.setupImperialCouncil()
+    LOG.INFO("setupImperialCouncil Complete")
     Campaign.setupImperialRules(#ordered_players)
+    LOG.INFO("setupImperialRules Complete")
     Campaign.setupClusters(#ordered_players)
+    LOG.INFO("setupClusters Complete")
 
     Wait.time(function()
         Campaign.dealPlayerFates()
@@ -101,10 +109,6 @@ function Campaign.setupImperialCouncil()
         "imperial_council_GUID"))
     imperial_council.setPositionSmooth({22, 1, -8.40})
     imperial_council.setRotation({0, 270, 0})
-
-    local imperial_ships = getObjectFromGUID(Global.getVar(
-        "imperial_ships_GUID"))
-    imperial_ships.setPosition({-16.8, 1, 2.2})
 
 end
 
@@ -190,8 +194,10 @@ function Campaign.setupClusters(player_count)
             imperial_clusters[2] = imperial_clusters[1] == 6 and 1 or
                                        imperial_clusters[1] + 1
 
+            LOG.INFO("Setup Imperial Ships")
             local imperial_ships = getObjectFromGUID(Global.getVar(
                 "imperial_ships_GUID"))
+            imperial_ships.setPosition({-19.75, 1, 6.00})
 
             for system, v in
                 pairs(cluster_zones[imperial_clusters[1]]) do
@@ -219,8 +225,19 @@ function Campaign.setupClusters(player_count)
             local system_city_zone
 
             local event_die_planets = {"b", "c", "a", "a", "b", "c"}
-            local free_cities = getObjectFromGUID(Global.getVar(
-                "free_cities_GUID"))
+
+            LOG.INFO("Setup Free Cities and Blight")
+            local free_cities_supply =
+                getObjectFromGUID(Global.getVar("free_cities_GUID"))
+            free_cities_supply.setPosition({-16.25, 1, 6})
+
+            local free_starports_supply =
+                getObjectFromGUID(Global.getVar("free_starports_GUID"))
+            free_starports_supply.setPosition({-16.25, 1, 7.75})
+
+            local blight_supply = getObjectFromGUID(Global.getVar(
+                "blight_GUID"))
+            blight_supply.setPosition({-19.75, 1, 7.75})
 
             for cluster, value in pairs(cluster_zones) do
                 if (not is_imperial_cluster[cluster]) then
@@ -232,7 +249,7 @@ function Campaign.setupClusters(player_count)
                             system_city_zone =
                                 getObjectFromGUID(
                                     system_value["buildings"][1])
-                            free_cities.takeObject({
+                            free_cities_supply.takeObject({
                                 position = system_city_zone.getPosition(),
                                 rotation = {
                                     x = 0,
@@ -270,6 +287,7 @@ function Campaign.setupClusters(player_count)
 
             -- Merchant
             if (player_count == 2) then
+                LOG.INFO("imperial merchant setup")
                 merchant.setup(imperial_clusters)
             end
         end

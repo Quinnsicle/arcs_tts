@@ -1,7 +1,7 @@
-local Campaign          = require("src/Campaign")
-local BaseGame          = require("src/BaseGame")
-local ActionCards       = require("src/ActionCards")
-local AmbitionMarkers   = require("src/AmbitionMarkers")
+local Campaign = require("src/Campaign")
+local BaseGame = require("src/BaseGame")
+local ActionCards = require("src/ActionCards")
+local AmbitionMarkers = require("src/AmbitionMarkers")
 
 control_GUID = Global.getVar("control_GUID")
 
@@ -197,6 +197,8 @@ function onload()
     self.createButton(setupCampaignGame_params)
     self.createButton(showControls_params)
     self.createButton(splitDiscardFACEUP_params)
+    -- toggle split discard since the rulebook default is face down
+    toggleSplitDiscard()
 end
 
 function toggleLeaders()

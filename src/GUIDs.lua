@@ -13,7 +13,7 @@ lead_card_zone_GUID = "9e5eae"
 FUDiscard_marker_GUID = "000207"
 
 zero_marker_GUID = "0289cb"
-ambition_marker_GUIDs = {"c9e0ee","a9b02a","b0b4d0"}
+ambition_marker_GUIDs = {"c9e0ee", "a9b02a", "b0b4d0"}
 ambition_marker_zone_GUID = "06c552"
 court_deck_zone_GUID = "7a33ff"
 
@@ -65,13 +65,7 @@ player_pieces_GUIDs = {
         ships = "6883e6",
         starports = "b96445",
         agents = "c863eb",
-        cities = {
-            "822a9c",
-            "00ee1b",
-            "a50d56",
-            "06f4a8",
-            "81c3a7"
-        },
+        cities = {"822a9c", "00ee1b", "a50d56", "06f4a8", "81c3a7"},
         initiative_zone = "2e1cd3",
         trophies_zone = "275a50",
         captives_zone = "0c07a0",
@@ -84,13 +78,7 @@ player_pieces_GUIDs = {
         ships = "a75924",
         starports = "b9ebd3",
         agents = "7b3749",
-        cities = {
-            "dbf4de",
-            "799077",
-            "acfa72",
-            "ac28fb",
-            "b41592"
-        },
+        cities = {"dbf4de", "799077", "acfa72", "ac28fb", "b41592"},
         initiative_zone = "3fc6fd",
         trophies_zone = "7f5014",
         captives_zone = "31a56f",
@@ -103,13 +91,7 @@ player_pieces_GUIDs = {
         ships = "7e0fe2",
         starports = "51a8f5",
         agents = "bbb3aa",
-        cities = {
-            "33577c",
-            "cf5b95",
-            "0ac3c2",
-            "6e36ca",
-            "282f37"
-        },
+        cities = {"33577c", "cf5b95", "0ac3c2", "6e36ca", "282f37"},
         initiative_zone = "32f290",
         trophies_zone = "48b6fb",
         captives_zone = "7b011e",
@@ -122,13 +104,7 @@ player_pieces_GUIDs = {
         ships = "2da385",
         starports = "7e625d",
         agents = "791097",
-        cities = {
-            "f3da7f",
-            "5e753e",
-            "79b799",
-            "fad0f1",
-            "45c804"
-        },
+        cities = {"f3da7f", "5e753e", "79b799", "fad0f1", "45c804"},
         initiative_zone = "cdc545",
         trophies_zone = "3085c9",
         captives_zone = "fe0b0d",

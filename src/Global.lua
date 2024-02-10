@@ -2,52 +2,98 @@ require("src/GUIDs")
 
 available_colors = {"White", "Yellow", "Red", "Teal"}
 
---debug_player_count = 2
+----------------------------------------------------
+-- [DEBUG] REMEMBER TO SET TO FALSE BEFORE RELEASE
+----------------------------------------------------
+debug = true
+debug_player_count = 3
+----------------------------------------------------
 
 with_more_to_explore = false
 with_leaders = false
 with_split_discard = false
 
-oop_components = {
-    {
-        Sector = { pos = {-0.17,0.97,-1.04}, rot = {0,180,-0.01}, scale = {2.48,1,2.48},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769502/1D85B9468BB538D788FCF7576A05606918CD0DD4/" },
-        Gate = { pos = {-0.04,0.97,-0.63}, rot = {0,189.24,-0.01}, scale = {0.71,1,0.71},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769214/A4AD66554742C2FFA93612948C38641B813947FB/" }
+oop_components = {{
+    Sector = {
+        pos = {-0.17, 0.97, -1.04},
+        rot = {0, 180, -0.01},
+        scale = {2.48, 1, 2.48},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769502/1D85B9468BB538D788FCF7576A05606918CD0DD4/"
     },
-    {
-        Sector = { pos = {-0.51,0.97,-0.66}, rot = {0,180,-0.01}, scale = {2.48,1,2.48},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769605/A40A0C79B27F1F1C45E0570E46BA8A7B253F356E/" },
-        Gate = { pos = {-0.23,0.97,-0.21}, rot = {0,252.52,0}, scale = {0.44,1,0.44},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/" }
-    },
-    {
-        Sector = { pos = {-0.47,0.97,0.73}, rot = {0,179.99,-0.01}, scale = {2.36,1,2.36},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769710/C408A11914F7F4DEA83686851730DDF10A8BD5D4/" },
-        Gate = { pos = {-0.2,0.97,0.28}, rot = {0,305.16,0}, scale = {0.44,1,0.44},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/" }
-    },
-    {
-        Sector = { pos = {0.17,0.97,0.91}, rot = {0,180,-0.01}, scale = {2.54,1,2.54},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769816/0AA42154550040133E7D6740F85CD487D5F6967B/" },
-        Gate = { pos = {0.05,0.97,0.52}, rot = {-0.01,12.02,0}, scale = {0.71,1,0.71},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769214/A4AD66554742C2FFA93612948C38641B813947FB/" }
-    },
-    {
-        Sector = { pos = {0.5,0.97,0.55}, rot = {0,179.99,-0.01}, scale = {2.48,1,2.48},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445770194/8600421030523070B8E2F05CECC3281DF24989AC/" },
-        Gate = { pos = {0.24,0.97,0.1}, rot = {-0.01,72.87,-0.01}, scale = {0.44,1,0.44},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/" }
-    },
-    {
-        Sector = { pos = {0.46,0.97,-0.85}, rot = {0,179.99,-0.01}, scale = {2.29,1,2.29},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445770362/76677A077FC1D6CD3672DCC036646ABFD2881F62/" },
-        Gate = { pos = {0.2,0.97,-0.39}, rot = {-0.01,125.02,-0.01}, scale = {0.44,1,0.44},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/" }
+    Gate = {
+        pos = {-0.04, 0.97, -0.63},
+        rot = {0, 189.24, -0.01},
+        scale = {0.71, 1, 0.71},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769214/A4AD66554742C2FFA93612948C38641B813947FB/"
     }
-}
+}, {
+    Sector = {
+        pos = {-0.51, 0.97, -0.66},
+        rot = {0, 180, -0.01},
+        scale = {2.48, 1, 2.48},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769605/A40A0C79B27F1F1C45E0570E46BA8A7B253F356E/"
+    },
+    Gate = {
+        pos = {-0.23, 0.97, -0.21},
+        rot = {0, 252.52, 0},
+        scale = {0.44, 1, 0.44},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/"
+    }
+}, {
+    Sector = {
+        pos = {-0.47, 0.97, 0.73},
+        rot = {0, 179.99, -0.01},
+        scale = {2.36, 1, 2.36},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769710/C408A11914F7F4DEA83686851730DDF10A8BD5D4/"
+    },
+    Gate = {
+        pos = {-0.2, 0.97, 0.28},
+        rot = {0, 305.16, 0},
+        scale = {0.44, 1, 0.44},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/"
+    }
+}, {
+    Sector = {
+        pos = {0.17, 0.97, 0.91},
+        rot = {0, 180, -0.01},
+        scale = {2.54, 1, 2.54},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769816/0AA42154550040133E7D6740F85CD487D5F6967B/"
+    },
+    Gate = {
+        pos = {0.05, 0.97, 0.52},
+        rot = {-0.01, 12.02, 0},
+        scale = {0.71, 1, 0.71},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769214/A4AD66554742C2FFA93612948C38641B813947FB/"
+    }
+}, {
+    Sector = {
+        pos = {0.5, 0.97, 0.55},
+        rot = {0, 179.99, -0.01},
+        scale = {2.48, 1, 2.48},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445770194/8600421030523070B8E2F05CECC3281DF24989AC/"
+    },
+    Gate = {
+        pos = {0.24, 0.97, 0.1},
+        rot = {-0.01, 72.87, -0.01},
+        scale = {0.44, 1, 0.44},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/"
+    }
+}, {
+    Sector = {
+        pos = {0.46, 0.97, -0.85},
+        rot = {0, 179.99, -0.01},
+        scale = {2.29, 1, 2.29},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445770362/76677A077FC1D6CD3672DCC036646ABFD2881F62/"
+    },
+    Gate = {
+        pos = {0.2, 0.97, -0.39},
+        rot = {-0.01, 125.02, -0.01},
+        scale = {0.44, 1, 0.44},
+        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/"
+    }
+}}
 
-initaitive_player_position = {-2,0,0}
+initaitive_player_position = {-2, 0, 0}
 
 active_players = {}
 is_player_setup = {
@@ -76,7 +122,7 @@ function onPlayerDisconnect(player)
     table.insert(available_colors, 1, player.color)
 end
 
-function onObjectEnterZone(zone,object)
+function onObjectEnterZone(zone, object)
     Counters.update(zone)
 end
 
@@ -84,11 +130,11 @@ function onObjectSpawn(object)
     Supplies.addMenuToObject(object)
 end
 
-function onObjectLeaveZone(zone,object)
+function onObjectLeaveZone(zone, object)
     Counters.update(zone)
 end
 
-function onObjectEnterContainer(container,object)
+function onObjectEnterContainer(container, object)
     Counters.update(container)
 end
 
@@ -115,9 +161,12 @@ end
 function getOrderedPlayers()
     local seated_players = getSeatedPlayers()
 
-    local player_count = debug_player_count and debug_player_count or #seated_players
-    if (debug_player_count) then
-        broadcastToAll("Debugging enabled for "..debug_player_count.." players.")
+    local player_count = debug and debug_player_count or
+                             #seated_players
+    if (debug) then
+        broadcastToAll(
+            "Debugging enabled for " .. debug_player_count ..
+                " players.")
     end
 
     if (player_count > 4 or player_count < 2) then
@@ -175,8 +224,10 @@ function takeInitiative(color)
     end
 
     local initiative_marker = getObjectFromGUID(initiative_GUID)
-    local player_board = getObjectFromGUID(player_pieces_GUIDs[color]["player_board"])
-    local initiative_pos = player_board.positionToWorld(initaitive_player_position)
+    local player_board = getObjectFromGUID(
+        player_pieces_GUIDs[color]["player_board"])
+    local initiative_pos = player_board.positionToWorld(
+        initaitive_player_position)
     initiative_marker.setPositionSmooth(initiative_pos)
 end
 

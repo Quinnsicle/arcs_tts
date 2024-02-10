@@ -1,3 +1,5 @@
+local LOG = require("src/LOG")
+
 local BaseGame = {}
 
 local merchant      = require("src/Merchant")
@@ -38,7 +40,8 @@ end
 
 function BaseGame.dispersePlayerPieces()
     -- print("disperse starting pieces")
-    BaseGame.setupPlayers(Global.getTable("active_players"), chosen_setup_card)
+    BaseGame.setupPlayers(Global.getTable("active_players"),
+        chosen_setup_card)
 end
 
 -- H
@@ -178,7 +181,9 @@ function BaseGame.setupOutOfPlayClusters(setup_card)
                 scale = component.scale,
                 sound = false
             })
-            object.setCustomObject({image = component.img})
+            object.setCustomObject({
+                image = component.img
+            })
             object.setLock(true)
         end
     end
