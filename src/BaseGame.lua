@@ -2,9 +2,11 @@ local LOG = require("src/LOG")
 
 local BaseGame = {}
 
+local ArcsPlayer = require("src/ArcsPlayer")
 local merchant = require("src/Merchant")
 local supplies = require("src/Supplies")
 local action_cards = require("src/ActionCards")
+local resource = require("src/Resource")
 
 function BaseGame.setup()
 
@@ -39,7 +41,7 @@ function BaseGame.setup()
 end
 
 function BaseGame.dispersePlayerPieces()
-    LOG.INFO("disperse starting pieces")
+    LOG.INFO("Disperse starting pieces")
     BaseGame.setupPlayers(Global.getTable("active_players"),
         chosen_setup_card)
 end
@@ -274,8 +276,8 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
             player_pieces_guids[player_color]["city"][2])
 
         -- get starting pieces
-        local pieces =
-            Global.getVar("starting_pieces")[player_leaders[player_number]]
+        local leader = player_leaders[player_number]
+        local pieces = Global.getVar("starting_pieces")[leader]
 
         -- iterate through setup card's ABCs
         for starting_letter, cluster_system in pairs(ABC) do
@@ -337,8 +339,18 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
                     ship_place_offset = ship_place_offset + 0.3
                 end
             end
-
         end
+
+        LOG.INFO("Disperse starting resources")
+        -- TODO: refactor the rest of this function to use Player module
+        local player = ArcsPlayer
+        player.color = player_color
+
+        local starting_resources = pieces["resources"]
+        LOG.DEBUG("starting_resource: " .. starting_resources[1])
+
+        player:take_resource(starting_resources[1], 1)
+        player:take_resource(starting_resources[2], 2)
     end
 end
 

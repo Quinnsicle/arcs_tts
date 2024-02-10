@@ -3,7 +3,7 @@ local LayoutTools = {}
 -- Arcs Player Colors {"White", "Yellow", "Red", "Teal"}
 
 local player_boards = {
-    ["white"] = "999dbd",
+    ["White"] = "999dbd",
     ["Yellow"] = "5aa44c",
     ["Teal"] = "ae512a",
     ["Red"] = "c0c8a1"
