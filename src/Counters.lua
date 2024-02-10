@@ -169,8 +169,6 @@ function ObjectCounters.setup()
 end
 
 function ObjectCounters.add(container, button)
-    print(container)
-    print(container.getGUID())
     has_counter[container.getGUID()] = true
     container.createButton({
         function_owner = self,

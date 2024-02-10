@@ -1,3 +1,4 @@
+local LOG = require("src/LOG")
 require("src/GUIDs")
 
 local SupplyManager = {}
@@ -161,8 +162,8 @@ function SupplyManager.returnObject(object, is_bottom_deck)
     local supply = all_supplies[object.getName()]
 
     if not supply then
-        print("Unable to return '" .. object.getName() ..
-                  "' to a supply.")
+        LOG.ERROR("Unable to return '" .. object.getName() ..
+                      "' to a supply.")
         return
     end
 

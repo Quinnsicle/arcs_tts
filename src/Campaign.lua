@@ -188,7 +188,7 @@ function Campaign.setupClusters(player_count)
         local system_ship_zone
 
         if number_die.isDestroyed() or event_die.isDestroyed() then
-            print("Die was destroyed before it came to rest.")
+            LOG.ERROR("Die was destroyed before it came to rest.")
         else
             imperial_clusters[1] = number_die.getRotationValue()
             imperial_clusters[2] = imperial_clusters[1] == 6 and 1 or

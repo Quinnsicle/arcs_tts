@@ -13,15 +13,13 @@ function LOG.DEBUG(message)
 end
 
 function LOG.WARNING(message)
-    if Global.getVar("debug") then
-        print("[WARNING] " .. message)
-    end
+    -- If a WARNING occurs we want users to see it so they can report it
+    print("[WARNING] " .. message)
 end
 
 function LOG.ERROR(message)
-    if Global.getVar("debug") then
-        print("[ERROR] " .. message)
-    end
+    -- If an ERROR occurs we want users to see it so they can report it
+    print("[ERROR] " .. message)
 end
 
 return LOG

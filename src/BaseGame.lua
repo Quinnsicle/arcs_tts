@@ -39,14 +39,14 @@ function BaseGame.setup()
 end
 
 function BaseGame.dispersePlayerPieces()
-    -- print("disperse starting pieces")
+    LOG.INFO("disperse starting pieces")
     BaseGame.setupPlayers(Global.getTable("active_players"),
         chosen_setup_card)
 end
 
 -- H
 function BaseGame.setupBaseCourt(player_count)
-    -- print("Setup Base Court")
+    LOG.INFO("Setup Base Court")
 
     local court_zone = getObjectFromGUID(Global.getVar(
         "court_deck_zone_GUID"))
@@ -65,7 +65,7 @@ end
 
 -- I
 function BaseGame.chooseSetupCard(player_count)
-    -- print("Choose Setup Card")
+    LOG.INFO("Choose Setup Card")
 
     local player_colors = {"White", "Yellow", "Teal", "Red"}
 
@@ -168,7 +168,7 @@ end
 
 -- J
 function BaseGame.setupOutOfPlayClusters(setup_card)
-    -- print("Setup Out of Play Clusters")
+    LOG.INFO("Setup Out of Play Clusters")
     local oop_components = Global.getTable("oop_components")
     local board = getObjectFromGUID(Global.getVar("reach_board_GUID"))
 
@@ -235,7 +235,7 @@ function BaseGame.dealLeaders(player_count)
 end
 
 function BaseGame.setupPlayers(ordered_players, setup_card)
-    -- print("Setup Players")
+    LOG.INFO("Setup Players")
 
     local player_leaders = {
         [1] = "Default",
