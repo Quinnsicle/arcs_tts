@@ -2,9 +2,9 @@ local LOG = require("src/LOG")
 
 local BaseGame = {}
 
-local merchant      = require("src/Merchant")
-local supplies      = require("src/Supplies")
-local action_cards  = require("src/ActionCards")
+local merchant = require("src/Merchant")
+local supplies = require("src/Supplies")
+local action_cards = require("src/ActionCards")
 
 function BaseGame.setup()
 
@@ -67,7 +67,7 @@ end
 function BaseGame.chooseSetupCard(player_count)
     -- print("Choose Setup Card")
 
-    local player_colors = {"White", "Yellow", "Red", "Teal"}
+    local player_colors = {"White", "Yellow", "Teal", "Red"}
 
     local two_player_setup_cards = {{
         name = "FRONTIERS *For Experienced Players*",

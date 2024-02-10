@@ -179,7 +179,7 @@ function getOrderedPlayers()
         return {""}
     end
 
-    local players = {"White", "Yellow", "Red", "Teal"}
+    local players = {"White", "Yellow", "Teal", "Red"}
     local ordered_players = {}
     local i = math.random(player_count)
     local count = 0
