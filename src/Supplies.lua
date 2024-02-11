@@ -6,8 +6,6 @@ local SupplyManager = {}
 -- stack management algorithm
 -- remove from game GUID
 
-local global_vars = Global.getVar("_G")
-
 local city_row = {{0.10, 2.00, -2.00}, {0.33, 2.00, -2.00},
                   {0.56, 2.00, -2.00}, {0.79, 2.00, -2.00},
                   {1.02, 2.00, -2.00}}
@@ -16,132 +14,132 @@ local all_supplies = {
 
     -- Player Agents
     ["White Agent"] = {
-        bag = global_vars["player_pieces_GUIDs"]["White"]["agents"]
+        bag = player_pieces_GUIDs["White"]["agents"]
     },
     ["Blue Agent"] = {
-        bag = global_vars["player_pieces_GUIDs"]["Teal"]["agents"]
+        bag = player_pieces_GUIDs["Teal"]["agents"]
     },
     ["Yellow Agent"] = {
-        bag = global_vars["player_pieces_GUIDs"]["Yellow"]["agents"]
+        bag = player_pieces_GUIDs["Yellow"]["agents"]
     },
     ["Red Agent"] = {
-        bag = global_vars["player_pieces_GUIDs"]["Red"]["agents"]
+        bag = player_pieces_GUIDs["Red"]["agents"]
     },
 
     -- Player Fresh Ships
     ["White Ship (Fresh)"] = {
-        bag = global_vars["player_pieces_GUIDs"]["White"]["ships"]
+        bag = player_pieces_GUIDs["White"]["ships"]
     },
     ["Blue Ship (Fresh)"] = {
-        bag = global_vars["player_pieces_GUIDs"]["Teal"]["ships"]
+        bag = player_pieces_GUIDs["Teal"]["ships"]
     },
     ["Yellow Ship (Fresh)"] = {
-        bag = global_vars["player_pieces_GUIDs"]["Yellow"]["ships"]
+        bag = player_pieces_GUIDs["Yellow"]["ships"]
     },
     ["Red Ship (Fresh)"] = {
-        bag = global_vars["player_pieces_GUIDs"]["Red"]["ships"]
+        bag = player_pieces_GUIDs["Red"]["ships"]
     },
 
     -- Player Damaged Ships
     ["White Ship (Damaged)"] = {
-        bag = global_vars["player_pieces_GUIDs"]["White"]["ships"],
+        bag = player_pieces_GUIDs["White"]["ships"],
         state = 1
     },
     ["Blue Ship (Damaged)"] = {
-        bag = global_vars["player_pieces_GUIDs"]["Teal"]["ships"],
+        bag = player_pieces_GUIDs["Teal"]["ships"],
         state = 1
     },
     ["Yellow Ship (Damaged)"] = {
-        bag = global_vars["player_pieces_GUIDs"]["Yellow"]["ships"],
+        bag = player_pieces_GUIDs["Yellow"]["ships"],
         state = 1
     },
     ["Red Ship (Damaged)"] = {
-        bag = global_vars["player_pieces_GUIDs"]["Red"]["ships"],
+        bag = player_pieces_GUIDs["Red"]["ships"],
         state = 1
     },
 
     -- Player Damaged Ships
     ["White Starport"] = {
-        bag = global_vars["player_pieces_GUIDs"]["White"]["starports"],
+        bag = player_pieces_GUIDs["White"]["starports"],
         face_up = true
     },
     ["Blue Starport"] = {
-        bag = global_vars["player_pieces_GUIDs"]["Teal"]["starports"],
+        bag = player_pieces_GUIDs["Teal"]["starports"],
         face_up = true
     },
     ["Yellow Starport"] = {
-        bag = global_vars["player_pieces_GUIDs"]["Yellow"]["starports"],
+        bag = player_pieces_GUIDs["Yellow"]["starports"],
         face_up = true
     },
     ["Red Starport"] = {
-        bag = global_vars["player_pieces_GUIDs"]["Red"]["starports"],
+        bag = player_pieces_GUIDs["Red"]["starports"],
         face_up = true
     },
 
     -- Player Cities
     ["White City"] = {
-        origin = global_vars["player_pieces_GUIDs"]["White"]["player_board"],
+        origin = player_pieces_GUIDs["White"]["player_board"],
         face_up = true,
-        set = Global.getTable("player_pieces_GUIDs")["White"]["cities"],
+        set = player_pieces_GUIDs["White"]["cities"],
         pos = city_row
     },
     ["Blue City"] = {
-        origin = global_vars["player_pieces_GUIDs"]["Teal"]["player_board"],
+        origin = player_pieces_GUIDs["Teal"]["player_board"],
         face_up = true,
-        set = Global.getTable("player_pieces_GUIDs")["Teal"]["cities"],
+        set = player_pieces_GUIDs["Teal"]["cities"],
         pos = city_row
     },
     ["Yellow City"] = {
-        origin = global_vars["player_pieces_GUIDs"]["Yellow"]["player_board"],
+        origin = player_pieces_GUIDs["Yellow"]["player_board"],
         face_up = true,
-        set = Global.getTable("player_pieces_GUIDs")["Yellow"]["cities"],
+        set = player_pieces_GUIDs["Yellow"]["cities"],
         pos = city_row
     },
     ["Red City"] = {
-        origin = global_vars["player_pieces_GUIDs"]["Red"]["player_board"],
+        origin = player_pieces_GUIDs["Red"]["player_board"],
         face_up = true,
-        set = Global.getTable("player_pieces_GUIDs")["Red"]["cities"],
+        set = player_pieces_GUIDs["Red"]["cities"],
         pos = city_row
     },
 
     -- Resources
     ["Psionic"] = {
         pos = {0, 2, 0},
-        origin = global_vars["resources_markers_GUID"]["psionics"]
+        origin = resources_markers_GUID["psionics"]
     },
     ["Relic"] = {
         pos = {0, 2, 0},
-        origin = global_vars["resources_markers_GUID"]["relics"]
+        origin = resources_markers_GUID["relics"]
     },
     ["Weapons"] = {
         pos = {0, 2, 0},
-        origin = global_vars["resources_markers_GUID"]["weapons"]
+        origin = resources_markers_GUID["weapons"]
     },
     ["Fuel"] = {
         pos = {0, 2, 0},
-        origin = global_vars["resources_markers_GUID"]["fuel"]
+        origin = resources_markers_GUID["fuel"]
     },
     ["Material"] = {
         pos = {0, 2, 0},
-        origin = global_vars["resources_markers_GUID"]["materials"]
+        origin = resources_markers_GUID["materials"]
     },
 
     -- Campaing Components
     ["Blight"] = {
-        bag = global_vars["blight_GUID"]
+        bag = blight_GUID
     },
     ["Imperial Ship (Damaged)"] = {
-        bag = global_vars["imperial_ships_GUID"],
+        bag = imperial_ships_GUID,
         state = 1
     },
     ["Imperial Ship (Fresh)"] = {
-        bag = global_vars["imperial_ships_GUID"]
+        bag = imperial_ships_GUID
     },
     ["Free City"] = {
-        bag = global_vars["free_cities_GUID"]
+        bag = free_cities_GUID
     },
     ["Free Starport"] = {
-        bag = global_vars["free_starports_GUID"]
+        bag = free_starports_GUID
     },
 
     -- Miscallaneous
