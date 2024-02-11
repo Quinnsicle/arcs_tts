@@ -1,7 +1,7 @@
 ### Graphics
-- [ ] Blight supply token and counter
-- [ ] Free Cities supply token and counter
-- [ ] Free Starports supply token and counter
+- [x] Blight supply token and counter
+- [x] Free Cities supply token
+- [x] Free Starports supply token
 - [x] Update imperial ship model
 - [x] Update imperial ship supply token
 - [x] Counters for trophies and captives
