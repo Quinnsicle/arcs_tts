@@ -262,6 +262,10 @@ function SupplyManager.addMenuToObject(object)
     if object.getName() ~= "" and all_supplies[object.getName()] then
         object.addContextMenuItem("Return to supply",
             SupplyManager.returnFromMenu)
+        object.addContextMenuItem("Take as trophy",
+            SupplyManager.trophyFromMenu)
+        object.addContextMenuItem("Take as captive",
+            SupplyManager.captiveFromMenu)
         if object.type == "Card" then
             object.addContextMenuItem("Card to deck bottom",
                 SupplyManager.buryFromMenu)
@@ -273,12 +277,46 @@ function SupplyManager.returnFromMenu(player_color, position, object)
     for _, i in pairs(Player.getPlayers()) do
         if i.color == player_color then
             for ct, k in ipairs(i.getSelectedObjects()) do
-                Wait.frames(function()
+                Wait.time(function()
                     SupplyManager.returnObject(k)
-                end, ct * 2)
+                end, (ct-1) * 0.5)
             end
         end
     end
+end
+
+function SupplyManager.captiveFromMenu(player_color, position, object)
+    local captive_zone = getObjectFromGUID(player_pieces_GUIDs[player_color]["captives_zone"])
+    for _, i in pairs(Player.getPlayers()) do
+        if i.color == player_color then
+            for ct, k in ipairs(i.getSelectedObjects()) do
+                Wait.time(function()
+                    SupplyManager.addToZone(captive_zone, k)
+                end, (ct-1) * .5)
+            end
+        end
+    end
+end
+
+function SupplyManager.trophyFromMenu(player_color, position, object)
+    local captive_zone = getObjectFromGUID(player_pieces_GUIDs[player_color]["trophies_zone"])
+    for _, i in pairs(Player.getPlayers()) do
+        if i.color == player_color then
+            for ct, k in ipairs(i.getSelectedObjects()) do
+                Wait.time(function()
+                    SupplyManager.addToZone(captive_zone, k)
+                end, (ct-1) * .5)
+            end
+        end
+    end
+end
+
+function SupplyManager.addToZone(zone, object)
+    local rand_x = (zone.getScale().x*0.18) * math.random() * (math.random(2)==1 and 1 or -1)
+    local rand_y = 1 + 3 * math.random(100)/100
+    local rand_z = (zone.getScale().z*0.18) * math.random() * (math.random(2)==1 and 1 or -1)
+    local pos = zone.positionToWorld({rand_x, rand_y, rand_z})
+    object.setPositionSmooth(pos)
 end
 
 function SupplyManager.buryFromMenu(player_color, position, object)
