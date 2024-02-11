@@ -1,7 +1,7 @@
 {
   "SaveName": "Arcs Scripted (WIP)",
-  "EpochTime": 1707610046,
-  "Date": "2/10/2024 7:07:26 PM",
+  "EpochTime": 1707610211,
+  "Date": "2/10/2024 7:10:11 PM",
   "VersionNumber": "v13.2.2",
   "GameMode": "Arcs",
   "GameType": "Game",
@@ -66747,7 +66747,7 @@
         "scaleY": 1.35,
         "scaleZ": 1.35
       },
-      "Nickname": "",
+      "Nickname": "Free City Supply",
       "Description": "",
       "GMNotes": "",
       "AltLookAngle": {
@@ -66919,7 +66919,7 @@
         "scaleY": 1.35,
         "scaleZ": 1.35
       },
-      "Nickname": "",
+      "Nickname": "Free Starport Supply",
       "Description": "",
       "GMNotes": "",
       "AltLookAngle": {
