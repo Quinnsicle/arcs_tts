@@ -286,37 +286,35 @@ function SupplyManager.returnFromMenu(player_color, position, object)
 end
 
 function SupplyManager.captiveFromMenu(player_color, position, object)
-    local captive_zone = getObjectFromGUID(player_pieces_GUIDs[player_color]["captives_zone"])
-    for _, i in pairs(Player.getPlayers()) do
-        if i.color == player_color then
-            for ct, k in ipairs(i.getSelectedObjects()) do
-                Wait.time(function()
-                    SupplyManager.addToZone(captive_zone, k)
-                end, (ct-1) * .5)
-            end
-        end
-    end
+    local zone = getObjectFromGUID(player_pieces_GUIDs[player_color]["captives_zone"])
+    SupplyManager.addToZone(player_color, zone, object)
 end
 
 function SupplyManager.trophyFromMenu(player_color, position, object)
-    local captive_zone = getObjectFromGUID(player_pieces_GUIDs[player_color]["trophies_zone"])
+    local zone = getObjectFromGUID(player_pieces_GUIDs[player_color]["trophies_zone"])
+    SupplyManager.addToZone(player_color, zone, object)
+end
+
+function SupplyManager.addToZone(player_color, zone, object)
+    local area = zone.getScale()*0.18
+    local sectors = {
+        [0] = Vector({1,0,1}),
+        [1] = Vector({-1,0,1}),
+        [2] = Vector({-1,0,-1}),
+        [3] = Vector({1,0,-1})
+    }
     for _, i in pairs(Player.getPlayers()) do
         if i.color == player_color then
             for ct, k in ipairs(i.getSelectedObjects()) do
+                local pos = Vector({area.x * math.random(),0,area.z * math.random()})
+                pos = pos * sectors[ct%4]
+                pos = zone.positionToWorld(pos)
                 Wait.time(function()
-                    SupplyManager.addToZone(captive_zone, k)
+                    k.setPositionSmooth(pos)
                 end, (ct-1) * .5)
             end
         end
     end
-end
-
-function SupplyManager.addToZone(zone, object)
-    local rand_x = (zone.getScale().x*0.18) * math.random() * (math.random(2)==1 and 1 or -1)
-    local rand_y = 1 + 3 * math.random(100)/100
-    local rand_z = (zone.getScale().z*0.18) * math.random() * (math.random(2)==1 and 1 or -1)
-    local pos = zone.positionToWorld({rand_x, rand_y, rand_z})
-    object.setPositionSmooth(pos)
 end
 
 function SupplyManager.buryFromMenu(player_color, position, object)
