@@ -1,3 +1,4 @@
+require("src/GUIDs")
 local LOG = require("src/LOG")
 
 -- Create counters that can be attached to containers or zones to count the objects contained inside.
@@ -6,154 +7,154 @@ local ObjectCounters = {}
 
 local has_counter = {}
 local the_counters = {{
-    container_GUID = Global.getVar("player_pieces_GUIDs")["White"]["ships"],
+    container_GUID = player_pieces_GUIDs["White"]["ships"],
     position = {0.5, 0.06, 0.03},
     shadow = {0.03, 0.06, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("player_pieces_GUIDs")["White"]["agents"],
+    container_GUID = player_pieces_GUIDs["White"]["agents"],
     position = {0.5, 0.06, 0.03},
     shadow = {0.03, 0.06, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("player_pieces_GUIDs")["White"]["starports"],
+    container_GUID = player_pieces_GUIDs["White"]["starports"],
     position = {0.5, 0.06, 0.03},
     shadow = {0.03, 0.06, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("player_pieces_GUIDs")["White"]["trophies_zone"],
+    container_GUID = player_pieces_GUIDs["White"]["trophies_zone"],
     position = {0.40, -0.50, -0.35},
     shadow = {0.03, -0.50, 0.02},
     scale = {0.50, 1.00, 0.50},
     font_size = 175,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("player_pieces_GUIDs")["White"]["captives_zone"],
+    container_GUID = player_pieces_GUIDs["White"]["captives_zone"],
     position = {0.35, -0.50, -0.35},
     shadow = {0.03, -0.50, 0.02},
     scale = {0.55, 1.00, 0.50},
     font_size = 175,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("player_pieces_GUIDs")["Yellow"]["ships"],
+    container_GUID = player_pieces_GUIDs["Yellow"]["ships"],
     position = {0.5, 0.06, 0.03},
     shadow = {0.03, 0.06, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("player_pieces_GUIDs")["Yellow"]["agents"],
+    container_GUID = player_pieces_GUIDs["Yellow"]["agents"],
     position = {0.5, 0.06, 0.03},
     shadow = {0.03, 0.06, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("player_pieces_GUIDs")["Yellow"]["starports"],
+    container_GUID = player_pieces_GUIDs["Yellow"]["starports"],
     position = {0.5, 0.06, 0.03},
     shadow = {0.03, 0.06, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("player_pieces_GUIDs")["Yellow"]["trophies_zone"],
+    container_GUID = player_pieces_GUIDs["Yellow"]["trophies_zone"],
     position = {0.40, -0.50, -0.35},
     shadow = {0.03, -0.50, 0.02},
     scale = {0.50, 1.00, 0.50},
     font_size = 175,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("player_pieces_GUIDs")["Yellow"]["captives_zone"],
+    container_GUID = player_pieces_GUIDs["Yellow"]["captives_zone"],
     position = {0.35, -0.50, -0.35},
     shadow = {0.03, -0.50, 0.02},
     scale = {0.55, 1.00, 0.50},
     font_size = 175,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("player_pieces_GUIDs")["Red"]["ships"],
+    container_GUID = player_pieces_GUIDs["Red"]["ships"],
     position = {0.5, 0.06, 0.03},
     shadow = {0.03, 0.06, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("player_pieces_GUIDs")["Red"]["agents"],
+    container_GUID = player_pieces_GUIDs["Red"]["agents"],
     position = {0.5, 0.06, 0.03},
     shadow = {0.03, 0.06, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("player_pieces_GUIDs")["Red"]["starports"],
+    container_GUID = player_pieces_GUIDs["Red"]["starports"],
     position = {0.5, 0.06, 0.03},
     shadow = {0.03, 0.06, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("player_pieces_GUIDs")["Red"]["trophies_zone"],
+    container_GUID = player_pieces_GUIDs["Red"]["trophies_zone"],
     position = {0.40, -0.50, -0.35},
     shadow = {0.03, -0.50, 0.02},
     scale = {0.50, 1.00, 0.50},
     font_size = 175,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("player_pieces_GUIDs")["Red"]["captives_zone"],
+    container_GUID = player_pieces_GUIDs["Red"]["captives_zone"],
     position = {0.35, -0.50, -0.35},
     shadow = {0.03, -0.50, 0.02},
     scale = {0.55, 1.00, 0.50},
     font_size = 175,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("player_pieces_GUIDs")["Teal"]["ships"],
+    container_GUID = player_pieces_GUIDs["Teal"]["ships"],
     position = {0.5, 0.06, 0.03},
     shadow = {0.03, 0.06, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("player_pieces_GUIDs")["Teal"]["agents"],
+    container_GUID = player_pieces_GUIDs["Teal"]["agents"],
     position = {0.5, 0.06, 0.03},
     shadow = {0.03, 0.06, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("player_pieces_GUIDs")["Teal"]["starports"],
+    container_GUID = player_pieces_GUIDs["Teal"]["starports"],
     position = {0.5, 0.06, 0.03},
     shadow = {0.03, 0.06, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("player_pieces_GUIDs")["Teal"]["trophies_zone"],
+    container_GUID = player_pieces_GUIDs["Teal"]["trophies_zone"],
     position = {0.40, -0.50, -0.35},
     shadow = {0.03, -0.50, 0.02},
     scale = {0.50, 1.00, 0.50},
     font_size = 175,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("player_pieces_GUIDs")["Teal"]["captives_zone"],
+    container_GUID = player_pieces_GUIDs["Teal"]["captives_zone"],
     position = {0.35, -0.50, -0.35},
     shadow = {0.03, -0.50, 0.02},
     scale = {0.55, 1.00, 0.50},
     font_size = 175,
     font_color = {1, 1, 1}
 }, {
-    container_GUID = Global.getVar("imperial_ships_GUID"),
+    container_GUID = imperial_ships_GUID,
     position = {0.5, 0.06, 0.03},
     shadow = {0.03, 0.06, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {0.8, 0.58, 0.27}
 }, {
-    container_GUID = Global.getVar("blight_GUID"),
+    container_GUID = blight_GUID,
     position = {0.5, 0.06, 0.03},
     shadow = {0.03, 0.06, 0.02},
     scale = {1, 1, 1},
