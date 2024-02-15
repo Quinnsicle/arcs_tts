@@ -37,12 +37,20 @@ ArcsPlayer = {
     }}
 }
 
-function ArcsPlayer:take_resource(name, slot_num)
+function ArcsPlayer:take_named_resource(name, slot_num)
     self.board = getObjectFromGUID(player_boards[self.color])
     local board_pos = self.board.getPosition()
     local slot_pos = self.resource_slot_pos[slot_num]
 
-    resource:take(name, self.board.positionToWorld(slot_pos))
+    resource:takeNamed(name, self.board.positionToWorld(slot_pos))
+end
+
+function ArcsPlayer:take_system_resource(cluster, system, slot_num)
+    self.board = getObjectFromGUID(player_boards[self.color])
+    local board_pos = self.board.getPosition()
+    local slot_pos = self.resource_slot_pos[slot_num]
+
+    resource:takeSystem(cluster, system, self.board.positionToWorld(slot_pos))
 end
 
 return ArcsPlayer

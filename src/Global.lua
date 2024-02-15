@@ -869,8 +869,7 @@ starting_pieces = {
         },
         D = {
             ships = 2
-        },
-        resources = {"psionics", "weapons"}
+        }
     },
     ["059b13"] = { -- Elder
         A = {
