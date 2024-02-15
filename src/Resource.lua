@@ -41,13 +41,6 @@ local Resource = {
             ["b"] = "fuel", 
             ["c"] = "psionic"
         }
-    },
-    merchant_pos ={
-        material = {-0.76, 1.00, -0.83},
-        fuel = {-0.76, 1.00, -0.62},
-        weapon = {-0.76, 1.00, 0.05},
-        relic = {-0.76, 1.00, 0.43},
-        psionic = {-0.76, 1.00, 0.83}
     }
 }
 
