@@ -1,11 +1,10 @@
 local LOG = require("src/LOG")
-local merchant = require("src/Merchant")
 
 local Campaign = {}
 
-local merchant = require("src/Merchant")
 local supplies = require("src/Supplies")
 local action_cards = require("src/ActionCards")
+local resource = require("src/Resource")
 
 function Campaign.setup()
 
@@ -288,7 +287,7 @@ function Campaign.setupClusters(player_count)
             -- Merchant
             if (player_count == 2) then
                 LOG.INFO("imperial merchant setup")
-                merchant.setup(imperial_clusters)
+                resource:merchantSetup(imperial_clusters)
             end
         end
     end, function() -- Condition function

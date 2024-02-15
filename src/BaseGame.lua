@@ -3,7 +3,6 @@ local LOG = require("src/LOG")
 local BaseGame = {}
 
 local ArcsPlayer = require("src/ArcsPlayer")
-local merchant = require("src/Merchant")
 local supplies = require("src/Supplies")
 local action_cards = require("src/ActionCards")
 local resource = require("src/Resource")
@@ -25,7 +24,7 @@ function BaseGame.setup()
     chosen_setup_card = BaseGame.chooseSetupCard(#active_players)
     BaseGame.setupOutOfPlayClusters(chosen_setup_card)
     if (#active_players == 2) then
-        merchant.setup(chosen_setup_card.out_of_play_clusters)
+        resource:merchantSetup(chosen_setup_card.out_of_play_clusters)
     end
 
     if (Global.getVar("with_leaders")) then
