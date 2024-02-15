@@ -51,7 +51,7 @@ local Resource = {
     }
 }
 
-function Resource:takeNamed(name, pos)
+function Resource:take(name, pos)
     LOG.DEBUG("name:" .. name)
     self.supplies[name].takeObject({
         position = pos,
@@ -59,13 +59,8 @@ function Resource:takeNamed(name, pos)
     })
 end
 
-function Resource:takeSystem(cluster, system, pos)
-    LOG.DEBUG("cluster:" .. cluster)
-    LOG.DEBUG("system:" .. system)
-    self.supplies[self.clusters[cluster][system]].takeObject({
-        position = pos,
-        smooth = true
-    })
+function Resource:getSystem(cluster, system)
+    return self.clusters[cluster][system]
 end
 
 function Resource:merchantSetup(clusters)
