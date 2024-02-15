@@ -1,8 +1,8 @@
 require("src/GUIDs")
 local LOG = require("src/LOG")
+local resource = require("src/Resource")
 
 local Merchant = {
-    resource = require("src/Resource"),
     ambition_pos = {
         material = {-0.76, 1.00, -0.83},
         fuel = {-0.76, 1.00, -0.62},
@@ -21,9 +21,9 @@ function Merchant:setup(clusters)
     }
     for _, cluster in pairs(clusters) do
         for _, system in pairs(ABC) do
-            local resource = self.resource:getSystem(cluster, system)
-            local pos = board.positionToWorld(self.ambition_pos[resource])
-            self.resource:take(resource, pos).addTag("Merchant")
+            local merch_resource = resource:getSystem(cluster, system)
+            local pos = board.positionToWorld(self.ambition_pos[merch_resource])
+            resource:take(merch_resource, pos).addTag("Merchant")
         end
     end
 end
