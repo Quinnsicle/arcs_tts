@@ -347,7 +347,6 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
         player.color = player_color
 
         local starting_resources = pieces["resources"]
-        --LOG.DEBUG("starting_resource: " .. starting_resources[1])
 
         if not (starting_resources) then
             starting_resources = {
@@ -355,6 +354,8 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
                 resource:getSystem(ABC["B"]["cluster"], ABC["B"]["system"])
             }
         end
+
+        LOG.DEBUG("starting_resource: " .. starting_resources[1])
 
         player:take_resource(starting_resources[1], 1)
         player:take_resource(starting_resources[2], 2)
