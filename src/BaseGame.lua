@@ -25,7 +25,6 @@ function BaseGame.setup()
     chosen_setup_card = BaseGame.chooseSetupCard(#active_players)
     BaseGame.setupOutOfPlayClusters(chosen_setup_card)
     if (#active_players == 2) then
-        log(merchant)
         merchant:setup(chosen_setup_card.out_of_play_clusters)
     end
 
