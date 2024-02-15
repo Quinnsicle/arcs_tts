@@ -53,7 +53,7 @@ local Resource = {
 
 function Resource:take(name, pos)
     LOG.DEBUG("name:" .. name)
-    self.supplies[name].takeObject({
+    return self.supplies[name].takeObject({
         position = pos,
         smooth = true
     })
@@ -61,19 +61,6 @@ end
 
 function Resource:getSystem(cluster, system)
     return self.clusters[cluster][system]
-end
-
-function Resource:merchantSetup(clusters)
-    local board = getObjectFromGUID(reach_board_GUID)
-    for _, cluster in pairs(clusters) do
-        for _, resource in pairs(self.clusters[cluster]) do
-            local pos = board.positionToWorld(self.merchant_pos[resource])
-            self.supplies[resource].takeObject({
-                position = pos,
-                smooth = true
-            }).addTag("Merchant")
-        end
-    end
 end
 
 return Resource
