@@ -236,7 +236,7 @@ chapter_zone_GUID = "2d2c49"
 
 campaign_court_GUID = "fb55bf"
 imperial_council_GUID = "89ddf3"
-laws_GUID = "d51875"
+laws_GUID = "f0362b"
 guild_envoys_depart_GUID = "ba6fc8"
 govern_GUID = "df60d0"
 regents_GUID = "238ef1"
