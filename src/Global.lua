@@ -152,7 +152,8 @@ function tryObjectEnterContainer(container, object)
     if object.getStateId() == 2 then
         object.setState(1)
     end
-    return container.hasMatchingTag(object)
+    log(container)
+    return container.hasMatchingTag(object) or not container.hasAnyTag()
 end
 
 ----------------------------------------------------
