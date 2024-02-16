@@ -9,15 +9,55 @@ local Resource = {
         fuel = getObjectFromGUID(resources_GUID["fuel"]),
         material = getObjectFromGUID(resources_GUID["materials"])
 
+    },
+    clusters = {
+        {
+            ["a"] = "weapon", 
+            ["b"] = "fuel", 
+            ["c"] = "material"
+        },
+        {
+            ["a"] = "psionic", 
+            ["b"] = "weapon", 
+            ["c"] = "relic"
+        },
+        {
+            ["a"] = "material", 
+            ["b"] = "fuel", 
+            ["c"] = "weapon"
+        },
+        {
+            ["a"] = "relic", 
+            ["b"] = "fuel", 
+            ["c"] = "material"
+        },
+        {
+            ["a"] = "weapon", 
+            ["b"] = "relic", 
+            ["c"] = "psionic"
+        },
+        {
+            ["a"] = "material", 
+            ["b"] = "fuel", 
+            ["c"] = "psionic"
+        }
     }
 }
 
 function Resource:take(name, pos)
     LOG.DEBUG("name:" .. name)
-    self.supplies[name].takeObject({
+    return self.supplies[name].takeObject({
         position = pos,
         smooth = true
     })
+end
+
+function Resource:name_from_cluster(cluster, system)
+    if (system) then
+        return self.clusters[cluster][system]
+    else
+        return self.clusters[cluster]
+    end
 end
 
 return Resource
