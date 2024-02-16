@@ -1105,6 +1105,10 @@ starting_pieces = {
 function onLoad()
     Counters.setup()
 
+    for _, obj in pairs(getObjectsWithTag("City")) do
+        Supplies.addMenuToObject(obj)
+    end
+
     for _, obj in pairs(getObjectsWithTag("Noninteractable")) do
         obj.interactable = false
     end
