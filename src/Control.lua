@@ -318,8 +318,7 @@ function setStartupButtons()
     self.editButton(setupCampaignGame_params)
     self.editButton(showControls_params)
 
-    local with_split_discard = Global.getVar("with_split_discard")
-    if (with_split_discard) then
+    if (ActionCards.isFUDActive()) then
         self.editButton(splitDiscardFACEUP_params)
     else
         self.editButton(splitDiscardFACEDOWN_params)

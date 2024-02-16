@@ -11,7 +11,6 @@ debug_player_count = 3
 
 with_more_to_explore = false
 with_leaders = false
-with_split_discard = false
 
 oop_components = {{
     Sector = {
