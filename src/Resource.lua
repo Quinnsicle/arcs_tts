@@ -52,8 +52,12 @@ function Resource:take(name, pos)
     })
 end
 
-function Resource:getSystem(cluster, system)
-    return self.clusters[cluster][system]
+function Resource:name_from_cluster(cluster, system)
+    if (system) then
+        return self.clusters[cluster][system]
+    else
+        return self.clusters[cluster]
+    end
 end
 
 return Resource

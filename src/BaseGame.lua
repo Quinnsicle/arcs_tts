@@ -350,8 +350,8 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
 
         if not (starting_resources) then
             starting_resources = {
-                resource:getSystem(ABC["A"]["cluster"], ABC["A"]["system"]),
-                resource:getSystem(ABC["B"]["cluster"], ABC["B"]["system"])
+                resource:name_from_cluster(ABC["A"]["cluster"], ABC["A"]["system"]),
+                resource:name_from_cluster(ABC["B"]["cluster"], ABC["B"]["system"])
             }
         end
 

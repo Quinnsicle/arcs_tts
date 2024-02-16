@@ -14,14 +14,8 @@ local Merchant = {
 
 function Merchant:setup(clusters)
     local board = getObjectFromGUID(reach_board_GUID)
-    local ABC = {
-        "a",
-        "b",
-        "c"
-    }
     for _, cluster in pairs(clusters) do
-        for _, system in pairs(ABC) do
-            local merch_resource = resource:getSystem(cluster, system)
+        for _, merch_resource in pairs(resource:name_from_cluster(cluster)) do
             local pos = board.positionToWorld(self.ambition_pos[merch_resource])
             resource:take(merch_resource, pos).addTag("Merchant")
         end
