@@ -3,10 +3,10 @@ local LOG = require("src/LOG")
 local BaseGame = {}
 
 local ArcsPlayer = require("src/ArcsPlayer")
-local merchant = require("src/Merchant")
 local supplies = require("src/Supplies")
 local action_cards = require("src/ActionCards")
 local resource = require("src/Resource")
+local merchant = require("src/Merchant")
 
 function BaseGame.setup()
 
@@ -25,7 +25,7 @@ function BaseGame.setup()
     chosen_setup_card = BaseGame.chooseSetupCard(#active_players)
     BaseGame.setupOutOfPlayClusters(chosen_setup_card)
     if (#active_players == 2) then
-        merchant.setup(chosen_setup_card.out_of_play_clusters)
+        merchant:setup(chosen_setup_card.out_of_play_clusters)
     end
 
     if (Global.getVar("with_leaders")) then
@@ -347,10 +347,19 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
         player.color = player_color
 
         local starting_resources = pieces["resources"]
+
+        if not (starting_resources) then
+            starting_resources = {
+                resource:name_from_cluster(ABC["A"]["cluster"], ABC["A"]["system"]),
+                resource:name_from_cluster(ABC["B"]["cluster"], ABC["B"]["system"])
+            }
+        end
+
         LOG.DEBUG("starting_resource: " .. starting_resources[1])
 
         player:take_resource(starting_resources[1], 1)
         player:take_resource(starting_resources[2], 2)
+
     end
 end
 

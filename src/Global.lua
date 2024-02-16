@@ -250,45 +250,6 @@ function dealGuildCards(qty)
 
 end
 
--- params = {"psionics", "relics",  "weapons", "fuel", "materials"}
-function merchantSetup(params)
-
-    for _, resource in ipairs(params) do
-        local zone_pos
-
-        if (resource == "materials") then
-            local ambition_zone = getObjectFromGUID(
-                merchant_GUID["tycoon"])
-            zone_pos = ambition_zone.getPosition()
-            zone_pos.z = zone_pos.z - 0.5
-        elseif (resource == "fuel") then
-            local ambition_zone = getObjectFromGUID(
-                merchant_GUID["tycoon"])
-            zone_pos = ambition_zone.getPosition()
-            zone_pos.z = zone_pos.z + 0.8
-        elseif (resource == "weapons") then
-            local ambition_zone = getObjectFromGUID(
-                merchant_GUID["warlord"])
-            zone_pos = ambition_zone.getPosition()
-        elseif (resource == "relics") then
-            local ambition_zone = getObjectFromGUID(
-                merchant_GUID["keeper"])
-            zone_pos = ambition_zone.getPosition()
-        elseif (resource == "psionics") then
-            local ambition_zone = getObjectFromGUID(
-                merchant_GUID["empath"])
-            zone_pos = ambition_zone.getPosition()
-        end
-
-        local token = getObjectFromGUID(resources_GUID[resource])
-
-        token.takeObject({
-            position = {zone_pos.x, zone_pos.y, zone_pos.z}
-        })
-
-    end
-end
-
 ----------------------------------------------------
 
 starting_locations = {
@@ -869,8 +830,7 @@ starting_pieces = {
         },
         D = {
             ships = 2
-        },
-        resources = {"psionics", "weapons"}
+        }
     },
     ["059b13"] = { -- Elder
         A = {

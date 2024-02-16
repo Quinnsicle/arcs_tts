@@ -222,13 +222,6 @@ resources_markers_GUID = {
     materials = "eb1cba"
 }
 
-merchant_tycoon_GUID = "612aa9"
-merchant_GUID = {
-    tycoon = "612aa9",
-    warlord = "07c555",
-    keeper = "975e47",
-    empath = "99b2ba"
-}
 ----------------------------------------------------
 -- campaign
 ----------------------------------------------------
