@@ -5,7 +5,7 @@ available_colors = {"White", "Yellow", "Red", "Teal"}
 ----------------------------------------------------
 -- [DEBUG] REMEMBER TO SET TO FALSE BEFORE RELEASE
 ----------------------------------------------------
-debug = false
+debug = true
 debug_player_count = 3
 ----------------------------------------------------
 
@@ -118,7 +118,7 @@ function onPlayerConnect(player)
 end
 
 function onPlayerDisconnect(player)
-    table.insert(available_colors, 1, player.color)
+    -- table.insert(available_colors, 1, player.color)
 end
 
 function onObjectEnterZone(zone, object)
@@ -152,7 +152,14 @@ function tryObjectEnterContainer(container, object)
     if object.getStateId() == 2 then
         object.setState(1)
     end
-    return container.hasMatchingTag(object)
+
+    if container.hasTag("Ship") or container.hasTag("City") or
+        container.hasTag("Starport") or container.hasTag("Blight") or
+        container.hasTag("Agent") then
+        return container.hasMatchingTag(object)
+    end
+
+    return true
 end
 
 ----------------------------------------------------
