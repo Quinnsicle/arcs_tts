@@ -118,7 +118,7 @@ function onPlayerConnect(player)
 end
 
 function onPlayerDisconnect(player)
-    table.insert(available_colors, 1, player.color)
+    -- table.insert(available_colors, 1, player.color)
 end
 
 function onObjectEnterZone(zone, object)
