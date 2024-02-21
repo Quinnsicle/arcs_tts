@@ -17,8 +17,8 @@ local blue = {0.4, 0.6, 0.6}
 -- Row 5 - {x, y, 1.15}
 
 -- Button Columns
--- Full Row   - {0, y, z} width = 820
--- Left Side  - {-0.45, y, z} width = 440
+-- Full Row   - {0, y, z}
+-- Left Side  - {-0.45, y, z}
 -- Right Side - {0.45, y, z}
 
 -- Dimension
