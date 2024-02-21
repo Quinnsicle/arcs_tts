@@ -16,7 +16,7 @@ function InitiativeMarker.addContextMenu()
         initiative.addContextMenuItem("Seize Initiative", InitiativeMarker.seize)
     elseif (initiative_seized) then
         initiative_seized.addContextMenuItem("Unseize Initiative", InitiativeMarker.unseize)
-        initiative_seized.isetLock(true)
+        initiative_seized.setLock(true)
     end
 end
 

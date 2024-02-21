@@ -105,6 +105,7 @@ is_player_setup = {
 ----------------------------------------------------
 local Supplies = require("src/Supplies")
 local Counters = require("src/Counters")
+local Initiative = require("src/InitiativeMarker")
 
 function assignPlayerToAvailableColor(player, color)
     local color = table.remove(available_colors, 1)
@@ -126,6 +127,7 @@ function onObjectEnterZone(zone, object)
 end
 
 function onObjectSpawn(object)
+    Initiative.addContextMenu()
     Supplies.addMenuToObject(object)
 end
 
@@ -1109,7 +1111,9 @@ starting_pieces = {
 ----------------------------------------------------
 
 function onLoad()
+    
     Counters.setup()
+    Initiative.addContextMenu()
 
     for _, obj in pairs(getObjectsWithTag("City")) do
         Supplies.addMenuToObject(obj)
