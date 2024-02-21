@@ -2,6 +2,7 @@ local Campaign = require("src/Campaign")
 local BaseGame = require("src/BaseGame")
 local ActionCards = require("src/ActionCards")
 local AmbitionMarkers = require("src/AmbitionMarkers")
+local Initiative = require("src/InitiativeMarker")
 
 control_GUID = Global.getVar("control_GUID")
 
@@ -417,12 +418,12 @@ function cleanupCards()
 
     ActionCards.clearPlayed()
     AmbitionMarkers.resetZeroMarker()
+    Initiative.unseize()
 
 end
 
 function takeInitiative(objectButtonClicked, playerColorClicked)
 
-    broadcastToAll(playerColorClicked .. " takes initiative")
-    Global.call("takeInitiative", playerColorClicked)
+    Initiative.take(playerColorClicked)
 
 end

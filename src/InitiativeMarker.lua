@@ -33,8 +33,10 @@ function InitiativeMarker.take(player_color)
     local player_board = getObjectFromGUID(player_pieces_GUIDs[player_color]["player_board"])
     local pos = player_board.positionToWorld(initiative_pos)
 
-    initiative.setPositionSmooth(pos)
-    broadcastToAll(player_color .. " takes initiative",player_color)
+    if (initiative) then
+        initiative.setPositionSmooth(pos)
+        broadcastToAll(player_color .. " takes initiative",player_color)
+    end
 
 end
 
@@ -53,9 +55,5 @@ function InitiativeMarker.seize(player_color)
     end
 
 end
-
--- Begin Object Code --
-function onLoad() InitiativeMarker.addContextMenu() end
--- End Object Code --
 
 return InitiativeMarker
