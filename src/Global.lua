@@ -127,7 +127,7 @@ function onObjectEnterZone(zone, object)
 end
 
 function onObjectSpawn(object)
-    Initiative.addContextMenu()
+    Initiative.add_menu()
     Supplies.addMenuToObject(object)
 end
 
@@ -1111,9 +1111,9 @@ starting_pieces = {
 ----------------------------------------------------
 
 function onLoad()
-    
+
     Counters.setup()
-    Initiative.addContextMenu()
+    Initiative.add_menu()
 
     for _, obj in pairs(getObjectsWithTag("City")) do
         Supplies.addMenuToObject(obj)

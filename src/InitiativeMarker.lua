@@ -8,7 +8,7 @@ local initiative_pos = {-2,0,0}
 -- If initiative marker exists then initiative is unseaized
 -- If seized initiative marker exists then initiative is seized
 
-function InitiativeMarker.addContextMenu()
+function InitiativeMarker.add_menu()
     local initiative = getObjectFromGUID(initiative_GUID)
     local initiative_seized = getObjectFromGUID(seized_initiative_GUID)
     if (initiative) then
