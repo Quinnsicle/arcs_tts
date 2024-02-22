@@ -99,8 +99,8 @@ player_pieces_GUIDs = {
     },
     ["Teal"] = {
         player_board = "ae512a",
-        resource = {"79b799", "f3da7f"},
-        city = {"79b799", "f3da7f"},
+        resource = {"f3da7f", "f3da7f"},
+        city = {"f3da7f", "f3da7f"},
         ships = "2da385",
         starports = "7e625d",
         agents = "791097",
