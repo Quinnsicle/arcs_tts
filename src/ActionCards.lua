@@ -13,6 +13,10 @@ local FDD_rot = Vector({0.00, 90.00, 180.00})
 
 -- Face Up Discard
 local FUD_marker = getObjectFromGUID(FUDiscard_marker_GUID)
+local FUD_marker_pos = {
+    [true] = Vector({-19.93, 0.96, -2.31}),
+    [false] = Vector({-19.93, -1.00, -2.31})
+}
 local FUD_pos = Vector({-4.00, 0.00, 0.00})
 local FUD_rot = Vector({0.00, 90.00, 0.00})
 local FUD_offset = Vector({0.50, 0.50, 0.00})
@@ -44,10 +48,7 @@ end
 
 function ActionCards.toggleFUD()
     is_FUD_active = not is_FUD_active
-    local pos = is_FUD_active and Vector({0, 5, 0}) or
-                    Vector({0, -5, 0});
-    pos = pos + FUD_marker.getPosition()
-    FUD_marker.setPosition(pos)
+    FUD_marker.setPosition(FUD_marker_pos[is_FUD_active])
     return is_FUD_active
 end
 
