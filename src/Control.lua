@@ -2,11 +2,30 @@ local Campaign = require("src/Campaign")
 local BaseGame = require("src/BaseGame")
 local ActionCards = require("src/ActionCards")
 local AmbitionMarkers = require("src/AmbitionMarkers")
+local Initiative = require("src/InitiativeMarker")
 
 control_GUID = Global.getVar("control_GUID")
 
 -- font_color = {0.8, 0.58, 0.27}, GOLD
 local blue = {0.4, 0.6, 0.6}
+
+-- Button Rows
+-- Row 1 - {x, y, -1.17}
+-- Row 2 - {x, y, -0.59}
+-- Row 3 - {x, y, -0.01}
+-- Row 4 - {x, y, 0.57}
+-- Row 5 - {x, y, 1.15}
+
+-- Button Columns
+-- Full Col   - {0.00, y, z}
+-- Left Side  - {-0.45, y, z}
+-- Right Side - {0.45, y, z}
+
+-- Dimension
+-- Height - height = 260
+-- Full Col - width = 820
+-- Half Col - width = 440
+
 
 local toggleLeadersWITHOUT_params = {
     index = 0,
@@ -180,10 +199,25 @@ local cleanupCards_params = {
 local takeInitiative_params = {
     index = 3,
     height = 260,
-    width = 820,
+    width = 440,
     click_function = "takeInitiative",
-    label = "Take Initiative",
+    label = "Take\nInitiative",
     tooltip = "",
+    position = {-0.45, 0.5, 0.57},
+    font_size = 90,
+    color = {0.4, 0.6, 0.6},
+    hover_color = {0.34, 0.38, 0.38}
+}
+
+local seizeInitiative_params = {
+    index = 6,
+    height = 260,
+    width = 440,
+    click_function = "seizeInitiative",
+    function_owner = self,
+    label = "Seize\nInitiative",
+    tooltip = "",
+    position = {0.45, 0.5, 0.57},
     font_size = 90,
     color = {0.4, 0.6, 0.6},
     hover_color = {0.34, 0.38, 0.38}
@@ -197,6 +231,14 @@ function onload()
     self.createButton(setupCampaignGame_params)
     self.createButton(showControls_params)
     self.createButton(splitDiscardFACEUP_params)
+    self.createButton({
+        index = 6,
+        height = 1,
+        width = 1,
+        click_function = "doNothing",
+        label = "",
+        tooltip = ""
+    })
     -- toggle split discard since the rulebook default is face down
     toggleSplitDiscard()
 end
@@ -380,6 +422,7 @@ function setControlButtons()
     self.editButton(dealHand_params)
     self.editButton(cleanupCards_params)
     self.editButton(takeInitiative_params)
+    self.editButton(seizeInitiative_params)
     self.editButton({
         index = 5,
         height = 1,
@@ -417,12 +460,18 @@ function cleanupCards()
 
     ActionCards.clearPlayed()
     AmbitionMarkers.resetZeroMarker()
+    Initiative.unseize()
 
 end
 
 function takeInitiative(objectButtonClicked, playerColorClicked)
 
-    broadcastToAll(playerColorClicked .. " takes initiative")
-    Global.call("takeInitiative", playerColorClicked)
+    Initiative.take(playerColorClicked)
+
+end
+
+function seizeInitiative(objectButtonClicked, playerColorClicked)
+
+    Initiative.seize(playerColorClicked)
 
 end
