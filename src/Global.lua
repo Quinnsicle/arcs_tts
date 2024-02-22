@@ -889,7 +889,7 @@ starting_pieces = {
         D = {
             ships = 2
         },
-        resources = {"psionic", "weapon"}
+        resources = {"psionic", "material"}
     },
     ["94d6be"] = { -- Mystic
         A = {
