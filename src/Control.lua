@@ -17,14 +17,14 @@ local blue = {0.4, 0.6, 0.6}
 -- Row 5 - {x, y, 1.15}
 
 -- Button Columns
--- Full Row   - {0, y, z}
+-- Full Col   - {0.00, y, z}
 -- Left Side  - {-0.45, y, z}
 -- Right Side - {0.45, y, z}
 
 -- Dimension
 -- Height - height = 260
--- Full Row - width = 820
--- Half Row - width = 440
+-- Full Col - width = 820
+-- Half Col - width = 440
 
 
 local toggleLeadersWITHOUT_params = {
