@@ -26,7 +26,6 @@ local blue = {0.4, 0.6, 0.6}
 -- Full Col - width = 820
 -- Half Col - width = 440
 
-
 local toggleLeadersWITHOUT_params = {
     index = 0,
     click_function = "toggleLeaders",
@@ -358,6 +357,14 @@ function setStartupButtons()
 
     self.editButton(setupBaseGame_params)
     self.editButton(setupCampaignGame_params)
+    self.editButton({
+        index = 6,
+        height = 1,
+        width = 1,
+        click_function = "doNothing",
+        label = "",
+        tooltip = ""
+    })
     self.editButton(showControls_params)
 
     if (ActionCards.isFUDActive()) then
