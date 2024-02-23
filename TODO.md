@@ -15,20 +15,18 @@
 - [ ] Spectate toggle buttons for each player area
 ### Automated Gameplay
 - [x] _Return to supply_ context menu item
-- [ ] _Take as trophy_ context menu item
-- [ ] _Take as captive_ context menu item
+- [x] _Take as trophy_ context menu item
+- [x] _Take as captive_ context menu item
 - [x] _Bury card_ context menu item
 - [x] Split discard toggle button and function in cleanup
-- [ ] Give initiative buttons?
 - [x] Dice rolling area
 - [ ] Agent snap points for outrage
 - [ ] Building snap points on flagship boards
 - [x] Added check for cards when pressing draw
 ### Bugs
+- [ ] Update imperial ship image on imperial ship supply token.
 - [ ] Supply number bug for non hosts, I think I just need to recreate the supply tokens.
 - [ ] Remove print statements
-- [ ] Change cleanup function to move to discard area instead of to the position of the discard deck. In case the discard deck gets exhausted.
+- [x] Change cleanup function to move to discard area instead of to the position of the discard deck. In case the discard deck gets exhausted.
 - [x] red and blue are out of order on setup
 - [x] Update supplies to use deck but also account for deck despawning
-
-
