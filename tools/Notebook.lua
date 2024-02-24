@@ -2,7 +2,14 @@ local NotebookTool = {}
 
 -- Tools for use in developing TTS mods
 
-function NotebookTool.objCoord(object,origin)
+-- Record positions for all objects with the pos_find tag
+function NotebookTool.pos_find(origin)
+  for _,obj in ipairs(getObjectsWithTag("pos_find")) do
+    NotebookTool.obj_coord(obj,origin)
+  end
+end
+
+function NotebookTool.obj_coord(object,origin)
 
   local accuracy = 1000
 

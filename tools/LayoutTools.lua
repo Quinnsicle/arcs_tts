@@ -33,10 +33,18 @@ local court_agent_layout = {{-0.75, 0.825, -2.5},
                             {-0.15, 0.825, -1.9}, {0.15, 0.825, -1.9},
                             {0.45, 0.825, -1.9}, {0.75, 0.825, -1.9}}
 
-function LayoutTools.repositionSet()
-    local board = getObjectFromGUID("89ddf3")
+local outrage_agent_layout = {
+    {0.559,0.015,1.221},
+    {0.559,0.015,0.583},
+    {0.559,0.015,0.265},
+    {0.559,0.015,-0.06},
+    {0.559,0.015,0.901}
+}
+
+function LayoutTools.reposition_set()
+    local board = getObjectFromGUID("999dbd")
     for ct, object in ipairs(getObjectsWithTag("pos_find")) do
-        local pos = court_agent_layout[ct];
+        local pos = outrage_agent_layout[ct];
         pos = board.positionToWorld(pos)
         object.setPosition(pos)
     end

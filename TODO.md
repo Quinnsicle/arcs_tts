@@ -20,7 +20,7 @@
 - [x] _Bury card_ context menu item
 - [x] Split discard toggle button and function in cleanup
 - [x] Dice rolling area
-- [ ] Agent snap points for outrage
+- [x] Agent snap points for outrage
 - [ ] Building snap points on flagship boards
 - [x] Added check for cards when pressing draw
 ### Bugs
