@@ -226,19 +226,6 @@ function getOrderedPlayers()
     return ordered_players
 end
 
-function takeInitiative(color)
-    if color == "" then
-        return
-    end
-
-    local initiative_marker = getObjectFromGUID(initiative_GUID)
-    local player_board = getObjectFromGUID(
-        player_pieces_GUIDs[color]["player_board"])
-    local initiative_pos = player_board.positionToWorld(
-        initaitive_player_position)
-    initiative_marker.setPositionSmooth(initiative_pos)
-end
-
 function dealGuildCards(qty)
 
     local court_zone = getObjectFromGUID(court_deck_zone_GUID)

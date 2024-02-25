@@ -15,7 +15,8 @@ function Campaign.setup()
     end
 
     -- B
-    Global.call("takeInitiative", ordered_players[1])
+    local initiative = require("src/InitiativeMarker")
+    initiative.take(ordered_players[1])
 
     -- C, D, E
     action_cards.setupFourPlayer(#ordered_players)

@@ -16,7 +16,8 @@ function BaseGame.setup()
     end
 
     -- B
-    Global.call("takeInitiative", active_players[1])
+    local initiative = require("src/InitiativeMarker")
+    initiative.take(active_players[1])
 
     -- D
     action_cards.setupFourPlayer(#active_players)
