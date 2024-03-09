@@ -20,7 +20,7 @@ function BaseGame.setup()
     initiative.take(active_players[1])
 
     -- D
-    action_cards.setupFourPlayer(#active_players)
+    action_cards.setup_four_player(#active_players)
     BaseGame.setupBaseCourt(#active_players)
 
     chosen_setup_card = BaseGame.chooseSetupCard(#active_players)
@@ -350,10 +350,10 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
         local starting_resources = pieces["resources"]
 
         if not (starting_resources) then
-            starting_resources = {
-                resource:name_from_cluster(ABC["A"]["cluster"], ABC["A"]["system"]),
-                resource:name_from_cluster(ABC["B"]["cluster"], ABC["B"]["system"])
-            }
+            starting_resources = {resource:name_from_cluster(
+                ABC["A"]["cluster"], ABC["A"]["system"]),
+                                  resource:name_from_cluster(
+                ABC["B"]["cluster"], ABC["B"]["system"])}
         end
 
         LOG.DEBUG("starting_resource: " .. starting_resources[1])

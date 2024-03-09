@@ -8,22 +8,22 @@ local played_zone = getObjectFromGUID(action_card_zone_GUID)
 local lead_zone = getObjectFromGUID(lead_card_zone_GUID)
 
 -- Face Down Discard
-local FDD_pos = Vector({0.94, 10.00, -1.26})
-local FDD_rot = Vector({0.00, 90.00, 180.00})
+local fdd_pos = Vector({0.94, 10.00, -1.26})
+local fdd_rot = Vector({0.00, 90.00, 180.00})
 
 -- Face Up Discard
-local FUD_marker = getObjectFromGUID(FUDiscard_marker_GUID)
-local FUD_marker_pos = {
+local fud_marker = getObjectFromGUID(FUDiscard_marker_GUID)
+local fud_marker_pos = {
     [true] = Vector({-19.93, 0.96, -2.31}),
     [false] = Vector({-19.93, -1.00, -2.31})
 }
-local FUD_pos = Vector({-4.00, 0.00, 0.00})
-local FUD_rot = Vector({0.00, 90.00, 0.00})
-local FUD_offset = Vector({0.50, 0.50, 0.00})
-local FUD_tag = "Face Up Discard Action"
-local is_FUD_active = true
+local fud_pos = Vector({-4.00, 0.00, 0.00})
+local fud_rot = Vector({0.00, 90.00, 0.00})
+local fud_offset = Vector({0.50, 0.50, 0.00})
+local fud_tag = "Face Up Discard Action"
+local is_fud_active = true
 
-function ActionCards.setupFourPlayer(player_ct)
+function ActionCards.setup_four_player(player_ct)
     local four_player_deck = getObjectFromGUID(action_deck_4P_GUID)
     if (player_ct == 4) then
         deck.putObject(four_player_deck)
@@ -35,7 +35,7 @@ function ActionCards.setupFourPlayer(player_ct)
     end
 end
 
-function ActionCards.setupEvents(player_ct)
+function ActionCards.setup_events(player_ct)
     local event_deck = getObjectFromGUID(event_deck_GUID)
     if (player_ct == 4) then
         event_deck.takeObject().destroy()
@@ -46,17 +46,17 @@ function ActionCards.setupEvents(player_ct)
     end, 1.5)
 end
 
-function ActionCards.toggleFUD()
-    is_FUD_active = not is_FUD_active
-    FUD_marker.setPosition(FUD_marker_pos[is_FUD_active])
-    return is_FUD_active
+function ActionCards.toggle_face_up_discard()
+    is_fud_active = not is_fud_active
+    fud_marker.setPosition(fud_marker_pos[is_fud_active])
+    return is_fud_active
 end
 
-function ActionCards.isFUDActive()
-    return is_FUD_active
+function ActionCards.is_face_up_discard_active()
+    return is_fud_active
 end
 
-function ActionCards.dealHand()
+function ActionCards.deal_hand()
     broadcastToAll("Shuffle and deal 6 action cards to all players")
     deck.randomize()
     Wait.time(function()
@@ -64,12 +64,12 @@ function ActionCards.dealHand()
     end, 1)
 end
 
-function ActionCards.checkDeck()
+function ActionCards.check_deck()
     local deck_size = #getSeatedPlayers() == 4 and 28 or 20
     return deck_size <= #deck.getObjects()
 end
 
-function ActionCards.checkHands()
+function ActionCards.check_hands()
     local has_hand = false
     for _, player in pairs(Player.getPlayers()) do
         if #player.getHandObjects() > 0 then
@@ -82,7 +82,7 @@ function ActionCards.checkHands()
     return has_hand
 end
 
-function ActionCards.clearPlayed()
+function ActionCards.clear_played()
 
     local played_objects = played_zone.getObjects()
     local supplies = require("src/Supplies")
@@ -102,10 +102,10 @@ function ActionCards.clearPlayed()
     for ct, obj in ipairs(played_objects) do
         if (obj.getName() ~= "Action Card") then
             supplies.returnObject(obj)
-        elseif (is_FUD_active and not obj.is_face_down) then
-            ActionCards.FUDiscard(obj)
+        elseif (is_fud_active and not obj.is_face_down) then
+            ActionCards.to_face_up_discard(obj)
         else
-            ActionCards.FDDiscard(obj)
+            ActionCards.to_face_down_discard(obj)
         end
     end
 
@@ -113,37 +113,38 @@ function ActionCards.clearPlayed()
 
 end
 
-function ActionCards.FDDiscard(card)
+function ActionCards.to_face_down_discard(card)
     local reach_map = getObjectFromGUID(reach_board_GUID)
-    local pos = reach_map.positionToWorld(FDD_pos)
-    local rot = FDD_rot
+    local pos = reach_map.positionToWorld(fdd_pos)
+    local rot = fdd_rot
     card.setPositionSmooth(pos)
     card.setRotationSmooth(rot)
 end
 
-function ActionCards.FUDiscard(card)
-    local ct = #ActionCards.getFUDCards() + 1
-    local pos = FUD_pos + ct * FUD_offset;
-    pos = FUD_marker.positionToWorld(pos)
-    local rot = FUD_rot
-    card.addTag(FUD_tag)
+function ActionCards.to_face_up_discard(card)
+    local ct = #ActionCards.get_face_up_discard_cards() + 1
+    local pos = fud_pos + ct * fud_offset;
+    pos = fud_marker.positionToWorld(pos)
+    local rot = fud_rot
+
+    card.addTag(fud_tag)
     card.setPositionSmooth(pos)
     card.setRotationSmooth(rot)
 end
 
-function ActionCards.clearFUD()
-    for ct, obj in ipairs(ActionCards.getFUDCards()) do
-        obj.removeTag(FUD_tag)
-        ActionCards.FDDiscard(obj)
+function ActionCards.clear_face_up_discard()
+    for ct, obj in ipairs(ActionCards.get_face_up_discard_cards()) do
+        obj.removeTag(fud_tag)
+        ActionCards.to_face_down_discard(obj)
     end
 end
 
-function ActionCards.getFUDCards()
-    return getObjectsWithTag(FUD_tag)
+function ActionCards.get_face_up_discard_cards()
+    return getObjectsWithTag(fud_tag)
 end
 
 -- Returns the type and number of an action card
-function ActionCards.getInfo(card)
+function ActionCards.get_info(card)
 
     if (card.getName() ~= "Action Card") then
         return
@@ -166,19 +167,20 @@ function ActionCards.getInfo(card)
 end
 
 -- Returns type and number of lead card
-function ActionCards.getLeadInfo()
+function ActionCards.get_lead_info()
     local lead_card = lead_zone.getObjects()[1]
     if (lead_card) then
-        return ActionCards.getInfo(lead_card)
+        return ActionCards.get_info(lead_card)
     end
     return nil
 end
 
-function ActionCards.drawBottomSetup()
-    deck.addContextMenuItem("Draw bottom card", ActionCards.drawBottom)
+function ActionCards.draw_bottom_setup()
+    deck.addContextMenuItem("Draw bottom card",
+        ActionCards.draw_bottom)
 end
 
-function ActionCards.drawBottom(player_color, position, object)
+function ActionCards.draw_bottom(player_color, position, object)
     local hand_zone = Player[player_color].getHandTransform()
     deck.takeObject({
         top = false,

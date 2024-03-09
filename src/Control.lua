@@ -223,7 +223,7 @@ local seizeInitiative_params = {
 }
 
 function onload()
-    ActionCards.drawBottomSetup()
+    ActionCards.draw_bottom_setup()
     self.createButton(toggleLeadersWITHOUT_params)
     self.createButton(toggleExpansionEXCLUDE_params)
     self.createButton(setupBaseGame_params)
@@ -269,7 +269,7 @@ function toggleExpansion()
 end
 
 function toggleSplitDiscard()
-    local toggle = ActionCards.toggleFUD()
+    local toggle = ActionCards.toggle_face_up_discard()
     if (toggle) then
         self.editButton(splitDiscardFACEUP_params)
     else
@@ -367,7 +367,7 @@ function setStartupButtons()
     })
     self.editButton(showControls_params)
 
-    if (ActionCards.isFUDActive()) then
+    if (ActionCards.is_face_up_discard_active()) then
         self.editButton(splitDiscardFACEUP_params)
     else
         self.editButton(splitDiscardFACEDOWN_params)
@@ -455,17 +455,17 @@ end
 
 function dealHand()
 
-    if (ActionCards.checkHands()) then
+    if (ActionCards.check_hands()) then
         return
     end
 
-    ActionCards.dealHand()
+    ActionCards.deal_hand()
 
 end
 
 function cleanupCards()
 
-    ActionCards.clearPlayed()
+    ActionCards.clear_played()
     AmbitionMarkers.resetZeroMarker()
     Initiative.unseize()
 

@@ -19,8 +19,8 @@ function Campaign.setup()
     initiative.take(ordered_players[1])
 
     -- C, D, E
-    action_cards.setupFourPlayer(#ordered_players)
-    action_cards.setupEvents(#ordered_players)
+    action_cards.setup_four_player(#ordered_players)
+    action_cards.setup_events(#ordered_players)
 
     Campaign.setupChapterTrack()
     LOG.INFO("setupChapterTrack Complete")
