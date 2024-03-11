@@ -17,11 +17,44 @@ local fud_marker_pos = {
     [true] = Vector({-19.93, 0.96, -2.31}),
     [false] = Vector({-19.93, -1.00, -2.31})
 }
-local fud_pos = Vector({-4.00, 0.00, 0.00})
-local fud_rot = Vector({0.00, 90.00, 0.00})
-local fud_offset = Vector({0.50, 0.50, 0.00})
+local fud_discard_action_deck = getObjectFromGUID(
+    face_up_discard_action_deck_GUID)
+local fud_pos = Vector({-3.60, 0.10, 0.00})
+local fud_rot = Vector({0.00, 90.00, 0.50})
+local fud_offset = Vector({0.42, 0.00, 0.00})
 local fud_tag = "Face Up Discard Action"
 local is_fud_active = true
+
+local face_up_discard_guids = {
+    ["Administration 1"] = "b994c0",
+    ["Administration 2"] = "a2931d",
+    ["Administration 3"] = "d129a1",
+    ["Administration 4"] = "a66e2a",
+    ["Administration 5"] = "94fc68",
+    ["Administration 6"] = "6aeb5e",
+    ["Administration 7"] = "9b829b",
+    ["Aggression 1"] = "f3c7de",
+    ["Aggression 2"] = "03b948",
+    ["Aggression 3"] = "698e3b",
+    ["Aggression 4"] = "2a414a",
+    ["Aggression 5"] = "8d6270",
+    ["Aggression 6"] = "c421f0",
+    ["Aggression 7"] = "9ab788",
+    ["Construction 1"] = "dcff50",
+    ["Construction 2"] = "8946d4",
+    ["Construction 3"] = "36b467",
+    ["Construction 4"] = "06317b",
+    ["Construction 5"] = "432418",
+    ["Construction 6"] = "478926",
+    ["Construction 7"] = "0c38cb",
+    ["Mobilization 1"] = "5694f9",
+    ["Mobilization 2"] = "a6d390",
+    ["Mobilization 3"] = "e43e5d",
+    ["Mobilization 4"] = "8f521a",
+    ["Mobilization 5"] = "bcf2e7",
+    ["Mobilization 6"] = "7981dc",
+    ["Mobilization 7"] = "864dd1"
+}
 
 function ActionCards.setup_four_player(player_ct)
     local four_player_deck = getObjectFromGUID(action_deck_4P_GUID)
@@ -104,6 +137,7 @@ function ActionCards.clear_played()
             supplies.returnObject(obj)
         elseif (is_fud_active and not obj.is_face_down) then
             ActionCards.to_face_up_discard(obj)
+            ActionCards.to_face_down_discard(obj)
         else
             ActionCards.to_face_down_discard(obj)
         end
@@ -122,20 +156,27 @@ function ActionCards.to_face_down_discard(card)
 end
 
 function ActionCards.to_face_up_discard(card)
-    local ct = #ActionCards.get_face_up_discard_cards() + 1
-    local pos = fud_pos + ct * fud_offset;
+    local count = #ActionCards.get_face_up_discard_cards()
+    local pos = fud_pos + count * fud_offset;
     pos = fud_marker.positionToWorld(pos)
     local rot = fud_rot
 
-    card.addTag(fud_tag)
-    card.setPositionSmooth(pos)
-    card.setRotationSmooth(rot)
+    local card_name = card.getDescription()
+
+    local discarded_card = fud_discard_action_deck.takeObject({
+        guid = face_up_discard_guids[card_name]
+    })
+    discarded_card.addTag(fud_tag)
+    discarded_card.setLock(true)
+    discarded_card.setPosition(pos)
+    discarded_card.setRotation(rot)
 end
 
 function ActionCards.clear_face_up_discard()
     for ct, obj in ipairs(ActionCards.get_face_up_discard_cards()) do
+        obj.setLock(false)
         obj.removeTag(fud_tag)
-        ActionCards.to_face_down_discard(obj)
+        fud_discard_action_deck.putObject(obj)
     end
 end
 

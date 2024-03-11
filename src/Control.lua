@@ -169,13 +169,13 @@ local controls_params = {
     font_color = {0.8, 0.58, 0.27}
 }
 
-local dealHand_params = {
+local start_round_params = {
     index = 1,
     height = 260,
     width = 820,
     position = {0, 0.5, -0.59},
-    click_function = "dealHand",
-    label = "Deal Hand",
+    click_function = "start_round",
+    label = "Start Round",
     tooltip = "",
     font_size = 90,
     font_color = {0, 0, 0},
@@ -426,7 +426,7 @@ end
 
 function setControlButtons()
     self.editButton(controls_params)
-    self.editButton(dealHand_params)
+    self.editButton(start_round_params)
     self.editButton(cleanupCards_params)
     self.editButton(takeInitiative_params)
     self.editButton(seizeInitiative_params)
@@ -453,7 +453,9 @@ end
 function doNothing()
 end
 
-function dealHand()
+function start_round()
+    Initiative.unseize()
+    ActionCards.clear_face_up_discard()
 
     if (ActionCards.check_hands()) then
         return

@@ -9,6 +9,7 @@ include_fates_GUID = "be0e27"
 action_deck_GUID = "cf0c25"
 action_deck_4P_GUID = "22a45c"
 action_card_zone_GUID = "e6eca7"
+face_up_discard_action_deck_GUID = "a8e929"
 lead_card_zone_GUID = "9e5eae"
 FUDiscard_marker_GUID = "000207"
 
