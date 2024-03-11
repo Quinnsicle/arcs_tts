@@ -168,9 +168,10 @@ end
 
 -- Returns type and number of lead card
 function ActionCards.get_lead_info()
-    local lead_card = lead_zone.getObjects()[1]
-    if (lead_card) then
-        return ActionCards.get_info(lead_card)
+    for _, obj in ipairs(lead_zone.getObjects()) do
+        if (obj.getName() == "Action Card") then
+            return ActionCards.get_info(obj)
+        end
     end
     return nil
 end
