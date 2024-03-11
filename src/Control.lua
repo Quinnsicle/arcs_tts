@@ -280,11 +280,16 @@ end
 function setupBaseGame()
     local base_setup_success = BaseGame.setup()
 
+    if (base_setup_success and Global.getVar("with_leaders")) then
+        setLeaderControls()
+        return
+    end
+
     if (base_setup_success) then
         setControlButtons()
-    elseif (Global.getVar("with_leaders")) then
-        setLeaderControls()
+        return
     end
+
 end
 
 function placeStartingPieces()

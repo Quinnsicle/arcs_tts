@@ -32,7 +32,7 @@ function BaseGame.setup()
     if (Global.getVar("with_leaders")) then
         BaseGame.dealLeaders(#active_players)
         Global.setVar("active_players", active_players)
-        return false
+        return true
     else
         BaseGame.setupPlayers(active_players, chosen_setup_card)
     end
