@@ -168,7 +168,6 @@ end
 -- returns a table of colors in order
 function getOrderedPlayers()
     local seated_players = getSeatedPlayers()
-
     local player_count = debug and debug_player_count or
                              #seated_players
     if (debug) then

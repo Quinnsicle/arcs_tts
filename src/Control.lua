@@ -292,8 +292,17 @@ function setupBaseGame()
 
 end
 
-function placeStartingPieces()
-    BaseGame.dispersePlayerPieces()
+function setup_leaders()
+
+    if BaseGame.setup_leaders() == false then
+        broadcastToAll(
+            "Place chosen leader near player board to continue.", {
+                r = 1,
+                g = 0,
+                b = 0
+            })
+        return
+    end
 
     setControlButtons()
 end
@@ -399,8 +408,8 @@ function setLeaderControls()
     self.editButton({
         index = 2,
         font_size = 88,
-        click_function = "placeStartingPieces",
-        label = "Place Starting Pieces",
+        click_function = "setup_leaders",
+        label = "Setup Leaders",
         tooltip = ""
     })
     self.editButton({

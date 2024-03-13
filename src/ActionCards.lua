@@ -56,7 +56,7 @@ local face_up_discard_guids = {
     ["Mobilization 7"] = "864dd1"
 }
 
-function ActionCards.setup_four_player(player_ct)
+function ActionCards.setup_deck(player_ct)
     local four_player_deck = getObjectFromGUID(action_deck_4P_GUID)
     if (player_ct == 4) then
         deck.putObject(four_player_deck)

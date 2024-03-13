@@ -20,7 +20,7 @@ function BaseGame.setup()
     initiative.take(active_players[1])
 
     -- D
-    action_cards.setup_four_player(#active_players)
+    action_cards.setup_deck(#active_players)
     BaseGame.setupBaseCourt(#active_players)
 
     chosen_setup_card = BaseGame.chooseSetupCard(#active_players)
@@ -41,10 +41,31 @@ function BaseGame.setup()
     return true
 end
 
-function BaseGame.dispersePlayerPieces()
+function BaseGame.setup_leaders()
     LOG.INFO("Disperse starting pieces")
-    BaseGame.setupPlayers(Global.getTable("active_players"),
-        chosen_setup_card)
+
+    -- check if leader is in player area
+    local active_players = Global.getTable("active_players")
+
+    local leader_count = 0
+    local player_pieces_guids = Global.getVar("player_pieces_GUIDs")
+    for i, player in ipairs(active_players) do
+        local player_zones = getObjectFromGUID(
+                                 player_pieces_guids[player]["area_zone"]).getObjects()
+
+        for _, obj in pairs(player_zones) do
+            if (obj.hasTag("Leader")) then
+                leader_count = leader_count + 1
+            end
+        end
+    end
+
+    if leader_count < #active_players then
+        return false
+    end
+
+    BaseGame.setupPlayers(active_players, chosen_setup_card)
+    return true
 end
 
 -- H
