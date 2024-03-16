@@ -9,21 +9,21 @@ local has_counter = {}
 local the_counters = {{
     container_GUID = player_pieces_GUIDs["White"]["ships"],
     position = {0.5, 0.06, 0.03},
-    shadow = {0.03, 0.06, 0.02},
+    shadow = {0.03, 0, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
     container_GUID = player_pieces_GUIDs["White"]["agents"],
     position = {0.5, 0.06, 0.03},
-    shadow = {0.03, 0.06, 0.02},
+    shadow = {0.03, 0, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
     container_GUID = player_pieces_GUIDs["White"]["starports"],
     position = {0.5, 0.06, 0.03},
-    shadow = {0.03, 0.06, 0.02},
+    shadow = {0.03, 0, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
@@ -44,21 +44,21 @@ local the_counters = {{
 }, {
     container_GUID = player_pieces_GUIDs["Yellow"]["ships"],
     position = {0.5, 0.06, 0.03},
-    shadow = {0.03, 0.06, 0.02},
+    shadow = {0.03, 0, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
     container_GUID = player_pieces_GUIDs["Yellow"]["agents"],
     position = {0.5, 0.06, 0.03},
-    shadow = {0.03, 0.06, 0.02},
+    shadow = {0.03, 0, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
     container_GUID = player_pieces_GUIDs["Yellow"]["starports"],
     position = {0.5, 0.06, 0.03},
-    shadow = {0.03, 0.06, 0.02},
+    shadow = {0.03, 0, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
@@ -79,21 +79,21 @@ local the_counters = {{
 }, {
     container_GUID = player_pieces_GUIDs["Red"]["ships"],
     position = {0.5, 0.06, 0.03},
-    shadow = {0.03, 0.06, 0.02},
+    shadow = {0.03, 0, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
     container_GUID = player_pieces_GUIDs["Red"]["agents"],
     position = {0.5, 0.06, 0.03},
-    shadow = {0.03, 0.06, 0.02},
+    shadow = {0.03, 0, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
     container_GUID = player_pieces_GUIDs["Red"]["starports"],
     position = {0.5, 0.06, 0.03},
-    shadow = {0.03, 0.06, 0.02},
+    shadow = {0.03, 0, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
@@ -114,21 +114,21 @@ local the_counters = {{
 }, {
     container_GUID = player_pieces_GUIDs["Teal"]["ships"],
     position = {0.5, 0.06, 0.03},
-    shadow = {0.03, 0.06, 0.02},
+    shadow = {0.03, 0, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
     container_GUID = player_pieces_GUIDs["Teal"]["agents"],
     position = {0.5, 0.06, 0.03},
-    shadow = {0.03, 0.06, 0.02},
+    shadow = {0.03, 0, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
 }, {
     container_GUID = player_pieces_GUIDs["Teal"]["starports"],
     position = {0.5, 0.06, 0.03},
-    shadow = {0.03, 0.06, 0.02},
+    shadow = {0.03, 0, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {1, 1, 1}
@@ -149,14 +149,14 @@ local the_counters = {{
 }, {
     container_GUID = imperial_ships_GUID,
     position = {0.5, 0.06, 0.03},
-    shadow = {0.03, 0.06, 0.02},
+    shadow = {0.03, 0, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {0.8, 0.58, 0.27}
 }, {
     container_GUID = blight_GUID,
     position = {0.5, 0.06, 0.03},
-    shadow = {0.03, 0.06, 0.02},
+    shadow = {0.03, 0, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
     font_color = {0.7, 0.7, 0.7}
