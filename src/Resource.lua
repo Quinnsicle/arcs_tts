@@ -10,44 +10,38 @@ local Resource = {
         material = getObjectFromGUID(resources_GUID["materials"])
 
     },
-    clusters = {
-        {
-            ["a"] = "weapon", 
-            ["b"] = "fuel", 
-            ["c"] = "material"
-        },
-        {
-            ["a"] = "psionic", 
-            ["b"] = "weapon", 
-            ["c"] = "relic"
-        },
-        {
-            ["a"] = "material", 
-            ["b"] = "fuel", 
-            ["c"] = "weapon"
-        },
-        {
-            ["a"] = "relic", 
-            ["b"] = "fuel", 
-            ["c"] = "material"
-        },
-        {
-            ["a"] = "weapon", 
-            ["b"] = "relic", 
-            ["c"] = "psionic"
-        },
-        {
-            ["a"] = "material", 
-            ["b"] = "fuel", 
-            ["c"] = "psionic"
-        }
-    }
+    clusters = {{
+        ["a"] = "weapon",
+        ["b"] = "fuel",
+        ["c"] = "material"
+    }, {
+        ["a"] = "psionic",
+        ["b"] = "weapon",
+        ["c"] = "relic"
+    }, {
+        ["a"] = "material",
+        ["b"] = "fuel",
+        ["c"] = "weapon"
+    }, {
+        ["a"] = "relic",
+        ["b"] = "fuel",
+        ["c"] = "material"
+    }, {
+        ["a"] = "weapon",
+        ["b"] = "relic",
+        ["c"] = "psionic"
+    }, {
+        ["a"] = "material",
+        ["b"] = "fuel",
+        ["c"] = "psionic"
+    }}
 }
 
 function Resource:take(name, pos)
     LOG.DEBUG("name:" .. name)
     return self.supplies[name].takeObject({
         position = pos,
+        rotation = {0, 180, 0},
         smooth = true
     })
 end
