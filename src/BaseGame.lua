@@ -8,6 +8,34 @@ local action_cards = require("src/ActionCards")
 local resource = require("src/Resource")
 local merchant = require("src/Merchant")
 
+local leader_setup_markers = {
+    White = {
+        A = "http://cloud-3.steamusercontent.com/ugc/2470859798801204323/C2AB80A86A05E6D091EEEFC3BBC37750441C8458/",
+        B = "http://cloud-3.steamusercontent.com/ugc/2470859798801204362/040363BB8DEFF3E79EEF4E9F022346006808DAF1/",
+        C = "http://cloud-3.steamusercontent.com/ugc/2470859798801204408/C404410F6AFD3AA2AA563EF27D796C4E8F872B00/",
+        D = "http://cloud-3.steamusercontent.com/ugc/2470859798801204408/C404410F6AFD3AA2AA563EF27D796C4E8F872B00/"
+    },
+    Yellow = {
+        A = "http://cloud-3.steamusercontent.com/ugc/2470859798801217991/3B4F2203FBE1A85FA4E892F1B9D453FE72923393/",
+        B = "http://cloud-3.steamusercontent.com/ugc/2470859798801218068/F51FD5724585838D7D451AE7E89CF89081E96ACA/",
+        C = "http://cloud-3.steamusercontent.com/ugc/2470859798801218131/2CD7AB119161AC27C9EB8CA834FF9B748DCCBC45/",
+        D = "http://cloud-3.steamusercontent.com/ugc/2470859798801218131/2CD7AB119161AC27C9EB8CA834FF9B748DCCBC45/"
+    },
+    Teal = {
+        A = "http://cloud-3.steamusercontent.com/ugc/2470859798801203960/A4DC5AF4F4F5E8BB63CDF8B09C11A58F3DA8EA40/",
+        B = "http://cloud-3.steamusercontent.com/ugc/2470859798801204036/E06E07F519CA19F4EE40BFF2E728103A233D402B/",
+        C = "http://cloud-3.steamusercontent.com/ugc/2470859798801204130/8DBC24130B163534CCF2BD3377B74FF04D9F8A5F/",
+        D = "http://cloud-3.steamusercontent.com/ugc/2470859798801204130/8DBC24130B163534CCF2BD3377B74FF04D9F8A5F/"
+    },
+    Red = {
+        A = "http://cloud-3.steamusercontent.com/ugc/2470859798801204187/D190E74F4A0ADBA81C50A4E328B904A236B7C742/",
+        B = "http://cloud-3.steamusercontent.com/ugc/2470859798801204242/98F1219A748CF32B8094DF04264245366977D678/",
+        C = "http://cloud-3.steamusercontent.com/ugc/2470859798801204273/D14267BB17B5B5F5A0EB5D41DDE2180A8972F7F0/",
+        D = "http://cloud-3.steamusercontent.com/ugc/2470859798801204273/D14267BB17B5B5F5A0EB5D41DDE2180A8972F7F0/"
+    },
+    guids = {}
+}
+
 function BaseGame.setup()
 
     local active_players = Global.call("getOrderedPlayers")
@@ -31,6 +59,8 @@ function BaseGame.setup()
 
     if (Global.getVar("with_leaders")) then
         BaseGame.dealLeaders(#active_players)
+        BaseGame.place_player_markers(active_players,
+            chosen_setup_card)
         Global.setVar("active_players", active_players)
         return true
     else
@@ -42,11 +72,11 @@ function BaseGame.setup()
 end
 
 function BaseGame.setup_leaders()
-    LOG.INFO("Disperse starting pieces")
+    LOG.INFO("Setup Leaders")
 
-    -- check if leader is in player area
     local active_players = Global.getTable("active_players")
 
+    -- check if leader is in player area
     local leader_count = 0
     local player_pieces_guids = Global.getVar("player_pieces_GUIDs")
     for i, player in ipairs(active_players) do
@@ -59,11 +89,20 @@ function BaseGame.setup_leaders()
             end
         end
     end
-
     if leader_count < #active_players then
         return false
     end
 
+    -- delete setup markers
+    for _, marker_guid in pairs(leader_setup_markers["guids"]) do
+        -- print("marker " .. marker_guid)
+        local marker = getObjectFromGUID(marker_guid)
+        -- local pos = marker.getPosition()
+        -- marker.setPosition(pos + 1)
+        destroyObject(marker)
+    end
+
+    -- setup players
     BaseGame.setupPlayers(active_players, chosen_setup_card)
     return true
 end
@@ -212,6 +251,62 @@ function BaseGame.setupOutOfPlayClusters(setup_card)
         end
     end
 
+end
+
+function BaseGame.place_player_markers(ordered_players, setup_card)
+    LOG.INFO("Place Player Markers")
+
+    local active_players = Global.getTable("active_players")
+
+    local locations =
+        Global.getVar("starting_locations")[setup_card.guid]
+    local cluster_zone_guids = Global.getVar("cluster_zone_GUIDs")
+    local board = getObjectFromGUID(Global.getVar("reach_board_GUID"))
+
+    for player_number, ABC in pairs(locations) do
+        local player_color = ordered_players[player_number]
+        local player_marker_images =
+            leader_setup_markers[player_color]
+        print(player_marker_images["a"])
+
+        -- iterate through setup card's ABCs
+        LOG.DEBUG("iterate through setup card's ABCs")
+        for starting_letter, cluster_system in pairs(ABC) do
+            local cluster = cluster_system["cluster"]
+            local system = cluster_system["system"]
+
+            local move_pos
+            if (system == "gate") then -- a gate system
+                LOG.DEBUG("a gate system")
+                move_pos = getObjectFromGUID(
+                               cluster_zone_guids[cluster][system]).getPosition()
+            else -- this is a planetary system
+                LOG.DEBUG("a planetary system")
+                move_pos = getObjectFromGUID(
+                               cluster_zone_guids[cluster][system]["ships"]).getPosition()
+            end
+
+            LOG.DEBUG("spawn marker")
+            print(player_color)
+            print(starting_letter)
+            LOG.DEBUG(player_marker_images[starting_letter])
+            local marker = spawnObject({
+                type = "Custom_Token",
+                position = move_pos,
+                rotation = {0, 180, 0},
+                scale = {0.5, 0.5, 0.5},
+                sound = false
+            })
+            marker.setCustomObject({
+                image = player_marker_images[starting_letter]
+            })
+            marker.setLock(true)
+            print("guid " .. marker.guid)
+            table.insert(leader_setup_markers["guids"], marker.guid)
+            -- marker.reload()
+        end
+    end
+    return true
 end
 
 function BaseGame.dealLeaders(player_count)
