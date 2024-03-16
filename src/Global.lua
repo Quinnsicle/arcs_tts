@@ -114,13 +114,13 @@ function assignPlayerToAvailableColor(player, color)
     player.changeColor(color)
 end
 
-function onPlayerConnect(player)
-    -- assignPlayerToAvailableColor(player)
-end
+-- function onPlayerConnect(player)
+--     -- assignPlayerToAvailableColor(player)
+-- end
 
-function onPlayerDisconnect(player)
-    -- table.insert(available_colors, 1, player.color)
-end
+-- function onPlayerDisconnect(player)
+--     -- table.insert(available_colors, 1, player.color)
+-- end
 
 function onObjectEnterZone(zone, object)
     Counters.update(zone)
@@ -186,7 +186,9 @@ function getOrderedPlayers()
         return {""}
     end
 
-    local players = {"White", "Yellow", "Teal", "Red"}
+    -- local players = {"White", "Yellow", "Teal", "Red"}
+    local players = debug and {"White", "Yellow", "Teal", "Red"} or
+                        seated_players
     local ordered_players = {}
     local i = math.random(player_count)
     local count = 0
