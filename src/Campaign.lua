@@ -200,24 +200,17 @@ function Campaign.setupClusters(player_count)
                 "imperial_ships_GUID"))
             imperial_ships.setPosition({-19.75, 1, 6.00})
 
-            for system, v in
-                pairs(cluster_zones[imperial_clusters[1]]) do
-                system_ship_zone = (system == "gate") and
-                                       getObjectFromGUID(v) or
-                                       getObjectFromGUID(v["ships"])
-                imperial_ships.takeObject({
-                    position = system_ship_zone.getPosition()
-                })
-            end
-
-            for system, v in
-                pairs(cluster_zones[imperial_clusters[2]]) do
-                system_ship_zone = (system == "gate") and
-                                       getObjectFromGUID(v) or
-                                       getObjectFromGUID(v["ships"])
-                imperial_ships.takeObject({
-                    position = system_ship_zone.getPosition()
-                })
+            for i = 1, 2, 1 do
+                for system, v in pairs(
+                    cluster_zones[imperial_clusters[i]]) do
+                    system_ship_zone =
+                        (system == "gate") and getObjectFromGUID(v) or
+                            getObjectFromGUID(v["ships"])
+                    local pos = system_ship_zone.getPosition()
+                    imperial_ships.takeObject({
+                        position = {pos.x, pos.y + 0.5, pos.z}
+                    })
+                end
             end
 
             is_imperial_cluster[imperial_clusters[1]] = true
@@ -250,8 +243,9 @@ function Campaign.setupClusters(player_count)
                             system_city_zone =
                                 getObjectFromGUID(
                                     system_value["buildings"][1])
+                            local pos = system_city_zone.getPosition()
                             free_cities_supply.takeObject({
-                                position = system_city_zone.getPosition(),
+                                position = {pos.x, pos.y + 0.5, pos.z},
                                 rotation = {
                                     x = 0,
                                     y = 180,
@@ -270,11 +264,16 @@ function Campaign.setupClusters(player_count)
                                     system_value["ships"])
                         end
 
+                        local blight_pos =
+                            system_ship_zone.getPosition()
+
                         local blight =
                             getObjectFromGUID(Global.getVar(
                                 "blight_GUID"))
                         blight.takeObject({
-                            position = system_ship_zone.getPosition(),
+                            position = {blight_pos.x,
+                                        blight_pos.y + 0.5,
+                                        blight_pos.z},
                             rotation = {
                                 x = 0,
                                 y = 180,

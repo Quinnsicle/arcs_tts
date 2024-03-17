@@ -416,7 +416,7 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
                 local ship_place_offset = 0
                 for i = 1, ship_qty, 1 do
                     ship_bag.takeObject({
-                        position = {gate_zone.x, gate_zone.y,
+                        position = {gate_zone.x, gate_zone.y + 0.5,
                                     gate_zone.z + ship_place_offset}
                     })
                     ship_place_offset = ship_place_offset + 0.3
@@ -438,7 +438,9 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
                     end
                 elseif (building_type == "starport") then
                     starport_bag.takeObject({
-                        position = building_zone,
+                        position = {building_zone.x,
+                                    building_zone.y + 0.5,
+                                    building_zone.z},
                         rotation = {0, 180, 0}
                     })
                 end
@@ -450,7 +452,7 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
                 local ship_place_offset = 0
                 for i = 1, ship_qty, 1 do
                     ship_bag.takeObject({
-                        position = {ship_zone.x, ship_zone.y,
+                        position = {ship_zone.x, ship_zone.y + 0.5,
                                     ship_zone.z + ship_place_offset}
                     })
                     ship_place_offset = ship_place_offset + 0.3
