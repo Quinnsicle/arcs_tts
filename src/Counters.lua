@@ -159,6 +159,20 @@ local the_counters = {{
     shadow = {0.03, 0, 0.02},
     scale = {1, 1, 1},
     font_size = 365,
+    font_color = {0.7, 0.9, 0.7}
+}, {
+    container_GUID = Global.getVar("free_cities_GUID"),
+    position = {0.5, 0.06, 0.03},
+    shadow = {0.03, 0.06, 0.02},
+    scale = {1, 1, 1},
+    font_size = 365,
+    font_color = {0.7, 0.7, 0.7}
+}, {
+    container_GUID = Global.getVar("free_starports_GUID"),
+    position = {0.5, 0.06, 0.03},
+    shadow = {0.03, 0.06, 0.02},
+    scale = {1, 1, 1},
+    font_size = 365,
     font_color = {0.7, 0.7, 0.7}
 }}
 
