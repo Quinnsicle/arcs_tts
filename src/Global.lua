@@ -168,14 +168,42 @@ end
 -- returns a table of colors in order
 function getOrderedPlayers()
     local seated_players = getSeatedPlayers()
-    local player_count = debug and debug_player_count or
-                             #seated_players
     if (debug) then
         broadcastToAll(
             "Debugging enabled for " .. debug_player_count ..
                 " players.")
+        if (debug_player_count > 3) then
+            seated_players = {"White", "Yellow", "Teal", "Red"}
+        else
+            local all_colors = {"White", "Yellow", "Teal", "Red"}
+            -- remove seated players from all_colors
+            for _, seated in ipairs(seated_players) do
+                for i, all in ipairs(all_colors) do
+                    if (seated == all) then
+                        print("remove " .. all_colors[i])
+                        table.remove(all_colors, i)
+                        print("success")
+                    end
+                end
+            end
+            -- insert random color in seated_players
+            for i = 1, debug_player_count - 1, 1 do
+                local rng = math.random(#all_colors)
+                print("rng " .. rng)
+                local random_color = all_colors[rng]
+                print("insert " .. random_color)
+                table.insert(seated_players, random_color)
+                table.remove(all_colors, rng)
+            end
+        end
     end
 
+    print("seated_players")
+    for i, v in ipairs(seated_players) do
+        print(v)
+    end
+
+    local player_count = #seated_players
     if (player_count > 4 or player_count < 2) then
         msg = "This game only supports 2-4 players"
         broadcastToAll(msg, {
@@ -187,8 +215,7 @@ function getOrderedPlayers()
     end
 
     -- local players = {"White", "Yellow", "Teal", "Red"}
-    local players = debug and {"White", "Yellow", "Teal", "Red"} or
-                        seated_players
+    local players = seated_players
     local ordered_players = {}
     local i = math.random(player_count)
     local count = 0
