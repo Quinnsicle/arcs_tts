@@ -95,10 +95,7 @@ function BaseGame.setup_leaders()
 
     -- delete setup markers
     for _, marker_guid in pairs(leader_setup_markers["guids"]) do
-        -- print("marker " .. marker_guid)
         local marker = getObjectFromGUID(marker_guid)
-        -- local pos = marker.getPosition()
-        -- marker.setPosition(pos + 1)
         destroyObject(marker)
     end
 
@@ -267,7 +264,6 @@ function BaseGame.place_player_markers(ordered_players, setup_card)
         local player_color = ordered_players[player_number]
         local player_marker_images =
             leader_setup_markers[player_color]
-        print(player_marker_images["a"])
 
         -- iterate through setup card's ABCs
         LOG.DEBUG("iterate through setup card's ABCs")
@@ -287,9 +283,6 @@ function BaseGame.place_player_markers(ordered_players, setup_card)
             end
 
             LOG.DEBUG("spawn marker")
-            print(player_color)
-            print(starting_letter)
-            LOG.DEBUG(player_marker_images[starting_letter])
             local marker = spawnObject({
                 type = "Custom_Token",
                 position = move_pos,
@@ -301,7 +294,6 @@ function BaseGame.place_player_markers(ordered_players, setup_card)
                 image = player_marker_images[starting_letter]
             })
             marker.setLock(true)
-            print("guid " .. marker.guid)
             table.insert(leader_setup_markers["guids"], marker.guid)
             -- marker.reload()
         end

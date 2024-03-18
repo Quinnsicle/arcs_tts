@@ -180,27 +180,18 @@ function getOrderedPlayers()
             for _, seated in ipairs(seated_players) do
                 for i, all in ipairs(all_colors) do
                     if (seated == all) then
-                        print("remove " .. all_colors[i])
                         table.remove(all_colors, i)
-                        print("success")
                     end
                 end
             end
             -- insert random color in seated_players
             for i = 1, debug_player_count - 1, 1 do
                 local rng = math.random(#all_colors)
-                print("rng " .. rng)
                 local random_color = all_colors[rng]
-                print("insert " .. random_color)
                 table.insert(seated_players, random_color)
                 table.remove(all_colors, rng)
             end
         end
-    end
-
-    print("seated_players")
-    for i, v in ipairs(seated_players) do
-        print(v)
     end
 
     local player_count = #seated_players
