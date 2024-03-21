@@ -7,7 +7,7 @@
 - [x] Counters for trophies and captives
 - [x] Update initiative marker model
 - [ ] Player scoreboard
-- [ ] add small help card to show all dice sides next to dice area
+- [x] add small help card to show all dice sides next to dice area
 ### Automated Setup
 - [x] Restructure player colors so that the seating is random
 - [x] Add Blight to gates on campaign setup
