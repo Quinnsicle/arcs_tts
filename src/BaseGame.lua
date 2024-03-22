@@ -380,9 +380,11 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
         local starport_bag = getObjectFromGUID(
             player_pieces_guids[player_color]["starports"])
         local city1 = getObjectFromGUID(
-            player_pieces_guids[player_color]["city"][1])
+            player_pieces_guids[player_color]["cities"][1])
         local city2 = getObjectFromGUID(
-            player_pieces_guids[player_color]["city"][2])
+            player_pieces_guids[player_color]["cities"][2])
+        print(player_color)
+        print(player_pieces_guids[player_color]["cities"][2])
 
         -- get starting pieces
         local leader = player_leaders[player_number]
