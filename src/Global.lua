@@ -6,7 +6,7 @@ available_colors = {"White", "Yellow", "Red", "Teal"}
 -- [DEBUG] REMEMBER TO SET TO FALSE BEFORE RELEASE
 ----------------------------------------------------
 debug = true
-debug_player_count = 3
+debug_player_count = 4
 ----------------------------------------------------
 
 with_more_to_explore = false
@@ -103,9 +103,10 @@ is_player_setup = {
 }
 
 ----------------------------------------------------
-local Supplies = require("src/Supplies")
 local Counters = require("src/Counters")
 local Initiative = require("src/InitiativeMarker")
+local ArcsPlayer = require("src/ArcsPlayer")
+local Supplies = require("src/Supplies")
 
 function assignPlayerToAvailableColor(player, color)
     local color = table.remove(available_colors, 1)
@@ -114,16 +115,47 @@ function assignPlayerToAvailableColor(player, color)
     player.changeColor(color)
 end
 
--- function onPlayerConnect(player)
---     -- assignPlayerToAvailableColor(player)
--- end
+function get_arcs_player(color)
+    for _, p in ipairs(active_players) do
+        if (p.color == color) then
+            return p
+        end
+    end
+end
 
--- function onPlayerDisconnect(player)
---     -- table.insert(available_colors, 1, player.color)
--- end
+function onObjectDrop(player_color, object)
+    local object_name = object.getName()
+
+    -- update power
+    if (object_name == "Power") then
+        local power_color = object.getDescription()
+        local player = get_arcs_player(power_color)
+        Wait.time(function()
+            player:update_score()
+        end, 0.5)
+    end
+
+    -- update last played action card
+    if (object_name == "Action Card" and not object.is_face_down) then
+        local player = get_arcs_player(player_color)
+        player.last_action_card = object.getDescription()
+    end
+end
 
 function onObjectEnterZone(zone, object)
     Counters.update(zone)
+
+    local zone_name = zone.getName()
+    if (zone_name == "player" or zone_name == "trophies" or zone_name ==
+        "captives" or zone_name == "hand") then
+        local zone_color = zone.getDescription()
+        for _, p in ipairs(active_players) do
+            if (p.color == zone_color) then
+                p:update_score()
+            end
+        end
+    end
+
 end
 
 function onObjectSpawn(object)
@@ -133,6 +165,17 @@ end
 
 function onObjectLeaveZone(zone, object)
     Counters.update(zone)
+
+    local zone_name = zone.getName()
+    if (zone_name == "player" or zone_name == "trophies" or zone_name ==
+        "captives" or zone_name == "hand") then
+        local zone_color = zone.getDescription()
+        for _, p in ipairs(active_players) do
+            if (p.color == zone_color) then
+                p:update_score()
+            end
+        end
+    end
 end
 
 function onObjectEnterContainer(container, object)
@@ -168,7 +211,7 @@ end
 -- returns a table of colors in order
 function getOrderedPlayers()
     local seated_players = getSeatedPlayers()
-    if (debug) then
+    if (debug and #seated_players == 1) then
         broadcastToAll(
             "Debugging enabled for " .. debug_player_count ..
                 " players.")
@@ -215,30 +258,34 @@ function getOrderedPlayers()
             i = 1
         end
 
-        table.insert(ordered_players, players[i])
+        local arcs_player = ArcsPlayer:new{
+            color = players[i]
+        }
+        -- ordered_players[color] = arcs_player
+        table.insert(ordered_players, arcs_player)
         count = count + 1
         i = i + 1
     end
 
-    if (ordered_players[1] == "White") then
+    if (ordered_players[1].color == "White") then
         local color = {1, 1, 1}
         broadcastToAll("----------------------------------", color)
         broadcastToAll("White goes first", color)
         broadcastToAll("----------------------------------", color)
-    elseif (ordered_players[1] == "Yellow") then
+    elseif (ordered_players[1].color == "Yellow") then
         local color = {0.905, 0.898, 0.172}
         broadcastToAll("----------------------------------", color)
         broadcastToAll("Yellow goes first", color)
         broadcastToAll("----------------------------------", color)
-    elseif (ordered_players[1] == "Red") then
+    elseif (ordered_players[1].color == "Red") then
         local color = {0.856, 0.1, 0.094}
         broadcastToAll("----------------------------------", color)
         broadcastToAll("Red goes first", color)
         broadcastToAll("----------------------------------", color)
-    elseif (ordered_players[1] == "Teal") then
+    elseif (ordered_players[1].color == "Teal") then
         local color = {0.129, 0.694, 0.607}
         broadcastToAll("----------------------------------", color)
-        broadcastToAll("Blue goes first", color)
+        broadcastToAll("Teal goes first", color)
         broadcastToAll("----------------------------------", color)
     end
 
@@ -846,7 +893,7 @@ starting_pieces = {
             ships = 2
         }
     },
-    ["059b13"] = { -- Elder
+    ["bcc792"] = { -- Elder
         A = {
             building = "city",
             ships = 3
@@ -863,7 +910,7 @@ starting_pieces = {
         },
         resources = {"relic", "material"}
     },
-    ["410a63"] = { -- Fuel-Drinker
+    ["a7e9eb"] = { -- Fuel-Drinker
         A = {
             building = "city",
             ships = 3
@@ -880,7 +927,7 @@ starting_pieces = {
         },
         resources = {"fuel", "fuel"}
     },
-    ["1d1a5d"] = { -- Upstart
+    ["8109e1"] = { -- Upstart
         A = {
             building = "city",
             ships = 4
@@ -897,7 +944,7 @@ starting_pieces = {
         },
         resources = {"psionic", "material"}
     },
-    ["94d6be"] = { -- Mystic
+    ["aa0e68"] = { -- Mystic
         A = {
             building = "city",
             ships = 3
@@ -931,7 +978,7 @@ starting_pieces = {
         },
         resources = {"psionic", "weapon"}
     },
-    ["3ebad2"] = { -- Feastbringer
+    ["996b9d"] = { -- Feastbringer
         A = {
             building = "city",
             ships = 3
@@ -948,7 +995,7 @@ starting_pieces = {
         },
         resources = {"relic", "material"}
     },
-    ["7e36eb"] = { -- Rebel
+    ["da8b99"] = { -- Rebel
         A = {
             building = "starport",
             ships = 4
@@ -964,7 +1011,7 @@ starting_pieces = {
         },
         resources = {"material", "weapon"}
     },
-    ["1e1496"] = { -- Warrior
+    ["639b42"] = { -- Warrior
         A = {
             building = "city",
             ships = 3
@@ -981,7 +1028,7 @@ starting_pieces = {
         },
         resources = {"weapon", "material"}
     },
-    ["e1a8d1"] = { -- Noble
+    ["1848eb"] = { -- Noble
         A = {
             building = "city",
             ships = 3
@@ -998,7 +1045,7 @@ starting_pieces = {
         },
         resources = {"psionic", "psionic"}
     },
-    ["2b9ad6"] = { -- Archivist
+    ["2a5b6f"] = { -- Archivist
         A = {
             building = "city",
             ships = 3
@@ -1015,7 +1062,7 @@ starting_pieces = {
         },
         resources = {"relic", "relic"}
     },
-    ["82c8e5"] = { -- Quartermaster
+    ["942aaa"] = { -- Quartermaster
         A = {
             building = "starport",
             ships = 4
@@ -1031,7 +1078,7 @@ starting_pieces = {
         },
         resources = {"fuel", "weapon"}
     },
-    ["00f4dd"] = { -- Agitator
+    ["4363db"] = { -- Agitator
         A = {
             building = "city",
             ships = 3
@@ -1048,7 +1095,7 @@ starting_pieces = {
         },
         resources = {"fuel", "material"}
     },
-    ["cbde4b"] = { -- Anarchist
+    ["003bc2"] = { -- Anarchist
         A = {
             ships = 4
         },
@@ -1063,7 +1110,7 @@ starting_pieces = {
         },
         resources = {"relic", "weapon"}
     },
-    ["41d253"] = { -- Shaper
+    ["843e46"] = { -- Shaper
         A = {
             building = "city",
             ships = 3
@@ -1079,7 +1126,7 @@ starting_pieces = {
         },
         resources = {"relic", "material"}
     },
-    ["129303"] = { -- Corsair
+    ["a1b65d"] = { -- Corsair
         A = {
             building = "starport",
             ships = 4
@@ -1095,7 +1142,7 @@ starting_pieces = {
         },
         resources = {"fuel", "weapon"}
     },
-    ["f6e746"] = { -- Overseer
+    ["2409c0"] = { -- Overseer
         A = {
             building = "city",
             ships = 3

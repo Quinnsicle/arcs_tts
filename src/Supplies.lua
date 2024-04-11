@@ -16,7 +16,7 @@ local all_supplies = {
     ["White Agent"] = {
         bag = player_pieces_GUIDs["White"]["agents"]
     },
-    ["Blue Agent"] = {
+    ["Teal Agent"] = {
         bag = player_pieces_GUIDs["Teal"]["agents"]
     },
     ["Yellow Agent"] = {
@@ -30,7 +30,7 @@ local all_supplies = {
     ["White Ship (Fresh)"] = {
         bag = player_pieces_GUIDs["White"]["ships"]
     },
-    ["Blue Ship (Fresh)"] = {
+    ["Teal Ship (Fresh)"] = {
         bag = player_pieces_GUIDs["Teal"]["ships"]
     },
     ["Yellow Ship (Fresh)"] = {
@@ -45,7 +45,7 @@ local all_supplies = {
         bag = player_pieces_GUIDs["White"]["ships"],
         state = 1
     },
-    ["Blue Ship (Damaged)"] = {
+    ["Teal Ship (Damaged)"] = {
         bag = player_pieces_GUIDs["Teal"]["ships"],
         state = 1
     },
@@ -63,7 +63,7 @@ local all_supplies = {
         bag = player_pieces_GUIDs["White"]["starports"],
         face_up = true
     },
-    ["Blue Starport"] = {
+    ["Teal Starport"] = {
         bag = player_pieces_GUIDs["Teal"]["starports"],
         face_up = true
     },
@@ -83,7 +83,7 @@ local all_supplies = {
         set = player_pieces_GUIDs["White"]["cities"],
         pos = city_row
     },
-    ["Blue City"] = {
+    ["Teal City"] = {
         origin = player_pieces_GUIDs["Teal"]["player_board"],
         face_up = true,
         set = player_pieces_GUIDs["Teal"]["cities"],
@@ -279,39 +279,42 @@ function SupplyManager.returnFromMenu(player_color, position, object)
             for ct, k in ipairs(i.getSelectedObjects()) do
                 Wait.time(function()
                     SupplyManager.returnObject(k)
-                end, (ct-1) * 0.5)
+                end, (ct - 1) * 0.5)
             end
         end
     end
 end
 
 function SupplyManager.captiveFromMenu(player_color, position, object)
-    local zone = getObjectFromGUID(player_pieces_GUIDs[player_color]["captives_zone"])
+    local zone = getObjectFromGUID(
+        player_pieces_GUIDs[player_color]["captives_zone"])
     SupplyManager.addToZone(player_color, zone, object)
 end
 
 function SupplyManager.trophyFromMenu(player_color, position, object)
-    local zone = getObjectFromGUID(player_pieces_GUIDs[player_color]["trophies_zone"])
+    local zone = getObjectFromGUID(
+        player_pieces_GUIDs[player_color]["trophies_zone"])
     SupplyManager.addToZone(player_color, zone, object)
 end
 
 function SupplyManager.addToZone(player_color, zone, object)
-    local area = zone.getScale()*0.18
+    local area = zone.getScale() * 0.18
     local sectors = {
-        [0] = Vector({1,0,1}),
-        [1] = Vector({-1,0,1}),
-        [2] = Vector({-1,0,-1}),
-        [3] = Vector({1,0,-1})
+        [0] = Vector({1, 0, 1}),
+        [1] = Vector({-1, 0, 1}),
+        [2] = Vector({-1, 0, -1}),
+        [3] = Vector({1, 0, -1})
     }
     for _, i in pairs(Player.getPlayers()) do
         if i.color == player_color then
             for ct, k in ipairs(i.getSelectedObjects()) do
-                local pos = Vector({area.x * math.random(),0,area.z * math.random()})
-                pos = pos * sectors[ct%4]
+                local pos = Vector({area.x * math.random(), 0,
+                                    area.z * math.random()})
+                pos = pos * sectors[ct % 4]
                 pos = zone.positionToWorld(pos)
                 Wait.time(function()
                     k.setPositionSmooth(pos)
-                end, (ct-1) * .5)
+                end, (ct - 1) * .5)
             end
         end
     end

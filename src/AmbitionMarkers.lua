@@ -7,7 +7,7 @@ local reach_board = getObjectFromGUID(reach_board_GUID)
 local marker_zone = getObjectFromGUID(ambition_marker_zone_GUID)
 local zero_marker = getObjectFromGUID(zero_marker_GUID)
 
--- is_face_down = false = lower (blue) side is face up
+-- is_face_down = false = lower (teal) side is face up
 -- is_face_down = true  = higher (yellow) side is face up
 local markers = {{
     object = getObjectFromGUID(ambition_marker_GUIDs[1]),

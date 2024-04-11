@@ -16,7 +16,7 @@ function Campaign.setup()
 
     -- B
     local initiative = require("src/InitiativeMarker")
-    initiative.take(ordered_players[1])
+    initiative.take(ordered_players[1].color)
 
     -- C, D, E
     action_cards.setup_deck(#ordered_players)

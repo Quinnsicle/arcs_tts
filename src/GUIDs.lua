@@ -2,12 +2,12 @@ reach_board_GUID = "bb7d21"
 setup_table_GUID = "95f3f9"
 -- leaders and lore
 more_to_explore_expansion_button_GUID = "9ff1fd"
-more_to_explore_fate_GUID = "bbd744"
-more_to_explore_lore_GUID = "4a9cd9"
+more_to_explore_fate_GUID = "768d3d"
+more_to_explore_lore_GUID = "3441e5"
 
 include_fates_GUID = "be0e27"
-action_deck_GUID = "cf0c25"
-action_deck_4P_GUID = "22a45c"
+action_deck_GUID = "227406"
+action_deck_4P_GUID = "13bedd"
 action_card_zone_GUID = "e6eca7"
 face_up_discard_action_deck_GUID = "a8e929"
 lead_card_zone_GUID = "9e5eae"
@@ -18,9 +18,9 @@ ambition_marker_GUIDs = {"c9e0ee", "a9b02a", "b0b4d0"}
 ambition_marker_zone_GUID = "06c552"
 court_deck_zone_GUID = "7a33ff"
 
-fate_GUID = "f96461"
-lore_GUID = "fb0cc8"
-base_court_deck_GUID = "ab0ffc"
+fate_GUID = "2d243a"
+lore_GUID = "0d8ede"
+base_court_deck_GUID = "9ac2b3"
 
 -- Setup deck
 setup_deck_GUID = "f02e75"
@@ -85,7 +85,7 @@ player_pieces_GUIDs = {
     },
     ["Red"] = {
         player_board = "c0c8a1",
-        resource_one = {"33577c", "cf5b95"},
+        resource = {"33577c", "cf5b95"},
         ships = "7e0fe2",
         starports = "51a8f5",
         agents = "bbb3aa",
@@ -204,11 +204,11 @@ cluster_zone_GUIDs = {
 }
 
 resources_GUID = {
-    psionics = "4133be",
-    relics = "07b54c",
+    psionics = "1b4b0b",
+    relics = "5895b5",
     weapons = "1c2d2a",
     fuel = "ed2820",
-    materials = "1b8490"
+    materials = "57c2c6"
 }
 
 resources_markers_GUID = {

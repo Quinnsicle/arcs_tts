@@ -39,13 +39,14 @@ local leader_setup_markers = {
 function BaseGame.setup()
 
     local active_players = Global.call("getOrderedPlayers")
+    Global.setVar("active_players", active_players)
     if (#active_players < 2 or #active_players > 4) then
         return false
     end
 
     -- B
     local initiative = require("src/InitiativeMarker")
-    initiative.take(active_players[1])
+    initiative.take(active_players[1].color)
 
     -- D
     action_cards.setup_deck(#active_players)
@@ -61,7 +62,6 @@ function BaseGame.setup()
         BaseGame.dealLeaders(#active_players)
         BaseGame.place_player_markers(active_players,
             chosen_setup_card)
-        Global.setVar("active_players", active_players)
         return true
     else
         BaseGame.setupPlayers(active_players, chosen_setup_card)
@@ -81,7 +81,7 @@ function BaseGame.setup_leaders()
     local player_pieces_guids = Global.getVar("player_pieces_GUIDs")
     for i, player in ipairs(active_players) do
         local player_zones = getObjectFromGUID(
-                                 player_pieces_guids[player]["area_zone"]).getObjects()
+                                 player_pieces_guids[player.color]["area_zone"]).getObjects()
 
         for _, obj in pairs(player_zones) do
             if (obj.hasTag("Leader")) then
@@ -253,15 +253,13 @@ end
 function BaseGame.place_player_markers(ordered_players, setup_card)
     LOG.INFO("Place Player Markers")
 
-    local active_players = Global.getTable("active_players")
-
     local locations =
         Global.getVar("starting_locations")[setup_card.guid]
     local cluster_zone_guids = Global.getVar("cluster_zone_GUIDs")
     local board = getObjectFromGUID(Global.getVar("reach_board_GUID"))
 
     for player_number, ABC in pairs(locations) do
-        local player_color = ordered_players[player_number]
+        local player_color = ordered_players[player_number].color
         local player_marker_images =
             leader_setup_markers[player_color]
 
@@ -359,7 +357,7 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
 
     for i, player in ipairs(ordered_players) do
         local player_zones = getObjectFromGUID(
-                                 player_pieces_guids[player]["area_zone"]).getObjects()
+                                 player_pieces_guids[player.color]["area_zone"]).getObjects()
 
         for _, obj in pairs(player_zones) do
             if (obj.hasTag("Leader")) then
@@ -372,9 +370,9 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
         Global.getVar("starting_locations")[setup_card.guid]
 
     for player_number, ABC in pairs(locations) do
-        local player_color = ordered_players[player_number]
+        local player_color = ordered_players[player_number].color
 
-        -- get player ship and starport bags and city objects
+        LOG.DEBUG("get player ship and starport bags and city objects")
         local ship_bag = getObjectFromGUID(
             player_pieces_guids[player_color]["ships"])
         local starport_bag = getObjectFromGUID(
@@ -383,19 +381,18 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
             player_pieces_guids[player_color]["cities"][1])
         local city2 = getObjectFromGUID(
             player_pieces_guids[player_color]["cities"][2])
-        print(player_color)
-        print(player_pieces_guids[player_color]["cities"][2])
 
-        -- get starting pieces
+        LOG.DEBUG("get starting pieces")
         local leader = player_leaders[player_number]
         local pieces = Global.getVar("starting_pieces")[leader]
 
-        -- iterate through setup card's ABCs
+        LOG.DEBUG("iterate through setup card's ABCs")
         for starting_letter, cluster_system in pairs(ABC) do
             local cluster = cluster_system["cluster"]
             local system = cluster_system["system"]
 
-            -- get building/ship/gate zones in cluster and system
+            LOG.DEBUG(
+                "get building/ship/gate zones in cluster and system")
             local building_zone
             local ship_zone
             local gate_zone
@@ -405,7 +402,7 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
                 gate_zone = getObjectFromGUID(
                                 cluster_zone_guids[cluster][system]).getPosition()
 
-                -- move ships to gate zone
+                LOG.DEBUG("move ships to gate zone")
                 local ship_qty = pieces[starting_letter]["ships"]
                 local ship_place_offset = 0
                 for i = 1, ship_qty, 1 do
@@ -419,11 +416,11 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
                 building_zone = getObjectFromGUID(
                                     cluster_zone_guids[cluster][system]["buildings"][1]).getPosition()
 
-                -- get building type to move
+                LOG.DEBUG("get building type to move")
                 local building_type =
                     pieces[starting_letter]["building"]
 
-                -- move building to building zone one
+                LOG.DEBUG("move building to building zone one")
                 if (building_type == "city") then
                     if (starting_letter == "A") then
                         city1.setPositionSmooth(building_zone)
@@ -439,7 +436,7 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
                     })
                 end
 
-                -- move ships to ship zone
+                LOG.DEBUG("move ships to ship zone")
                 ship_zone = getObjectFromGUID(
                                 cluster_zone_guids[cluster][system]["ships"]).getPosition()
                 local ship_qty = pieces[starting_letter]["ships"]

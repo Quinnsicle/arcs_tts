@@ -1,4 +1,5 @@
 require("src/GUIDs")
+local Log = require("src/LOG")
 
 local ActionCards = {}
 
@@ -116,6 +117,7 @@ function ActionCards.check_hands()
 end
 
 function ActionCards.clear_played()
+    Log.INFO("ActionCards.clear_played")
 
     local played_objects = played_zone.getObjects()
     local supplies = require("src/Supplies")
@@ -148,6 +150,7 @@ function ActionCards.clear_played()
 end
 
 function ActionCards.to_face_down_discard(card)
+    Log.INFO("ActionCards.to_face_down_discard")
     local reach_map = getObjectFromGUID(reach_board_GUID)
     local pos = reach_map.positionToWorld(fdd_pos)
     local rot = fdd_rot
@@ -156,6 +159,7 @@ function ActionCards.to_face_down_discard(card)
 end
 
 function ActionCards.to_face_up_discard(card)
+    Log.INFO("ActionCards.to_face_up_discard")
     local count = #ActionCards.get_face_up_discard_cards()
     local pos = fud_pos + count * fud_offset;
     pos = fud_marker.positionToWorld(pos)
@@ -163,13 +167,22 @@ function ActionCards.to_face_up_discard(card)
 
     local card_name = card.getDescription()
 
-    local discarded_card = fud_discard_action_deck.takeObject({
-        guid = face_up_discard_guids[card_name]
-    })
-    discarded_card.addTag(fud_tag)
-    discarded_card.setLock(true)
-    discarded_card.setPosition(pos)
-    discarded_card.setRotation(rot)
+    local discarded_card = nil
+    for _, v in ipairs(fud_discard_action_deck.getObjects()) do
+        if (v.description == card_name) then
+            discarded_card = fud_discard_action_deck.takeObject({
+                guid = v.guid
+            })
+        end
+    end
+
+    if (discarded_card ~= nil) then
+        discarded_card.addTag(fud_tag)
+        discarded_card.setLock(true)
+        discarded_card.setPosition(pos)
+        discarded_card.setRotation(rot)
+    end
+
 end
 
 function ActionCards.clear_face_up_discard()
@@ -214,6 +227,21 @@ function ActionCards.get_lead_info()
             return ActionCards.get_info(obj)
         end
     end
+    return nil
+end
+
+function ActionCards.get_surpassing_card()
+    local lead = ActionCards.get_lead_info()
+
+    for _, v in ipairs(played_zone.getObjects()) do
+        local card = ActionCards.get_info(v)
+
+        if (card and lead.type == card.type and lead.number <
+            card.number) then
+            return card
+        end
+    end
+
     return nil
 end
 

@@ -7,7 +7,7 @@ local Initiative = require("src/InitiativeMarker")
 control_GUID = Global.getVar("control_GUID")
 
 -- font_color = {0.8, 0.58, 0.27}, GOLD
-local blue = {0.4, 0.6, 0.6}
+local teal = {0.4, 0.6, 0.6}
 
 -- Button Rows
 -- Row 1 - {x, y, -1.17}
@@ -318,7 +318,7 @@ end
 function toggleControls()
 
     local purple_grey = {0.2, 0.22, 0.33}
-    local blue = {0.4, 0.6, 0.6}
+    local teal = {0.4, 0.6, 0.6}
 
     if (showing_controls) then
         showing_controls = false
@@ -330,7 +330,7 @@ function toggleControls()
             label = "Show Control",
             tooltip = "",
             font_size = 90,
-            color = blue,
+            color = teal,
             font_color = {0, 0, 0},
             hover_color = {0.34, 0.38, 0.38}
         })
@@ -345,7 +345,7 @@ function toggleControls()
             label = "Show Setup",
             tooltip = "",
             font_size = 90,
-            color = blue,
+            color = teal,
             font_color = {0, 0, 0},
             hover_color = {0.34, 0.38, 0.38}
         })
@@ -484,6 +484,20 @@ function cleanupCards()
     ActionCards.clear_played()
     AmbitionMarkers.resetZeroMarker()
     Initiative.unseize()
+
+    -- Find surpassing card
+    local played_cards = {}
+    local lead = ActionCards.get_surpassing_card()
+    local lead_name = lead.type .. " " .. tostring(lead.type)
+
+    local all_players = Global.getVar("active_players")
+    for _, p in ipairs(all_players) do
+        if (p.last_action_card and p.last_action_card == lead_name) then
+            Initiative.take(p.color)
+
+            p.last_action_card = nil
+        end
+    end
 
 end
 
