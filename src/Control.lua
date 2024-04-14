@@ -185,12 +185,12 @@ local start_round_params = {
     hover_color = {0.34, 0.38, 0.38}
 }
 
-local cleanupCards_params = {
+local endHand_params = {
     index = 2,
     height = 260,
     width = 820,
-    click_function = "cleanupCards",
-    label = "Cleanup Cards",
+    click_function = "endHand",
+    label = "End Hand",
     tooltip = "",
     font_size = 90,
     color = {0.4, 0.6, 0.6},
@@ -448,7 +448,7 @@ end
 function setControlButtons()
     self.editButton(controls_params)
     self.editButton(start_round_params)
-    self.editButton(cleanupCards_params)
+    self.editButton(endHand_params)
     self.editButton(takeInitiative_params)
     self.editButton(seizeInitiative_params)
     self.editButton({
@@ -486,7 +486,7 @@ function start_round()
 
 end
 
-function cleanupCards()
+function endHand()
 
     ActionCards.clear_played()
     AmbitionMarkers.resetZeroMarker()
