@@ -138,8 +138,11 @@ function onObjectDrop(player_color, object)
     -- update last played action card
     if (object_name == "Action Card" and not object.is_face_down) then
         local player = get_arcs_player(player_color)
-        player.last_action_card = object.getDescription()
+        if (player) then
+            player.last_action_card = object.getDescription()
+        end
     end
+
 end
 
 function onObjectEnterZone(zone, object)

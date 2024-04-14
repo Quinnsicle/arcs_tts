@@ -205,8 +205,8 @@ function ActionCards.get_info(card)
     end
 
     local card_type = string.sub(card.getDescription(), 1, -3)
-    local card_number =
-        tonumber(string.sub(card.getDescription(), -1))
+    local card_number = tonumber(string.sub(card.getDescription(), -2,
+        -1))
 
     if (card_type == "Faithful") then
         card_type = card.getRotation().z < 180 and "Faithful Zeal" or
@@ -214,6 +214,7 @@ function ActionCards.get_info(card)
     end
 
     return {
+        guid = card.guid,
         type = card_type,
         number = card_number
     }
@@ -222,24 +223,48 @@ end
 
 -- Returns type and number of lead card
 function ActionCards.get_lead_info()
+    local lead = nil
+    local is_ambition_declared = false
+
     for _, obj in ipairs(lead_zone.getObjects()) do
         if (obj.getName() == "Action Card") then
-            return ActionCards.get_info(obj)
+            lead = ActionCards.get_info(obj)
+        end
+
+        if (obj.getName() == "Zero Marker") then
+            is_ambition_declared = true
         end
     end
-    return nil
+
+    if (is_ambition_declared) then
+        lead.number = 0
+    end
+    return lead
 end
 
 function ActionCards.get_surpassing_card()
     local lead = ActionCards.get_lead_info()
+    if (not lead) then
+        return nil
+    end
 
     for _, v in ipairs(played_zone.getObjects()) do
-        local card = ActionCards.get_info(v)
-
-        if (card and lead.type == card.type and lead.number <
-            card.number) then
-            return card
+        if (v.guid == lead.guid) then
+            goto continue
         end
+
+        do -- avoid error with goto jumping into surpassing_card scope
+            local surpassing_card = ActionCards.get_info(v)
+            if (surpassing_card and lead.type == surpassing_card.type and
+                lead.number < surpassing_card.number) then
+                Log.DEBUG("-------surpassing_card-------")
+                Log.DEBUG(surpassing_card.type)
+                Log.DEBUG(surpassing_card.number)
+                return surpassing_card
+            end
+        end
+
+        ::continue::
     end
 
     return nil

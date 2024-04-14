@@ -4,6 +4,8 @@ local ActionCards = require("src/ActionCards")
 local AmbitionMarkers = require("src/AmbitionMarkers")
 local Initiative = require("src/InitiativeMarker")
 
+local debug = Global.getVar("debug")
+
 control_GUID = Global.getVar("control_GUID")
 
 -- font_color = {0.8, 0.58, 0.27}, GOLD
@@ -228,7 +230,9 @@ function onload()
     self.createButton(toggleExpansionEXCLUDE_params)
     self.createButton(setupBaseGame_params)
     self.createButton(setupCampaignGame_params)
-    self.createButton(showControls_params)
+    if (debug) then
+        self.createButton(showControls_params)
+    end
     self.createButton(splitDiscardFACEUP_params)
     self.createButton({
         index = 6,
@@ -379,7 +383,9 @@ function setStartupButtons()
         label = "",
         tooltip = ""
     })
-    self.editButton(showControls_params)
+    if (debug) then
+        self.editButton(showControls_params)
+    end
 
     if (ActionCards.is_face_up_discard_active()) then
         self.editButton(splitDiscardFACEUP_params)
@@ -486,13 +492,17 @@ function cleanupCards()
     Initiative.unseize()
 
     -- Find surpassing card
-    local played_cards = {}
-    local lead = ActionCards.get_surpassing_card()
-    local lead_name = lead.type .. " " .. tostring(lead.type)
+    local surpass = ActionCards.get_surpassing_card()
+    if (surpass == nil) then
+        return
+    end
+    local surpass_name = surpass.type .. " " ..
+                             tostring(surpass.number)
 
     local all_players = Global.getVar("active_players")
     for _, p in ipairs(all_players) do
-        if (p.last_action_card and p.last_action_card == lead_name) then
+
+        if (p.last_action_card and p.last_action_card == surpass_name) then
             Initiative.take(p.color)
 
             p.last_action_card = nil
