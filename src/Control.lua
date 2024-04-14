@@ -291,7 +291,7 @@ function setupBaseGame()
 
     if (base_setup_success) then
         setControlButtons()
-        return
+        start_round()
     end
 
 end
@@ -309,6 +309,7 @@ function setup_leaders()
     end
 
     setControlButtons()
+    start_round()
 end
 
 function setupCampaignGame()
