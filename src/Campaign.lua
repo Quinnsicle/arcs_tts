@@ -119,6 +119,9 @@ function Campaign.setup(with_leaders, with_ll_expansion)
         Campaign.dealPlayerFates()
     end, 5)
 
+    local reach_board = getObjectFromGUID(Global.getVar(
+        "reach_board_GUID"))
+    reach_board.setDescription("in progress")
     return true
 end
 

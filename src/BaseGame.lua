@@ -215,6 +215,9 @@ function BaseGame.setup(with_leaders, with_ll_expansion)
         -- ArcsPlayer.components_visibility(p.color, true, false)
     end
 
+    local reach_board = getObjectFromGUID(Global.getVar(
+        "reach_board_GUID"))
+    reach_board.setDescription("in progress")
     return true
 end
 

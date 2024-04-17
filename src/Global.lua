@@ -1177,13 +1177,11 @@ function onLoad()
         Supplies.addMenuToObject(obj)
     end
 
-    if (debug) then
+    local reach_board = getObjectFromGUID(Global.getVar(
+        "reach_board_GUID"))
+    if (debug or reach_board.getDescription() == "in progress") then
 
     else
-        for _, obj in pairs(getObjectsWithTag("Noninteractable")) do
-            obj.interactable = false
-        end
-
         -- Hide components
         Campaign.components_visibility(false)
         BaseGame.components_visibility({
@@ -1200,4 +1198,7 @@ function onLoad()
         end
     end
 
+    for _, obj in pairs(getObjectsWithTag("Noninteractable")) do
+        obj.interactable = false
+    end
 end
