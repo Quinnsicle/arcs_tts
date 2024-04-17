@@ -4,8 +4,6 @@ local ActionCards = require("src/ActionCards")
 local AmbitionMarkers = require("src/AmbitionMarkers")
 local Initiative = require("src/InitiativeMarker")
 
-local debug = Global.getVar("debug")
-
 control_GUID = Global.getVar("control_GUID")
 
 -- font_color = {0.8, 0.58, 0.27}, GOLD
@@ -201,7 +199,8 @@ local takeInitiative_params = {
     index = 3,
     height = 260,
     width = 440,
-    click_function = "takeInitiative",
+    function_owner = self,
+    click_function = "take_initiative",
     label = "Take\nInitiative",
     tooltip = "",
     position = {-0.45, 0.5, 0.57},
@@ -214,8 +213,8 @@ local seizeInitiative_params = {
     index = 6,
     height = 260,
     width = 440,
-    click_function = "seizeInitiative",
     function_owner = self,
+    click_function = "seize_initiative",
     label = "Seize\nInitiative",
     tooltip = "",
     position = {0.45, 0.5, 0.57},
@@ -230,9 +229,7 @@ function onload()
     self.createButton(toggleExpansionEXCLUDE_params)
     self.createButton(setupBaseGame_params)
     self.createButton(setupCampaignGame_params)
-    if (debug) then
-        self.createButton(showControls_params)
-    end
+    self.createButton(showControls_params)
     self.createButton(splitDiscardFACEUP_params)
     self.createButton({
         index = 6,
@@ -282,7 +279,8 @@ function toggleSplitDiscard()
 end
 
 function setupBaseGame()
-    local base_setup_success = BaseGame.setup()
+    local base_setup_success = BaseGame.setup(Global.getVar(
+        "with_leaders"), Global.getVar("with_more_to_explore"))
 
     if (base_setup_success and Global.getVar("with_leaders")) then
         setLeaderControls()
@@ -313,7 +311,8 @@ function setup_leaders()
 end
 
 function setupCampaignGame()
-    local campaign_setup_success = Campaign.setup()
+    local campaign_setup_success = Campaign.setup(Global.getVar(
+        "with_leaders"), Global.getVar("with_more_to_explore"))
 
     if (campaign_setup_success) then
         setControlButtons()
@@ -384,9 +383,7 @@ function setStartupButtons()
         label = "",
         tooltip = ""
     })
-    if (debug) then
-        self.editButton(showControls_params)
-    end
+    self.editButton(showControls_params)
 
     if (ActionCards.is_face_up_discard_active()) then
         self.editButton(splitDiscardFACEUP_params)
@@ -512,14 +509,14 @@ function endHand()
 
 end
 
-function takeInitiative(objectButtonClicked, playerColorClicked)
+function take_initiative(objectButtonClicked, playerColorClicked)
 
-    Initiative.take(playerColorClicked)
+    Initiative.take(playerColor)
 
 end
 
-function seizeInitiative(objectButtonClicked, playerColorClicked)
+function seize_initiative(objectButtonClicked, playerColorClicked)
 
-    Initiative.seize(playerColorClicked)
+    Initiative.seize(playerColor)
 
 end

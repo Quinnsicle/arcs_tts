@@ -1,7 +1,6 @@
 reach_board_GUID = "bb7d21"
-setup_table_GUID = "95f3f9"
+
 -- leaders and lore
-more_to_explore_expansion_button_GUID = "9ff1fd"
 more_to_explore_fate_GUID = "768d3d"
 more_to_explore_lore_GUID = "3441e5"
 
@@ -42,15 +41,6 @@ frontiers_2P_GUID = "d4c37c"
 homelands_2P_GUID = "559dbb"
 mix_up_1_2P_GUID = "850244"
 mix_up_2_2P_GUID = "ddc074"
-
--- out of play pieces
-oop_pieces_GUID = "7cbd3a"
-oop_small_gate1_GUID = "136d54"
-oop_small_gate2_GUID = "e4823d"
-oop_large_gate1_GUID = "af1d03"
-oop_large_gate2_GUID = "9bd528"
-oop_planet_GUIDs = {"6ecb02", "795637", "ae5114", "d5fe1a", "0d3d0c",
-                    "4d14cb"}
 
 initiative_GUID = "b3b3d0"
 seized_initiative_GUID = "e0f490"
@@ -225,8 +215,6 @@ resources_markers_GUID = {
 
 control_GUID = "6e21fe"
 
-campaign_setup_GUID = "4c00fe"
-
 event_deck_GUID = "ad423d"
 chapter_track_GUID = "4d34d7"
 chapter_zone_GUID = "2d2c49"
@@ -236,16 +224,16 @@ imperial_council_GUID = "89ddf3"
 laws_GUID = "f0362b"
 guild_envoys_depart_GUID = "ba6fc8"
 govern_GUID = "df60d0"
-regents_GUID = "238ef1"
+regents_GUID = "9c8d55"
 
 event_die_GUID = "684608"
 number_die_GUID = "d5e298"
 die_zone_GUID = "1b45bb"
 
 imperial_ships_GUID = "beb54d"
-imperial_ships_text_GUID = "6daaa3"
 free_cities_GUID = "80742e"
 free_starports_GUID = "c79cb8"
 blight_GUID = "ff61a8"
 
 A_Fates_GUID = "0ac7d1"
+

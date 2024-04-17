@@ -5,12 +5,13 @@ available_colors = {"White", "Yellow", "Red", "Teal"}
 ----------------------------------------------------
 -- [DEBUG] REMEMBER TO SET TO FALSE BEFORE RELEASE
 ----------------------------------------------------
-debug = true
-debug_player_count = 4
+debug = false
+debug_player_count = 2
 ----------------------------------------------------
 
 with_more_to_explore = false
 with_leaders = false
+is_face_up_discard_active = false
 
 oop_components = {{
     Sector = {
@@ -95,17 +96,15 @@ oop_components = {{
 initaitive_player_position = {-2, 0, 0}
 
 active_players = {}
-is_player_setup = {
-    White = false,
-    Yellow = false,
-    Red = false,
-    Teal = false
-}
 
 ----------------------------------------------------
+local ActionCards = require("src/ActionCards")
+local ArcsPlayer = require("src/ArcsPlayer")
+local BaseGame = require("src/BaseGame")
+local Campaign = require("src/Campaign")
 local Counters = require("src/Counters")
 local Initiative = require("src/InitiativeMarker")
-local ArcsPlayer = require("src/ArcsPlayer")
+local SetupControl = require("src/SetupControl")
 local Supplies = require("src/Supplies")
 
 function assignPlayerToAvailableColor(player, color)
@@ -1168,6 +1167,9 @@ starting_pieces = {
 
 function onLoad()
 
+    getObjectFromGUID(action_deck_GUID).addContextMenuItem(
+        "Draw bottom card", ActionCards.draw_bottom)
+
     Counters.setup()
     Initiative.add_menu()
 
@@ -1175,12 +1177,27 @@ function onLoad()
         Supplies.addMenuToObject(obj)
     end
 
-    for _, obj in pairs(getObjectsWithTag("Noninteractable")) do
-        obj.interactable = false
+    if (debug) then
+
+    else
+        for _, obj in pairs(getObjectsWithTag("Noninteractable")) do
+            obj.interactable = false
+        end
+
+        -- Hide components
+        Campaign.components_visibility(false)
+        BaseGame.components_visibility({
+            is_visible = false,
+            is_campaign = false,
+            is_4p = true,
+            leaders_and_lore = true,
+            leaders_and_lore_expansion = true -- ,
+            -- faceup_discard = true
+        })
+
+        for _, v in pairs(available_colors) do
+            ArcsPlayer.components_visibility(v, false, false)
+        end
     end
-    -- Assign all connected players to a color spot.
-    -- for _, player in ipairs(Player.getPlayers()) do
-    --     assignPlayerToAvailableColor(player)
-    -- end
 
 end

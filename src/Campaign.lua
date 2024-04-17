@@ -1,37 +1,119 @@
 local LOG = require("src/LOG")
 
-local Campaign = {}
+local Campaign = {
+    guids = {
+        -- A Plots
+        a_plots = "0ac7d1",
+        steward = "111666",
+        magnate = "77dbd5",
+        caretaker = "7d2e2f",
+        partisan = "ffca5f",
+        advocate = "0a2f8b",
+        founder = "e60ae0",
+        admiral = "1c96a7",
+        believer = "132ec8",
+        -- B Plots
+        b_plots = "34808c",
+        pathfinder = "2a11a7",
+        hegemon = "958e7e",
+        planet_breaker = "c2d3f6",
+        pirate = "1cd72e",
+        blight_speaker = "027b8d",
+        pacifist = "1c35fe",
+        peacemaker = "6a4456",
+        warden = "ac3550",
+        -- C Plots
+        c_plots = "284e7b",
+        overlord = "e0c9fa",
+        survivalist = "42e8ad",
+        redeemer = "2868af",
+        guardian = "1239bb",
+        naturalist = "e417c1",
+        gate_wraith = "364937",
+        conspirator = "3747fe",
+        judge = "6dc4a9",
 
+        event_die = "684608",
+        number_die = "d5e298",
+        chapter_card = "4d34d7",
+
+        first_regent = "e9b0f4",
+        book_of_law = "f0362b",
+        in_session = "89ddf3",
+        guild_envoys_depart = "ba6fc8",
+        govern_edicts = "df60d0",
+        regent_cards = "9c8d55",
+
+        free_starports = "c79cb8",
+        free_cities = "80742e",
+        imperial_ships = "beb54d",
+        blight = "ff61a8",
+
+        court = "fb55bf",
+        event_cards = "ad423d",
+        flagships = "ea53d9",
+        rules = "f1dd49",
+        intermission_help = "b25b55",
+        empire_help = "dad146"
+
+    }
+}
+
+local BaseGame = require("src/BaseGame")
 local supplies = require("src/Supplies")
 local action_cards = require("src/ActionCards")
 local resource = require("src/Resource")
 local merchant = require("src/Merchant")
 
-function Campaign.setup()
+function Campaign.components_visibility(is_visible)
+    local visibility = is_visible and {} or
+                           {"Red", "White", "Yellow", "Teal", "Black",
+                            "Grey"}
 
-    local ordered_players = Global.call("getOrderedPlayers")
-    if (#ordered_players < 2 or #ordered_players > 4) then
+    for _, id in pairs(Campaign.guids) do
+        local obj = getObjectFromGUID(id)
+        obj.setInvisibleTo(visibility)
+    end
+end
+
+function Campaign.setup(with_leaders, with_ll_expansion)
+
+    local active_players = Global.call("getOrderedPlayers")
+    if (#active_players < 2 or #active_players > 4) then
         return false
     end
 
+    Campaign.components_visibility(true)
+    BaseGame.components_visibility({
+        is_visible = true,
+        is_campaign = true,
+        is_4p = #active_players == 4,
+        leaders_and_lore = with_leaders,
+        leaders_and_lore_expansion = with_ll_expansion
+    })
+
     -- B
     local initiative = require("src/InitiativeMarker")
-    initiative.take(ordered_players[1].color)
+    initiative.take(active_players[1].color)
 
     -- C, D, E
-    action_cards.setup_deck(#ordered_players)
-    action_cards.setup_events(#ordered_players)
+    action_cards.setup_deck(#active_players)
+    action_cards.setup_events(#active_players)
 
     Campaign.setupChapterTrack()
     LOG.INFO("setupChapterTrack Complete")
-    Campaign.setupCampaignGuildCards(#ordered_players)
+    Campaign.setupCampaignGuildCards(#active_players)
     LOG.INFO("setupCampaignGuildCards Complete")
     Campaign.setupImperialCouncil()
     LOG.INFO("setupImperialCouncil Complete")
-    Campaign.setupImperialRules(#ordered_players)
+    Campaign.setupImperialRules(#active_players)
     LOG.INFO("setupImperialRules Complete")
-    Campaign.setupClusters(#ordered_players)
+    Campaign.setupClusters(#active_players)
     LOG.INFO("setupClusters Complete")
+
+    for _, p in pairs(active_players) do
+        ArcsPlayer.setup(p, true)
+    end
 
     Wait.time(function()
         Campaign.dealPlayerFates()
@@ -317,7 +399,7 @@ function Campaign.dealPlayerFates()
     A_Fates.shuffle()
     A_Fates.deal(2)
 
-    broadcastToAll("Choose a Fate secretly, discard the other.", {
+    broadcastToAll("\nChoose a Fate secretly, discard the other.", {
         r = 1,
         g = 0,
         b = 0
@@ -325,13 +407,13 @@ function Campaign.dealPlayerFates()
 
     Wait.time(function()
         broadcastToAll(
-            "When everyone has chosen one, reveal them and take the matching fate bag.",
+            "\nWhen everyone has chosen one, reveal them and take the matching fate bag.",
             {
                 r = 1,
                 g = 0,
                 b = 0
             })
-    end, 2)
+    end, 5)
 end
 
 -- D

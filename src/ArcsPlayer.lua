@@ -2,66 +2,76 @@ require("src/GUIDs")
 local Log = require("src/LOG")
 local Resource = require("src/Resource")
 
+local power_count = 0
+
 local player_pieces = {
     ["White"] = {
-        board = "999dbd",
-        score_board = "41c240",
-        resource = {"822a9c", "00ee1b"},
-        ships = "6883e6",
-        starports = "b96445",
-        agents = "c863eb",
-        cities = {"822a9c", "00ee1b", "a50d56", "06f4a8", "81c3a7"},
+        components = {
+            board = "999dbd",
+            score_board = "41c240",
+            ships = "6883e6",
+            starports = "b96445",
+            agents = "c863eb",
+            cities = {"822a9c", "00ee1b", "a50d56", "06f4a8", "81c3a7"},
+            power = "38ef71",
+            objective = "59d36b"
+        },
         initiative_zone = "2e1cd3",
         trophies_zone = "275a50",
         captives_zone = "0c07a0",
         area_zone = "a952c1",
-        hand_zone = "c832bf",
-        power = "38ef71"
+        hand_zone = "c832bf"
     },
     ["Yellow"] = {
-        board = "5aa44c",
-        score_board = "9ef1b2",
-        resource = {"dbf4de", "799077"},
-        ships = "a75924",
-        starports = "b9ebd3",
-        agents = "7b3749",
-        cities = {"dbf4de", "799077", "acfa72", "ac28fb", "b41592"},
+        components = {
+            board = "5aa44c",
+            score_board = "9ef1b2",
+            ships = "a75924",
+            starports = "b9ebd3",
+            agents = "7b3749",
+            cities = {"dbf4de", "799077", "acfa72", "ac28fb", "b41592"},
+            power = "e1edd4",
+            objective = "c5bc19"
+        },
         initiative_zone = "3fc6fd",
         trophies_zone = "7f5014",
         captives_zone = "31a56f",
         area_zone = "238a92",
-        hand_zone = "856b9d",
-        power = "e1edd4"
+        hand_zone = "856b9d"
     },
     ["Teal"] = {
-        board = "ae512a",
-        score_board = "5f8f5b",
-        resource = {"f3da7f", "f3da7f"},
-        ships = "2da385",
-        starports = "7e625d",
-        agents = "791097",
-        cities = {"f3da7f", "5e753e", "79b799", "fad0f1", "45c804"},
+        components = {
+            board = "ae512a",
+            score_board = "5f8f5b",
+            ships = "2da385",
+            starports = "7e625d",
+            agents = "791097",
+            cities = {"f3da7f", "5e753e", "79b799", "fad0f1", "45c804"},
+            power = "40f97a",
+            objective = "3c2ffc"
+        },
         initiative_zone = "cdc545",
         trophies_zone = "3085c9",
         captives_zone = "fe0b0d",
         area_zone = "ee4b6e",
-        hand_zone = "c9dd8d",
-        power = "40f97a"
+        hand_zone = "c9dd8d"
     },
     ["Red"] = {
-        board = "c0c8a1",
-        score_board = "a51833",
-        resource = {"33577c", "cf5b95"},
-        ships = "7e0fe2",
-        starports = "51a8f5",
-        agents = "bbb3aa",
-        cities = {"33577c", "cf5b95", "0ac3c2", "6e36ca", "282f37"},
+        components = {
+            board = "c0c8a1",
+            score_board = "a51833",
+            ships = "7e0fe2",
+            starports = "51a8f5",
+            agents = "bbb3aa",
+            cities = {"33577c", "cf5b95", "0ac3c2", "6e36ca", "282f37"},
+            power = "4c96ac",
+            objective = "8d76b7"
+        },
         initiative_zone = "32f290",
         trophies_zone = "48b6fb",
         captives_zone = "7b011e",
         area_zone = "c2bf05",
-        hand_zone = "54730a",
-        power = "4c96ac"
+        hand_zone = "54730a"
     }
 }
 
@@ -104,29 +114,74 @@ ArcsPlayer = {
     }}
 }
 
+function ArcsPlayer.components_visibility(color, is_visible,
+    is_campaign)
+    local visibility = is_visible and {} or
+                           {"Red", "White", "Yellow", "Teal", "Black",
+                            "Grey"}
+
+    for key, id in pairs(player_pieces[color]["components"]) do
+        if (key == "cities") then
+            ArcsPlayer._show_cities(color, is_visible)
+
+        elseif (key == "objective" and not is_campaign) then
+            local obj = getObjectFromGUID(id)
+            obj.setInvisibleTo({"Red", "White", "Yellow", "Teal",
+                                "Black", "Grey"})
+        else
+            local obj = getObjectFromGUID(id)
+            obj.setInvisibleTo(visibility)
+
+        end
+    end
+end
+
+function ArcsPlayer._show_cities(color, is_visible)
+    local visibility = is_visible and {} or
+                           {"Red", "White", "Yellow", "Teal", "Black",
+                            "Grey"}
+
+    for _, id in pairs(player_pieces[color].components.cities) do
+        local obj = getObjectFromGUID(id)
+        obj.setInvisibleTo(visibility)
+    end
+end
+
 function ArcsPlayer:new(o)
     o = o or ArcsPlayer -- create object if user does not provide one
     setmetatable(o, self)
     self.__index = self
-
-    -- print("test 1")
-    -- for _, player in ipairs(Player.getPlayers()) do
-    --     print("test 2")
-    --     if (player.color == o.color) then
-    --         print("test 3")
-    --         print(player.color)
-    --         o.player_instance = player
-    --     end
-    -- end
-
     o:create_score()
-
     return o
+end
 
+function ArcsPlayer:setup(is_campaign)
+    -- move power
+    local y_pos
+    local x_pos
+    if (self.color == "Red") then
+        y_pos = 3
+        x_pos = -13.92
+    elseif (self.color == "White") then
+        y_pos = 3
+        x_pos = -13.26
+    elseif (self.color == "Teal") then
+        y_pos = 2
+        x_pos = -13.92
+    elseif (self.color == "Yellow") then
+        y_pos = 2
+        x_pos = -13.26
+    end
+    local power = getObjectFromGUID(
+        player_pieces[self.color].components.power)
+    power.setPosition({x_pos, y_pos, -9.36})
+
+    ArcsPlayer.components_visibility(self.color, true, is_campaign)
 end
 
 function ArcsPlayer:take_resource(name, slot_num)
-    self.board = getObjectFromGUID(player_pieces[self.color]["board"])
+    self.board = getObjectFromGUID(
+        player_pieces[self.color]["components"]["board"])
     local board_pos = self.board.getPosition()
     local slot_pos = self.resource_slot_pos[slot_num]
 
@@ -135,11 +190,11 @@ end
 
 function ArcsPlayer:update_score()
     self.score_board = getObjectFromGUID(
-        player_pieces[self.color]["score_board"])
+        player_pieces[self.color]["components"]["score_board"])
 
     -- Power
     local power_cube = getObjectFromGUID(
-        player_pieces[self.color].power)
+        player_pieces[self.color]["components"].power)
     local power_pos_x = power_cube.getPosition().x
     local power = math.floor((power_pos_x + 13.26) / 0.655)
     self.power = (power > 0) and power or 0
@@ -176,28 +231,28 @@ function ArcsPlayer:update_score()
         label = self.tycoon
     })
 
-    -- Warlord
-    self.trophies = #getObjectFromGUID(
-                        player_pieces[self.color]["trophies_zone"]).getObjects()
-    self.score_board.editButton({
-        index = 6,
-        label = self.trophies
-    })
-    self.score_board.editButton({
-        index = 7,
-        label = self.trophies
-    })
-
     -- Tyrant
     self.captives = #getObjectFromGUID(
                         player_pieces[self.color]["captives_zone"]).getObjects()
     self.score_board.editButton({
-        index = 8,
+        index = 6,
         label = self.captives
     })
     self.score_board.editButton({
-        index = 9,
+        index = 7,
         label = self.captives
+    })
+
+    -- Warlord
+    self.trophies = #getObjectFromGUID(
+                        player_pieces[self.color]["trophies_zone"]).getObjects()
+    self.score_board.editButton({
+        index = 8,
+        label = self.trophies
+    })
+    self.score_board.editButton({
+        index = 9,
+        label = self.trophies
     })
 
     -- Keeper
@@ -243,10 +298,11 @@ end
 
 function ArcsPlayer:create_score()
     self.score_board = getObjectFromGUID(
-        player_pieces[self.color]["score_board"])
+        player_pieces[self.color]["components"]["score_board"])
 
     local shadow = Vector({0.007, 0, 0.032})
-    local text_color = Color.fromString(self.color)
+    -- local text_color = Color.fromString(self.color)
+    local text_color = Color.fromString("White")
 
     -- Power
     self.score_board.createButton({

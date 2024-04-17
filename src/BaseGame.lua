@@ -1,6 +1,45 @@
 local LOG = require("src/LOG")
 
-local BaseGame = {}
+local BaseGame = {
+    components = {
+        base_exclusive = {
+            setup_cards = "f02e75",
+            court = "9ac2b3"
+        },
+        leaders = "2d243a",
+        leaders_expansion = "768d3d",
+        lore = "0d8ede",
+        lore_expansion = "3441e5",
+        faceup_discard_cards = "a8e929",
+        action_cards_4p = "13bedd",
+
+        core = {
+            reach_board = "bb7d21",
+            dice_board = "af1f85",
+            dice_help = "10d34b",
+            rules = "bdf1aa",
+            round_help = "bcb75f",
+            ambition_high = "c9e0ee",
+            ambition_medium = "a9b02a",
+            ambition_low = "b0b4d0",
+            action_cards = "227406",
+            ambition_declared = "0289cb",
+            chapter_pawn = "9c3ac8",
+            psionic_placeholder = "a89706",
+            psionic_stack = "1b4b0b",
+            relic_placeholder = "473675",
+            relic_stack = "5895b5",
+            weapon_placeholder = "2fdfa3",
+            weapon_stack = "1c2d2a",
+            fuel_placeholder = "5cb321",
+            fuel_stack = "ed2820",
+            material_placeholder = "eb1cba",
+            material_stack = "57c2c6",
+            initiative = "b3b3d0"
+
+        }
+    }
+}
 
 local ArcsPlayer = require("src/ArcsPlayer")
 local supplies = require("src/Supplies")
@@ -36,13 +75,118 @@ local leader_setup_markers = {
     guids = {}
 }
 
-function BaseGame.setup()
+function BaseGame.leaders_visibility(show, with_expansion)
+    local visibility = show and {} or
+                           {"Red", "White", "Yellow", "Teal", "Black",
+                            "Grey"}
+    if (with_expansion) then
+        local expansion = getObjectFromGUID(
+            BaseGame.components.leaders_expansion)
+        expansion.setInvisibleTo(visibility)
+    end
+    local leaders = getObjectFromGUID(BaseGame.components.leaders)
+    leaders.setInvisibleTo(visibility)
+end
+
+function BaseGame.lore_visibility(show, with_expansion)
+    local visibility = show and {} or
+                           {"Red", "White", "Yellow", "Teal", "Black",
+                            "Grey"}
+    if (with_expansion) then
+        local expansion = getObjectFromGUID(
+            BaseGame.components.lore_expansion)
+        expansion.setInvisibleTo(visibility)
+    end
+    local lore = getObjectFromGUID(BaseGame.components.lore)
+    lore.setInvisibleTo(visibility)
+end
+
+function BaseGame.faceup_discard_cards__visibility(show)
+    local visibility = show and {} or
+                           {"Red", "White", "Yellow", "Teal", "Black",
+                            "Grey"}
+    local faceup_discard_cards = getObjectFromGUID(
+        BaseGame.components.faceup_discard_cards)
+    faceup_discard_cards.setInvisibleTo(visibility)
+end
+
+function BaseGame.core_components_visibility(show)
+    local visibility = show and {} or
+                           {"Red", "White", "Yellow", "Teal", "Black",
+                            "Grey"}
+    for _, id in pairs(BaseGame.components.core) do
+        local obj = getObjectFromGUID(id)
+        obj.setInvisibleTo(visibility)
+    end
+end
+
+function BaseGame.four_player_cards_visibility(show)
+    local visibility = show and {} or
+                           {"Red", "White", "Yellow", "Teal", "Black",
+                            "Grey"}
+    local obj = getObjectFromGUID(BaseGame.components.action_cards_4p)
+    obj.setInvisibleTo(visibility)
+end
+
+function BaseGame.base_exclusive_components_visibility(show)
+    local visibility = show and {} or
+                           {"Red", "White", "Yellow", "Teal", "Black",
+                            "Grey"}
+    for _, id in pairs(BaseGame.components.base_exclusive) do
+        local obj = getObjectFromGUID(id)
+        obj.setInvisibleTo(visibility)
+    end
+end
+
+-- params = {
+--     is_visible = true,
+--     is_campaign = true,
+--     is_4p = true,
+--     leaders_and_lore = true,
+--     leaders_and_lore_expansion = true,
+--     faceup_discard = true
+-- }
+function BaseGame.components_visibility(params)
+    BaseGame.core_components_visibility(params.is_visible)
+    if (not params.is_campaign) then
+        BaseGame.base_exclusive_components_visibility(
+            params.is_visible)
+    end
+    if (params.is_4p) then
+        BaseGame.four_player_cards_visibility(params.is_visible)
+    end
+    if (params.leaders_and_lore) then
+        BaseGame.leaders_visibility(params.is_visible,
+            params.leaders_and_lore_expansion)
+        BaseGame.lore_visibility(params.is_visible,
+            params.leaders_and_lore_expansion)
+    end
+    -- -- might not need this
+    -- if (params.faceup_discard) then
+    -- end
+    if (not params.is_visible) then
+        local obj = getObjectFromGUID(
+            BaseGame.components.faceup_discard_cards)
+        obj.setInvisibleTo({"Red", "White", "Yellow", "Teal", "Black",
+                            "Grey"})
+    end
+end
+
+function BaseGame.setup(with_leaders, with_ll_expansion)
 
     local active_players = Global.call("getOrderedPlayers")
     Global.setVar("active_players", active_players)
     if (#active_players < 2 or #active_players > 4) then
         return false
     end
+
+    BaseGame.components_visibility({
+        is_visible = true,
+        is_campaign = false,
+        is_4p = #active_players == 4,
+        leaders_and_lore = with_leaders,
+        leaders_and_lore_expansion = with_ll_expansion
+    })
 
     -- B
     local initiative = require("src/InitiativeMarker")
@@ -62,12 +206,15 @@ function BaseGame.setup()
         BaseGame.dealLeaders(#active_players)
         BaseGame.place_player_markers(active_players,
             chosen_setup_card)
-        return true
     else
         BaseGame.setupPlayers(active_players, chosen_setup_card)
     end
 
-    Global.setVar("active_players", active_players)
+    for _, p in pairs(active_players) do
+        ArcsPlayer.setup(p, false)
+        -- ArcsPlayer.components_visibility(p.color, true, false)
+    end
+
     return true
 end
 
