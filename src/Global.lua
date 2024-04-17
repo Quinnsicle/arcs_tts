@@ -1170,7 +1170,6 @@ function onLoad()
     getObjectFromGUID(action_deck_GUID).addContextMenuItem(
         "Draw bottom card", ActionCards.draw_bottom)
 
-    Counters.setup()
     Initiative.add_menu()
 
     for _, obj in pairs(getObjectsWithTag("City")) do

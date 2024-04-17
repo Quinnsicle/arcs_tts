@@ -60,6 +60,7 @@ local Campaign = {
 }
 
 local BaseGame = require("src/BaseGame")
+local Counters = require("src/Counters")
 local supplies = require("src/Supplies")
 local action_cards = require("src/ActionCards")
 local resource = require("src/Resource")
@@ -114,6 +115,7 @@ function Campaign.setup(with_leaders, with_ll_expansion)
     for _, p in pairs(active_players) do
         ArcsPlayer.setup(p, true)
     end
+    Counters.setup()
 
     Wait.time(function()
         Campaign.dealPlayerFates()

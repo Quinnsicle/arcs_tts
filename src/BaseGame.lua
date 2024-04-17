@@ -42,6 +42,7 @@ local BaseGame = {
 }
 
 local ArcsPlayer = require("src/ArcsPlayer")
+local Counters = require("src/Counters")
 local supplies = require("src/Supplies")
 local action_cards = require("src/ActionCards")
 local resource = require("src/Resource")
@@ -214,6 +215,7 @@ function BaseGame.setup(with_leaders, with_ll_expansion)
         ArcsPlayer.setup(p, false)
         -- ArcsPlayer.components_visibility(p.color, true, false)
     end
+    Counters.setup()
 
     local reach_board = getObjectFromGUID(Global.getVar(
         "reach_board_GUID"))
