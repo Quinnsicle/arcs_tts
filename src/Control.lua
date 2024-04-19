@@ -187,7 +187,7 @@ local endHand_params = {
     index = 2,
     height = 260,
     width = 820,
-    click_function = "endHand",
+    click_function = "end_hand",
     label = "End Hand",
     tooltip = "",
     font_size = 90,
@@ -279,8 +279,8 @@ function toggleSplitDiscard()
 end
 
 function setupBaseGame()
-    local base_setup_success = BaseGame.setup(Global.getVar(
-        "with_leaders"), Global.getVar("with_more_to_explore"))
+    local base_setup_success = BaseGame.setup(Global.getVar("with_leaders"),
+        Global.getVar("with_more_to_explore"))
 
     if (base_setup_success and Global.getVar("with_leaders")) then
         setLeaderControls()
@@ -297,12 +297,11 @@ end
 function setup_leaders()
 
     if BaseGame.setup_leaders() == false then
-        broadcastToAll(
-            "Place chosen leader near player board to continue.", {
-                r = 1,
-                g = 0,
-                b = 0
-            })
+        broadcastToAll("Place chosen leader near player board to continue.", {
+            r = 1,
+            g = 0,
+            b = 0
+        })
         return
     end
 
@@ -311,8 +310,8 @@ function setup_leaders()
 end
 
 function setupCampaignGame()
-    local campaign_setup_success = Campaign.setup(Global.getVar(
-        "with_leaders"), Global.getVar("with_more_to_explore"))
+    local campaign_setup_success = Campaign.setup(Global.getVar("with_leaders"),
+        Global.getVar("with_more_to_explore"))
 
     if (campaign_setup_success) then
         setControlButtons()
@@ -483,10 +482,10 @@ function start_round()
 
 end
 
-function endHand()
+function end_hand()
 
     ActionCards.clear_played()
-    AmbitionMarkers.resetZeroMarker()
+    AmbitionMarkers.reset_zero_marker()
     Initiative.unseize()
 
     -- Find surpassing card
@@ -494,8 +493,7 @@ function endHand()
     if (surpass == nil) then
         return
     end
-    local surpass_name = surpass.type .. " " ..
-                             tostring(surpass.number)
+    local surpass_name = surpass.type .. " " .. tostring(surpass.number)
 
     local all_players = Global.getVar("active_players")
     for _, p in ipairs(all_players) do
