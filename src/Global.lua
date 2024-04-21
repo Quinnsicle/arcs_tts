@@ -13,85 +13,87 @@ with_more_to_explore = false
 with_leaders = false
 is_face_up_discard_active = false
 
-oop_components = {{
-    Sector = {
-        pos = {-0.17, 0.97, -1.04},
-        rot = {0, 180, -0.01},
-        scale = {2.48, 1, 2.48},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769502/1D85B9468BB538D788FCF7576A05606918CD0DD4/"
-    },
-    Gate = {
-        pos = {-0.04, 0.97, -0.63},
-        rot = {0, 189.24, -0.01},
-        scale = {0.71, 1, 0.71},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769214/A4AD66554742C2FFA93612948C38641B813947FB/"
+oop_components = {
+    {
+        Sector = {
+            pos = {-0.17, 0.97, -1.04},
+            rot = {0, 180, -0.01},
+            scale = {2.48, 1, 2.48},
+            img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769502/1D85B9468BB538D788FCF7576A05606918CD0DD4/"
+        },
+        Gate = {
+            pos = {-0.04, 0.97, -0.63},
+            rot = {0, 189.24, -0.01},
+            scale = {0.71, 1, 0.71},
+            img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769214/A4AD66554742C2FFA93612948C38641B813947FB/"
+        }
+    }, {
+        Sector = {
+            pos = {-0.51, 0.97, -0.66},
+            rot = {0, 180, -0.01},
+            scale = {2.48, 1, 2.48},
+            img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769605/A40A0C79B27F1F1C45E0570E46BA8A7B253F356E/"
+        },
+        Gate = {
+            pos = {-0.23, 0.97, -0.21},
+            rot = {0, 252.52, 0},
+            scale = {0.44, 1, 0.44},
+            img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/"
+        }
+    }, {
+        Sector = {
+            pos = {-0.47, 0.97, 0.73},
+            rot = {0, 179.99, -0.01},
+            scale = {2.36, 1, 2.36},
+            img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769710/C408A11914F7F4DEA83686851730DDF10A8BD5D4/"
+        },
+        Gate = {
+            pos = {-0.2, 0.97, 0.28},
+            rot = {0, 305.16, 0},
+            scale = {0.44, 1, 0.44},
+            img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/"
+        }
+    }, {
+        Sector = {
+            pos = {0.17, 0.97, 0.91},
+            rot = {0, 180, -0.01},
+            scale = {2.54, 1, 2.54},
+            img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769816/0AA42154550040133E7D6740F85CD487D5F6967B/"
+        },
+        Gate = {
+            pos = {0.05, 0.97, 0.52},
+            rot = {-0.01, 12.02, 0},
+            scale = {0.71, 1, 0.71},
+            img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769214/A4AD66554742C2FFA93612948C38641B813947FB/"
+        }
+    }, {
+        Sector = {
+            pos = {0.5, 0.97, 0.55},
+            rot = {0, 179.99, -0.01},
+            scale = {2.48, 1, 2.48},
+            img = "http://cloud-3.steamusercontent.com/ugc/2313225941445770194/8600421030523070B8E2F05CECC3281DF24989AC/"
+        },
+        Gate = {
+            pos = {0.24, 0.97, 0.1},
+            rot = {-0.01, 72.87, -0.01},
+            scale = {0.44, 1, 0.44},
+            img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/"
+        }
+    }, {
+        Sector = {
+            pos = {0.46, 0.97, -0.85},
+            rot = {0, 179.99, -0.01},
+            scale = {2.29, 1, 2.29},
+            img = "http://cloud-3.steamusercontent.com/ugc/2313225941445770362/76677A077FC1D6CD3672DCC036646ABFD2881F62/"
+        },
+        Gate = {
+            pos = {0.2, 0.97, -0.39},
+            rot = {-0.01, 125.02, -0.01},
+            scale = {0.44, 1, 0.44},
+            img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/"
+        }
     }
-}, {
-    Sector = {
-        pos = {-0.51, 0.97, -0.66},
-        rot = {0, 180, -0.01},
-        scale = {2.48, 1, 2.48},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769605/A40A0C79B27F1F1C45E0570E46BA8A7B253F356E/"
-    },
-    Gate = {
-        pos = {-0.23, 0.97, -0.21},
-        rot = {0, 252.52, 0},
-        scale = {0.44, 1, 0.44},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/"
-    }
-}, {
-    Sector = {
-        pos = {-0.47, 0.97, 0.73},
-        rot = {0, 179.99, -0.01},
-        scale = {2.36, 1, 2.36},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769710/C408A11914F7F4DEA83686851730DDF10A8BD5D4/"
-    },
-    Gate = {
-        pos = {-0.2, 0.97, 0.28},
-        rot = {0, 305.16, 0},
-        scale = {0.44, 1, 0.44},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/"
-    }
-}, {
-    Sector = {
-        pos = {0.17, 0.97, 0.91},
-        rot = {0, 180, -0.01},
-        scale = {2.54, 1, 2.54},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769816/0AA42154550040133E7D6740F85CD487D5F6967B/"
-    },
-    Gate = {
-        pos = {0.05, 0.97, 0.52},
-        rot = {-0.01, 12.02, 0},
-        scale = {0.71, 1, 0.71},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769214/A4AD66554742C2FFA93612948C38641B813947FB/"
-    }
-}, {
-    Sector = {
-        pos = {0.5, 0.97, 0.55},
-        rot = {0, 179.99, -0.01},
-        scale = {2.48, 1, 2.48},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445770194/8600421030523070B8E2F05CECC3281DF24989AC/"
-    },
-    Gate = {
-        pos = {0.24, 0.97, 0.1},
-        rot = {-0.01, 72.87, -0.01},
-        scale = {0.44, 1, 0.44},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/"
-    }
-}, {
-    Sector = {
-        pos = {0.46, 0.97, -0.85},
-        rot = {0, 179.99, -0.01},
-        scale = {2.29, 1, 2.29},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445770362/76677A077FC1D6CD3672DCC036646ABFD2881F62/"
-    },
-    Gate = {
-        pos = {0.2, 0.97, -0.39},
-        rot = {-0.01, 125.02, -0.01},
-        scale = {0.44, 1, 0.44},
-        img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769422/DFF68E0F82851F1AAE746B676B40470DDF3B2FBC/"
-    }
-}}
+}
 
 initaitive_player_position = {-2, 0, 0}
 
@@ -109,8 +111,7 @@ local Supplies = require("src/Supplies")
 
 function assignPlayerToAvailableColor(player, color)
     local color = table.remove(available_colors, 1)
-    broadcastToAll(
-        "Assigning " .. player.steam_name .. " to color " .. color)
+    broadcastToAll("\nAssigning " .. player.steam_name .. " to color " .. color)
     player.changeColor(color)
 end
 
@@ -186,8 +187,8 @@ end
 
 function onObjectLeaveContainer(container, leave_object)
     Counters.update(container)
-    if container.type == "Deck" or container.type == "Bag" or
-        container.type == "Infinite" then
+    if container.type == "Deck" or container.type == "Bag" or container.type ==
+        "Infinite" then
         leave_object.setTags(container.getTags())
 
         -- set snap
@@ -214,9 +215,8 @@ end
 function getOrderedPlayers()
     local seated_players = getSeatedPlayers()
     if (debug and #seated_players == 1) then
-        broadcastToAll(
-            "Debugging enabled for " .. debug_player_count ..
-                " players.")
+        broadcastToAll("\nDebugging enabled for " .. debug_player_count ..
+                           " players.")
         if (debug_player_count > 3) then
             seated_players = {"White", "Yellow", "Teal", "Red"}
         else
@@ -241,7 +241,7 @@ function getOrderedPlayers()
 
     local player_count = #seated_players
     if (player_count > 4 or player_count < 2) then
-        msg = "This game only supports 2-4 players"
+        msg = "\nThis game only supports 2-4 players"
         broadcastToAll(msg, {
             r = 1,
             g = 0,
@@ -306,8 +306,10 @@ function dealGuildCards(qty)
     for i = 1, qty do
         court_deck.takeObject({
             flip = true,
-            position = {court_deck_pos.x, court_deck_pos.y,
-                        court_deck_pos_z - (i * 2.41)}
+            position = {
+                court_deck_pos.x, court_deck_pos.y,
+                court_deck_pos_z - (i * 2.41)
+            }
         })
     end
 
@@ -1167,8 +1169,8 @@ starting_pieces = {
 
 function onLoad()
 
-    getObjectFromGUID(action_deck_GUID).addContextMenuItem(
-        "Draw bottom card", ActionCards.draw_bottom)
+    getObjectFromGUID(action_deck_GUID).addContextMenuItem("Draw bottom card",
+        ActionCards.draw_bottom)
 
     Initiative.add_menu()
 
@@ -1176,8 +1178,7 @@ function onLoad()
         Supplies.addMenuToObject(obj)
     end
 
-    local reach_board = getObjectFromGUID(Global.getVar(
-        "reach_board_GUID"))
+    local reach_board = getObjectFromGUID(Global.getVar("reach_board_GUID"))
     if (debug or reach_board.getDescription() == "in progress") then
 
     else

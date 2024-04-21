@@ -68,8 +68,7 @@ local merchant = require("src/Merchant")
 
 function Campaign.components_visibility(is_visible)
     local visibility = is_visible and {} or
-                           {"Red", "White", "Yellow", "Teal", "Black",
-                            "Grey"}
+                           {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
 
     for _, id in pairs(Campaign.guids) do
         local obj = getObjectFromGUID(id)
@@ -121,8 +120,7 @@ function Campaign.setup(with_leaders, with_ll_expansion)
         Campaign.dealPlayerFates()
     end, 5)
 
-    local reach_board = getObjectFromGUID(Global.getVar(
-        "reach_board_GUID"))
+    local reach_board = getObjectFromGUID(Global.getVar("reach_board_GUID"))
     reach_board.setDescription("in progress")
     return true
 end
@@ -130,10 +128,8 @@ end
 -- G
 function Campaign.setupChapterTrack()
 
-    local chapter_track = getObjectFromGUID(Global.getVar(
-        "chapter_track_GUID"))
-    local chapter_zone = getObjectFromGUID(Global.getVar(
-        "chapter_zone_GUID"))
+    local chapter_track = getObjectFromGUID(Global.getVar("chapter_track_GUID"))
+    local chapter_zone = getObjectFromGUID(Global.getVar("chapter_zone_GUID"))
     local chapter_zone_pos = chapter_zone.getPosition()
 
     chapter_track.setPosition(chapter_zone_pos)
@@ -145,11 +141,10 @@ end
 
 -- I,J
 function Campaign.setupCampaignGuildCards(player_count)
-    local court_zone = getObjectFromGUID(Global.getVar(
-        "court_deck_zone_GUID"))
+    local court_zone = getObjectFromGUID(Global.getVar("court_deck_zone_GUID"))
     local court_zone_pos = court_zone.getPosition()
-    local campaign_court = getObjectFromGUID(Global.getVar(
-        "campaign_court_GUID"))
+    local campaign_court = getObjectFromGUID(
+        Global.getVar("campaign_court_GUID"))
 
     campaign_court.setPosition(court_zone_pos)
     campaign_court.setRotation({0, 270, 180})
@@ -159,11 +154,10 @@ function Campaign.setupCampaignGuildCards(player_count)
         Global.call("dealGuildCards", player_count == 2 and 3 or 4)
 
         -- add lore cards
-        local lore_deck =
-            getObjectFromGUID(Global.getVar("lore_GUID"))
+        local lore_deck = getObjectFromGUID(Global.getVar("lore_GUID"))
 
         if (Global.getVar("with_more_to_explore")) then
-            broadcastToAll("Playing with the Leaders & Lore Expansion")
+            broadcastToAll("\nPlaying with the Leaders & Lore Expansion")
 
             local mte_lore = getObjectFromGUID(Global.getVar(
                 "more_to_explore_lore_GUID"))
@@ -175,8 +169,9 @@ function Campaign.setupCampaignGuildCards(player_count)
 
         for i = 1, player_count, 1 do
             lore_deck.takeObject({
-                position = {court_zone_pos.x, court_zone_pos.y + 1,
-                            court_zone_pos.z},
+                position = {
+                    court_zone_pos.x, court_zone_pos.y + 1, court_zone_pos.z
+                },
                 rotation = {0, 270, 180},
                 flip = false,
                 smooth = false
@@ -216,8 +211,8 @@ function Campaign.setupImperialRules(player_count)
     }
 
     if (player_count == 2) then
-        local guild_envoys_depart =
-            getObjectFromGUID(Global.getVar("guild_envoys_depart_GUID"))
+        local guild_envoys_depart = getObjectFromGUID(Global.getVar(
+            "guild_envoys_depart_GUID"))
         guild_envoys_depart.setRotation({0, 270, 0})
         guild_envoys_depart.setPositionSmooth(next_law_pos)
         next_law_pos_z = next_law_pos_z - 2.4
@@ -237,20 +232,18 @@ end
 -- N,O,P
 function Campaign.setupClusters(player_count)
     -- Roll Dice
-    local number_die = getObjectFromGUID(Global.getVar(
-        "number_die_GUID"))
-    local die_zone_pos = getObjectFromGUID(Global.getVar(
-        "die_zone_GUID")).getPosition()
+    local number_die = getObjectFromGUID(Global.getVar("number_die_GUID"))
+    local die_zone_pos =
+        getObjectFromGUID(Global.getVar("die_zone_GUID")).getPosition()
     number_die.setPosition({
         x = die_zone_pos.x - 1.2,
         y = die_zone_pos.y,
         z = die_zone_pos.z
     })
 
-    local event_die = getObjectFromGUID(
-        Global.getVar("event_die_GUID"))
-    local die_zone_pos = getObjectFromGUID(Global.getVar(
-        "die_zone_GUID")).getPosition()
+    local event_die = getObjectFromGUID(Global.getVar("event_die_GUID"))
+    local die_zone_pos =
+        getObjectFromGUID(Global.getVar("die_zone_GUID")).getPosition()
     event_die.setPosition({
         x = die_zone_pos.x + 1.2,
         y = die_zone_pos.y,
@@ -288,11 +281,10 @@ function Campaign.setupClusters(player_count)
             imperial_ships.setPosition({-19.75, 1, 6.00})
 
             for i = 1, 2, 1 do
-                for system, v in pairs(
-                    cluster_zones[imperial_clusters[i]]) do
-                    system_ship_zone =
-                        (system == "gate") and getObjectFromGUID(v) or
-                            getObjectFromGUID(v["ships"])
+                for system, v in pairs(cluster_zones[imperial_clusters[i]]) do
+                    system_ship_zone = (system == "gate") and
+                                           getObjectFromGUID(v) or
+                                           getObjectFromGUID(v["ships"])
                     local pos = system_ship_zone.getPosition()
                     imperial_ships.takeObject({
                         position = {pos.x, pos.y + 0.5, pos.z}
@@ -308,16 +300,16 @@ function Campaign.setupClusters(player_count)
             local event_die_planets = {"b", "c", "a", "a", "b", "c"}
 
             LOG.INFO("Setup Free Cities and Blight")
-            local free_cities_supply =
-                getObjectFromGUID(Global.getVar("free_cities_GUID"))
+            local free_cities_supply = getObjectFromGUID(Global.getVar(
+                "free_cities_GUID"))
             free_cities_supply.setPosition({-16.25, 1, 6})
 
             local free_starports_supply =
                 getObjectFromGUID(Global.getVar("free_starports_GUID"))
             free_starports_supply.setPosition({-16.25, 1, 7.75})
 
-            local blight_supply = getObjectFromGUID(Global.getVar(
-                "blight_GUID"))
+            local blight_supply =
+                getObjectFromGUID(Global.getVar("blight_GUID"))
             blight_supply.setPosition({-19.75, 1, 7.75})
 
             for cluster, value in pairs(cluster_zones) do
@@ -327,9 +319,8 @@ function Campaign.setupClusters(player_count)
                         local free_system =
                             event_die_planets[event_die.getRotationValue()]
                         if (system == free_system) then
-                            system_city_zone =
-                                getObjectFromGUID(
-                                    system_value["buildings"][1])
+                            system_city_zone = getObjectFromGUID(
+                                system_value["buildings"][1])
                             local pos = system_city_zone.getPosition()
                             free_cities_supply.takeObject({
                                 position = {pos.x, pos.y + 0.5, pos.z},
@@ -343,24 +334,20 @@ function Campaign.setupClusters(player_count)
 
                         -- Blight
                         if (system == "gate") then
-                            system_ship_zone =
-                                getObjectFromGUID(system_value)
+                            system_ship_zone = getObjectFromGUID(system_value)
                         else
-                            system_ship_zone =
-                                getObjectFromGUID(
-                                    system_value["ships"])
+                            system_ship_zone = getObjectFromGUID(
+                                system_value["ships"])
                         end
 
-                        local blight_pos =
-                            system_ship_zone.getPosition()
+                        local blight_pos = system_ship_zone.getPosition()
 
-                        local blight =
-                            getObjectFromGUID(Global.getVar(
-                                "blight_GUID"))
+                        local blight = getObjectFromGUID(Global.getVar(
+                            "blight_GUID"))
                         blight.takeObject({
-                            position = {blight_pos.x,
-                                        blight_pos.y + 0.5,
-                                        blight_pos.z},
+                            position = {
+                                blight_pos.x, blight_pos.y + 0.5, blight_pos.z
+                            },
                             rotation = {
                                 x = 0,
                                 y = 180,

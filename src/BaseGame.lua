@@ -14,6 +14,7 @@ local BaseGame = {
         action_cards_4p = "13bedd",
 
         core = {
+            control_board = "6e21fe",
             reach_board = "bb7d21",
             dice_board = "af1f85",
             dice_help = "10d34b",
@@ -78,11 +79,10 @@ local leader_setup_markers = {
 
 function BaseGame.leaders_visibility(show, with_expansion)
     local visibility = show and {} or
-                           {"Red", "White", "Yellow", "Teal", "Black",
-                            "Grey"}
+                           {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
     if (with_expansion) then
-        local expansion = getObjectFromGUID(
-            BaseGame.components.leaders_expansion)
+        local expansion = getObjectFromGUID(BaseGame.components
+                                                .leaders_expansion)
         expansion.setInvisibleTo(visibility)
     end
     local leaders = getObjectFromGUID(BaseGame.components.leaders)
@@ -91,11 +91,9 @@ end
 
 function BaseGame.lore_visibility(show, with_expansion)
     local visibility = show and {} or
-                           {"Red", "White", "Yellow", "Teal", "Black",
-                            "Grey"}
+                           {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
     if (with_expansion) then
-        local expansion = getObjectFromGUID(
-            BaseGame.components.lore_expansion)
+        local expansion = getObjectFromGUID(BaseGame.components.lore_expansion)
         expansion.setInvisibleTo(visibility)
     end
     local lore = getObjectFromGUID(BaseGame.components.lore)
@@ -104,17 +102,15 @@ end
 
 function BaseGame.faceup_discard_cards__visibility(show)
     local visibility = show and {} or
-                           {"Red", "White", "Yellow", "Teal", "Black",
-                            "Grey"}
-    local faceup_discard_cards = getObjectFromGUID(
-        BaseGame.components.faceup_discard_cards)
+                           {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
+    local faceup_discard_cards = getObjectFromGUID(BaseGame.components
+                                                       .faceup_discard_cards)
     faceup_discard_cards.setInvisibleTo(visibility)
 end
 
 function BaseGame.core_components_visibility(show)
     local visibility = show and {} or
-                           {"Red", "White", "Yellow", "Teal", "Black",
-                            "Grey"}
+                           {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
     for _, id in pairs(BaseGame.components.core) do
         local obj = getObjectFromGUID(id)
         obj.setInvisibleTo(visibility)
@@ -123,16 +119,14 @@ end
 
 function BaseGame.four_player_cards_visibility(show)
     local visibility = show and {} or
-                           {"Red", "White", "Yellow", "Teal", "Black",
-                            "Grey"}
+                           {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
     local obj = getObjectFromGUID(BaseGame.components.action_cards_4p)
     obj.setInvisibleTo(visibility)
 end
 
 function BaseGame.base_exclusive_components_visibility(show)
     local visibility = show and {} or
-                           {"Red", "White", "Yellow", "Teal", "Black",
-                            "Grey"}
+                           {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
     for _, id in pairs(BaseGame.components.base_exclusive) do
         local obj = getObjectFromGUID(id)
         obj.setInvisibleTo(visibility)
@@ -150,8 +144,7 @@ end
 function BaseGame.components_visibility(params)
     BaseGame.core_components_visibility(params.is_visible)
     if (not params.is_campaign) then
-        BaseGame.base_exclusive_components_visibility(
-            params.is_visible)
+        BaseGame.base_exclusive_components_visibility(params.is_visible)
     end
     if (params.is_4p) then
         BaseGame.four_player_cards_visibility(params.is_visible)
@@ -166,10 +159,8 @@ function BaseGame.components_visibility(params)
     -- if (params.faceup_discard) then
     -- end
     if (not params.is_visible) then
-        local obj = getObjectFromGUID(
-            BaseGame.components.faceup_discard_cards)
-        obj.setInvisibleTo({"Red", "White", "Yellow", "Teal", "Black",
-                            "Grey"})
+        local obj = getObjectFromGUID(BaseGame.components.faceup_discard_cards)
+        obj.setInvisibleTo({"Red", "White", "Yellow", "Teal", "Black", "Grey"})
     end
 end
 
@@ -205,8 +196,7 @@ function BaseGame.setup(with_leaders, with_ll_expansion)
 
     if (Global.getVar("with_leaders")) then
         BaseGame.dealLeaders(#active_players)
-        BaseGame.place_player_markers(active_players,
-            chosen_setup_card)
+        BaseGame.place_player_markers(active_players, chosen_setup_card)
     else
         BaseGame.setupPlayers(active_players, chosen_setup_card)
     end
@@ -217,8 +207,7 @@ function BaseGame.setup(with_leaders, with_ll_expansion)
     end
     Counters.setup()
 
-    local reach_board = getObjectFromGUID(Global.getVar(
-        "reach_board_GUID"))
+    local reach_board = getObjectFromGUID(Global.getVar("reach_board_GUID"))
     reach_board.setDescription("in progress")
     return true
 end
@@ -260,11 +249,9 @@ end
 function BaseGame.setupBaseCourt(player_count)
     LOG.INFO("Setup Base Court")
 
-    local court_zone = getObjectFromGUID(Global.getVar(
-        "court_deck_zone_GUID"))
+    local court_zone = getObjectFromGUID(Global.getVar("court_deck_zone_GUID"))
     local court_zone_pos = court_zone.getPosition()
-    local base_court = getObjectFromGUID(Global.getVar(
-        "base_court_deck_GUID"))
+    local base_court = getObjectFromGUID(Global.getVar("base_court_deck_GUID"))
 
     base_court.setPosition(court_zone_pos)
     base_court.setRotation({0, 270, 180})
@@ -281,82 +268,87 @@ function BaseGame.chooseSetupCard(player_count)
 
     local player_colors = {"White", "Yellow", "Teal", "Red"}
 
-    local two_player_setup_cards = {{
-        name = "FRONTIERS *For Experienced Players*",
-        guid = Global.getVar("frontiers_2P_GUID"),
-        out_of_play_clusters = {1, 6},
-        player_colors = 2
-    }, {
-        name = "HOMELANDS",
-        guid = Global.getVar("homelands_2P_GUID"),
-        out_of_play_clusters = {1, 4},
-        player_colors = 2
-    }, {
-        name = "MIX UP 1",
-        guid = Global.getVar("mix_up_1_2P_GUID"),
-        out_of_play_clusters = {2, 5},
-        player_colors = 2
-    }, {
-        name = "MIX UP 2",
-        guid = Global.getVar("mix_up_2_2P_GUID"),
-        out_of_play_clusters = {1, 4},
-        player_colors = 2
-    }}
+    local two_player_setup_cards = {
+        {
+            name = "FRONTIERS *For Experienced Players*",
+            guid = Global.getVar("frontiers_2P_GUID"),
+            out_of_play_clusters = {1, 6},
+            player_colors = 2
+        }, {
+            name = "HOMELANDS",
+            guid = Global.getVar("homelands_2P_GUID"),
+            out_of_play_clusters = {1, 4},
+            player_colors = 2
+        }, {
+            name = "MIX UP 1",
+            guid = Global.getVar("mix_up_1_2P_GUID"),
+            out_of_play_clusters = {2, 5},
+            player_colors = 2
+        }, {
+            name = "MIX UP 2",
+            guid = Global.getVar("mix_up_2_2P_GUID"),
+            out_of_play_clusters = {1, 4},
+            player_colors = 2
+        }
+    }
 
-    local three_player_setup_cards = {{
-        name = "FRONTIERS",
-        guid = Global.getVar("frontiers_3P_GUID"),
-        out_of_play_clusters = {2, 3},
-        player_colors = 3
-    }, {
-        name = "HOMELANDS",
-        guid = Global.getVar("homelands_3P_GUID"),
-        out_of_play_clusters = {5, 6},
-        player_colors = 3
-    }, {
-        name = "CORE CONFLICT *For Experienced Players*",
-        guid = Global.getVar("core_conflict_3P_GUID"),
-        out_of_play_clusters = {3, 6},
-        player_colors = 3
-    }, {
-        name = "MIX UP",
-        guid = Global.getVar("mix_up_3P_GUID"),
-        out_of_play_clusters = {1, 4},
-        player_colors = 3
-    }}
+    local three_player_setup_cards = {
+        {
+            name = "FRONTIERS",
+            guid = Global.getVar("frontiers_3P_GUID"),
+            out_of_play_clusters = {2, 3},
+            player_colors = 3
+        }, {
+            name = "HOMELANDS",
+            guid = Global.getVar("homelands_3P_GUID"),
+            out_of_play_clusters = {5, 6},
+            player_colors = 3
+        }, {
+            name = "CORE CONFLICT *For Experienced Players*",
+            guid = Global.getVar("core_conflict_3P_GUID"),
+            out_of_play_clusters = {3, 6},
+            player_colors = 3
+        }, {
+            name = "MIX UP",
+            guid = Global.getVar("mix_up_3P_GUID"),
+            out_of_play_clusters = {1, 4},
+            player_colors = 3
+        }
+    }
 
-    local four_player_setup_cards = {{
-        name = "FRONTIERS",
-        guid = Global.getVar("frontiers_4P_GUID"),
-        out_of_play_clusters = {5},
-        player_colors = 4
-    }, {
-        name = "MIX UP 1",
-        guid = Global.getVar("mix_up_1_4P_GUID"),
-        out_of_play_clusters = {3},
-        player_colors = 4
-    }, {
-        name = "MIX UP 2",
-        guid = Global.getVar("mix_up_2_4P_GUID"),
-        out_of_play_clusters = {4},
-        player_colors = 4
-    }, {
-        name = "MIX UP 3",
-        guid = Global.getVar("mix_up_3_4P_GUID"),
-        out_of_play_clusters = {6},
-        player_colors = 4
-    }}
+    local four_player_setup_cards = {
+        {
+            name = "FRONTIERS",
+            guid = Global.getVar("frontiers_4P_GUID"),
+            out_of_play_clusters = {5},
+            player_colors = 4
+        }, {
+            name = "MIX UP 1",
+            guid = Global.getVar("mix_up_1_4P_GUID"),
+            out_of_play_clusters = {3},
+            player_colors = 4
+        }, {
+            name = "MIX UP 2",
+            guid = Global.getVar("mix_up_2_4P_GUID"),
+            out_of_play_clusters = {4},
+            player_colors = 4
+        }, {
+            name = "MIX UP 3",
+            guid = Global.getVar("mix_up_3_4P_GUID"),
+            out_of_play_clusters = {6},
+            player_colors = 4
+        }
+    }
 
-    local setup_cards = {two_player_setup_cards,
-                         three_player_setup_cards,
-                         four_player_setup_cards}
+    local setup_cards = {
+        two_player_setup_cards, three_player_setup_cards,
+        four_player_setup_cards
+    }
 
-    local chosen_setup_card =
-        setup_cards[player_count - 1][math.random(
-            #setup_cards[player_count - 1])]
+    local chosen_setup_card = setup_cards[player_count - 1][math.random(
+        #setup_cards[player_count - 1])]
 
-    local setup_deck = getObjectFromGUID(Global.getVar(
-        "setup_deck_GUID"))
+    local setup_deck = getObjectFromGUID(Global.getVar("setup_deck_GUID"))
     setup_deck.takeObject({
         guid = chosen_setup_card.guid,
         flip = true,
@@ -367,13 +359,13 @@ function BaseGame.chooseSetupCard(player_count)
                 -- However, it's also given the object time to enter another container, if
                 -- it spawned on one. Thus, we must confirm the object is not destroyed.
                 if not spawnedObject.isDestroyed() then
-                    spawnedObject.setPositionSmooth({-30, 1, 16})
+                    spawnedObject.setPositionSmooth({-49.4, 2, 11})
                 end
             end)
         end
     })
 
-    getObjectFromGUID(chosen_setup_card.guid).setScale({5, 5, 5})
+    getObjectFromGUID(chosen_setup_card.guid).setScale({3, 1, 3})
     return chosen_setup_card
 
 end
@@ -405,15 +397,13 @@ end
 function BaseGame.place_player_markers(ordered_players, setup_card)
     LOG.INFO("Place Player Markers")
 
-    local locations =
-        Global.getVar("starting_locations")[setup_card.guid]
+    local locations = Global.getVar("starting_locations")[setup_card.guid]
     local cluster_zone_guids = Global.getVar("cluster_zone_GUIDs")
     local board = getObjectFromGUID(Global.getVar("reach_board_GUID"))
 
     for player_number, ABC in pairs(locations) do
         local player_color = ordered_players[player_number].color
-        local player_marker_images =
-            leader_setup_markers[player_color]
+        local player_marker_images = leader_setup_markers[player_color]
 
         -- iterate through setup card's ABCs
         LOG.DEBUG("iterate through setup card's ABCs")
@@ -424,8 +414,8 @@ function BaseGame.place_player_markers(ordered_players, setup_card)
             local move_pos
             if (system == "gate") then -- a gate system
                 LOG.DEBUG("a gate system")
-                move_pos = getObjectFromGUID(
-                               cluster_zone_guids[cluster][system]).getPosition()
+                move_pos =
+                    getObjectFromGUID(cluster_zone_guids[cluster][system]).getPosition()
             else -- this is a planetary system
                 LOG.DEBUG("a planetary system")
                 move_pos = getObjectFromGUID(
@@ -455,13 +445,13 @@ function BaseGame.dealLeaders(player_count)
 
     local leader_deck = getObjectFromGUID(Global.getVar("fate_GUID"))
     local lore_deck = getObjectFromGUID(Global.getVar("lore_GUID"))
-    local mte_fate = getObjectFromGUID(Global.getVar(
-        "more_to_explore_fate_GUID"))
-    local mte_lore = getObjectFromGUID(Global.getVar(
-        "more_to_explore_lore_GUID"))
+    local mte_fate = getObjectFromGUID(
+        Global.getVar("more_to_explore_fate_GUID"))
+    local mte_lore = getObjectFromGUID(
+        Global.getVar("more_to_explore_lore_GUID"))
 
     if (Global.getVar("with_more_to_explore")) then
-        broadcastToAll("Playing with the Leaders & Lore Expansion")
+        broadcastToAll("\nPlaying with the Leaders & Lore Expansion")
 
         leader_deck.putObject(mte_fate)
         lore_deck.putObject(mte_lore)
@@ -471,21 +461,20 @@ function BaseGame.dealLeaders(player_count)
     lore_deck.randomize()
 
     local leader_pos = {
-        x = -39,
+        x = 25,
         y = 1,
-        z = 7
+        z = 2
     }
     local lore_pos = {
-        x = -39,
+        x = 25,
         y = 1,
-        z = 2.5
+        z = -2.5
     }
 
     for i = 1, player_count + 1 do
         leader_deck.takeObject({
             flip = true,
-            position = {leader_pos.x + (i * 3.2), leader_pos.y,
-                        leader_pos.z}
+            position = {leader_pos.x + (i * 3.2), leader_pos.y, leader_pos.z}
         })
         lore_deck.takeObject({
             flip = true,
@@ -518,8 +507,7 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
         end
     end
 
-    local locations =
-        Global.getVar("starting_locations")[setup_card.guid]
+    local locations = Global.getVar("starting_locations")[setup_card.guid]
 
     for player_number, ABC in pairs(locations) do
         local player_color = ordered_players[player_number].color
@@ -543,8 +531,7 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
             local cluster = cluster_system["cluster"]
             local system = cluster_system["system"]
 
-            LOG.DEBUG(
-                "get building/ship/gate zones in cluster and system")
+            LOG.DEBUG("get building/ship/gate zones in cluster and system")
             local building_zone
             local ship_zone
             local gate_zone
@@ -559,8 +546,10 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
                 local ship_place_offset = 0
                 for i = 1, ship_qty, 1 do
                     ship_bag.takeObject({
-                        position = {gate_zone.x, gate_zone.y + 0.5,
-                                    gate_zone.z + ship_place_offset}
+                        position = {
+                            gate_zone.x, gate_zone.y + 0.5,
+                            gate_zone.z + ship_place_offset
+                        }
                     })
                     ship_place_offset = ship_place_offset + 0.3
                 end
@@ -569,8 +558,7 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
                                     cluster_zone_guids[cluster][system]["buildings"][1]).getPosition()
 
                 LOG.DEBUG("get building type to move")
-                local building_type =
-                    pieces[starting_letter]["building"]
+                local building_type = pieces[starting_letter]["building"]
 
                 LOG.DEBUG("move building to building zone one")
                 if (building_type == "city") then
@@ -581,9 +569,10 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
                     end
                 elseif (building_type == "starport") then
                     starport_bag.takeObject({
-                        position = {building_zone.x,
-                                    building_zone.y + 0.5,
-                                    building_zone.z},
+                        position = {
+                            building_zone.x, building_zone.y + 0.5,
+                            building_zone.z
+                        },
                         rotation = {0, 180, 0}
                     })
                 end
@@ -595,8 +584,10 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
                 local ship_place_offset = 0
                 for i = 1, ship_qty, 1 do
                     ship_bag.takeObject({
-                        position = {ship_zone.x, ship_zone.y + 0.5,
-                                    ship_zone.z + ship_place_offset}
+                        position = {
+                            ship_zone.x, ship_zone.y + 0.5,
+                            ship_zone.z + ship_place_offset
+                        }
                     })
                     ship_place_offset = ship_place_offset + 0.3
                 end
@@ -611,10 +602,12 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
         local starting_resources = pieces["resources"]
 
         if not (starting_resources) then
-            starting_resources = {resource:name_from_cluster(
-                ABC["A"]["cluster"], ABC["A"]["system"]),
-                                  resource:name_from_cluster(
-                ABC["B"]["cluster"], ABC["B"]["system"])}
+            starting_resources = {
+                resource:name_from_cluster(ABC["A"]["cluster"],
+                    ABC["A"]["system"]),
+                resource:name_from_cluster(ABC["B"]["cluster"],
+                    ABC["B"]["system"])
+            }
         end
 
         LOG.DEBUG("starting_resource: " .. starting_resources[1])
