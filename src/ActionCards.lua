@@ -24,7 +24,6 @@ local fud_pos = Vector({-3.60, 0.10, 0.00})
 local fud_rot = Vector({0.00, 90.00, 0.50})
 local fud_offset = Vector({0.42, 0.00, 0.00})
 local fud_tag = "Face Up Discard Action"
-local is_fud_active = false
 
 local face_up_discard_guids = {
     ["Administration 1"] = "b994c0",
@@ -81,13 +80,15 @@ function ActionCards.setup_events(player_ct)
 end
 
 function ActionCards.toggle_face_up_discard()
+    local is_fud_active = Global.getVar("is_face_up_discard_active")
     is_fud_active = not is_fud_active
     fud_marker.setPosition(fud_marker_pos[is_fud_active])
+    Global.setVar("is_face_up_discard_active", is_fud_active)
     return is_fud_active
 end
 
 function ActionCards.is_face_up_discard_active()
-    return is_fud_active
+    return Global.getVar("is_face_up_discard_active")
 end
 
 function ActionCards.deal_hand()
@@ -135,7 +136,8 @@ function ActionCards.clear_played()
     for ct, obj in ipairs(played_objects) do
         if (obj.getName() ~= "Action Card") then
             supplies.returnObject(obj)
-        elseif (is_fud_active and not obj.is_face_down) then
+        elseif (Global.getVar("is_face_up_discard_active") and
+            not obj.is_face_down) then
             ActionCards.to_face_up_discard(obj)
             ActionCards.to_face_down_discard(obj)
         else
@@ -278,6 +280,17 @@ function ActionCards.draw_bottom(player_color, position, object)
         position = hand_zone.position,
         rotation = hand_zone.rotation + Vector({0, 180, 0})
     })
+end
+
+function ActionCards.faceup_discard_visibility(show)
+    local visibility = show and {} or
+                           {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
+    local discard = getObjectFromGUID(FUDiscard_marker_GUID)
+    discard.setInvisibleTo(visibility)
+end
+
+function ActionCards.get_fud_marker()
+    return fud_marker
 end
 
 return ActionCards

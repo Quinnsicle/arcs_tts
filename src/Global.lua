@@ -1,3 +1,6 @@
+local authors = "Quinnsicle, Scyth02"
+local version = "1.0"
+
 require("src/GUIDs")
 
 available_colors = {"White", "Yellow", "Red", "Teal"}
@@ -1166,6 +1169,69 @@ starting_pieces = {
 }
 
 ----------------------------------------------------
+-- params = {
+--     is_campaign = false,
+--     is_4p = #active_players == 4,
+--     leaders_and_lore = with_leaders,
+--     leaders_and_lore_expansion = with_ll_expansion,
+--     faceup_discard = ActionCards.is_face_up_discard_active(),
+--     players = active_players
+-- }
+function set_game_in_progress(params)
+    print("set_game_in_progress")
+    Counters.setup()
+    local reach_board = getObjectFromGUID(Global.getVar("reach_board_GUID"))
+    reach_board.setDescription("in progress")
+
+    local visibility = {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
+
+    print("face up discard")
+    if (params.with_faceup_discard) then
+        ActionCards.faceup_discard_visibility(true)
+        local fud_marker = getObjectFromGUID(FUDiscard_marker_GUID)
+        fud_marker.setDescription("active")
+    end
+
+    print("base components visibility")
+    BaseGame.core_components_visibility(true)
+    if (params.is_campaign) then
+        BaseGame.base_exclusive_components_visibility(true)
+        local campaign_rules = getObjectFromGUID(Campaign.guids.rules)
+        campaign_rules.setDescription("active")
+    end
+    if (params.is_4p) then
+        BaseGame.four_player_cards_visibility(true)
+    end
+    if (params.leaders_and_lore) then
+        BaseGame.leaders_visibility(true, params.leaders_and_lore_expansion)
+        BaseGame.lore_visibility(true, params.leaders_and_lore_expansion)
+    end
+    if (not true) then
+        local obj = getObjectFromGUID(BaseGame.components.faceup_discard_cards)
+        obj.setInvisibleTo({"Red", "White", "Yellow", "Teal", "Black", "Grey"})
+    end
+
+    -- campaign components visibility
+    print("campaign components visibility")
+    for _, id in pairs(Campaign.guids) do
+        local obj = getObjectFromGUID(id)
+        obj.setInvisibleTo(visibility)
+    end
+
+    -- player components visibility
+    print("player components visibility")
+    for _, color in ipairs(params.players) do
+        ArcsPlayer.components_visibility(color, true, params.is_campaign)
+        local player_board = getObjectFromGUID(
+            player_pieces_GUIDs[color].player_board)
+        player_board.setDescription("active")
+    end
+    -- for _, v in ipairs(getOrderedPlayers()) do
+    --     ArcsPlayer.components_visibility(v.color, true, params.is_campaign)
+    --     local player_board = getObjectFromGUID(v.components.board)
+    --     player_board.setDescription("active")
+    -- end
+end
 
 function onLoad()
 
@@ -1179,7 +1245,33 @@ function onLoad()
     end
 
     local reach_board = getObjectFromGUID(Global.getVar("reach_board_GUID"))
-    if (debug or reach_board.getDescription() == "in progress") then
+    if (reach_board.getDescription() == "in progress") then
+
+        local campaign_rules = getObjectFromGUID(Campaign.guids.rules)
+        local is_campaign = campaign_rules.getDescription() == "active"
+        Campaign.components_visibility(is_campaign)
+
+        local fud_marker = getObjectFromGUID(FUDiscard_marker_GUID)
+        is_face_up_discard_active = fud_marker.getDescription() == "active"
+        if (is_face_up_discard_active) then
+            print(ActionCards.is_face_up_discard_active())
+        end
+
+        for _, v in ipairs({"Red", "White", "Yellow", "Teal"}) do
+            local player_board = getObjectFromGUID(
+                player_pieces_GUIDs[v].player_board)
+            if (player_board.getDescription() == "active") then
+                local arcs_player = ArcsPlayer:new{
+                    color = v
+                }
+                table.insert(active_players, arcs_player)
+            end
+        end
+        for _, v in ipairs(active_players) do
+            ArcsPlayer.components_visibility(v.color, true, is_campaign)
+        end
+        Counters.setup()
+    elseif debug then
 
     else
         -- Hide components
@@ -1201,4 +1293,10 @@ function onLoad()
     for _, obj in pairs(getObjectsWithTag("Noninteractable")) do
         obj.interactable = false
     end
+
+    local face_up_discard_action_deck = getObjectFromGUID(
+        face_up_discard_action_deck_GUID)
+    face_up_discard_action_deck.setInvisibleTo({
+        "Red", "White", "Yellow", "Teal", "Black", "Grey"
+    })
 end

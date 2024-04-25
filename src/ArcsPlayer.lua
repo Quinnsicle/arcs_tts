@@ -87,59 +87,56 @@ ArcsPlayer = {
     empath = 0,
     player_instance = nil,
     last_action_card = nil,
-    resource_slot_pos = {{
-        x = 0.863,
-        y = 0.209,
-        z = -0.741
-    }, {
-        x = 0.614,
-        y = 0.209,
-        z = -0.742
-    }, {
-        x = 0.365,
-        y = 0.209,
-        z = -0.742
-    }, {
-        x = -0.381,
-        y = 0.209,
-        z = -0.743
-    }, {
-        x = 0.116,
-        y = 0.209,
-        z = -0.742
-    }, {
-        x = -0.132,
-        y = 0.209,
-        z = -0.742
-    }}
+    resource_slot_pos = {
+        {
+            x = 0.863,
+            y = 0.209,
+            z = -0.741
+        }, {
+            x = 0.614,
+            y = 0.209,
+            z = -0.742
+        }, {
+            x = 0.365,
+            y = 0.209,
+            z = -0.742
+        }, {
+            x = -0.381,
+            y = 0.209,
+            z = -0.743
+        }, {
+            x = 0.116,
+            y = 0.209,
+            z = -0.742
+        }, {
+            x = -0.132,
+            y = 0.209,
+            z = -0.742
+        }
+    }
 }
 
-function ArcsPlayer.components_visibility(color, is_visible,
-    is_campaign)
+function ArcsPlayer.components_visibility(color, is_visible, is_campaign)
     local visibility = is_visible and {} or
-                           {"Red", "White", "Yellow", "Teal", "Black",
-                            "Grey"}
-
+                           {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
     for key, id in pairs(player_pieces[color]["components"]) do
         if (key == "cities") then
             ArcsPlayer._show_cities(color, is_visible)
-
         elseif (key == "objective" and not is_campaign) then
             local obj = getObjectFromGUID(id)
-            obj.setInvisibleTo({"Red", "White", "Yellow", "Teal",
-                                "Black", "Grey"})
+            obj.setInvisibleTo({
+                "Red", "White", "Yellow", "Teal", "Black", "Grey"
+            })
         else
             local obj = getObjectFromGUID(id)
             obj.setInvisibleTo(visibility)
-
         end
     end
 end
 
 function ArcsPlayer._show_cities(color, is_visible)
     local visibility = is_visible and {} or
-                           {"Red", "White", "Yellow", "Teal", "Black",
-                            "Grey"}
+                           {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
 
     for _, id in pairs(player_pieces[color].components.cities) do
         local obj = getObjectFromGUID(id)
@@ -172,8 +169,7 @@ function ArcsPlayer:setup(is_campaign)
         y_pos = 2
         x_pos = -13.26
     end
-    local power = getObjectFromGUID(
-        player_pieces[self.color].components.power)
+    local power = getObjectFromGUID(player_pieces[self.color].components.power)
     power.setPosition({x_pos, y_pos, -9.36})
 
     ArcsPlayer.components_visibility(self.color, true, is_campaign)
@@ -209,8 +205,8 @@ function ArcsPlayer:update_score()
 
     -- Hand
     -- self.hand_size = self.player_instance.getHandCount()
-    self.hand_size = #getObjectFromGUID(
-                         player_pieces[self.color]["hand_zone"]).getObjects()
+    self.hand_size =
+        #getObjectFromGUID(player_pieces[self.color]["hand_zone"]).getObjects()
     self.score_board.editButton({
         index = 2,
         label = self.hand_size
@@ -279,8 +275,7 @@ function ArcsPlayer:update_score()
 end
 
 function ArcsPlayer:count(resource)
-    local area = getObjectFromGUID(
-        player_pieces[self.color]["area_zone"])
+    local area = getObjectFromGUID(player_pieces[self.color]["area_zone"])
     local count = 0
 
     for _, obj in pairs(area.getObjects()) do

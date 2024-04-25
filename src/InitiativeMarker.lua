@@ -30,21 +30,12 @@ end
 
 function InitiativeMarker.take(player_color)
     local initiative = getObjectFromGUID(initiative_GUID)
-    print("test 1")
-    print(player_pieces_GUIDs)
-    print(player_color)
-    print(player_pieces_GUIDs[player_color])
-    print(player_pieces_GUIDs[player_color]["player_board"])
     local player_board = getObjectFromGUID(
         player_pieces_GUIDs[player_color]["player_board"])
-    print("test 2")
     local pos = player_board.positionToWorld(initiative_pos)
-    print("test 3")
 
     if (initiative) then
-        print("test 4")
         initiative.setPositionSmooth(pos)
-        print("test 5")
         broadcastToAll("\n" .. player_color .. " takes initiative", player_color)
     end
 

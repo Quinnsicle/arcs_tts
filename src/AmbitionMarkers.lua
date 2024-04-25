@@ -90,7 +90,6 @@ function AmbitionMarkers.add_button()
 end
 
 function AmbitionMarkers.declare_button()
-    print("AAAAAAAAAAAAAAAAAAAAAAAAAAAHHHHHHHHH")
     zero_marker.editButton({
         index = 0,
         click_function = 'declare_ambition',

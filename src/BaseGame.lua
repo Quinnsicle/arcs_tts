@@ -45,7 +45,7 @@ local BaseGame = {
 local ArcsPlayer = require("src/ArcsPlayer")
 local Counters = require("src/Counters")
 local supplies = require("src/Supplies")
-local action_cards = require("src/ActionCards")
+local ActionCards = require("src/ActionCards")
 local resource = require("src/Resource")
 local merchant = require("src/Merchant")
 
@@ -100,14 +100,6 @@ function BaseGame.lore_visibility(show, with_expansion)
     lore.setInvisibleTo(visibility)
 end
 
-function BaseGame.faceup_discard_cards__visibility(show)
-    local visibility = show and {} or
-                           {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
-    local faceup_discard_cards = getObjectFromGUID(BaseGame.components
-                                                       .faceup_discard_cards)
-    faceup_discard_cards.setInvisibleTo(visibility)
-end
-
 function BaseGame.core_components_visibility(show)
     local visibility = show and {} or
                            {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
@@ -155,12 +147,8 @@ function BaseGame.components_visibility(params)
         BaseGame.lore_visibility(params.is_visible,
             params.leaders_and_lore_expansion)
     end
-    -- -- might not need this
-    -- if (params.faceup_discard) then
-    -- end
-    if (not params.is_visible) then
-        local obj = getObjectFromGUID(BaseGame.components.faceup_discard_cards)
-        obj.setInvisibleTo({"Red", "White", "Yellow", "Teal", "Black", "Grey"})
+    if (params.faceup_discard) then
+        ActionCards.faceup_discard_visibility(params.is_visible)
     end
 end
 
@@ -185,7 +173,7 @@ function BaseGame.setup(with_leaders, with_ll_expansion)
     initiative.take(active_players[1].color)
 
     -- D
-    action_cards.setup_deck(#active_players)
+    ActionCards.setup_deck(#active_players)
     BaseGame.setupBaseCourt(#active_players)
 
     chosen_setup_card = BaseGame.chooseSetupCard(#active_players)
@@ -201,14 +189,22 @@ function BaseGame.setup(with_leaders, with_ll_expansion)
         BaseGame.setupPlayers(active_players, chosen_setup_card)
     end
 
+    local active_player_colors = {}
     for _, p in pairs(active_players) do
         ArcsPlayer.setup(p, false)
         -- ArcsPlayer.components_visibility(p.color, true, false)
+        table.insert(active_player_colors, p.color)
     end
-    Counters.setup()
 
-    local reach_board = getObjectFromGUID(Global.getVar("reach_board_GUID"))
-    reach_board.setDescription("in progress")
+    local p = {
+        is_campaign = false,
+        is_4p = #active_players == 4,
+        leaders_and_lore = with_leaders,
+        leaders_and_lore_expansion = with_ll_expansion,
+        with_faceup_discard = ActionCards.is_face_up_discard_active(),
+        players = active_player_colors
+    }
+    Global.call("set_game_in_progress", p)
     return true
 end
 

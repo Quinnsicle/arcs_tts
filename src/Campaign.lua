@@ -62,7 +62,7 @@ local Campaign = {
 local BaseGame = require("src/BaseGame")
 local Counters = require("src/Counters")
 local supplies = require("src/Supplies")
-local action_cards = require("src/ActionCards")
+local ActionCards = require("src/ActionCards")
 local resource = require("src/Resource")
 local merchant = require("src/Merchant")
 
@@ -97,8 +97,8 @@ function Campaign.setup(with_leaders, with_ll_expansion)
     initiative.take(active_players[1].color)
 
     -- C, D, E
-    action_cards.setup_deck(#active_players)
-    action_cards.setup_events(#active_players)
+    ActionCards.setup_deck(#active_players)
+    ActionCards.setup_events(#active_players)
 
     Campaign.setupChapterTrack()
     LOG.INFO("setupChapterTrack Complete")
@@ -111,17 +111,27 @@ function Campaign.setup(with_leaders, with_ll_expansion)
     Campaign.setupClusters(#active_players)
     LOG.INFO("setupClusters Complete")
 
-    for _, p in pairs(active_players) do
-        ArcsPlayer.setup(p, true)
-    end
-    Counters.setup()
-
     Wait.time(function()
         Campaign.dealPlayerFates()
     end, 5)
 
-    local reach_board = getObjectFromGUID(Global.getVar("reach_board_GUID"))
-    reach_board.setDescription("in progress")
+    local active_player_colors = {}
+    for _, p in pairs(active_players) do
+        ArcsPlayer.setup(p, false)
+        -- ArcsPlayer.components_visibility(p.color, true, false)
+        table.insert(active_player_colors, p.color)
+    end
+
+    local p = {
+        is_campaign = true,
+        is_4p = #active_players == 4,
+        leaders_and_lore = with_leaders,
+        leaders_and_lore_expansion = with_ll_expansion,
+        with_faceup_discard = ActionCards.is_face_up_discard_active(),
+        players = active_player_colors
+    }
+    Global.call("set_game_in_progress", p)
+
     return true
 end
 
