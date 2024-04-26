@@ -36,7 +36,7 @@ function InitiativeMarker.take(player_color)
 
     if (initiative) then
         initiative.setPositionSmooth(pos)
-        broadcastToAll("\n" .. player_color .. " takes initiative", player_color)
+        broadcastToAll(player_color .. " takes initiative", player_color)
     end
 
 end
@@ -52,10 +52,9 @@ function InitiativeMarker.seize(player_color)
         Wait.time(function()
             initiative.setState(2)
         end, 1.5)
-        broadcastToAll("\n" .. player_color .. " seizes initiative",
-            player_color)
+        broadcastToAll(player_color .. " seizes initiative", player_color)
     else
-        broadcastToAll("\nInitiative is already seized.", Color.Red)
+        broadcastToAll("Initiative is already seized.", Color.Red)
     end
 
 end

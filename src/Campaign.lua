@@ -72,7 +72,9 @@ function Campaign.components_visibility(is_visible)
 
     for _, id in pairs(Campaign.guids) do
         local obj = getObjectFromGUID(id)
-        obj.setInvisibleTo(visibility)
+        if (obj) then
+            obj.setInvisibleTo(visibility)
+        end
     end
 end
 
@@ -83,15 +85,14 @@ function Campaign.setup(with_leaders, with_ll_expansion)
     if (#active_players < 2 or #active_players > 4) then
         return false
     end
-
-    Campaign.components_visibility(true)
-    BaseGame.components_visibility({
-        is_visible = true,
-        is_campaign = true,
-        is_4p = #active_players == 4,
-        leaders_and_lore = with_leaders,
-        leaders_and_lore_expansion = with_ll_expansion
-    })
+    -- Campaign.components_visibility(true)
+    -- BaseGame.components_visibility({
+    --     is_visible = true,
+    --     is_campaign = true,
+    --     is_4p = #active_players == 4,
+    --     leaders_and_lore = with_leaders,
+    --     leaders_and_lore_expansion = with_ll_expansion
+    -- })
 
     -- B
     local initiative = require("src/InitiativeMarker")
@@ -131,6 +132,7 @@ function Campaign.setup(with_leaders, with_ll_expansion)
         with_faceup_discard = ActionCards.is_face_up_discard_active(),
         players = active_player_colors
     }
+
     Global.call("set_game_in_progress", p)
 
     return true
@@ -168,7 +170,7 @@ function Campaign.setupCampaignGuildCards(player_count)
         local lore_deck = getObjectFromGUID(Global.getVar("lore_GUID"))
 
         if (Global.getVar("with_more_to_explore")) then
-            broadcastToAll("\nPlaying with the Leaders & Lore Expansion")
+            broadcastToAll("Playing with the Leaders & Lore Expansion")
 
             local mte_lore = getObjectFromGUID(Global.getVar(
                 "more_to_explore_lore_GUID"))
@@ -289,7 +291,7 @@ function Campaign.setupClusters(player_count)
             LOG.INFO("Setup Imperial Ships")
             local imperial_ships = getObjectFromGUID(Global.getVar(
                 "imperial_ships_GUID"))
-            imperial_ships.setPosition({-19.75, 1, 6.00})
+            imperial_ships.setPosition({-19.45, 1, 6.40})
 
             for i = 1, 2, 1 do
                 for system, v in pairs(cluster_zones[imperial_clusters[i]]) do
@@ -313,15 +315,15 @@ function Campaign.setupClusters(player_count)
             LOG.INFO("Setup Free Cities and Blight")
             local free_cities_supply = getObjectFromGUID(Global.getVar(
                 "free_cities_GUID"))
-            free_cities_supply.setPosition({-16.25, 1, 6})
+            free_cities_supply.setPosition({-16.25, 1, 6.40})
 
             local free_starports_supply =
                 getObjectFromGUID(Global.getVar("free_starports_GUID"))
-            free_starports_supply.setPosition({-16.25, 1, 7.75})
+            free_starports_supply.setPosition({-16.25, 1, 7.85})
 
             local blight_supply =
                 getObjectFromGUID(Global.getVar("blight_GUID"))
-            blight_supply.setPosition({-19.75, 1, 7.75})
+            blight_supply.setPosition({-19.45, 1, 7.85})
 
             for cluster, value in pairs(cluster_zones) do
                 if (not is_imperial_cluster[cluster]) then
@@ -402,19 +404,19 @@ function Campaign.dealPlayerFates()
     A_Fates.shuffle()
     A_Fates.deal(2)
 
-    broadcastToAll("\nChoose a Fate secretly, discard the other.", {
+    broadcastToAll("Choose a Fate secretly, discard the other.", {
         r = 1,
-        g = 0,
-        b = 0
+        g = 0.1,
+        b = 0.1
     })
 
     Wait.time(function()
         broadcastToAll(
-            "\nWhen everyone has chosen one, reveal them and take the matching fate bag.",
+            "When everyone has chosen one, reveal them and take the matching fate bag.",
             {
                 r = 1,
-                g = 0,
-                b = 0
+                g = 0.1,
+                b = 0.1
             })
     end, 5)
 end

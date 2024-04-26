@@ -111,14 +111,14 @@ function AmbitionMarkers.declare(player_color)
 
     -- Is there a lead card?
     if (not lead_info) then
-        broadcastToColor("\nNo lead card has been played", player_color)
+        broadcastToColor("No lead card has been played", player_color)
         return
     end
 
     -- Is there an ambition marker?
     local high_marker = AmbitionMarkers.highest_undeclared()
     if (not high_marker) then
-        broadcastToColor("\nNo ambition markers available", player_color)
+        broadcastToColor("No ambition markers available", player_color)
         return
     end
 
@@ -128,17 +128,17 @@ function AmbitionMarkers.declare(player_color)
 
     -- Is the lead card a 1?
     if (lead_info.number == 1 and not is_faithful) then
-        broadcastToColor("\nActions numbered 1 cannot be declared", player_color)
+        broadcastToColor("Actions numbered 1 cannot be declared", player_color)
         return
     end
 
     local power = high_marker[high_marker.object.is_face_down].power_desc
 
     if (lead_info.number == 7 or is_faithful) then
-        broadcastToAll("\n" .. player_color ..
+        broadcastToAll("" .. player_color ..
                            " is declaring ambition of choice for " .. power,
             player_color)
-        broadcastToColor("\nMove " .. power ..
+        broadcastToColor("Move " .. power ..
                              " ambition marker to desired ambition",
             player_color)
     else
@@ -146,7 +146,7 @@ function AmbitionMarkers.declare(player_color)
         local pos = high_marker.column_pos + this_ambition.row_pos;
         pos = reach_board.positionToWorld(pos)
         high_marker.object.setPositionSmooth(pos)
-        broadcastToAll("\n" .. player_color .. " has declared " ..
+        broadcastToAll("" .. player_color .. " has declared " ..
                            this_ambition.name .. " ambition for " .. power,
             player_color)
     end

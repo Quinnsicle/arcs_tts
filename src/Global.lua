@@ -142,7 +142,7 @@ function onObjectDrop(player_color, object)
     if (object_name == "Action Card" and not object.is_face_down) then
         local player = get_arcs_player(player_color)
         if (player) then
-            player.last_action_card = object.getDescription()
+            player:set_last_played_action_card(object.getDescription())
         end
     end
 
@@ -272,27 +272,8 @@ function getOrderedPlayers()
         i = i + 1
     end
 
-    if (ordered_players[1].color == "White") then
-        local color = {1, 1, 1}
-        broadcastToAll("----------------------------------", color)
-        broadcastToAll("White goes first", color)
-        broadcastToAll("----------------------------------", color)
-    elseif (ordered_players[1].color == "Yellow") then
-        local color = {0.905, 0.898, 0.172}
-        broadcastToAll("----------------------------------", color)
-        broadcastToAll("Yellow goes first", color)
-        broadcastToAll("----------------------------------", color)
-    elseif (ordered_players[1].color == "Red") then
-        local color = {0.856, 0.1, 0.094}
-        broadcastToAll("----------------------------------", color)
-        broadcastToAll("Red goes first", color)
-        broadcastToAll("----------------------------------", color)
-    elseif (ordered_players[1].color == "Teal") then
-        local color = {0.129, 0.694, 0.607}
-        broadcastToAll("----------------------------------", color)
-        broadcastToAll("Teal goes first", color)
-        broadcastToAll("----------------------------------", color)
-    end
+    broadcastToAll(ordered_players[1].color .. " goes first",
+        Color.fromString(ordered_players[1].color))
 
     return ordered_players
 end
@@ -1178,21 +1159,18 @@ starting_pieces = {
 --     players = active_players
 -- }
 function set_game_in_progress(params)
-    print("set_game_in_progress")
     Counters.setup()
     local reach_board = getObjectFromGUID(Global.getVar("reach_board_GUID"))
     reach_board.setDescription("in progress")
 
     local visibility = {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
 
-    print("face up discard")
     if (params.with_faceup_discard) then
         ActionCards.faceup_discard_visibility(true)
         local fud_marker = getObjectFromGUID(FUDiscard_marker_GUID)
         fud_marker.setDescription("active")
     end
 
-    print("base components visibility")
     BaseGame.core_components_visibility(true)
     if (params.is_campaign) then
         BaseGame.base_exclusive_components_visibility(true)
@@ -1212,14 +1190,11 @@ function set_game_in_progress(params)
     end
 
     -- campaign components visibility
-    print("campaign components visibility")
-    for _, id in pairs(Campaign.guids) do
-        local obj = getObjectFromGUID(id)
-        obj.setInvisibleTo(visibility)
+    if (params.is_campaign) then
+        Campaign.components_visibility(true)
     end
 
     -- player components visibility
-    print("player components visibility")
     for _, color in ipairs(params.players) do
         ArcsPlayer.components_visibility(color, true, params.is_campaign)
         local player_board = getObjectFromGUID(

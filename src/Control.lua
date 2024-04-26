@@ -143,11 +143,13 @@ function end_hand()
     for _, p in ipairs(all_players) do
 
         if (p.last_action_card and p.last_action_card == surpass_name) then
+            broadcastToAll(p.color .. " surpassed with " .. surpass_name)
             Initiative.take(p.color)
 
             p.last_action_card = nil
         end
     end
+    broadcastToAll("End Hand\n")
 end
 
 function take_initiative(objectButtonClicked, playerColorClicked)

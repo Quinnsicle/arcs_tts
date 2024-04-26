@@ -447,7 +447,7 @@ function BaseGame.dealLeaders(player_count)
         Global.getVar("more_to_explore_lore_GUID"))
 
     if (Global.getVar("with_more_to_explore")) then
-        broadcastToAll("\nPlaying with the Leaders & Lore Expansion")
+        broadcastToAll("Playing with the Leaders & Lore Expansion")
 
         leader_deck.putObject(mte_fate)
         lore_deck.putObject(mte_lore)

@@ -175,6 +175,13 @@ function ArcsPlayer:setup(is_campaign)
     ArcsPlayer.components_visibility(self.color, true, is_campaign)
 end
 
+function ArcsPlayer:set_last_played_action_card(action_card_description)
+    self.last_action_card = action_card_description
+    local gold_color = {1, 0.7, 0.4}
+    broadcastToAll(self.color .. " played " .. action_card_description,
+        gold_color)
+end
+
 function ArcsPlayer:take_resource(name, slot_num)
     self.board = getObjectFromGUID(
         player_pieces[self.color]["components"]["board"])

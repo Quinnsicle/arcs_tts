@@ -20,9 +20,9 @@ local fud_marker_pos = {
 }
 local fud_discard_action_deck = getObjectFromGUID(
     face_up_discard_action_deck_GUID)
-local fud_pos = Vector({-3.60, 0.10, 0.00})
+local fud_pos = Vector({-3.70, 0.10, 0.00})
 local fud_rot = Vector({0.00, 90.00, 0.50})
-local fud_offset = Vector({0.42, 0.00, 0.00})
+local fud_offset = Vector({0.35, 0.00, 0.00})
 local fud_tag = "Face Up Discard Action"
 
 local face_up_discard_guids = {
@@ -92,7 +92,7 @@ function ActionCards.is_face_up_discard_active()
 end
 
 function ActionCards.deal_hand()
-    broadcastToAll("\nShuffle and deal 6 action cards to all players")
+    broadcastToAll("Shuffle and deal 6 action cards to all players")
     deck.randomize()
     Wait.time(function()
         deck.deal(6)
@@ -108,7 +108,7 @@ function ActionCards.check_hands()
     local has_hand = false
     for _, player in pairs(Player.getPlayers()) do
         if #player.getHandObjects() > 0 then
-            broadcastToAll("\n" .. player.color .. " still has cards in hand!",
+            broadcastToAll("" .. player.color .. " still has cards in hand!",
                 player.color)
             has_hand = true
         end
@@ -125,13 +125,12 @@ function ActionCards.clear_played()
     -- Error on union card
     for _, obj in pairs(played_objects) do
         if obj.hasTag("Guild") then
-            broadcastToAll("\nResolve Guild card before cleanup!", Color.Red)
+            broadcastToAll("Resolve Guild card before cleanup!", Color.Red)
             return false
         end
     end
 
     -- clean up
-    broadcastToAll("\nCleanup action card area")
 
     for ct, obj in ipairs(played_objects) do
         if (obj.getName() ~= "Action Card") then
