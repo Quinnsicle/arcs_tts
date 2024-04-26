@@ -303,7 +303,6 @@ function ArcsPlayer:create_score()
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        label = self.power,
         position = Vector({-1.5, 0.11, 0}) + shadow,
         rotation = {0, 0, 0},
         width = 0,
@@ -315,7 +314,6 @@ function ArcsPlayer:create_score()
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        label = self.power,
         position = {-1.5, 0.11, 0},
         rotation = {0, 0, 0},
         width = 0,
@@ -329,7 +327,6 @@ function ArcsPlayer:create_score()
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        label = self.hand_size,
         position = Vector({-0.7, 0.11, 0}) + shadow,
         rotation = {0, 0, 0},
         width = 0,
@@ -341,7 +338,6 @@ function ArcsPlayer:create_score()
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        label = self.hand_size,
         position = {-0.7, 0.11, 0},
         rotation = {0, 0, 0},
         width = 0,
@@ -352,11 +348,9 @@ function ArcsPlayer:create_score()
     })
 
     -- 2. Tycoon
-    local tycoon = self:count("Fuel") + self:count("Material")
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        label = self.tycoon,
         position = Vector({0, 0.11, 0}) + shadow,
         rotation = {0, 0, 0},
         width = 0,
@@ -368,7 +362,6 @@ function ArcsPlayer:create_score()
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        label = self.tycoon,
         position = {0, 0.11, 0},
         rotation = {0, 0, 0},
         width = 0,
@@ -379,12 +372,9 @@ function ArcsPlayer:create_score()
     })
 
     -- 3. Tyrant
-    local captives = #getObjectFromGUID(
-                         player_pieces[self.color]["captives_zone"]).getObjects()
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        label = self.captives,
         position = Vector({0.4, 0.11, 0}) + shadow,
         rotation = {0, 0, 0},
         width = 0,
@@ -396,7 +386,6 @@ function ArcsPlayer:create_score()
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        label = self.captives,
         position = {0.4, 0.11, 0},
         rotation = {0, 0, 0},
         width = 0,
@@ -407,12 +396,9 @@ function ArcsPlayer:create_score()
     })
 
     -- 4. Warlord
-    local trophies = #getObjectFromGUID(
-                         player_pieces[self.color]["trophies_zone"]).getObjects()
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        label = self.trophies,
         position = Vector({0.8, 0.11, 0}) + shadow,
         rotation = {0, 0, 0},
         width = 0,
@@ -424,7 +410,6 @@ function ArcsPlayer:create_score()
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        label = self.trophies,
         position = {0.8, 0.11, 0},
         rotation = {0, 0, 0},
         width = 0,
@@ -435,11 +420,9 @@ function ArcsPlayer:create_score()
     })
 
     -- 5. Keeper
-    local keeper = self:count("Relic")
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        label = self.keeper,
         position = Vector({1.2, 0.11, 0}) + shadow,
         rotation = {0, 0, 0},
         width = 0,
@@ -451,7 +434,6 @@ function ArcsPlayer:create_score()
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        label = self.keeper,
         position = {1.2, 0.11, 0},
         rotation = {0, 0, 0},
         width = 0,
@@ -462,11 +444,9 @@ function ArcsPlayer:create_score()
     })
 
     -- 6. Empath
-    local empath = self:count("Psionic")
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        label = self.empath,
         position = Vector({1.6, 0.11, 0}) + shadow,
         rotation = {0, 0, 0},
         width = 0,
@@ -478,7 +458,6 @@ function ArcsPlayer:create_score()
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        label = self.empath,
         position = {1.6, 0.11, 0},
         rotation = {0, 0, 0},
         width = 0,
@@ -657,6 +636,8 @@ function ArcsPlayer:create_score()
         font_size = 200,
         font_color = text_color
     })
+
+    self:update_score()
 end
 
 return ArcsPlayer
