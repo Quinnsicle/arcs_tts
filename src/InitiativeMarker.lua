@@ -2,7 +2,7 @@ require("src/GUIDs")
 
 local InitiativeMarker = {}
 
-local initiative_pos = {-2, 0, 0}
+local initiative_pos = {-2, 0, -2.2}
 
 -- Initiative marker has an unseized and seized state.
 -- If initiative marker exists then initiative is unseaized

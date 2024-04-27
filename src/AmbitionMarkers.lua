@@ -4,6 +4,7 @@ require("src/GUIDs")
 local AmbitionMarkers = {}
 
 local action_cards = require("src/ActionCards")
+local ArcsPlayer = require("src/ArcsPlayer")
 local reach_board = getObjectFromGUID(reach_board_GUID)
 local marker_zone = getObjectFromGUID(ambition_marker_zone_GUID)
 local zero_marker = getObjectFromGUID(zero_marker_GUID)
@@ -127,14 +128,15 @@ function AmbitionMarkers.declare(player_color)
                             "Faithful Wisdom")
 
     -- Is the lead card a 1?
-    if (lead_info.number == 1 and not is_faithful) then
+    if (lead_info.real_number == 1 and not is_faithful) then
         broadcastToColor("Actions numbered 1 cannot be declared", player_color)
         return
     end
 
     local power = high_marker[high_marker.object.is_face_down].power_desc
 
-    if (lead_info.number == 7 or is_faithful) then
+    local this_ambition
+    if (lead_info.real_number == 7 or is_faithful) then
         broadcastToAll("" .. player_color ..
                            " is declaring ambition of choice for " .. power,
             player_color)
@@ -142,7 +144,7 @@ function AmbitionMarkers.declare(player_color)
                              " ambition marker to desired ambition",
             player_color)
     else
-        local this_ambition = ambitions[lead_info.number]
+        this_ambition = ambitions[lead_info.real_number]
         local pos = high_marker.column_pos + this_ambition.row_pos;
         pos = reach_board.positionToWorld(pos)
         high_marker.object.setPositionSmooth(pos)
@@ -154,8 +156,15 @@ function AmbitionMarkers.declare(player_color)
     last_declared_marker = high_marker
     AmbitionMarkers.undo_button()
 
-    zero_marker.setPositionSmooth(reach_board.positionToWorld({1.02, 0.2, 0.67}))
-    zero_marker.setRotationSmooth({0.00, 90.00, 0.00})
+    if ((this_ambition.name == "Keeper" or this_ambition.name == "Empath") and
+        ArcsPlayer.has_secret_order(player_color)) then
+        broadcastToAll(player_color .. " has SECRET ORDER")
+    else
+        zero_marker.setPositionSmooth(reach_board.positionToWorld({
+            1.02, 0.2, 0.67
+        }))
+        zero_marker.setRotationSmooth({0.00, 90.00, 0.00})
+    end
 end
 
 function AmbitionMarkers.undo()
@@ -212,6 +221,7 @@ function declare_ambition(_, player_color)
     AmbitionMarkers.declare(player_color)
 end
 function undo_ambition(_, player_color)
+    broadcastToAll("Undo Ambition Declaration")
     AmbitionMarkers.undo()
 end
 -- End Object Code --

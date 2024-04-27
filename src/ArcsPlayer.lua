@@ -182,6 +182,17 @@ function ArcsPlayer:set_last_played_action_card(action_card_description)
         gold_color)
 end
 
+function ArcsPlayer.has_secret_order(player_color)
+    local area = getObjectFromGUID(player_pieces[player_color]["area_zone"])
+    for _, obj in pairs(area.getObjects()) do
+        if (obj.getName() == "SECRET ORDER") then
+            return true
+        end
+    end
+
+    return false
+end
+
 function ArcsPlayer:take_resource(name, slot_num)
     self.board = getObjectFromGUID(
         player_pieces[self.color]["components"]["board"])

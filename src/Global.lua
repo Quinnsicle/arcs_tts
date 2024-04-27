@@ -1184,10 +1184,6 @@ function set_game_in_progress(params)
         BaseGame.leaders_visibility(true, params.leaders_and_lore_expansion)
         BaseGame.lore_visibility(true, params.leaders_and_lore_expansion)
     end
-    if (not true) then
-        local obj = getObjectFromGUID(BaseGame.components.faceup_discard_cards)
-        obj.setInvisibleTo({"Red", "White", "Yellow", "Teal", "Black", "Grey"})
-    end
 
     -- campaign components visibility
     if (params.is_campaign) then
@@ -1221,16 +1217,11 @@ function onLoad()
 
     local reach_board = getObjectFromGUID(Global.getVar("reach_board_GUID"))
     if (reach_board.getDescription() == "in progress") then
+        broadcastToAll("Loading game in progress")
 
         local campaign_rules = getObjectFromGUID(Campaign.guids.rules)
         local is_campaign = campaign_rules.getDescription() == "active"
         Campaign.components_visibility(is_campaign)
-
-        local fud_marker = getObjectFromGUID(FUDiscard_marker_GUID)
-        is_face_up_discard_active = fud_marker.getDescription() == "active"
-        if (is_face_up_discard_active) then
-            print(ActionCards.is_face_up_discard_active())
-        end
 
         for _, v in ipairs({"Red", "White", "Yellow", "Teal"}) do
             local player_board = getObjectFromGUID(
@@ -1274,4 +1265,6 @@ function onLoad()
     face_up_discard_action_deck.setInvisibleTo({
         "Red", "White", "Yellow", "Teal", "Black", "Grey"
     })
+    face_up_discard_action_deck.interactable = false
+    face_up_discard_action_deck.locked = true
 end

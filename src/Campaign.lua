@@ -97,6 +97,7 @@ function Campaign.setup(with_leaders, with_ll_expansion)
     -- B
     local initiative = require("src/InitiativeMarker")
     initiative.take(active_players[1].color)
+    Campaign.setup_regents(active_players)
 
     -- C, D, E
     ActionCards.setup_deck(#active_players)
@@ -136,6 +137,22 @@ function Campaign.setup(with_leaders, with_ll_expansion)
     Global.call("set_game_in_progress", p)
 
     return true
+end
+
+function Campaign.setup_regents(players)
+    local regent_cards = getObjectFromGUID(Campaign.guids.regent_cards)
+    for i, p in ipairs(players) do
+        local player_board = getObjectFromGUID(
+            player_pieces_GUIDs[p.color]["player_board"])
+        regent_cards.takeObject({
+            position = player_board.positionToWorld({1.42, 0, -1.35})
+        })
+        if (i == 1) then
+            local first_regent = getObjectFromGUID(Campaign.guids.first_regent)
+            first_regent.setPositionSmooth(
+                player_board.positionToWorld({-2, 0, 0}))
+        end
+    end
 end
 
 -- G

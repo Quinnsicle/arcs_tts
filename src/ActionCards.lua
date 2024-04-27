@@ -227,6 +227,7 @@ function ActionCards.get_lead_info()
     for _, obj in ipairs(lead_zone.getObjects()) do
         if (obj.getName() == "Action Card") then
             lead = ActionCards.get_info(obj)
+            lead.real_number = lead.number
         end
 
         if (obj.getName() == "Zero Marker") then
