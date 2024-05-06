@@ -177,9 +177,12 @@ end
 
 function ArcsPlayer:set_last_played_action_card(action_card_description)
     self.last_action_card = action_card_description
-    local gold_color = {1, 0.7, 0.4}
-    broadcastToAll(self.color .. " played " .. action_card_description,
-        gold_color)
+
+    if (Global.getVar("is_face_up_discard_active")) then
+        local gold_color = {1, 0.7, 0.4}
+        broadcastToAll(self.color .. " played " .. action_card_description,
+            gold_color)
+    end
 end
 
 function ArcsPlayer.has_secret_order(player_color)
@@ -206,12 +209,46 @@ function ArcsPlayer:update_score()
     self.score_board = getObjectFromGUID(
         player_pieces[self.color]["components"]["score_board"])
 
-    -- Power
+    local ambitions = Global.getVar("active_ambitions")
+    local white_color = Color.fromString("White")
+    local gold_color = {0.8, 0.58, 0.27}
+
+    local tycoon_active = false
+    local tyrant_active = false
+    local warlord_active = false
+    local keeper_active = false
+    local empath_active = false
+    if (ambitions) then
+        for k, v in pairs(ambitions) do
+            if (v == "Tycoon") then
+                tycoon_active = true
+            elseif (v == "Tyrant") then
+                tyrant_active = true
+            elseif (v == "Warlord") then
+                warlord_active = true
+            elseif (v == "Keeper") then
+                keeper_active = true
+            elseif (v == "Empath") then
+                empath_active = true
+            end
+        end
+    end
+
     local power_cube = getObjectFromGUID(
         player_pieces[self.color]["components"].power)
     local power_pos_x = power_cube.getPosition().x
     local power = math.floor((power_pos_x + 13.26) / 0.655)
     self.power = (power > 0) and power or 0
+    self.hand_size =
+        #getObjectFromGUID(player_pieces[self.color]["hand_zone"]).getObjects()
+    self.tycoon = self:count("Fuel") + self:count("Material")
+    self.captives = #getObjectFromGUID(
+                        player_pieces[self.color]["captives_zone"]).getObjects()
+    self.trophies = #getObjectFromGUID(
+                        player_pieces[self.color]["trophies_zone"]).getObjects()
+    self.keeper = self:count("Relic")
+    self.empath = self:count("Psionic")
+
     self.score_board.editButton({
         index = 0,
         label = self.power
@@ -220,11 +257,6 @@ function ArcsPlayer:update_score()
         index = 1,
         label = self.power
     })
-
-    -- Hand
-    -- self.hand_size = self.player_instance.getHandCount()
-    self.hand_size =
-        #getObjectFromGUID(player_pieces[self.color]["hand_zone"]).getObjects()
     self.score_board.editButton({
         index = 2,
         label = self.hand_size
@@ -233,62 +265,50 @@ function ArcsPlayer:update_score()
         index = 3,
         label = self.hand_size
     })
-
-    -- Tycoon
-    self.tycoon = self:count("Fuel") + self:count("Material")
     self.score_board.editButton({
         index = 4,
         label = self.tycoon
     })
     self.score_board.editButton({
         index = 5,
-        label = self.tycoon
+        label = self.tycoon,
+        font_color = (tycoon_active and gold_color or white_color)
     })
-
-    -- Tyrant
-    self.captives = #getObjectFromGUID(
-                        player_pieces[self.color]["captives_zone"]).getObjects()
     self.score_board.editButton({
         index = 6,
         label = self.captives
     })
     self.score_board.editButton({
         index = 7,
-        label = self.captives
+        label = self.captives,
+        font_color = (tyrant_active and gold_color or white_color)
     })
-
-    -- Warlord
-    self.trophies = #getObjectFromGUID(
-                        player_pieces[self.color]["trophies_zone"]).getObjects()
     self.score_board.editButton({
         index = 8,
         label = self.trophies
     })
     self.score_board.editButton({
         index = 9,
-        label = self.trophies
+        label = self.trophies,
+        font_color = (warlord_active and gold_color or white_color)
     })
-
-    -- Keeper
-    self.keeper = self:count("Relic")
     self.score_board.editButton({
         index = 10,
         label = self.keeper
     })
     self.score_board.editButton({
         index = 11,
-        label = self.keeper
+        label = self.keeper,
+        font_color = (keeper_active and gold_color or white_color)
     })
-
-    -- Empath
-    self.empath = self:count("Psionic")
     self.score_board.editButton({
         index = 12,
         label = self.empath
     })
     self.score_board.editButton({
         index = 13,
-        label = self.empath
+        label = self.empath,
+        font_color = (empath_active and gold_color or white_color)
     })
 end
 
@@ -313,345 +333,169 @@ function ArcsPlayer:create_score()
     self.score_board = getObjectFromGUID(
         player_pieces[self.color]["components"]["score_board"])
 
-    local shadow = Vector({0.007, 0, 0.032})
+    local shadow = Vector({0.01, 0, 0.04})
     -- local text_color = Color.fromString(self.color)
     local text_color = Color.fromString("White")
+    local score_row = -0.2
 
     -- Power
+    local power_pos = Vector({-6.65, 0.11, score_row})
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        position = Vector({-1.5, 0.11, 0}) + shadow,
+        position = power_pos + shadow,
         rotation = {0, 0, 0},
         width = 0,
         height = 0,
-        scale = {0.2, 1, 1},
         font_size = 525,
         font_color = {0, 0, 0}
     })
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        position = {-1.5, 0.11, 0},
+        position = power_pos,
         rotation = {0, 0, 0},
         width = 0,
         height = 0,
-        scale = {0.2, 1, 1},
         font_size = 500,
         font_color = {0.8, 0.58, 0.27}
     })
 
     -- Hand Size
+    local hand_pos = Vector({-4.65, 0.11, score_row})
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        position = Vector({-0.7, 0.11, 0}) + shadow,
+        position = hand_pos + shadow,
         rotation = {0, 0, 0},
         width = 0,
         height = 0,
-        scale = {0.2, 1, 1},
         font_size = 525,
         font_color = {0, 0, 0}
     })
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        position = {-0.7, 0.11, 0},
+        position = hand_pos,
         rotation = {0, 0, 0},
         width = 0,
         height = 0,
-        scale = {0.2, 1, 1},
         font_size = 500,
         font_color = text_color
     })
 
     -- 2. Tycoon
+    local tycoon_pos = Vector({-1.5, 0.11, score_row})
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        position = Vector({0, 0.11, 0}) + shadow,
+        position = tycoon_pos + shadow,
         rotation = {0, 0, 0},
         width = 0,
         height = 0,
-        scale = {0.2, 1, 1},
         font_size = 525,
         font_color = {0, 0, 0}
     })
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        position = {0, 0.11, 0},
+        position = tycoon_pos,
         rotation = {0, 0, 0},
         width = 0,
         height = 0,
-        scale = {0.2, 1, 1},
         font_size = 500,
         font_color = text_color
     })
 
     -- 3. Tyrant
+    local tyrant_pos = Vector({0.5, 0.11, score_row})
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        position = Vector({0.4, 0.11, 0}) + shadow,
+        position = tyrant_pos + shadow,
         rotation = {0, 0, 0},
         width = 0,
         height = 0,
-        scale = {0.2, 1, 1},
         font_size = 525,
         font_color = {0, 0, 0}
     })
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        position = {0.4, 0.11, 0},
+        position = tyrant_pos,
         rotation = {0, 0, 0},
         width = 0,
         height = 0,
-        scale = {0.2, 1, 1},
         font_size = 500,
         font_color = text_color
     })
 
     -- 4. Warlord
+    local warlord_pos = Vector({2.5, 0.11, score_row})
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        position = Vector({0.8, 0.11, 0}) + shadow,
+        position = warlord_pos + shadow,
         rotation = {0, 0, 0},
         width = 0,
         height = 0,
-        scale = {0.2, 1, 1},
         font_size = 525,
         font_color = {0, 0, 0}
     })
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        position = {0.8, 0.11, 0},
+        position = warlord_pos,
         rotation = {0, 0, 0},
         width = 0,
         height = 0,
-        scale = {0.2, 1, 1},
         font_size = 500,
         font_color = text_color
     })
 
     -- 5. Keeper
+    local keeper_pos = Vector({4.5, 0.11, score_row})
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        position = Vector({1.2, 0.11, 0}) + shadow,
+        position = keeper_pos + shadow,
         rotation = {0, 0, 0},
         width = 0,
         height = 0,
-        scale = {0.2, 1, 1},
         font_size = 525,
         font_color = {0, 0, 0}
     })
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        position = {1.2, 0.11, 0},
+        position = keeper_pos,
         rotation = {0, 0, 0},
         width = 0,
         height = 0,
-        scale = {0.2, 1, 1},
         font_size = 500,
         font_color = text_color
     })
 
     -- 6. Empath
+    local empath_pos = Vector({6.5, 0.11, score_row})
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        position = Vector({1.6, 0.11, 0}) + shadow,
+        position = empath_pos + shadow,
         rotation = {0, 0, 0},
         width = 0,
         height = 0,
-        scale = {0.2, 1, 1},
         font_size = 525,
         font_color = {0, 0, 0}
     })
     self.score_board.createButton({
         function_owner = self,
         click_function = "doNothing",
-        position = {1.6, 0.11, 0},
+        position = empath_pos,
         rotation = {0, 0, 0},
         width = 0,
         height = 0,
-        scale = {0.2, 1, 1},
         font_size = 500,
-        font_color = text_color
-    })
-
-    -- labels
-    self.score_board.createButton({
-        function_owner = self,
-        click_function = "doNothing",
-        label = "Power",
-        position = Vector({-1.5, 0.11, 0.7}) + shadow,
-        rotation = {0, 0, 0},
-        width = 0,
-        height = 0,
-        scale = {0.2, 1, 1},
-        font_size = 200,
-        font_color = {0, 0, 0}
-    })
-    self.score_board.createButton({
-        function_owner = self,
-        click_function = "doNothing",
-        label = "Power",
-        position = {-1.5, 0.11, 0.7},
-        rotation = {0, 0, 0},
-        width = 0,
-        height = 0,
-        scale = {0.2, 1, 1},
-        font_size = 200,
-        font_color = {0.8, 0.58, 0.27}
-    })
-    self.score_board.createButton({
-        function_owner = self,
-        click_function = "doNothing",
-        label = "Hand",
-        position = Vector({-0.7, 0.11, 0.7}) + shadow,
-        rotation = {0, 0, 0},
-        width = 0,
-        height = 0,
-        scale = {0.2, 1, 1},
-        font_size = 200,
-        font_color = {0, 0, 0}
-    })
-    self.score_board.createButton({
-        function_owner = self,
-        click_function = "doNothing",
-        label = "Hand",
-        position = {-0.7, 0.11, 0.7},
-        rotation = {0, 0, 0},
-        width = 0,
-        height = 0,
-        scale = {0.2, 1, 1},
-        font_size = 200,
-        font_color = text_color
-    })
-    self.score_board.createButton({
-        function_owner = self,
-        click_function = "doNothing",
-        label = "Tycoon",
-        position = Vector({0, 0.11, 0.7}) + shadow,
-        rotation = {0, 0, 0},
-        width = 0,
-        height = 0,
-        scale = {0.2, 1, 1},
-        font_size = 200,
-        font_color = {0, 0, 0}
-    })
-    self.score_board.createButton({
-        function_owner = self,
-        click_function = "doNothing",
-        label = "Tycoon",
-        position = {0, 0.11, 0.7},
-        rotation = {0, 0, 0},
-        width = 0,
-        height = 0,
-        scale = {0.2, 1, 1},
-        font_size = 200,
-        font_color = text_color
-    })
-    self.score_board.createButton({
-        function_owner = self,
-        click_function = "doNothing",
-        label = "Tyrant",
-        position = Vector({0.4, 0.11, 0.7}) + shadow,
-        rotation = {0, 0, 0},
-        width = 0,
-        height = 0,
-        scale = {0.2, 1, 1},
-        font_size = 200,
-        font_color = {0, 0, 0}
-    })
-    self.score_board.createButton({
-        function_owner = self,
-        click_function = "doNothing",
-        label = "Tyrant",
-        position = {0.4, 0.11, 0.7},
-        rotation = {0, 0, 0},
-        width = 0,
-        height = 0,
-        scale = {0.2, 1, 1},
-        font_size = 200,
-        font_color = text_color
-    })
-    self.score_board.createButton({
-        function_owner = self,
-        click_function = "doNothing",
-        label = "Warlord",
-        position = Vector({0.8, 0.11, 0.7}) + shadow,
-        rotation = {0, 0, 0},
-        width = 0,
-        height = 0,
-        scale = {0.2, 1, 1},
-        font_size = 200,
-        font_color = {0, 0, 0}
-    })
-    self.score_board.createButton({
-        function_owner = self,
-        click_function = "doNothing",
-        label = "Warlord",
-        position = {0.8, 0.11, 0.7},
-        rotation = {0, 0, 0},
-        width = 0,
-        height = 0,
-        scale = {0.2, 1, 1},
-        font_size = 200,
-        font_color = text_color
-    })
-    self.score_board.createButton({
-        function_owner = self,
-        click_function = "doNothing",
-        label = "Keeper",
-        position = Vector({1.2, 0.11, 0.7}) + shadow,
-        rotation = {0, 0, 0},
-        width = 0,
-        height = 0,
-        scale = {0.2, 1, 1},
-        font_size = 200,
-        font_color = {0, 0, 0}
-    })
-    self.score_board.createButton({
-        function_owner = self,
-        click_function = "doNothing",
-        label = "Keeper",
-        position = {1.2, 0.11, 0.7},
-        rotation = {0, 0, 0},
-        width = 0,
-        height = 0,
-        scale = {0.2, 1, 1},
-        font_size = 200,
-        font_color = text_color
-    })
-    self.score_board.createButton({
-        function_owner = self,
-        click_function = "doNothing",
-        label = "Empath",
-        position = Vector({1.6, 0.11, 0.7}) + shadow,
-        rotation = {0, 0, 0},
-        width = 0,
-        height = 0,
-        scale = {0.2, 1, 1},
-        font_size = 200,
-        font_color = {0, 0, 0}
-    })
-    self.score_board.createButton({
-        function_owner = self,
-        click_function = "doNothing",
-        label = "Empath",
-        position = {1.6, 0.11, 0.7},
-        rotation = {0, 0, 0},
-        width = 0,
-        height = 0,
-        scale = {0.2, 1, 1},
-        font_size = 200,
         font_color = text_color
     })
 
