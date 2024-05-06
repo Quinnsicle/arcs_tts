@@ -5,6 +5,7 @@ local AmbitionMarkers = {}
 
 local action_cards = require("src/ActionCards")
 local ArcsPlayer = require("src/ArcsPlayer")
+local Log = require("src/LOG")
 local reach_board = getObjectFromGUID(reach_board_GUID)
 local marker_zone = getObjectFromGUID(ambition_marker_zone_GUID)
 local zero_marker = getObjectFromGUID(zero_marker_GUID)
@@ -78,11 +79,37 @@ local ambitions = {
 
 last_declared_marker = nil
 
+function AmbitionMarkers.get_ambition_info(object)
+
+    local reach_map = getObjectFromGUID(reach_board_GUID)
+    local ambition_pos_z = (reach_map.positionToLocal(object.getPosition()).z)
+    local ambition_number = math.floor((ambition_pos_z + 1.83) / 0.39)
+
+    local global_ambitions = Global.getVar("active_ambitions")
+
+    if (ambition_number == 1) then -- -1.07 reset
+        global_ambitions[object.guid] = ""
+    elseif (ambition_number == 2) then -- -0.71 tycoon
+        global_ambitions[object.guid] = "Tycoon"
+    elseif (ambition_number == 3) then -- -0.33 tyrant
+        global_ambitions[object.guid] = "Tyrant"
+    elseif (ambition_number == 4) then -- 0.05 warlord
+        global_ambitions[object.guid] = "Warlord"
+    elseif (ambition_number == 5) then -- 0.43 keeper
+        global_ambitions[object.guid] = "Keeper"
+    elseif (ambition_number == 6) then -- 0.84 empath
+        global_ambitions[object.guid] = "Empath"
+    end
+
+    Global.setVar("active_ambitions", global_ambitions)
+    Global.call("update_player_scores")
+end
+
 function AmbitionMarkers.add_button()
     zero_marker.createButton({
         index = 0,
         click_function = 'declare_ambition',
-        function_owner = zero_marker,
+        function_owner = self,
         position = {0, 0.05, 0},
         width = 3800,
         height = 950,
@@ -154,32 +181,46 @@ function AmbitionMarkers.declare(player_color)
     end
 
     last_declared_marker = high_marker
-    AmbitionMarkers.undo_button()
 
     if ((this_ambition.name == "Keeper" or this_ambition.name == "Empath") and
         ArcsPlayer.has_secret_order(player_color)) then
         broadcastToAll(player_color .. " has SECRET ORDER")
-    else
-        zero_marker.setPositionSmooth(reach_board.positionToWorld({
-            1.02, 0.2, 0.67
-        }))
-        zero_marker.setRotationSmooth({0.00, 90.00, 0.00})
+        return
     end
+
+    zero_marker.setPositionSmooth(reach_board.positionToWorld({1.02, 0.2, 0.67}))
+    zero_marker.setRotationSmooth({0.00, 90.00, 0.00})
+
+    -- local global_ambitions = Global.getVar("active_ambitions")
+    -- table.insert(global_ambitions, this_ambition.name)
+    -- Global.setVar("active_ambitions", global_ambitions)
+    -- Global.call("update_player_scores")
+
+    AmbitionMarkers.undo_button()
 end
 
 function AmbitionMarkers.undo()
+    broadcastToAll("Undo Ambition Declaration")
     if (last_declared_marker == nil) then
+        Log.ERROR(
+            "Could not find last declared ambition marker, resetting zero marker.")
+        AmbitionMarkers.declare_button()
         return
     end
     local undo_pos =
         reach_board.positionToWorld(last_declared_marker.column_pos)
     last_declared_marker.object.setPositionSmooth(undo_pos)
 
-    AmbitionMarkers.declare_button()
-
     -- reset zero marker
     zero_marker.setPositionSmooth(reach_board.positionToWorld({0.94, 0.2, 1.09}))
     zero_marker.setRotationSmooth({0.00, 180.00, 0.00})
+
+    -- local global_ambitions = Global.getVar("active_ambitions")
+    -- table.remove(global_ambitions)
+    -- Global.setVar("active_ambitions", global_ambitions)
+    -- Global.call("update_player_scores")
+
+    AmbitionMarkers.declare_button()
 end
 
 function AmbitionMarkers.reset_zero_marker()
@@ -187,6 +228,14 @@ function AmbitionMarkers.reset_zero_marker()
     AmbitionMarkers.declare_button()
     zero_marker.setPositionSmooth(reach_board.positionToWorld({0.94, 0.2, 1.09}))
     zero_marker.setRotationSmooth({0.00, 180.00, 0.00})
+
+    -- local global_ambitions = Global.getVar("active_ambitions")
+    -- -- for some reason simply setting active_ambitions to {} causes an error
+    -- for i, v in ipairs(global_ambitions) do
+    --     table.remove(global_ambitions)
+    -- end
+    -- Global.setVar("active_ambitions", global_ambitions)
+    -- Global.call("update_player_scores")
 end
 
 function AmbitionMarkers.highest_undeclared()
@@ -215,13 +264,13 @@ function AmbitionMarkers.highest_undeclared()
 end
 -- Begin Object Code --
 function onLoad()
-    AmbitionMarkers.add_button()
+    -- There's still some bugs with the declare ambition button so I'm disabling it for now
+    -- AmbitionMarkers.add_button()
 end
 function declare_ambition(_, player_color)
     AmbitionMarkers.declare(player_color)
 end
 function undo_ambition(_, player_color)
-    broadcastToAll("Undo Ambition Declaration")
     AmbitionMarkers.undo()
 end
 -- End Object Code --

@@ -175,7 +175,7 @@ function ActionCards.to_face_up_discard(card)
         end
     end
 
-    if (discarded_card ~= nil) then
+    if (discarded_card) then
         discarded_card.addTag(fud_tag)
         discarded_card.setLock(true)
         discarded_card.setPosition(pos)
@@ -185,6 +185,7 @@ function ActionCards.to_face_up_discard(card)
 end
 
 function ActionCards.clear_face_up_discard()
+    Log.DEBUG("ActionCards.clear_face_up_discard()")
     for ct, obj in ipairs(ActionCards.get_face_up_discard_cards()) do
         obj.setLock(false)
         obj.removeTag(fud_tag)
@@ -267,10 +268,6 @@ function ActionCards.get_surpassing_card()
     end
 
     return nil
-end
-
-function ActionCards.draw_bottom_setup()
-    deck.addContextMenuItem("Draw bottom card", ActionCards.draw_bottom)
 end
 
 function ActionCards.draw_bottom(player_color, position, object)

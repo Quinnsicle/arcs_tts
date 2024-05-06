@@ -145,7 +145,7 @@ function Campaign.setup_regents(players)
         local player_board = getObjectFromGUID(
             player_pieces_GUIDs[p.color]["player_board"])
         regent_cards.takeObject({
-            position = player_board.positionToWorld({1.42, 0, -1.35})
+            position = player_board.positionToWorld({1.4, 0, -1.35})
         })
         if (i == 1) then
             local first_regent = getObjectFromGUID(Campaign.guids.first_regent)

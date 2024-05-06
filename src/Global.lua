@@ -1,4 +1,4 @@
-local authors = "Quinnsicle, Scyth02"
+local authors = "Quinnsicle, Scyth02, McChew"
 local version = "1.0"
 
 require("src/GUIDs")
@@ -101,8 +101,14 @@ oop_components = {
 initaitive_player_position = {-2, 0, 0}
 
 active_players = {}
+active_ambitions = {
+    c9e0ee = "",
+    a9b02a = "",
+    b0b4d0 = ""
+}
 
 ----------------------------------------------------
+local AmbitionMarkers = require("src/AmbitionMarkers")
 local ActionCards = require("src/ActionCards")
 local ArcsPlayer = require("src/ArcsPlayer")
 local BaseGame = require("src/BaseGame")
@@ -126,6 +132,12 @@ function get_arcs_player(color)
     end
 end
 
+function update_player_scores()
+    for _, p in ipairs(active_players) do
+        p:update_score()
+    end
+end
+
 function onObjectDrop(player_color, object)
     local object_name = object.getName()
 
@@ -140,10 +152,30 @@ function onObjectDrop(player_color, object)
 
     -- update last played action card
     if (object_name == "Action Card" and not object.is_face_down) then
-        local player = get_arcs_player(player_color)
-        if (player) then
-            player:set_last_played_action_card(object.getDescription())
+        -- TODO: check if in play zone
+        local played_zone = getObjectFromGUID(action_card_zone_GUID)
+        local is_in_action_zone = false
+        for i, zone_obj in ipairs(played_zone.getObjects()) do
+            if (zone_obj == object) then
+                is_in_action_zone = true
+                break
+            end
         end
+
+        if (is_in_action_zone) then
+            local player = get_arcs_player(player_color)
+            if (player) then
+                player:set_last_played_action_card(object.getDescription())
+            end
+        end
+    end
+
+    -- ambitions
+    if (object_name == "Ambition") then
+
+        Wait.time(function()
+            AmbitionMarkers.get_ambition_info(object)
+        end, 0.5)
     end
 
 end
@@ -272,8 +304,7 @@ function getOrderedPlayers()
         i = i + 1
     end
 
-    broadcastToAll(ordered_players[1].color .. " goes first",
-        Color.fromString(ordered_players[1].color))
+    broadcastToAll("Randomly choosing first player...")
 
     return ordered_players
 end
@@ -1160,7 +1191,7 @@ starting_pieces = {
 -- }
 function set_game_in_progress(params)
     Counters.setup()
-    local reach_board = getObjectFromGUID(Global.getVar("reach_board_GUID"))
+    local reach_board = getObjectFromGUID(reach_board_GUID)
     reach_board.setDescription("in progress")
 
     local visibility = {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
@@ -1215,7 +1246,7 @@ function onLoad()
         Supplies.addMenuToObject(obj)
     end
 
-    local reach_board = getObjectFromGUID(Global.getVar("reach_board_GUID"))
+    local reach_board = getObjectFromGUID(reach_board_GUID)
     if (reach_board.getDescription() == "in progress") then
         broadcastToAll("Loading game in progress")
 
@@ -1266,5 +1297,5 @@ function onLoad()
         "Red", "White", "Yellow", "Teal", "Black", "Grey"
     })
     face_up_discard_action_deck.interactable = false
-    face_up_discard_action_deck.locked = true
+    face_up_discard_action_deck.locked = false -- set this to false otherwise it breaks
 end

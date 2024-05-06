@@ -97,7 +97,6 @@ local seizeInitiative_params = {
 }
 
 function onload()
-    ActionCards.draw_bottom_setup()
     self.createButton(controls_params)
     self.createButton(start_round_params)
     self.createButton(endHand_params)
@@ -129,7 +128,8 @@ end
 
 function end_hand()
     ActionCards.clear_played()
-    AmbitionMarkers.reset_zero_marker()
+    -- disabling auto AmbitionMarkers for now due to bugs
+    -- AmbitionMarkers.reset_zero_marker() 
     Initiative.unseize()
 
     -- Find surpassing card
