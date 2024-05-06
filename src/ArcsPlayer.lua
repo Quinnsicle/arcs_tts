@@ -127,9 +127,22 @@ function ArcsPlayer.components_visibility(color, is_visible, is_campaign)
             obj.setInvisibleTo({
                 "Red", "White", "Yellow", "Teal", "Black", "Grey"
             })
+            -- local pos = obj.getPosition()
+            -- pos.y = -2
+            -- obj.setPosition(pos)
+            -- obj.locked = true
         else
             local obj = getObjectFromGUID(id)
             obj.setInvisibleTo(visibility)
+            -- local y_pos = is_visible and 1 or -2
+            -- local pos = obj.getPosition()
+            -- pos.y = y_pos
+            -- obj.setPosition(pos)
+            -- if (obj.hasTag("Lock")) then
+            --     obj.locked = true
+            -- else
+            --     obj.locked = not is_visible
+            -- end
         end
     end
 end
@@ -141,6 +154,15 @@ function ArcsPlayer._show_cities(color, is_visible)
     for _, id in pairs(player_pieces[color].components.cities) do
         local obj = getObjectFromGUID(id)
         obj.setInvisibleTo(visibility)
+        -- local y_pos = is_visible and 1 or -2
+        -- local pos = obj.getPosition()
+        -- pos.y = y_pos
+        -- obj.setPosition(pos)
+        -- if (obj.hasTag("Lock")) then
+        --     obj.locked = true
+        -- else
+        --     obj.locked = not is_visible
+        -- end
     end
 end
 

@@ -1180,6 +1180,18 @@ starting_pieces = {
     }
 }
 
+function move_and_lock_object(obj, is_visible)
+    local y_pos = is_visible and 1 or -2
+    local pos = obj.getPosition()
+    pos.y = y_pos
+    obj.setPosition(pos)
+    if (obj.hasTag("Lock")) then
+        obj.locked = true
+    else
+        obj.locked = not is_visible
+    end
+end
+
 ----------------------------------------------------
 -- params = {
 --     is_campaign = false,
@@ -1207,6 +1219,8 @@ function set_game_in_progress(params)
         BaseGame.base_exclusive_components_visibility(true)
         local campaign_rules = getObjectFromGUID(Campaign.guids.rules)
         campaign_rules.setDescription("active")
+
+        Campaign.components_visibility(true)
     end
     if (params.is_4p) then
         BaseGame.four_player_cards_visibility(true)
@@ -1214,11 +1228,6 @@ function set_game_in_progress(params)
     if (params.leaders_and_lore) then
         BaseGame.leaders_visibility(true, params.leaders_and_lore_expansion)
         BaseGame.lore_visibility(true, params.leaders_and_lore_expansion)
-    end
-
-    -- campaign components visibility
-    if (params.is_campaign) then
-        Campaign.components_visibility(true)
     end
 
     -- player components visibility
@@ -1270,6 +1279,15 @@ function onLoad()
         Counters.setup()
     elseif debug then
 
+        Campaign.components_visibility(true)
+        BaseGame.components_visibility({
+            is_visible = true,
+            is_campaign = true,
+            is_4p = true,
+            leaders_and_lore = true,
+            leaders_and_lore_expansion = true,
+            with_faceup_discard = true
+        })
     else
         -- Hide components
         Campaign.components_visibility(false)
@@ -1288,14 +1306,17 @@ function onLoad()
     end
 
     for _, obj in pairs(getObjectsWithTag("Noninteractable")) do
+        obj.locked = true
         obj.interactable = false
     end
 
-    local face_up_discard_action_deck = getObjectFromGUID(
-        face_up_discard_action_deck_GUID)
-    face_up_discard_action_deck.setInvisibleTo({
-        "Red", "White", "Yellow", "Teal", "Black", "Grey"
-    })
-    face_up_discard_action_deck.interactable = false
-    face_up_discard_action_deck.locked = false -- set this to false otherwise it breaks
+    if (not debug) then
+        local face_up_discard_action_deck = getObjectFromGUID(
+            face_up_discard_action_deck_GUID)
+        face_up_discard_action_deck.setInvisibleTo({
+            "Red", "White", "Yellow", "Teal", "Black", "Grey"
+        })
+        face_up_discard_action_deck.interactable = false
+        face_up_discard_action_deck.locked = false -- set this to false otherwise it breaks
+    end
 end

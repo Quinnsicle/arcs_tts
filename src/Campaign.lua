@@ -74,6 +74,7 @@ function Campaign.components_visibility(is_visible)
         local obj = getObjectFromGUID(id)
         if (obj) then
             obj.setInvisibleTo(visibility)
+            move_and_lock_object(obj, is_visible)
         end
     end
 end
@@ -85,14 +86,22 @@ function Campaign.setup(with_leaders, with_ll_expansion)
     if (#active_players < 2 or #active_players > 4) then
         return false
     end
-    -- Campaign.components_visibility(true)
-    -- BaseGame.components_visibility({
-    --     is_visible = true,
-    --     is_campaign = true,
-    --     is_4p = #active_players == 4,
-    --     leaders_and_lore = with_leaders,
-    --     leaders_and_lore_expansion = with_ll_expansion
-    -- })
+
+    local active_player_colors = {}
+    for _, p in pairs(active_players) do
+        ArcsPlayer.setup(p, false)
+        table.insert(active_player_colors, p.color)
+    end
+
+    local p = {
+        is_campaign = true,
+        is_4p = #active_players == 4,
+        leaders_and_lore = with_leaders,
+        leaders_and_lore_expansion = with_ll_expansion,
+        with_faceup_discard = ActionCards.is_face_up_discard_active(),
+        players = active_player_colors
+    }
+    Global.call("set_game_in_progress", p)
 
     -- B
     local initiative = require("src/InitiativeMarker")
@@ -109,32 +118,14 @@ function Campaign.setup(with_leaders, with_ll_expansion)
     LOG.INFO("setupCampaignGuildCards Complete")
     Campaign.setupImperialCouncil()
     LOG.INFO("setupImperialCouncil Complete")
-    Campaign.setupImperialRules(#active_players)
-    LOG.INFO("setupImperialRules Complete")
+    Campaign.setup_imperial_edicts(#active_players)
+    LOG.INFO("setup_imperial_edicts Complete")
     Campaign.setupClusters(#active_players)
     LOG.INFO("setupClusters Complete")
 
     Wait.time(function()
         Campaign.dealPlayerFates()
     end, 5)
-
-    local active_player_colors = {}
-    for _, p in pairs(active_players) do
-        ArcsPlayer.setup(p, false)
-        -- ArcsPlayer.components_visibility(p.color, true, false)
-        table.insert(active_player_colors, p.color)
-    end
-
-    local p = {
-        is_campaign = true,
-        is_4p = #active_players == 4,
-        leaders_and_lore = with_leaders,
-        leaders_and_lore_expansion = with_ll_expansion,
-        with_faceup_discard = ActionCards.is_face_up_discard_active(),
-        players = active_player_colors
-    }
-
-    Global.call("set_game_in_progress", p)
 
     return true
 end
@@ -226,34 +217,34 @@ function Campaign.setupImperialCouncil()
 end
 
 -- L,M
-function Campaign.setupImperialRules(player_count)
+function Campaign.setup_imperial_edicts(player_count)
 
     local laws = getObjectFromGUID(Global.getVar("laws_GUID"))
 
     laws.setPositionSmooth({34, 1, 5})
     laws.setRotation({0, 270, 0})
 
-    local next_law_pos_z = 5 - 2.4
-    local next_law_pos = {
+    local next_pos_z = 5 - 2.4
+    local next_pos = {
         x = 34,
         y = 1,
-        z = next_law_pos_z
+        z = next_pos_z
     }
 
     if (player_count == 2) then
         local guild_envoys_depart = getObjectFromGUID(Global.getVar(
             "guild_envoys_depart_GUID"))
         guild_envoys_depart.setRotation({0, 270, 0})
-        guild_envoys_depart.setPositionSmooth(next_law_pos)
-        next_law_pos_z = next_law_pos_z - 2.4
-        next_law_pos.z = next_law_pos_z
+        guild_envoys_depart.setPositionSmooth(next_pos)
+        next_pos_z = next_pos_z - 2.4
+        next_pos.z = next_pos_z
     end
 
     local govern = getObjectFromGUID(Global.getVar("govern_GUID"))
     govern.setRotation({0, 270, 0})
-    govern.setPositionSmooth(next_law_pos)
-    next_law_pos_z = next_law_pos_z - 2.4
-    next_law_pos.z = next_law_pos_z
+    govern.setPositionSmooth(next_pos)
+    next_pos_z = next_pos_z - 2.4
+    next_pos.z = next_pos_z
 
     govern.randomize()
 

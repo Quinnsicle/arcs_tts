@@ -84,9 +84,11 @@ function BaseGame.leaders_visibility(show, with_expansion)
         local expansion = getObjectFromGUID(BaseGame.components
                                                 .leaders_expansion)
         expansion.setInvisibleTo(visibility)
+        move_and_lock_object(expansion, show)
     end
     local leaders = getObjectFromGUID(BaseGame.components.leaders)
     leaders.setInvisibleTo(visibility)
+    move_and_lock_object(leaders, show)
 end
 
 function BaseGame.lore_visibility(show, with_expansion)
@@ -95,9 +97,11 @@ function BaseGame.lore_visibility(show, with_expansion)
     if (with_expansion) then
         local expansion = getObjectFromGUID(BaseGame.components.lore_expansion)
         expansion.setInvisibleTo(visibility)
+        move_and_lock_object(expansion, show)
     end
     local lore = getObjectFromGUID(BaseGame.components.lore)
     lore.setInvisibleTo(visibility)
+    move_and_lock_object(lore, show)
 end
 
 function BaseGame.core_components_visibility(show)
@@ -106,6 +110,7 @@ function BaseGame.core_components_visibility(show)
     for _, id in pairs(BaseGame.components.core) do
         local obj = getObjectFromGUID(id)
         obj.setInvisibleTo(visibility)
+        move_and_lock_object(obj, show)
     end
 end
 
@@ -114,6 +119,7 @@ function BaseGame.four_player_cards_visibility(show)
                            {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
     local obj = getObjectFromGUID(BaseGame.components.action_cards_4p)
     obj.setInvisibleTo(visibility)
+    move_and_lock_object(obj, show)
 end
 
 function BaseGame.base_exclusive_components_visibility(show)
@@ -122,6 +128,7 @@ function BaseGame.base_exclusive_components_visibility(show)
     for _, id in pairs(BaseGame.components.base_exclusive) do
         local obj = getObjectFromGUID(id)
         obj.setInvisibleTo(visibility)
+        move_and_lock_object(obj, show)
     end
 end
 
@@ -160,13 +167,20 @@ function BaseGame.setup(with_leaders, with_ll_expansion)
         return false
     end
 
-    BaseGame.components_visibility({
-        is_visible = true,
+    local active_player_colors = {}
+    for _, p in pairs(active_players) do
+        ArcsPlayer.setup(p, false)
+        table.insert(active_player_colors, p.color)
+    end
+    local p = {
         is_campaign = false,
         is_4p = #active_players == 4,
         leaders_and_lore = with_leaders,
-        leaders_and_lore_expansion = with_ll_expansion
-    })
+        leaders_and_lore_expansion = with_ll_expansion,
+        with_faceup_discard = ActionCards.is_face_up_discard_active(),
+        players = active_player_colors
+    }
+    Global.call("set_game_in_progress", p)
 
     -- B
     local initiative = require("src/InitiativeMarker")
@@ -189,22 +203,6 @@ function BaseGame.setup(with_leaders, with_ll_expansion)
         BaseGame.setupPlayers(active_players, chosen_setup_card)
     end
 
-    local active_player_colors = {}
-    for _, p in pairs(active_players) do
-        ArcsPlayer.setup(p, false)
-        -- ArcsPlayer.components_visibility(p.color, true, false)
-        table.insert(active_player_colors, p.color)
-    end
-
-    local p = {
-        is_campaign = false,
-        is_4p = #active_players == 4,
-        leaders_and_lore = with_leaders,
-        leaders_and_lore_expansion = with_ll_expansion,
-        with_faceup_discard = ActionCards.is_face_up_discard_active(),
-        players = active_player_colors
-    }
-    Global.call("set_game_in_progress", p)
     return true
 end
 
