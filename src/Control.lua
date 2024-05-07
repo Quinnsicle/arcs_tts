@@ -39,11 +39,11 @@ local controls_params = {
     font_color = {0.8, 0.58, 0.27}
 }
 
-local start_round_params = {
+local start_chapter_params = {
     index = 1,
     function_owner = self,
-    click_function = "start_round",
-    label = "Start Round",
+    click_function = "start_chapter",
+    label = "Start Chapter",
     tooltip = "Deal action cards",
     height = 260,
     width = 820,
@@ -54,11 +54,11 @@ local start_round_params = {
     hover_color = {0.34, 0.38, 0.38}
 }
 
-local endHand_params = {
+local end_round_params = {
     index = 2,
     function_owner = self,
-    click_function = "end_hand",
-    label = "End Hand",
+    click_function = "end_round",
+    label = "End Round",
     tooltip = "Cleanup action cards",
     height = 260,
     width = 820,
@@ -98,8 +98,8 @@ local seizeInitiative_params = {
 
 function onload()
     self.createButton(controls_params)
-    self.createButton(start_round_params)
-    self.createButton(endHand_params)
+    self.createButton(start_chapter_params)
+    self.createButton(end_round_params)
     self.createButton(takeInitiative_params)
     self.createButton(seizeInitiative_params)
     self.createButton({
@@ -115,7 +115,7 @@ end
 function doNothing()
 end
 
-function start_round()
+function start_chapter()
     Initiative.unseize()
     ActionCards.clear_face_up_discard()
 
@@ -126,7 +126,7 @@ function start_round()
     ActionCards.deal_hand()
 end
 
-function end_hand()
+function end_round()
     ActionCards.clear_played()
     -- disabling auto AmbitionMarkers for now due to bugs
     -- AmbitionMarkers.reset_zero_marker() 
