@@ -1216,11 +1216,12 @@ function set_game_in_progress(params)
 
     BaseGame.core_components_visibility(true)
     if (params.is_campaign) then
-        BaseGame.base_exclusive_components_visibility(true)
         local campaign_rules = getObjectFromGUID(Campaign.guids.rules)
         campaign_rules.setDescription("active")
 
         Campaign.components_visibility(true)
+    else
+        BaseGame.base_exclusive_components_visibility(true)
     end
     if (params.is_4p) then
         BaseGame.four_player_cards_visibility(true)
