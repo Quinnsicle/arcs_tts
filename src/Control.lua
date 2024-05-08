@@ -130,25 +130,30 @@ function end_round()
     ActionCards.clear_played()
     -- disabling auto AmbitionMarkers for now due to bugs
     -- AmbitionMarkers.reset_zero_marker() 
-    Initiative.unseize()
 
-    -- Find surpassing card
-    local surpass = ActionCards.get_surpassing_card()
-    if (surpass == nil) then
-        return
-    end
-    local surpass_name = surpass.type .. " " .. tostring(surpass.number)
+    -- Auto Initiative, Find surpassing card
+    if (Initiative.is_seized()) then
+        Initiative.unseize()
+    else
+        local surpass = ActionCards.get_surpassing_card()
+        if (surpass == nil) then
+            return
+        end
+        local surpass_name = surpass.type .. " " .. tostring(surpass.number)
 
-    local all_players = Global.getVar("active_players")
-    for _, p in ipairs(all_players) do
+        local all_players = Global.getVar("active_players")
+        for _, p in ipairs(all_players) do
 
-        if (p.last_action_card and p.last_action_card == surpass_name) then
-            broadcastToAll(p.color .. " surpassed with " .. surpass_name)
-            Initiative.take(p.color)
+            if (p.last_action_card and p.last_action_card == surpass_name) then
+                broadcastToAll(p.color .. " surpassed with " .. surpass_name)
+                Initiative.unseize()
+                Initiative.take(p.color)
 
-            p.last_action_card = nil
+                p.last_action_card = nil
+            end
         end
     end
+
     broadcastToAll("End Hand\n")
 end
 

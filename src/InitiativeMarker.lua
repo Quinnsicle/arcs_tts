@@ -21,6 +21,11 @@ function InitiativeMarker.add_menu()
     end
 end
 
+function InitiativeMarker.is_seized()
+    local initiative_seized = getObjectFromGUID(seized_initiative_GUID)
+    return initiative_seized
+end
+
 function InitiativeMarker.unseize()
     local initiative_seized = getObjectFromGUID(seized_initiative_GUID)
     if (initiative_seized) then
