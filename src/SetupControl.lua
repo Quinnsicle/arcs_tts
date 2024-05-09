@@ -232,27 +232,7 @@ function setup_campaign()
 end
 
 function custom_setup()
-    Campaign.components_visibility(true)
-    BaseGame.components_visibility({
-        is_visible = true,
-        is_campaign = true,
-        is_4p = true,
-        leaders_and_lore = true,
-        leaders_and_lore_expansion = true
-    })
-
-    local active_players = Global.call("getOrderedPlayers")
-    if (#active_players < 2 or #active_players > 4) then
-        return false
-    end
-
-    for _, p in pairs(active_players) do
-        ArcsPlayer.setup(p, true)
-    end
-    Counters.setup()
-
-    local reach_board = getObjectFromGUID(Global.getVar("reach_board_GUID"))
-    reach_board.setDescription("in progress")
+    Global.call("setup_custom_game")
     destroyObject(self)
 end
 

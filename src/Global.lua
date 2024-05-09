@@ -1180,16 +1180,44 @@ starting_pieces = {
     }
 }
 
-function move_and_lock_object(obj, is_visible)
-    local y_pos = is_visible and 1 or -2
-    local pos = obj.getPosition()
+-- params = {obj, is_visible}
+function move_and_lock_object(params)
+    local y_pos = params.is_visible and 1 or -2
+    local pos = params.obj.getPosition()
     pos.y = y_pos
-    obj.setPosition(pos)
-    if (obj.hasTag("Lock")) then
-        obj.locked = true
+    params.obj.setPosition(pos)
+    if (params.obj.hasTag("Lock")) then
+        params.obj.locked = true
     else
-        obj.locked = not is_visible
+        params.obj.locked = not params.is_visible
     end
+end
+
+function set_active_players(players)
+    active_players = players
+end
+
+function setup_custom_game()
+
+    for _, v in ipairs({"Red", "White", "Yellow", "Teal"}) do
+        local arcs_player = ArcsPlayer:new{
+            color = v
+        }
+        table.insert(active_players, arcs_player)
+    end
+    for _, v in ipairs(active_players) do
+        ArcsPlayer.components_visibility(v.color, true, true)
+    end
+
+    local p = {
+        is_campaign = true,
+        is_4p = true,
+        leaders_and_lore = true,
+        leaders_and_lore_expansion = true,
+        with_faceup_discard = true,
+        players = {"Red", "White", "Yellow", "Teal"}
+    }
+    set_game_in_progress(p)
 end
 
 ----------------------------------------------------

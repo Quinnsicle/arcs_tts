@@ -10,7 +10,7 @@ local BaseGame = {
         leaders_expansion = "768d3d",
         lore = "0d8ede",
         lore_expansion = "3441e5",
-        faceup_discard_cards = "a8e929",
+        -- faceup_discard_cards = "a8e929",
         action_cards_4p = "13bedd",
 
         core = {
@@ -84,11 +84,18 @@ function BaseGame.leaders_visibility(show, with_expansion)
         local expansion = getObjectFromGUID(BaseGame.components
                                                 .leaders_expansion)
         expansion.setInvisibleTo(visibility)
-        move_and_lock_object(expansion, show)
+
+        Global.call("move_and_lock_object", {
+            obj = expansion,
+            is_visible = show
+        })
     end
     local leaders = getObjectFromGUID(BaseGame.components.leaders)
     leaders.setInvisibleTo(visibility)
-    move_and_lock_object(leaders, show)
+    Global.call("move_and_lock_object", {
+        obj = leaders,
+        is_visible = show
+    })
 end
 
 function BaseGame.lore_visibility(show, with_expansion)
@@ -97,11 +104,17 @@ function BaseGame.lore_visibility(show, with_expansion)
     if (with_expansion) then
         local expansion = getObjectFromGUID(BaseGame.components.lore_expansion)
         expansion.setInvisibleTo(visibility)
-        move_and_lock_object(expansion, show)
+        Global.call("move_and_lock_object", {
+            obj = expansion,
+            is_visible = show
+        })
     end
     local lore = getObjectFromGUID(BaseGame.components.lore)
     lore.setInvisibleTo(visibility)
-    move_and_lock_object(lore, show)
+    Global.call("move_and_lock_object", {
+        obj = lore,
+        is_visible = show
+    })
 end
 
 function BaseGame.core_components_visibility(show)
@@ -110,7 +123,10 @@ function BaseGame.core_components_visibility(show)
     for _, id in pairs(BaseGame.components.core) do
         local obj = getObjectFromGUID(id)
         obj.setInvisibleTo(visibility)
-        move_and_lock_object(obj, show)
+        Global.call("move_and_lock_object", {
+            obj = obj,
+            is_visible = show
+        })
     end
 end
 
@@ -119,7 +135,10 @@ function BaseGame.four_player_cards_visibility(show)
                            {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
     local obj = getObjectFromGUID(BaseGame.components.action_cards_4p)
     obj.setInvisibleTo(visibility)
-    move_and_lock_object(obj, show)
+    Global.call("move_and_lock_object", {
+        obj = obj,
+        is_visible = show
+    })
 end
 
 function BaseGame.base_exclusive_components_visibility(show)
@@ -128,7 +147,10 @@ function BaseGame.base_exclusive_components_visibility(show)
     for _, id in pairs(BaseGame.components.base_exclusive) do
         local obj = getObjectFromGUID(id)
         obj.setInvisibleTo(visibility)
-        move_and_lock_object(obj, show)
+        Global.call("move_and_lock_object", {
+            obj = obj,
+            is_visible = show
+        })
     end
 end
 

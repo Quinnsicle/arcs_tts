@@ -74,7 +74,10 @@ function Campaign.components_visibility(is_visible)
         local obj = getObjectFromGUID(id)
         if (obj) then
             obj.setInvisibleTo(visibility)
-            move_and_lock_object(obj, is_visible)
+            Global.call("move_and_lock_object", {
+                obj = obj,
+                is_visible = is_visible
+            })
         end
     end
 end
