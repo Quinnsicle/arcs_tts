@@ -258,7 +258,8 @@ function ArcsPlayer:update_score()
 
     local power_cube = getObjectFromGUID(
         player_pieces[self.color]["components"].power)
-    local power_pos_x = power_cube.getPosition().x
+    -- account for missing power cube otherwise errors show up when exiting
+    local power_pos_x = power_cube and power_cube.getPosition().x or 0
     local power = math.floor((power_pos_x + 13.26) / 0.655)
     self.power = (power > 0) and power or 0
     self.hand_size =
