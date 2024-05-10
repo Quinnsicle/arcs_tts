@@ -1218,6 +1218,8 @@ function setup_custom_game()
         players = {"Red", "White", "Yellow", "Teal"}
     }
     set_game_in_progress(p)
+
+    BaseGame.base_exclusive_components_visibility(true)
 end
 
 ----------------------------------------------------
