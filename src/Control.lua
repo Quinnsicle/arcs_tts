@@ -145,7 +145,6 @@ function end_round()
         for _, p in ipairs(all_players) do
 
             if (p.last_action_card and p.last_action_card == surpass_name) then
-                broadcastToAll(p.color .. " surpassed with " .. surpass_name)
                 Initiative.unseize()
                 Initiative.take(p.color)
 

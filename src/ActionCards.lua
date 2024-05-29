@@ -3,8 +3,6 @@ local Log = require("src/LOG")
 
 local ActionCards = {}
 
-local deck = getObjectFromGUID(action_deck_GUID)
-
 local played_zone = getObjectFromGUID(action_card_zone_GUID)
 local lead_zone = getObjectFromGUID(lead_card_zone_GUID)
 
@@ -56,8 +54,25 @@ local face_up_discard_guids = {
     ["Mobilization 7"] = "864dd1"
 }
 
+function ActionCards.get_action_deck()
+    local action_deck_zone = getObjectFromGUID(action_deck_zone_GUID)
+    local action_deck_zone_objects = action_deck_zone.getObjects()
+
+    if (action_deck_zone_objects) then
+        for _, v in ipairs(action_deck_zone_objects) do
+            if (v.name == "Deck") then
+                action_deck_GUID = v.guid
+            end
+        end
+    end
+
+    return getObjectFromGUID(action_deck_GUID)
+end
+
 function ActionCards.setup_deck(player_count)
     local four_player_deck = getObjectFromGUID(action_deck_4P_GUID)
+    local deck = ActionCards.get_action_deck()
+    print(deck)
     if (player_count == 4) then
         deck.putObject(four_player_deck)
         Wait.time(function()
@@ -70,6 +85,7 @@ end
 
 function ActionCards.setup_events(player_count)
     local event_deck = getObjectFromGUID(event_deck_GUID)
+    local deck = ActionCards.get_action_deck()
     if (player_count < 4) then
         event_deck.takeObject().destroy()
     end
@@ -93,6 +109,7 @@ end
 
 function ActionCards.deal_hand()
     broadcastToAll("Shuffle and deal 6 action cards to all players")
+    local deck = ActionCards.get_action_deck()
     deck.randomize()
     Wait.time(function()
         deck.deal(6)
@@ -100,6 +117,7 @@ function ActionCards.deal_hand()
 end
 
 function ActionCards.check_deck()
+    local deck = ActionCards.get_action_deck()
     local deck_size = #getSeatedPlayers() == 4 and 28 or 20
     return deck_size <= #deck.getObjects()
 end
@@ -244,6 +262,8 @@ end
 
 function ActionCards.get_surpassing_card()
     local lead = ActionCards.get_lead_info()
+    local surpassing_card = nil
+
     if (not lead) then
         return nil
     end
@@ -254,24 +274,24 @@ function ActionCards.get_surpassing_card()
         end
 
         do -- avoid error with goto jumping into surpassing_card scope
-            local surpassing_card = ActionCards.get_info(v)
-            if (surpassing_card and lead.type == surpassing_card.type and
-                lead.number < surpassing_card.number) then
-                Log.DEBUG("-------surpassing_card-------")
-                Log.DEBUG(surpassing_card.type)
-                Log.DEBUG(surpassing_card.number)
-                return surpassing_card
+            local card = ActionCards.get_info(v)
+            if (card and lead.type == card.type and lead.number < card.number) then
+                surpassing_card = card
             end
         end
 
         ::continue::
     end
 
-    return nil
+    Log.DEBUG("-------surpassing_card-------")
+    Log.DEBUG(surpassing_card.type)
+    Log.DEBUG(surpassing_card.number)
+    return surpassing_card
 end
 
 function ActionCards.draw_bottom(player_color, position, object)
     local hand_zone = Player[player_color].getHandTransform()
+    local deck = ActionCards.get_action_deck()
     deck.takeObject({
         top = false,
         position = hand_zone.position,

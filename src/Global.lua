@@ -1273,12 +1273,12 @@ function set_game_in_progress(params)
     --     local player_board = getObjectFromGUID(v.components.board)
     --     player_board.setDescription("active")
     -- end
+
+    local action_deck = ActionCards.get_action_deck()
+    action_deck.addContextMenuItem("Draw bottom card", ActionCards.draw_bottom)
 end
 
 function onLoad()
-
-    getObjectFromGUID(action_deck_GUID).addContextMenuItem("Draw bottom card",
-        ActionCards.draw_bottom)
 
     Initiative.add_menu()
 
@@ -1289,6 +1289,10 @@ function onLoad()
     local reach_board = getObjectFromGUID(reach_board_GUID)
     if (reach_board.getDescription() == "in progress") then
         broadcastToAll("Loading game in progress")
+
+        local action_deck = ActionCards.get_action_deck()
+        action_deck.addContextMenuItem("Draw bottom card",
+            ActionCards.draw_bottom)
 
         local campaign_rules = getObjectFromGUID(Campaign.guids.rules)
         local is_campaign = campaign_rules.getDescription() == "active"

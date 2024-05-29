@@ -83,19 +83,22 @@ function BaseGame.leaders_visibility(show, with_expansion)
     if (with_expansion) then
         local expansion = getObjectFromGUID(BaseGame.components
                                                 .leaders_expansion)
-        expansion.setInvisibleTo(visibility)
-
+        if (expansion) then
+            expansion.setInvisibleTo(visibility)
+            Global.call("move_and_lock_object", {
+                obj = expansion,
+                is_visible = show
+            })
+        end
+    end
+    local leaders = getObjectFromGUID(BaseGame.components.leaders)
+    if (leaders) then
+        leaders.setInvisibleTo(visibility)
         Global.call("move_and_lock_object", {
-            obj = expansion,
+            obj = leaders,
             is_visible = show
         })
     end
-    local leaders = getObjectFromGUID(BaseGame.components.leaders)
-    leaders.setInvisibleTo(visibility)
-    Global.call("move_and_lock_object", {
-        obj = leaders,
-        is_visible = show
-    })
 end
 
 function BaseGame.lore_visibility(show, with_expansion)
@@ -103,18 +106,22 @@ function BaseGame.lore_visibility(show, with_expansion)
                            {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
     if (with_expansion) then
         local expansion = getObjectFromGUID(BaseGame.components.lore_expansion)
-        expansion.setInvisibleTo(visibility)
+        if (expansion) then
+            expansion.setInvisibleTo(visibility)
+            Global.call("move_and_lock_object", {
+                obj = expansion,
+                is_visible = show
+            })
+        end
+    end
+    local lore = getObjectFromGUID(BaseGame.components.lore)
+    if (lore) then
+        lore.setInvisibleTo(visibility)
         Global.call("move_and_lock_object", {
-            obj = expansion,
+            obj = lore,
             is_visible = show
         })
     end
-    local lore = getObjectFromGUID(BaseGame.components.lore)
-    lore.setInvisibleTo(visibility)
-    Global.call("move_and_lock_object", {
-        obj = lore,
-        is_visible = show
-    })
 end
 
 function BaseGame.core_components_visibility(show)
@@ -122,6 +129,22 @@ function BaseGame.core_components_visibility(show)
                            {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
     for _, id in pairs(BaseGame.components.core) do
         local obj = getObjectFromGUID(id)
+        if (obj) then
+            obj.setInvisibleTo(visibility)
+            Global.call("move_and_lock_object", {
+                obj = obj,
+                is_visible = show
+            })
+        else
+        end
+    end
+end
+
+function BaseGame.four_player_cards_visibility(show)
+    local visibility = show and {} or
+                           {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
+    local obj = getObjectFromGUID(BaseGame.components.action_cards_4p)
+    if (obj) then
         obj.setInvisibleTo(visibility)
         Global.call("move_and_lock_object", {
             obj = obj,
@@ -130,27 +153,18 @@ function BaseGame.core_components_visibility(show)
     end
 end
 
-function BaseGame.four_player_cards_visibility(show)
-    local visibility = show and {} or
-                           {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
-    local obj = getObjectFromGUID(BaseGame.components.action_cards_4p)
-    obj.setInvisibleTo(visibility)
-    Global.call("move_and_lock_object", {
-        obj = obj,
-        is_visible = show
-    })
-end
-
 function BaseGame.base_exclusive_components_visibility(show)
     local visibility = show and {} or
                            {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
     for _, id in pairs(BaseGame.components.base_exclusive) do
         local obj = getObjectFromGUID(id)
-        obj.setInvisibleTo(visibility)
-        Global.call("move_and_lock_object", {
-            obj = obj,
-            is_visible = show
-        })
+        if (obj) then
+            obj.setInvisibleTo(visibility)
+            Global.call("move_and_lock_object", {
+                obj = obj,
+                is_visible = show
+            })
+        end
     end
 end
 

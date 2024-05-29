@@ -6,6 +6,7 @@ more_to_explore_lore_GUID = "3441e5"
 
 include_fates_GUID = "be0e27"
 action_deck_GUID = "227406"
+action_deck_zone_GUID = "80ed31" -- "9bd42d"
 action_deck_4P_GUID = "13bedd"
 action_card_zone_GUID = "e6eca7"
 face_up_discard_action_deck_GUID = "a8e929"
