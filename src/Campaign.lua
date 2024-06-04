@@ -173,10 +173,6 @@ function Campaign.setupCampaignGuildCards(player_count, with_ll_expansion)
     campaign_court.setPosition(court_zone_pos)
     campaign_court.setRotation({0, 270, 180})
 
-    -- deal guild cards
-    Global.call("dealGuildCards", player_count == 2 and 3 or 4)
-
-    -- add lore cards
     local lore_deck = getObjectFromGUID(Global.getVar("lore_GUID"))
 
     if (with_ll_expansion) then
@@ -205,7 +201,8 @@ function Campaign.setupCampaignGuildCards(player_count, with_ll_expansion)
 
     Wait.time(function()
         campaign_court.randomize()
-    end, 3)
+        Global.call("dealGuildCards", player_count == 2 and 3 or 4)
+    end, 2)
 end
 
 -- K

@@ -287,7 +287,7 @@ function BaseGame.setupBaseCourt(player_count)
     base_court.setRotation({0, 270, 180})
 
     Wait.time(function()
-        -- deal guild cards
+        base_court.randomize()
         Global.call("dealGuildCards", player_count == 2 and 3 or 4)
     end, 1)
 end
