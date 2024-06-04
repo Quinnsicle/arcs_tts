@@ -117,7 +117,7 @@ function Campaign.setup(with_leaders, with_ll_expansion)
 
     Campaign.setupChapterTrack()
     LOG.INFO("setupChapterTrack Complete")
-    Campaign.setupCampaignGuildCards(#active_players)
+    Campaign.setupCampaignGuildCards(#active_players, with_ll_expansion)
     LOG.INFO("setupCampaignGuildCards Complete")
     Campaign.setupImperialCouncil()
     LOG.INFO("setupImperialCouncil Complete")
@@ -164,7 +164,7 @@ function Campaign.setupChapterTrack()
 end
 
 -- I,J
-function Campaign.setupCampaignGuildCards(player_count)
+function Campaign.setupCampaignGuildCards(player_count, with_ll_expansion)
     local court_zone = getObjectFromGUID(Global.getVar("court_deck_zone_GUID"))
     local court_zone_pos = court_zone.getPosition()
     local campaign_court = getObjectFromGUID(
@@ -173,25 +173,25 @@ function Campaign.setupCampaignGuildCards(player_count)
     campaign_court.setPosition(court_zone_pos)
     campaign_court.setRotation({0, 270, 180})
 
-    Wait.time(function()
-        -- deal guild cards
-        Global.call("dealGuildCards", player_count == 2 and 3 or 4)
+    -- deal guild cards
+    Global.call("dealGuildCards", player_count == 2 and 3 or 4)
 
-        -- add lore cards
-        local lore_deck = getObjectFromGUID(Global.getVar("lore_GUID"))
+    -- add lore cards
+    local lore_deck = getObjectFromGUID(Global.getVar("lore_GUID"))
 
-        if (Global.getVar("with_more_to_explore")) then
-            broadcastToAll("Playing with the Leaders & Lore Expansion")
+    if (with_ll_expansion) then
+        broadcastToAll("Playing with the Leaders & Lore Expansion")
 
-            local mte_lore = getObjectFromGUID(Global.getVar(
-                "more_to_explore_lore_GUID"))
+        local mte_lore = getObjectFromGUID(Global.getVar(
+            "more_to_explore_lore_GUID"))
 
-            lore_deck.putObject(mte_lore)
-        end
+        lore_deck.putObject(mte_lore)
+    end
 
-        lore_deck.randomize()
+    lore_deck.randomize()
 
-        for i = 1, player_count, 1 do
+    for i = 1, player_count, 1 do
+        Wait.time(function()
             lore_deck.takeObject({
                 position = {
                     court_zone_pos.x, court_zone_pos.y + 1, court_zone_pos.z
@@ -200,13 +200,12 @@ function Campaign.setupCampaignGuildCards(player_count)
                 flip = false,
                 smooth = false
             })
-        end
-
-        Wait.time(function()
-            campaign_court.randomize()
         end, 1)
+    end
 
-    end, 1)
+    Wait.time(function()
+        campaign_court.randomize()
+    end, 3)
 end
 
 -- K

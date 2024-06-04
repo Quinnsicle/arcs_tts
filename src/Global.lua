@@ -1250,6 +1250,7 @@ function set_game_in_progress(params)
         campaign_rules.setDescription("active")
 
         Campaign.components_visibility(true)
+        BaseGame.lore_visibility(true, params.leaders_and_lore_expansion)
     else
         BaseGame.base_exclusive_components_visibility(true)
     end
