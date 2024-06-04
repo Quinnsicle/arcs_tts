@@ -129,6 +129,34 @@ function ObjectCounters.setup()
 end
 
 function ObjectCounters.add(container, button)
+    if (container.type == "Infinite") then
+        container.createButton({
+            function_owner = self,
+            click_function = "doNothing",
+            label = "∞",
+            position = Vector(button.shadow) + Vector(button.position),
+            rotation = button.rotation and button.rotation or {0, 0, 0},
+            width = 0,
+            height = 0,
+            scale = button.scale,
+            font_size = button.font_size,
+            font_color = {0, 0, 0}
+        })
+        container.createButton({
+            function_owner = self,
+            click_function = "doNothing",
+            label = "∞",
+            position = button.position,
+            rotation = button.rotation and button.rotation or {0, 0, 0},
+            width = 0,
+            height = 0,
+            scale = button.scale,
+            font_size = button.font_size,
+            font_color = button.font_color
+        })
+        return
+    end
+
     has_counter[container.getGUID()] = true
     container.createButton({
         function_owner = self,
