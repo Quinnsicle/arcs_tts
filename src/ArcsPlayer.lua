@@ -269,10 +269,18 @@ function ArcsPlayer:update_score()
     self.hand_size =
         #getObjectFromGUID(player_pieces[self.color]["hand_zone"]).getObjects()
     self.tycoon = self:count("Fuel") + self:count("Material")
-    self.captives = #getObjectFromGUID(
-                        player_pieces[self.color]["captives_zone"]).getObjects()
-    self.trophies = #getObjectFromGUID(
-                        player_pieces[self.color]["trophies_zone"]).getObjects()
+    local captive_zone = getObjectFromGUID(
+        player_pieces[self.color]["captives_zone"])
+    if (captive_zone == nil) then
+        return
+    end
+    self.captives = #captive_zone.getObjects()
+    local trophies_zone = getObjectFromGUID(
+        player_pieces[self.color]["trophies_zone"])
+    if (trophies_zone == nil) then
+        return
+    end
+    self.trophies = #trophies_zone.getObjects()
     self.keeper = self:count("Relic")
     self.empath = self:count("Psionic")
 
@@ -342,6 +350,10 @@ end
 function ArcsPlayer:count(resource)
     local area = getObjectFromGUID(player_pieces[self.color]["area_zone"])
     local count = 0
+
+    if (area == nil) then
+        return count
+    end
 
     for _, obj in pairs(area.getObjects()) do
         if (obj.getDescription() == resource) then
