@@ -1274,9 +1274,6 @@ function set_game_in_progress(params)
     --     local player_board = getObjectFromGUID(v.components.board)
     --     player_board.setDescription("active")
     -- end
-
-    local action_deck = ActionCards.get_action_deck()
-    action_deck.addContextMenuItem("Draw bottom card", ActionCards.draw_bottom)
 end
 
 function onLoad()
@@ -1291,14 +1288,6 @@ function onLoad()
     if (reach_board.getDescription() == "in progress") then
         broadcastToAll("Loading game in progress")
 
-        local action_deck = ActionCards.get_action_deck()
-        action_deck.addContextMenuItem("Draw bottom card",
-            ActionCards.draw_bottom)
-
-        local campaign_rules = getObjectFromGUID(Campaign.guids.rules)
-        local is_campaign = campaign_rules.getDescription() == "active"
-        Campaign.components_visibility(is_campaign)
-
         for _, v in ipairs({"Red", "White", "Yellow", "Teal"}) do
             local player_board = getObjectFromGUID(
                 player_pieces_GUIDs[v].player_board)
@@ -1309,9 +1298,7 @@ function onLoad()
                 table.insert(active_players, arcs_player)
             end
         end
-        for _, v in ipairs(active_players) do
-            ArcsPlayer.components_visibility(v.color, true, is_campaign)
-        end
+
         Counters.setup()
     elseif debug then
 
@@ -1340,6 +1327,9 @@ function onLoad()
             ArcsPlayer.components_visibility(v, false, false)
         end
     end
+
+    local action_deck = ActionCards.get_action_deck()
+    action_deck.addContextMenuItem("Draw bottom card", ActionCards.draw_bottom)
 
     for _, obj in pairs(getObjectsWithTag("Noninteractable")) do
         obj.locked = true
