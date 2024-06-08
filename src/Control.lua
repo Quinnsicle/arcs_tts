@@ -147,13 +147,18 @@ function end_round()
             if (p.last_action_card and p.last_action_card == surpass_name) then
                 Initiative.unseize()
                 Initiative.take(p.color)
+                Turns.turn_color = p.color
 
                 p.last_action_card = nil
+
+                broadcastToAll("End Hand\n")
+                return
             end
         end
     end
 
     broadcastToAll("End Hand\n")
+    return
 end
 
 function take_initiative(objectButtonClicked, playerColorClicked)

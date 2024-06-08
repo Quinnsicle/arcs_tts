@@ -130,6 +130,8 @@ function Campaign.setup(with_leaders, with_ll_expansion)
         Campaign.dealPlayerFates()
     end, 5)
 
+    Turns.enable = true;
+
     return true
 end
 
