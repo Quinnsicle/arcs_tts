@@ -279,13 +279,9 @@ function ActionCards.get_surpassing_card()
                 surpassing_card = card
             end
         end
-
         ::continue::
     end
 
-    Log.DEBUG("-------surpassing_card-------")
-    Log.DEBUG(surpassing_card.type)
-    Log.DEBUG(surpassing_card.number)
     return surpassing_card
 end
 
