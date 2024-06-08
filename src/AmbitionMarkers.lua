@@ -264,8 +264,7 @@ function AmbitionMarkers.highest_undeclared()
 end
 -- Begin Object Code --
 function onLoad()
-    -- There's still some bugs with the declare ambition button so I'm disabling it for now
-    -- AmbitionMarkers.add_button()
+    AmbitionMarkers.add_button()
 end
 function declare_ambition(_, player_color)
     AmbitionMarkers.declare(player_color)
