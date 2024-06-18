@@ -1,6 +1,8 @@
 require("src/GUIDs")
 
-local InitiativeMarker = {}
+local InitiativeMarker = {
+    player = nil
+}
 
 local initiative_pos = {-2, 0, -2.2}
 
@@ -31,6 +33,8 @@ function InitiativeMarker.unseize()
     if (initiative_seized) then
         initiative_seized.setState(1)
     end
+
+    InitiativeMarker.player = nil
 end
 
 function InitiativeMarker.take(player_color)
@@ -44,6 +48,7 @@ function InitiativeMarker.take(player_color)
         broadcastToAll(player_color .. " takes initiative", player_color)
     end
 
+    InitiativeMarker.player = player_color
 end
 
 function InitiativeMarker.seize(player_color)
@@ -61,7 +66,7 @@ function InitiativeMarker.seize(player_color)
     else
         broadcastToAll("Initiative is already seized.", Color.Red)
     end
-
+    InitiativeMarker.player = player_color
 end
 
 return InitiativeMarker

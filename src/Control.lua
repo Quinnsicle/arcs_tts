@@ -134,6 +134,7 @@ function end_round()
     -- Auto Initiative, Find surpassing card
     if (Initiative.is_seized()) then
         Initiative.unseize()
+        Turns.turn_color = Initiative.player
     else
         local surpass = ActionCards.get_surpassing_card()
         if (surpass == nil) then
