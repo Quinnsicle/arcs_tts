@@ -72,7 +72,6 @@ end
 function ActionCards.setup_deck(player_count)
     local four_player_deck = getObjectFromGUID(action_deck_4P_GUID)
     local deck = ActionCards.get_action_deck()
-    print(deck)
     if (player_count == 4) then
         deck.putObject(four_player_deck)
         Wait.time(function()
