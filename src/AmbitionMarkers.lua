@@ -77,7 +77,7 @@ local ambitions = {
     }
 }
 
-last_declared_marker = nil
+local last_declared_marker = nil
 
 function AmbitionMarkers.get_ambition_info(object)
 
