@@ -128,8 +128,7 @@ end
 
 function end_round()
     ActionCards.clear_played()
-    -- disabling auto AmbitionMarkers for now due to bugs
-    -- AmbitionMarkers.reset_zero_marker() 
+    AmbitionMarkers.reset_zero_marker()
 
     -- Auto Initiative, Find surpassing card
     if (Initiative.is_seized()) then

@@ -107,7 +107,6 @@ end
 
 function AmbitionMarkers.add_button()
     zero_marker.createButton({
-        index = 0,
         click_function = 'declare_ambition',
         function_owner = zero_marker,
         position = {0, 0.05, 0},
@@ -119,7 +118,6 @@ end
 
 function AmbitionMarkers.display_declare_button()
     zero_marker.editButton({
-        index = 0,
         click_function = 'declare_ambition',
         tooltip = 'Declare Ambition'
     })
@@ -127,13 +125,71 @@ end
 
 function AmbitionMarkers.display_undo_button()
     zero_marker.editButton({
-        index = 0,
         click_function = 'undo_ambition',
         tooltip = 'Undo'
     })
 end
 
-function AmbitionMarkers.declare(player_color)
+function AmbitionMarkers.declare(obj, player_color)
+
+end
+
+function AmbitionMarkers.undo()
+    broadcastToAll("Undo Ambition Declaration")
+    if (last_declared_marker == nil) then
+        Log.ERROR(
+            "Could not find last declared ambition marker, resetting zero marker.")
+        AmbitionMarkers.display_declare_button()
+        return
+    end
+    local undo_pos =
+        reach_board.positionToWorld(last_declared_marker.column_pos)
+    last_declared_marker.object.setPositionSmooth(undo_pos)
+
+    -- move zero marker back
+    zero_marker.setPositionSmooth(reach_board.positionToWorld({0.94, 0.2, 1.09}))
+    zero_marker.setRotationSmooth({0.00, 180.00, 0.00})
+
+    AmbitionMarkers.display_declare_button()
+end
+
+function AmbitionMarkers.reset_zero_marker()
+    last_declared_marker = nil
+    AmbitionMarkers.display_declare_button()
+    zero_marker.setPositionSmooth(reach_board.positionToWorld({0.94, 0.2, 1.09}))
+    zero_marker.setRotationSmooth({0.00, 180.00, 0.00})
+end
+
+function AmbitionMarkers.highest_undeclared()
+
+    local available_markers = marker_zone.getObjects()
+    local high_points = 0
+    local high_marker = nil
+    local marker_mapping = {
+        [ambition_marker_GUIDs[1]] = markers[1],
+        [ambition_marker_GUIDs[2]] = markers[2],
+        [ambition_marker_GUIDs[3]] = markers[3]
+    }
+
+    for _, marker in pairs(available_markers) do
+        local this_marker = marker_mapping[marker.getGUID()]
+        local this_points = this_marker[this_marker.object.is_face_down]
+                                .first_power
+        if this_points > high_points then
+            high_points = this_points
+            high_marker = this_marker
+        end
+    end
+
+    return high_marker
+
+end
+
+-- Begin Object Code --
+function onLoad()
+    AmbitionMarkers.add_button()
+end
+function declare_ambition(obj, player_color)
 
     local lead_info = action_cards.get_lead_info()
 
@@ -191,87 +247,10 @@ function AmbitionMarkers.declare(player_color)
     zero_marker.setPositionSmooth(reach_board.positionToWorld({1.02, 0.2, 0.67}))
     zero_marker.setRotationSmooth({0.00, 90.00, 0.00})
 
-    -- local global_ambitions = Global.getVar("active_ambitions")
-    -- table.insert(global_ambitions, this_ambition.name)
-    -- Global.setVar("active_ambitions", global_ambitions)
-    -- Global.call("update_player_scores")
-
     AmbitionMarkers.display_undo_button()
 end
-
-function AmbitionMarkers.undo()
-    broadcastToAll("Undo Ambition Declaration")
-    if (last_declared_marker == nil) then
-        Log.ERROR(
-            "Could not find last declared ambition marker, resetting zero marker.")
-        AmbitionMarkers.display_declare_button()
-        return
-    end
-    local undo_pos =
-        reach_board.positionToWorld(last_declared_marker.column_pos)
-    last_declared_marker.object.setPositionSmooth(undo_pos)
-
-    -- reset zero marker
-    zero_marker.setPositionSmooth(reach_board.positionToWorld({0.94, 0.2, 1.09}))
-    zero_marker.setRotationSmooth({0.00, 180.00, 0.00})
-
-    -- local global_ambitions = Global.getVar("active_ambitions")
-    -- table.remove(global_ambitions)
-    -- Global.setVar("active_ambitions", global_ambitions)
-    -- Global.call("update_player_scores")
-
-    AmbitionMarkers.display_declare_button()
-end
-
-function AmbitionMarkers.reset_zero_marker()
-    last_declared_marker = nil
-    AmbitionMarkers.display_declare_button()
-    zero_marker.setPositionSmooth(reach_board.positionToWorld({0.94, 0.2, 1.09}))
-    zero_marker.setRotationSmooth({0.00, 180.00, 0.00})
-
-    -- local global_ambitions = Global.getVar("active_ambitions")
-    -- -- for some reason simply setting active_ambitions to {} causes an error
-    -- for i, v in ipairs(global_ambitions) do
-    --     table.remove(global_ambitions)
-    -- end
-    -- Global.setVar("active_ambitions", global_ambitions)
-    -- Global.call("update_player_scores")
-end
-
-function AmbitionMarkers.highest_undeclared()
-
-    local available_markers = marker_zone.getObjects()
-    local high_points = 0
-    local high_marker = nil
-    local marker_mapping = {
-        [ambition_marker_GUIDs[1]] = markers[1],
-        [ambition_marker_GUIDs[2]] = markers[2],
-        [ambition_marker_GUIDs[3]] = markers[3]
-    }
-
-    for _, marker in pairs(available_markers) do
-        local this_marker = marker_mapping[marker.getGUID()]
-        local this_points = this_marker[this_marker.object.is_face_down]
-                                .first_power
-        if this_points > high_points then
-            high_points = this_points
-            high_marker = this_marker
-        end
-    end
-
-    return high_marker
-
-end
--- Begin Object Code --
-function onLoad()
-    -- TODO: fix auto ambition
-    AmbitionMarkers.add_button()
-end
-function declare_ambition(_, player_color)
-    AmbitionMarkers.declare(player_color)
-end
-function undo_ambition(_, player_color)
-    AmbitionMarkers.undo()
+function undo_ambition(obj, player_color)
+    AmbitionMarkers.undo(obj)
 end
 -- End Object Code --
 
