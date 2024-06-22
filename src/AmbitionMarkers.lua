@@ -109,7 +109,7 @@ function AmbitionMarkers.add_button()
     zero_marker.createButton({
         index = 0,
         click_function = 'declare_ambition',
-        function_owner = self,
+        function_owner = zero_marker,
         position = {0, 0.05, 0},
         width = 3800,
         height = 950,
@@ -117,7 +117,7 @@ function AmbitionMarkers.add_button()
     })
 end
 
-function AmbitionMarkers.declare_button()
+function AmbitionMarkers.display_declare_button()
     zero_marker.editButton({
         index = 0,
         click_function = 'declare_ambition',
@@ -125,7 +125,7 @@ function AmbitionMarkers.declare_button()
     })
 end
 
-function AmbitionMarkers.undo_button()
+function AmbitionMarkers.display_undo_button()
     zero_marker.editButton({
         index = 0,
         click_function = 'undo_ambition',
@@ -196,7 +196,7 @@ function AmbitionMarkers.declare(player_color)
     -- Global.setVar("active_ambitions", global_ambitions)
     -- Global.call("update_player_scores")
 
-    AmbitionMarkers.undo_button()
+    AmbitionMarkers.display_undo_button()
 end
 
 function AmbitionMarkers.undo()
@@ -204,7 +204,7 @@ function AmbitionMarkers.undo()
     if (last_declared_marker == nil) then
         Log.ERROR(
             "Could not find last declared ambition marker, resetting zero marker.")
-        AmbitionMarkers.declare_button()
+        AmbitionMarkers.display_declare_button()
         return
     end
     local undo_pos =
@@ -220,12 +220,12 @@ function AmbitionMarkers.undo()
     -- Global.setVar("active_ambitions", global_ambitions)
     -- Global.call("update_player_scores")
 
-    AmbitionMarkers.declare_button()
+    AmbitionMarkers.display_declare_button()
 end
 
 function AmbitionMarkers.reset_zero_marker()
     last_declared_marker = nil
-    AmbitionMarkers.declare_button()
+    AmbitionMarkers.display_declare_button()
     zero_marker.setPositionSmooth(reach_board.positionToWorld({0.94, 0.2, 1.09}))
     zero_marker.setRotationSmooth({0.00, 180.00, 0.00})
 
@@ -264,6 +264,7 @@ function AmbitionMarkers.highest_undeclared()
 end
 -- Begin Object Code --
 function onLoad()
+    -- TODO: fix auto ambition
     AmbitionMarkers.add_button()
 end
 function declare_ambition(_, player_color)
