@@ -202,7 +202,10 @@ function ArcsPlayer:setup(is_campaign)
 end
 
 function ArcsPlayer:set_last_played_action_card(action_card_description)
-    self.last_action_card = action_card_description
+    self.last_action_card = {
+        type = string.sub(action_card_description, 1, -3),
+        number = tonumber(string.sub(action_card_description, -1, -1))
+    }
 
     if (Global.getVar("is_face_up_discard_active")) then
         local gold_color = {1, 0.7, 0.4}

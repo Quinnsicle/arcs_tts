@@ -1,5 +1,6 @@
 require("src/GUIDs")
 local Log = require("src/LOG")
+local supplies = require("src/Supplies")
 
 local ActionCards = {}
 
@@ -137,7 +138,6 @@ function ActionCards.clear_played()
     Log.INFO("ActionCards.clear_played")
 
     local played_objects = played_zone.getObjects()
-    local supplies = require("src/Supplies")
 
     -- Error on union card
     for _, obj in pairs(played_objects) do
@@ -262,6 +262,7 @@ end
 function ActionCards.get_surpassing_card()
     local lead = ActionCards.get_lead_info()
     local surpassing_card = nil
+    local max_surpassing_number = 0
 
     if (not lead) then
         return nil
@@ -274,7 +275,9 @@ function ActionCards.get_surpassing_card()
 
         do -- avoid error with goto jumping into surpassing_card scope
             local card = ActionCards.get_info(v)
-            if (card and lead.type == card.type and lead.number < card.number) then
+            if (card and lead.type == card.type and lead.number < card.number and
+                card.number > max_surpassing_number) then
+                max_surpassing_number = card.number
                 surpassing_card = card
             end
         end
