@@ -285,23 +285,18 @@ function getOrderedPlayers()
         return {""}
     end
 
-    -- local players = {"White", "Yellow", "Teal", "Red"}
-    local players = seated_players
+    local clockwise_order = {"White", "Yellow", "Teal", "Red"}
     local ordered_players = {}
-    local i = math.random(player_count)
-    local count = 0
-    while count < player_count do
-        if (i > player_count) then
-            i = 1
-        end
+    local start_index = math.random(player_count)
 
-        local arcs_player = ArcsPlayer:new{
-            color = players[i]
-        }
-        -- ordered_players[color] = arcs_player
-        table.insert(ordered_players, arcs_player)
-        count = count + 1
-        i = i + 1
+    for i = 1, #clockwise_order do
+        local color = clockwise_order[(start_index + i - 2) % #clockwise_order + 1]
+        for _, seated_color in ipairs(seated_players) do
+            if color == seated_color then
+                table.insert(ordered_players, ArcsPlayer:new{color = color})
+                break
+            end
+        end
     end
 
     broadcastToAll("Randomly choosing first player...")
