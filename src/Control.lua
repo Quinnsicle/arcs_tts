@@ -137,6 +137,7 @@ function end_round()
     else
         local surpassing = ActionCards.get_surpassing_card()
         if (surpassing == nil) then
+            Turns.turn_color = Initiative.player
             return
         end
         local surpass_name = surpassing.type .. " " ..
