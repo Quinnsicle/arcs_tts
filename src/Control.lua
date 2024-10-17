@@ -136,35 +136,26 @@ function end_round()
         Turns.turn_color = Initiative.player
     else
         local surpassing = ActionCards.get_surpassing_card()
-        if (surpassing == nil) then
+        if not surpassing then
             Turns.turn_color = Initiative.player
             return
-        end
-        local surpass_name = surpassing.type .. " " ..
-                                 tostring(surpassing.number)
-
-        local all_players = Global.getVar("active_players")
-        for _, p in ipairs(all_players) do
-            if (p.last_action_card) then
-                if (p.last_action_card.type == surpassing.type and
-                    p.last_action_card.number == surpassing.number) then
-
+        else
+            local all_players = Global.getVar("active_players")
+            for _, p in ipairs(all_players) do
+                if p.last_action_card and
+                   p.last_action_card.type == surpassing.type and
+                   p.last_action_card.number == surpassing.number then
                     Initiative.unseize()
                     Initiative.take(p.color)
-
                     Turns.turn_color = p.color
-
                     p.last_action_card = nil
-
-                    broadcastToAll("End Hand\n")
-                    return
+                    break
                 end
             end
         end
     end
 
-    broadcastToAll("End Hand\n")
-    return
+    broadcastToAll("End Round\n")
 end
 
 function take_initiative(objectButtonClicked, playerColorClicked)
