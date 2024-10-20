@@ -155,7 +155,7 @@ end
 
 function AmbitionMarkers.reset_zero_marker()
     last_declared_marker = nil
-    AmbitionMarkers.display_declare_button()
+   -- AmbitionMarkers.display_declare_button()
     zero_marker.setPositionSmooth(reach_board.positionToWorld({0.94, 0.2, 1.09}))
     zero_marker.setRotationSmooth({0.00, 180.00, 0.00})
 end
