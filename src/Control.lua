@@ -126,7 +126,7 @@ function start_chapter()
     ActionCards.deal_hand()
 
     local initiative_player = Global.getVar("initiative_player")
-    print(initiative_player .. " will start the chapter", initiative_player)
+    broadcastToAll(initiative_player .. " will start the chapter", initiative_player)
     Turns.turn_color = initiative_player
 end
 
@@ -145,7 +145,6 @@ function end_round()
         if not surpassing then
             Turns.turn_color = initiative_player
             broadcastToAll("No surpass or seize, ".. initiative_player .. " keeps initiative.", initiative_player)
-
         else
             local all_players = Global.getVar("active_players")
             for _, p in ipairs(all_players) do
