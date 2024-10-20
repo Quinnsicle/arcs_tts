@@ -22879,15 +22879,15 @@
       "GUID": "c2bf05",
       "Name": "ScriptingTrigger",
       "Transform": {
-        "posX": -7.9,
+        "posX": -11.5,
         "posY": 1.98,
-        "posZ": 14.75,
+        "posZ": 17.9,
         "rotX": 0.0,
         "rotY": 0.0,
         "rotZ": 0.0,
-        "scaleX": 20.5355988,
+        "scaleX": 28.13,
         "scaleY": 2.1,
-        "scaleZ": 10.5632524
+        "scaleZ": 15.8
       },
       "Nickname": "player",
       "Description": "Red",
@@ -22925,15 +22925,15 @@
       "GUID": "ee4b6e",
       "Name": "ScriptingTrigger",
       "Transform": {
-        "posX": -7.9,
+        "posX": -11.5,
         "posY": 1.98,
-        "posZ": -16.7486343,
+        "posZ": -17.9,
         "rotX": 0.0,
         "rotY": 0.0,
         "rotZ": 0.0,
-        "scaleX": 20.5355988,
+        "scaleX": 28.13,
         "scaleY": 2.1,
-        "scaleZ": 10.5632524
+        "scaleZ": 15.8
       },
       "Nickname": "player",
       "Description": "Teal",
@@ -22971,15 +22971,15 @@
       "GUID": "238a92",
       "Name": "ScriptingTrigger",
       "Transform": {
-        "posX": 15.8,
-        "posY": 1.98477173,
-        "posZ": -16.75,
+        "posX": 16.9,
+        "posY": 1.98,
+        "posZ": -17.9,
         "rotX": 0.0,
         "rotY": 0.0,
         "rotZ": 0.0,
-        "scaleX": 20.5355988,
+        "scaleX": 28.13,
         "scaleY": 2.1,
-        "scaleZ": 10.5632524
+        "scaleZ": 15.8
       },
       "Nickname": "player",
       "Description": "Yellow",
@@ -23017,15 +23017,15 @@
       "GUID": "a952c1",
       "Name": "ScriptingTrigger",
       "Transform": {
-        "posX": 15.8,
+        "posX": 16.9,
         "posY": 1.98568821,
-        "posZ": 14.75,
+        "posZ": 17.9,
         "rotX": 0.0,
         "rotY": 0.0,
         "rotZ": 0.0,
-        "scaleX": 20.5355988,
+        "scaleX": 28.13,
         "scaleY": 2.1,
-        "scaleZ": 10.5632524
+        "scaleZ": 15.8
       },
       "Nickname": "player",
       "Description": "White",
@@ -23073,7 +23073,7 @@
         "scaleY": 1.0,
         "scaleZ": 0.7994904
       },
-      "Nickname": "Weapons",
+      "Nickname": "Weapon Supply",
       "Description": "",
       "GMNotes": "",
       "AltLookAngle": {
@@ -23151,7 +23151,7 @@
         "scaleY": 1.0,
         "scaleZ": 0.799742043
       },
-      "Nickname": "Fuel",
+      "Nickname": "Fuel Supply",
       "Description": "",
       "GMNotes": "",
       "AltLookAngle": {
@@ -23229,7 +23229,7 @@
         "scaleY": 1.0,
         "scaleZ": 0.799742043
       },
-      "Nickname": "Material",
+      "Nickname": "Material Supply",
       "Description": "",
       "GMNotes": "",
       "AltLookAngle": {
@@ -23304,7 +23304,7 @@
         "scaleY": 1.0,
         "scaleZ": 0.799742043
       },
-      "Nickname": "Relic",
+      "Nickname": "Relic Supply",
       "Description": "",
       "GMNotes": "",
       "AltLookAngle": {
@@ -23379,7 +23379,7 @@
         "scaleY": 1.0,
         "scaleZ": 0.799742043
       },
-      "Nickname": "Psionic",
+      "Nickname": "Psionic Supply",
       "Description": "",
       "GMNotes": "",
       "AltLookAngle": {
