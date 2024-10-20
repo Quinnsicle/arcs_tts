@@ -126,7 +126,7 @@ function start_chapter()
     ActionCards.deal_hand()
 
     local initiative_player = Global.getVar("initiative_player")
-    broadcastToAll(initiative_player .. " will start the chapter", initiative_player)
+    broadcastToAll(initiative_player .. " will start the chapter\n", initiative_player)
     Turns.turn_color = initiative_player
 end
 
@@ -139,7 +139,6 @@ function end_round()
     if (Initiative.is_seized()) then
         Initiative.unseize()
         Turns.turn_color = initiative_player
-        broadcastToAll(initiative_player .. " had seized initiative", initiative_player)
     else
         local surpassing = ActionCards.get_surpassing_card()
         if not surpassing then
