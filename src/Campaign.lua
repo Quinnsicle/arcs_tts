@@ -130,6 +130,7 @@ function Campaign.setup(with_leaders, with_ll_expansion)
         Campaign.dealPlayerFates()
     end, 5)
 
+    Turns.turn_color = active_players[1].color
     Turns.enable = true;
 
     return true
