@@ -77392,6 +77392,57 @@
       "LuaScript": "",
       "LuaScriptState": "",
       "XmlUI": ""
+    },
+    {
+      "GUID": "fd842b",
+      "Name": "Bag",
+      "Transform": {
+        "posX": -53.7283936,
+        "posY": 0.872706532,
+        "posZ": 12.817028,
+        "rotX": -2.66651969E-14,
+        "rotY": 180.0,
+        "rotZ": 6.01977149E-07,
+        "scaleX": 0.5,
+        "scaleY": 0.5,
+        "scaleZ": 0.5
+      },
+      "Nickname": "SetupHelperBagTemplate",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "MaterialIndex": -1,
+      "MeshIndex": -1,
+      "Number": 0,
+      "Bag": {
+        "Order": 0
+      },
+      "LuaScript": "\r\nfunction onLoad()\r\n  self.attachInvisibleHider('TemplateObject', true)\r\nend\r\n\r\nlocal bIsOrganizing = false\r\n\r\nlocal addedObjects = {}\r\n\r\nfunction AddObject(params)\r\n  self.attachInvisibleHider('TemplateObject', false)\r\n  params.object.setLock(true)\r\n\r\n  local rotation = params.object.getRotation()\r\n  if rotation.z > 90 and rotation.z < 270 then\r\n    params.object.setRotation({0,180,180})\r\n  else\r\n    params.object.setRotation({0,180,0})\r\n  end\r\n\r\n  -- turn object invisible temporarily so that it looks like it's already been added to the bag\r\n  params.object.attachInvisibleHider('AddingToBag', true)\r\n\r\n  if addedObjects[params.object.getName()] == nil then\r\n    addedObjects[params.object.getName()] = {params.object}\r\n  else\r\n    table.insert(addedObjects[params.object.getName()], params.object)\r\n  end\r\n\r\n  if not bIsOrganizing then\r\n    bIsOrganizing = true\r\n    Wait.frames(OnOrganize, 10)\r\n  end\r\nend\r\n\r\nfunction OnOrganize()\r\n  for type, objects in pairs(addedObjects) do\r\n    local parent = objects[1]\r\n    \r\n    local size = parent.getBoundsNormalized().size\r\n\r\n    local direction = nil\r\n    if size.x < size.z then\r\n      direction = Vector(1, 0, 0)\r\n    else\r\n      direction = Vector(0, 0, 1)\r\n    end\r\n    local offsetPerObject = (Vector(direction):scale(size) + direction * 0.1)\r\n \r\n    for i = 2, #objects do\r\n      local child = objects[i]\r\n      child.setPosition(parent.getPosition() + (i - 1) * offsetPerObject)\r\n      child.attachInvisibleHider('AddingToBag', false)\r\n      child.setLock(false)\r\n      parent.addAttachment(child)\r\n    end\r\n  end\r\n\r\n  Wait.frames(\r\n    function()\r\n      local typeCount = 0\r\n      for type, objects in pairs(addedObjects) do\r\n        typeCount = typeCount + 1\r\n      end\r\n\r\n      for type, objects in pairs(addedObjects) do\r\n        local parent = objects[1]\r\n        parent.setLock(false)\r\n        parent.attachInvisibleHider('AddingToBag', false)\r\n        parent.addTag('DetachOnDrop')\r\n        if typeCount > 1 then\r\n          self.putObject(parent)\r\n        else\r\n          local dropPosition = self.getPosition()\r\n          dropPosition.y = dropPosition.y + 0.5\r\n          parent.setPosition(dropPosition)\r\n          onObjectDrop(nil, parent)\r\n        end\r\n      end\r\n      addedObjects = {}\r\n      bIsOrganizing = false\r\n      if typeCount < 2 then\r\n        destroyObject(self)\r\n      end\r\n    end, 1)\r\n\r\nend\r\n\r\nfunction onObjectLeaveContainer(container, object)\r\n  if container.getGUID() ~= self.getGUID() then\r\n    return\r\n  end\r\n\r\n  if #self.getObjects() == 1 then\r\n    \r\n    onObjectDrop(nil, self.takeObject({\r\n      position = self.getPosition(),\r\n      smooth = false\r\n    }))\r\n  end\r\n\r\n  if #self.getObjects() <= 0 then\r\n    destroyObject(self)\r\n  end\r\nend\r\n\r\nfunction onObjectDrop(player, object)\r\n  if object.hasTag('DetachOnDrop') then\r\n    object.removeAttachments()\r\n    object.removeTag('DetachOnDrop')\r\n  end\r\nend",
+      "LuaScriptState": "",
+      "XmlUI": ""
     }
   ]
 }
