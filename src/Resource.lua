@@ -58,6 +58,11 @@ function Resource:take(name, pos)
         end
     end
 
+    -- early out if there's no resources in the supply
+    if result == nil then
+        return result
+    end
+
     if result.getQuantity() ~= -1 then
         result = result.takeObject({
             position = pos,
