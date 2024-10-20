@@ -124,46 +124,44 @@ function start_chapter()
     end
 
     ActionCards.deal_hand()
+
+    local initiative_player = Global.getVar("initiative_player")
+    broadcastToAll(initiative_player .. " will start the chapter\n", initiative_player)
+    Turns.turn_color = initiative_player
 end
 
 function end_round()
     ActionCards.clear_played()
     AmbitionMarkers.reset_zero_marker()
+    local initiative_player = Global.getVar("initiative_player")
 
     -- Auto Initiative, Find surpassing card
     if (Initiative.is_seized()) then
         Initiative.unseize()
-        Turns.turn_color = Initiative.player
+        Turns.turn_color = initiative_player
     else
         local surpassing = ActionCards.get_surpassing_card()
-        if (surpassing == nil) then
-            return
-        end
-        local surpass_name = surpassing.type .. " " ..
-                                 tostring(surpassing.number)
-
-        local all_players = Global.getVar("active_players")
-        for _, p in ipairs(all_players) do
-            if (p.last_action_card) then
-                if (p.last_action_card.type == surpassing.type and
-                    p.last_action_card.number == surpassing.number) then
-
+        if not surpassing then
+            Turns.turn_color = initiative_player
+            broadcastToAll("No surpass or seize, ".. initiative_player .. " keeps initiative.", initiative_player)
+        else
+            local all_players = Global.getVar("active_players")
+            for _, p in ipairs(all_players) do
+                if p.last_action_card and
+                   p.last_action_card.type == surpassing.type and
+                   p.last_action_card.number == surpassing.number then
                     Initiative.unseize()
-                    Initiative.take(p.color)
-
+                    Initiative.take(p.color, true)
                     Turns.turn_color = p.color
-
                     p.last_action_card = nil
-
-                    broadcastToAll("End Hand\n")
-                    return
+                    broadcastToAll(p.color .. " has surpassed and takes initiative.", p.color)
+                    break
                 end
             end
         end
     end
 
-    broadcastToAll("End Hand\n")
-    return
+    broadcastToAll("End Round\n", Color.Purple)
 end
 
 function take_initiative(objectButtonClicked, playerColorClicked)
