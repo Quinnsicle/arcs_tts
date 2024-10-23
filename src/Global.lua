@@ -170,6 +170,24 @@ function onObjectDrop(player_color, object)
         end
     end
 
+    if (object_name == "Action Card" and object.is_face_down) then
+        local seize_zone = getObjectFromGUID(seize_zone_GUID)
+        local is_in_seize_zone = false
+        for i, zone_obj in ipairs(seize_zone.getObjects()) do
+            if (zone_obj == object) then
+                is_in_seize_zone = true
+                break
+            end
+        end
+        if (is_in_seize_zone) then
+            local player = get_arcs_player(player_color)
+            if (player) then
+                player:set_last_played_seize_card(object.getDescription())
+                broadcastToAll(player.color .. " is seizing the initiative", player.color)
+            end
+        end
+    end
+
     -- ambitions
     if (object_name == "Ambition") then
 
@@ -303,7 +321,7 @@ function getOrderedPlayers()
         end
     end
 
-    broadcastToAll("Randomly choosing first player...")
+    broadcastToAll("Randomly choosing first player...", Color.Purple)
 
     return ordered_players
 end

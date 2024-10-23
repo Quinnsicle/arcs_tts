@@ -87,6 +87,7 @@ ArcsPlayer = {
     empath = 0,
     player_instance = nil,
     last_action_card = nil,
+    last_seize_card = nil,
     resource_slot_pos = {
         {
             x = 0.863,
@@ -212,6 +213,13 @@ function ArcsPlayer:set_last_played_action_card(action_card_description)
         broadcastToAll(self.color .. " played " .. action_card_description,
             gold_color)
     end
+end
+
+function ArcsPlayer:set_last_played_seize_card(action_card_description)
+    self.last_seize_card = {
+        type = string.sub(action_card_description, 1, -3),
+        number = tonumber(string.sub(action_card_description, -1, -1))
+    }
 end
 
 function ArcsPlayer.has_secret_order(player_color)

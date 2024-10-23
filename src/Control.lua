@@ -124,46 +124,71 @@ function start_chapter()
     end
 
     ActionCards.deal_hand()
+
+    local initiative_player = Global.getVar("initiative_player")
+    broadcastToAll(initiative_player .. " will start the chapter\n", initiative_player)
+    Turns.turn_color = initiative_player
 end
 
 function end_round()
-    ActionCards.clear_played()
-    AmbitionMarkers.reset_zero_marker()
+    -- Seize detection
+    local seize_detected = false
+    if ActionCards.count_seize_cards() == 1 then
+        seize_detected = true
+    elseif ActionCards.count_seize_cards() > 1 then
+        broadcastToAll("Multiple seize cards detected, please fix the board and try to End Round again", Color.Red)
+        return
+    end
 
-    -- Auto Initiative, Find surpassing card
-    if (Initiative.is_seized()) then
+    local initiative_player = Global.getVar("initiative_player")
+    local all_players = Global.getVar("active_players")
+
+    if Initiative.is_seized() and seize_detected then
+        -- Someone already manually seized initiative
         Initiative.unseize()
-        Turns.turn_color = Initiative.player
-    else
-        local surpassing = ActionCards.get_surpassing_card()
-        if (surpassing == nil) then
-            return
+    elseif not Initiative.is_seized() and seize_detected then
+        -- Auto seize initiative for player with last played seize card
+        local seize_player_color = ActionCards.find_seize_player()
+        if seize_player_color then
+            Initiative.take(seize_player_color, true)
+            broadcastToAll(seize_player_color .. " has seized the initiative", seize_player_color)
+        else
+            broadcastToAll("Whoever is playing the seize card, pick it up and drop it back into place, then hit End Round again.", Color.Red)
         end
-        local surpass_name = surpassing.type .. " " ..
-                                 tostring(surpassing.number)
-
-        local all_players = Global.getVar("active_players")
-        for _, p in ipairs(all_players) do
-            if (p.last_action_card) then
-                if (p.last_action_card.type == surpassing.type and
-                    p.last_action_card.number == surpassing.number) then
-
+    else
+        -- Check for highest surpassing card
+        local surpassing = ActionCards.get_surpassing_card()
+        if not surpassing then
+            broadcastToAll("No surpassing card, ".. initiative_player .. " keeps the initiative", initiative_player)
+        else
+            -- Assign initiative to player with highest surpassing card
+            for _, p in ipairs(all_players) do
+                if p.last_action_card and
+                   p.last_action_card.type == surpassing.type and
+                   p.last_action_card.number == surpassing.number then
                     Initiative.unseize()
-                    Initiative.take(p.color)
-
-                    Turns.turn_color = p.color
-
-                    p.last_action_card = nil
-
-                    broadcastToAll("End Hand\n")
-                    return
+                    Initiative.take(p.color, true)
+                    broadcastToAll(p.color .. " has surpassed and takes the initiative", p.color)
+                    break
                 end
             end
         end
     end
 
-    broadcastToAll("End Hand\n")
-    return
+    Turns.turn_color = Global.getVar("initiative_player")
+
+    ActionCards.clear_played()
+    AmbitionMarkers.reset_zero_marker()
+
+    -- reset p.last_action_card + p.last_seize_card for all players
+    -- otherwise weird bugs happen when state carries over to the next round
+    for _, p in ipairs(all_players) do
+        p.last_action_card = nil
+        p.last_seize_card = nil
+    end
+    Initiative.unseize()
+
+    broadcastToAll("End Round\n", Color.Purple)
 end
 
 function take_initiative(objectButtonClicked, playerColorClicked)
