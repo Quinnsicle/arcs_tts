@@ -239,7 +239,8 @@ function BaseGame.setup(with_leaders, with_ll_expansion)
         BaseGame.setupPlayers(active_players, chosen_setup_card)
     end
 
-    Turns.enable = true;
+    Turns.type = 2
+    Turns.order = active_player_colors
 
     return true
 end
