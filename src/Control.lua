@@ -175,20 +175,18 @@ function end_round()
         end
     end
 
-    Turns.turn_color = Global.getVar("initiative_player")
-
     ActionCards.clear_played()
     AmbitionMarkers.reset_zero_marker()
-
     -- reset p.last_action_card + p.last_seize_card for all players
     -- otherwise weird bugs happen when state carries over to the next round
     for _, p in ipairs(all_players) do
         p.last_action_card = nil
         p.last_seize_card = nil
     end
-    Initiative.unseize()
-
     broadcastToAll("End Round\n", Color.Purple)
+
+    Turns.turn_color = Global.getVar("initiative_player")
+    Initiative.unseize()
 end
 
 function take_initiative(objectButtonClicked, playerColorClicked)
