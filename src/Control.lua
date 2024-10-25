@@ -154,6 +154,7 @@ function end_round()
             broadcastToAll(seize_player_color .. " has seized the initiative", seize_player_color)
         else
             broadcastToAll("Whoever is playing the seize card, pick it up and drop it back into place, then hit End Round again.", Color.Red)
+            return
         end
     else
         -- Check for highest surpassing card
