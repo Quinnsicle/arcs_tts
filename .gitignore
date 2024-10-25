@@ -1,7 +1,4 @@
 src/DevTools.lua
-<<<<<<< HEAD
 
 .idea/
-=======
 .tts/
->>>>>>> ec380bf (add .gitignore entry for .tts/)
