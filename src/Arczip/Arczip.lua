@@ -55,28 +55,28 @@ local arczip = {
         PlayerBoards = {
             ResourceSlots = {
                 Red = {'Red_R1','Red_R2','Red_R3','Red_R4','Red_R5','Red_R6', },
-                Blue = {'Blue_R1','Blue_R2','Blue_R3','Blue_R4','Blue_R5','Blue_R6', },
                 White = {'White_R1','White_R2','White_R3','White_R4','White_R5','White_R6', },
+                Teal = {'Teal_R1','Teal_R2','Teal_R3','Teal_R4','Teal_R5','Teal_R6', },
                 Yellow = {'Yellow_R1','Yellow_R2','Yellow_R3','Yellow_R4','Yellow_R5','Yellow_R6', },
             },
             Trophies = {
                 Red ='Red_Trophies', 
-                Blue = 'Blue_Trophies', 
                 White = 'White_Trophies', 
+                Teal = 'Teal_Trophies', 
                 Yellow = 'Yellow_Trophies',
             },
             Captives = {
                 Red = 'Red_Captives', 
-                Blue = 'Blue_Captives', 
                 White = 'White_Captives', 
+                Teal = 'Teal_Captives', 
                 Yellow = 'Yellow_Captives',
             },
 
             -- holds guild cards and other 'owned' items with no specified location
             Table = {
                 Red = 'Red_Table', 
-                Blue = 'Blue_Table', 
                 White = 'White_Table', 
+                Teal = 'Teal_Table', 
                 Yellow = 'Yellow_Table',
             }
         },
@@ -318,7 +318,7 @@ function arczip:init()
 
     local piece = addPiece(arczip.CreatePieceInfo(nil, nil, nil, nil, nil)) -- add the empty id
 
-    for i, color in ipairs({ 'Red', 'White', 'Blue', 'Yellow' }) do
+    for i, color in ipairs({ 'Red', 'White', 'Teal', 'Yellow' }) do
 
         -- Player Buildings
         for _, type in ipairs({ 'City', 'Starport' }) do

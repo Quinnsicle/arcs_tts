@@ -114,9 +114,6 @@ function Locations:GetLocations(position)
     }
     local resource_slot_tolorance = 0.1
     for color, pieces in pairs(player_pieces_GUIDs) do
-        if color == 'Teal' then
-            color = 'Blue' -- TTS calls the color 'teal' but Arcs calls it blue
-        end
         local board = getObjectFromGUID(pieces.player_board)
         -- only check slots if resource is on the player board
         if PointWithinBounds(board, position) then
@@ -134,9 +131,6 @@ function Locations:GetLocations(position)
 
     -- check if position is in a trophy box
     for color, pieces in pairs(player_pieces_GUIDs) do
-        if color == 'Teal' then
-            color = 'Blue' -- TTS calls the color 'teal' but Arcs calls it blue
-        end
         local trophies_zone = getObjectFromGUID(pieces.trophies_zone)
         if PointWithinBounds(trophies_zone, position) then
             table.insert(result, Arczip.Locations.PlayerBoards.Trophies[color])
@@ -146,9 +140,6 @@ function Locations:GetLocations(position)
     -- check if position is in a captives box
     local player_pieces_GUIDs = Global.getVar("player_pieces_GUIDs")
     for color, pieces in pairs(player_pieces_GUIDs) do
-        if color == 'Teal' then
-            color = 'Blue' -- TTS calls the color 'teal' but Arcs calls it blue
-        end
         local captives_zone = getObjectFromGUID(pieces.captives_zone)
         if PointWithinBounds(captives_zone, position) then
             table.insert(result, Arczip.Locations.PlayerBoards.Captives[color])
@@ -157,9 +148,6 @@ function Locations:GetLocations(position)
 
     local player_pieces_GUIDs = Global.getVar("player_pieces_GUIDs")
     for color, pieces in pairs(player_pieces_GUIDs) do
-        if color == 'Teal' then
-            color = 'Blue' -- TTS calls the color 'teal' but Arcs calls it blue
-        end
         local area_zone = getObjectFromGUID(pieces.area_zone)
         if PointWithinBounds(area_zone, position) then
             table.insert(result, Arczip.Locations.PlayerBoards.Table[color])
@@ -432,9 +420,6 @@ function GetMovePieceMethods()
     local function MoveToResourceSlot(location, piece)
         LOG.DEBUG('MoveToResourceSlot('..location..', '..piece.getName()..')')
         local player_color = location:match("%w+")
-        if player_color == 'Blue' then
-            player_color = 'Teal'
-        end
         local slot_num = tonumber(location:sub(#location, #location))
         local player = ArcsPlayer:new({color = player_color})
         local slot_pos = player.resource_slot_pos[slot_num]

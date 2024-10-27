@@ -1,7 +1,7 @@
 local Arczip = require("src/Arczip/Arczip")
 local Locations = require("src/Arczip/Locations")
 local LOG = require("src/LOG")
-local Campaign = require("Campaign")
+local Campaign = require("src/Campaign")
 local Resource = require("src/Resource")
 
 -- this file is the primary communication layer between Arczip and the TTS arcs mod.
@@ -132,9 +132,6 @@ function SaveDataFactory:GetPieceFromSupply(piece_info)
     else
         -- player piece
         local colorKey = piece_info.color
-        if colorKey == 'Blue' then
-            colorKey = 'Teal'
-        end
         local player_pieces_GUIDs = Global.getVar("player_pieces_GUIDs")[colorKey]
 
         if piece_info.type == 'City' then
@@ -176,7 +173,7 @@ function SaveDataFactory:GetPieceFromSupply(piece_info)
             local guid = ({
                 Red = 'b87511', 
                 White = 'f39d4a', 
-                Blue = 'f6f6a4', 
+                Teal = 'f6f6a4', 
                 Yellow = 'a8047e'
             })[piece_info.color]
 
