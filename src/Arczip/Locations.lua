@@ -432,18 +432,22 @@ function GetMovePieceMethods()
 
     local function MoveToTrophies(location, piece)
         LOG.DEBUG('MoveToTrophies('..location..', '..piece.getName()..')')
+        -- TODO: MoveToTrophies method
     end
 
     local function MoveToCaptives(location, piece)
         LOG.DEBUG('MoveToCaptives('..location..', '..piece.getName()..')')
+        -- TODO: MoveToCaptives method
     end
 
     local function MoveToTable(location, piece)
         LOG.DEBUG('MoveToTable('..location..', '..piece.getName()..')')
+        -- TODO: MoveToTable method
     end
 
     local function MoveToCourtSlot(location, piece)
-        LOG.DEBUG('MoveToPlanet('..location..', '..piece.getName()..')')
+        LOG.DEBUG('MoveToCourtSlot('..location..', '..piece.getName()..')')
+        -- TODO: MoveToCourtSlot method
     end
 
     local function MoveToAmbition(location, piece)

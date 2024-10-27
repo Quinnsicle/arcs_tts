@@ -535,12 +535,15 @@ function arczip:decode(data_string)
     player_order_id, index = self:readEncoded(data_string, index)
     local player_order = self.player_order.id_to_order[player_order_id]
     result.active_players = {}
-    for _, color in ipairs(player_order) do
-        local arcs_player = ArcsPlayer:new{
-            color = color
-        }
-        table.insert(result.active_players, arcs_player)
+    if player_order then
+        for _, color in ipairs(player_order) do
+            local arcs_player = ArcsPlayer:new{
+                color = color
+            }
+            table.insert(result.active_players, arcs_player)
+        end
     end
+    
 
     result.pieces = {}
     for _, pieceType in ipairs(self.id_to_piece) do
@@ -587,6 +590,10 @@ function arczip:encode(data)
     end
     local player_order_string = JSON.encode(player_order)
     local player_order_id = self.player_order.order_to_id[player_order_string]
+    if player_order_id == nil then
+        -- unknown player order
+        player_order_id = 0
+    end
     data_string = data_string..baseEncoding:encode(player_order_id)
 
     -- in order by piece type, record the location of every piece

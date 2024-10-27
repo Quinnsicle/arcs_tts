@@ -225,11 +225,13 @@ function SaveDataFactory:Save()
     end
 
     local ordered_players = {}
-    for i = -1, #active_player_info - 2 do
-        local index = (i + LeadPlayer) % #active_player_info + 1
-        table.insert(ordered_players, active_player_info[index])
+    if LeadPlayer ~= nil then
+        for i = -1, #active_player_info - 2 do
+            local index = (i + LeadPlayer) % #active_player_info + 1
+            table.insert(ordered_players, active_player_info[index])
+        end
     end
-
+    
     local save_data = {
         version_number = 1,
         active_clusters = {true, true, true, true, true, true},
