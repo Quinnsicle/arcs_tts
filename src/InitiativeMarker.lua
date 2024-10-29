@@ -1,8 +1,6 @@
 require("src/GUIDs")
 
-local InitiativeMarker = {
-    player = nil
-}
+local InitiativeMarker = {}
 
 local initiative_pos = {-2, 0, -2.2}
 
@@ -33,11 +31,9 @@ function InitiativeMarker.unseize()
     if (initiative_seized) then
         initiative_seized.setState(1)
     end
-
-    InitiativeMarker.player = nil
 end
 
-function InitiativeMarker.take(player_color)
+function InitiativeMarker.take(player_color, silent)
     local initiative = getObjectFromGUID(initiative_GUID)
     local player_board = getObjectFromGUID(
         player_pieces_GUIDs[player_color]["player_board"])
@@ -45,13 +41,15 @@ function InitiativeMarker.take(player_color)
 
     if (initiative) then
         initiative.setPositionSmooth(pos)
-        broadcastToAll(player_color .. " takes initiative", player_color)
+        if not silent then
+            broadcastToAll(player_color .. " takes the initiative", player_color)
+        end
     end
 
-    InitiativeMarker.player = player_color
+    Global.setVar("initiative_player", player_color)
 end
 
-function InitiativeMarker.seize(player_color)
+function InitiativeMarker.seize(player_color,  silent)
     local initiative = getObjectFromGUID(initiative_GUID)
     local player_board = getObjectFromGUID(
         player_pieces_GUIDs[player_color]["player_board"])
@@ -62,11 +60,13 @@ function InitiativeMarker.seize(player_color)
         Wait.time(function()
             initiative.setState(2)
         end, 1.5)
-        broadcastToAll(player_color .. " seizes initiative", player_color)
+        if not silent then
+            broadcastToAll(player_color .. " has seized the initiative", player_color)
+        end
     else
-        broadcastToAll("Initiative is already seized.", Color.Red)
+        broadcastToAll("Initiative has already been seized.", Color.Red)
     end
-    InitiativeMarker.player = player_color
+    Global.setVar("initiative_player", player_color)
 end
 
 return InitiativeMarker

@@ -6,6 +6,7 @@ local ActionCards = {}
 
 local played_zone = getObjectFromGUID(action_card_zone_GUID)
 local lead_zone = getObjectFromGUID(lead_card_zone_GUID)
+local seize_zone = getObjectFromGUID(seize_zone_GUID)
 
 -- Face Down Discard
 local fdd_pos = Vector({0.94, 10.00, -1.26})
@@ -285,6 +286,36 @@ function ActionCards.get_surpassing_card()
     end
 
     return surpassing_card
+end
+
+function ActionCards.count_seize_cards()
+    local seize_zone_objects = seize_zone.getObjects()
+    local count = 0
+    for _, obj in ipairs(seize_zone_objects) do
+        if obj.hasTag("Action") and obj.is_face_down then
+            count = count + 1
+        end
+    end
+    return count
+end
+
+function ActionCards.find_seize_player()
+    local seize_zone_objects = seize_zone.getObjects()
+    for _, obj in ipairs(seize_zone_objects) do
+        if obj.hasTag("Action") and obj.is_face_down then
+            local seize_card = ActionCards.get_info(obj)
+            local all_players = Global.getVar("active_players")
+            for _, p in ipairs(all_players) do
+                if p.last_seize_card and
+                   p.last_seize_card.type == seize_card.type and
+                   p.last_seize_card.number == seize_card.number then
+                    return p.color
+                end
+            end
+        end
+    end
+    print("No seize player found despite detecting a seize card")
+    return nil
 end
 
 function ActionCards.draw_bottom(player_color, position, object)
