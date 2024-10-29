@@ -124,7 +124,7 @@ local all_supplies = {
         origin = resources_markers_GUID["materials"]
     },
 
-    -- Campaing Components
+    -- Campaign Components
     ["Blight"] = {
         bag = blight_GUID
     },
