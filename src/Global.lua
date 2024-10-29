@@ -98,7 +98,7 @@ oop_components = {
     }
 }
 
-initaitive_player_position = {-2, 0, 0}
+initiative_player_position = {-2, 0, 0}
 
 active_players = {}
 active_ambitions = {
