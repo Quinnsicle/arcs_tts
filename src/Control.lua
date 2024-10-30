@@ -176,8 +176,8 @@ function end_round()
         end
     end
 
-    ActionCards.clear_played()
     AmbitionMarkers.reset_zero_marker()
+    ActionCards.clear_played()
     -- reset p.last_action_card + p.last_seize_card for all players
     -- otherwise weird bugs happen when state carries over to the next round
     for _, p in ipairs(all_players) do

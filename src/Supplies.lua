@@ -111,7 +111,7 @@ local all_supplies = {
         pos = {0, 2, 0},
         origin = resources_markers_GUID["relics"]
     },
-    ["Weapons"] = {
+    ["Weapon"] = {
         pos = {0, 2, 0},
         origin = resources_markers_GUID["weapons"]
     },
@@ -124,7 +124,7 @@ local all_supplies = {
         origin = resources_markers_GUID["materials"]
     },
 
-    -- Campaing Components
+    -- Campaign Components
     ["Blight"] = {
         bag = blight_GUID
     },
