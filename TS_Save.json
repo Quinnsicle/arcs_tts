@@ -24462,7 +24462,6 @@
         "b": 0.713235259
       },
       "Tags": [
-        "Campaign Only",
         "Court"
       ],
       "LayoutGroupSortIndex": 0,
@@ -25156,7 +25155,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "DIPLOMATIC FIASCO",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -25171,7 +25170,7 @@
           },
           "Tags": [
             "Campaign Only",
-            "Guild",
+            "Vox",
             "Court"
           ],
           "LayoutGroupSortIndex": 0,
@@ -25219,7 +25218,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "SONG OF FREEDOM",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -25232,6 +25231,11 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Vox",
+            "Court"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -25266,7 +25270,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "BLIGHT LOOMS",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -25279,6 +25283,11 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Vox",
+            "Court"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -25313,7 +25322,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "POPULIST DEMANDS",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -25376,7 +25385,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "COUNCIL INTRIGUE",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -25391,7 +25400,7 @@
           },
           "Tags": [
             "Campaign Only",
-            "Guild",
+            "Vox",
             "Court"
           ],
           "LayoutGroupSortIndex": 0,
@@ -70854,7 +70863,6 @@
         "b": 0.713235259
       },
       "Tags": [
-        "Guild",
         "Court"
       ],
       "LayoutGroupSortIndex": 0,
@@ -73239,7 +73247,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "MIRROR PLATING",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -73301,7 +73309,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "SEEKER TORPEDOES",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -73363,7 +73371,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "TOOL PRIESTS",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -73425,7 +73433,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "LIVING STRUCTURES",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -73487,7 +73495,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "CLOUD CITIES",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -73549,7 +73557,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "GATE PORTS",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -73611,7 +73619,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "GATE STATIONS",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -73673,7 +73681,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "REPAIR DRONES",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -73735,7 +73743,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "HIDDEN HARBORS",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -73797,7 +73805,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "GALACTIC RIFLES",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -73859,7 +73867,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "RAILGUN ARRAYS",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -73921,7 +73929,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "SIGNAL BREAKER",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -73983,7 +73991,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "SPRINTER DRIVES",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -74045,7 +74053,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "ANCIENT HOLDINGS",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -74185,7 +74193,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "WARLORD'S CRUELTY",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -74247,7 +74255,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "RAIDER EXOSUITS",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -74309,7 +74317,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "SURVIVAL OVERRIDES",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -74371,7 +74379,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "PREDICTIVE SENSORS",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -74433,7 +74441,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "FORCE BEAMS",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -74495,7 +74503,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "EMPATH'S BOND",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -74557,7 +74565,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "EMPATH'S BOND",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -74619,7 +74627,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "KEEPER'S TRUST",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -74681,7 +74689,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "KEEPER'S SOLIDARITY",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -74743,7 +74751,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "WARLORD'S TERROR",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -74805,7 +74813,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "TYRANT'S EGO",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -74867,7 +74875,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "TYRANT'S AUTHORITY",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -74929,7 +74937,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "TYCOON'S AMBITION",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -74991,7 +74999,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "TYCOON'S CHARM",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {

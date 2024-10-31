@@ -242,8 +242,7 @@ function onObjectLeaveContainer(container, leave_object)
     Counters.update(container)
     local container_tags = container.getTags()
     if #container_tags > 0 then
-        if container.type == "Deck" or container.type == "Bag" or container.type ==
-            "Infinite" then
+        if container.type == "Bag" or container.type =="Infinite" then
             leave_object.setTags(container.getTags())
     
             -- set snap
