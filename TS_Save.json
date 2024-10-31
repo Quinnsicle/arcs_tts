@@ -173,8 +173,16 @@
         "normalized": "starport"
       },
       {
+        "displayed": "Court",
+        "normalized": "court"
+      },
+      {
         "displayed": "Guild",
         "normalized": "guild"
+      },
+      {
+        "displayed": "Vox",
+        "normalized": "vox"
       },
       {
         "displayed": "Regent",
@@ -24455,7 +24463,7 @@
       },
       "Tags": [
         "Campaign Only",
-        "Guild"
+        "Court"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -24533,7 +24541,8 @@
           },
           "Tags": [
             "Campaign Only",
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -24595,7 +24604,8 @@
           },
           "Tags": [
             "Campaign Only",
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -24657,7 +24667,8 @@
           },
           "Tags": [
             "Campaign Only",
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -24719,7 +24730,8 @@
           },
           "Tags": [
             "Campaign Only",
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -24781,7 +24793,8 @@
           },
           "Tags": [
             "Campaign Only",
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -24843,7 +24856,8 @@
           },
           "Tags": [
             "Campaign Only",
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -24905,7 +24919,8 @@
           },
           "Tags": [
             "Campaign Only",
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -24967,7 +24982,8 @@
           },
           "Tags": [
             "Campaign Only",
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -25029,7 +25045,8 @@
           },
           "Tags": [
             "Campaign Only",
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -25091,7 +25108,8 @@
           },
           "Tags": [
             "Campaign Only",
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -25153,7 +25171,8 @@
           },
           "Tags": [
             "Campaign Only",
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -25309,7 +25328,8 @@
           },
           "Tags": [
             "Campaign Only",
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -25371,7 +25391,8 @@
           },
           "Tags": [
             "Campaign Only",
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -70833,7 +70854,8 @@
         "b": 0.713235259
       },
       "Tags": [
-        "Guild"
+        "Guild",
+        "Court"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -70926,7 +70948,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Vox",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -70987,7 +71010,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Vox",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -71048,7 +71072,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Vox",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -71109,7 +71134,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Vox",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -71170,7 +71196,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Vox",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -71231,7 +71258,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -71292,7 +71320,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -71353,7 +71382,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -71414,7 +71444,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -71475,7 +71506,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -71536,7 +71568,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -71597,7 +71630,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -71658,7 +71692,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -71719,7 +71754,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -71780,7 +71816,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -71841,7 +71878,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -71902,7 +71940,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -71963,7 +72002,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -72024,7 +72064,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -72085,7 +72126,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -72146,7 +72188,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -72207,7 +72250,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -72268,7 +72312,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -72329,7 +72374,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -72390,7 +72436,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -72451,7 +72498,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -72512,7 +72560,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -72573,7 +72622,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -72634,7 +72684,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -72695,7 +72746,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -72756,7 +72808,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild"
+            "Guild",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -73123,7 +73176,8 @@
         "b": 0.713235259
       },
       "Tags": [
-        "Lore"
+        "Lore",
+        "Court"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -73199,7 +73253,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -73260,7 +73315,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -73321,7 +73377,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -73382,7 +73439,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -73443,7 +73501,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -73504,7 +73563,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -73565,7 +73625,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -73626,7 +73687,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -73687,7 +73749,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -73748,7 +73811,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -73809,7 +73873,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -73870,7 +73935,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -73931,7 +73997,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -73992,7 +74059,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -74131,7 +74199,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -74192,7 +74261,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -74253,7 +74323,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -74314,7 +74385,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -74375,7 +74447,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -74436,7 +74509,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -74497,7 +74571,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -74558,7 +74633,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -74619,7 +74695,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -74680,7 +74757,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -74741,7 +74819,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -74802,7 +74881,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -74863,7 +74943,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -74924,7 +75005,8 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Lore"
+            "Lore",
+            "Court"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
