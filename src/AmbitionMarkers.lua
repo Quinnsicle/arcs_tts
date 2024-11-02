@@ -139,7 +139,7 @@ function AmbitionMarkers.undo()
     if (last_declared_marker == nil) then
         Log.ERROR(
             "Could not find last declared ambition marker, resetting zero marker.")
-        AmbitionMarkers.display_declare_button()
+        -- AmbitionMarkers.display_declare_button()
         return
     end
     local undo_pos =
@@ -150,7 +150,7 @@ function AmbitionMarkers.undo()
     zero_marker.setPositionSmooth(reach_board.positionToWorld({0.94, 0.2, 1.09}))
     zero_marker.setRotationSmooth({0.00, 180.00, 0.00})
 
-    AmbitionMarkers.display_declare_button()
+    -- AmbitionMarkers.display_declare_button()
 end
 
 function AmbitionMarkers.reset_zero_marker()
@@ -187,7 +187,7 @@ end
 
 -- Begin Object Code --
 function onLoad()
-    AmbitionMarkers.add_button()
+    -- AmbitionMarkers.add_button()
 end
 function declare_ambition(obj, player_color)
 
@@ -247,7 +247,7 @@ function declare_ambition(obj, player_color)
     zero_marker.setPositionSmooth(reach_board.positionToWorld({1.02, 0.2, 0.67}))
     zero_marker.setRotationSmooth({0.00, 90.00, 0.00})
 
-    AmbitionMarkers.display_undo_button()
+    -- AmbitionMarkers.display_undo_button()
 end
 function undo_ambition(obj, player_color)
     AmbitionMarkers.undo(obj)
