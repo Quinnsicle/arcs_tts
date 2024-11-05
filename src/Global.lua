@@ -198,6 +198,14 @@ function onObjectDrop(player_color, object)
 
 end
 
+function onPlayerAction(player, action, targets)
+    if (action == Player.Action.FlipOver and #targets == 1 and targets[1].hasTag("Action")) then
+        Wait.time(function()
+            onObjectDrop(player.color, targets[1])
+        end, 0.25)
+    end
+end
+
 function onObjectEnterZone(zone, object)
     Counters.update(zone)
 
