@@ -142,8 +142,8 @@ function ActionCards.clear_played()
 
     -- Error on union card
     for _, obj in pairs(played_objects) do
-        if obj.hasTag("Guild") then
-            broadcastToAll("Resolve Guild card before cleanup!", Color.Red)
+        if obj.hasTag("Court") then
+            broadcastToAll("Resolve & remove court cards so we can end round + clean up!", Color.Red)
             return false
         end
     end
