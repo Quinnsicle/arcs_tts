@@ -115,7 +115,6 @@ local BaseGame = require("src/BaseGame")
 local Campaign = require("src/Campaign")
 local Counters = require("src/Counters")
 local Initiative = require("src/InitiativeMarker")
-local SetupControl = require("src/SetupControl")
 local Supplies = require("src/Supplies")
 
 function assignPlayerToAvailableColor(player, color)
@@ -1303,6 +1302,7 @@ end
 function onLoad()
 
     Initiative.add_menu()
+    loadCameraMenu(false)
 
     for _, obj in pairs(getObjectsWithTag("City")) do
         Supplies.addMenuToObject(obj)
@@ -1369,4 +1369,151 @@ function onLoad()
         face_up_discard_action_deck.interactable = false
         face_up_discard_action_deck.locked = false -- set this to false otherwise it breaks
     end
+end
+
+function loadCameraMenu(menuOpen)
+    -- Generate player buttons XML based on active players
+    local playerButtonsXml = ""
+    -- Always add Map and Dice buttons
+    playerButtonsXml = playerButtonsXml .. 
+        [[<Button text="Map" id="mapCamera" textColor="Grey" onClick="onMapClick"></Button>
+          <Button text="Court" id="courtCamera" textColor="Grey" onClick="onCourtClick"></Button>
+          <Button text="Action" id="actionCardsCamera" textColor="Grey" onClick="onActionCardsClick"></Button>
+          <Button text="Dice" id="diceCamera" textColor="Grey" onClick="onDiceBoardClick"></Button>]]
+
+    local buttonColors = {
+        Red = "#FF0000",
+        White = "#FFFFFF",
+        Yellow = "#FFFF00",
+        Teal = "#00FFFF"
+    }
+
+    for _, player in ipairs(active_players) do
+        playerButtonsXml = playerButtonsXml .. string.format(
+            [[<Button text="%s" id="%sCamera" textColor="%s" onClick="on%sBoardClick"></Button>]],
+            player.color,
+            player.color:lower(),
+            buttonColors[player.color],
+            player.color
+        )
+    end
+
+    local xml = string.format([[
+        <Defaults>
+            <Button color="black" fontStyle="Bold" />
+            <Button class="cameraControl" onClick="onCameraClick" />
+        </Defaults>
+
+        <VerticalLayout
+            id="cameraLayout"
+            height="240"
+            width="60"
+            allowDragging="true"
+            returnToOriginalPositionWhenReleased="false"
+            rectAlignment="UpperRight"
+            anchorMin="1 1"
+            anchorMax="1 1"
+            offsetXY="-200 -5"
+            spacing="10"
+            childForceExpandHeight="false"
+            childForceExpandWidth="true"
+            >
+            <Button
+                onClick="toggleCameraControls"
+                text="Camera&#xA;Controls"
+                textColor="white"
+                color="Grey"
+                >
+            </Button>
+            <VerticalLayout
+                id="cameraControls"
+                height="240"
+                width="60"
+                active="%s"
+                >
+                %s
+            </VerticalLayout>
+        </VerticalLayout>
+    ]], menuOpen == true and "true" or "false", playerButtonsXml)
+
+    UI.setXml(xml)
+end
+
+function toggleCameraControls(player, value, id)
+    local startingMenuState = UI.getAttribute("cameraControls", "active") == "true"
+    local newMenuState = not startingMenuState
+    UI.setAttribute("cameraControls", "active", tostring(newMenuState))
+    loadCameraMenu(newMenuState)
+end
+
+function onMapClick(player, value, id)
+    Player[player.color].lookAt({
+        position = {x=2.79, y=0.98, z=-1.35},
+        pitch = 70,
+        yaw = 0,
+        distance = 35
+    })
+end
+
+function onCourtClick(player, value, id)
+    Player[player.color].lookAt({
+        position = {x=22.26, y=1.49, z=-1.65},
+        pitch = 70,
+        yaw = 90,
+        distance = 10
+    })
+end
+
+function onActionCardsClick(player, value, id)
+    Player[player.color].lookAt({
+        position = {x=-14.0, y=1.49, z=-1.65},
+        pitch = 70,
+        yaw = 270,
+        distance = 12
+    })
+end
+
+function onDiceBoardClick(player, value, id)
+    Player[player.color].lookAt({
+        position = {x=-33.2, y=1.07, z=-15.22},
+        pitch = 80,
+        yaw = 0,
+        distance = 18
+    })
+end
+
+function onRedBoardClick(player, value, id)
+    Player[player.color].lookAt({
+        position = {x=-10.6, y=1.48, z=14.92},
+        pitch = 80,
+        yaw = 0,
+        distance = 11
+    })
+end
+
+function onWhiteBoardClick(player, value, id)
+    Player[player.color].lookAt({
+        position = {x=13.14, y=1.48, z=14.92},
+        pitch = 80,
+        yaw = 0,
+        distance = 11
+    })
+end
+
+function onYellowBoardClick(player, value, id)
+    Player[player.color].lookAt({
+        position = {x=13.14, y=1.48, z=-16.12},
+        pitch = 80,
+        yaw = 0,
+        distance = 11
+    })
+end
+
+function onTealBoardClick(player, value, id)
+    Player[player.color].lookAt({
+        position = {x=-10.6, y=1.48, z=-16.12},
+        pitch = 80,
+        yaw = 0,
+        distance = 11
+    })
 end
