@@ -73046,9 +73046,9 @@
             "rotX": -2.26203952E-06,
             "rotY": 0.000874913938,
             "rotZ": 4.203342E-06,
-            "scaleX": 1.0,
-            "scaleY": 1.0,
-            "scaleZ": 1.0
+            "scaleX": 0.6,
+            "scaleY": 0.6,
+            "scaleZ": 0.6
           },
           "Nickname": "Seized Initiative",
           "Description": "",
