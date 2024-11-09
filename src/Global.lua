@@ -220,6 +220,11 @@ function onObjectEnterZone(zone, object)
         end
     end
 
+    if ((object.getGUID() == initiative_GUID or object.getGUID() == seized_initiative_GUID)
+        and zone_name == "initiative_zone") then
+        local zone_color = zone.getDescription()
+        Global.setVar("initiative_player", zone_color)
+    end
 end
 
 function onObjectSpawn(object)
