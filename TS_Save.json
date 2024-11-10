@@ -29591,6 +29591,10 @@
             "g": 0.8235294,
             "b": 0.796078444
           },
+          "Tags": [
+            "Campaign Only",
+            "WhitePiece"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -29646,6 +29650,10 @@
             "g": 0.58431375,
             "b": 0.6627451
           },
+          "Tags": [
+            "Campaign Only",
+            "TealPiece"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -29701,6 +29709,10 @@
             "g": 0.324964136,
             "b": 0.239212513
           },
+          "Tags": [
+            "Campaign Only",
+            "RedPiece"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -29756,6 +29768,10 @@
             "g": 0.716666639,
             "b": 0.0
           },
+          "Tags": [
+            "Campaign Only",
+            "YellowPiece"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
