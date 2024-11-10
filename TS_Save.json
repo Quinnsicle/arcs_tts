@@ -327,7 +327,7 @@
       {
         "displayed": "Title",
         "normalized": "title"
-      },
+      }
     ]
   },
   "Turns": {
@@ -60209,7 +60209,7 @@
       "DragSelectable": true,
       "Autoraise": true,
       "Sticky": true,
-      "Tooltip": true,
+      "Tooltip": false,
       "GridProjection": false,
       "HideWhenFaceDown": true,
       "Hands": false,
@@ -60281,7 +60281,7 @@
           "DragSelectable": true,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": true,
@@ -60344,7 +60344,7 @@
           "DragSelectable": true,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": true,
@@ -60407,7 +60407,7 @@
           "DragSelectable": true,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": true,
@@ -60470,7 +60470,7 @@
           "DragSelectable": true,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": true,
@@ -60533,7 +60533,7 @@
           "DragSelectable": true,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": true,
@@ -60596,7 +60596,7 @@
           "DragSelectable": true,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": true,
@@ -60659,7 +60659,7 @@
           "DragSelectable": true,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": true,
@@ -60722,7 +60722,7 @@
           "DragSelectable": true,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": true,
@@ -61455,7 +61455,7 @@
           "GMNotes": "",
           "AltLookAngle": {
             "x": 0.0,
-            "y": 0.0,f
+            "y": 0.0,
             "z": 0.0
           },
           "ColorDiffuse": {
