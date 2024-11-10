@@ -319,7 +319,15 @@
       {
         "displayed": "RedPiece",
         "normalized": "redpiece"
-      }
+      },
+      {
+        "displayed": "Edict",
+        "normalized": "edict"
+      },
+      {
+        "displayed": "Title",
+        "normalized": "title"
+      },
     ]
   },
   "Turns": {
@@ -60813,7 +60821,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "GOVERN THE IMPERIAL REACH",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60826,6 +60834,10 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Edict"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -60871,7 +60883,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "GOVERN THE IMPERIAL REACH",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60884,6 +60896,10 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Edict"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -60929,7 +60945,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "GOVERN THE IMPERIAL REACH",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60942,6 +60958,10 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Edict"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -60989,7 +61009,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
-      "Nickname": "",
+      "Nickname": "GUILD ENVOYS DEPART",
       "Description": "",
       "GMNotes": "",
       "AltLookAngle": {
@@ -61003,7 +61023,8 @@
         "b": 0.713235259
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "Edict"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -61050,7 +61071,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
-      "Nickname": "",
+      "Nickname": "IMPERIAL COUNCIL",
       "Description": "",
       "GMNotes": "",
       "AltLookAngle": {
@@ -61065,7 +61086,8 @@
       },
       "Tags": [
         "Campaign Only",
-        "Council"
+        "Council",
+        "Court"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -61179,7 +61201,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "IMPERIAL REGENT / OUTLAW",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -61193,7 +61215,10 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Regent"
+            "Campaign Only",
+            "Regent",
+            "Outlaw",
+            "Title"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -61240,7 +61265,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "IMPERIAL REGENT / OUTLAW",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -61254,7 +61279,10 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Regent"
+            "Campaign Only",
+            "Regent",
+            "Outlaw",
+            "Title"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -61301,7 +61329,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "IMPERIAL REGENT / OUTLAW",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -61316,7 +61344,9 @@
           },
           "Tags": [
             "Campaign Only",
-            "Regent"
+            "Regent",
+            "Outlaw",
+            "Title"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -61363,12 +61393,12 @@
             "scaleY": 1.0,
             "scaleZ": 1.0
           },
-          "Nickname": "",
+          "Nickname": "IMPERIAL REGENT / OUTLAW",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
             "x": 0.0,
-            "y": 0.0,
+            "y": 0.0,f
             "z": 0.0
           },
           "ColorDiffuse": {
@@ -61378,7 +61408,9 @@
           },
           "Tags": [
             "Campaign Only",
-            "Regent"
+            "Regent",
+            "Outlaw",
+            "Title"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -68472,7 +68504,8 @@
           },
           "Tags": [
             "Action",
-            "Campaign Only"
+            "Campaign Only",
+            "Event"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
