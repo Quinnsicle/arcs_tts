@@ -60196,7 +60196,8 @@
       },
       "Tags": [
         "Campaign Only",
-        "Leader"
+        "Leader",
+        "Fate"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -60252,7 +60253,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "JUDGE",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60265,6 +60266,11 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Leader",
+            "Fate"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -60310,7 +60316,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "CONSPIRATOR",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60323,6 +60329,11 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Leader",
+            "Fate"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -60368,7 +60379,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "GATE WRAITH",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60381,6 +60392,11 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Leader",
+            "Fate"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -60426,7 +60442,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "NATURALIST",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60439,6 +60455,11 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Leader",
+            "Fate"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -60484,7 +60505,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "GUARDIAN",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60497,6 +60518,11 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Leader",
+            "Fate"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -60542,7 +60568,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "REDEEMER",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60555,6 +60581,11 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Leader",
+            "Fate"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -60600,7 +60631,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "SURVIVALIST",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60613,6 +60644,11 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Leader",
+            "Fate"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -60658,7 +60694,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "OVERLORD",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60671,6 +60707,11 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Leader",
+            "Fate"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
