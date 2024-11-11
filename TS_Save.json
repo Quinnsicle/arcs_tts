@@ -55402,7 +55402,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F23"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -55441,8 +55442,8 @@
             "scaleY": 1.0,
             "scaleZ": 0.238342762
           },
-          "Nickname": "Conspiracy",
-          "Description": "",
+          "Nickname": "CONSPIRACY TOKEN",
+          "Description": "Red",
           "GMNotes": "",
           "AltLookAngle": {
             "x": 0.0,
@@ -55455,7 +55456,8 @@
             "b": 1.0
           },
           "Tags": [
-            "Campaign Only"
+            "Campaign Only",
+            "F23"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -55467,7 +55469,7 @@
           "DragSelectable": true,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
@@ -55521,8 +55523,8 @@
             "scaleY": 1.0,
             "scaleZ": 0.238342762
           },
-          "Nickname": "Conspiracy",
-          "Description": "",
+          "Nickname": "CONSPIRACY TOKEN",
+          "Description": "White",
           "GMNotes": "",
           "AltLookAngle": {
             "x": 0.0,
@@ -55535,7 +55537,8 @@
             "b": 1.0
           },
           "Tags": [
-            "Campaign Only"
+            "Campaign Only",
+            "F23"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -55547,7 +55550,7 @@
           "DragSelectable": true,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
@@ -55601,8 +55604,8 @@
             "scaleY": 1.0,
             "scaleZ": 0.238342762
           },
-          "Nickname": "Conspiracy",
-          "Description": "",
+          "Nickname": "CONSPIRACY TOKEN",
+          "Description": "Yellow",
           "GMNotes": "",
           "AltLookAngle": {
             "x": 0.0,
@@ -55615,7 +55618,8 @@
             "b": 1.0
           },
           "Tags": [
-            "Campaign Only"
+            "Campaign Only",
+            "F23"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -55627,7 +55631,7 @@
           "DragSelectable": true,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
@@ -55681,8 +55685,8 @@
             "scaleY": 1.0,
             "scaleZ": 0.238342762
           },
-          "Nickname": "Conspiracy",
-          "Description": "",
+          "Nickname": "CONSPIRACY TOKEN",
+          "Description": "Yellow",
           "GMNotes": "",
           "AltLookAngle": {
             "x": 0.0,
@@ -55695,7 +55699,8 @@
             "b": 1.0
           },
           "Tags": [
-            "Campaign Only"
+            "Campaign Only",
+            "F23"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -55707,7 +55712,7 @@
           "DragSelectable": true,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
@@ -55761,7 +55766,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.238342762
           },
-          "Nickname": "Conspiracy",
+          "Nickname": "CONSPIRACY TOKEN",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -55775,7 +55780,8 @@
             "b": 1.0
           },
           "Tags": [
-            "Campaign Only"
+            "Campaign Only",
+            "F23"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -55787,7 +55793,7 @@
           "DragSelectable": true,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
@@ -55841,8 +55847,8 @@
             "scaleY": 1.0,
             "scaleZ": 0.238342762
           },
-          "Nickname": "Conspiracy",
-          "Description": "",
+          "Nickname": "CONSPIRACY TOKEN",
+          "Description": "White",
           "GMNotes": "",
           "AltLookAngle": {
             "x": 0.0,
@@ -55855,7 +55861,8 @@
             "b": 1.0
           },
           "Tags": [
-            "Campaign Only"
+            "Campaign Only",
+            "F23"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -55867,7 +55874,7 @@
           "DragSelectable": true,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
@@ -55921,8 +55928,8 @@
             "scaleY": 1.0,
             "scaleZ": 0.428595543
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "CONSPIRACY TOKEN",
+          "Description": "Teal",
           "GMNotes": "",
           "AltLookAngle": {
             "x": 0.0,
@@ -55934,6 +55941,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F23"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -55944,7 +55955,7 @@
           "DragSelectable": true,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
@@ -55978,8 +55989,8 @@
             "scaleY": 1.0,
             "scaleZ": 0.428595543
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "CONSPIRACY TOKEN",
+          "Description": "Teal",
           "GMNotes": "",
           "AltLookAngle": {
             "x": 0.0,
@@ -55991,6 +56002,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F23"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -56001,7 +56016,7 @@
           "DragSelectable": true,
           "Autoraise": true,
           "Sticky": true,
-          "Tooltip": true,
+          "Tooltip": false,
           "GridProjection": false,
           "HideWhenFaceDown": false,
           "Hands": false,
@@ -56102,7 +56117,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "FOILING CONSPIRACIES",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -56116,7 +56131,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F23"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -56163,7 +56180,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SCORING CONSPIRACIES",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -56177,7 +56194,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F23"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -56224,7 +56243,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "CONSPIRACIES",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -56238,7 +56257,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Ability",
+                "F23"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -56285,7 +56306,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "FARSEERS",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -56299,7 +56320,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F23"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -56360,7 +56384,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F23"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60347,7 +60374,8 @@
           "Tags": [
             "Campaign Only",
             "Leader",
-            "Fate"
+            "Fate",
+            
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -60410,7 +60438,8 @@
           "Tags": [
             "Campaign Only",
             "Leader",
-            "Fate"
+            "Fate",
+            "F22"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
