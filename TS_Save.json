@@ -56425,7 +56425,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F24"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -56531,7 +56532,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "JUDGE SETS AGENDA",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -56545,7 +56546,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F24"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -56592,7 +56595,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "JUDGE'S CHOSEN",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -56606,7 +56609,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Title",
+                "F24"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -56653,7 +56658,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "THE ARBITER",
               "Description": "Relic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -56667,7 +56672,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F24"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -56714,7 +56722,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "VOW OF FAIRNESS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -56728,7 +56736,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F24"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -56789,7 +56800,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Objective",
+                "Setup",
+                "F24"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60269,7 +60283,8 @@
           "Tags": [
             "Campaign Only",
             "Leader",
-            "Fate"
+            "Fate",
+            "F24"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
