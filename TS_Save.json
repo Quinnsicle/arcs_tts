@@ -48977,7 +48977,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F15"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -49016,7 +49017,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "CEASEFIRE",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -49029,6 +49030,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F15"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -49073,7 +49078,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "CEASEFIRE",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -49086,6 +49091,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F15"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -49130,7 +49139,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "CEASEFIRE",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -49143,6 +49152,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F15"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -49187,7 +49200,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "CEASEFIRE",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -49200,6 +49213,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F15"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -49244,7 +49261,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "CEASEFIRE",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -49258,7 +49275,8 @@
             "b": 1.0
           },
           "Tags": [
-            "Campaign Only"
+            "Campaign Only",
+            "F15"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -49304,7 +49322,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "CEASEFIRE",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -49318,7 +49336,8 @@
             "b": 1.0
           },
           "Tags": [
-            "Campaign Only"
+            "Campaign Only",
+            "F15"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -49437,7 +49456,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PEACE ACCORDS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -49451,7 +49470,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Summit",
+                "F15"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -49498,7 +49519,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PEACE DIVIDENDS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -49512,7 +49533,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F15"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -49559,7 +49582,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "EMPIRE BALKS AT PEACE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -49573,7 +49596,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F15"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -49620,7 +49645,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "CEASEFIRES",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -49634,7 +49659,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F15"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -49695,7 +49722,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F15"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -49742,7 +49772,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "ARMS INTEREST",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -49756,7 +49786,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F15"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -49803,7 +49836,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "ARMS INTEREST",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -49817,7 +49850,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F15"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -49878,7 +49914,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F15"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -49925,7 +49963,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "ARSENAL KEEPERS",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -49939,7 +49977,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F15"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -49986,7 +50027,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "OATH OF PEACE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -50000,7 +50041,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F15"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -50061,7 +50105,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Subject",
+                "Objective",
+                "F15"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60340,7 +60387,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "PEACEKEEPER",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60353,6 +60400,12 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Leader",
+            "Fate",
+            "F15"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
