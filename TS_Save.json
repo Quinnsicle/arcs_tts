@@ -54569,7 +54569,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F22"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -54608,7 +54609,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.306216359
           },
-          "Nickname": "",
+          "Nickname": "PASSAGE TOKEN",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -54621,6 +54622,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F22"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -54665,7 +54670,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.306216359
           },
-          "Nickname": "",
+          "Nickname": "PASSAGE TOKEN",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -54678,6 +54683,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F22"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -54722,7 +54731,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.306216359
           },
-          "Nickname": "",
+          "Nickname": "PASSAGE TOKEN",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -54735,6 +54744,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F22"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -54779,7 +54792,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.306216359
           },
-          "Nickname": "",
+          "Nickname": "PASSAGE TOKEN",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -54792,6 +54805,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F22"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -54836,7 +54853,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.306216359
           },
-          "Nickname": "",
+          "Nickname": "PASSAGE TOKEN",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -54849,6 +54866,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F22"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -54893,7 +54914,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.306216359
           },
-          "Nickname": "",
+          "Nickname": "PASSAGE TOKEN",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -54906,6 +54927,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F22"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -55018,7 +55043,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PASSAGE STORMS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -55032,7 +55057,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F22"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -55079,7 +55107,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PASSAGES & THE TWISTED PASSAGE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -55093,7 +55121,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F22"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -55140,7 +55170,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "THE DEAD LIVE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -55154,7 +55184,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Reminder",
+                "F22"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -55201,7 +55233,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "BREAKING GATES & PLACING PASSAGES",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -55215,7 +55247,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Ability",
+                "F22"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -55262,7 +55296,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "CATAPULT OVERDRIVE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -55276,7 +55310,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F22"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -55337,7 +55374,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Objective",
+                "Setup",
+                "F22"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
