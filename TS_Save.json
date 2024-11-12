@@ -50126,7 +50126,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F16"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -50165,7 +50166,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.4405907
           },
-          "Nickname": "",
+          "Nickname": "COURT",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -50178,6 +50179,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F16"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -50222,7 +50227,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.4405907
           },
-          "Nickname": "",
+          "Nickname": "COURT",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -50235,6 +50240,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F16"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -50279,7 +50288,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.4405907
           },
-          "Nickname": "",
+          "Nickname": "COURT",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -50292,6 +50301,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F16"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -50336,7 +50349,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.4405907
           },
-          "Nickname": "",
+          "Nickname": "COURT",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -50349,6 +50362,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F16"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -50393,7 +50410,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.4405907
           },
-          "Nickname": "",
+          "Nickname": "COURT",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -50406,6 +50423,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F16"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -50450,7 +50471,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.4405907
           },
-          "Nickname": "",
+          "Nickname": "COURT",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -50463,6 +50484,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F16"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -50507,7 +50532,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "SEAT",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -50520,6 +50545,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F16"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -50564,7 +50593,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "SEAT",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -50577,6 +50606,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F16"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -50621,7 +50654,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "SEAT",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -50634,6 +50667,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F16"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -50678,7 +50715,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "SEAT",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -50691,6 +50728,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F16"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -50735,7 +50776,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "SEAT",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -50748,6 +50789,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F16"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -50792,7 +50837,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "SEAT",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -50805,6 +50850,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F16"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -50930,7 +50979,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "LORDS GAIN POWER",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -50944,7 +50993,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F16"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -50991,7 +51042,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "FEUDAL COURTS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -51005,7 +51056,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F16"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -51066,7 +51119,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F16"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -51113,7 +51169,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SWORN GUARDIANS",
               "Description": "Relic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -51127,7 +51183,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F16"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -51174,7 +51233,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SKIRMISHERS",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -51188,7 +51247,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F16"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -51235,7 +51297,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "FEAST DAY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -51249,7 +51311,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F16"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -51296,7 +51361,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "FEAST DAY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -51310,7 +51375,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F16"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -51357,7 +51425,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "WARDEN'S LEVY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -51371,7 +51439,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F16"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -51432,7 +51503,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution"
+                "F16"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -51479,7 +51552,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "FEUDAL LAW",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -51493,7 +51566,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F16"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -51540,7 +51615,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SEATS AND FIEFS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -51554,7 +51629,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F16"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -51601,7 +51678,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "LORD OF THE 6TH CLUSTER",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -51615,7 +51692,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Title",
+                "F16"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -51662,7 +51741,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "LORD OF THE 5TH CLUSTER",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -51676,7 +51755,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Title",
+                "F16"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -51723,7 +51804,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "LORD OF THE 4TH CLUSTER",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -51737,7 +51818,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Title",
+                "F16"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -51784,7 +51867,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "LORD OF THE 3RD CLUSTER",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -51798,7 +51881,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Title",
+                "F16"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -51845,7 +51930,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "LORD OF THE 2ND CLUSTER",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -51859,7 +51944,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Title",
+                "F16"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -51906,7 +51993,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "LORD OF THE 1ST CLUSTER",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -51920,7 +52007,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Title",
+                "F16"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -51967,7 +52056,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "CLAIMS OF NOBILITY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -51981,7 +52070,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F16"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -52042,7 +52134,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F16"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60303,7 +60398,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "WARDEN",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60316,6 +60411,12 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Leader",
+            "Fate"
+            "F16"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
