@@ -54356,7 +54356,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F17"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -54460,7 +54461,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "REACH REJECTS OVERLORD",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -54474,7 +54475,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F17"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -54521,7 +54524,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SYCOPHANTS",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -54535,7 +54538,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F17"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -54596,7 +54602,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F17"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60890,7 +60899,8 @@
           "Tags": [
             "Campaign Only",
             "Leader",
-            "Fate"
+            "Fate",
+            "F17"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
