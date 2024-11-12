@@ -53416,7 +53416,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F20"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -53455,7 +53456,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.1029588
           },
-          "Nickname": "",
+          "Nickname": "EDENGUARD",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -53468,6 +53469,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F20"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -53578,7 +53583,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "EDENGUARD AMBITION",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -53592,7 +53597,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F20"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -53639,7 +53646,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "IRE OF THE TYCOONS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -53653,7 +53660,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F20"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -53700,7 +53710,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GREEN VAULT",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -53714,7 +53724,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F20"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -53775,7 +53788,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F20"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60622,7 +60638,8 @@
           "Tags": [
             "Campaign Only",
             "Leader",
-            "Fate"
+            "Fate",
+            "F20"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
