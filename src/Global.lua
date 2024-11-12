@@ -117,6 +117,9 @@ local Counters = require("src/Counters")
 local Initiative = require("src/InitiativeMarker")
 local SetupControl = require("src/SetupControl")
 local Supplies = require("src/Supplies")
+local Arczip = require("src/Arczip/Arczip")
+local SaveDataFactory = require("src/Arczip/SaveDataFactory")
+local Log = require("src/LOG")
 
 function assignPlayerToAvailableColor(player, color)
     local color = table.remove(available_colors, 1)
@@ -130,6 +133,36 @@ function get_arcs_player(color)
             return p
         end
     end
+end
+
+function tryRunCommand(String, Start, func)
+    if string.sub(String,1,string.len(Start))==Start then
+        func(string.sub(String,string.len(Start) + 1,string.len(String)))
+    end
+end
+
+function onChat(message, player)
+    tryRunCommand(message, '!save', function (content)
+        local save_data = SaveDataFactory:Save()
+        local save_string = Arczip:encode(save_data)
+        Log.INFO(save_string)
+
+        if (debug) then
+            local save_data2 = Arczip:decode(save_string)
+            local save_string2 = Arczip:encode(save_data2)
+            if (save_string == save_string2) then
+                Log.INFO("Round-trip test passed")
+            else
+                Log.ERROR("Round-trip test failed")
+                Log.ERROR(save_string)
+            end
+        end
+    end);
+
+    tryRunCommand(message, '!load ', function (content)
+        local save_data = Arczip:decode(content)
+        SaveDataFactory:Load(save_data)
+    end);
 end
 
 function update_player_scores()
