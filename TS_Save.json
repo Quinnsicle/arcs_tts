@@ -53049,7 +53049,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F19"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -53154,7 +53155,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "RELIC FENCE",
               "Description": "Relic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -53168,7 +53169,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F19"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -53215,7 +53219,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "REBUKE OF THE KEEPERS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -53229,7 +53233,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F19"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -53276,7 +53282,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "IRE OF THE KEEPERS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -53290,7 +53296,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F19"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -53351,7 +53360,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F19"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60702,7 +60714,8 @@
           "Tags": [
             "Campaign Only",
             "Leader",
-            "Fate"
+            "Fate",
+            "F19"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
