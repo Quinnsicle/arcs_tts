@@ -53840,7 +53840,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F21"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -53879,7 +53880,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.1029588
           },
-          "Nickname": "",
+          "Nickname": "BLIGHTKIN",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -53892,6 +53893,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F21"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -54002,7 +54007,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "BLIGHTKIN AMBITION",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -54016,7 +54021,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F21"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -54063,7 +54070,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SPORE GUIDES",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -54077,7 +54084,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F21"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -54124,7 +54134,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "BLIGHT SOCIETY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -54138,7 +54148,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F21"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -54199,7 +54212,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Objective",
+                "Setup",
+                "F21"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60542,7 +60558,8 @@
           "Tags": [
             "Campaign Only",
             "Leader",
-            "Fate"
+            "Fate",
+            "F21"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
