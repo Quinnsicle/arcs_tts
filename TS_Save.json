@@ -45230,7 +45230,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F13"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -45344,7 +45345,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "BLIGHT HUNGER",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -45358,7 +45359,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F13"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -45419,7 +45423,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F13"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -45466,7 +45473,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "BLIGHT LOOMS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -45480,7 +45487,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F13"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -45527,7 +45537,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "BLIGHT PANIC",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -45541,7 +45551,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F13"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -45588,7 +45601,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "BLIGHT PURGE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -45602,7 +45615,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F13"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -45649,7 +45665,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "BLIGHT PURGE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -45663,7 +45679,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F13"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -45710,7 +45729,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "BLIGHT PURGE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -45724,7 +45743,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F13"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -45771,7 +45793,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "BLIGHT REAPERS",
               "Description": "Material",
               "GMNotes": "",
               "AltLookAngle": {
@@ -45785,7 +45807,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F13"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -45832,7 +45857,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "BLIGHT HUNTERS",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -45846,7 +45871,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F13"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -45893,7 +45921,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "BLIGHT FURY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -45907,7 +45935,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F13"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -45968,7 +45999,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F13"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -46015,7 +46048,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SPORE SHIPS",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -46029,7 +46062,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F13"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60310,7 +60346,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "BLIGHT SPEAKER",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60323,6 +60359,12 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Leader",
+            "Fate",
+            "F13"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
