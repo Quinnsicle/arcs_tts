@@ -52107,7 +52107,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F18"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -52146,7 +52147,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "BUNKER",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -52159,6 +52160,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F18"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -52203,7 +52208,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "BUNKER",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -52216,6 +52221,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F18"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -52260,7 +52269,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "BUNKER",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -52273,6 +52282,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F18"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -52317,7 +52330,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "BUNKER",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -52330,6 +52343,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F18"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -52374,7 +52391,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "BUNKER",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -52387,6 +52404,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F18"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -52431,7 +52452,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "BUNKER",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -52444,6 +52465,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F18"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -52488,7 +52513,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "BUNKER",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -52501,6 +52526,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F18"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -52545,7 +52574,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "BUNKER",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -52558,6 +52587,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F18"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -52602,7 +52635,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "BUNKER",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -52615,6 +52648,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F18"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -52726,7 +52763,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "CAPTIVE RELEASE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -52740,7 +52777,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F18"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -52787,7 +52826,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "BUNKERS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -52801,7 +52840,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F18"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -52848,7 +52889,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "BUILDING BUNKERS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -52862,7 +52903,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Ability",
+                "F18"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -52909,7 +52952,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "VOW OF SURVIVAL",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -52923,7 +52966,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F18"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -52984,7 +53030,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60778,7 +60826,8 @@
           "Tags": [
             "Campaign Only",
             "Leader",
-            "Fate"
+            "Fate",
+            "F18"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
