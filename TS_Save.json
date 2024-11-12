@@ -44088,7 +44088,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F14"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -44127,8 +44128,8 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "WITNESS",
+          "Description": "Psionic",
           "GMNotes": "",
           "AltLookAngle": {
             "x": 0.0,
@@ -44141,7 +44142,9 @@
             "b": 1.0
           },
           "Tags": [
-            "Campaign Only"
+            "Campaign Only",
+            "Resource",
+            "F14"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -44187,8 +44190,8 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "WITNESS",
+          "Description": "Psionic",
           "GMNotes": "",
           "AltLookAngle": {
             "x": 0.0,
@@ -44201,7 +44204,9 @@
             "b": 1.0
           },
           "Tags": [
-            "Campaign Only"
+            "Campaign Only",
+            "Resource",
+            "F14"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -44247,8 +44252,8 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "WITNESS",
+          "Description": "Psionic",
           "GMNotes": "",
           "AltLookAngle": {
             "x": 0.0,
@@ -44261,7 +44266,9 @@
             "b": 1.0
           },
           "Tags": [
-            "Campaign Only"
+            "Campaign Only",
+            "Resource",
+            "F14"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -44307,8 +44314,8 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
-          "Description": "",
+          "Nickname": "WITNESS",
+          "Description": "Psionic",
           "GMNotes": "",
           "AltLookAngle": {
             "x": 0.0,
@@ -44321,7 +44328,9 @@
             "b": 1.0
           },
           "Tags": [
-            "Campaign Only"
+            "Campaign Only",
+            "Resource",
+            "F14"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -44441,7 +44450,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "REBUKE OF THE EMPATHS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -44455,7 +44464,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F14"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -44502,7 +44513,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "RECONCILE WITH THE OUTRAGED",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -44516,7 +44527,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Summit",
+                "F14"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -44563,7 +44576,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "EMPATHY FOR ALL",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -44577,7 +44590,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Reminder",
+                "F14"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -44624,7 +44639,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "EMPATHY FOR ALL",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -44638,7 +44653,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F14"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -44699,7 +44716,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F14"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -44746,7 +44766,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "ITINERANT EMPATHS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -44760,7 +44780,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F14"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -44807,7 +44830,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "ITINERANT EMPATHS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -44821,7 +44844,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F14"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -44868,7 +44894,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PSIONIC LIAISONS",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -44882,7 +44908,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F14"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -44943,7 +44972,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F14"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -44990,7 +45021,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "WELL OF EMPATHY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -45004,7 +45035,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F14"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -45051,7 +45085,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "WITNESSES",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -45065,7 +45099,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Ability",
+                "F14"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -45126,7 +45162,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F14"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60329,7 +60368,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "PACIFIST",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60342,6 +60381,10 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "F14"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
