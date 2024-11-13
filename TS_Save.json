@@ -41792,7 +41792,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F12"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -41831,7 +41832,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "RUMOR",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -41844,6 +41845,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F12"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -41888,7 +41893,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "RUMOR",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -41901,6 +41906,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F12"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -41945,7 +41954,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "RUMOR",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -41958,6 +41967,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F12"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -42002,7 +42015,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "RUMOR",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -42015,6 +42028,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F12"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -42133,7 +42150,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SHARING RUMORS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -42147,7 +42164,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Summit",
+                "F12"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -42194,7 +42213,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "RUMORS OF THE HAVEN",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -42208,7 +42227,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F12"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -42255,7 +42276,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "RUMORS SPREAD",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -42269,7 +42290,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F12"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -42316,7 +42340,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "RUMORS SPREAD",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -42330,7 +42354,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F12"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -42391,7 +42418,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F12"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -42438,7 +42468,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SILVER-TONGUES",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -42452,7 +42482,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F12"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -42499,7 +42532,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "CALL TO ACTION",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -42513,7 +42546,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F12"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -42560,7 +42596,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PIRATE SMUGGLERS",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -42574,7 +42610,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F12"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -42635,7 +42674,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F12"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -42682,7 +42723,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PIRATE FLEET",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -42696,7 +42737,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F12"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -42743,7 +42787,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PIRATE HOARD",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -42757,7 +42801,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F12"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -42818,7 +42865,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F12"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60288,7 +60338,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "PIRATE",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60301,6 +60351,10 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "F12"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
