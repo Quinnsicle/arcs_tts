@@ -25702,7 +25702,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F8"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -25741,7 +25742,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.238342762
           },
-          "Nickname": "Wisdom",
+          "Nickname": "ZEAL",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -25754,6 +25755,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F8"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -25818,7 +25823,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.238342762
           },
-          "Nickname": "Wisdom",
+          "Nickname": "ZEAL",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -25831,6 +25836,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F8"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -25895,7 +25904,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.238342762
           },
-          "Nickname": "Wisdom",
+          "Nickname": "ZEAL",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -25908,6 +25917,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F8"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -25972,7 +25985,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.238342762
           },
-          "Nickname": "Wisdom",
+          "Nickname": "ZEAL",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -25985,6 +25998,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F8"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -26049,7 +26066,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.238342762
           },
-          "Nickname": "Wisdom",
+          "Nickname": "ZEAL",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -26062,6 +26079,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F8"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -26219,7 +26240,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "BREAKING THE FAITH",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -26233,7 +26254,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -26280,7 +26303,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "DOMINANT FAITH",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -26294,7 +26317,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -26355,7 +26380,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -26402,7 +26430,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "REPRESSED FAITH",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -26416,7 +26444,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -26463,7 +26493,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SET LAY DOCTRINE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -26477,7 +26507,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -26524,7 +26556,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SECRET ORDER",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -26538,7 +26570,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -26585,7 +26620,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "THE PROPHET",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -26599,7 +26634,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -26660,7 +26698,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -26707,7 +26747,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "DOCTRINAL FAITH",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -26721,7 +26761,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -26782,7 +26824,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Doctrine",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -26829,7 +26873,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SET DOCTRINE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -26843,7 +26887,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -26904,7 +26950,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -26951,7 +27000,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SECRET ORDER",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -26965,7 +27014,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -27012,7 +27064,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "THE PRODIGAL ONE",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -27026,7 +27078,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -27073,7 +27128,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PLOT TO KIDNAP",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -27087,7 +27142,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -27134,7 +27192,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "THE YOUNG LIGHT",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -27148,7 +27206,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -27209,7 +27270,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -27256,7 +27319,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PLURALISTIC FAITH",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -27270,7 +27333,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -27317,7 +27382,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "FAITHFUL CARDS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -27331,7 +27396,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -27393,7 +27460,8 @@
               },
               "Tags": [
                 "Campaign Only",
-                "Action"
+                "Action",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -27455,7 +27523,8 @@
               },
               "Tags": [
                 "Campaign Only",
-                "Action"
+                "Action",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -27517,7 +27586,8 @@
               },
               "Tags": [
                 "Campaign Only",
-                "Action"
+                "Action",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -27579,7 +27649,8 @@
               },
               "Tags": [
                 "Campaign Only",
-                "Action"
+                "Action",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -27641,7 +27712,8 @@
               },
               "Tags": [
                 "Campaign Only",
-                "Action"
+                "Action",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -27703,7 +27775,8 @@
               },
               "Tags": [
                 "Campaign Only",
-                "Action"
+                "Action",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -27765,7 +27838,8 @@
               },
               "Tags": [
                 "Campaign Only",
-                "Action"
+                "Action",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -27827,7 +27901,8 @@
               },
               "Tags": [
                 "Campaign Only",
-                "Action"
+                "Action",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -27889,7 +27964,8 @@
               },
               "Tags": [
                 "Campaign Only",
-                "Action"
+                "Action",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -27936,7 +28012,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SPREADING THE FAITH",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -27950,7 +28026,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Ability",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -27997,7 +28075,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "FAITHFUL DISCIPLES",
               "Description": "Relic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -28011,7 +28089,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -28072,7 +28153,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F8"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60255,7 +60339,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "BELIEVER",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60268,6 +60352,12 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Leader",
+            "Fate",
+            "F8"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
