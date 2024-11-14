@@ -51735,7 +51735,7 @@
               },
               "Tags": [
                 "Campaign Only",
-                "Resolution"
+                "Resolution",
                 "F16"
               ],
               "LayoutGroupSortIndex": 0,
@@ -60671,7 +60671,7 @@
           "Tags": [
             "Campaign Only",
             "Leader",
-            "Fate"
+            "Fate",
             "F16"
           ],
           "LayoutGroupSortIndex": 0,
@@ -60874,7 +60874,7 @@
             "Campaign Only",
             "Leader",
             "Fate",
-            
+            "F23"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
