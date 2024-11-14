@@ -42933,7 +42933,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F11"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -42985,6 +42986,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F11"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -43042,6 +43047,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F11"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -43099,6 +43108,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F11"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -43156,6 +43169,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F11"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -43213,6 +43230,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F11"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -43270,6 +43291,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F11"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -43402,7 +43427,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F11"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -43449,7 +43477,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PLANET-EATER LOOSE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -43463,7 +43491,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F11"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -43524,7 +43555,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F11"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -43571,7 +43604,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "HEARTWORLD REFUGEES",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -43585,7 +43618,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F11"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -43632,7 +43668,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "LOSTWORLD REFUGEES",
               "Description": "Relic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -43646,7 +43682,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F11"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -43693,7 +43732,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "DEADWORLD REFUGEES",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -43707,7 +43746,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F11"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -43754,7 +43796,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "BLAZEWORLD REFUGEES",
               "Description": "Fuel",
               "GMNotes": "",
               "AltLookAngle": {
@@ -43768,7 +43810,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F11"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -43815,7 +43860,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "FORGEWORLD REFUGEES",
               "Description": "Material",
               "GMNotes": "",
               "AltLookAngle": {
@@ -43829,7 +43874,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F11"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -43876,7 +43924,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PLANET HAMMER",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -43890,7 +43938,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F11"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -43937,7 +43988,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "HAMMER FRAGMENTS / BREAKING WORLDS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -43951,7 +44002,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Ability",
+                "F11"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -43998,7 +44051,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SYCOPHANTS",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -44012,7 +44065,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F11"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -44073,7 +44129,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F11"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60280,7 +60339,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "PLANET BREAKER",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60293,6 +60352,12 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Leader",
+            "Fate",
+            "F11"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
