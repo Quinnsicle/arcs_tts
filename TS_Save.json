@@ -47701,7 +47701,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F9"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -47740,7 +47741,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "PILGRIM",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -47753,6 +47754,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F9"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -47797,7 +47802,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "PILGRIM",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -47810,6 +47815,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F9"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -47854,7 +47863,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "PILGRIM",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -47867,6 +47876,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F9"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -47911,7 +47924,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "PILGRIM",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -47924,6 +47937,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F9"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -47968,7 +47985,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "PILGRIM",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -47981,6 +47998,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F9"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -48025,7 +48046,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "PILGRIM",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -48038,6 +48059,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F9"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -48082,7 +48107,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "PORTAL",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -48095,6 +48120,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F9"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -48139,7 +48168,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "CLUE",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -48152,6 +48181,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F9"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -48196,7 +48229,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "CLUE",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -48209,6 +48242,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F9"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -48253,7 +48290,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "CLUE",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -48266,6 +48303,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F9"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -48310,7 +48351,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "CLUE",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -48323,6 +48364,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F9"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -48367,7 +48412,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "CLUE",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -48380,6 +48425,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F9"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -48424,7 +48473,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "CLUE",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -48437,6 +48486,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F9"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -48554,7 +48607,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SEEK THE PORTAL",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -48568,7 +48621,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F9"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -48615,7 +48671,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SEEK THE PORTAL",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -48629,7 +48685,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F9"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -48676,7 +48735,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SEEK THE PORTAL",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -48690,7 +48749,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F9"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -48737,7 +48799,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PILGRIMS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -48751,7 +48813,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Ability",
+                "F9"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -48812,7 +48876,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F9"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -48859,7 +48926,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PORTAL SEEKERS",
               "Description": "Relic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -48873,7 +48940,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F9"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -48920,7 +48990,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "CALL TO PILGRIMAGE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -48934,7 +49004,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F9"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -48995,7 +49068,8 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -49042,7 +49116,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "CLUES TO THE PORTAL",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -49056,7 +49130,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Ability",
+                "F9"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -49103,7 +49179,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "UNCOVERING CLUES",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -49117,7 +49193,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Ability",
+                "F9"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -49178,7 +49256,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F9"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60305,7 +60386,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "PATHFINDER",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60318,6 +60399,10 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "F9"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
