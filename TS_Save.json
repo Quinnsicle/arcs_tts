@@ -327,6 +327,22 @@
       {
         "displayed": "Title",
         "normalized": "title"
+      },
+      {
+        "displayed": "Ability",
+        "normalized": "ability"
+      },
+      {
+        "displayed": "Law",
+        "normalized": "law"
+      },
+      {
+        "displayed": "Objective",
+        "normalized": "objective"
+      },
+      {
+        "displayed": "Resolution",
+        "normalized": "resolution"
       }
     ]
   },
