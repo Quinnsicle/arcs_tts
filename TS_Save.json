@@ -38618,7 +38618,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F7"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -38740,7 +38741,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "MARTIAL LAW",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -38754,7 +38755,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Reminder",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -38801,7 +38804,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "MARTIAL LAW",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -38815,7 +38818,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -38876,7 +38881,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -38923,7 +38931,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "MASS UPRISING",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -38937,7 +38945,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -38984,7 +38995,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "MASS UPRISING",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -38998,7 +39009,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -39045,7 +39059,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "IMPERIAL DEFECTORS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -39059,7 +39073,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -39106,7 +39123,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "IMPERIAL DEFECTORS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -39120,7 +39137,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -39181,7 +39201,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -39228,7 +39250,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "COMMAND CHAOS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -39242,7 +39264,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -39303,7 +39328,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Objective",
+                "Setup",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -39350,7 +39378,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "IMPERIAL DEFECTORS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -39364,7 +39392,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -39411,7 +39442,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "IMPERIAL DEFECTORS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -39425,7 +39456,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -39472,7 +39506,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "COURT ENFORCERS",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -39486,7 +39520,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -39533,7 +39570,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "COURT ENFORCERS",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -39547,7 +39584,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -39594,7 +39634,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "ROGUE ADMIRALS",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -39608,7 +39648,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -39655,7 +39698,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "ROGUE ADMIRALS",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -39669,7 +39712,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -39716,7 +39762,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "HONOR GUARD",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -39730,7 +39776,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -39791,7 +39840,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -39838,7 +39889,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "USE IMPERIAL FOUNDRIES",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -39852,7 +39903,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -39899,7 +39952,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "IMPERIAL OFFICERS",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -39913,7 +39966,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -39974,7 +40030,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F7"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60281,7 +60340,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "ADMIRAL",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60294,6 +60353,12 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Leader",
+            "Fate",
+            "F7"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
