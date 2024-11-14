@@ -35218,7 +35218,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F6"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -35344,7 +35345,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SOWER OF DIVISION",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -35358,7 +35359,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -35419,7 +35423,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -35466,7 +35473,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "ARMS UNION",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -35480,7 +35487,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -35527,7 +35537,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SPACING UNION",
               "Description": "Fuel",
               "GMNotes": "",
               "AltLookAngle": {
@@ -35541,7 +35551,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -35588,7 +35601,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "TERROR STRIKE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -35602,7 +35615,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -35649,7 +35665,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "TERROR STRIKE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -35663,7 +35679,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -35710,7 +35729,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GUILDS DECRY TERROR",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -35724,7 +35743,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -35785,7 +35806,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -35832,7 +35855,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PEOPLE'S HERO",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -35846,7 +35869,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -35893,7 +35919,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PARTISAN SEIZING",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -35907,7 +35933,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -35968,7 +35996,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -36015,7 +36046,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "OUTRAGE SPREADS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -36029,7 +36060,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -36076,7 +36110,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "OUTRAGE SPREADS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -36090,7 +36124,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -36137,7 +36174,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "ARMS UNION",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -36151,7 +36188,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -36198,7 +36238,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SPACING UNION",
               "Description": "Fuel",
               "GMNotes": "",
               "AltLookAngle": {
@@ -36212,7 +36252,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -36259,7 +36302,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GALACTIC BARDS",
               "Description": "Relic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -36273,7 +36316,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -36320,7 +36366,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "LOYAL KEEPERS",
               "Description": "Relic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -36334,7 +36380,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -36381,7 +36430,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "LOYAL EMPATHS",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -36395,7 +36444,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -36442,7 +36494,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "LOYAL MARINES",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -36456,7 +36508,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -36503,7 +36558,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "LOYAL PILOTS",
               "Description": "Fuel",
               "GMNotes": "",
               "AltLookAngle": {
@@ -36517,7 +36572,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -36564,7 +36622,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "LOYAL ENGINEERS",
               "Description": "Material",
               "GMNotes": "",
               "AltLookAngle": {
@@ -36578,7 +36636,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -36639,7 +36700,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -36686,7 +36749,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PARTISAN SEIZING",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -36700,7 +36763,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Ability",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -36747,7 +36812,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "INFORMANTS",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -36761,7 +36826,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -36822,7 +36890,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60282,7 +60353,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "PARTISAN",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60295,6 +60366,12 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "Leader",
+            "Fate",
+            "F6"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
