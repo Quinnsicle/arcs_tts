@@ -29930,7 +29930,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F1"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -30114,7 +30115,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GOVERN WITH AUTHORITY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -30128,7 +30129,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -30175,7 +30178,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GOVERN WITH AUTHORITY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -30189,7 +30192,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -30236,7 +30241,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GOVERN WITH AUTHORITY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -30250,7 +30255,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -30297,7 +30304,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "IMPERIAL SPONSOR",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -30311,7 +30318,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -30372,7 +30381,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -30419,7 +30431,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "LESSER REGENT",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -30433,7 +30445,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -30480,7 +30495,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "LESSER REGENT",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -30494,7 +30509,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -30541,7 +30559,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "IMPERIAL DEFECTORS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -30555,7 +30573,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -30602,7 +30623,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "IMPERIAL DEFECTORS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -30616,7 +30637,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -30663,7 +30687,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GALACTIC BARDS",
               "Description": "Relic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -30677,7 +30701,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -30724,7 +30751,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "COUNCIL INSIDERS",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -30738,7 +30765,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -30785,7 +30815,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "NAVY REPRISAL",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -30799,7 +30829,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -30860,7 +30893,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -30907,7 +30942,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "IMPERIAL QUORUM",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -30921,7 +30956,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -30982,7 +31019,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -31029,7 +31069,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "LESSER REGENT",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -31043,7 +31083,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -31090,7 +31133,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "LESSER REGENT",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -31104,7 +31147,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -31151,7 +31197,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "IMPERIAL PROTECTORS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -31165,7 +31211,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -31212,7 +31260,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "EMPIRE FALLS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -31226,7 +31274,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -31273,7 +31324,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "HUNTER SQUADS",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -31287,7 +31338,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -31334,7 +31388,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "TAX COLLECTORS",
               "Description": "Relic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -31348,7 +31402,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -31409,7 +31466,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -31456,7 +31515,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "COUNCIL INTRIGUE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -31470,7 +31529,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -31517,7 +31579,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "DEALMAKERS",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -31531,7 +31593,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -31578,7 +31643,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "IMPERIAL AUTHORITY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -31592,7 +31657,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -31653,7 +31721,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F1"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60467,7 +60538,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "STEWARD",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60481,7 +60552,10 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Leader"
+            "Campaign Only",
+            "Leader",
+            "Fate",
+            "F1"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
