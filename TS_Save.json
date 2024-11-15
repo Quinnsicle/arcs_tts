@@ -37030,7 +37030,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F4"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -37157,7 +37158,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GUILD SUPREMACY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -37171,7 +37172,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Reminder",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -37218,7 +37221,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GUILD SUPREMACY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -37232,7 +37235,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -37279,7 +37284,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GUILD LOYALTY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -37293,7 +37298,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -37354,7 +37362,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -37401,7 +37412,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GUILDS WITHDRAW",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -37415,7 +37426,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -37462,7 +37476,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PSIONIC GUILDMASTERS",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -37476,7 +37490,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -37523,7 +37540,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "RELIC GUILDMASTERS",
               "Description": "Relic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -37537,7 +37554,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -37584,7 +37604,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "WEAPONS GUILDMASTERS",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -37598,7 +37618,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -37645,7 +37668,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "FUEL GUILDMASTERS",
               "Description": "Fuel",
               "GMNotes": "",
               "AltLookAngle": {
@@ -37659,7 +37682,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -37706,7 +37732,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "MATERIAL GUILDMASTERS",
               "Description": "Material",
               "GMNotes": "",
               "AltLookAngle": {
@@ -37720,7 +37746,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -37767,7 +37796,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GUILD FAIR",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -37781,7 +37810,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -37842,7 +37874,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -37889,7 +37923,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GUILD NEGOTIATIONS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -37903,7 +37937,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Summit",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -37950,7 +37986,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "ADVOCATE'S DEMAND",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -37964,7 +38000,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -38025,7 +38063,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -38072,7 +38113,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GUILD STRUGGLE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -38086,7 +38127,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -38133,7 +38177,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "DIPLOMATIC FIASCO",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -38147,7 +38191,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -38194,7 +38241,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PSIONIC LIAISONS",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -38208,7 +38255,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -38255,7 +38305,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "RELIC LIAISONS",
               "Description": "Relic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -38269,7 +38319,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -38316,7 +38369,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "WEAPONS LIAISONS",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -38330,7 +38383,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -38377,7 +38433,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "FUEL LIAISONS",
               "Description": "Fuel",
               "GMNotes": "",
               "AltLookAngle": {
@@ -38391,7 +38447,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -38438,7 +38497,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "MATERIAL LIAISONS",
               "Description": "Material",
               "GMNotes": "",
               "AltLookAngle": {
@@ -38452,7 +38511,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -38513,7 +38575,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -38560,7 +38624,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GUILD OVERSEERS",
               "Description": "Relic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -38574,7 +38638,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -38621,7 +38688,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GUILD INVESTIGATORS",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -38635,7 +38702,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -38696,7 +38766,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F4"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60121,7 +60194,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "ADVOCATE",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60136,7 +60209,9 @@
           },
           "Tags": [
             "Campaign Only",
-            "Leader"
+            "Leader",
+            "Fate",
+            "F4"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
