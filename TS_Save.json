@@ -40387,7 +40387,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F2"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -40426,7 +40427,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.238342762
           },
-          "Nickname": "Commonwealth Ambition",
+          "Nickname": "COMMONWEALTH AMBITION",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -40440,7 +40441,8 @@
             "b": 1.0
           },
           "Tags": [
-            "Campaign Only"
+            "Campaign Only",
+            "F2"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -40575,7 +40577,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "FREEDOM FIGHTERS",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -40589,7 +40591,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -40636,7 +40641,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "MASS CALL FOR ARMISTICE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -40650,7 +40655,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -40711,7 +40718,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -40758,7 +40768,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "SPIRIT OF FREEDOM",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -40772,7 +40782,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -40833,7 +40846,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -40880,7 +40895,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "COMMONWEALTH MEMBERSHIP",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -40894,7 +40909,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -40941,7 +40958,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "MEMBER OF THE COMMONWEALTH",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -40955,7 +40972,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Title",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -41002,7 +41021,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "MEMBER OF THE COMMONWEALTH",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -41016,7 +41035,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Title",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -41063,7 +41084,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "MEMBER OF THE COMMONWEALTH",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -41077,7 +41098,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Title",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -41124,7 +41147,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "MEMBER OF THE COMMONWEALTH",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -41138,7 +41161,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Title",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -41185,7 +41210,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "ARMISTICE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -41199,7 +41224,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -41246,7 +41274,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "ARMISTICE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -41260,7 +41288,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -41307,7 +41338,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "CALL FOR ARMISTICE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -41321,7 +41352,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -41368,7 +41401,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "COMMONWEALTH AMBITION",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -41382,7 +41415,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -41429,7 +41464,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "FOUNDER OF THE COMMONWEALTH",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -41443,7 +41478,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Title",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -41504,7 +41541,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -41551,7 +41591,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "ADMIN UNION",
               "Description": "Material",
               "GMNotes": "",
               "AltLookAngle": {
@@ -41565,7 +41605,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -41612,7 +41655,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "ADMIN UNION",
               "Description": "Material",
               "GMNotes": "",
               "AltLookAngle": {
@@ -41626,7 +41669,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -41673,7 +41719,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "CONSTRUCTION UNION",
               "Description": "Material",
               "GMNotes": "",
               "AltLookAngle": {
@@ -41687,7 +41733,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -41734,7 +41783,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "CONSTRUCTION UNION",
               "Description": "Material",
               "GMNotes": "",
               "AltLookAngle": {
@@ -41748,7 +41797,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -41795,7 +41847,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "POLITICAL INTRIGUE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -41809,7 +41861,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -41856,7 +41911,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "POLITICAL INTRIGUE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -41870,7 +41925,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -41917,7 +41975,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "POLITICAL INTRIGUE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -41931,7 +41989,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -41978,7 +42039,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "BOOK OF LIBERATION",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -41992,7 +42053,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -42053,7 +42117,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -42100,7 +42166,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PARADE FLEETS",
               "Description": "Fuel",
               "GMNotes": "",
               "AltLookAngle": {
@@ -42114,7 +42180,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -42175,7 +42244,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Objective",
+                "Setup",
+                "F2"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60331,7 +60403,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "FOUNDER",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60346,7 +60418,9 @@
           },
           "Tags": [
             "Campaign Only",
-            "Leader"
+            "Leader",
+            "Fate",
+            "F2"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
