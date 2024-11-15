@@ -31718,7 +31718,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F3"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -31757,7 +31758,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.238342762
           },
-          "Nickname": "War Profiteer",
+          "Nickname": "WAR PROFITEER",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -31770,6 +31771,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F4""F4""F4""F4""F3"
+          ],,,,,
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -31903,7 +31908,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "CLOSED & OPEN ECONOMY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -31917,7 +31922,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -31964,7 +31971,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "ECONOMY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -31978,7 +31985,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Economy",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -32039,7 +32048,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -32086,7 +32098,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "EXTORTION",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -32100,7 +32112,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -32147,7 +32162,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "EXTORTION",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -32161,7 +32176,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -32208,7 +32226,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PROSPECTORS",
               "Description": "Material",
               "GMNotes": "",
               "AltLookAngle": {
@@ -32222,7 +32240,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -32283,7 +32304,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -32330,7 +32353,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "WAR PROFITEERING",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -32344,7 +32367,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -32391,7 +32416,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "MONOPOLY CONSENT",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -32405,7 +32430,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Summit",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -32452,7 +32479,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GAIN MONOPOLIES",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -32466,7 +32493,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -32513,7 +32542,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "WEAPON MONOPOLY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -32527,7 +32556,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Monopoly",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -32574,7 +32605,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PSIONIC MONOPOLY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -32588,7 +32619,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Monopoly",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -32635,7 +32668,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "RELIC MONOPOLY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -32649,7 +32682,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Monopoly",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -32696,7 +32731,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "FUEL MONOPOLY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -32710,7 +32745,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Monopoly",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -32757,7 +32794,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "MATERIAL MONOPOLY",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -32771,7 +32808,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Monopoly",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -32832,7 +32871,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -32879,7 +32921,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "RELIC CARTEL",
               "Description": "Relic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -32893,7 +32935,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -32940,7 +32985,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PSIONIC CARTEL",
               "Description": "Psionic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -32954,7 +32999,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -33001,8 +33049,8 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
-              "Description": "",
+              "Nickname": "WEAPON CARTEL",
+              "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
                 "x": 0.0,
@@ -33015,7 +33063,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -33062,7 +33113,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "FUEL CARTEL",
               "Description": "Fuel",
               "GMNotes": "",
               "AltLookAngle": {
@@ -33076,7 +33127,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -33123,7 +33177,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "MATERIAL CARTEL",
               "Description": "Material",
               "GMNotes": "",
               "AltLookAngle": {
@@ -33137,7 +33191,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -33184,7 +33241,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "PRISON WARDENS",
               "Description": "Weapon",
               "GMNotes": "",
               "AltLookAngle": {
@@ -33198,7 +33255,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -33245,7 +33305,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "RELIC FENCE",
               "Description": "Relic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -33259,7 +33319,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -33306,7 +33369,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "ELDER BROKER",
               "Description": "Relic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -33320,7 +33383,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -33381,7 +33447,8 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -33428,7 +33495,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "MERCHANT LEAGUE",
               "Description": "Fuel",
               "GMNotes": "",
               "AltLookAngle": {
@@ -33442,7 +33509,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -33503,7 +33573,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F3"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60381,7 +60454,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "MAGNATE",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60395,7 +60468,10 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Leader"
+            "Campaign Only",
+            "Leader",
+            "Fate",
+            "F3"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
