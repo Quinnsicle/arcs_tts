@@ -33568,7 +33568,8 @@
         "b": 0.0
       },
       "Tags": [
-        "Campaign Only"
+        "Campaign Only",
+        "F5"
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
@@ -33607,7 +33608,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "GOLEM",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -33620,6 +33621,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F5"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -33664,7 +33669,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "GOLEM",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -33677,6 +33682,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F5"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -33721,7 +33730,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "GOLEM",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -33734,6 +33743,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F5"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -33778,7 +33791,7 @@
             "scaleY": 1.0,
             "scaleZ": 0.432334363
           },
-          "Nickname": "",
+          "Nickname": "GOLEM",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -33791,6 +33804,10 @@
             "g": 1.0,
             "b": 1.0
           },
+          "Tags": [
+            "Campaign Only",
+            "F5"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
@@ -33918,7 +33935,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GOLEMS SATE THEIR APPETITE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -33932,7 +33949,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Edict",
+                "F6"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -33993,7 +34012,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -34040,7 +34062,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GOLEM WORSHIP",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -34054,7 +34076,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -34101,7 +34126,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GOLEM WORSHIP",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -34115,7 +34140,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -34162,7 +34190,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GOLEM WORSHIP",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -34176,7 +34204,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -34237,7 +34268,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -34299,7 +34332,8 @@
               },
               "Tags": [
                 "Campaign Only",
-                "Action"
+                "Action",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -34346,7 +34380,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "KNOWLEDGE SET FREE",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -34360,7 +34394,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Summit",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -34407,7 +34443,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "LIBRARIANS",
               "Description": "Relic",
               "GMNotes": "",
               "AltLookAngle": {
@@ -34421,7 +34457,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -34482,7 +34521,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -34529,7 +34571,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "UNSTABLE WARRIOR",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -34543,7 +34585,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -34590,7 +34635,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "UNSTABLE PROTECTOR",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -34604,7 +34649,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -34651,7 +34699,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "UNSTABLE SEEKER",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -34665,7 +34713,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -34712,7 +34763,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "UNSTABLE HARVESTER",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -34726,7 +34777,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Vox",
+                "Court",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -34787,7 +34841,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Resolution",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -34834,7 +34890,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GOLEM ACTIONS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -34848,7 +34904,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -34895,7 +34953,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GOLEMS",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -34909,7 +34967,9 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Law",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -34956,7 +35016,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "STONE-SPEAKERS",
               "Description": "Material",
               "GMNotes": "",
               "AltLookAngle": {
@@ -34970,7 +35030,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Guild",
+                "Court",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -35017,7 +35080,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GOLEM HEARTH",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -35031,7 +35094,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -35078,7 +35144,7 @@
                 "scaleY": 1.0,
                 "scaleZ": 1.0
               },
-              "Nickname": "",
+              "Nickname": "GOLEM BEACON",
               "Description": "",
               "GMNotes": "",
               "AltLookAngle": {
@@ -35092,7 +35158,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Lore",
+                "Court",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -35153,7 +35222,10 @@
                 "b": 0.713235259
               },
               "Tags": [
-                "Campaign Only"
+                "Campaign Only",
+                "Setup",
+                "Objective",
+                "F5"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -60295,7 +60367,7 @@
             "scaleY": 1.0,
             "scaleZ": 1.53204679
           },
-          "Nickname": "",
+          "Nickname": "CARETAKER",
           "Description": "",
           "GMNotes": "",
           "AltLookAngle": {
@@ -60308,6 +60380,10 @@
             "g": 0.713235259,
             "b": 0.713235259
           },
+          "Tags": [
+            "Campaign Only",
+            "F5"
+          ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
           "Locked": false,
