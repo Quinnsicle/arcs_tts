@@ -1,0 +1,119 @@
+local Timer = {}
+
+Timer.player_timers = {}
+Timer.running = false
+Timer.start_time = 0
+Timer.timer_id = nil
+
+function Timer.start(active_players)    
+    if Timer.running then return end
+
+    if not Turns.turn_color or Turns.turn_color == "" then
+        broadcastToAll("No active turn - please use the turn system", {1, 0, 0})
+        return
+    end
+
+    if Timer.timer_id then
+        Wait.stop(Timer.timer_id)
+    end
+    
+    Timer.running = true
+    Timer.start_time = os.time()
+    Timer.timer_id = Wait.time(function() Timer.update(active_players) end, 1, -1)
+end
+
+function Timer.formatTime(seconds)
+    local minutes = math.floor(seconds / 60)
+    seconds = seconds % 60
+    return string.format("%02d:%02d", minutes, seconds)
+end
+
+function Timer.pause()
+    if not Timer.running then return end
+
+    Timer.running = false
+
+    if Timer.timer_id then
+        Wait.stop(Timer.timer_id)
+        Timer.timer_id = nil
+    end
+end
+
+function Timer.reset()
+    Timer.running = false
+    Timer.start_time = 0
+    for _, color in ipairs({"Red", "White", "Yellow", "Teal"}) do
+        Timer.player_timers[color] = 0
+        Timer.updateDisplay(color)
+    end
+    if Timer.timer_id then
+        Wait.stop(Timer.timer_id)
+        Timer.timer_id = nil
+    end
+end
+
+function Timer.update(active_players)
+    if Timer.running and Turns.turn_color then
+        -- Update the current player's total time
+        if not Timer.player_timers[Turns.turn_color] then
+            Timer.player_timers[Turns.turn_color] = 0
+        end
+        Timer.player_timers[Turns.turn_color] = Timer.player_timers[Turns.turn_color] + 1
+        
+        -- Update display for all players
+        for _, player in ipairs(active_players) do
+            local timerId = player.color:lower() .. "Timer"
+            Timer.updateDisplay(player.color)
+            if player.color == Turns.turn_color then
+                UI.setAttribute(timerId, "fontStyle", "Bold")
+                UI.setAttribute(timerId, "fontSize", "18")
+            else
+                UI.setAttribute(timerId, "fontStyle", "Normal")
+                UI.setAttribute(timerId, "fontSize", "14")
+            end
+        end
+    end
+end
+
+function Timer.updateDisplay(color)
+    local seconds = Timer.player_timers[color] or 0
+    local minutes = math.floor(seconds / 60)
+    seconds = seconds % 60
+    local display = string.format("%02d:%02d", minutes, seconds)
+    UI.setValue(color:lower() .. "Timer", display)
+end
+
+function Timer.generatePlayerTimerDisplays(active_players)
+    local playerTimersXml = ""
+    local buttonColors = {
+        Red = "#FF0000",
+        White = "#FFFFFF",
+        Yellow = "#FFFF00",
+        Teal = "#00FFFF"
+    }
+
+    for _, player in ipairs(active_players) do
+        local isActive = player.color == Turns.turn_color
+        local currentTime = Timer.player_timers[player.color] or 0
+        local timeDisplay = Timer.formatTime(currentTime)
+        
+        playerTimersXml = playerTimersXml .. string.format(
+            [[<HorizontalLayout spacing="5">
+                <Text id="%sTimer" text="%s" color="%s" fontStyle="%s" preferredWidth="25" preferredHeight="13"/>
+                <Button text="%s" id="%sCamera" textColor="%s" onClick="on%sBoardClick" preferredWidth="29"/>
+            </HorizontalLayout>]],
+            player.color:lower(),
+            timeDisplay,
+            buttonColors[player.color],
+            isActive and "Bold" or "Normal",
+            player.color,
+            player.color:lower(),
+            buttonColors[player.color],
+            player.color
+        )
+    end
+    
+    return playerTimersXml
+end
+
+return Timer

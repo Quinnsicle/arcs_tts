@@ -117,6 +117,8 @@ local Counters = require("src/Counters")
 local Initiative = require("src/InitiativeMarker")
 local SetupControl = require("src/SetupControl")
 local Supplies = require("src/Supplies")
+local Camera = require("src/Camera")
+local Timer = require("src/Timer")
 
 function assignPlayerToAvailableColor(player, color)
     local color = table.remove(available_colors, 1)
@@ -1305,99 +1307,7 @@ function set_game_in_progress(params)
     -- end
 end
 
-
--- Timer / camera control logic
-player_timers = {}
-timer_running = false
-timer_start_time = 0
-
-local timer_id = nil
-
-function startTimer()    
-    if timer_running then return end
-
-    if not Turns.turn_color or Turns.turn_color == "" then
-        broadcastToAll("No active turn - please use the turn system", {1, 0, 0})
-        return
-    end
-
-    if timer_id then
-        Wait.stop(timer_id)
-    end
-    
-    timer_running = true
-    timer_start_time = os.time()
-    timer_id = Wait.time(function() updateTimers() end, 1, -1)
-    loadCameraTimerMenu()
-end
-
-function formatTime(seconds)
-    local minutes = math.floor(seconds / 60)
-    seconds = seconds % 60
-    return string.format("%02d:%02d", minutes, seconds)
-end
-
-function pauseTimer()
-    if not timer_running then return end
-
-    timer_running = false
-
-    if timer_id then
-        Wait.stop(timer_id)
-        timer_id = nil
-    end
-    
-    loadCameraTimerMenu(true)
-end
-
-function resetTimer()
-    timer_running = false
-    timer_start_time = 0
-    for _, color in ipairs({"Red", "White", "Yellow", "Teal"}) do
-        player_timers[color] = 0
-        updateTimerDisplay(color)
-    end
-    if timer_id then
-        Wait.stop(timer_id)
-        timer_id = nil
-    end
-    
-    loadCameraTimerMenu(true)
-end
-
-function updateTimers()
-    if timer_running and Turns.turn_color then
-        -- Update the current player's total time
-        if not player_timers[Turns.turn_color] then
-            player_timers[Turns.turn_color] = 0
-        end
-        player_timers[Turns.turn_color] = player_timers[Turns.turn_color] + 1
-        
-        -- Update display for all players
-        for _, player in ipairs(active_players) do
-            local timerId = player.color:lower() .. "Timer"
-            updateTimerDisplay(player.color)
-            if player.color == Turns.turn_color then
-                UI.setAttribute(timerId, "fontStyle", "Bold")
-                UI.setAttribute(timerId, "fontSize", "18")
-            else
-                UI.setAttribute(timerId, "fontStyle", "Normal")
-                UI.setAttribute(timerId, "fontSize", "14")
-            end
-        end
-    end
-end
-
-function updateTimerDisplay(color)
-    local seconds = player_timers[color] or 0
-    local minutes = math.floor(seconds / 60)
-    seconds = seconds % 60
-    local display = string.format("%02d:%02d", minutes, seconds)
-    UI.setValue(color:lower() .. "Timer", display)
-end
-
 function onLoad()
-
     Initiative.add_menu()
 
     for _, obj in pairs(getObjectsWithTag("City")) do
@@ -1421,7 +1331,6 @@ function onLoad()
 
         Counters.setup()
     elseif debug then
-
         Campaign.components_visibility(true)
         BaseGame.components_visibility({
             is_visible = true,
@@ -1466,13 +1375,19 @@ function onLoad()
         face_up_discard_action_deck.locked = false -- set this to false otherwise it breaks
     end
 
-    -- Initialize timers for all players
-    resetTimer()
-
+    -- Initialize turn system
     Turns.enable = true
     Turns.pass_turns = true
-    loadCameraTimerMenu(false)
+
+    -- Initialize timer system
+    Timer.reset()  -- Reset all player timers
+    loadCameraTimerMenu(false)  -- Load the UI with menu closed initially
 end
+
+-- Timer UI wrapper functions - these need to stay in Global for UI interaction
+function startTimer() Timer.start(active_players); loadCameraTimerMenu() end
+function pauseTimer() Timer.pause(); loadCameraTimerMenu(true) end
+function resetTimer() Timer.reset(); loadCameraTimerMenu(true) end
 
 function loadCameraTimerMenu(menuOpen)
     -- if menuOpen is nil, leave the cameraControls active state alone
@@ -1480,117 +1395,17 @@ function loadCameraTimerMenu(menuOpen)
         menuOpen = UI.getAttribute("cameraControls", "active")
     end
 
-    -- Generate camera control buttons
-    local controlsXml = string.format([[
-        <VerticalLayout spacing="10">
-            <!-- Camera Controls in pairs -->
-            <HorizontalLayout spacing="5">
-                <Button text="Action" id="actionCardsCamera" textColor="Grey" onClick="onActionCardsClick" width="85"/>
-                <Button text="Court" id="courtCamera" textColor="Grey" onClick="onCourtClick" width="85"/>
-            </HorizontalLayout>
-            <HorizontalLayout spacing="5">
-                <Button text="Dice" id="diceCamera" textColor="Grey" onClick="onDiceBoardClick" width="85"/>
-                <Button text="Map" id="mapCamera" textColor="Grey" onClick="onMapClick" width="85"/>
-            </HorizontalLayout>
-
-            <!-- Player Timer Displays -->
-            %s
-
-            <!-- Timer Controls at bottom -->
-            <HorizontalLayout spacing="5" padding="0 60 0 0">
-                <Button text="%s" id="playPauseButton" textColor="White" onClick="onPlayPauseTimer" width="30" flexibleWidth="0"/>
-                <Button text="Reset" id="resetTimer" textColor="Grey" onClick="resetTimer" width="55" fontStyle="Normal" tooltip="Reset all timers back to 0"/>
-            </HorizontalLayout>
-        </VerticalLayout>
-    ]], generatePlayerTimerDisplays(), 
-        timer_running and "||" or "▶"
-    )
-
-    -- toggle and overall menu position
-    local xml = string.format([[
-        <Defaults>
-            <Button color="black" fontStyle="Bold" />
-            <Button class="cameraControl" onClick="onCameraClick" />
-        </Defaults>
-
-        <VerticalLayout
-            id="cameraLayout"
-            height="320"
-            width="160"
-            allowDragging="true"
-            returnToOriginalPositionWhenReleased="false"
-            rectAlignment="UpperRight"
-            anchorMin="1 1"
-            anchorMax="1 1"
-            offsetXY="-5 -150"
-            spacing="5"
-            childForceExpandHeight="false"
-            childForceExpandWidth="true"
-            >
-            <Button
-                onClick="toggleCameraControls"
-                text="Camera Controls"
-                textColor="white"
-                color="Grey"
-                tooltip="Toggle camera controls / timer"
-                tooltipBackgroundColor="Grey"
-                tooltipTextColor="Black"
-                >
-            </Button>
-            <VerticalLayout
-                id="cameraControls"
-                height="320"
-                width="180"
-                active="%s"
-                >
-                %s
-            </VerticalLayout>
-        </VerticalLayout>
-    ]], tostring(menuOpen), controlsXml)
-
-    UI.setXml(xml)
-end
-
-function generatePlayerTimerDisplays()
-    local playerTimersXml = ""
-    local buttonColors = {
-        Red = "#FF0000",
-        White = "#FFFFFF",
-        Yellow = "#FFFF00",
-        Teal = "#00FFFF"
-    }
-
-    for _, player in ipairs(active_players) do
-        local isActive = player.color == Turns.turn_color
-        local currentTime = player_timers[player.color] or 0
-        local timeDisplay = formatTime(currentTime)
-        
-        playerTimersXml = playerTimersXml .. string.format(
-            [[<HorizontalLayout spacing="5">
-                <Text id="%sTimer" text="%s" color="%s" fontStyle="%s" preferredWidth="25" preferredHeight="13"/>
-                <Button text="%s" id="%sCamera" textColor="%s" onClick="on%sBoardClick" preferredWidth="29"/>
-            </HorizontalLayout>]],
-            player.color:lower(),
-            timeDisplay,
-            buttonColors[player.color],
-            isActive and "Bold" or "Normal",
-            player.color,
-            player.color:lower(),
-            buttonColors[player.color],
-            player.color
-        )
-    end
-    
-    return playerTimersXml
+    local controlsXml = Camera.generateControlsXml(active_players, Timer.running)
+    local menuXml = Camera.generateMenuXml(menuOpen, controlsXml)
+    UI.setXml(menuXml)
 end
 
 function onPlayPauseTimer(player, value, id)
-    if timer_running then
+    if Timer.running then
         pauseTimer()
     else
         startTimer()
     end
-    -- Update button state
     loadCameraTimerMenu(true)
 end
 
@@ -1600,74 +1415,13 @@ function toggleCameraControls(player, value, id)
     loadCameraTimerMenu(not isOpen)
 end
 
-function onMapClick(player, value, id)
-    Player[player.color].lookAt({
-        position = {x=2.79, y=0.98, z=-1.35},
-        pitch = 70,
-        yaw = 0,
-        distance = 35
-    })
-end
-
-function onCourtClick(player, value, id)
-    Player[player.color].lookAt({
-        position = {x=22.26, y=1.49, z=-1.65},
-        pitch = 70,
-        yaw = 90,
-        distance = 10
-    })
-end
-
-function onActionCardsClick(player, value, id)
-    Player[player.color].lookAt({
-        position = {x=-14.0, y=1.49, z=-1.65},
-        pitch = 70,
-        yaw = 270,
-        distance = 12
-    })
-end
-
-function onDiceBoardClick(player, value, id)
-    Player[player.color].lookAt({
-        position = {x=-33.2, y=1.07, z=-15.22},
-        pitch = 80,
-        yaw = 0,
-        distance = 18
-    })
-end
-
-function onRedBoardClick(player, value, id)
-    Player[player.color].lookAt({
-        position = {x=-10.6, y=1.48, z=14.92},
-        pitch = 80,
-        yaw = 0,
-        distance = 11
-    })
-end
-
-function onWhiteBoardClick(player, value, id)
-    Player[player.color].lookAt({
-        position = {x=13.14, y=1.48, z=14.92},
-        pitch = 80,
-        yaw = 0,
-        distance = 11
-    })
-end
-
-function onYellowBoardClick(player, value, id)
-    Player[player.color].lookAt({
-        position = {x=13.14, y=1.48, z=-16.12},
-        pitch = 80,
-        yaw = 0,
-        distance = 11
-    })
-end
-
-function onTealBoardClick(player, value, id)
-    Player[player.color].lookAt({
-        position = {x=-10.6, y=1.48, z=-16.12},
-        pitch = 80,
-        yaw = 0,
-        distance = 11
-    })
-end
+-- setup wrapper functions for Camera.lua controls since UI onClick requires
+-- the functions to be in Global scope
+function onCourtClick(...) Camera.onCourtClick(...) end
+function onActionCardsClick(...) Camera.onActionCardsClick(...) end
+function onDiceBoardClick(...) Camera.onDiceBoardClick(...) end
+function onMapClick(...) Camera.onMapClick(...) end
+function onRedBoardClick(...) Camera.onRedBoardClick(...) end
+function onWhiteBoardClick(...) Camera.onWhiteBoardClick(...) end
+function onYellowBoardClick(...) Camera.onYellowBoardClick(...) end
+function onTealBoardClick(...) Camera.onTealBoardClick(...) end
