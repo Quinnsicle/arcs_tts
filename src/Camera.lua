@@ -77,7 +77,6 @@ end
 
 -- note that these onClick functions reference the wrapper functions in Global.lua
 function Camera.generateControlsXml(active_players, timer_running)
-    -- Generate camera control buttons
     return string.format([[
         <VerticalLayout spacing="10">
             <!-- Camera Controls in pairs -->
@@ -93,34 +92,30 @@ function Camera.generateControlsXml(active_players, timer_running)
             <!-- Player Timer Displays -->
             %s
 
-            <!-- Timer Controls at bottom -->
-            <HorizontalLayout spacing="5" padding="0 60 0 0">
-                <Button text="%s" id="playPauseButton" textColor="White" onClick="onPlayPauseTimer" width="30" flexibleWidth="0"/>
-                <Button text="Reset" id="resetTimer" textColor="Grey" onClick="resetTimer" width="55" fontStyle="Normal" tooltip="Reset all timers back to 0"/>
-            </HorizontalLayout>
+            %s
         </VerticalLayout>
     ]], Timer.generatePlayerTimerDisplays(active_players),
-        timer_running and "||" or "▶"
+        Timer.generateTimerControls(timer_running)
     )
 end
 
 function Camera.generateMenuXml(menuOpen, controlsXml)
     return string.format([[
         <Defaults>
-            <Button color="black" fontStyle="Bold" />
+            <Button color="black" fontSize="12" />
             <Button class="cameraControl" onClick="onCameraClick" />
         </Defaults>
 
         <VerticalLayout
             id="cameraLayout"
             height="320"
-            width="160"
+            width="100"
             allowDragging="true"
             returnToOriginalPositionWhenReleased="false"
             rectAlignment="UpperRight"
             anchorMin="1 1"
             anchorMax="1 1"
-            offsetXY="-5 -150"
+            offsetXY="-5 -250"
             spacing="5"
             childForceExpandHeight="false"
             childForceExpandWidth="true"
@@ -138,7 +133,7 @@ function Camera.generateMenuXml(menuOpen, controlsXml)
             <VerticalLayout
                 id="cameraControls"
                 height="320"
-                width="180"
+                width="100"
                 active="%s"
                 >
                 %s

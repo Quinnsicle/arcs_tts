@@ -100,7 +100,7 @@ function Timer.generatePlayerTimerDisplays(active_players)
         playerTimersXml = playerTimersXml .. string.format(
             [[<HorizontalLayout spacing="5">
                 <Text id="%sTimer" text="%s" color="%s" fontStyle="%s" preferredWidth="25" preferredHeight="13"/>
-                <Button text="%s" id="%sCamera" textColor="%s" onClick="on%sBoardClick" preferredWidth="29"/>
+                <Button text="%s" id="%sCamera" textColor="%s" onClick="on%sBoardClick" preferredWidth="28"/>
             </HorizontalLayout>]],
             player.color:lower(),
             timeDisplay,
@@ -114,6 +114,16 @@ function Timer.generatePlayerTimerDisplays(active_players)
     end
     
     return playerTimersXml
+end
+
+function Timer.generateTimerControls(timer_running)
+    return string.format([[
+        <!-- Timer Controls at bottom -->
+        <HorizontalLayout spacing="5" padding="0 45 0 0">
+            <Button text="%s" id="playPauseButton" textColor="White" onClick="onPlayPauseTimer" width="30" flexibleWidth="0"/>
+            <Button text="↺" id="resetTimer" textColor="Grey" onClick="resetTimer" width="30" fontStyle="Normal" tooltip="Reset all timers back to 0"/>
+        </HorizontalLayout>
+    ]], timer_running and "||" or "▶")
 end
 
 return Timer
