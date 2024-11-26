@@ -66,10 +66,10 @@ function Timer.update(active_players)
             Timer.updateDisplay(player.color)
             if player.color == Turns.turn_color then
                 UI.setAttribute(timerId, "fontStyle", "Bold")
-                UI.setAttribute(timerId, "fontSize", "18")
+                UI.setAttribute(timerId, "fontSize", "16")
             else
                 UI.setAttribute(timerId, "fontStyle", "Normal")
-                UI.setAttribute(timerId, "fontSize", "14")
+                UI.setAttribute(timerId, "fontSize", "12")
             end
         end
     end

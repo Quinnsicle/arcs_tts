@@ -109,7 +109,7 @@ function Camera.generateMenuXml(menuOpen, controlsXml)
         <VerticalLayout
             id="cameraLayout"
             height="320"
-            width="100"
+            width="95"
             allowDragging="true"
             returnToOriginalPositionWhenReleased="false"
             rectAlignment="UpperRight"
@@ -133,7 +133,7 @@ function Camera.generateMenuXml(menuOpen, controlsXml)
             <VerticalLayout
                 id="cameraControls"
                 height="320"
-                width="100"
+                width="95"
                 active="%s"
                 >
                 %s
