@@ -99,7 +99,7 @@ function Timer.generatePlayerTimerDisplays(active_players)
         
         playerTimersXml = playerTimersXml .. string.format(
             [[<HorizontalLayout spacing="5">
-                <Text id="%sTimer" text="%s" color="%s" fontStyle="%s" preferredWidth="25" preferredHeight="13"/>
+                <Text id="%sTimer" text="%s" color="%s" fontSize="12" fontStyle="%s" preferredWidth="25" preferredHeight="13"/>
                 <Button text="%s" id="%sCamera" textColor="%s" onClick="on%sBoardClick" preferredWidth="28"/>
             </HorizontalLayout>]],
             player.color:lower(),
