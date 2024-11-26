@@ -128,7 +128,6 @@ function start_chapter()
     local initiative_player = Global.getVar("initiative_player")
     broadcastToAll(initiative_player .. " will start the chapter\n", initiative_player)
     Turns.turn_color = initiative_player
-    Global.call("startTimer")
 end
 
 function end_round()
