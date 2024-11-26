@@ -57121,7 +57121,7 @@
         },
         {
           "GUID": "95e7da",
-          "Name": "Custom_Tile",
+          "Name": "Custom_Token",
           "Transform": {
             "posX": -42.0260849,
             "posY": 3.0343678,
@@ -57129,9 +57129,9 @@
             "rotX": 357.9437,
             "rotY": 179.975052,
             "rotZ": 1.37460947,
-            "scaleX": 0.428595543,
+            "scaleX": 0.238342762,
             "scaleY": 1.0,
-            "scaleZ": 0.428595543
+            "scaleZ": 0.238342762
           },
           "Nickname": "CONSPIRACY TOKEN",
           "Description": "Teal",
@@ -57165,24 +57165,44 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/5h2q0ch1nrje48l/Conspiracy%20%28front%29.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/i28uhi5wgbin4ev/Conspiracy%20%28back%2C%20blue%29.jpg?dl=0",
+            "ImageURL": "https://steamusercontent-a.akamaihd.net/ugc/2153343076102755215/537BECE92ECDCFF2B31FE0AF39A4CAFD8AC76A7E/",
+            "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
+            "CustomToken": {
               "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
+              "MergeDistancePixels": 15.0,
+              "StandUp": false,
+              "Stackable": false
             }
           },
           "LuaScript": "",
           "LuaScriptState": "",
-          "XmlUI": ""
+          "XmlUI": "",
+          "AttachedDecals": [
+            {
+              "Transform": {
+                "posX": -0.0454452932,
+                "posY": -0.05999998,
+                "posZ": 0.002432748,
+                "rotX": 270.0,
+                "rotY": 0.307844669,
+                "rotZ": 0.0,
+                "scaleX": 3.77607417,
+                "scaleY": 3.77607536,
+                "scaleZ": 0.9000004
+              },
+              "CustomDecal": {
+                "Name": "consp teal",
+                "ImageURL": "https://steamusercontent-a.akamaihd.net/ugc/15294671300868820/6D25936FDC67E1920DD91280F162AA2B309E3497/",
+                "Size": 0.9
+              }
+            }
+          ]
         },
         {
           "GUID": "8ccb19",
-          "Name": "Custom_Tile",
+          "Name": "Custom_Token",
           "Transform": {
             "posX": -42.28153,
             "posY": 3.032652,
@@ -57190,9 +57210,9 @@
             "rotX": 357.804,
             "rotY": 180.009766,
             "rotZ": 359.4908,
-            "scaleX": 0.428595543,
+            "scaleX": 0.238342762,
             "scaleY": 1.0,
-            "scaleZ": 0.428595543
+            "scaleZ": 0.238342762
           },
           "Nickname": "CONSPIRACY TOKEN",
           "Description": "Teal",
@@ -57226,20 +57246,40 @@
           "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
-            "ImageURL": "https://dl.dropboxusercontent.com/s/5h2q0ch1nrje48l/Conspiracy%20%28front%29.jpg?dl=0",
-            "ImageSecondaryURL": "https://dl.dropboxusercontent.com/s/i28uhi5wgbin4ev/Conspiracy%20%28back%2C%20blue%29.jpg?dl=0",
+            "ImageURL": "https://steamusercontent-a.akamaihd.net/ugc/2153343076102755215/537BECE92ECDCFF2B31FE0AF39A4CAFD8AC76A7E/",
+            "ImageSecondaryURL": "",
             "ImageScalar": 1.0,
             "WidthScale": 0.0,
-            "CustomTile": {
-              "Type": 2,
+            "CustomToken": {
               "Thickness": 0.1,
-              "Stackable": false,
-              "Stretch": true
+              "MergeDistancePixels": 15.0,
+              "StandUp": false,
+              "Stackable": false
             }
           },
           "LuaScript": "",
           "LuaScriptState": "",
-          "XmlUI": ""
+          "XmlUI": "",
+          "AttachedDecals": [
+            {
+              "Transform": {
+                "posX": -0.0454452932,
+                "posY": -0.05999998,
+                "posZ": 0.002432748,
+                "rotX": 270.0,
+                "rotY": 0.307844669,
+                "rotZ": 0.0,
+                "scaleX": 3.77607417,
+                "scaleY": 3.77607536,
+                "scaleZ": 0.9000004
+              },
+              "CustomDecal": {
+                "Name": "consp teal",
+                "ImageURL": "https://steamusercontent-a.akamaihd.net/ugc/15294671300868820/6D25936FDC67E1920DD91280F162AA2B309E3497/",
+                "Size": 0.9
+              }
+            }
+          ]
         },
         {
           "GUID": "72f5bf",
