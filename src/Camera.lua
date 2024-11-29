@@ -95,7 +95,7 @@ function Camera.generateControlsXml(active_players, timer_running)
             %s
         </VerticalLayout>
     ]], Timer.generatePlayerTimerDisplays(active_players),
-        Timer.generateTimerControls(timer_running)
+        Timer.generateTimerControls(timer_running, active_players)
     )
 end
 

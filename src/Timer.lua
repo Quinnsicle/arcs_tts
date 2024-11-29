@@ -116,7 +116,12 @@ function Timer.generatePlayerTimerDisplays(active_players)
     return playerTimersXml
 end
 
-function Timer.generateTimerControls(timer_running)
+function Timer.generateTimerControls(timer_running, active_players)
+    -- Only show timer controls if there are 2 or more players
+    if not active_players or #active_players < 2 then
+        return ""
+    end
+
     return string.format([[
         <!-- Timer Controls at bottom -->
         <HorizontalLayout spacing="5" padding="0 45 0 0">
