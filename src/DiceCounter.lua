@@ -144,7 +144,7 @@ local function displayResults(results)
 
         for _, display in ipairs(result_displays) do
             if display.label > 0 then
-                -- Create shadow button (white text slightly offset to make it pop a bit)
+                -- Create shadow button (white text slightly offset to make the black text pop)
                 display_obj.createButton({
                     click_function = "doNothing",
                     function_owner = self,
@@ -158,8 +158,8 @@ local function displayResults(results)
                     font_style = "Bold"
                 })
             end
-            
-            -- Create main button (black text)
+
+            -- Create main button (black or grey based on display.label value)
             display_obj.createButton({
                 click_function = "doNothing",
                 function_owner = self,
@@ -169,7 +169,7 @@ local function displayResults(results)
                 width = 0,
                 height = 0,
                 font_size = 110,
-                font_color = {0, 0, 0},
+                font_color = display.label > 0 and {0, 0, 0} or {0.8, 0.8, 0.8},
                 font_style = "Bold"
             })
         end
