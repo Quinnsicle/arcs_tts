@@ -46,6 +46,7 @@ function Timer.reset()
         Timer.player_timers[color] = 0
         Timer.updateDisplay(color)
     end
+    UI.setValue("totalTime", Timer.formatTime(0))
     if Timer.timer_id then
         Wait.stop(Timer.timer_id)
         Timer.timer_id = nil
@@ -72,6 +73,8 @@ function Timer.update(active_players)
                 UI.setAttribute(timerId, "fontSize", "12")
             end
         end
+
+        UI.setValue("totalTime", Timer.formatTime(Timer.getTotalTime()))
     end
 end
 
@@ -116,6 +119,14 @@ function Timer.generatePlayerTimerDisplays(active_players)
     return playerTimersXml
 end
 
+function Timer.getTotalTime()
+    local total = 0
+    for _, color in ipairs({"Red", "White", "Yellow", "Teal"}) do
+        total = total + (Timer.player_timers[color] or 0)
+    end
+    return total
+end
+
 function Timer.generateTimerControls(timer_running, active_players)
     -- Only show timer controls if there are 2 or more players
     if not active_players or #active_players < 2 then
@@ -124,11 +135,12 @@ function Timer.generateTimerControls(timer_running, active_players)
 
     return string.format([[
         <!-- Timer Controls at bottom -->
-        <HorizontalLayout spacing="5" padding="0 45 0 0">
+        <HorizontalLayout spacing="5">
+            <Text id="totalTime" text="%s" color="#808080" fontSize="12" preferredWidth="25" preferredHeight="13"/>
             <Button text="%s" id="playPauseButton" textColor="White" onClick="onPlayPauseTimer" width="30" flexibleWidth="0"/>
             <Button text="↺" id="resetTimer" textColor="Grey" onClick="resetTimer" width="30" fontStyle="Normal" tooltip="Reset all timers back to 0"/>
         </HorizontalLayout>
-    ]], timer_running and "||" or "▶")
+    ]], Timer.formatTime(Timer.getTotalTime()), timer_running and "||" or "▶")
 end
 
 return Timer

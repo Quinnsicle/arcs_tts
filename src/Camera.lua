@@ -115,7 +115,7 @@ function Camera.generateMenuXml(menuOpen, controlsXml)
             rectAlignment="UpperRight"
             anchorMin="1 1"
             anchorMax="1 1"
-            offsetXY="-5 -250"
+            offsetXY="-7 -250"
             spacing="5"
             childForceExpandHeight="false"
             childForceExpandWidth="true"
