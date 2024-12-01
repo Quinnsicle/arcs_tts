@@ -80510,7 +80510,7 @@
       ],
       "LayoutGroupSortIndex": 0,
       "Value": 0,
-      "Locked": true,
+      "Locked": false,
       "Grid": true,
       "Snap": true,
       "IgnoreFoW": false,
@@ -80523,8 +80523,8 @@
       "HideWhenFaceDown": false,
       "Hands": false,
       "CustomImage": {
-        "ImageURL": "https://steamusercontent-a.akamaihd.net/ugc/15295450284844252/D305FA22740EB671EE8547B87F89CF0BE5CE49E7/",
-        "ImageSecondaryURL": "",
+        "ImageURL": "https://steamusercontent-a.akamaihd.net/ugc/15295450284957721/CA4606FAD3DDE552CB406BDC6842A6CBFAE9FD79/",
+        "ImageSecondaryURL": "https://steamusercontent-a.akamaihd.net/ugc/15295450284844252/D305FA22740EB671EE8547B87F89CF0BE5CE49E7/",
         "ImageScalar": 1.0,
         "WidthScale": 0.0,
         "CustomTile": {
