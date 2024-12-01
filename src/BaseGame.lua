@@ -17,9 +17,10 @@ local BaseGame = {
             control_board = "6e21fe",
             reach_board = "bb7d21",
             dice_board = "af1f85",
-            dice_help = "06e7d2",
+            dice_help = "f96808",
             dice_counter1 = "069307",
             dice_counter2 = "4798a5",
+            action_help = "28a621",
             rules = "bdf1aa",
             round_help = "bcb75f",
             ambition_high = "c9e0ee",
@@ -176,7 +177,8 @@ end
 --     is_4p = true,
 --     leaders_and_lore = true,
 --     leaders_and_lore_expansion = true,
---     faceup_discard = true
+--     faceup_discard = true,
+--     miniatures = true
 -- }
 function BaseGame.components_visibility(params)
     BaseGame.core_components_visibility(params.is_visible)
@@ -194,6 +196,9 @@ function BaseGame.components_visibility(params)
     end
     if (params.faceup_discard) then
         ActionCards.faceup_discard_visibility(params.is_visible)
+    end
+    if (params.miniatures) then
+        BaseGame.miniatures_setup(params.is_visible)
     end
 end
 
@@ -518,6 +523,8 @@ function BaseGame.dealLeaders(player_count)
 
     end
 end
+
+
 
 function BaseGame.setupPlayers(ordered_players, setup_card)
     LOG.INFO("Setup Players")
