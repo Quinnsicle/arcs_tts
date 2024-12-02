@@ -40,7 +40,6 @@ local BaseGame = {
             material_placeholder = "eb1cba",
             material_stack = "57c2c6",
             initiative = "b3b3d0"
-
         }
     }
 }
@@ -432,6 +431,40 @@ function BaseGame.setupOutOfPlayClusters(setup_card)
         end
     end
 
+end
+
+function BaseGame.setupOutOfPlayForCustom()
+    local oop_components = Global.getTable("oop_components")
+    
+    local bag = spawnObject({
+        type = "Bag",
+        position = {-52.7995567, 0.7801895, -24.3295612},
+        sound = false
+    })
+    bag.setName("Out of Play Tokens")
+    bag.setColorTint({r=1, g=0.7472, b=0})
+
+    local function spawnAndBagToken(tokenData, shouldTagAsGate)
+        local token = spawnObject({
+            type = "Custom_Token",
+            position = bag.getPosition() + Vector(0, 2, 0),
+            rotation = tokenData.rot,
+            scale = tokenData.scale,
+            sound = false
+        })
+        token.setCustomObject({image = tokenData.img})
+        if shouldTagAsGate then token.addTag("oop_gate") end
+        Wait.frames(function() bag.putObject(token) end, 1)
+    end
+
+    Wait.frames(function()
+        for _, cluster in ipairs(oop_components) do
+            spawnAndBagToken(cluster.Sector, false)
+            spawnAndBagToken(cluster.Gate, true)
+        end
+    end, 1)
+    
+    return bag
 end
 
 function BaseGame.place_player_markers(ordered_players, setup_card)
