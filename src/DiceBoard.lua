@@ -13,6 +13,7 @@ local MESSAGE_COLOR = {
 
 -- UI Variables--
 local UI_POS = Vector({0.00, 0.20, 1.20})
+local CAMPAIGN_UI_POS = Vector({-1.75, 0.20, -1.20})
 
 local UI_skirmish = {
     click_function = "SpawnSkirmishDie",
@@ -60,7 +61,7 @@ local UI_cluster = {
     click_function = "SpawnClusterDie",
     function_owner = DICE_BOARD,
     label = "Cluster",
-    position = Vector({0.60, 0.00, 0.00}) + UI_POS,
+    position = Vector({0.60, 0.00, 0.00}) + CAMPAIGN_UI_POS,
     width = 310,
     height = 130,
     font_size = 60,
@@ -73,7 +74,7 @@ local UI_event = {
     click_function = "SpawnEventDie",
     function_owner = DICE_BOARD,
     label = "Event",
-    position = Vector({1.20, 0.00, 0.00}) + UI_POS,
+    position = Vector({1.20, 0.00, 0.00}) + CAMPAIGN_UI_POS,
     width = 310,
     height = 130,
     font_size = 60,
@@ -86,8 +87,8 @@ local UI_roll = {
     click_function = "RollDice",
     function_owner = DICE_BOARD,
     label = "Roll",
-    position = Vector({-0.70, 0.00, 0.30}) + UI_POS,
-    width = 650,
+    position = Vector({0.95, 0.00, 0.00}) + UI_POS,
+    width = 600,
     height = 130,
     font_size = 72,
     scale = {1, 1, 1},
@@ -99,13 +100,13 @@ local UI_reset = {
     click_function = "ClearDice",
     function_owner = DICE_BOARD,
     label = "Reset",
-    position = Vector({0.70, 0.00, 0.30}) + UI_POS,
-    width = 650,
+    position = Vector({0.95, 0.00, 0.35}) + UI_POS,
+    width = 450,
     height = 130,
     font_size = 72,
     scale = {1, 1, 1},
-    color = {0.8, 0.8, 0.8},
-    font_color = {0, 0, 0}
+    color = {0.1, 0.1, 0.1},
+    font_color = {0.7, 0.7, 0.7}
 }
 
 -- Dice Layout --
