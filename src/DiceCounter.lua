@@ -142,6 +142,9 @@ local function displayResults(results)
             {label = results.keys, pos = {x = 0.33, y = 0.11, z = 0.89}}
         }
 
+        local gold_color = {0.8, 0.58, 0.27}
+        local shadow_offset = Vector({0.005, 0, 0.01})
+
         for _, display in ipairs(result_displays) do
             if display.label > 0 then
                 -- Create shadow button (white text slightly offset to make the black text pop)
@@ -149,12 +152,12 @@ local function displayResults(results)
                     click_function = "doNothing",
                     function_owner = self,
                     label = display.label,
-                    position = {x = display.pos.x + 0.01, y = display.pos.y, z = display.pos.z + 0.01},
+                    position = Vector(display.pos) + shadow_offset,
                     rotation = {0, 0, 0},
                     width = 0,
                     height = 0,
                     font_size = 115,
-                    font_color = {1, 1, 1},
+                    font_color = display.label > 0 and {0,0,0} or {1, 1, 1},
                     font_style = "Bold"
                 })
             end
@@ -169,7 +172,7 @@ local function displayResults(results)
                 width = 0,
                 height = 0,
                 font_size = 110,
-                font_color = display.label > 0 and {0, 0, 0} or {0.8, 0.8, 0.8},
+                font_color = display.label > 0 and gold_color or {0.8, 0.8, 0.8},
                 font_style = "Bold"
             })
         end
