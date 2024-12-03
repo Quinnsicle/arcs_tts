@@ -1,4 +1,4 @@
-local authors = "Quinnsicle, Scyth02, McChew"
+local authors = "Quinnsicle, Scyth02, McChew, fallspectrum"
 local version = "1.0"
 
 require("src/GUIDs")
@@ -117,6 +117,8 @@ local Counters = require("src/Counters")
 local Initiative = require("src/InitiativeMarker")
 local SetupControl = require("src/SetupControl")
 local Supplies = require("src/Supplies")
+local Camera = require("src/Camera")
+local Timer = require("src/Timer")
 
 function assignPlayerToAvailableColor(player, color)
     local color = table.remove(available_colors, 1)
@@ -1306,7 +1308,6 @@ function set_game_in_progress(params)
 end
 
 function onLoad()
-
     Initiative.add_menu()
 
     for _, obj in pairs(getObjectsWithTag("City")) do
@@ -1330,7 +1331,6 @@ function onLoad()
 
         Counters.setup()
     elseif debug then
-
         Campaign.components_visibility(true)
         BaseGame.components_visibility({
             is_visible = true,
@@ -1374,4 +1374,12 @@ function onLoad()
         face_up_discard_action_deck.interactable = false
         face_up_discard_action_deck.locked = false -- set this to false otherwise it breaks
     end
+
+    -- Initialize turn system
+    Turns.enable = true
+    Turns.pass_turns = true
+
+    -- Initialize timer system
+    resetTimer()  -- Reset all player timers
+    loadCameraTimerMenu(false)  -- Load the UI with menu closed initially
 end
