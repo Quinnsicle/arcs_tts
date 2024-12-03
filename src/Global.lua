@@ -185,8 +185,7 @@ function onObjectDrop(player_color, object)
             local player = get_arcs_player(player_color)
             if (player) then
                 player:set_last_played_seize_card(object.getDescription())
-                broadcastToAll(player.color .. " is seizing the initiative",
-                    player.color)
+                broadcastToAll(player.color .. " is seizing the initiative", player.color)
             end
         end
     end
@@ -202,8 +201,7 @@ function onObjectDrop(player_color, object)
 end
 
 function onPlayerAction(player, action, targets)
-    if (action == Player.Action.FlipOver and #targets == 1 and
-        targets[1].hasTag("Action")) then
+    if (action == Player.Action.FlipOver and #targets == 1 and targets[1].hasTag("Action")) then
         Wait.time(function()
             onObjectDrop(player.color, targets[1])
         end, 0.25)
@@ -224,8 +222,8 @@ function onObjectEnterZone(zone, object)
         end
     end
 
-    if ((object.getGUID() == initiative_GUID or object.getGUID() ==
-        seized_initiative_GUID) and zone_name == "initiative_zone") then
+    if ((object.getGUID() == initiative_GUID or object.getGUID() == seized_initiative_GUID)
+        and zone_name == "initiative_zone") then
         local zone_color = zone.getDescription()
         Global.setVar("initiative_player", zone_color)
     end
@@ -259,9 +257,9 @@ function onObjectLeaveContainer(container, leave_object)
     Counters.update(container)
     local container_tags = container.getTags()
     if #container_tags > 0 then
-        if container.type == "Bag" or container.type == "Infinite" then
+        if container.type == "Bag" or container.type =="Infinite" then
             leave_object.setTags(container.getTags())
-
+    
             -- set snap
             leave_object.use_snap_points = true
         end
@@ -269,13 +267,12 @@ function onObjectLeaveContainer(container, leave_object)
 end
 
 function tryObjectEnterContainer(container, object)
-    if object.hasTag('Ship') and container.hasTag('Ship') and
-        object.getStateId() == 2 then
+    if object.hasTag('Ship') and container.hasTag('Ship') and object.getStateId() == 2 then
         object.setState(1)
     end
-
+    
     -- require object to have every container tag
-    for _, tag in ipairs(container.getTags()) do
+    for _,  tag in ipairs(container.getTags()) do
         if not object.hasTag(tag) then
             return false
         end
@@ -329,13 +326,10 @@ function getOrderedPlayers()
     local start_index = math.random(player_count)
 
     for i = 1, #clockwise_order do
-        local color = clockwise_order[(start_index + i - 2) % #clockwise_order +
-                          1]
+        local color = clockwise_order[(start_index + i - 2) % #clockwise_order + 1]
         for _, seated_color in ipairs(seated_players) do
             if color == seated_color then
-                table.insert(ordered_players, ArcsPlayer:new{
-                    color = color
-                })
+                table.insert(ordered_players, ArcsPlayer:new{color = color})
                 break
             end
         end
@@ -1386,6 +1380,6 @@ function onLoad()
     Turns.pass_turns = true
 
     -- Initialize timer system
-    resetTimer() -- Reset all player timers
-    loadCameraTimerMenu(false) -- Load the UI with menu closed initially
+    resetTimer()  -- Reset all player timers
+    loadCameraTimerMenu(false)  -- Load the UI with menu closed initially
 end
