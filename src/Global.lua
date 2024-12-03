@@ -1,4 +1,4 @@
-local authors = "Quinnsicle, Scyth02, McChew"
+local authors = "Quinnsicle, Scyth02, McChew, fallspectrum"
 local version = "1.0"
 
 require("src/GUIDs")
@@ -185,7 +185,8 @@ function onObjectDrop(player_color, object)
             local player = get_arcs_player(player_color)
             if (player) then
                 player:set_last_played_seize_card(object.getDescription())
-                broadcastToAll(player.color .. " is seizing the initiative", player.color)
+                broadcastToAll(player.color .. " is seizing the initiative",
+                    player.color)
             end
         end
     end
@@ -201,7 +202,8 @@ function onObjectDrop(player_color, object)
 end
 
 function onPlayerAction(player, action, targets)
-    if (action == Player.Action.FlipOver and #targets == 1 and targets[1].hasTag("Action")) then
+    if (action == Player.Action.FlipOver and #targets == 1 and
+        targets[1].hasTag("Action")) then
         Wait.time(function()
             onObjectDrop(player.color, targets[1])
         end, 0.25)
@@ -222,8 +224,8 @@ function onObjectEnterZone(zone, object)
         end
     end
 
-    if ((object.getGUID() == initiative_GUID or object.getGUID() == seized_initiative_GUID)
-        and zone_name == "initiative_zone") then
+    if ((object.getGUID() == initiative_GUID or object.getGUID() ==
+        seized_initiative_GUID) and zone_name == "initiative_zone") then
         local zone_color = zone.getDescription()
         Global.setVar("initiative_player", zone_color)
     end
@@ -257,9 +259,9 @@ function onObjectLeaveContainer(container, leave_object)
     Counters.update(container)
     local container_tags = container.getTags()
     if #container_tags > 0 then
-        if container.type == "Bag" or container.type =="Infinite" then
+        if container.type == "Bag" or container.type == "Infinite" then
             leave_object.setTags(container.getTags())
-    
+
             -- set snap
             leave_object.use_snap_points = true
         end
@@ -267,12 +269,13 @@ function onObjectLeaveContainer(container, leave_object)
 end
 
 function tryObjectEnterContainer(container, object)
-    if object.hasTag('Ship') and container.hasTag('Ship') and object.getStateId() == 2 then
+    if object.hasTag('Ship') and container.hasTag('Ship') and
+        object.getStateId() == 2 then
         object.setState(1)
     end
-    
+
     -- require object to have every container tag
-    for _,  tag in ipairs(container.getTags()) do
+    for _, tag in ipairs(container.getTags()) do
         if not object.hasTag(tag) then
             return false
         end
@@ -326,10 +329,13 @@ function getOrderedPlayers()
     local start_index = math.random(player_count)
 
     for i = 1, #clockwise_order do
-        local color = clockwise_order[(start_index + i - 2) % #clockwise_order + 1]
+        local color = clockwise_order[(start_index + i - 2) % #clockwise_order +
+                          1]
         for _, seated_color in ipairs(seated_players) do
             if color == seated_color then
-                table.insert(ordered_players, ArcsPlayer:new{color = color})
+                table.insert(ordered_players, ArcsPlayer:new{
+                    color = color
+                })
                 break
             end
         end
@@ -1380,48 +1386,6 @@ function onLoad()
     Turns.pass_turns = true
 
     -- Initialize timer system
-    Timer.reset()  -- Reset all player timers
-    loadCameraTimerMenu(false)  -- Load the UI with menu closed initially
+    resetTimer() -- Reset all player timers
+    loadCameraTimerMenu(false) -- Load the UI with menu closed initially
 end
-
--- Timer UI wrapper functions - these need to stay in Global for UI interaction
-function startTimer() Timer.start(active_players); loadCameraTimerMenu() end
-function pauseTimer() Timer.pause(); loadCameraTimerMenu(true) end
-function resetTimer() Timer.reset(); loadCameraTimerMenu(true) end
-
-function loadCameraTimerMenu(menuOpen)
-    -- if menuOpen is nil, leave the cameraControls active state alone
-    if menuOpen == nil then
-        menuOpen = UI.getAttribute("cameraControls", "active")
-    end
-
-    local controlsXml = Camera.generateControlsXml(active_players, Timer.running)
-    local menuXml = Camera.generateMenuXml(menuOpen, controlsXml)
-    UI.setXml(menuXml)
-end
-
-function onPlayPauseTimer(player, value, id)
-    if Timer.running then
-        pauseTimer()
-    else
-        startTimer()
-    end
-    loadCameraTimerMenu(true)
-end
-
-
-function toggleCameraControls(player, value, id)
-    local isOpen = UI.getAttribute("cameraControls", "active") == "true"
-    loadCameraTimerMenu(not isOpen)
-end
-
--- setup wrapper functions for Camera.lua controls since UI onClick requires
--- the functions to be in Global scope
-function onCourtClick(...) Camera.onCourtClick(...) end
-function onActionCardsClick(...) Camera.onActionCardsClick(...) end
-function onDiceBoardClick(...) Camera.onDiceBoardClick(...) end
-function onMapClick(...) Camera.onMapClick(...) end
-function onRedBoardClick(...) Camera.onRedBoardClick(...) end
-function onWhiteBoardClick(...) Camera.onWhiteBoardClick(...) end
-function onYellowBoardClick(...) Camera.onYellowBoardClick(...) end
-function onTealBoardClick(...) Camera.onTealBoardClick(...) end

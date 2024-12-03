@@ -5,6 +5,19 @@ Timer.running = false
 Timer.start_time = 0
 Timer.timer_id = nil
 
+function startTimer() Timer.start(active_players); loadCameraTimerMenu() end
+function pauseTimer() Timer.pause(); loadCameraTimerMenu(true) end
+function resetTimer() Timer.reset(); loadCameraTimerMenu(true) end
+
+function onPlayPauseTimer(player, value, id)
+    if Timer.running then
+        pauseTimer()
+    else
+        startTimer()
+    end
+    loadCameraTimerMenu(true)
+end
+
 function Timer.start(active_players)    
     if Timer.running then return end
 

@@ -3,7 +3,7 @@ local Timer = require("src/Timer")
 local Camera = {}
 
 -- note that these onClick functions are used by wrapper functions in Global.lua
-function Camera.onCourtClick(player, value, id)
+function onCourtClick(player, value, id)
     Player[player.color].lookAt({
         position = {x=22.26, y=1.49, z=-1.65},
         pitch = 70,
@@ -12,7 +12,7 @@ function Camera.onCourtClick(player, value, id)
     })
 end
 
-function Camera.onActionCardsClick(player, value, id)
+function onActionCardsClick(player, value, id)
     Player[player.color].lookAt({
         position = {x=-14.0, y=1.49, z=-1.65},
         pitch = 70,
@@ -21,7 +21,7 @@ function Camera.onActionCardsClick(player, value, id)
     })
 end
 
-function Camera.onDiceBoardClick(player, value, id)
+function onDiceBoardClick(player, value, id)
     Player[player.color].lookAt({
         position = {x=-33.2, y=1.07, z=-15.22},
         pitch = 80,
@@ -30,7 +30,7 @@ function Camera.onDiceBoardClick(player, value, id)
     })
 end
 
-function Camera.onMapClick(player, value, id)
+function onMapClick(player, value, id)
     Player[player.color].lookAt({
         position = {x=2.79, y=0.98, z=-1.35},
         pitch = 70,
@@ -39,7 +39,7 @@ function Camera.onMapClick(player, value, id)
     })
 end
 
-function Camera.onRedBoardClick(player, value, id)
+function onRedBoardClick(player, value, id)
     Player[player.color].lookAt({
         position = {x=-10.6, y=1.48, z=14.92},
         pitch = 80,
@@ -48,7 +48,7 @@ function Camera.onRedBoardClick(player, value, id)
     })
 end
 
-function Camera.onWhiteBoardClick(player, value, id)
+function onWhiteBoardClick(player, value, id)
     Player[player.color].lookAt({
         position = {x=13.14, y=1.48, z=14.92},
         pitch = 80,
@@ -57,7 +57,7 @@ function Camera.onWhiteBoardClick(player, value, id)
     })
 end
 
-function Camera.onYellowBoardClick(player, value, id)
+function onYellowBoardClick(player, value, id)
     Player[player.color].lookAt({
         position = {x=13.14, y=1.48, z=-16.12},
         pitch = 80,
@@ -66,13 +66,29 @@ function Camera.onYellowBoardClick(player, value, id)
     })
 end
 
-function Camera.onTealBoardClick(player, value, id)
+function onTealBoardClick(player, value, id)
     Player[player.color].lookAt({
         position = {x=-10.6, y=1.48, z=-16.12},
         pitch = 80,
         yaw = 0,
         distance = 11
     })
+end
+
+function loadCameraTimerMenu(menuOpen)
+    -- if menuOpen is nil, leave the cameraControls active state alone
+    if menuOpen == nil then
+        menuOpen = UI.getAttribute("cameraControls", "active")
+    end
+
+    local controlsXml = Camera.generateControlsXml(active_players, Timer.running)
+    local menuXml = Camera.generateMenuXml(menuOpen, controlsXml)
+    UI.setXml(menuXml)
+end
+
+function toggleCameraControls(player, value, id)
+    local isOpen = UI.getAttribute("cameraControls", "active") == "true"
+    loadCameraTimerMenu(not isOpen)
 end
 
 -- note that these onClick functions reference the wrapper functions in Global.lua
