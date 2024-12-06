@@ -201,11 +201,25 @@ function onObjectDrop(player_color, object)
 end
 
 function onPlayerAction(player, action, targets)
-    if (action == Player.Action.FlipOver and #targets == 1 and targets[1].hasTag("Action")) then
+    if action ~= Player.Action.FlipOver then return end
+    
+    -- Ensure onObjectDrop when someone flips an action card
+    if #targets == 1 and targets[1].hasTag("Action") then
         Wait.time(function()
             onObjectDrop(player.color, targets[1])
         end, 0.25)
+        return false
     end
+
+    -- Convert ship flips into damage state changes
+    for _, obj in ipairs(targets) do
+        if obj.hasTag("Ship") then
+            obj.setState(obj.getStateId() == 1 and 2 or 1)
+        else
+            obj.flip()
+        end
+    end
+    return false -- Prevent default flip behavior
 end
 
 function onObjectEnterZone(zone, object)
