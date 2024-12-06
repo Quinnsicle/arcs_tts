@@ -208,18 +208,15 @@ function onPlayerAction(player, action, targets)
         Wait.time(function()
             onObjectDrop(player.color, targets[1])
         end, 0.25)
-        return false
     end
 
     -- Convert ship flips into damage state changes
     for _, obj in ipairs(targets) do
         if obj.hasTag("Ship") then
             obj.setState(obj.getStateId() == 1 and 2 or 1)
-        else
-            obj.flip()
+            return false -- Only prevent default behavior for ships
         end
     end
-    return false -- Prevent default flip behavior
 end
 
 function onObjectEnterZone(zone, object)
