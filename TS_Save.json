@@ -58757,10 +58757,10 @@
             "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418333649/44F26ADA0FDD6F47AA3609CF310A1B40A3BB6613/",
             "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
             "NormalURL": "",
-            "ColliderURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688659256/F0979E2C16DF05EAFABCFE4B0E7BDAC3100E6E95/",
             "Convex": true,
             "MaterialIndex": 1,
-            "TypeIndex": 0,
+            "TypeIndex": 1,
             "CastShadows": true
           },
           "LuaScript": "",
@@ -58809,8 +58809,8 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomMesh": {
-                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418359059/19D0038AE164F461BF2D95BAE815373FB71FF487/",
-                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688687930/A5BEC3F0022C6373C90C77F1CD08F0A2040F0B58/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688568743/95033EA45132FDAAB36BDE8A1DB6D698E2F61120/",
                 "NormalURL": "",
                 "ColliderURL": "",
                 "Convex": true,
@@ -58820,7 +58820,11 @@
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "XmlUI": ""
+              "XmlUI": "",
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ]
             }
           }
         },
@@ -58873,10 +58877,10 @@
             "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418333649/44F26ADA0FDD6F47AA3609CF310A1B40A3BB6613/",
             "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
             "NormalURL": "",
-            "ColliderURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688659256/F0979E2C16DF05EAFABCFE4B0E7BDAC3100E6E95/",
             "Convex": true,
             "MaterialIndex": 1,
-            "TypeIndex": 0,
+            "TypeIndex": 1,
             "CastShadows": true
           },
           "LuaScript": "",
@@ -58925,8 +58929,8 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomMesh": {
-                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418359059/19D0038AE164F461BF2D95BAE815373FB71FF487/",
-                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688687930/A5BEC3F0022C6373C90C77F1CD08F0A2040F0B58/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688568743/95033EA45132FDAAB36BDE8A1DB6D698E2F61120/",
                 "NormalURL": "",
                 "ColliderURL": "",
                 "Convex": true,
@@ -58936,7 +58940,11 @@
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "XmlUI": ""
+              "XmlUI": "",
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ]
             }
           }
         },
@@ -58989,10 +58997,10 @@
             "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418333649/44F26ADA0FDD6F47AA3609CF310A1B40A3BB6613/",
             "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
             "NormalURL": "",
-            "ColliderURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688659256/F0979E2C16DF05EAFABCFE4B0E7BDAC3100E6E95/",
             "Convex": true,
             "MaterialIndex": 1,
-            "TypeIndex": 0,
+            "TypeIndex": 1,
             "CastShadows": true
           },
           "LuaScript": "",
@@ -59041,8 +59049,8 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomMesh": {
-                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418359059/19D0038AE164F461BF2D95BAE815373FB71FF487/",
-                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688687930/A5BEC3F0022C6373C90C77F1CD08F0A2040F0B58/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688568743/95033EA45132FDAAB36BDE8A1DB6D698E2F61120/",
                 "NormalURL": "",
                 "ColliderURL": "",
                 "Convex": true,
@@ -59052,7 +59060,11 @@
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "XmlUI": ""
+              "XmlUI": "",
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ]
             }
           }
         },
@@ -59105,10 +59117,10 @@
             "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418333649/44F26ADA0FDD6F47AA3609CF310A1B40A3BB6613/",
             "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
             "NormalURL": "",
-            "ColliderURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688659256/F0979E2C16DF05EAFABCFE4B0E7BDAC3100E6E95/",
             "Convex": true,
             "MaterialIndex": 1,
-            "TypeIndex": 0,
+            "TypeIndex": 1,
             "CastShadows": true
           },
           "LuaScript": "",
@@ -59157,8 +59169,8 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomMesh": {
-                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418359059/19D0038AE164F461BF2D95BAE815373FB71FF487/",
-                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688687930/A5BEC3F0022C6373C90C77F1CD08F0A2040F0B58/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688568743/95033EA45132FDAAB36BDE8A1DB6D698E2F61120/",
                 "NormalURL": "",
                 "ColliderURL": "",
                 "Convex": true,
@@ -59168,7 +59180,11 @@
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "XmlUI": ""
+              "XmlUI": "",
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ]
             }
           }
         },
@@ -59221,10 +59237,10 @@
             "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418333649/44F26ADA0FDD6F47AA3609CF310A1B40A3BB6613/",
             "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
             "NormalURL": "",
-            "ColliderURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688659256/F0979E2C16DF05EAFABCFE4B0E7BDAC3100E6E95/",
             "Convex": true,
             "MaterialIndex": 1,
-            "TypeIndex": 0,
+            "TypeIndex": 1,
             "CastShadows": true
           },
           "LuaScript": "",
@@ -59273,8 +59289,8 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomMesh": {
-                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418359059/19D0038AE164F461BF2D95BAE815373FB71FF487/",
-                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688687930/A5BEC3F0022C6373C90C77F1CD08F0A2040F0B58/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688568743/95033EA45132FDAAB36BDE8A1DB6D698E2F61120/",
                 "NormalURL": "",
                 "ColliderURL": "",
                 "Convex": true,
@@ -59284,7 +59300,11 @@
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "XmlUI": ""
+              "XmlUI": "",
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ]
             }
           }
         },
@@ -59337,10 +59357,10 @@
             "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418333649/44F26ADA0FDD6F47AA3609CF310A1B40A3BB6613/",
             "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
             "NormalURL": "",
-            "ColliderURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688659256/F0979E2C16DF05EAFABCFE4B0E7BDAC3100E6E95/",
             "Convex": true,
             "MaterialIndex": 1,
-            "TypeIndex": 0,
+            "TypeIndex": 1,
             "CastShadows": true
           },
           "LuaScript": "",
@@ -59389,8 +59409,8 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomMesh": {
-                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418359059/19D0038AE164F461BF2D95BAE815373FB71FF487/",
-                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688687930/A5BEC3F0022C6373C90C77F1CD08F0A2040F0B58/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688568743/95033EA45132FDAAB36BDE8A1DB6D698E2F61120/",
                 "NormalURL": "",
                 "ColliderURL": "",
                 "Convex": true,
@@ -59400,7 +59420,11 @@
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "XmlUI": ""
+              "XmlUI": "",
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ]
             }
           }
         },
@@ -59453,10 +59477,10 @@
             "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418333649/44F26ADA0FDD6F47AA3609CF310A1B40A3BB6613/",
             "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
             "NormalURL": "",
-            "ColliderURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688659256/F0979E2C16DF05EAFABCFE4B0E7BDAC3100E6E95/",
             "Convex": true,
             "MaterialIndex": 1,
-            "TypeIndex": 0,
+            "TypeIndex": 1,
             "CastShadows": true
           },
           "LuaScript": "",
@@ -59505,8 +59529,8 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomMesh": {
-                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418359059/19D0038AE164F461BF2D95BAE815373FB71FF487/",
-                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688687930/A5BEC3F0022C6373C90C77F1CD08F0A2040F0B58/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688568743/95033EA45132FDAAB36BDE8A1DB6D698E2F61120/",
                 "NormalURL": "",
                 "ColliderURL": "",
                 "Convex": true,
@@ -59516,7 +59540,11 @@
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "XmlUI": ""
+              "XmlUI": "",
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ]
             }
           }
         },
@@ -59569,10 +59597,10 @@
             "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418333649/44F26ADA0FDD6F47AA3609CF310A1B40A3BB6613/",
             "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
             "NormalURL": "",
-            "ColliderURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688659256/F0979E2C16DF05EAFABCFE4B0E7BDAC3100E6E95/",
             "Convex": true,
             "MaterialIndex": 1,
-            "TypeIndex": 0,
+            "TypeIndex": 1,
             "CastShadows": true
           },
           "LuaScript": "",
@@ -59621,8 +59649,8 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomMesh": {
-                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418359059/19D0038AE164F461BF2D95BAE815373FB71FF487/",
-                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688687930/A5BEC3F0022C6373C90C77F1CD08F0A2040F0B58/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688568743/95033EA45132FDAAB36BDE8A1DB6D698E2F61120/",
                 "NormalURL": "",
                 "ColliderURL": "",
                 "Convex": true,
@@ -59632,7 +59660,11 @@
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "XmlUI": ""
+              "XmlUI": "",
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ]
             }
           }
         },
@@ -59685,10 +59717,10 @@
             "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418333649/44F26ADA0FDD6F47AA3609CF310A1B40A3BB6613/",
             "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
             "NormalURL": "",
-            "ColliderURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688659256/F0979E2C16DF05EAFABCFE4B0E7BDAC3100E6E95/",
             "Convex": true,
             "MaterialIndex": 1,
-            "TypeIndex": 0,
+            "TypeIndex": 1,
             "CastShadows": true
           },
           "LuaScript": "",
@@ -59737,8 +59769,8 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomMesh": {
-                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418359059/19D0038AE164F461BF2D95BAE815373FB71FF487/",
-                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688687930/A5BEC3F0022C6373C90C77F1CD08F0A2040F0B58/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688568743/95033EA45132FDAAB36BDE8A1DB6D698E2F61120/",
                 "NormalURL": "",
                 "ColliderURL": "",
                 "Convex": true,
@@ -59748,7 +59780,11 @@
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "XmlUI": ""
+              "XmlUI": "",
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ]
             }
           }
         },
@@ -59801,10 +59837,10 @@
             "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418333649/44F26ADA0FDD6F47AA3609CF310A1B40A3BB6613/",
             "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
             "NormalURL": "",
-            "ColliderURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688659256/F0979E2C16DF05EAFABCFE4B0E7BDAC3100E6E95/",
             "Convex": true,
             "MaterialIndex": 1,
-            "TypeIndex": 0,
+            "TypeIndex": 1,
             "CastShadows": true
           },
           "LuaScript": "",
@@ -59853,8 +59889,8 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomMesh": {
-                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418359059/19D0038AE164F461BF2D95BAE815373FB71FF487/",
-                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688687930/A5BEC3F0022C6373C90C77F1CD08F0A2040F0B58/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688568743/95033EA45132FDAAB36BDE8A1DB6D698E2F61120/",
                 "NormalURL": "",
                 "ColliderURL": "",
                 "Convex": true,
@@ -59864,7 +59900,11 @@
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "XmlUI": ""
+              "XmlUI": "",
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ]
             }
           }
         },
@@ -59917,10 +59957,10 @@
             "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418333649/44F26ADA0FDD6F47AA3609CF310A1B40A3BB6613/",
             "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
             "NormalURL": "",
-            "ColliderURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688659256/F0979E2C16DF05EAFABCFE4B0E7BDAC3100E6E95/",
             "Convex": true,
             "MaterialIndex": 1,
-            "TypeIndex": 0,
+            "TypeIndex": 1,
             "CastShadows": true
           },
           "LuaScript": "",
@@ -59969,8 +60009,8 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomMesh": {
-                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418359059/19D0038AE164F461BF2D95BAE815373FB71FF487/",
-                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688687930/A5BEC3F0022C6373C90C77F1CD08F0A2040F0B58/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688568743/95033EA45132FDAAB36BDE8A1DB6D698E2F61120/",
                 "NormalURL": "",
                 "ColliderURL": "",
                 "Convex": true,
@@ -59980,7 +60020,11 @@
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "XmlUI": ""
+              "XmlUI": "",
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ]
             }
           }
         },
@@ -60033,10 +60077,10 @@
             "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418333649/44F26ADA0FDD6F47AA3609CF310A1B40A3BB6613/",
             "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
             "NormalURL": "",
-            "ColliderURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688659256/F0979E2C16DF05EAFABCFE4B0E7BDAC3100E6E95/",
             "Convex": true,
             "MaterialIndex": 1,
-            "TypeIndex": 0,
+            "TypeIndex": 1,
             "CastShadows": true
           },
           "LuaScript": "",
@@ -60085,8 +60129,8 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomMesh": {
-                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418359059/19D0038AE164F461BF2D95BAE815373FB71FF487/",
-                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688687930/A5BEC3F0022C6373C90C77F1CD08F0A2040F0B58/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688568743/95033EA45132FDAAB36BDE8A1DB6D698E2F61120/",
                 "NormalURL": "",
                 "ColliderURL": "",
                 "Convex": true,
@@ -60096,7 +60140,11 @@
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "XmlUI": ""
+              "XmlUI": "",
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ]
             }
           }
         },
@@ -60149,10 +60197,10 @@
             "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418333649/44F26ADA0FDD6F47AA3609CF310A1B40A3BB6613/",
             "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
             "NormalURL": "",
-            "ColliderURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688659256/F0979E2C16DF05EAFABCFE4B0E7BDAC3100E6E95/",
             "Convex": true,
             "MaterialIndex": 1,
-            "TypeIndex": 0,
+            "TypeIndex": 1,
             "CastShadows": true
           },
           "LuaScript": "",
@@ -60201,8 +60249,8 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomMesh": {
-                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418359059/19D0038AE164F461BF2D95BAE815373FB71FF487/",
-                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688687930/A5BEC3F0022C6373C90C77F1CD08F0A2040F0B58/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688568743/95033EA45132FDAAB36BDE8A1DB6D698E2F61120/",
                 "NormalURL": "",
                 "ColliderURL": "",
                 "Convex": true,
@@ -60212,7 +60260,11 @@
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "XmlUI": ""
+              "XmlUI": "",
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ]
             }
           }
         },
@@ -60265,10 +60317,10 @@
             "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418333649/44F26ADA0FDD6F47AA3609CF310A1B40A3BB6613/",
             "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
             "NormalURL": "",
-            "ColliderURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688659256/F0979E2C16DF05EAFABCFE4B0E7BDAC3100E6E95/",
             "Convex": true,
             "MaterialIndex": 1,
-            "TypeIndex": 0,
+            "TypeIndex": 1,
             "CastShadows": true
           },
           "LuaScript": "",
@@ -60317,8 +60369,8 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomMesh": {
-                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418359059/19D0038AE164F461BF2D95BAE815373FB71FF487/",
-                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688687930/A5BEC3F0022C6373C90C77F1CD08F0A2040F0B58/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688568743/95033EA45132FDAAB36BDE8A1DB6D698E2F61120/",
                 "NormalURL": "",
                 "ColliderURL": "",
                 "Convex": true,
@@ -60328,7 +60380,11 @@
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "XmlUI": ""
+              "XmlUI": "",
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ]
             }
           }
         },
@@ -60381,10 +60437,10 @@
             "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418333649/44F26ADA0FDD6F47AA3609CF310A1B40A3BB6613/",
             "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
             "NormalURL": "",
-            "ColliderURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688659256/F0979E2C16DF05EAFABCFE4B0E7BDAC3100E6E95/",
             "Convex": true,
             "MaterialIndex": 1,
-            "TypeIndex": 0,
+            "TypeIndex": 1,
             "CastShadows": true
           },
           "LuaScript": "",
@@ -60433,8 +60489,8 @@
               "HideWhenFaceDown": false,
               "Hands": false,
               "CustomMesh": {
-                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418359059/19D0038AE164F461BF2D95BAE815373FB71FF487/",
-                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688687930/A5BEC3F0022C6373C90C77F1CD08F0A2040F0B58/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688568743/95033EA45132FDAAB36BDE8A1DB6D698E2F61120/",
                 "NormalURL": "",
                 "ColliderURL": "",
                 "Convex": true,
@@ -60444,7 +60500,11 @@
               },
               "LuaScript": "",
               "LuaScriptState": "",
-              "XmlUI": ""
+              "XmlUI": "",
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ]
             }
           }
         }
