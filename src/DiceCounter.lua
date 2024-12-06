@@ -87,7 +87,7 @@ local function getAllDice()
     local objects = getAllObjects()
     
     for _, obj in ipairs(objects) do
-        if obj.tag == "Dice" then
+        if obj.tag == "Dice" and obj.resting then
             table.insert(dice, obj)
         end
     end
