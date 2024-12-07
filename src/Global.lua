@@ -1251,6 +1251,7 @@ function setup_custom_game()
     set_game_in_progress(p)
 
     BaseGame.base_exclusive_components_visibility(true)
+    BaseGame.setupOutOfPlayForCustom()
 end
 
 ----------------------------------------------------

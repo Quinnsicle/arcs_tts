@@ -120,7 +120,7 @@ local customSetup_params = {
     index = 6,
     function_owner = self,
     click_function = "custom_setup",
-    label = "Custom Setup",
+    label = "Manual Setup",
     tooltip = "",
     position = {0, 0.5, 1.15},
     width = 820,
@@ -200,14 +200,12 @@ function setup_base_game()
     end
 
     if (base_setup_success) then
-        -- TODO Delete self
         destroyObject(self)
     end
 
 end
 
 function setup_leaders()
-
     if BaseGame.setup_leaders() == false then
         broadcastToAll("\nPlace chosen leader near player board to continue.", {
             r = 1,
@@ -217,7 +215,6 @@ function setup_leaders()
         return
     end
 
-    -- TODO Delete self
     destroyObject(self)
 end
 
@@ -226,7 +223,6 @@ function setup_campaign()
         Global.getVar("with_more_to_explore"))
 
     if (campaign_setup_success) then
-        -- TODO Delete self
         destroyObject(self)
     end
 end
