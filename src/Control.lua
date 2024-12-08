@@ -161,18 +161,24 @@ function end_round()
         local surpassing = ActionCards.get_surpassing_card()
         if not surpassing then
             broadcastToAll("No surpassing card, ".. initiative_player .. " keeps the initiative", initiative_player)
-        else
-            -- Assign initiative to player with highest surpassing card
-            for _, p in ipairs(all_players) do
-                if p.last_action_card and
-                   p.last_action_card.type == surpassing.type and
-                   p.last_action_card.number == surpassing.number then
-                    Initiative.unseize()
-                    Initiative.take(p.color, true)
-                    broadcastToAll(p.color .. " has surpassed and takes the initiative", p.color)
-                    break
-                end
+            return
+        end
+
+        for _, p in ipairs(all_players) do
+            if not p.last_action_card then goto continue end
+
+            if string.find(surpassing.type, p.last_action_card.type) and
+               p.last_action_card.number == surpassing.number then
+                Initiative.unseize()
+                Initiative.take(p.color, true)
+                broadcastToAll(string.format(
+                    "%s has surpassed with %s %d and takes the initiative",
+                    p.color, surpassing.type, surpassing.number
+                ), p.color)
+                break
             end
+
+            ::continue::
         end
     end
 
