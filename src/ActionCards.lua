@@ -226,8 +226,7 @@ function ActionCards.get_info(card)
     local card_number = tonumber(string.sub(card.getDescription(), -2, -1))
 
     if (card_type == "Faithful") then
-        card_type = card.getRotation().z < 180 and "Faithful Zeal" or
-                        "Faithful Wisdom"
+        card_type = card.getRotation().y < 180 and "Faithful Zeal" or "Faithful Wisdom"
     end
 
     return {
@@ -271,6 +270,10 @@ function ActionCards.get_surpassing_card()
 
     for _, v in ipairs(played_zone.getObjects()) do
         if (v.guid == lead.guid) then
+            goto continue
+        end
+
+        if v.getName() ~= "Action Card" then
             goto continue
         end
 
