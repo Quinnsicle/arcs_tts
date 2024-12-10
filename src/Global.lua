@@ -214,7 +214,6 @@ function onPlayerAction(player, action, targets)
     for _, obj in ipairs(targets) do
         if obj.hasTag("Ship") then
             obj.setState(obj.getStateId() == 1 and 2 or 1)
-            return false -- Only prevent default behavior for ships
         end
     end
 end
