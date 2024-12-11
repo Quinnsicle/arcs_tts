@@ -92,7 +92,7 @@ function Campaign.setup(with_leaders, with_ll_expansion)
 
     local active_player_colors = {}
     for _, p in pairs(active_players) do
-        ArcsPlayer.setup(p, false)
+        ArcsPlayer.setup(p, true)
         table.insert(active_player_colors, p.color)
     end
 
