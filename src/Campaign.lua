@@ -82,13 +82,15 @@ function Campaign.components_visibility(is_visible)
     end
 end
 
-function Campaign.setup(with_leaders, with_ll_expansion)
+function Campaign.setup(with_leaders, with_ll_expansion, with_miniatures)
 
     local active_players = Global.call("getOrderedPlayers")
     Global.setVar("active_players", active_players)
     if (#active_players < 2 or #active_players > 4) then
         return false
     end
+
+    BaseGame.setup_or_destroy_miniatures(with_miniatures)
 
     local active_player_colors = {}
     for _, p in pairs(active_players) do

@@ -15,6 +15,7 @@ debug_player_count = 2
 with_more_to_explore = false
 with_leaders = false
 is_face_up_discard_active = false
+with_miniatures = false
 
 oop_components = {
     {
@@ -1240,6 +1241,8 @@ end
 
 function setup_custom_game()
 
+    BaseGame.destroy_grey_setup_menu_objects()
+
     for _, v in ipairs({"Red", "White", "Yellow", "Teal"}) do
         local arcs_player = ArcsPlayer:new{
             color = v
@@ -1250,12 +1253,16 @@ function setup_custom_game()
         ArcsPlayer.components_visibility(v.color, true, true)
     end
 
+    with_miniatures = Global.getVar("with_miniatures")
+    BaseGame.setup_or_destroy_miniatures(with_miniatures)
+
     local p = {
         is_campaign = true,
         is_4p = true,
         leaders_and_lore = true,
         leaders_and_lore_expansion = true,
         with_faceup_discard = true,
+        with_miniatures = with_miniatures,
         players = {"Red", "White", "Yellow", "Teal"}
     }
     set_game_in_progress(p)
@@ -1340,7 +1347,6 @@ function onLoad()
             end
         end
 
-        Counters.setup()
     elseif debug then
         Campaign.components_visibility(true)
         BaseGame.components_visibility({

@@ -203,13 +203,15 @@ function BaseGame.components_visibility(params)
     end
 end
 
-function BaseGame.setup(with_leaders, with_ll_expansion)
+function BaseGame.setup(with_leaders, with_ll_expansion, with_miniatures)
 
     local active_players = Global.call("getOrderedPlayers")
     Global.setVar("active_players", active_players)
     if (#active_players < 2 or #active_players > 4) then
         return false
     end
+
+    BaseGame.setup_or_destroy_miniatures(with_miniatures)
 
     local active_player_colors = {}
     for _, p in pairs(active_players) do
@@ -692,6 +694,97 @@ function BaseGame.setupPlayers(ordered_players, setup_card)
         player:take_resource(starting_resources[1], 1)
         player:take_resource(starting_resources[2], 2)
 
+    end
+end
+
+function BaseGame.miniatures_visibility(show)
+    local DISPLAY_HEIGHT = 7
+    
+    local function move_object(obj, shouldRaise)
+        if obj and not obj.isDestroyed() then
+            local pos = obj.getPosition()
+            local newY = pos.y + (shouldRaise and DISPLAY_HEIGHT or -DISPLAY_HEIGHT)
+            local newPos = {pos.x, newY, pos.z}
+            obj.setPosition(newPos)
+            obj.setLock(not shouldRaise)  -- Only lock when hiding (not showing) the object
+        end
+    end
+
+    local miniatures = Global.getVar("setup_miniatures_GUIDs")
+    if miniatures then
+        for _, guid in pairs(miniatures) do
+            local obj = getObjectFromGUID(guid)
+            move_object(obj, show)
+        end
+    end
+
+    local meeples = Global.getVar("setup_meeples_GUIDs")
+    if meeples then
+        for _, guid in pairs(meeples) do
+            local obj = getObjectFromGUID(guid)
+            move_object(obj, not show)
+        end
+    end
+end
+
+function BaseGame.destroy_grey_setup_menu_objects()
+    local grey_miniatures = Global.getVar("setup_miniatures_GUIDs")
+    local grey_meeples = Global.getVar("setup_meeples_GUIDs")
+    local grey_unchanged_meeples = Global.getVar("setup_unchanged_meeples_GUIDs")
+    local function destroy_objects(guid_table)
+        if guid_table then
+            for _, guid in pairs(guid_table) do
+                local obj = getObjectFromGUID(guid)
+                if obj then obj.destroy() end
+            end
+        end
+    end
+
+    destroy_objects(grey_miniatures)
+    destroy_objects(grey_meeples)
+    destroy_objects(grey_unchanged_meeples)
+end
+
+function BaseGame.destroy_unused_miniature_ship_supplies()
+    local player_colors = {"White", "Red", "Yellow", "Teal"}
+    for _, color in ipairs(player_colors) do
+        local player_pieces_guids = Global.getVar("player_pieces_GUIDs")
+        local ship_bag = getObjectFromGUID(player_pieces_guids[color]["mini_ships"])
+        if ship_bag then
+            ship_bag.destroy()
+        end
+    end
+end
+
+function BaseGame.upgrade_ships_to_miniatures()
+    local player_pieces_guids = Global.getVar("player_pieces_GUIDs")
+    local colors = {"White", "Red", "Yellow", "Teal"}
+
+    for _, color in ipairs(colors) do
+        local pieces = player_pieces_guids[color]
+        local ship_bag = getObjectFromGUID(pieces.ships)
+
+        if ship_bag then
+            local original_pos = ship_bag.getPosition()
+            ship_bag.destroy()
+            pieces.ships = pieces.mini_ships
+            
+            local mini_ship_bag = getObjectFromGUID(pieces.mini_ships)
+            if mini_ship_bag then
+                mini_ship_bag.setPosition(original_pos)
+            end
+        end
+    end
+
+    Global.setVar("player_pieces_GUIDs", player_pieces_guids)
+end
+
+function BaseGame.setup_or_destroy_miniatures(with_miniatures)
+    BaseGame.destroy_grey_setup_menu_objects()
+    if with_miniatures then
+        BaseGame.upgrade_ships_to_miniatures()
+    else
+        BaseGame.destroy_unused_miniature_ship_supplies()
     end
 end
 
