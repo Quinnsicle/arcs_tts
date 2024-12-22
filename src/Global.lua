@@ -19,7 +19,7 @@ is_face_up_discard_active = false
 oop_components = {
     {
         Sector = {
-            pos = {-0.17, 0.97, -1.04},
+            pos = {-0.16, 0.97, -1.02},
             rot = {0, 180, -0.01},
             scale = {2.48, 1, 2.48},
             img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769502/1D85B9468BB538D788FCF7576A05606918CD0DD4/"
@@ -32,7 +32,7 @@ oop_components = {
         }
     }, {
         Sector = {
-            pos = {-0.51, 0.97, -0.66},
+            pos = {-0.50, 0.97, -0.64},
             rot = {0, 180, -0.01},
             scale = {2.48, 1, 2.48},
             img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769605/A40A0C79B27F1F1C45E0570E46BA8A7B253F356E/"
@@ -45,7 +45,7 @@ oop_components = {
         }
     }, {
         Sector = {
-            pos = {-0.47, 0.97, 0.73},
+            pos = {-0.45, 0.97, 0.73},
             rot = {0, 179.99, -0.01},
             scale = {2.36, 1, 2.36},
             img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769710/C408A11914F7F4DEA83686851730DDF10A8BD5D4/"
@@ -58,8 +58,8 @@ oop_components = {
         }
     }, {
         Sector = {
-            pos = {0.17, 0.97, 0.91},
-            rot = {0, 180, -0.01},
+            pos = {0.17, 0.97, 0.90},
+            rot = {0, 179, -0.01},
             scale = {2.54, 1, 2.54},
             img = "http://cloud-3.steamusercontent.com/ugc/2313225941445769816/0AA42154550040133E7D6740F85CD487D5F6967B/"
         },
@@ -84,8 +84,8 @@ oop_components = {
         }
     }, {
         Sector = {
-            pos = {0.46, 0.97, -0.85},
-            rot = {0, 179.99, -0.01},
+            pos = {0.46, 0.97, -0.82},
+            rot = {0, 180.00, -0.01},
             scale = {2.29, 1, 2.29},
             img = "http://cloud-3.steamusercontent.com/ugc/2313225941445770362/76677A077FC1D6CD3672DCC036646ABFD2881F62/"
         },
