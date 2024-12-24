@@ -5,7 +5,7 @@ local Camera = {}
 -- note that these onClick functions are used by wrapper functions in Global.lua
 function onCourtClick(player, value, id)
     Player[player.color].lookAt({
-        position = {x=22.26, y=1.49, z=0.0},
+        position = {x=22.26, y=1.49, z=-1.65},
         pitch = 70,
         yaw = 90,
         distance = 10
@@ -23,7 +23,7 @@ end
 
 function onDiceBoardClick(player, value, id)
     Player[player.color].lookAt({
-        position = {x=-28.0, y=1.07, z=-15.22},
+        position = {x=-33.2, y=1.07, z=-15.22},
         pitch = 80,
         yaw = 0,
         distance = 18
@@ -35,7 +35,7 @@ function onMapClick(player, value, id)
         position = {x=2.79, y=0.98, z=-1.35},
         pitch = 70,
         yaw = 0,
-        distance = 37
+        distance = 35
     })
 end
 

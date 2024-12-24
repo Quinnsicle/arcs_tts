@@ -17,8 +17,7 @@
   "Tags": [],
   "Gravity": 0.5,
   "PlayArea": 0.5,
-  "Table": "Table_Custom",
-  "TableURL": "https://steamusercontent-a.akamaihd.net/ugc/2062140006623366863/E5549FDAB66F8038937B5F389CA1BE50F2B9E20F/",
+  "Table": "Table_None",
   "Sky": "Sky_Field",
   "SkyURL": "https://steamusercontent-a.akamaihd.net/ugc/2128570108363703240/7C119AE30B36149F36C42DFD03F43566BD5E18EC/",
   "Note": "",
@@ -3754,6 +3753,75 @@
     }
   ],
   "ObjectStates": [
+    {
+      "GUID": "0b4885",
+      "Name": "Custom_Model",
+      "Transform": {
+        "posX": 2.5,
+        "posY": -52.15,
+        "posZ": 0.0,
+        "rotX": 1.00185025E-05,
+        "rotY": 90.0,
+        "rotZ": 0.0,
+        "scaleX": 1.14999986,
+        "scaleY": 1.14999986,
+        "scaleZ": 1.14999986
+      },
+      "Nickname": "Custom Arcs Table",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0
+      },
+      "Tags": [
+        "lock",
+        "Noninteractable"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": false,
+      "Snap": false,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": false,
+      "Autoraise": false,
+      "Sticky": false,
+      "Tooltip": false,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomMesh": {
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15297536227112993/0DC71D40D9BD430CB9838B0F2FD7B0F95ABAFD40/",
+        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15297536227112862/B09A1DE0302BFED6AFF653116F56B110B73F024B/",
+        "NormalURL": "https://steamusercontent-a.akamaihd.net/ugc/15297536226320524/C1202F7D9D782203F6BE104D920B9BAEE859A19F/",
+        "ColliderURL": "",
+        "Convex": true,
+        "MaterialIndex": 1,
+        "TypeIndex": 0,
+        "CustomShader": {
+          "SpecularColor": {
+            "r": 0.0,
+            "g": 0.0,
+            "b": 0.0
+          },
+          "SpecularIntensity": 0.0,
+          "SpecularSharpness": 7.0,
+          "FresnelStrength": 0.0
+        },
+        "CastShadows": false
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
     {
       "GUID": "4c96ac",
       "Name": "BlockSquare",
@@ -58640,7 +58708,7 @@
       "Name": "ScriptingTrigger",
       "Transform": {
         "posX": 22.0,
-        "posY": 1.6,
+        "posY": 1.8,
         "posZ": -6.0,
         "rotX": 0.0,
         "rotY": 0.0,
@@ -60608,7 +60676,7 @@
       "Name": "CardCustom",
       "Transform": {
         "posX": -25.4655476,
-        "posY": -2.0,
+        "posY": 1.5,
         "posZ": -3.267336,
         "rotX": 1.2639882E-08,
         "rotY": 180.000153,
@@ -60640,7 +60708,7 @@
       "Snap": true,
       "IgnoreFoW": false,
       "MeasureMovement": false,
-      "DragSelectable": true,
+      "DragSelectable": false,
       "Autoraise": true,
       "Sticky": true,
       "Tooltip": true,
@@ -70610,12 +70678,12 @@
       "GUID": "a8e929",
       "Name": "Deck",
       "Transform": {
-        "posX": -19.9077148,
-        "posY": -27.7312012,
-        "posZ": -2.75794578,
-        "rotX": -1.84683145E-07,
-        "rotY": 180.024216,
-        "rotZ": 4.17928135E-07,
+        "posX": -15.91,
+        "posY": 1.13,
+        "posZ": 3.62,
+        "rotX": 0,
+        "rotY": 180,
+        "rotZ": 180,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
@@ -70643,7 +70711,7 @@
       "Snap": false,
       "IgnoreFoW": false,
       "MeasureMovement": false,
-      "DragSelectable": true,
+      "DragSelectable": false,
       "Autoraise": false,
       "Sticky": true,
       "Tooltip": true,
