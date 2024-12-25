@@ -54,8 +54,8 @@ local Campaign = {
         flagships = "ea53d9",
         rules = "f1dd49",
         intermission_help = "b25b55",
-        empire_help = "dad146"
-
+        empire_help = "dad146",
+        imperial_council_backer = "65a823"
     }
 }
 

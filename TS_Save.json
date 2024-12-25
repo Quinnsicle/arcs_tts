@@ -80691,6 +80691,192 @@
       "LuaScript": "",
       "LuaScriptState": "",
       "XmlUI": ""
+    },
+    {
+      "GUID": "2840db",
+      "Name": "CardCustom",
+      "Transform": {
+        "posX": 22.0000172,
+        "posY": 0.973605335,
+        "posZ": -8.66312,
+        "rotX": 0,
+        "rotY": 270,
+        "rotZ": 0,
+        "scaleX": 1.15163875,
+        "scaleY": 1.0,
+        "scaleZ": 1.15163875
+      },
+      "Nickname": "Court Discard Backer",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Tags": [
+        "Lock",
+        "Noninteractable"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": false,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": false,
+      "CardID": 48200,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "482": {
+          "FaceURL": "https://steamusercontent-a.akamaihd.net/ugc/15297536216531552/3AA8B9B0F6DF65247F2D00522E589D91AADF2952/",
+          "BackURL": "https://steamusercontent-a.akamaihd.net/ugc/15297536216531552/3AA8B9B0F6DF65247F2D00522E589D91AADF2952/",
+          "NumWidth": 1,
+          "NumHeight": 1,
+          "BackIsHidden": true,
+          "UniqueBack": false,
+          "Type": 1
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    {
+      "GUID": "93690a",
+      "Name": "CardCustom",
+      "Transform": {
+        "posX": 22.0,
+        "posY": 0.9736052,
+        "posZ": -6.0,
+        "rotX": -5.46019834E-08,
+        "rotY": 270.0078,
+        "rotZ": -3.0866903E-07,
+        "scaleX": 1.15163875,
+        "scaleY": 1.0,
+        "scaleZ": 1.15163875
+      },
+      "Nickname": "Court Deck Backer",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Tags": [
+        "Lock",
+        "Noninteractable"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": false,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": false,
+      "CardID": 48300,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "483": {
+          "FaceURL": "https://steamusercontent-a.akamaihd.net/ugc/15297536216531544/D8CEEF52D953D859AF1AE25C2580BC1FCB6CA08A/",
+          "BackURL": "https://steamusercontent-a.akamaihd.net/ugc/15297536216531544/D8CEEF52D953D859AF1AE25C2580BC1FCB6CA08A/",
+          "NumWidth": 1,
+          "NumHeight": 1,
+          "BackIsHidden": true,
+          "UniqueBack": false,
+          "Type": 1
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    {
+      "GUID": "65a823",
+      "Name": "CardCustom",
+      "Transform": {
+        "posX": 22.0,
+        "posY": 0.973604739,
+        "posZ": 7.4591403,
+        "rotX": -5.80544565E-06,
+        "rotY": 270.0078,
+        "rotZ": -6.810877E-06,
+        "scaleX": 1.15,
+        "scaleY": 1.0,
+        "scaleZ": 1.15
+      },
+      "Nickname": "Imperial Council Backer",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.713235259,
+        "g": 0.713235259,
+        "b": 0.713235259
+      },
+      "Tags": [
+        "Lock",
+        "Noninteractable"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": false,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": true,
+      "Hands": false,
+      "CardID": 48400,
+      "SidewaysCard": false,
+      "CustomDeck": {
+        "484": {
+          "FaceURL": "https://steamusercontent-a.akamaihd.net/ugc/15297536216531577/1CB9B9C59240EEF6120BDFB2F8CCF3FF1C663D97/",
+          "BackURL": "https://steamusercontent-a.akamaihd.net/ugc/15297536216531577/1CB9B9C59240EEF6120BDFB2F8CCF3FF1C663D97/",
+          "NumWidth": 1,
+          "NumHeight": 1,
+          "BackIsHidden": true,
+          "UniqueBack": false,
+          "Type": 1
+        }
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
     }
   ]
 }
