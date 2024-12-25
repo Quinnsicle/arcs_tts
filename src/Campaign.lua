@@ -213,7 +213,7 @@ function Campaign.setupImperialCouncil()
 
     local imperial_council = getObjectFromGUID(Global.getVar(
         "imperial_council_GUID"))
-    imperial_council.setPositionSmooth({22, 1, -8.40})
+    imperial_council.setPositionSmooth({22, 1, 7.46})
     imperial_council.setRotation({0, 270, 0})
 
 end

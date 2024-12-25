@@ -357,14 +357,14 @@ function dealGuildCards(qty)
 
     court_deck.randomize()
     local court_deck_pos = court_deck.getPosition()
-    court_deck_pos_z = court_deck_pos.z - 0.35
+    court_deck_pos_z = court_deck_pos.z + 0.35
 
     for i = 1, qty do
         court_deck.takeObject({
             flip = true,
             position = {
                 court_deck_pos.x, court_deck_pos.y,
-                court_deck_pos_z - (i * 2.41)
+                court_deck_pos_z - (i * -2.41)
             }
         })
     end
