@@ -124,15 +124,14 @@ function ActionCards.check_deck()
 end
 
 function ActionCards.check_hands()
-    local has_hand = false
-    for _, player in pairs(Player.getPlayers()) do
-        if #player.getHandObjects() > 0 then
-            broadcastToAll("" .. player.color .. " still has cards in hand!",
-                player.color)
-            has_hand = true
+    local active_players = Global.getVar("active_players")
+    for _, player in ipairs(active_players) do
+        if #Player[player.color].getHandObjects() > 0 then
+            broadcastToAll("" .. player.color .. " still has cards in hand!", player.color)
+            return true
         end
     end
-    return has_hand
+    return false
 end
 
 function ActionCards.clear_played()
