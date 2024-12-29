@@ -39,7 +39,9 @@ local BaseGame = {
             fuel_stack = "ed2820",
             material_placeholder = "eb1cba",
             material_stack = "57c2c6",
-            initiative = "b3b3d0"
+            initiative = "b3b3d0",
+            court_discard_backer = "2840db",
+            court_deck_backer = "93690a"
         }
     }
 }

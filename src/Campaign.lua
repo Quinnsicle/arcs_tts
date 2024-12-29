@@ -54,8 +54,8 @@ local Campaign = {
         flagships = "ea53d9",
         rules = "f1dd49",
         intermission_help = "b25b55",
-        empire_help = "dad146"
-
+        empire_help = "dad146",
+        imperial_council_backer = "65a823"
     }
 }
 
@@ -213,7 +213,7 @@ function Campaign.setupImperialCouncil()
 
     local imperial_council = getObjectFromGUID(Global.getVar(
         "imperial_council_GUID"))
-    imperial_council.setPositionSmooth({22, 1, -8.40})
+    imperial_council.setPositionSmooth({22, 1, 7.46})
     imperial_council.setRotation({0, 270, 0})
 
 end
