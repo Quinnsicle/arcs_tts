@@ -272,20 +272,24 @@ function DiceBoard.CreatePositioningGrid(parems)
     local grid = {}
     local pos_y = parems.area.y
 
-    for r = 1, r_ct do
+    -- row spawn order (center to edge)
+    local row_order = {3, 4, 2, 5, 1, 6}
+
+    for _, r in ipairs(row_order) do
         local pos_x = (r_space * r - r_space / 2) - r_shift
         for c = 1, c_ct do
             local pos_z = (c_space * c - c_space / 2) - c_shift
             table.insert(grid, {
                 x = pos_x,
                 y = pos_y,
-                z = pos_z
+                z = pos_z,
+                row = r,
+                col = c
             })
         end
     end
 
     return grid
-
 end
 
 -- Begin Object Code --

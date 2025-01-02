@@ -222,32 +222,20 @@ end
 function Campaign.setup_imperial_edicts(player_count)
 
     local laws = getObjectFromGUID(Global.getVar("laws_GUID"))
-
-    laws.setPositionSmooth({34, 1, 5})
-    laws.setRotation({0, 270, 0})
-
-    local next_pos_z = 5 - 2.4
-    local next_pos = {
-        x = 34,
-        y = 1,
-        z = next_pos_z
-    }
+    laws.setPositionSmooth({31.19, 0.97, 3.50})
+    laws.setRotation({0, 180, 0})
+    laws.setScale({2.21, 0.2, 3.46})
 
     if (player_count == 2) then
         local guild_envoys_depart = getObjectFromGUID(Global.getVar(
             "guild_envoys_depart_GUID"))
-        guild_envoys_depart.setRotation({0, 270, 0})
-        guild_envoys_depart.setPositionSmooth(next_pos)
-        next_pos_z = next_pos_z - 2.4
-        next_pos.z = next_pos_z
+        guild_envoys_depart.setRotation({0, 180, 0})
+        guild_envoys_depart.setPositionSmooth({33.54, 1, 7.0})
     end
 
     local govern = getObjectFromGUID(Global.getVar("govern_GUID"))
-    govern.setRotation({0, 270, 0})
-    govern.setPositionSmooth(next_pos)
-    next_pos_z = next_pos_z - 2.4
-    next_pos.z = next_pos_z
-
+    govern.setRotation({0, 180, 0})
+    govern.setPositionSmooth({31.19, 1, 7.0})
     govern.randomize()
 
 end
