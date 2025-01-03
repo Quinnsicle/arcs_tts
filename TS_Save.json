@@ -1101,9 +1101,9 @@
         "z": -1.84032917
       },
       "Rotation": {
-        "x": 0.1783419,
+        "x": 0.178341925,
         "y": 90.050766,
-        "z": 0.0166033171
+        "z": 0.01660333
       },
       "Tags": [
         "Resource"
@@ -1206,7 +1206,7 @@
         "z": -0.6706625
       },
       "Rotation": {
-        "x": 0.1511474,
+        "x": 0.151147425,
         "y": 89.61195,
         "z": 0.208043113
       },
@@ -1221,8 +1221,8 @@
         "z": 1.89964664
       },
       "Rotation": {
-        "x": 0.107545018,
-        "y": 89.8084946,
+        "x": 0.1075448,
+        "y": 89.8085,
         "z": 5.852548
       },
       "Tags": [
@@ -1238,7 +1238,7 @@
       "Rotation": {
         "x": 0.229890272,
         "y": 89.48307,
-        "z": 0.145285726
+        "z": 0.145285711
       },
       "Tags": [
         "Resource"
@@ -1404,7 +1404,7 @@
         "z": -21.20066
       },
       "Rotation": {
-        "x": -5.81536774E-08,
+        "x": -5.815367E-08,
         "y": 179.801285,
         "z": 180.0
       }
@@ -1440,7 +1440,7 @@
         "z": -21.2006588
       },
       "Rotation": {
-        "x": -3.27627276E-08,
+        "x": -3.276273E-08,
         "y": 180.317764,
         "z": 180.0
       }
@@ -1509,7 +1509,7 @@
         "z": 13.3863792
       },
       "Rotation": {
-        "x": -1.17123712E-07,
+        "x": -1.17123726E-07,
         "y": 180.0165,
         "z": 180.0
       }
@@ -1593,7 +1593,7 @@
         "z": 10.1999407
       },
       "Rotation": {
-        "x": -3.723391E-07,
+        "x": -3.72339116E-07,
         "y": 180.026,
         "z": 180.0
       }
@@ -1665,7 +1665,7 @@
         "z": 10.2018433
       },
       "Rotation": {
-        "x": 4.41946781E-08,
+        "x": 4.419468E-08,
         "y": 180.010223,
         "z": 180.0
       }
@@ -1761,7 +1761,7 @@
         "z": 10.20041
       },
       "Rotation": {
-        "x": -2.09402884E-07,
+        "x": -2.094029E-07,
         "y": 180.026,
         "z": 180.0
       }
@@ -1833,7 +1833,7 @@
         "z": 10.20041
       },
       "Rotation": {
-        "x": 5.220753E-08,
+        "x": 5.22075325E-08,
         "y": 180.010223,
         "z": 180.0
       }
@@ -1971,7 +1971,7 @@
         "z": -18.0059586
       },
       "Rotation": {
-        "x": 3.87592877E-07,
+        "x": 3.875929E-07,
         "y": 180.011932,
         "z": 180.0
       }
@@ -1995,7 +1995,7 @@
         "z": -21.2007561
       },
       "Rotation": {
-        "x": -3.898731E-07,
+        "x": -3.89873122E-07,
         "y": 180.023529,
         "z": 180.0
       }
@@ -2183,7 +2183,7 @@
         "z": -3.24
       },
       "Rotation": {
-        "x": -4.44565359E-07,
+        "x": -4.44565416E-07,
         "y": 270.0,
         "z": -2.87368636E-07
       },
@@ -2228,24 +2228,9 @@
         "z": 3.99
       },
       "Rotation": {
-        "x": -1.47208368E-07,
+        "x": -1.472084E-07,
         "y": 270.0,
         "z": 2.14739686E-07
-      },
-      "Tags": [
-        "Court"
-      ]
-    },
-    {
-      "Position": {
-        "x": 22.0,
-        "y": 0.9611349,
-        "z": -8.72972
-      },
-      "Rotation": {
-        "x": 2.852399E-08,
-        "y": 270.0,
-        "z": -7.074041E-08
       },
       "Tags": [
         "Court"
@@ -2425,7 +2410,7 @@
       "Rotation": {
         "x": 3.77265178E-06,
         "y": 179.984833,
-        "z": 2.557158E-07
+        "z": 2.55715833E-07
       },
       "Tags": [
         "Agent"
@@ -2515,7 +2500,7 @@
       "Rotation": {
         "x": -6.125646E-06,
         "y": 179.990875,
-        "z": -4.30560567E-06
+        "z": -4.305606E-06
       },
       "Tags": [
         "Agent"
@@ -2620,7 +2605,7 @@
       "Rotation": {
         "x": -8.302475E-06,
         "y": 179.984818,
-        "z": -1.4683701E-05
+        "z": -1.46837028E-05
       },
       "Tags": [
         "Agent"
@@ -2798,9 +2783,9 @@
         "z": 0.7755409
       },
       "Rotation": {
-        "x": -8.987414E-06,
+        "x": -8.987415E-06,
         "y": 179.984833,
-        "z": 3.118359E-05
+        "z": 3.11835938E-05
       },
       "Tags": [
         "Agent"
@@ -3100,7 +3085,7 @@
       "Rotation": {
         "x": -1.0114959E-05,
         "y": 179.986862,
-        "z": 2.53017834E-06
+        "z": 2.53017856E-06
       },
       "Tags": [
         "Agent"
@@ -3218,7 +3203,7 @@
         "z": 4.456005
       },
       "Rotation": {
-        "x": 9.25869244E-07,
+        "x": 9.25869358E-07,
         "y": 180.014526,
         "z": -3.77967444E-05
       },
@@ -3278,7 +3263,7 @@
         "z": 4.449835
       },
       "Rotation": {
-        "x": 3.43081638E-06,
+        "x": 3.43081683E-06,
         "y": 180.005737,
         "z": -1.8238253E-06
       },
@@ -3400,7 +3385,7 @@
       "Rotation": {
         "x": 1.23668706E-05,
         "y": 180.007187,
-        "z": -1.78606715E-05
+        "z": -1.78606733E-05
       },
       "Tags": [
         "Agent"
@@ -3413,7 +3398,7 @@
         "z": 6.692798
       },
       "Rotation": {
-        "x": 2.6836522E-05,
+        "x": 2.68365238E-05,
         "y": 179.984833,
         "z": -2.98424879E-06
       },
@@ -3490,7 +3475,7 @@
       "Rotation": {
         "x": -5.59442448E-08,
         "y": 180.014526,
-        "z": -1.55259331E-05
+        "z": -1.55259349E-05
       },
       "Tags": [
         "Agent"
@@ -3768,7 +3753,7 @@
       "Rotation": {
         "x": 1.54477129E-06,
         "y": 180.015671,
-        "z": 7.53819131E-06
+        "z": 7.53819177E-06
       },
       "Tags": [
         "Campaign Only",
@@ -3856,7 +3841,7 @@
         "z": 3.500001
       },
       "Rotation": {
-        "x": 1.58618411E-06,
+        "x": 1.58618423E-06,
         "y": 180.01561,
         "z": 7.607242E-06
       },
@@ -4099,6 +4084,21 @@
         "Edict",
         "Law",
         "Doctrine"
+      ]
+    },
+    {
+      "Position": {
+        "x": 21.9949055,
+        "y": 1.01360488,
+        "z": -8.67229
+      },
+      "Rotation": {
+        "x": -1.8734637E-08,
+        "y": 270.0,
+        "z": 180.0
+      },
+      "Tags": [
+        "Court"
       ]
     }
   ],
@@ -59067,7 +59067,7 @@
         "scaleY": 1.27681828,
         "scaleZ": 2.294914
       },
-      "Nickname": "",
+      "Nickname": "Court Deck Zone",
       "Description": "",
       "GMNotes": "",
       "AltLookAngle": {
@@ -59096,6 +59096,52 @@
       "HideWhenFaceDown": false,
       "Hands": false,
       "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    {
+      "GUID": "7a33fa",
+      "Name": "ScriptingTrigger",
+      "Transform": {
+        "posX": 22.0,
+        "posY": 0.8,
+        "posZ": -8.68,
+        "rotX": 0.0,
+        "rotY": 0.0,
+        "rotZ": 0.0,
+        "scaleX": 3.22985268,
+        "scaleY": 1.7681828,
+        "scaleZ": 2.294914
+      },
+      "Nickname": "Court Discard Zone",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 0.509803951
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "LuaScript": "-- Bundled by luabundle {\"rootModuleName\":\"Court Discard Zone.7a33fa.lua\",\"version\":\"1.6.0\"}\nlocal __bundle_require, __bundle_loaded, __bundle_register, __bundle_modules = (function(superRequire)\n\tlocal loadingPlaceholder = {[{}] = true}\n\n\tlocal register\n\tlocal modules = {}\n\n\tlocal require\n\tlocal loaded = {}\n\n\tregister = function(name, body)\n\t\tif not modules[name] then\n\t\t\tmodules[name] = body\n\t\tend\n\tend\n\n\trequire = function(name)\n\t\tlocal loadedModule = loaded[name]\n\n\t\tif loadedModule then\n\t\t\tif loadedModule == loadingPlaceholder then\n\t\t\t\treturn nil\n\t\t\tend\n\t\telse\n\t\t\tif not modules[name] then\n\t\t\t\tif not superRequire then\n\t\t\t\t\tlocal identifier = type(name) == 'string' and '\\\"' .. name .. '\\\"' or tostring(name)\n\t\t\t\t\terror('Tried to require ' .. identifier .. ', but no such module has been registered')\n\t\t\t\telse\n\t\t\t\t\treturn superRequire(name)\n\t\t\t\tend\n\t\t\tend\n\n\t\t\tloaded[name] = loadingPlaceholder\n\t\t\tloadedModule = modules[name](require, loaded, register, modules)\n\t\t\tloaded[name] = loadedModule\n\t\tend\n\n\t\treturn loadedModule\n\tend\n\n\treturn require, loaded, register, modules\nend)(nil)\n__bundle_register(\"Court Discard Zone.7a33fa.lua\", function(require, _LOADED, __bundle_register, __bundle_modules)\nrequire(\"src/CourtDiscard\")\nend)\n__bundle_register(\"src/CourtDiscard\", function(require, _LOADED, __bundle_register, __bundle_modules)\nfunction onObjectEnterZone(zone, object)\r\n    if zone == self then\r\n        print(\"Object entered: \" .. object.getName())\r\n        if not object.hasTag(\"Court\") then return end\r\n        \r\n        -- Find and update tags on any deck objects in the zone\r\n        for _, obj in ipairs(zone.getObjects()) do\r\n            if obj.type == \"Deck\" and obj.hasTag(\"Court\") then\r\n                obj.setTags({\"Court\"})\r\n            end\r\n        end\r\n    end\r\nend\nend)\nreturn __bundle_require(\"Court Discard Zone.7a33fa.lua\")",
       "LuaScriptState": "",
       "XmlUI": ""
     },
@@ -73874,7 +73920,7 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Guild",
+            "Vox",
             "Court"
           ],
           "LayoutGroupSortIndex": 0,

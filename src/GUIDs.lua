@@ -18,6 +18,7 @@ zero_marker_GUID = "0289cb"
 ambition_marker_GUIDs = {"c9e0ee", "a9b02a", "b0b4d0"}
 ambition_marker_zone_GUID = "06c552"
 court_deck_zone_GUID = "7a33ff"
+court_discard_zone_GUID = "7a33fa"
 
 fate_GUID = "2d243a"
 lore_GUID = "0d8ede"
