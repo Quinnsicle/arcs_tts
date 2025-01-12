@@ -80630,7 +80630,7 @@
         "rotX": 0.000334600743,
         "rotY": 180.000061,
         "rotZ": -0.000827043259,
-        "scaleX": 3.0,
+        "scaleX": 6.0,
         "scaleY": 1.0,
         "scaleZ": 6.0
       },
@@ -81346,12 +81346,12 @@
       "GUID": "8e8851",
       "Name": "Custom_Model",
       "Transform": {
-        "posX": 4.09578753,
-        "posY": 1.99078965,
-        "posZ": -7.331021,
-        "rotX": 0.000335521123,
-        "rotY": 179.989182,
-        "rotZ": -0.0008361233,
+        "posX": 3.537366,
+        "posY": 1.9907763,
+        "posZ": -8.223384,
+        "rotX": 0.0003354332,
+        "rotY": 179.988312,
+        "rotZ": -0.000832710241,
         "scaleX": 2.449999,
         "scaleY": 2.449999,
         "scaleZ": 2.449999
@@ -81405,12 +81405,12 @@
       "GUID": "339446",
       "Name": "Custom_Model",
       "Transform": {
-        "posX": 7.190018,
-        "posY": 1.978363,
-        "posZ": -6.86070728,
-        "rotX": 0.0008143795,
-        "rotY": 225.0088,
-        "rotZ": -0.00034504,
+        "posX": 8.077874,
+        "posY": 1.978373,
+        "posZ": -7.12356663,
+        "rotX": -0.0008197523,
+        "rotY": 44.997448,
+        "rotZ": 0.000343510765,
         "scaleX": 2.749999,
         "scaleY": 2.749999,
         "scaleZ": 2.749999
@@ -81463,12 +81463,12 @@
       "GUID": "5983db",
       "Name": "Custom_Model",
       "Transform": {
-        "posX": 5.480476,
-        "posY": 2.29529,
-        "posZ": -7.10995054,
-        "rotX": 0.0008647233,
-        "rotY": 225.011658,
-        "rotZ": -0.000348525675,
+        "posX": 4.48921442,
+        "posY": 2.257061,
+        "posZ": -7.38792,
+        "rotX": -0.000821459049,
+        "rotY": 44.99486,
+        "rotZ": 0.000348156929,
         "scaleX": 2.49999928,
         "scaleY": 2.49999928,
         "scaleZ": 2.49999928
@@ -81572,6 +81572,127 @@
             "Convex": true,
             "MaterialIndex": 1,
             "TypeIndex": 0,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        }
+      }
+    },
+    {
+      "GUID": "e0bcd1",
+      "Name": "Custom_Model",
+      "Transform": {
+        "posX": 5.76941538,
+        "posY": 2.01072741,
+        "posZ": -6.595636,
+        "rotX": 0.0008213964,
+        "rotY": 224.985443,
+        "rotZ": -0.000348857167,
+        "scaleX": 2.49999928,
+        "scaleY": 2.49999928,
+        "scaleZ": 2.49999928
+      },
+      "Nickname": "Grey Imperial Ship (Damaged)",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.5294118,
+        "g": 0.5294118,
+        "b": 0.5294118
+      },
+      "Tags": [
+        "Campaign Only",
+        "Ship"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": false,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomMesh": {
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688687930/A5BEC3F0022C6373C90C77F1CD08F0A2040F0B58/",
+        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688568743/95033EA45132FDAAB36BDE8A1DB6D698E2F61120/",
+        "NormalURL": "",
+        "ColliderURL": "",
+        "Convex": true,
+        "MaterialIndex": 1,
+        "TypeIndex": 0,
+        "CastShadows": true
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "States": {
+        "1": {
+          "GUID": "3d3b01",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": 5.44614935,
+            "posY": 2.29529333,
+            "posZ": -6.61597347,
+            "rotX": 0.00176061422,
+            "rotY": 226.036392,
+            "rotZ": -0.00041194752,
+            "scaleX": 2.49999928,
+            "scaleY": 2.49999928,
+            "scaleZ": 2.49999928
+          },
+          "Nickname": "Grey Imperial Ship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.5294118,
+            "g": 0.5294118,
+            "b": 0.5294118
+          },
+          "Tags": [
+            "Campaign Only",
+            "lock",
+            "Ship"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2313225941418333649/44F26ADA0FDD6F47AA3609CF310A1B40A3BB6613/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/909043855030685825/E4F8201B8E24C0DAB503B7D98A77196BDAD7D66E/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688659256/F0979E2C16DF05EAFABCFE4B0E7BDAC3100E6E95/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
             "CastShadows": true
           },
           "LuaScript": "",
@@ -81846,7 +81967,6 @@
         "b": 0.5278745
       },
       "Tags": [
-        "lock",
         "Ship"
       ],
       "LayoutGroupSortIndex": 0,
@@ -82088,6 +82208,249 @@
               "SpecularSharpness": 7.0,
               "FresnelStrength": 0.4
             },
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        }
+      }
+    },
+    {
+      "GUID": "45e3ef",
+      "Name": "Custom_Model",
+      "Transform": {
+        "posX": 4.36133957,
+        "posY": -4.74293947,
+        "posZ": -7.282937,
+        "rotX": -0.0008240505,
+        "rotY": 44.9920273,
+        "rotZ": 0.000348870963,
+        "scaleX": 2.49999928,
+        "scaleY": 2.49999928,
+        "scaleZ": 2.49999928
+      },
+      "Nickname": "Grey Miniature Imperial Ship (Fresh)",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.5294118,
+        "g": 0.5294118,
+        "b": 0.5294118
+      },
+      "Tags": [
+        "Campaign Only",
+        "lock",
+        "Ship"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomMesh": {
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320501872/754C30B12E25ACD057F95292F2F33141AB677CC8/",
+        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419553/56DFC6BA794ECB4F3D35B385A90A5D19A1D15537/",
+        "NormalURL": "",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418830/5461F77480F162D329451A5C06711F82D36EC348/",
+        "Convex": true,
+        "MaterialIndex": 1,
+        "TypeIndex": 1,
+        "CastShadows": true
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "States": {
+        "2": {
+          "GUID": "e4ac0b",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": 4.31751728,
+            "posY": 1.20306706,
+            "posZ": -12.25542,
+            "rotX": 2.77473173E-05,
+            "rotY": 44.9939957,
+            "rotZ": -0.000557868159,
+            "scaleX": 2.49999928,
+            "scaleY": 2.49999928,
+            "scaleZ": 2.49999928
+          },
+          "Nickname": "Grey Miniature Imperial Ship (Damaged)",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.5294118,
+            "g": 0.5294118,
+            "b": 0.5294118
+          },
+          "Tags": [
+            "Campaign Only",
+            "Ship"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320522573/49312EAA02B35794E634233F98804D125E7F4033/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688568743/95033EA45132FDAAB36BDE8A1DB6D698E2F61120/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418755/18BA2E8492DE858F46488B0C9E1C490AF1BD53A8/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 0,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        }
+      }
+    },
+    {
+      "GUID": "e4ac0b",
+      "Name": "Custom_Model",
+      "Transform": {
+        "posX": 5.91651344,
+        "posY": -4.742915,
+        "posZ": -6.897053,
+        "rotX": 0.000824104,
+        "rotY": 224.983353,
+        "rotZ": -0.000348891364,
+        "scaleX": 2.49999928,
+        "scaleY": 2.49999928,
+        "scaleZ": 2.49999928
+      },
+      "Nickname": "Grey Miniature Imperial Ship (Damaged)",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.5294118,
+        "g": 0.5294118,
+        "b": 0.5294118
+      },
+      "Tags": [
+        "Campaign Only",
+        "lock",
+        "Ship"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomMesh": {
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320522573/49312EAA02B35794E634233F98804D125E7F4033/",
+        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15296120688568743/95033EA45132FDAAB36BDE8A1DB6D698E2F61120/",
+        "NormalURL": "",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418755/18BA2E8492DE858F46488B0C9E1C490AF1BD53A8/",
+        "Convex": true,
+        "MaterialIndex": 1,
+        "TypeIndex": 0,
+        "CastShadows": true
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "States": {
+        "1": {
+          "GUID": "1d3e82",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": 7.08819,
+            "posY": 1.20333171,
+            "posZ": -11.7952862,
+            "rotX": 359.8292,
+            "rotY": 44.99318,
+            "rotZ": 0.035455,
+            "scaleX": 2.49999928,
+            "scaleY": 2.49999928,
+            "scaleZ": 2.49999928
+          },
+          "Nickname": "Grey Miniature Imperial Ship (Fresh)",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.5294118,
+            "g": 0.5294118,
+            "b": 0.5294118
+          },
+          "Tags": [
+            "Campaign Only",
+            "lock",
+            "Ship"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320501872/754C30B12E25ACD057F95292F2F33141AB677CC8/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419553/56DFC6BA794ECB4F3D35B385A90A5D19A1D15537/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418830/5461F77480F162D329451A5C06711F82D36EC348/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
             "CastShadows": true
           },
           "LuaScript": "",
@@ -89662,6 +90025,1882 @@
                   }
               }
           }
+      ]
+    },
+    {
+      "GUID": "31121e",
+      "Name": "Custom_Model_Bag",
+      "Transform": {
+        "posX": -49.04,
+        "posY": -2.0,
+        "posZ": 15.96,
+        "rotX": 5.90784452E-07,
+        "rotY": 179.970963,
+        "rotZ": -2.67427225E-07,
+        "scaleX": 1.34999979,
+        "scaleY": 1.34999979,
+        "scaleZ": 1.34999979
+      },
+      "Nickname": "Imperial Ship Supply",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0
+      },
+      "Tags": [
+        "lock",
+        "Ship"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "MaterialIndex": -1,
+      "MeshIndex": -1,
+      "CustomMesh": {
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/2113932866684489450/988F32864A1BF5790DBEB9EF135DF20642F60C83/",
+        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15297536229707177/D9C2D6DAA7E456281C077627B14B701947B9E4FB/",
+        "NormalURL": "",
+        "ColliderURL": "",
+        "Convex": true,
+        "MaterialIndex": 3,
+        "TypeIndex": 6,
+        "CustomShader": {
+          "SpecularColor": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "SpecularIntensity": 0.0,
+          "SpecularSharpness": 2.0,
+          "FresnelStrength": 0.0
+        },
+        "CastShadows": true
+      },
+      "Bag": {
+        "Order": 0
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "ContainedObjects": [
+        {
+          "GUID": "4f30d5",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -47.5099373,
+            "posY": 1.24793017,
+            "posZ": 13.7772131,
+            "rotX": 0.09930828,
+            "rotY": 180.137634,
+            "rotZ": -0.00415888056,
+            "scaleX": 1.4,
+            "scaleY": 1.4,
+            "scaleZ": 1.4
+          },
+          "Nickname": "Imperial Ship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.5686274,
+            "g": 0.164705783,
+            "b": 0.6784314
+          },
+          "Tags": [
+            "lock",
+            "Ship"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320501872/754C30B12E25ACD057F95292F2F33141AB677CC8/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419553/56DFC6BA794ECB4F3D35B385A90A5D19A1D15537/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418830/5461F77480F162D329451A5C06711F82D36EC348/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "States": {
+            "2": {
+              "GUID": "fa1e4f",
+              "Name": "Custom_Model",
+              "Transform": {
+                "posX": -42.3434029,
+                "posY": 1.09593952,
+                "posZ": 11.04456,
+                "rotX": -6.680228E-05,
+                "rotY": 179.986237,
+                "rotZ": 4.58741779E-05,
+                "scaleX": 1.4,
+                "scaleY": 1.4,
+                "scaleZ": 1.4
+              },
+              "Nickname": "Imperial Ship (Damaged)",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.5686274,
+                "g": 0.164705843,
+                "b": 0.6784314
+              },
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": false,
+              "CustomMesh": {
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320522573/49312EAA02B35794E634233F98804D125E7F4033/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419496/0D3AC6094C73400231F65D08367104A70D07CFF2/",
+                "NormalURL": "",
+                "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418755/18BA2E8492DE858F46488B0C9E1C490AF1BD53A8/",
+                "Convex": true,
+                "MaterialIndex": 1,
+                "TypeIndex": 0,
+                "CastShadows": true
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          }
+        },
+        {
+          "GUID": "b57edf",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -47.44319,
+            "posY": 1.247617,
+            "posZ": 14.3770618,
+            "rotX": 359.5734,
+            "rotY": 198.6653,
+            "rotZ": 0.0277356,
+            "scaleX": 1.4,
+            "scaleY": 1.4,
+            "scaleZ": 1.4
+          },
+          "Nickname": "Imperial Ship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.5686274,
+            "g": 0.164705783,
+            "b": 0.6784314
+          },
+          "Tags": [
+            "lock",
+            "Ship"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320501872/754C30B12E25ACD057F95292F2F33141AB677CC8/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419553/56DFC6BA794ECB4F3D35B385A90A5D19A1D15537/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418830/5461F77480F162D329451A5C06711F82D36EC348/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "States": {
+            "2": {
+              "GUID": "aeb230",
+              "Name": "Custom_Model",
+              "Transform": {
+                "posX": -42.130558,
+                "posY": 1.0959357,
+                "posZ": 13.7981987,
+                "rotX": 4.05540732E-06,
+                "rotY": 179.996735,
+                "rotZ": -5.933386E-07,
+                "scaleX": 1.4,
+                "scaleY": 1.4,
+                "scaleZ": 1.4
+              },
+              "Nickname": "Imperial Ship (Damaged)",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.5686274,
+                "g": 0.164705843,
+                "b": 0.6784314
+              },
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": false,
+              "CustomMesh": {
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320522573/49312EAA02B35794E634233F98804D125E7F4033/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419496/0D3AC6094C73400231F65D08367104A70D07CFF2/",
+                "NormalURL": "",
+                "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418755/18BA2E8492DE858F46488B0C9E1C490AF1BD53A8/",
+                "Convex": true,
+                "MaterialIndex": 1,
+                "TypeIndex": 0,
+                "CastShadows": true
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          }
+        },
+        {
+          "GUID": "c18058",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -48.6908379,
+            "posY": 1.23693132,
+            "posZ": 14.3448992,
+            "rotX": 359.962341,
+            "rotY": 197.572723,
+            "rotZ": 0.249541879,
+            "scaleX": 1.4,
+            "scaleY": 1.4,
+            "scaleZ": 1.4
+          },
+          "Nickname": "Imperial Ship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.5686274,
+            "g": 0.164705783,
+            "b": 0.6784314
+          },
+          "Tags": [
+            "lock",
+            "Ship"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320501872/754C30B12E25ACD057F95292F2F33141AB677CC8/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419553/56DFC6BA794ECB4F3D35B385A90A5D19A1D15537/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418830/5461F77480F162D329451A5C06711F82D36EC348/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "States": {
+            "2": {
+              "GUID": "e0bcd0",
+              "Name": "Custom_Model",
+              "Transform": {
+                "posX": -43.7215538,
+                "posY": 1.09593773,
+                "posZ": 13.1872187,
+                "rotX": 0.000128280153,
+                "rotY": 179.997849,
+                "rotZ": 3.49718721E-05,
+                "scaleX": 1.4,
+                "scaleY": 1.4,
+                "scaleZ": 1.4
+              },
+              "Nickname": "Imperial Ship (Damaged)",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.5686274,
+                "g": 0.164705843,
+                "b": 0.6784314
+              },
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": false,
+              "CustomMesh": {
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320522573/49312EAA02B35794E634233F98804D125E7F4033/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419496/0D3AC6094C73400231F65D08367104A70D07CFF2/",
+                "NormalURL": "",
+                "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418755/18BA2E8492DE858F46488B0C9E1C490AF1BD53A8/",
+                "Convex": true,
+                "MaterialIndex": 1,
+                "TypeIndex": 0,
+                "CastShadows": true
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          }
+        },
+        {
+          "GUID": "f51418",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -48.71778,
+            "posY": 1.21498024,
+            "posZ": 14.787324,
+            "rotX": 359.95755,
+            "rotY": 196.643982,
+            "rotZ": 0.340361565,
+            "scaleX": 1.4,
+            "scaleY": 1.4,
+            "scaleZ": 1.4
+          },
+          "Nickname": "Imperial Ship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.5686274,
+            "g": 0.164705783,
+            "b": 0.6784314
+          },
+          "Tags": [
+            "lock",
+            "Ship"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320501872/754C30B12E25ACD057F95292F2F33141AB677CC8/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419553/56DFC6BA794ECB4F3D35B385A90A5D19A1D15537/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418830/5461F77480F162D329451A5C06711F82D36EC348/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "States": {
+            "2": {
+              "GUID": "71fd02",
+              "Name": "Custom_Model",
+              "Transform": {
+                "posX": -43.7246933,
+                "posY": 1.09593773,
+                "posZ": 13.8544483,
+                "rotX": 0.000129775144,
+                "rotY": 179.992859,
+                "rotZ": 2.48009637E-05,
+                "scaleX": 1.4,
+                "scaleY": 1.4,
+                "scaleZ": 1.4
+              },
+              "Nickname": "Imperial Ship (Damaged)",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.5686274,
+                "g": 0.164705843,
+                "b": 0.6784314
+              },
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": false,
+              "CustomMesh": {
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320522573/49312EAA02B35794E634233F98804D125E7F4033/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419496/0D3AC6094C73400231F65D08367104A70D07CFF2/",
+                "NormalURL": "",
+                "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418755/18BA2E8492DE858F46488B0C9E1C490AF1BD53A8/",
+                "Convex": true,
+                "MaterialIndex": 1,
+                "TypeIndex": 0,
+                "CastShadows": true
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          }
+        },
+        {
+          "GUID": "133d23",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -48.88466,
+            "posY": 1.24565542,
+            "posZ": 13.7201328,
+            "rotX": 359.973053,
+            "rotY": 172.046677,
+            "rotZ": -0.0022484886,
+            "scaleX": 1.4,
+            "scaleY": 1.4,
+            "scaleZ": 1.4
+          },
+          "Nickname": "Imperial Ship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.5686274,
+            "g": 0.164705783,
+            "b": 0.6784314
+          },
+          "Tags": [
+            "lock",
+            "Ship"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320501872/754C30B12E25ACD057F95292F2F33141AB677CC8/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419553/56DFC6BA794ECB4F3D35B385A90A5D19A1D15537/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418830/5461F77480F162D329451A5C06711F82D36EC348/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "States": {
+            "2": {
+              "GUID": "5a1799",
+              "Name": "Custom_Model",
+              "Transform": {
+                "posX": -43.813446,
+                "posY": 1.09593785,
+                "posZ": 11.3562613,
+                "rotX": 0.00011076904,
+                "rotY": 179.988968,
+                "rotZ": -8.40260836E-05,
+                "scaleX": 1.4,
+                "scaleY": 1.4,
+                "scaleZ": 1.4
+              },
+              "Nickname": "Imperial Ship (Damaged)",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.5686274,
+                "g": 0.164705843,
+                "b": 0.6784314
+              },
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": false,
+              "CustomMesh": {
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320522573/49312EAA02B35794E634233F98804D125E7F4033/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419496/0D3AC6094C73400231F65D08367104A70D07CFF2/",
+                "NormalURL": "",
+                "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418755/18BA2E8492DE858F46488B0C9E1C490AF1BD53A8/",
+                "Convex": true,
+                "MaterialIndex": 1,
+                "TypeIndex": 0,
+                "CastShadows": true
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          }
+        },
+        {
+          "GUID": "47361c",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -48.6438255,
+            "posY": 1.24507451,
+            "posZ": 13.2918158,
+            "rotX": 359.982025,
+            "rotY": 176.590942,
+            "rotZ": 0.0650697351,
+            "scaleX": 1.4,
+            "scaleY": 1.4,
+            "scaleZ": 1.4
+          },
+          "Nickname": "Imperial Ship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.5686274,
+            "g": 0.164705783,
+            "b": 0.6784314
+          },
+          "Tags": [
+            "lock",
+            "Ship"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320501872/754C30B12E25ACD057F95292F2F33141AB677CC8/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419553/56DFC6BA794ECB4F3D35B385A90A5D19A1D15537/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418830/5461F77480F162D329451A5C06711F82D36EC348/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "States": {
+            "2": {
+              "GUID": "b6643c",
+              "Name": "Custom_Model",
+              "Transform": {
+                "posX": -43.8560867,
+                "posY": 1.09594131,
+                "posZ": 10.548317,
+                "rotX": 0.000101590391,
+                "rotY": 179.96489,
+                "rotZ": -2.83378122E-05,
+                "scaleX": 1.4,
+                "scaleY": 1.4,
+                "scaleZ": 1.4
+              },
+              "Nickname": "Imperial Ship (Damaged)",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.5686274,
+                "g": 0.164705843,
+                "b": 0.6784314
+              },
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": false,
+              "CustomMesh": {
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320522573/49312EAA02B35794E634233F98804D125E7F4033/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419496/0D3AC6094C73400231F65D08367104A70D07CFF2/",
+                "NormalURL": "",
+                "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418755/18BA2E8492DE858F46488B0C9E1C490AF1BD53A8/",
+                "Convex": true,
+                "MaterialIndex": 1,
+                "TypeIndex": 0,
+                "CastShadows": true
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          }
+        },
+        {
+          "GUID": "2cddb8",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -50.0733757,
+            "posY": 1.27715957,
+            "posZ": 14.8690128,
+            "rotX": 359.802277,
+            "rotY": 179.816254,
+            "rotZ": 0.067431204,
+            "scaleX": 1.4,
+            "scaleY": 1.4,
+            "scaleZ": 1.4
+          },
+          "Nickname": "Imperial Ship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.5686274,
+            "g": 0.164705783,
+            "b": 0.6784314
+          },
+          "Tags": [
+            "lock",
+            "Ship"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320501872/754C30B12E25ACD057F95292F2F33141AB677CC8/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419553/56DFC6BA794ECB4F3D35B385A90A5D19A1D15537/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418830/5461F77480F162D329451A5C06711F82D36EC348/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "States": {
+            "2": {
+              "GUID": "fa64e1",
+              "Name": "Custom_Model",
+              "Transform": {
+                "posX": -45.5747948,
+                "posY": 1.09593737,
+                "posZ": 13.9646769,
+                "rotX": -8.815285E-05,
+                "rotY": 179.998032,
+                "rotZ": -4.162203E-05,
+                "scaleX": 1.4,
+                "scaleY": 1.4,
+                "scaleZ": 1.4
+              },
+              "Nickname": "Imperial Ship (Damaged)",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.5686274,
+                "g": 0.164705843,
+                "b": 0.6784314
+              },
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": false,
+              "CustomMesh": {
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320522573/49312EAA02B35794E634233F98804D125E7F4033/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419496/0D3AC6094C73400231F65D08367104A70D07CFF2/",
+                "NormalURL": "",
+                "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418755/18BA2E8492DE858F46488B0C9E1C490AF1BD53A8/",
+                "Convex": true,
+                "MaterialIndex": 1,
+                "TypeIndex": 0,
+                "CastShadows": true
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          }
+        },
+        {
+          "GUID": "75ca7f",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -48.49088,
+            "posY": 1.2459228,
+            "posZ": 12.8921518,
+            "rotX": 0.522036731,
+            "rotY": 176.419678,
+            "rotZ": 359.965637,
+            "scaleX": 1.4,
+            "scaleY": 1.4,
+            "scaleZ": 1.4
+          },
+          "Nickname": "Imperial Ship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.5686274,
+            "g": 0.164705783,
+            "b": 0.6784314
+          },
+          "Tags": [
+            "lock",
+            "Ship"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320501872/754C30B12E25ACD057F95292F2F33141AB677CC8/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419553/56DFC6BA794ECB4F3D35B385A90A5D19A1D15537/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418830/5461F77480F162D329451A5C06711F82D36EC348/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "States": {
+            "2": {
+              "GUID": "df7cb8",
+              "Name": "Custom_Model",
+              "Transform": {
+                "posX": -43.8269463,
+                "posY": 1.095933,
+                "posZ": 9.827287,
+                "rotX": 0.00015026555,
+                "rotY": 179.993484,
+                "rotZ": 2.45987376E-05,
+                "scaleX": 1.4,
+                "scaleY": 1.4,
+                "scaleZ": 1.4
+              },
+              "Nickname": "Imperial Ship (Damaged)",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.5686274,
+                "g": 0.164705843,
+                "b": 0.6784314
+              },
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": false,
+              "CustomMesh": {
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320522573/49312EAA02B35794E634233F98804D125E7F4033/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419496/0D3AC6094C73400231F65D08367104A70D07CFF2/",
+                "NormalURL": "",
+                "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418755/18BA2E8492DE858F46488B0C9E1C490AF1BD53A8/",
+                "Convex": true,
+                "MaterialIndex": 1,
+                "TypeIndex": 0,
+                "CastShadows": true
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          }
+        },
+        {
+          "GUID": "86ceb8",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -49.799118,
+            "posY": 1.247746,
+            "posZ": 14.0403624,
+            "rotX": 359.853973,
+            "rotY": 176.649261,
+            "rotZ": 0.131348267,
+            "scaleX": 1.4,
+            "scaleY": 1.4,
+            "scaleZ": 1.4
+          },
+          "Nickname": "Imperial Ship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.5686274,
+            "g": 0.164705783,
+            "b": 0.6784314
+          },
+          "Tags": [
+            "lock",
+            "Ship"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320501872/754C30B12E25ACD057F95292F2F33141AB677CC8/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419553/56DFC6BA794ECB4F3D35B385A90A5D19A1D15537/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418830/5461F77480F162D329451A5C06711F82D36EC348/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "States": {
+            "2": {
+              "GUID": "5e5dc9",
+              "Name": "Custom_Model",
+              "Transform": {
+                "posX": -45.57911,
+                "posY": 1.09593546,
+                "posZ": 12.3152494,
+                "rotX": 1.89954862E-05,
+                "rotY": 180.020279,
+                "rotZ": 5.53038E-06,
+                "scaleX": 1.4,
+                "scaleY": 1.4,
+                "scaleZ": 1.4
+              },
+              "Nickname": "Imperial Ship (Damaged)",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.5686274,
+                "g": 0.164705843,
+                "b": 0.6784314
+              },
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": false,
+              "CustomMesh": {
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320522573/49312EAA02B35794E634233F98804D125E7F4033/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419496/0D3AC6094C73400231F65D08367104A70D07CFF2/",
+                "NormalURL": "",
+                "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418755/18BA2E8492DE858F46488B0C9E1C490AF1BD53A8/",
+                "Convex": true,
+                "MaterialIndex": 1,
+                "TypeIndex": 0,
+                "CastShadows": true
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          }
+        },
+        {
+          "GUID": "c9ca9c",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -50.06569,
+            "posY": 1.24327326,
+            "posZ": 14.4436207,
+            "rotX": 358.915955,
+            "rotY": 178.395813,
+            "rotZ": 0.205660418,
+            "scaleX": 1.4,
+            "scaleY": 1.4,
+            "scaleZ": 1.4
+          },
+          "Nickname": "Imperial Ship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.5686274,
+            "g": 0.164705783,
+            "b": 0.6784314
+          },
+          "Tags": [
+            "lock",
+            "Ship"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320501872/754C30B12E25ACD057F95292F2F33141AB677CC8/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419553/56DFC6BA794ECB4F3D35B385A90A5D19A1D15537/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418830/5461F77480F162D329451A5C06711F82D36EC348/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "States": {
+            "2": {
+              "GUID": "016ab6",
+              "Name": "Custom_Model",
+              "Transform": {
+                "posX": -45.7511978,
+                "posY": 1.09593952,
+                "posZ": 13.0838413,
+                "rotX": -7.63983044E-05,
+                "rotY": 179.964844,
+                "rotZ": 4.707312E-05,
+                "scaleX": 1.4,
+                "scaleY": 1.4,
+                "scaleZ": 1.4
+              },
+              "Nickname": "Imperial Ship (Damaged)",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.5686274,
+                "g": 0.164705843,
+                "b": 0.6784314
+              },
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": false,
+              "CustomMesh": {
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320522573/49312EAA02B35794E634233F98804D125E7F4033/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419496/0D3AC6094C73400231F65D08367104A70D07CFF2/",
+                "NormalURL": "",
+                "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418755/18BA2E8492DE858F46488B0C9E1C490AF1BD53A8/",
+                "Convex": true,
+                "MaterialIndex": 1,
+                "TypeIndex": 0,
+                "CastShadows": true
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          }
+        },
+        {
+          "GUID": "f6dec8",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -50.22319,
+            "posY": 1.24591875,
+            "posZ": 13.57692,
+            "rotX": 359.689972,
+            "rotY": 174.703384,
+            "rotZ": 359.9346,
+            "scaleX": 1.4,
+            "scaleY": 1.4,
+            "scaleZ": 1.4
+          },
+          "Nickname": "Imperial Ship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.5686274,
+            "g": 0.164705783,
+            "b": 0.6784314
+          },
+          "Tags": [
+            "lock",
+            "Ship"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320501872/754C30B12E25ACD057F95292F2F33141AB677CC8/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419553/56DFC6BA794ECB4F3D35B385A90A5D19A1D15537/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418830/5461F77480F162D329451A5C06711F82D36EC348/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "States": {
+            "2": {
+              "GUID": "02b27b",
+              "Name": "Custom_Model",
+              "Transform": {
+                "posX": -45.5866165,
+                "posY": 1.09593308,
+                "posZ": 11.3780422,
+                "rotX": 0.000252503552,
+                "rotY": 179.997955,
+                "rotZ": 1.014346E-06,
+                "scaleX": 1.4,
+                "scaleY": 1.4,
+                "scaleZ": 1.4
+              },
+              "Nickname": "Imperial Ship (Damaged)",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.5686274,
+                "g": 0.164705843,
+                "b": 0.6784314
+              },
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": false,
+              "CustomMesh": {
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320522573/49312EAA02B35794E634233F98804D125E7F4033/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419496/0D3AC6094C73400231F65D08367104A70D07CFF2/",
+                "NormalURL": "",
+                "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418755/18BA2E8492DE858F46488B0C9E1C490AF1BD53A8/",
+                "Convex": true,
+                "MaterialIndex": 1,
+                "TypeIndex": 0,
+                "CastShadows": true
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          }
+        },
+        {
+          "GUID": "3d6c88",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -49.9852257,
+            "posY": 1.24612308,
+            "posZ": 13.17967,
+            "rotX": 0.07905294,
+            "rotY": 174.435349,
+            "rotZ": 0.04529829,
+            "scaleX": 1.4,
+            "scaleY": 1.4,
+            "scaleZ": 1.4
+          },
+          "Nickname": "Imperial Ship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.5686274,
+            "g": 0.164705783,
+            "b": 0.6784314
+          },
+          "Tags": [
+            "lock",
+            "Ship"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320501872/754C30B12E25ACD057F95292F2F33141AB677CC8/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419553/56DFC6BA794ECB4F3D35B385A90A5D19A1D15537/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418830/5461F77480F162D329451A5C06711F82D36EC348/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "States": {
+            "2": {
+              "GUID": "59ab06",
+              "Name": "Custom_Model",
+              "Transform": {
+                "posX": -45.49749,
+                "posY": 1.09593558,
+                "posZ": 10.5757818,
+                "rotX": -5.31546975E-05,
+                "rotY": 179.994019,
+                "rotZ": -0.000139846845,
+                "scaleX": 1.4,
+                "scaleY": 1.4,
+                "scaleZ": 1.4
+              },
+              "Nickname": "Imperial Ship (Damaged)",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.5686274,
+                "g": 0.164705843,
+                "b": 0.6784314
+              },
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": false,
+              "CustomMesh": {
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320522573/49312EAA02B35794E634233F98804D125E7F4033/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419496/0D3AC6094C73400231F65D08367104A70D07CFF2/",
+                "NormalURL": "",
+                "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418755/18BA2E8492DE858F46488B0C9E1C490AF1BD53A8/",
+                "Convex": true,
+                "MaterialIndex": 1,
+                "TypeIndex": 0,
+                "CastShadows": true
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          }
+        },
+        {
+          "GUID": "9b02ba",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -49.8254,
+            "posY": 1.24105036,
+            "posZ": 12.78023,
+            "rotX": 1.23451471,
+            "rotY": 173.375671,
+            "rotZ": 359.629242,
+            "scaleX": 1.4,
+            "scaleY": 1.4,
+            "scaleZ": 1.4
+          },
+          "Nickname": "Imperial Ship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.5686274,
+            "g": 0.164705783,
+            "b": 0.6784314
+          },
+          "Tags": [
+            "lock",
+            "Ship"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320501872/754C30B12E25ACD057F95292F2F33141AB677CC8/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419553/56DFC6BA794ECB4F3D35B385A90A5D19A1D15537/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418830/5461F77480F162D329451A5C06711F82D36EC348/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "States": {
+            "2": {
+              "GUID": "84e7c6",
+              "Name": "Custom_Model",
+              "Transform": {
+                "posX": -45.6915359,
+                "posY": 1.09593391,
+                "posZ": 9.834186,
+                "rotX": 2.6467158E-05,
+                "rotY": 179.999634,
+                "rotZ": 5.548394E-05,
+                "scaleX": 1.4,
+                "scaleY": 1.4,
+                "scaleZ": 1.4
+              },
+              "Nickname": "Imperial Ship (Damaged)",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.5686274,
+                "g": 0.164705843,
+                "b": 0.6784314
+              },
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": false,
+              "CustomMesh": {
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320522573/49312EAA02B35794E634233F98804D125E7F4033/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419496/0D3AC6094C73400231F65D08367104A70D07CFF2/",
+                "NormalURL": "",
+                "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418755/18BA2E8492DE858F46488B0C9E1C490AF1BD53A8/",
+                "Convex": true,
+                "MaterialIndex": 1,
+                "TypeIndex": 0,
+                "CastShadows": true
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          }
+        },
+        {
+          "GUID": "29cb31",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -48.3526077,
+            "posY": 1.24051237,
+            "posZ": 12.484107,
+            "rotX": 0.287867963,
+            "rotY": 175.372864,
+            "rotZ": 0.235762313,
+            "scaleX": 1.4,
+            "scaleY": 1.4,
+            "scaleZ": 1.4
+          },
+          "Nickname": "Imperial Ship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.5686274,
+            "g": 0.164705783,
+            "b": 0.6784314
+          },
+          "Tags": [
+            "lock",
+            "Ship"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320501872/754C30B12E25ACD057F95292F2F33141AB677CC8/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419553/56DFC6BA794ECB4F3D35B385A90A5D19A1D15537/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418830/5461F77480F162D329451A5C06711F82D36EC348/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "States": {
+            "2": {
+              "GUID": "24621a",
+              "Name": "Custom_Model",
+              "Transform": {
+                "posX": -43.9665222,
+                "posY": 1.09593773,
+                "posZ": 9.061701,
+                "rotX": -9.626275E-05,
+                "rotY": 179.997879,
+                "rotZ": 1.22080783E-05,
+                "scaleX": 1.4,
+                "scaleY": 1.4,
+                "scaleZ": 1.4
+              },
+              "Nickname": "Imperial Ship (Damaged)",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.5686274,
+                "g": 0.164705843,
+                "b": 0.6784314
+              },
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": false,
+              "CustomMesh": {
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320522573/49312EAA02B35794E634233F98804D125E7F4033/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419496/0D3AC6094C73400231F65D08367104A70D07CFF2/",
+                "NormalURL": "",
+                "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418755/18BA2E8492DE858F46488B0C9E1C490AF1BD53A8/",
+                "Convex": true,
+                "MaterialIndex": 1,
+                "TypeIndex": 0,
+                "CastShadows": true
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          }
+        },
+        {
+          "GUID": "83e888",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -48.8582954,
+            "posY": 1.24545765,
+            "posZ": 13.36197,
+            "rotX": 3.1552886E-06,
+            "rotY": 180.010086,
+            "rotZ": -8.0463E-07,
+            "scaleX": 1.4,
+            "scaleY": 1.4,
+            "scaleZ": 1.4
+          },
+          "Nickname": "Imperial Ship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.5686274,
+            "g": 0.164705664,
+            "b": 0.6784314
+          },
+          "Tags": [
+            "lock",
+            "Ship"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320501872/754C30B12E25ACD057F95292F2F33141AB677CC8/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419553/56DFC6BA794ECB4F3D35B385A90A5D19A1D15537/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418830/5461F77480F162D329451A5C06711F82D36EC348/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "States": {
+            "2": {
+              "GUID": "73defb",
+              "Name": "Custom_Model",
+              "Transform": {
+                "posX": -46.2593727,
+                "posY": 1.09593892,
+                "posZ": 13.2249193,
+                "rotX": -8.794316E-05,
+                "rotY": 180.01033,
+                "rotZ": 4.96226676E-05,
+                "scaleX": 1.4,
+                "scaleY": 1.4,
+                "scaleZ": 1.4
+              },
+              "Nickname": "Imperial Ship (Damaged)",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.5686274,
+                "g": 0.164705783,
+                "b": 0.6784314
+              },
+              "Tags": [
+                "Campaign Only",
+                "Ship"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": false,
+              "CustomMesh": {
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320522573/49312EAA02B35794E634233F98804D125E7F4033/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320419496/0D3AC6094C73400231F65D08367104A70D07CFF2/",
+                "NormalURL": "",
+                "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320418755/18BA2E8492DE858F46488B0C9E1C490AF1BD53A8/",
+                "Convex": true,
+                "MaterialIndex": 1,
+                "TypeIndex": 0,
+                "CastShadows": true
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          }
+        }
       ]
     }
   ]

@@ -53,18 +53,21 @@ chapter_pawn_GUID = "9c3ac8"
 -- Setup Menu example pieces
 setup_meeples_GUIDs = {
     fresh_ship = "6e6f6b",
-    damaged_ship = "b2b35c"
+    damaged_ship = "b2b35c",
+    fresh_imperial_ship = "5983db",
+    damaged_imperial_ship = "e0bcd1"
 }
 
 setup_unchanged_meeples_GUIDs = {
     agent = "8e8851",
-    imperial_ship = "5983db",
     flag_ship = "339446"
 }
 
 setup_miniatures_GUIDs = {
     fresh_ship = "fb8e2b",
-    damaged_ship = "20d86f"
+    damaged_ship = "20d86f",
+    fresh_imperial_ship = "45e3ef",
+    damaged_imperial_ship = "e4ac0b"
 }
 
 -- Players Pieces
@@ -255,6 +258,7 @@ number_die_GUID = "d5e298"
 die_zone_GUID = "1b45bb"
 
 imperial_ships_GUID = "beb54d"
+mini_imperial_ships_GUID = "31121e"
 free_cities_GUID = "80742e"
 free_starports_GUID = "c79cb8"
 blight_GUID = "ff61a8"

@@ -320,55 +320,31 @@ function custom_setup()
 end
 
 function leader_buttons()
-    self.setPositionSmooth({49.5, 1.2, 0})
+    self.setPositionSmooth({54.25, 1.2, 0})
 
     self.editButton({
-        index = 0,
-        height = 1,
-        width = 1,
-        click_function = "doNothing",
-        label = "",
-        tooltip = ""
-    })
-    self.editButton({
-        index = 1,
-        height = 1,
-        width = 1,
-        click_function = "doNothing",
-        label = "",
-        tooltip = ""
-    })
-    self.editButton({
         index = 2,
-        height = 1,
-        width = 1,
-        click_function = "doNothing",
-        label = "",
-        tooltip = ""
-    })
-    self.editButton({
-        index = 3,
-        font_size = 88,
+        font_size = 150,
         click_function = "setup_leaders",
         label = "Setup Leaders",
         tooltip = ""
     })
-    self.editButton({
-        index = 4,
+
+    -- Clear all other buttons
+    local empty_button = {
         height = 1,
         width = 1,
         click_function = "doNothing",
         label = "",
         tooltip = ""
-    })
-    self.editButton({
-        index = 5,
-        height = 1,
-        width = 1,
-        click_function = "doNothing",
-        label = "",
-        tooltip = ""
-    })
+    }
+
+    for i = 0, 8 do
+        if i ~= 2 then  -- Skip the leader button
+            empty_button.index = i
+            self.editButton(empty_button)
+        end
+    end
 end
 
 function doNothing()

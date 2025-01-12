@@ -47,6 +47,7 @@ local Campaign = {
         free_starports = "c79cb8",
         free_cities = "80742e",
         imperial_ships = "beb54d",
+        mini_imperial_ships = "31121e",
         blight = "ff61a8",
 
         court = "fb55bf",
