@@ -55,19 +55,20 @@ setup_meeples_GUIDs = {
     fresh_ship = "6e6f6b",
     damaged_ship = "b2b35c",
     fresh_imperial_ship = "5983db",
-    damaged_imperial_ship = "e0bcd1"
+    damaged_imperial_ship = "e0bcd1",
+    flag_ship = "339446"
 }
 
 setup_unchanged_meeples_GUIDs = {
-    agent = "8e8851",
-    flag_ship = "339446"
+    agent = "8e8851"
 }
 
 setup_miniatures_GUIDs = {
     fresh_ship = "fb8e2b",
     damaged_ship = "20d86f",
     fresh_imperial_ship = "45e3ef",
-    damaged_imperial_ship = "e4ac0b"
+    damaged_imperial_ship = "e4ac0b",
+    flag_ship = "4cf25e"
 }
 
 -- Players Pieces

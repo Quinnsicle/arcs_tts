@@ -81405,12 +81405,12 @@
       "GUID": "339446",
       "Name": "Custom_Model",
       "Transform": {
-        "posX": 8.077874,
-        "posY": 1.978373,
-        "posZ": -7.12356663,
-        "rotX": -0.0008197523,
-        "rotY": 44.997448,
-        "rotZ": 0.000343510765,
+        "posX": 8.068748,
+        "posY": 1.97837353,
+        "posZ": -6.94816351,
+        "rotX": -0.0008171077,
+        "rotY": 44.98794,
+        "rotZ": 0.00034930135,
         "scaleX": 2.749999,
         "scaleY": 2.749999,
         "scaleZ": 2.749999
@@ -82451,6 +82451,144 @@
             "Convex": true,
             "MaterialIndex": 1,
             "TypeIndex": 1,
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        }
+      }
+    },
+    {
+      "GUID": "4cf25e",
+      "Name": "Custom_Model",
+      "Transform": {
+        "posX": 7.878951,
+        "posY": -4.747755,
+        "posZ": -6.82355833,
+        "rotX": -0.00082363293,
+        "rotY": 45.0000038,
+        "rotZ": 0.000348272937,
+        "scaleX": 2.449999,
+        "scaleY": 2.449999,
+        "scaleZ": 2.449999
+      },
+      "Nickname": "Grey Miniature Flagship",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.5294118,
+        "g": 0.5294118,
+        "b": 0.5294118
+      },
+      "Tags": [
+        "Campaign Only"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomMesh": {
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323289738/8161A7102023890661F0529BAF0A39E7D7D306EF/",
+        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323281733/48AA08AE5786C733C96DFC33F83E3DB9A333185A/",
+        "NormalURL": "",
+        "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320925159/4400369BC01EBE558C735A76ABE12867BEA2BD52/",
+        "Convex": true,
+        "MaterialIndex": 1,
+        "TypeIndex": 1,
+        "CustomShader": {
+          "SpecularColor": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "SpecularIntensity": 0.6,
+          "SpecularSharpness": 4.0,
+          "FresnelStrength": 0.107142858
+        },
+        "CastShadows": true
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "States": {
+        "2": {
+          "GUID": "074326",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": 7.879038,
+            "posY": 2.252245,
+            "posZ": -6.823522,
+            "rotX": -0.000823489856,
+            "rotY": 44.9989243,
+            "rotZ": 0.0003482977,
+            "scaleX": 2.449999,
+            "scaleY": 2.449999,
+            "scaleZ": 2.449999
+          },
+          "Nickname": "Grey Miniature Flagship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.5294118,
+            "g": 0.5294118,
+            "b": 0.5294118
+          },
+          "Tags": [
+            "Campaign Only"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323281423/79572858F62560EC64E97EFA55C2515F007E1143/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323281733/48AA08AE5786C733C96DFC33F83E3DB9A333185A/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323144752/CDE68E56C52ED1F29D28CDCF419BE030FCB36C33/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0
+              },
+              "SpecularIntensity": 0.6,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142858
+            },
             "CastShadows": true
           },
           "LuaScript": "",
