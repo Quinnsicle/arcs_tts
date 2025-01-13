@@ -260,6 +260,8 @@ die_zone_GUID = "1b45bb"
 
 imperial_ships_GUID = "beb54d"
 mini_imperial_ships_GUID = "31121e"
+flagships_GUID = "ea53d9"
+mini_flagships_GUID = "36f5c0"
 free_cities_GUID = "80742e"
 free_starports_GUID = "c79cb8"
 blight_GUID = "ff61a8"

@@ -53,6 +53,7 @@ local Campaign = {
         court = "fb55bf",
         event_cards = "ad423d",
         flagships = "ea53d9",
+        mini_flagships = "36f5c0",
         rules = "f1dd49",
         intermission_help = "b25b55",
         empire_help = "dad146",

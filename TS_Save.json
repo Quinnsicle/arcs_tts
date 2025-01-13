@@ -28832,6 +28832,2049 @@
       ]
     },
     {
+      "GUID": "36f5c0",
+      "Name": "Bag",
+      "Transform": {
+        "posX": -30.5083351,
+        "posY": -3.0,
+        "posZ": 32.33134,
+        "rotX": -6.83686E-08,
+        "rotY": 4.783801E-05,
+        "rotZ": 3.33502514E-09,
+        "scaleX": 1.0,
+        "scaleY": 1.0,
+        "scaleZ": 1.0
+      },
+      "Nickname": "Flagships",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.7058823,
+        "g": 0.366520882,
+        "b": 0.0
+      },
+      "Tags": [
+        "Campaign Only"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "MaterialIndex": -1,
+      "MeshIndex": -1,
+      "Bag": {
+        "Order": 0
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": "",
+      "ContainedObjects": [
+        {
+          "GUID": "87bb49",
+          "Name": "Deck",
+          "Transform": {
+            "posX": -27.2388668,
+            "posY": 3.07550454,
+            "posZ": 32.9599838,
+            "rotX": 359.4826,
+            "rotY": 179.997635,
+            "rotZ": 0.5256645,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Tags": [
+            "Campaign Only"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            47812,
+            47811,
+            47810,
+            47809
+          ],
+          "CustomDeck": {
+            "478": {
+              "FaceURL": "https://dl.dropboxusercontent.com/scl/fi/g5233zfp0rtp69c5q8kfb/Other.jpg?rlkey=a8bntbxrrtohzk83m9xkxxib8&dl=0",
+              "BackURL": "https://dl.dropboxusercontent.com/scl/fi/91vu3a276k0q3wsuvewcr/Other2.jpg?rlkey=6n0cadeepw347t6ya0vznh4r8&dl=0",
+              "NumWidth": 4,
+              "NumHeight": 4,
+              "BackIsHidden": false,
+              "UniqueBack": true,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "ContainedObjects": [
+            {
+              "GUID": "55ca25",
+              "Name": "Card",
+              "Transform": {
+                "posX": -24.9864883,
+                "posY": 1.53774011,
+                "posZ": 26.5192013,
+                "rotX": 0.0170447174,
+                "rotY": 180.003235,
+                "rotZ": 0.0787615,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": true,
+              "CardID": 47812,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "478": {
+                  "FaceURL": "https://dl.dropboxusercontent.com/scl/fi/g5233zfp0rtp69c5q8kfb/Other.jpg?rlkey=a8bntbxrrtohzk83m9xkxxib8&dl=0",
+                  "BackURL": "https://dl.dropboxusercontent.com/scl/fi/91vu3a276k0q3wsuvewcr/Other2.jpg?rlkey=6n0cadeepw347t6ya0vznh4r8&dl=0",
+                  "NumWidth": 4,
+                  "NumHeight": 4,
+                  "BackIsHidden": false,
+                  "UniqueBack": true,
+                  "Type": 0
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            },
+            {
+              "GUID": "457a8c",
+              "Name": "Card",
+              "Transform": {
+                "posX": -24.60758,
+                "posY": 1.56852686,
+                "posZ": 26.4606571,
+                "rotX": 0.0142433876,
+                "rotY": 180.00325,
+                "rotZ": 0.0651602745,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": true,
+              "CardID": 47811,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "478": {
+                  "FaceURL": "https://dl.dropboxusercontent.com/scl/fi/g5233zfp0rtp69c5q8kfb/Other.jpg?rlkey=a8bntbxrrtohzk83m9xkxxib8&dl=0",
+                  "BackURL": "https://dl.dropboxusercontent.com/scl/fi/91vu3a276k0q3wsuvewcr/Other2.jpg?rlkey=6n0cadeepw347t6ya0vznh4r8&dl=0",
+                  "NumWidth": 4,
+                  "NumHeight": 4,
+                  "BackIsHidden": false,
+                  "UniqueBack": true,
+                  "Type": 0
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            },
+            {
+              "GUID": "d0edf3",
+              "Name": "Card",
+              "Transform": {
+                "posX": -24.4041061,
+                "posY": 1.60226214,
+                "posZ": 26.7645016,
+                "rotX": 0.0150161525,
+                "rotY": 180.004562,
+                "rotZ": 0.0685338,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": true,
+              "CardID": 47810,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "478": {
+                  "FaceURL": "https://dl.dropboxusercontent.com/scl/fi/g5233zfp0rtp69c5q8kfb/Other.jpg?rlkey=a8bntbxrrtohzk83m9xkxxib8&dl=0",
+                  "BackURL": "https://dl.dropboxusercontent.com/scl/fi/91vu3a276k0q3wsuvewcr/Other2.jpg?rlkey=6n0cadeepw347t6ya0vznh4r8&dl=0",
+                  "NumWidth": 4,
+                  "NumHeight": 4,
+                  "BackIsHidden": false,
+                  "UniqueBack": true,
+                  "Type": 0
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            },
+            {
+              "GUID": "bc4e6b",
+              "Name": "Card",
+              "Transform": {
+                "posX": -25.0737076,
+                "posY": 1.61278915,
+                "posZ": 26.6545067,
+                "rotX": 0.0144821759,
+                "rotY": 180.003021,
+                "rotZ": 0.06882305,
+                "scaleX": 1.0,
+                "scaleY": 1.0,
+                "scaleZ": 1.0
+              },
+              "Nickname": "",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": true,
+              "CardID": 47809,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "478": {
+                  "FaceURL": "https://dl.dropboxusercontent.com/scl/fi/g5233zfp0rtp69c5q8kfb/Other.jpg?rlkey=a8bntbxrrtohzk83m9xkxxib8&dl=0",
+                  "BackURL": "https://dl.dropboxusercontent.com/scl/fi/91vu3a276k0q3wsuvewcr/Other2.jpg?rlkey=6n0cadeepw347t6ya0vznh4r8&dl=0",
+                  "NumWidth": 4,
+                  "NumHeight": 4,
+                  "BackIsHidden": false,
+                  "UniqueBack": true,
+                  "Type": 0
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          ]
+        },
+        {
+          "GUID": "375ed4",
+          "Name": "Deck",
+          "Transform": {
+            "posX": -26.8513355,
+            "posY": 3.08033848,
+            "posZ": 32.8957253,
+            "rotX": 359.605927,
+            "rotY": 180.00322,
+            "rotZ": 0.07049663,
+            "scaleX": 1.35717392,
+            "scaleY": 1.0,
+            "scaleZ": 1.35717392
+          },
+          "Nickname": "",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Tags": [
+            "Campaign Only"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": false,
+          "SidewaysCard": false,
+          "DeckIDs": [
+            38300,
+            38300,
+            38300,
+            38300
+          ],
+          "CustomDeck": {
+            "383": {
+              "FaceURL": "https://dl.dropboxusercontent.com/scl/fi/n9lzretyezjeveq0ne7k3/Flagship-Board-Slim.jpg?rlkey=g3292s7imtmmt93wnlmjrqmld&dl=0",
+              "BackURL": "https://dl.dropboxusercontent.com/scl/fi/a12fhpin4b3yy4lfcwo56/Flagship-Board-Slim-BACK.jpg?rlkey=akzjyrnr191ar324wfegmhrj3&dl=0",
+              "NumWidth": 1,
+              "NumHeight": 1,
+              "BackIsHidden": true,
+              "UniqueBack": false,
+              "Type": 1
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "ContainedObjects": [
+            {
+              "GUID": "29a7b9",
+              "Name": "CardCustom",
+              "Transform": {
+                "posX": -21.7390823,
+                "posY": 0.9993292,
+                "posZ": 21.1195869,
+                "rotX": 0.0284984875,
+                "rotY": 180.010361,
+                "rotZ": 359.986,
+                "scaleX": 1.35717392,
+                "scaleY": 1.0,
+                "scaleZ": 1.35717392
+              },
+              "Nickname": "",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Tags": [
+                "Campaign Only"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": true,
+              "Hands": false,
+              "CardID": 38300,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "383": {
+                  "FaceURL": "https://dl.dropboxusercontent.com/scl/fi/n9lzretyezjeveq0ne7k3/Flagship-Board-Slim.jpg?rlkey=g3292s7imtmmt93wnlmjrqmld&dl=0",
+                  "BackURL": "https://dl.dropboxusercontent.com/scl/fi/a12fhpin4b3yy4lfcwo56/Flagship-Board-Slim-BACK.jpg?rlkey=akzjyrnr191ar324wfegmhrj3&dl=0",
+                  "NumWidth": 1,
+                  "NumHeight": 1,
+                  "BackIsHidden": true,
+                  "UniqueBack": false,
+                  "Type": 1
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": "",
+              "AttachedSnapPoints": [
+                {
+                  "Position": {
+                    "x": -0.675400853,
+                    "y": 0.209228292,
+                    "z": 1.2074784
+                  },
+                  "Rotation": {
+                    "x": 1.07729545E-06,
+                    "y": -0.000603999,
+                    "z": 1.26331761E-05
+                  }
+                },
+                {
+                  "Position": {
+                    "x": 0.9150606,
+                    "y": 0.2097022,
+                    "z": -0.160020992
+                  },
+                  "Rotation": {
+                    "x": -1.49046273E-05,
+                    "y": 5.16969958E-05,
+                    "z": 1.25831493E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.6250599,
+                    "y": 0.209297821,
+                    "z": -0.1600239
+                  },
+                  "Rotation": {
+                    "x": 2.317533E-06,
+                    "y": 0.0245447587,
+                    "z": 1.07510414E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.3335045,
+                    "y": 0.208851367,
+                    "z": -0.15999724
+                  },
+                  "Rotation": {
+                    "x": -7.364971E-06,
+                    "y": 0.0420437,
+                    "z": 9.440502E-06
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.3337314,
+                    "y": 0.208228514,
+                    "z": -0.1600099
+                  },
+                  "Rotation": {
+                    "x": -1.13748411E-05,
+                    "y": 0.00552950939,
+                    "z": 1.21740632E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.623676538,
+                    "y": 0.208845958,
+                    "z": -0.1599931
+                  },
+                  "Rotation": {
+                    "x": -1.53402325E-05,
+                    "y": 359.974243,
+                    "z": 1.4514274E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.9149117,
+                    "y": 0.209125578,
+                    "z": -0.16000022
+                  },
+                  "Rotation": {
+                    "x": 1.29776868E-06,
+                    "y": 0.0367161557,
+                    "z": 9.839658E-06
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.914916635,
+                    "y": 0.2093354,
+                    "z": -1.00218952
+                  },
+                  "Rotation": {
+                    "x": -6.65412244E-06,
+                    "y": 5.16981745E-05,
+                    "z": 1.2583153E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.624916,
+                    "y": 0.2089934,
+                    "z": -1.0021925
+                  },
+                  "Rotation": {
+                    "x": 8.223608E-06,
+                    "y": 0.0245720819,
+                    "z": -1.65709589E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.333587468,
+                    "y": 0.209211558,
+                    "z": -1.00217843
+                  },
+                  "Rotation": {
+                    "x": -1.0462285E-05,
+                    "y": 0.00552951,
+                    "z": 1.21741077E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.333649576,
+                    "y": 0.209261283,
+                    "z": -1.00216579
+                  },
+                  "Rotation": {
+                    "x": 4.32647266E-06,
+                    "y": 0.0420437045,
+                    "z": 9.44062E-06
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.6238216,
+                    "y": 0.209104553,
+                    "z": -1.00216162
+                  },
+                  "Rotation": {
+                    "x": -2.28224667E-06,
+                    "y": 359.974243,
+                    "z": 1.45146669E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.9150567,
+                    "y": 0.209142089,
+                    "z": -1.00216866
+                  },
+                  "Rotation": {
+                    "x": 8.679072E-06,
+                    "y": 0.03671616,
+                    "z": 9.840355E-06
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                }
+              ]
+            },
+            {
+              "GUID": "634afa",
+              "Name": "CardCustom",
+              "Transform": {
+                "posX": -22.2492676,
+                "posY": 1.04037106,
+                "posZ": 21.3259621,
+                "rotX": 0.0295296833,
+                "rotY": 179.99968,
+                "rotZ": 359.977448,
+                "scaleX": 1.35717392,
+                "scaleY": 1.0,
+                "scaleZ": 1.35717392
+              },
+              "Nickname": "",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Tags": [
+                "Campaign Only"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": true,
+              "Hands": false,
+              "CardID": 38300,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "383": {
+                  "FaceURL": "https://dl.dropboxusercontent.com/scl/fi/n9lzretyezjeveq0ne7k3/Flagship-Board-Slim.jpg?rlkey=g3292s7imtmmt93wnlmjrqmld&dl=0",
+                  "BackURL": "https://dl.dropboxusercontent.com/scl/fi/a12fhpin4b3yy4lfcwo56/Flagship-Board-Slim-BACK.jpg?rlkey=akzjyrnr191ar324wfegmhrj3&dl=0",
+                  "NumWidth": 1,
+                  "NumHeight": 1,
+                  "BackIsHidden": true,
+                  "UniqueBack": false,
+                  "Type": 1
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": "",
+              "AttachedSnapPoints": [
+                {
+                  "Position": {
+                    "x": -0.675400853,
+                    "y": 0.209228292,
+                    "z": 1.2074784
+                  },
+                  "Rotation": {
+                    "x": 1.07729545E-06,
+                    "y": -0.000603999,
+                    "z": 1.26331761E-05
+                  }
+                },
+                {
+                  "Position": {
+                    "x": 0.9150606,
+                    "y": 0.2097022,
+                    "z": -0.160020992
+                  },
+                  "Rotation": {
+                    "x": -1.49046273E-05,
+                    "y": 5.16969958E-05,
+                    "z": 1.25831493E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.6250599,
+                    "y": 0.209297821,
+                    "z": -0.1600239
+                  },
+                  "Rotation": {
+                    "x": 2.317533E-06,
+                    "y": 0.0245447587,
+                    "z": 1.07510414E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.3335045,
+                    "y": 0.208851367,
+                    "z": -0.15999724
+                  },
+                  "Rotation": {
+                    "x": -7.364971E-06,
+                    "y": 0.0420437,
+                    "z": 9.440502E-06
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.3337314,
+                    "y": 0.208228514,
+                    "z": -0.1600099
+                  },
+                  "Rotation": {
+                    "x": -1.13748411E-05,
+                    "y": 0.00552950939,
+                    "z": 1.21740632E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.623676538,
+                    "y": 0.208845958,
+                    "z": -0.1599931
+                  },
+                  "Rotation": {
+                    "x": -1.53402325E-05,
+                    "y": 359.974243,
+                    "z": 1.4514274E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.9149117,
+                    "y": 0.209125578,
+                    "z": -0.16000022
+                  },
+                  "Rotation": {
+                    "x": 1.29776868E-06,
+                    "y": 0.0367161557,
+                    "z": 9.839658E-06
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.914916635,
+                    "y": 0.2093354,
+                    "z": -1.00218952
+                  },
+                  "Rotation": {
+                    "x": -6.65412244E-06,
+                    "y": 5.16981745E-05,
+                    "z": 1.2583153E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.624916,
+                    "y": 0.2089934,
+                    "z": -1.0021925
+                  },
+                  "Rotation": {
+                    "x": 8.223608E-06,
+                    "y": 0.0245720819,
+                    "z": -1.65709589E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.333587468,
+                    "y": 0.209211558,
+                    "z": -1.00217843
+                  },
+                  "Rotation": {
+                    "x": -1.0462285E-05,
+                    "y": 0.00552951,
+                    "z": 1.21741077E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.333649576,
+                    "y": 0.209261283,
+                    "z": -1.00216579
+                  },
+                  "Rotation": {
+                    "x": 4.32647266E-06,
+                    "y": 0.0420437045,
+                    "z": 9.44062E-06
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.6238216,
+                    "y": 0.209104553,
+                    "z": -1.00216162
+                  },
+                  "Rotation": {
+                    "x": -2.28224667E-06,
+                    "y": 359.974243,
+                    "z": 1.45146669E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.9150567,
+                    "y": 0.209142089,
+                    "z": -1.00216866
+                  },
+                  "Rotation": {
+                    "x": 8.679072E-06,
+                    "y": 0.03671616,
+                    "z": 9.840355E-06
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                }
+              ]
+            },
+            {
+              "GUID": "11b21e",
+              "Name": "CardCustom",
+              "Transform": {
+                "posX": -22.0511589,
+                "posY": 1.04964924,
+                "posZ": 20.71278,
+                "rotX": 0.00121376454,
+                "rotY": 179.9997,
+                "rotZ": -0.000384220039,
+                "scaleX": 1.35717392,
+                "scaleY": 1.0,
+                "scaleZ": 1.35717392
+              },
+              "Nickname": "",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Tags": [
+                "Campaign Only"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": true,
+              "Hands": false,
+              "CardID": 38300,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "383": {
+                  "FaceURL": "https://dl.dropboxusercontent.com/scl/fi/n9lzretyezjeveq0ne7k3/Flagship-Board-Slim.jpg?rlkey=g3292s7imtmmt93wnlmjrqmld&dl=0",
+                  "BackURL": "https://dl.dropboxusercontent.com/scl/fi/a12fhpin4b3yy4lfcwo56/Flagship-Board-Slim-BACK.jpg?rlkey=akzjyrnr191ar324wfegmhrj3&dl=0",
+                  "NumWidth": 1,
+                  "NumHeight": 1,
+                  "BackIsHidden": true,
+                  "UniqueBack": false,
+                  "Type": 1
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": "",
+              "AttachedSnapPoints": [
+                {
+                  "Position": {
+                    "x": -0.675400853,
+                    "y": 0.209228292,
+                    "z": 1.2074784
+                  },
+                  "Rotation": {
+                    "x": 1.07729545E-06,
+                    "y": -0.000603999,
+                    "z": 1.26331761E-05
+                  }
+                },
+                {
+                  "Position": {
+                    "x": 0.9150606,
+                    "y": 0.2097022,
+                    "z": -0.160020992
+                  },
+                  "Rotation": {
+                    "x": -1.49046273E-05,
+                    "y": 5.16969958E-05,
+                    "z": 1.25831493E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.6250599,
+                    "y": 0.209297821,
+                    "z": -0.1600239
+                  },
+                  "Rotation": {
+                    "x": 2.317533E-06,
+                    "y": 0.0245447587,
+                    "z": 1.07510414E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.3335045,
+                    "y": 0.208851367,
+                    "z": -0.15999724
+                  },
+                  "Rotation": {
+                    "x": -7.364971E-06,
+                    "y": 0.0420437,
+                    "z": 9.440502E-06
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.3337314,
+                    "y": 0.208228514,
+                    "z": -0.1600099
+                  },
+                  "Rotation": {
+                    "x": -1.13748411E-05,
+                    "y": 0.00552950939,
+                    "z": 1.21740632E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.623676538,
+                    "y": 0.208845958,
+                    "z": -0.1599931
+                  },
+                  "Rotation": {
+                    "x": -1.53402325E-05,
+                    "y": 359.974243,
+                    "z": 1.4514274E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.9149117,
+                    "y": 0.209125578,
+                    "z": -0.16000022
+                  },
+                  "Rotation": {
+                    "x": 1.29776868E-06,
+                    "y": 0.0367161557,
+                    "z": 9.839658E-06
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.914916635,
+                    "y": 0.2093354,
+                    "z": -1.00218952
+                  },
+                  "Rotation": {
+                    "x": -6.65412244E-06,
+                    "y": 5.16981745E-05,
+                    "z": 1.2583153E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.624916,
+                    "y": 0.2089934,
+                    "z": -1.0021925
+                  },
+                  "Rotation": {
+                    "x": 8.223608E-06,
+                    "y": 0.0245720819,
+                    "z": -1.65709589E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.333587468,
+                    "y": 0.209211558,
+                    "z": -1.00217843
+                  },
+                  "Rotation": {
+                    "x": -1.0462285E-05,
+                    "y": 0.00552951,
+                    "z": 1.21741077E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.333649576,
+                    "y": 0.209261283,
+                    "z": -1.00216579
+                  },
+                  "Rotation": {
+                    "x": 4.32647266E-06,
+                    "y": 0.0420437045,
+                    "z": 9.44062E-06
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.6238216,
+                    "y": 0.209104553,
+                    "z": -1.00216162
+                  },
+                  "Rotation": {
+                    "x": -2.28224667E-06,
+                    "y": 359.974243,
+                    "z": 1.45146669E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.9150567,
+                    "y": 0.209142089,
+                    "z": -1.00216866
+                  },
+                  "Rotation": {
+                    "x": 8.679072E-06,
+                    "y": 0.03671616,
+                    "z": 9.840355E-06
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                }
+              ]
+            },
+            {
+              "GUID": "71c906",
+              "Name": "CardCustom",
+              "Transform": {
+                "posX": -22.4109726,
+                "posY": 1.05844331,
+                "posZ": 25.2825165,
+                "rotX": 0.00102576113,
+                "rotY": 180.003433,
+                "rotZ": -0.000117515607,
+                "scaleX": 1.35717392,
+                "scaleY": 1.0,
+                "scaleZ": 1.35717392
+              },
+              "Nickname": "",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.713235259,
+                "g": 0.713235259,
+                "b": 0.713235259
+              },
+              "Tags": [
+                "Campaign Only"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": true,
+              "Hands": false,
+              "CardID": 38300,
+              "SidewaysCard": false,
+              "CustomDeck": {
+                "383": {
+                  "FaceURL": "https://dl.dropboxusercontent.com/scl/fi/n9lzretyezjeveq0ne7k3/Flagship-Board-Slim.jpg?rlkey=g3292s7imtmmt93wnlmjrqmld&dl=0",
+                  "BackURL": "https://dl.dropboxusercontent.com/scl/fi/a12fhpin4b3yy4lfcwo56/Flagship-Board-Slim-BACK.jpg?rlkey=akzjyrnr191ar324wfegmhrj3&dl=0",
+                  "NumWidth": 1,
+                  "NumHeight": 1,
+                  "BackIsHidden": true,
+                  "UniqueBack": false,
+                  "Type": 1
+                }
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": "",
+              "AttachedSnapPoints": [
+                {
+                  "Position": {
+                    "x": -0.675400853,
+                    "y": 0.209228292,
+                    "z": 1.2074784
+                  },
+                  "Rotation": {
+                    "x": 1.07729545E-06,
+                    "y": -0.000603999,
+                    "z": 1.26331761E-05
+                  }
+                },
+                {
+                  "Position": {
+                    "x": 0.9150606,
+                    "y": 0.2097022,
+                    "z": -0.160020992
+                  },
+                  "Rotation": {
+                    "x": -1.49046273E-05,
+                    "y": 5.16969958E-05,
+                    "z": 1.25831493E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.6250599,
+                    "y": 0.209297821,
+                    "z": -0.1600239
+                  },
+                  "Rotation": {
+                    "x": 2.317533E-06,
+                    "y": 0.0245447587,
+                    "z": 1.07510414E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.3335045,
+                    "y": 0.208851367,
+                    "z": -0.15999724
+                  },
+                  "Rotation": {
+                    "x": -7.364971E-06,
+                    "y": 0.0420437,
+                    "z": 9.440502E-06
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.3337314,
+                    "y": 0.208228514,
+                    "z": -0.1600099
+                  },
+                  "Rotation": {
+                    "x": -1.13748411E-05,
+                    "y": 0.00552950939,
+                    "z": 1.21740632E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.623676538,
+                    "y": 0.208845958,
+                    "z": -0.1599931
+                  },
+                  "Rotation": {
+                    "x": -1.53402325E-05,
+                    "y": 359.974243,
+                    "z": 1.4514274E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.9149117,
+                    "y": 0.209125578,
+                    "z": -0.16000022
+                  },
+                  "Rotation": {
+                    "x": 1.29776868E-06,
+                    "y": 0.0367161557,
+                    "z": 9.839658E-06
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.914916635,
+                    "y": 0.2093354,
+                    "z": -1.00218952
+                  },
+                  "Rotation": {
+                    "x": -6.65412244E-06,
+                    "y": 5.16981745E-05,
+                    "z": 1.2583153E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.624916,
+                    "y": 0.2089934,
+                    "z": -1.0021925
+                  },
+                  "Rotation": {
+                    "x": 8.223608E-06,
+                    "y": 0.0245720819,
+                    "z": -1.65709589E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": 0.333587468,
+                    "y": 0.209211558,
+                    "z": -1.00217843
+                  },
+                  "Rotation": {
+                    "x": -1.0462285E-05,
+                    "y": 0.00552951,
+                    "z": 1.21741077E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.333649576,
+                    "y": 0.209261283,
+                    "z": -1.00216579
+                  },
+                  "Rotation": {
+                    "x": 4.32647266E-06,
+                    "y": 0.0420437045,
+                    "z": 9.44062E-06
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.6238216,
+                    "y": 0.209104553,
+                    "z": -1.00216162
+                  },
+                  "Rotation": {
+                    "x": -2.28224667E-06,
+                    "y": 359.974243,
+                    "z": 1.45146669E-05
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                },
+                {
+                  "Position": {
+                    "x": -0.9150567,
+                    "y": 0.209142089,
+                    "z": -1.00216866
+                  },
+                  "Rotation": {
+                    "x": 8.679072E-06,
+                    "y": 0.03671616,
+                    "z": 9.840355E-06
+                  },
+                  "Tags": [
+                    "City",
+                    "Starport"
+                  ]
+                }
+              ]
+            }
+          ]
+        },
+        {
+          "GUID": "5fdb31",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -27.8994732,
+            "posY": 3.20800424,
+            "posZ": 32.4570122,
+            "rotX": 0.161161512,
+            "rotY": 358.867523,
+            "rotZ": 0.121219411,
+            "scaleX": 1.64999986,
+            "scaleY": 1.64999986,
+            "scaleZ": 1.64999986
+          },
+          "Nickname": "Teal Flagship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.0,
+            "g": 0.58431375,
+            "b": 0.6627451
+          },
+          "Tags": [
+            "Campaign Only"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323289738/8161A7102023890661F0529BAF0A39E7D7D306EF/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323281733/48AA08AE5786C733C96DFC33F83E3DB9A333185A/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320925159/4400369BC01EBE558C735A76ABE12867BEA2BD52/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0
+              },
+              "SpecularIntensity": 0.6,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142858
+            },
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "States": {
+            "2": {
+              "GUID": "11c8f1",
+              "Name": "Custom_Model",
+              "Transform": {
+                "posX": -24.1579132,
+                "posY": 1.12029266,
+                "posZ": 33.53646,
+                "rotX": 0.00185919739,
+                "rotY": 359.976349,
+                "rotZ": -0.0002479781,
+                "scaleX": 1.64999986,
+                "scaleY": 1.64999986,
+                "scaleZ": 1.64999986
+              },
+              "Nickname": "Teal Flagship",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.0,
+                "g": 0.58431375,
+                "b": 0.6627451
+              },
+              "Tags": [
+                "Campaign Only"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": false,
+              "CustomMesh": {
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323281423/79572858F62560EC64E97EFA55C2515F007E1143/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323281733/48AA08AE5786C733C96DFC33F83E3DB9A333185A/",
+                "NormalURL": "",
+                "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323144752/CDE68E56C52ED1F29D28CDCF419BE030FCB36C33/",
+                "Convex": true,
+                "MaterialIndex": 1,
+                "TypeIndex": 1,
+                "CustomShader": {
+                  "SpecularColor": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                  },
+                  "SpecularIntensity": 0.6,
+                  "SpecularSharpness": 4.0,
+                  "FresnelStrength": 0.107142858
+                },
+                "CastShadows": true
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          }
+        },
+        {
+          "GUID": "7ab615",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -28.078043,
+            "posY": 3.21709824,
+            "posZ": 33.0601273,
+            "rotX": 0.0103779519,
+            "rotY": 358.857941,
+            "rotZ": 359.8115,
+            "scaleX": 1.64999986,
+            "scaleY": 1.64999986,
+            "scaleZ": 1.64999986
+          },
+          "Nickname": "White Flagship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.9006968,
+            "g": 0.9006968,
+            "b": 0.9006968
+          },
+          "Tags": [
+            "Campaign Only"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323289738/8161A7102023890661F0529BAF0A39E7D7D306EF/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323281733/48AA08AE5786C733C96DFC33F83E3DB9A333185A/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320925159/4400369BC01EBE558C735A76ABE12867BEA2BD52/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0
+              },
+              "SpecularIntensity": 0.6,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142858
+            },
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "States": {
+            "2": {
+              "GUID": "074327",
+              "Name": "Custom_Model",
+              "Transform": {
+                "posX": -20.4284687,
+                "posY": 1.12028837,
+                "posZ": 30.76583,
+                "rotX": -0.00173860171,
+                "rotY": -0.003821768,
+                "rotZ": -0.00158454571,
+                "scaleX": 1.64999986,
+                "scaleY": 1.64999986,
+                "scaleZ": 1.64999986
+              },
+              "Nickname": "White Flagship",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.9019608,
+                "g": 0.9019608,
+                "b": 0.9019608
+              },
+              "Tags": [
+                "Campaign Only"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": false,
+              "CustomMesh": {
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323281423/79572858F62560EC64E97EFA55C2515F007E1143/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323281733/48AA08AE5786C733C96DFC33F83E3DB9A333185A/",
+                "NormalURL": "",
+                "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323144752/CDE68E56C52ED1F29D28CDCF419BE030FCB36C33/",
+                "Convex": true,
+                "MaterialIndex": 1,
+                "TypeIndex": 1,
+                "CustomShader": {
+                  "SpecularColor": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                  },
+                  "SpecularIntensity": 0.6,
+                  "SpecularSharpness": 4.0,
+                  "FresnelStrength": 0.107142858
+                },
+                "CastShadows": true
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          }
+        },
+        {
+          "GUID": "4cf25e",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -26.6373253,
+            "posY": 3.206353,
+            "posZ": 32.73942,
+            "rotX": 0.214959875,
+            "rotY": 358.318817,
+            "rotZ": 0.09024223,
+            "scaleX": 1.64999986,
+            "scaleY": 1.64999986,
+            "scaleZ": 1.64999986
+          },
+          "Nickname": "Yellow Flagship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 1.0,
+            "g": 0.716666639,
+            "b": 0.0
+          },
+          "Tags": [
+            "Campaign Only"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323289738/8161A7102023890661F0529BAF0A39E7D7D306EF/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323281733/48AA08AE5786C733C96DFC33F83E3DB9A333185A/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320925159/4400369BC01EBE558C735A76ABE12867BEA2BD52/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0
+              },
+              "SpecularIntensity": 0.6,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142858
+            },
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "States": {
+            "2": {
+              "GUID": "b7c032",
+              "Name": "Custom_Model",
+              "Transform": {
+                "posX": -24.2682934,
+                "posY": 1.1202985,
+                "posZ": 31.9726276,
+                "rotX": -0.00377786579,
+                "rotY": 0.06869216,
+                "rotZ": -5.57103E-07,
+                "scaleX": 1.64999986,
+                "scaleY": 1.64999986,
+                "scaleZ": 1.64999986
+              },
+              "Nickname": "Yellow Flagship",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 1.0,
+                "g": 0.716666639,
+                "b": 0.0
+              },
+              "Tags": [
+                "Campaign Only"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": false,
+              "CustomMesh": {
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323281423/79572858F62560EC64E97EFA55C2515F007E1143/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323281733/48AA08AE5786C733C96DFC33F83E3DB9A333185A/",
+                "NormalURL": "",
+                "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323144752/CDE68E56C52ED1F29D28CDCF419BE030FCB36C33/",
+                "Convex": true,
+                "MaterialIndex": 1,
+                "TypeIndex": 1,
+                "CustomShader": {
+                  "SpecularColor": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                  },
+                  "SpecularIntensity": 0.6,
+                  "SpecularSharpness": 4.0,
+                  "FresnelStrength": 0.107142858
+                },
+                "CastShadows": true
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          }
+        },
+        {
+          "GUID": "e3a433",
+          "Name": "Custom_Model",
+          "Transform": {
+            "posX": -26.8162556,
+            "posY": 3.209781,
+            "posZ": 33.33826,
+            "rotX": 0.230689168,
+            "rotY": 358.448822,
+            "rotZ": 359.785645,
+            "scaleX": 1.64999986,
+            "scaleY": 1.64999986,
+            "scaleZ": 1.64999986
+          },
+          "Nickname": "Red Flagship",
+          "Description": "",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.882352948,
+            "g": 0.3254899,
+            "b": 0.2392154
+          },
+          "Tags": [
+            "Campaign Only"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": false,
+          "Hands": false,
+          "CustomMesh": {
+            "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323289738/8161A7102023890661F0529BAF0A39E7D7D306EF/",
+            "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323281733/48AA08AE5786C733C96DFC33F83E3DB9A333185A/",
+            "NormalURL": "",
+            "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110320925159/4400369BC01EBE558C735A76ABE12867BEA2BD52/",
+            "Convex": true,
+            "MaterialIndex": 1,
+            "TypeIndex": 1,
+            "CustomShader": {
+              "SpecularColor": {
+                "r": 1.0,
+                "g": 1.0,
+                "b": 1.0
+              },
+              "SpecularIntensity": 0.6,
+              "SpecularSharpness": 4.0,
+              "FresnelStrength": 0.107142858
+            },
+            "CastShadows": true
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": "",
+          "States": {
+            "2": {
+              "GUID": "c271d9",
+              "Name": "Custom_Model",
+              "Transform": {
+                "posX": -22.8547859,
+                "posY": 1.12027872,
+                "posZ": 36.8551826,
+                "rotX": -1.66108221E-05,
+                "rotY": 359.956879,
+                "rotZ": -1.70692219E-05,
+                "scaleX": 1.64999986,
+                "scaleY": 1.64999986,
+                "scaleZ": 1.64999986
+              },
+              "Nickname": "Red Flagship",
+              "Description": "",
+              "GMNotes": "",
+              "AltLookAngle": {
+                "x": 0.0,
+                "y": 0.0,
+                "z": 0.0
+              },
+              "ColorDiffuse": {
+                "r": 0.882352948,
+                "g": 0.325490028,
+                "b": 0.239215523
+              },
+              "Tags": [
+                "Campaign Only"
+              ],
+              "LayoutGroupSortIndex": 0,
+              "Value": 0,
+              "Locked": false,
+              "Grid": true,
+              "Snap": true,
+              "IgnoreFoW": false,
+              "MeasureMovement": false,
+              "DragSelectable": true,
+              "Autoraise": true,
+              "Sticky": true,
+              "Tooltip": true,
+              "GridProjection": false,
+              "HideWhenFaceDown": false,
+              "Hands": false,
+              "CustomMesh": {
+                "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323281423/79572858F62560EC64E97EFA55C2515F007E1143/",
+                "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323281733/48AA08AE5786C733C96DFC33F83E3DB9A333185A/",
+                "NormalURL": "",
+                "ColliderURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323144752/CDE68E56C52ED1F29D28CDCF419BE030FCB36C33/",
+                "Convex": true,
+                "MaterialIndex": 1,
+                "TypeIndex": 1,
+                "CustomShader": {
+                  "SpecularColor": {
+                    "r": 1.0,
+                    "g": 1.0,
+                    "b": 1.0
+                  },
+                  "SpecularIntensity": 0.6,
+                  "SpecularSharpness": 4.0,
+                  "FresnelStrength": 0.107142858
+                },
+                "CastShadows": true
+              },
+              "LuaScript": "",
+              "LuaScriptState": "",
+              "XmlUI": ""
+            }
+          }
+        }
+      ]
+    },
+    {
       "GUID": "ea53d9",
       "Name": "Bag",
       "Transform": {

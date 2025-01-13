@@ -758,6 +758,10 @@ function BaseGame.destroy_unused_miniature_ship_supplies()
     if mini_imperial_ships_bag then
         mini_imperial_ships_bag.destroy()
     end
+    local mini_flagships = getObjectFromGUID(Global.getVar("mini_flagships_GUID"))
+    if mini_flagships then
+        mini_flagships.destroy()
+    end
 end
 
 function BaseGame.upgrade_ships_to_miniatures()
@@ -792,6 +796,17 @@ function BaseGame.upgrade_ships_to_miniatures()
     end
     -- set the new imperial ships GUID
     Global.setVar("imperial_ships_GUID", Global.getVar("mini_imperial_ships_GUID"))
+
+    local flagships = getObjectFromGUID(Global.getVar("flagships_GUID"))
+    if flagships then
+        print("getting the flagship bag")
+        local original_pos = flagships.getPosition()
+        flagships.destroy()
+        local mini_flagships = getObjectFromGUID(Global.getVar("mini_flagships_GUID"))
+        if mini_flagships then
+            mini_flagships.setPosition(original_pos)
+        end
+    end
 end
 
 function BaseGame.setup_or_destroy_miniatures(with_miniatures)
