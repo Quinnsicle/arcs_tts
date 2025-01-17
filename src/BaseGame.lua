@@ -48,7 +48,7 @@ local BaseGame = {
 
 local ArcsPlayer = require("src/ArcsPlayer")
 local Counters = require("src/Counters")
-local supplies = require("src/Supplies")
+local Supplies = require("src/Supplies")
 local ActionCards = require("src/ActionCards")
 local resource = require("src/Resource")
 local merchant = require("src/Merchant")
@@ -745,7 +745,7 @@ function BaseGame.destroy_grey_setup_menu_objects()
     destroy_objects(grey_unchanged_meeples)
 end
 
-function BaseGame.destroy_unused_miniature_ship_supplies()
+function BaseGame.destroy_unused_miniature_supplies()
     local player_colors = {"White", "Red", "Yellow", "Teal"}
     for _, color in ipairs(player_colors) do
         local player_pieces_guids = Global.getVar("player_pieces_GUIDs")
@@ -764,57 +764,60 @@ function BaseGame.destroy_unused_miniature_ship_supplies()
     end
 end
 
-function BaseGame.upgrade_ships_to_miniatures()
+function BaseGame.upgrade_to_miniatures()
+    -- Helper function to replace any piece bag with its mini version
+    local function replace_piece_bag(regular_guid, mini_guid, update_global)
+        local regular_bag = getObjectFromGUID(regular_guid)
+        if not regular_bag then return end
+        
+        local original_pos = regular_bag.getPosition()
+        regular_bag.destroy()
+        
+        local mini_bag = getObjectFromGUID(mini_guid)
+        if mini_bag then
+            mini_bag.setPosition(original_pos)
+        end
+        
+        -- Update global variable if requested
+        if update_global then
+            Global.setVar(update_global, mini_guid)
+        end
+    end
+
+    -- Replace player pieces
     local player_pieces_guids = Global.getVar("player_pieces_GUIDs")
     local colors = {"White", "Red", "Yellow", "Teal"}
-
+    
     for _, color in ipairs(colors) do
         local pieces = player_pieces_guids[color]
-        local ship_bag = getObjectFromGUID(pieces.ships)
-
-        if ship_bag then
-            local original_pos = ship_bag.getPosition()
-            ship_bag.destroy()
-            pieces.ships = pieces.mini_ships
-            
-            local mini_ship_bag = getObjectFromGUID(pieces.mini_ships)
-            if mini_ship_bag then
-                mini_ship_bag.setPosition(original_pos)
-            end
-        end
+        -- Replace ships and agents with their mini versions
+        replace_piece_bag(pieces["ships"], pieces["mini_ships"])
+        replace_piece_bag(pieces["agents"], pieces["mini_agents"])
+        -- Update the GUIDs in the player_pieces table
+        pieces["ships"] = pieces["mini_ships"]
+        pieces["agents"] = pieces["mini_agents"]
     end
-    Global.setVar("player_pieces_GUIDs", player_pieces_guids)
 
-    local imperial_ship_bag = getObjectFromGUID(Global.getVar("imperial_ships_GUID"))
-    if imperial_ship_bag then
-        local original_pos = imperial_ship_bag.getPosition()
-        imperial_ship_bag.destroy()
-        local mini_imperial_ships_bag = getObjectFromGUID(Global.getVar("mini_imperial_ships_GUID"))
-        if mini_imperial_ships_bag then
-            mini_imperial_ships_bag.setPosition(original_pos)
-        end
-    end
-    -- set the new imperial ships GUID
-    Global.setVar("imperial_ships_GUID", Global.getVar("mini_imperial_ships_GUID"))
+    -- Replace imperial ships
+    replace_piece_bag(
+        Global.getVar("imperial_ships_GUID"),
+        Global.getVar("mini_imperial_ships_GUID"),
+        "imperial_ships_GUID"
+    )
 
-    local flagships = getObjectFromGUID(Global.getVar("flagships_GUID"))
-    if flagships then
-        print("getting the flagship bag")
-        local original_pos = flagships.getPosition()
-        flagships.destroy()
-        local mini_flagships = getObjectFromGUID(Global.getVar("mini_flagships_GUID"))
-        if mini_flagships then
-            mini_flagships.setPosition(original_pos)
-        end
-    end
+    -- Replace flagships
+    replace_piece_bag(
+        Global.getVar("flagships_GUID"),
+        Global.getVar("mini_flagships_GUID")
+    )
 end
 
 function BaseGame.setup_or_destroy_miniatures(with_miniatures)
     BaseGame.destroy_grey_setup_menu_objects()
     if with_miniatures then
-        BaseGame.upgrade_ships_to_miniatures()
+        BaseGame.upgrade_to_miniatures()
     else
-        BaseGame.destroy_unused_miniature_ship_supplies()
+        BaseGame.destroy_unused_miniature_supplies()
     end
 end
 

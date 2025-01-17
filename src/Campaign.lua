@@ -63,7 +63,7 @@ local Campaign = {
 
 local BaseGame = require("src/BaseGame")
 local Counters = require("src/Counters")
-local supplies = require("src/Supplies")
+local Supplies = require("src/Supplies")
 local ActionCards = require("src/ActionCards")
 local resource = require("src/Resource")
 local merchant = require("src/Merchant")
