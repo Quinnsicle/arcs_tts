@@ -765,7 +765,6 @@ function BaseGame.destroy_unused_miniature_supplies()
 end
 
 function BaseGame.upgrade_to_miniatures()
-    -- Helper function to replace any piece bag with its mini version
     local function replace_piece_bag(regular_guid, mini_guid, update_global)
         local regular_bag = getObjectFromGUID(regular_guid)
         if not regular_bag then return end
@@ -778,34 +777,28 @@ function BaseGame.upgrade_to_miniatures()
             mini_bag.setPosition(original_pos)
         end
         
-        -- Update global variable if requested
         if update_global then
             Global.setVar(update_global, mini_guid)
         end
     end
 
-    -- Replace player pieces
     local player_pieces_guids = Global.getVar("player_pieces_GUIDs")
     local colors = {"White", "Red", "Yellow", "Teal"}
     
     for _, color in ipairs(colors) do
         local pieces = player_pieces_guids[color]
-        -- Replace ships and agents with their mini versions
         replace_piece_bag(pieces["ships"], pieces["mini_ships"])
         replace_piece_bag(pieces["agents"], pieces["mini_agents"])
-        -- Update the GUIDs in the player_pieces table
         pieces["ships"] = pieces["mini_ships"]
         pieces["agents"] = pieces["mini_agents"]
     end
 
-    -- Replace imperial ships
     replace_piece_bag(
         Global.getVar("imperial_ships_GUID"),
         Global.getVar("mini_imperial_ships_GUID"),
         "imperial_ships_GUID"
     )
 
-    -- Replace flagships
     replace_piece_bag(
         Global.getVar("flagships_GUID"),
         Global.getVar("mini_flagships_GUID")
