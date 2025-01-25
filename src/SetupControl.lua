@@ -4,7 +4,11 @@ local BaseGame = require("src/BaseGame")
 local Campaign = require("src/Campaign")
 local Counters = require("src/Counters")
 
-local gold = {0.8, 0.58, 0.27}
+local GOLD = {0.8, 0.58, 0.27}
+local BLACK = {0.05, 0.05, 0.05}
+local GREEN = {0.2, 0.5, 0.2}
+local PURPLE = {0.5, 0.3, 0.7}
+local RED = {0.8, 0.3, 0.2}
 local HEADER_FONT_SIZE = 170
 local HEADER_SCALE = {0.6, 0.6, 0.6}
 local HEADER_WIDTH = 0
@@ -24,8 +28,8 @@ local optionsText_params = {
     height = HEADER_HEIGHT,
     font_size = HEADER_FONT_SIZE,
     scale = HEADER_SCALE,
-    color = {0.05, 0.05, 0.05},
-    font_color = gold,
+    color = BLACK,
+    font_color = GOLD,
 }
 
 local toggleLeadersWITHOUT_params = {
@@ -39,8 +43,9 @@ local toggleLeadersWITHOUT_params = {
     height = BUTTON_HEIGHT,
     font_size = BUTTON_FONT_SIZE,
     scale = BUTTON_SCALE,
-    color = {0.8, 0.3, 0.2},
-    font_color = {0, 0, 0}
+    color = BLACK,
+    font_color = GOLD,
+    hover_color = GREEN
 }
 local toggleLeadersWITH_params = {
     index = 1,
@@ -53,8 +58,9 @@ local toggleLeadersWITH_params = {
     height = BUTTON_HEIGHT,
     font_size = BUTTON_FONT_SIZE,
     scale = BUTTON_SCALE,
-    color = {0.2, 0.5, 0.2},
-    font_color = {0, 0, 0}
+    color = GOLD,
+    font_color = BLACK,
+    hover_color = RED
 }
 local toggleExpansionEXCLUDE_params = {
     index = 2,
@@ -67,7 +73,9 @@ local toggleExpansionEXCLUDE_params = {
     height = BUTTON_HEIGHT,
     font_size = BUTTON_FONT_SIZE,
     scale = BUTTON_SCALE,
-    color = {0.8, 0.3, 0.2}
+    color = BLACK,
+    font_color = GOLD,
+    hover_color = GREEN
 }
 local toggleExpansionINCLUDE_params = {
     index = 2,
@@ -80,7 +88,9 @@ local toggleExpansionINCLUDE_params = {
     height = BUTTON_HEIGHT,
     font_size = BUTTON_FONT_SIZE,
     scale = BUTTON_SCALE,
-    color = {0.3, 0.5, 0.2}
+    color = GOLD,
+    font_color = BLACK,
+    hover_color = RED
 }
 local splitDiscardFACEDOWN_params = {
     index = 3,
@@ -93,7 +103,9 @@ local splitDiscardFACEDOWN_params = {
     height = BUTTON_HEIGHT,
     font_size = BUTTON_FONT_SIZE,
     scale = BUTTON_SCALE,
-    color = {0.8, 0.3, 0.2}
+    color = BLACK,
+    font_color = GOLD,
+    hover_color = GREEN
 }
 local splitDiscardFACEUP_params = {
     index = 3,
@@ -106,7 +118,9 @@ local splitDiscardFACEUP_params = {
     height = BUTTON_HEIGHT,
     font_size = BUTTON_FONT_SIZE,
     scale = BUTTON_SCALE,
-    color = {0.3, 0.5, 0.2}
+    color = GOLD,
+    font_color = BLACK,
+    hover_color = RED
 }
 local miniaturesDISABLED_params = {
     index = 4,
@@ -114,12 +128,14 @@ local miniaturesDISABLED_params = {
     click_function = "toggle_miniatures",
     label = "Miniatures",
     tooltip = "Enable Miniatures",
-    position = {-0.51, 0.5, 1.17},
+    position = {-0.51, 0.5, 1.16},
     width = BUTTON_WIDTH,
     height = BUTTON_HEIGHT,
     font_size = BUTTON_FONT_SIZE,
     scale = BUTTON_SCALE,
-    color = {0.8, 0.3, 0.2}
+    color = BLACK,
+    font_color = GOLD,
+    hover_color = GREEN
 }
 local miniaturesENABLED_params = {
     index = 4,
@@ -127,12 +143,14 @@ local miniaturesENABLED_params = {
     click_function = "toggle_miniatures",
     label = "Miniatures",
     tooltip = "Disable Miniatures",
-    position = {-0.51, 0.5, 1.17},
+    position = {-0.51, 0.5, 1.16},
     width = BUTTON_WIDTH,
     height = BUTTON_HEIGHT,
     font_size = BUTTON_FONT_SIZE,
     scale = BUTTON_SCALE,
-    color = {0.3, 0.5, 0.2}
+    color = GOLD,
+    font_color = BLACK,
+    hover_color = RED
 }
 local setupStartGame_params = {
     click_function = "doNothing",
@@ -144,8 +162,8 @@ local setupStartGame_params = {
     height = HEADER_HEIGHT,
     font_size = HEADER_FONT_SIZE,
     scale = HEADER_SCALE,
-    color = {0.05, 0.05, 0.05},
-    font_color = gold,
+    color = BLACK,
+    font_color = GOLD,
 }
 local setupBaseGame_params = {
     index = 6,
@@ -157,9 +175,9 @@ local setupBaseGame_params = {
     height = BUTTON_HEIGHT,
     font_size = BUTTON_FONT_SIZE,
     scale = BUTTON_SCALE,
-    color = {0.7, 0.7, 0.7},
-    font_color = black,
-    hover_color = {0.5, 0.3, 0.7}
+    color = GREEN,
+    font_color = BLACK,
+    hover_color = PURPLE
 }
 local setupCampaignGame_params = {
     index = 7,
@@ -171,9 +189,9 @@ local setupCampaignGame_params = {
     height = BUTTON_HEIGHT,
     font_size = BUTTON_FONT_SIZE,
     scale = BUTTON_SCALE,
-    color = {0.7, 0.7, 0.7},
-    font_color = black,
-    hover_color = {0.5, 0.3, 0.7}
+    color = GREEN,
+    font_color = BLACK,
+    hover_color = PURPLE
 }
 local customSetup_params = {
     index = 8,
@@ -186,9 +204,9 @@ local customSetup_params = {
     height = BUTTON_HEIGHT,
     font_size = BUTTON_FONT_SIZE,
     scale = BUTTON_SCALE,
-    color = {0.7, 0.7, 0.7},
-    font_color = black,
-    hover_color = {0.5, 0.3, 0.7}
+    color = GREEN,
+    font_color = BLACK,
+    hover_color = PURPLE
 }
 
 SetupControl = {
@@ -324,10 +342,12 @@ function leader_buttons()
 
     self.editButton({
         index = 2,
-        font_size = 150,
         click_function = "setup_leaders",
         label = "Setup Leaders",
-        tooltip = ""
+        color = GREEN,
+        font_color = BLACK,
+        hover_color = PURPLE,
+        tooltip = "Setup ship placements and acquire resources based on the leader detected to the left of each player board"
     })
 
     -- Clear all other buttons
