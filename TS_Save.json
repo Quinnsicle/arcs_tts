@@ -28099,6 +28099,7 @@
               "Tags": [
                 "Campaign Only",
                 "Action",
+                "Court",
                 "F8"
               ],
               "LayoutGroupSortIndex": 0,
@@ -28162,6 +28163,7 @@
               "Tags": [
                 "Campaign Only",
                 "Action",
+                "Court",
                 "F8"
               ],
               "LayoutGroupSortIndex": 0,
@@ -28225,6 +28227,7 @@
               "Tags": [
                 "Campaign Only",
                 "Action",
+                "Court",
                 "F8"
               ],
               "LayoutGroupSortIndex": 0,
@@ -28288,7 +28291,8 @@
               "Tags": [
                 "Campaign Only",
                 "Action",
-                "F8"
+                "F8",
+                "Court"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -28351,7 +28355,8 @@
               "Tags": [
                 "Campaign Only",
                 "Action",
-                "F8"
+                "F8",
+                "Court"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -28414,6 +28419,7 @@
               "Tags": [
                 "Campaign Only",
                 "Action",
+                "Court",
                 "F8"
               ],
               "LayoutGroupSortIndex": 0,
@@ -28477,6 +28483,7 @@
               "Tags": [
                 "Campaign Only",
                 "Action",
+                "Court",
                 "F8"
               ],
               "LayoutGroupSortIndex": 0,
@@ -28540,6 +28547,7 @@
               "Tags": [
                 "Campaign Only",
                 "Action",
+                "Court",
                 "F8"
               ],
               "LayoutGroupSortIndex": 0,
@@ -28603,6 +28611,7 @@
               "Tags": [
                 "Campaign Only",
                 "Action",
+                "Court",
                 "F8"
               ],
               "LayoutGroupSortIndex": 0,
@@ -63527,7 +63536,9 @@
           },
           "Tags": [
             "Campaign Only",
-            "F5"
+            "F5",
+            "Fate",
+            "Leader"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
