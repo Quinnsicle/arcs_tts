@@ -83401,14 +83401,14 @@
       "Name": "Custom_Model",
       "Transform": {
         "posX": 3.537366,
-        "posY": 1.9907763,
-        "posZ": -8.223384,
-        "rotX": 0.0003354332,
-        "rotY": 179.988312,
-        "rotZ": -0.000832710241,
-        "scaleX": 2.449999,
-        "scaleY": 2.449999,
-        "scaleZ": 2.449999
+        "posY": 1.99497008,
+        "posZ": -8.223383,
+        "rotX": 0.00033363243,
+        "rotY": 179.988266,
+        "rotZ": -0.0008290186,
+        "scaleX": 1.99999952,
+        "scaleY": 1.99999952,
+        "scaleZ": 1.99999952
       },
       "Nickname": "Grey Agent",
       "Description": "",
@@ -84650,6 +84650,75 @@
           "XmlUI": ""
         }
       }
+    },
+    {
+      "GUID": "9d16be",
+      "Name": "Custom_Model",
+      "Transform": {
+        "posX": 3.53736639,
+        "posY": -5.002875,
+        "posZ": -8.223383,
+        "rotX": 0.0003361847,
+        "rotY": 180.031754,
+        "rotZ": -0.000839585962,
+        "scaleX": 0.5000004,
+        "scaleY": 0.5000004,
+        "scaleZ": 0.5000004
+      },
+      "Nickname": "Grey Miniature Agent",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 0.5294118,
+        "g": 0.5294118,
+        "b": 0.5294118
+      },
+      "Tags": [
+        "Agent",
+        "lock"
+      ],
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "CustomMesh": {
+        "MeshURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323746542/1947992D7C4A19675792CCC7CADD2530DEA207E2/",
+        "DiffuseURL": "https://steamusercontent-a.akamaihd.net/ugc/15299110323700384/D1E141E64839795CBEF249E22F003B778021BA40/",
+        "NormalURL": "",
+        "ColliderURL": "",
+        "Convex": true,
+        "MaterialIndex": 3,
+        "TypeIndex": 1,
+        "CustomShader": {
+          "SpecularColor": {
+            "r": 1.0,
+            "g": 1.0,
+            "b": 1.0
+          },
+          "SpecularIntensity": 0.0,
+          "SpecularSharpness": 2.0,
+          "FresnelStrength": 0.0
+        },
+        "CastShadows": true
+      },
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
     },
     {
       "GUID": "94823f",
