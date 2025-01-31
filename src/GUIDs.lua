@@ -50,14 +50,37 @@ seized_initiative_GUID = "e0f490"
 
 chapter_pawn_GUID = "9c3ac8"
 
+-- Setup Menu example pieces
+setup_meeples_GUIDs = {
+    fresh_ship = "6e6f6b",
+    damaged_ship = "b2b35c",
+    fresh_imperial_ship = "5983db",
+    damaged_imperial_ship = "e0bcd1",
+    flag_ship = "339446",
+    agent = "8e8851"
+}
+
+setup_unchanged_meeples_GUIDs = {}
+
+setup_miniatures_GUIDs = {
+    fresh_ship = "fb8e2b",
+    damaged_ship = "20d86f",
+    fresh_imperial_ship = "45e3ef",
+    damaged_imperial_ship = "e4ac0b",
+    flag_ship = "4cf25e",
+    agent = "9d16be"
+}
+
 -- Players Pieces
 player_pieces_GUIDs = {
     ["White"] = {
         player_board = "999dbd",
         resource = {"822a9c", "00ee1b"},
         ships = "6883e6",
+        mini_ships = "93dca4",
         starports = "b96445",
         agents = "c863eb",
+        mini_agents = "57ca23",
         cities = {"822a9c", "00ee1b", "a50d56", "06f4a8", "81c3a7"},
         initiative_zone = "2e1cd3",
         trophies_zone = "275a50",
@@ -68,8 +91,10 @@ player_pieces_GUIDs = {
         player_board = "5aa44c",
         resource = {"dbf4de", "799077"},
         ships = "a75924",
+        mini_ships = "1ae879",
         starports = "b9ebd3",
         agents = "7b3749",
+        mini_agents = "8018da",
         cities = {"dbf4de", "799077", "acfa72", "ac28fb", "b41592"},
         initiative_zone = "3fc6fd",
         trophies_zone = "7f5014",
@@ -80,8 +105,10 @@ player_pieces_GUIDs = {
         player_board = "c0c8a1",
         resource = {"33577c", "cf5b95"},
         ships = "7e0fe2",
+        mini_ships = "8c2ffb",
         starports = "51a8f5",
         agents = "bbb3aa",
+        mini_agents = "b9cde7",
         cities = {"33577c", "cf5b95", "0ac3c2", "6e36ca", "282f37"},
         initiative_zone = "32f290",
         trophies_zone = "48b6fb",
@@ -92,8 +119,10 @@ player_pieces_GUIDs = {
         player_board = "ae512a",
         resource = {"f3da7f", "f3da7f"},
         ships = "2da385",
+        mini_ships = "94823f",
         starports = "7e625d",
         agents = "791097",
+        mini_agents = "bb9a25",
         cities = {"f3da7f", "5e753e", "79b799", "fad0f1", "45c804"},
         initiative_zone = "cdc545",
         trophies_zone = "3085c9",
@@ -234,6 +263,9 @@ number_die_GUID = "d5e298"
 die_zone_GUID = "1b45bb"
 
 imperial_ships_GUID = "beb54d"
+mini_imperial_ships_GUID = "31121e"
+flagships_GUID = "ea53d9"
+mini_flagships_GUID = "36f5c0"
 free_cities_GUID = "80742e"
 free_starports_GUID = "c79cb8"
 blight_GUID = "ff61a8"

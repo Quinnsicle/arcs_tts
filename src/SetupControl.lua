@@ -4,132 +4,209 @@ local BaseGame = require("src/BaseGame")
 local Campaign = require("src/Campaign")
 local Counters = require("src/Counters")
 
-local gold = {0.8, 0.58, 0.27}
+local GOLD = {0.8, 0.58, 0.27}
+local BLACK = {0.05, 0.05, 0.05}
+local GREEN = {0.2, 0.5, 0.2}
+local PURPLE = {0.5, 0.3, 0.7}
+local RED = {0.8, 0.3, 0.2}
+local HEADER_FONT_SIZE = 170
+local HEADER_SCALE = {0.6, 0.6, 0.6}
+local HEADER_WIDTH = 0
+local HEADER_HEIGHT = 0
+local BUTTON_FONT_SIZE = 140
+local BUTTON_SCALE = {0.3, 0.6, 0.6}
+local BUTTON_WIDTH = 1500
+local BUTTON_HEIGHT = 380
+
+local optionsText_params = {
+    click_function = "doNothing",
+    function_owner = self,
+    label = "Options",
+    tooltip = "Toggle the below options to modify the game setup",
+    position = {-0.52, 0.5, -1.15},
+    width = HEADER_WIDTH,
+    height = HEADER_HEIGHT,
+    font_size = HEADER_FONT_SIZE,
+    scale = HEADER_SCALE,
+    color = BLACK,
+    font_color = GOLD,
+}
 
 local toggleLeadersWITHOUT_params = {
-    index = 0,
+    index = 1,
     click_function = "toggle_leaders",
     function_owner = self,
-    label = "Play with Leaders",
-    tooltip = "Enable leaders",
-    position = {0, 0.5, -1.17},
-    width = 820,
-    height = 260,
-    font_size = 72,
-    scale = {1, 1, 1},
-    color = {0.8, 0.3, 0.2},
-    font_color = {0, 0, 0}
+    label = " Leaders & Lore ",
+    tooltip = "Enable Leaders & Lore mode for base game (8 leaders, 14 lore)",
+    position = {-0.51, 0.5, -0.59},
+    width = BUTTON_WIDTH,
+    height = BUTTON_HEIGHT,
+    font_size = BUTTON_FONT_SIZE,
+    scale = BUTTON_SCALE,
+    color = BLACK,
+    font_color = GOLD,
+    hover_color = GREEN
 }
 local toggleLeadersWITH_params = {
-    index = 0,
+    index = 1,
     click_function = "toggle_leaders",
     function_owner = self,
-    label = "Play with Leaders",
-    tooltip = "Disable leaders",
-    position = {0, 0.5, -1.17},
-    width = 820,
-    height = 260,
-    font_size = 72,
-    scale = {1, 1, 1},
-    color = {0.2, 0.5, 0.2},
-    font_color = {0, 0, 0}
+    label = " Leaders & Lore ",
+    tooltip = "Disable Leaders & Lore mode for base game",
+    position = {-0.51, 0.5, -0.59},
+    width = BUTTON_WIDTH,
+    height = BUTTON_HEIGHT,
+    font_size = BUTTON_FONT_SIZE,
+    scale = BUTTON_SCALE,
+    color = GOLD,
+    font_color = BLACK,
+    hover_color = RED
 }
 local toggleExpansionEXCLUDE_params = {
-    index = 1,
+    index = 2,
     click_function = "toggle_expansion",
     function_owner = self,
     label = "Leaders & Lore\nExpansion Pack",
-    tooltip = "Enable Leaders & Lore Pack",
-    position = {-0.45, 0.5, -0.59},
-    width = 440,
-    height = 260,
-    font_size = 60,
-    scale = {1, 1, 1},
-    color = {0.8, 0.3, 0.2}
+    tooltip = "Enable Leaders & Lore Expansion Pack (16 total leaders, 28 total lore)",
+    position = {-0.51, 0.5, 0},
+    width = BUTTON_WIDTH,
+    height = BUTTON_HEIGHT,
+    font_size = BUTTON_FONT_SIZE,
+    scale = BUTTON_SCALE,
+    color = BLACK,
+    font_color = GOLD,
+    hover_color = GREEN
 }
 local toggleExpansionINCLUDE_params = {
-    index = 1,
+    index = 2,
     click_function = "toggle_expansion",
     function_owner = self,
     label = "Leaders & Lore\nExpansion Pack",
-    tooltip = "Disable Leaders & Lore Pack",
-    position = {-0.45, 0.5, -0.59},
-    width = 440,
-    height = 260,
-    font_size = 60,
-    scale = {1, 1, 1},
-    color = {0.3, 0.5, 0.2}
+    tooltip = "Disable Leaders & Lore Expansion Pack",
+    position = {-0.51, 0.5, 0},
+    width = BUTTON_WIDTH,
+    height = BUTTON_HEIGHT,
+    font_size = BUTTON_FONT_SIZE,
+    scale = BUTTON_SCALE,
+    color = GOLD,
+    font_color = BLACK,
+    hover_color = RED
 }
 local splitDiscardFACEDOWN_params = {
-    index = 2,
+    index = 3,
     function_owner = self,
     click_function = "toggle_split_discard",
     label = "Split\nDiscard Piles",
-    tooltip = "Enable Split Discard",
-    position = {0.45, 0.5, -0.59},
-    width = 440,
-    height = 260,
-    font_size = 60,
-    scale = {1, 1, 1},
-    color = {0.8, 0.3, 0.2}
+    tooltip = "Reveal face-up played action cards to all players throughout the game",
+    position = {-0.51, 0.5, 0.59},
+    width = BUTTON_WIDTH,
+    height = BUTTON_HEIGHT,
+    font_size = BUTTON_FONT_SIZE,
+    scale = BUTTON_SCALE,
+    color = BLACK,
+    font_color = GOLD,
+    hover_color = GREEN
 }
 local splitDiscardFACEUP_params = {
-    index = 2,
+    index = 3,
     function_owner = self,
     click_function = "toggle_split_discard",
     label = "Split\nDiscard Piles",
-    tooltip = "Disable Split Discard",
-    position = {0.45, 0.5, -0.59},
-    width = 440,
-    height = 260,
-    font_size = 60,
-    scale = {1, 1, 1},
-    color = {0.3, 0.5, 0.2}
+    tooltip = "Use single face-down discard pile for action cards",
+    position = {-0.51, 0.5, 0.59},
+    width = BUTTON_WIDTH,
+    height = BUTTON_HEIGHT,
+    font_size = BUTTON_FONT_SIZE,
+    scale = BUTTON_SCALE,
+    color = GOLD,
+    font_color = BLACK,
+    hover_color = RED
+}
+local miniaturesDISABLED_params = {
+    index = 4,
+    function_owner = self,
+    click_function = "toggle_miniatures",
+    label = "Miniatures",
+    tooltip = "Enable Miniatures",
+    position = {-0.51, 0.5, 1.16},
+    width = BUTTON_WIDTH,
+    height = BUTTON_HEIGHT,
+    font_size = BUTTON_FONT_SIZE,
+    scale = BUTTON_SCALE,
+    color = BLACK,
+    font_color = GOLD,
+    hover_color = GREEN
+}
+local miniaturesENABLED_params = {
+    index = 4,
+    function_owner = self,
+    click_function = "toggle_miniatures",
+    label = "Miniatures",
+    tooltip = "Disable Miniatures",
+    position = {-0.51, 0.5, 1.16},
+    width = BUTTON_WIDTH,
+    height = BUTTON_HEIGHT,
+    font_size = BUTTON_FONT_SIZE,
+    scale = BUTTON_SCALE,
+    color = GOLD,
+    font_color = BLACK,
+    hover_color = RED
+}
+local setupStartGame_params = {
+    click_function = "doNothing",
+    function_owner = self,
+    label = "Start",
+    tooltip = "Once all players have joined, and options are set",
+    position = {0.52, 0.5, -1.15},
+    width = HEADER_WIDTH,
+    height = HEADER_HEIGHT,
+    font_size = HEADER_FONT_SIZE,
+    scale = HEADER_SCALE,
+    color = BLACK,
+    font_color = GOLD,
 }
 local setupBaseGame_params = {
-    index = 3,
+    index = 6,
     click_function = "setup_base_game",
     function_owner = self,
-    label = "Start Base Game",
-    position = {0, 0.5, -0.01},
-    width = 820,
-    height = 260,
-    font_size = 90,
-    scale = {1, 1, 1},
-    -- color = {0.4, 0.6, 0.6},
-    color = {0.05, 0.05, 0.05},
-    font_color = gold,
-    hover_color = {0.1, 0.1, 0.1}
+    label = "Base Game \nSetup",
+    position = {0.52, 0.5, -0.59},
+    width = BUTTON_WIDTH,
+    height = BUTTON_HEIGHT,
+    font_size = BUTTON_FONT_SIZE,
+    scale = BUTTON_SCALE,
+    color = GREEN,
+    font_color = BLACK,
+    hover_color = PURPLE
 }
 local setupCampaignGame_params = {
-    index = 4,
+    index = 7,
     click_function = "setup_campaign",
     function_owner = self,
-    label = "Start Campaign",
-    position = {0, 0.5, 0.57},
-    width = 820,
-    height = 260,
-    font_size = 90,
-    scale = {1, 1, 1},
-    -- color = {0.4, 0.6, 0.6},
-    color = {0.05, 0.05, 0.05},
-    font_color = gold,
-    hover_color = {0.1, 0.1, 0.1}
+    label = "Campaign \nSetup",
+    position = {0.52, 0.5, 0},
+    width = BUTTON_WIDTH,
+    height = BUTTON_HEIGHT,
+    font_size = BUTTON_FONT_SIZE,
+    scale = BUTTON_SCALE,
+    color = GREEN,
+    font_color = BLACK,
+    hover_color = PURPLE
 }
 local customSetup_params = {
-    index = 6,
+    index = 8,
     function_owner = self,
     click_function = "custom_setup",
-    label = "Manual Setup",
+    label = "Manual \nSetup",
     tooltip = "",
-    position = {0, 0.5, 1.15},
-    width = 820,
-    height = 260,
-    font_size = 90,
-    scale = {1, 1, 1},
-    color = {0.05, 0.05, 0.05},
-    font_color = gold,
-    hover_color = {0.1, 0.1, 0.1}
+    position = {0.52, 0.5, 0.59},
+    width = BUTTON_WIDTH,
+    height = BUTTON_HEIGHT,
+    font_size = BUTTON_FONT_SIZE,
+    scale = BUTTON_SCALE,
+    color = GREEN,
+    font_color = BLACK,
+    hover_color = PURPLE
 }
 
 SetupControl = {
@@ -146,17 +223,20 @@ function SetupControl:new(o)
 end
 
 function onload()
+    self.createButton(optionsText_params)
     self.createButton(toggleLeadersWITHOUT_params)
     self.createButton(toggleExpansionEXCLUDE_params)
     self.createButton(splitDiscardFACEDOWN_params)
+    self.createButton(miniaturesDISABLED_params)
+    self.createButton(setupStartGame_params)
     self.createButton(setupBaseGame_params)
     self.createButton(setupCampaignGame_params)
     self.createButton(customSetup_params)
-
 end
 
 function toggle_leaders(obj, color, alt_click)
     local toggle = Global.getVar("with_leaders")
+    local expansion_toggle = Global.getVar("with_more_to_explore")
 
     toggle = not toggle
     Global.setVar("with_leaders", toggle)
@@ -165,17 +245,25 @@ function toggle_leaders(obj, color, alt_click)
         self.editButton(toggleLeadersWITH_params)
     else
         self.editButton(toggleLeadersWITHOUT_params)
+        if expansion_toggle then
+            toggle_expansion()
+        end
     end
 end
 
 function toggle_expansion()
     local toggle = Global.getVar("with_more_to_explore")
+    local leaders_toggle = Global.getVar("with_leaders")
 
     toggle = not toggle
     Global.setVar("with_more_to_explore", toggle)
 
     if (toggle) then
         self.editButton(toggleExpansionINCLUDE_params)
+        if not leaders_toggle then
+            Global.setVar("with_leaders", true)
+            self.editButton(toggleLeadersWITH_params)
+        end
     else
         self.editButton(toggleExpansionEXCLUDE_params)
     end
@@ -190,9 +278,25 @@ function toggle_split_discard()
     end
 end
 
+function toggle_miniatures()
+    local toggle = Global.getVar("with_miniatures")
+    toggle = not toggle 
+    Global.setVar("with_miniatures", toggle)
+    if (toggle) then
+        self.editButton(miniaturesENABLED_params)
+        -- Hide meeples, show miniatures
+        BaseGame.miniatures_visibility(true)
+    else
+        self.editButton(miniaturesDISABLED_params)
+        -- Show meeples, hide miniatures
+        BaseGame.miniatures_visibility(false)
+    end
+end
+
 function setup_base_game()
     local base_setup_success = BaseGame.setup(Global.getVar("with_leaders"),
-        Global.getVar("with_more_to_explore"))
+        Global.getVar("with_more_to_explore"),
+        Global.getVar("with_miniatures"))
 
     if (base_setup_success and Global.getVar("with_leaders")) then
         leader_buttons()
@@ -220,7 +324,8 @@ end
 
 function setup_campaign()
     local campaign_setup_success = Campaign.setup(Global.getVar("with_leaders"),
-        Global.getVar("with_more_to_explore"))
+        Global.getVar("with_more_to_explore"),
+        Global.getVar("with_miniatures"))
 
     if (campaign_setup_success) then
         destroyObject(self)
@@ -233,55 +338,33 @@ function custom_setup()
 end
 
 function leader_buttons()
-    self.setPositionSmooth({49.5, 1.2, 0})
+    self.setPositionSmooth({54.25, 1.2, 0})
 
     self.editButton({
-        index = 0,
-        height = 1,
-        width = 1,
-        click_function = "doNothing",
-        label = "",
-        tooltip = ""
-    })
-    self.editButton({
-        index = 1,
-        height = 1,
-        width = 1,
-        click_function = "doNothing",
-        label = "",
-        tooltip = ""
-    })
-    self.editButton({
         index = 2,
-        height = 1,
-        width = 1,
-        click_function = "doNothing",
-        label = "",
-        tooltip = ""
-    })
-    self.editButton({
-        index = 3,
-        font_size = 88,
         click_function = "setup_leaders",
         label = "Setup Leaders",
-        tooltip = ""
+        color = GREEN,
+        font_color = BLACK,
+        hover_color = PURPLE,
+        tooltip = "Setup ship placements and acquire resources based on the leader detected to the left of each player board"
     })
-    self.editButton({
-        index = 4,
+
+    -- Clear all other buttons
+    local empty_button = {
         height = 1,
         width = 1,
         click_function = "doNothing",
         label = "",
         tooltip = ""
-    })
-    self.editButton({
-        index = 5,
-        height = 1,
-        width = 1,
-        click_function = "doNothing",
-        label = "",
-        tooltip = ""
-    })
+    }
+
+    for i = 0, 8 do
+        if i ~= 2 then  -- Skip the leader button
+            empty_button.index = i
+            self.editButton(empty_button)
+        end
+    end
 end
 
 function doNothing()

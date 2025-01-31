@@ -17,13 +17,14 @@ function onObjectEnterZone(zone, object)
         end
     end
 
-    -- if a deck object has yet to form, record the newst card entering discard
+    -- if a deck object has yet to form, record the newest card entering discard
     if #courtCards == 3 then 
         courtDiscardTopCard = object
         return
     end
 
     -- handle situations where a deck object has not yet formed but a third cards enters discard
+    -- we pull the last discarded card from a newly formed deck, place it back on top of the discard pile
     if courtDiscardTopCard and courtDiscardDeck then 
         Wait.time(function()
             local deckObjects = courtDiscardDeck.getObjects()

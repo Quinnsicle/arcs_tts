@@ -11,50 +11,61 @@ local city_row = {{0.10, 2.00, -2.00}, {0.33, 2.00, -2.00},
                   {1.02, 2.00, -2.00}}
 
 local all_supplies = {
-
     -- Player Agents
     ["White Agent"] = {
-        bag = player_pieces_GUIDs["White"]["agents"]
+        bag = player_pieces_GUIDs["White"]["agents"],
+        mini_bag = player_pieces_GUIDs["White"]["mini_agents"]
     },
     ["Teal Agent"] = {
-        bag = player_pieces_GUIDs["Teal"]["agents"]
+        bag = player_pieces_GUIDs["Teal"]["agents"],
+        mini_bag = player_pieces_GUIDs["Teal"]["mini_agents"]
     },
     ["Yellow Agent"] = {
-        bag = player_pieces_GUIDs["Yellow"]["agents"]
+        bag = player_pieces_GUIDs["Yellow"]["agents"],
+        mini_bag = player_pieces_GUIDs["Yellow"]["mini_agents"]
     },
     ["Red Agent"] = {
-        bag = player_pieces_GUIDs["Red"]["agents"]
+        bag = player_pieces_GUIDs["Red"]["agents"],
+        mini_bag = player_pieces_GUIDs["Red"]["mini_agents"]
     },
 
     -- Player Fresh Ships
     ["White Ship (Fresh)"] = {
-        bag = player_pieces_GUIDs["White"]["ships"]
+        bag = player_pieces_GUIDs["White"]["ships"],
+        mini_bag = player_pieces_GUIDs["White"]["mini_ships"]
     },
     ["Teal Ship (Fresh)"] = {
-        bag = player_pieces_GUIDs["Teal"]["ships"]
+        bag = player_pieces_GUIDs["Teal"]["ships"],
+        mini_bag = player_pieces_GUIDs["Teal"]["mini_ships"]
     },
     ["Yellow Ship (Fresh)"] = {
-        bag = player_pieces_GUIDs["Yellow"]["ships"]
+        bag = player_pieces_GUIDs["Yellow"]["ships"],
+        mini_bag = player_pieces_GUIDs["Yellow"]["mini_ships"]
     },
     ["Red Ship (Fresh)"] = {
-        bag = player_pieces_GUIDs["Red"]["ships"]
+        bag = player_pieces_GUIDs["Red"]["ships"],
+        mini_bag = player_pieces_GUIDs["Red"]["mini_ships"]
     },
 
     -- Player Damaged Ships
     ["White Ship (Damaged)"] = {
         bag = player_pieces_GUIDs["White"]["ships"],
+        mini_bag = player_pieces_GUIDs["White"]["mini_ships"],
         state = 1
     },
     ["Teal Ship (Damaged)"] = {
         bag = player_pieces_GUIDs["Teal"]["ships"],
+        mini_bag = player_pieces_GUIDs["Teal"]["mini_ships"],
         state = 1
     },
     ["Yellow Ship (Damaged)"] = {
         bag = player_pieces_GUIDs["Yellow"]["ships"],
+        mini_bag = player_pieces_GUIDs["Yellow"]["mini_ships"],
         state = 1
     },
     ["Red Ship (Damaged)"] = {
         bag = player_pieces_GUIDs["Red"]["ships"],
+        mini_bag = player_pieces_GUIDs["Red"]["mini_ships"],
         state = 1
     },
 
@@ -180,7 +191,14 @@ function SupplyManager.returnObject(object, is_bottom_deck)
     if supply.ignore then
         return
 
-        -- Return to bag
+    elseif supply.mini_bag then
+        local regular_bag_exists = getObjectFromGUID(supply.bag)
+        if regular_bag_exists then
+            regular_bag_exists.putObject(object)
+        else
+            getObjectFromGUID(supply.mini_bag).putObject(object)
+        end
+
     elseif supply.bag then
         getObjectFromGUID(supply.bag).putObject(object)
 
