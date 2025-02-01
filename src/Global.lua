@@ -283,38 +283,32 @@ end
 function tryObjectEnterContainer(container, object)
     if object.hasTag('Ship') and container.hasTag('Ship') and
         object.getStateId() == 2 then
-        broadcastToAll("Test1")
         object.setState(1)
         return true
     end
 
     -- Don't allow anything but ships into ship container
     if container.hasTag('Ship') and not object.hasTag('Ship') then
-        broadcastToAll("Test2")
         return false
     end
 
     -- Don't allow anything but Agents into Agent container
     if container.hasTag('Agent') and not object.hasTag('Agent') then
-        broadcastToAll("Test3")
         return false
     end
 
     -- Don't allow anything but Starports into Starport container
     if container.hasTag('Starport') and not object.hasTag('Starport') then
-        broadcastToAll("Test4")
         return false
     end
 
     -- allow objects with at least one shared container tag to enter
     for _, tag in ipairs(container.getTags()) do
         if object.hasTag(tag) then
-            broadcastToAll("Test5")
             return true
         end
     end
 
-    broadcastToAll("Test6")
     return false
 end
 
