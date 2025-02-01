@@ -783,10 +783,8 @@ function BaseGame.upgrade_to_miniatures()
     end
 
     local player_pieces_guids = Global.getVar("player_pieces_GUIDs")
-    local colors = {"White", "Red", "Yellow", "Teal"}
-    
-    for _, color in ipairs(colors) do
-        local pieces = player_pieces_guids[color]
+    for _, player in ipairs(Global.getVar("active_players")) do
+        local pieces = player_pieces_guids[player.color]
         replace_piece_bag(pieces["ships"], pieces["mini_ships"])
         replace_piece_bag(pieces["agents"], pieces["mini_agents"])
         pieces["ships"] = pieces["mini_ships"]
