@@ -1,7 +1,10 @@
 -- Used in all aspects of manipulating zero marker and 3 ambition markers
 require("src/GUIDs")
 
-local AmbitionMarkers = {}
+local ambitionMarkers = {
+    zero_marker = getObjectFromGUID(zero_marker_GUID),
+    reach_board = getObjectFromGUID(reach_board_GUID)
+}
 
 local action_cards = require("src/ActionCards")
 local ArcsPlayer = require("src/ArcsPlayer")
@@ -79,7 +82,7 @@ local ambitions = {
 
 local last_declared_marker = nil
 
-function AmbitionMarkers.get_ambition_info(object)
+function ambitionMarkers:get_ambition_info(object)
 
     local reach_map = getObjectFromGUID(reach_board_GUID)
     local ambition_pos_z = (reach_map.positionToLocal(object.getPosition()).z)
@@ -105,7 +108,7 @@ function AmbitionMarkers.get_ambition_info(object)
     Global.call("update_player_scores")
 end
 
-function AmbitionMarkers.add_button()
+function ambitionMarkers:add_button()
     zero_marker.createButton({
         click_function = 'declare_ambition',
         function_owner = zero_marker,
@@ -116,30 +119,30 @@ function AmbitionMarkers.add_button()
     })
 end
 
-function AmbitionMarkers.display_declare_button()
+function ambitionMarkers:display_declare_button()
     zero_marker.editButton({
         click_function = 'declare_ambition',
         tooltip = 'Declare Ambition'
     })
 end
 
-function AmbitionMarkers.display_undo_button()
+function ambitionMarkers:display_undo_button()
     zero_marker.editButton({
         click_function = 'undo_ambition',
         tooltip = 'Undo'
     })
 end
 
-function AmbitionMarkers.declare(obj, player_color)
+function ambitionMarkers.declare(obj, player_color)
 
 end
 
-function AmbitionMarkers.undo()
+function ambitionMarkers:undo()
     broadcastToAll("Undo Ambition Declaration")
     if (last_declared_marker == nil) then
         Log.ERROR(
             "Could not find last declared ambition marker, resetting zero marker.")
-        -- AmbitionMarkers.display_declare_button()
+        -- ambitionMarkers.display_declare_button()
         return
     end
     local undo_pos =
@@ -150,17 +153,20 @@ function AmbitionMarkers.undo()
     zero_marker.setPositionSmooth(reach_board.positionToWorld({0.94, 0.2, 1.09}))
     zero_marker.setRotationSmooth({0.00, 180.00, 0.00})
 
-    -- AmbitionMarkers.display_declare_button()
+    -- ambitionMarkers.display_declare_button()
 end
 
-function AmbitionMarkers.reset_zero_marker()
+function ambitionMarkers:reset_zero_marker()
     last_declared_marker = nil
-   -- AmbitionMarkers.display_declare_button()
+    -- ambitionMarkers.display_declare_button()
+
+    zero_marker = getObjectFromGUID(zero_marker_GUID)
+    reach_board = getObjectFromGUID(reach_board_GUID)
     zero_marker.setPositionSmooth(reach_board.positionToWorld({0.94, 0.2, 1.09}))
     zero_marker.setRotationSmooth({0.00, 180.00, 0.00})
 end
 
-function AmbitionMarkers.highest_undeclared()
+function ambitionMarkers:highest_undeclared()
 
     local available_markers = marker_zone.getObjects()
     local high_points = 0
@@ -187,7 +193,7 @@ end
 
 -- Begin Object Code --
 function onLoad()
-    -- AmbitionMarkers.add_button()
+    -- ambitionMarkers.add_button()
 end
 function declare_ambition(obj, player_color)
 
@@ -200,7 +206,7 @@ function declare_ambition(obj, player_color)
     end
 
     -- Is there an ambition marker?
-    local high_marker = AmbitionMarkers.highest_undeclared()
+    local high_marker = ambitionMarkers.highest_undeclared()
     if (not high_marker) then
         broadcastToColor("No ambition markers available", player_color)
         return
@@ -229,7 +235,7 @@ function declare_ambition(obj, player_color)
     else
         this_ambition = ambitions[lead_info.real_number]
         local pos = high_marker.column_pos + this_ambition.row_pos;
-        pos = reach_board.positionToWorld(pos)
+        pos = ambitionMarkers.reach_board.positionToWorld(pos)
         high_marker.object.setPositionSmooth(pos)
         broadcastToAll("" .. player_color .. " has declared " ..
                            this_ambition.name .. " ambition for " .. power,
@@ -244,14 +250,15 @@ function declare_ambition(obj, player_color)
         return
     end
 
-    zero_marker.setPositionSmooth(reach_board.positionToWorld({1.02, 0.2, 0.67}))
-    zero_marker.setRotationSmooth({0.00, 90.00, 0.00})
+    ambitionMarkers.zero_marker.setPositionSmooth(
+        ambitionMarkers.reach_board.positionToWorld({1.02, 0.2, 0.67}))
+    ambitionMarkers.zero_marker.setRotationSmooth({0.00, 90.00, 0.00})
 
-    -- AmbitionMarkers.display_undo_button()
+    -- ambitionMarkers.display_undo_button()
 end
 function undo_ambition(obj, player_color)
-    AmbitionMarkers.undo(obj)
+    ambitionMarkers.undo(obj)
 end
 -- End Object Code --
 
-return AmbitionMarkers
+return ambitionMarkers

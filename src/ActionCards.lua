@@ -127,7 +127,8 @@ function ActionCards.check_hands()
     local active_players = Global.getVar("active_players")
     for _, player in ipairs(active_players) do
         if #Player[player.color].getHandObjects() > 0 then
-            broadcastToAll("" .. player.color .. " still has cards in hand!", player.color)
+            broadcastToAll("" .. player.color .. " still has cards in hand!",
+                player.color)
             return true
         end
     end
@@ -137,12 +138,14 @@ end
 function ActionCards.clear_played()
     Log.INFO("ActionCards.clear_played")
 
-    local played_objects = played_zone.getObjects()
+    local played_objects = getObjectFromGUID(action_card_zone_GUID).getObjects()
 
     -- Error on union card
     for _, obj in pairs(played_objects) do
         if obj.hasTag("Court") then
-            broadcastToAll("Resolve & remove court cards so we can end round + clean up!", Color.Red)
+            broadcastToAll(
+                "Resolve & remove court cards so we can end round + clean up!",
+                Color.Red)
             return false
         end
     end
@@ -225,7 +228,8 @@ function ActionCards.get_info(card)
     local card_number = tonumber(string.sub(card.getDescription(), -2, -1))
 
     if (card_type == "Faithful") then
-        card_type = card.getRotation().y < 180 and "Faithful Zeal" or "Faithful Wisdom"
+        card_type = card.getRotation().y < 180 and "Faithful Zeal" or
+                        "Faithful Wisdom"
     end
 
     return {
@@ -241,14 +245,16 @@ function ActionCards.get_lead_info()
     local lead = nil
     local is_ambition_declared = false
 
-    for _, obj in ipairs(lead_zone.getObjects()) do
-        if (obj.getName() == "Action Card") then
-            lead = ActionCards.get_info(obj)
-            lead.real_number = lead.number
-        end
+    if (lead_zone) then
+        for _, obj in ipairs(lead_zone.getObjects()) do
+            if (obj.getName() == "Action Card") then
+                lead = ActionCards.get_info(obj)
+                lead.real_number = lead.number
+            end
 
-        if (obj.getName() == "Zero Marker") then
-            is_ambition_declared = true
+            if (obj.getName() == "Zero Marker") then
+                is_ambition_declared = true
+            end
         end
     end
 
@@ -291,6 +297,9 @@ function ActionCards.get_surpassing_card()
 end
 
 function ActionCards.count_seize_cards()
+    if (not seize_zone) then
+        return 0
+    end
     local seize_zone_objects = seize_zone.getObjects()
     local count = 0
     for _, obj in ipairs(seize_zone_objects) do
@@ -308,9 +317,9 @@ function ActionCards.find_seize_player()
             local seize_card = ActionCards.get_info(obj)
             local all_players = Global.getVar("active_players")
             for _, p in ipairs(all_players) do
-                if p.last_seize_card and
-                   p.last_seize_card.type == seize_card.type and
-                   p.last_seize_card.number == seize_card.number then
+                if p.last_seize_card and p.last_seize_card.type ==
+                    seize_card.type and p.last_seize_card.number ==
+                    seize_card.number then
                     return p.color
                 end
             end

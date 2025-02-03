@@ -16,6 +16,8 @@ with_more_to_explore = false
 with_leaders = false
 is_face_up_discard_active = false
 with_miniatures = false
+is_auto_end_round_enabled = true
+turn_count = 0
 
 oop_components = {
     {
@@ -109,13 +111,15 @@ active_ambitions = {
 }
 
 ----------------------------------------------------
-local AmbitionMarkers = require("src/AmbitionMarkers")
+AmbitionMarkers = require("src/AmbitionMarkers")
 local ActionCards = require("src/ActionCards")
 local ArcsPlayer = require("src/ArcsPlayer")
 local BaseGame = require("src/BaseGame")
 local Campaign = require("src/Campaign")
+local Control = require("src/Control")
 local Counters = require("src/Counters")
 local Initiative = require("src/InitiativeMarker")
+local RoundManager = require("src/RoundManager")
 local SetupControl = require("src/SetupControl")
 local Supplies = require("src/Supplies")
 local Camera = require("src/Camera")
@@ -220,6 +224,23 @@ function onPlayerAction(player, action, targets)
             obj.setState(obj.getStateId() == 1 and 2 or 1)
         end
     end
+end
+
+function onPlayerTurn(player, previous_player)
+    if previous_player == nil then
+        print(player.color .. " is going first. It's now their turn.")
+    else
+        print(previous_player.color .. "'s turn is over. It's now " ..
+                  player.color .. "'s turn.")
+    end
+
+    turn_count = turn_count + 1
+    if is_auto_end_round_enabled then
+        if turn_count > #getSeatedPlayers() then
+            RoundManager.endRound() -- turn count is reset within RoundManager.endRound()
+        end
+    end
+
 end
 
 function onObjectEnterZone(zone, object)

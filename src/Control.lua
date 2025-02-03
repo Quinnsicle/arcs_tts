@@ -1,6 +1,7 @@
 local ActionCards = require("src/ActionCards")
 local AmbitionMarkers = require("src/AmbitionMarkers")
 local Initiative = require("src/InitiativeMarker")
+local RoundManager = require("src/RoundManager")
 
 control_GUID = Global.getVar("control_GUID")
 
@@ -61,8 +62,8 @@ local end_round_params = {
     label = "End Round",
     tooltip = "Cleanup action cards",
     height = 260,
-    width = 820,
-    position = {0, 0.5, -0.01},
+    width = 590,
+    position = {-0.2, 0.5, -0.01},
     font_size = 90,
     color = {0.4, 0.6, 0.6},
     hover_color = {0.34, 0.38, 0.38}
@@ -96,14 +97,29 @@ local seizeInitiative_params = {
     hover_color = {0.34, 0.38, 0.38}
 }
 
+local toggle_auto_end_params = {
+    index = 5,
+    function_owner = self,
+    click_function = "toggle_auto_end",
+    label = "Toggle\nAuto\nEnd",
+    tooltip = "Toggle Auto End Round.\n\nThis will eventually become the default, please report any problems to the Steam Workshop or Github page",
+    height = 260,
+    width = 220,
+    position = {0.6, 0.5, -0.01},
+    font_size = 50,
+    color = {0.2, 0.5, 0.2},
+    hover_color = {0.34, 0.48, 0.34}
+}
+
 function onload()
     self.createButton(controls_params)
     self.createButton(start_chapter_params)
     self.createButton(end_round_params)
     self.createButton(takeInitiative_params)
     self.createButton(seizeInitiative_params)
+    self.createButton(toggle_auto_end_params)
     self.createButton({
-        index = 5,
+        index = 10,
         height = 1,
         width = 1,
         click_function = "doNothing",
@@ -126,74 +142,41 @@ function start_chapter()
     ActionCards.deal_hand()
 
     local initiative_player = Global.getVar("initiative_player")
-    broadcastToAll(initiative_player .. " will start the chapter\n", initiative_player)
-    Turns.turn_color = initiative_player
+    if (initiative_player) then
+        broadcastToAll(initiative_player .. " will start the chapter\n",
+            initiative_player)
+        Turns.turn_color = initiative_player
+    else
+        broadcastToAll(
+            "\n\n!!Could not determine initiative player!!\nPlease ensure initiative marker is near a player board.\n\n")
+    end
 end
 
 function end_round()
-    -- Seize detection
-    local seize_detected = false
-    if ActionCards.count_seize_cards() == 1 then
-        seize_detected = true
-    elseif ActionCards.count_seize_cards() > 1 then
-        broadcastToAll("Multiple seize cards detected, please fix the board and try to End Round again", Color.Red)
-        return
-    end
+    RoundManager.endRound()
+end
 
-    local initiative_player = Global.getVar("initiative_player")
-    local all_players = Global.getVar("active_players")
+function toggle_auto_end()
+    local toggle = Global.getVar("is_auto_end_round_enabled")
 
-    if Initiative.is_seized() and seize_detected then
-        -- Someone already manually seized initiative
-        Initiative.unseize()
-    elseif not Initiative.is_seized() and seize_detected then
-        -- Auto seize initiative for player with last played seize card
-        local seize_player_color = ActionCards.find_seize_player()
-        if seize_player_color then
-            Initiative.take(seize_player_color, true)
-            broadcastToAll(seize_player_color .. " has seized the initiative", seize_player_color)
-        else
-            broadcastToAll("Whoever is playing the seize card, pick it up and drop it back into place, then hit End Round again.", Color.Red)
-            return
-        end
+    toggle = not toggle
+    Global.setVar("is_auto_end_round_enabled", toggle)
+
+    if (toggle) then
+        local GREEN = {0.2, 0.5, 0.2}
+        self.editButton({
+            index = 5,
+            color = GREEN,
+            hover_color = {0.34, 0.48, 0.34}
+        })
     else
-        -- Check for highest surpassing card
-        local surpassing = ActionCards.get_surpassing_card()
-        if not surpassing then
-            broadcastToAll("No surpassing card, ".. initiative_player .. " keeps the initiative", initiative_player)
-        else
-            -- Assign initiative to player with highest surpassing card
-            for _, p in ipairs(all_players) do
-                if not p.last_action_card then goto continue end
-
-                if string.find(surpassing.type, p.last_action_card.type) and
-                p.last_action_card.number == surpassing.number then
-                    Initiative.unseize()
-                    Initiative.take(p.color, true)
-                    broadcastToAll(string.format(
-                        "%s has surpassed with %s %d and takes the initiative",
-                        p.color, surpassing.type, surpassing.number
-                    ), p.color)
-                    break
-                end
-
-                ::continue::
-            end
-        end
+        local RED = {0.8, 0.3, 0.2}
+        self.editButton({
+            index = 5,
+            color = RED,
+            hover_color = {0.48, 0.34, 0.34}
+        })
     end
-
-    AmbitionMarkers.reset_zero_marker()
-    ActionCards.clear_played()
-    -- reset p.last_action_card + p.last_seize_card for all players
-    -- otherwise weird bugs happen when state carries over to the next round
-    for _, p in ipairs(all_players) do
-        p.last_action_card = nil
-        p.last_seize_card = nil
-    end
-    broadcastToAll("End Round\n", Color.Purple)
-
-    Turns.turn_color = Global.getVar("initiative_player")
-    Initiative.unseize()
 end
 
 function take_initiative(objectButtonClicked, playerColorClicked)

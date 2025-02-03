@@ -1,14 +1,22 @@
-local LOG = {}
+local LOG = {
+    logLevel = 5
+}
 
-function LOG.INFO(message)
-    if Global.getVar("debug") then
-        print("[INFO]" .. message)
+function LOG.TRACE(message)
+    if LOG.logLevel <= 1 then
+        print("[TRACE] " .. message)
     end
 end
 
 function LOG.DEBUG(message)
-    if Global.getVar("debug") then
+    if LOG.logLevel <= 2 then
         print("[DEBUG] " .. message)
+    end
+end
+
+function LOG.INFO(message)
+    if LOG.logLevel <= 3 then
+        print("[INFO]" .. message)
     end
 end
 
