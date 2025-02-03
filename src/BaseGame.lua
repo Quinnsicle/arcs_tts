@@ -142,6 +142,22 @@ function BaseGame.core_components_visibility(show)
         else
         end
     end
+
+    -- adjust court row backers so they don't interfere
+    -- when players attempts to bury a card under the court deck
+    if show then
+        Wait.frames(function()
+            local court_deck_backer = getObjectFromGUID(BaseGame.components.core.court_deck_backer)
+            local court_discard_backer = getObjectFromGUID(BaseGame.components.core.court_discard_backer)
+
+            for _, backer in ipairs({court_deck_backer, court_discard_backer}) do
+                if backer then
+                    local pos = backer.getPosition()
+                    backer.setPosition({pos.x, 0.85, pos.z})
+                end
+            end
+        end, 1)
+    end
 end
 
 function BaseGame.four_player_cards_visibility(show)
