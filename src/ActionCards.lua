@@ -301,6 +301,16 @@ function ActionCards.count_seize_cards()
     return count
 end
 
+function ActionCards.count_action_cards()
+    local count = 0
+    for _, obj in ipairs(played_zone.getObjects()) do
+        if obj.hasTag("Action") then
+            count = count + 1
+        end
+    end
+    return count
+end
+
 function ActionCards.find_seize_player()
     local seize_zone_objects = seize_zone.getObjects()
     for _, obj in ipairs(seize_zone_objects) do
