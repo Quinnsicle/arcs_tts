@@ -116,6 +116,11 @@ function doNothing()
 end
 
 function start_chapter()
+    if ActionCards.count_action_cards() > 0 then
+        broadcastToAll("There are still action cards in play, please End Round and try again.", Color.Red)
+        return
+    end
+
     Initiative.unseize()
     ActionCards.clear_face_up_discard()
 
