@@ -61,7 +61,7 @@ local UI_cluster = {
     click_function = "SpawnClusterDie",
     function_owner = DICE_BOARD,
     label = "Cluster",
-    position = Vector({0.60, 0.00, 0.00}) + CAMPAIGN_UI_POS,
+    position = Vector({1.20, 0.00, 0.00}) + CAMPAIGN_UI_POS,
     width = 310,
     height = 130,
     font_size = 60,
@@ -74,7 +74,7 @@ local UI_event = {
     click_function = "SpawnEventDie",
     function_owner = DICE_BOARD,
     label = "Event",
-    position = Vector({1.20, 0.00, 0.00}) + CAMPAIGN_UI_POS,
+    position = Vector({0.60, 0.00, 0.00}) + CAMPAIGN_UI_POS,
     width = 310,
     height = 130,
     font_size = 60,
@@ -263,7 +263,6 @@ function DiceBoard.GetDiePool()
 end
 
 function DiceBoard.CreatePositioningGrid(parems)
-
     local r_ct, c_ct = parems.rows, parems.columns
     local r_space, c_space = parems.area.z / (parems.rows),
         parems.area.x / (parems.columns)
@@ -272,8 +271,12 @@ function DiceBoard.CreatePositioningGrid(parems)
     local grid = {}
     local pos_y = parems.area.y
 
-    -- row spawn order (center to edge)
-    local row_order = {3, 4, 2, 5, 1, 6}
+    local row_order
+    if r_ct == 2 then  
+        row_order = {2, 1}  -- Reversed order for campaign dice
+    else  -- Combat dice spawn order (center to edge)
+        row_order = {3, 4, 2, 5, 1, 6}
+    end
 
     for _, r in ipairs(row_order) do
         local pos_x = (r_space * r - r_space / 2) - r_shift
