@@ -53,7 +53,10 @@ local face_up_discard_guids = {
     ["Mobilization 4"] = "8f521a",
     ["Mobilization 5"] = "bcf2e7",
     ["Mobilization 6"] = "7981dc",
-    ["Mobilization 7"] = "864dd1"
+    ["Mobilization 7"] = "864dd1",
+    ["Event"] = "fe7a80",
+    ["Event"] = "eff76c",
+    ["Event"] = "39a322"
 }
 
 function ActionCards.get_action_deck()
@@ -192,6 +195,7 @@ function ActionCards.to_face_up_discard(card)
             discarded_card = fud_discard_action_deck.takeObject({
                 guid = v.guid
             })
+            break
         end
     end
 
