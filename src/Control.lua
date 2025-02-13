@@ -102,7 +102,7 @@ local toggle_auto_end_params = {
     function_owner = self,
     click_function = "toggle_auto_end",
     label = "Toggle\nAuto\nEnd",
-    tooltip = "Toggle Auto End Round.\n\nThis will eventually become the default, please report any problems to the Steam Workshop or Github page",
+    tooltip = "Toggle Auto End Round.\n\nPlease report any problems to the Steam Workshop or Github page",
     height = 260,
     width = 220,
     position = {0.6, 0.5, -0.01},
@@ -133,7 +133,9 @@ end
 
 function start_chapter()
     if ActionCards.count_action_cards() > 0 then
-        broadcastToAll("There are still action cards in play, please End Round and try again.", Color.Red)
+        broadcastToAll(
+            "There are still action cards in play, please End Round and try again.",
+            Color.Red)
         return
     end
 
