@@ -16,7 +16,7 @@ with_more_to_explore = false
 with_leaders = false
 is_face_up_discard_active = false
 with_miniatures = false
-is_auto_end_round_enabled = true
+is_auto_end_round_enabled = false -- toggle end round
 turn_count = 0
 
 oop_components = {
