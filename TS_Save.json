@@ -37186,7 +37186,8 @@
               "Tags": [
                 "Campaign Only",
                 "Action",
-                "F5"
+                "F5",
+                "Event"
               ],
               "LayoutGroupSortIndex": 0,
               "Value": 0,
@@ -72603,7 +72604,7 @@
         "scaleY": 1.0,
         "scaleZ": 1.0
       },
-      "Nickname": "",
+      "Nickname": "Event Deck",
       "Description": "",
       "GMNotes": "",
       "AltLookAngle": {
@@ -72684,7 +72685,8 @@
           },
           "Tags": [
             "Action",
-            "Campaign Only"
+            "Campaign Only",
+            "Event"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -72809,7 +72811,8 @@
           },
           "Tags": [
             "Action",
-            "Campaign Only"
+            "Campaign Only",
+            "Event"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -74090,7 +74093,7 @@
           "XmlUI": ""
         },
         {
-          "GUID": "204545",
+          "GUID": "fe7a80",
           "Name": "Card",
           "Transform": {
             "posX": -25.3357868,
@@ -74118,7 +74121,8 @@
           },
           "Tags": [
             "Action",
-            "Campaign Only"
+            "Campaign Only",
+            "Event"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -74884,7 +74888,7 @@
           "XmlUI": ""
         },
         {
-          "GUID": "3c30a1",
+          "GUID": "eff76c",
           "Name": "Card",
           "Transform": {
             "posX": -16.05392,
@@ -74912,7 +74916,8 @@
           },
           "Tags": [
             "Action",
-            "Campaign Only"
+            "Campaign Only",
+            "Event"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
@@ -75068,7 +75073,7 @@
           "XmlUI": ""
         },
         {
-          "GUID": "73c5ff",
+          "GUID": "39a322",
           "Name": "Card",
           "Transform": {
             "posX": -53.1018,
@@ -75095,7 +75100,9 @@
             "b": 0.713235259
           },
           "Tags": [
-            "Action"
+            "Action",
+            "Campaign Only",
+            "Event"
           ],
           "LayoutGroupSortIndex": 0,
           "Value": 0,
