@@ -102,13 +102,13 @@ local toggle_auto_end_params = {
     function_owner = self,
     click_function = "toggle_auto_end",
     label = "Toggle\nAuto\nEnd",
-    tooltip = "Toggle Auto End Round.\n\nPlease report any problems to the Steam Workshop or Github page",
+    tooltip = "Toggle Auto End Round.\n\nDisabled for now, feature is in progress",
     height = 260,
     width = 220,
     position = {0.6, 0.5, -0.01},
     font_size = 50,
-    color = {0.2, 0.5, 0.2},
-    hover_color = {0.34, 0.48, 0.34}
+    color = {0.5, 0.5, 0.5},
+    hover_color = {0.4, 0.4, 0.4}
 }
 
 function onload()
@@ -170,18 +170,18 @@ function toggle_auto_end()
     Global.setVar("is_auto_end_round_enabled", toggle)
 
     if (toggle) then
-        local GREEN = {0.2, 0.5, 0.2}
+        local GREEN = {0.5, 0.5, 0.5}
         self.editButton({
             index = 5,
             color = GREEN,
-            hover_color = {0.34, 0.48, 0.34}
+            hover_color = {0.4, 0.4, 0.4}
         })
     else
-        local RED = {0.8, 0.3, 0.2}
+        local RED = {0.3, 0.3, 0.3}
         self.editButton({
             index = 5,
             color = RED,
-            hover_color = {0.48, 0.34, 0.34}
+            hover_color = {0.2, 0.2, 0.2}
         })
     end
 end

@@ -226,23 +226,6 @@ function onPlayerAction(player, action, targets)
     end
 end
 
-function onPlayerTurn(player, previous_player)
-    if previous_player == nil then
-        print(player.color .. " is going first. It's now their turn.")
-    else
-        print(previous_player.color .. "'s turn is over. It's now " ..
-                  player.color .. "'s turn.")
-    end
-
-    turn_count = turn_count + 1
-    if is_auto_end_round_enabled then
-        if turn_count > #getSeatedPlayers() then
-            RoundManager.endRound() -- turn count is reset within RoundManager.endRound()
-        end
-    end
-
-end
-
 function onObjectEnterZone(zone, object)
     Counters.update(zone)
 
