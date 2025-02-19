@@ -24,9 +24,9 @@ function RoundManager.endRound()
     local initiative_player = Global.getVar("initiative_player")
     local all_players = Global.getVar("active_players")
 
-    if Initiative then
-        broadcastToAll(
-            "\n\n!!Could not determine initiative player!!\nPlease ensure initiative marker is near a player board.\n\n")
+    if not initiative_player then
+        LOG.WARNING(
+            "Could not determine initiative player. Please ensure initiative marker is near a player board.")
     elseif Initiative.is_seized() and seize_detected then
         -- Someone already manually seized initiative
         Initiative.unseize()
