@@ -1,17 +1,11 @@
 -- Used in all aspects of manipulating zero marker and 3 ambition markers
 require("src/GUIDs")
 
-local ambitionMarkers = {
-    zero_marker = getObjectFromGUID(zero_marker_GUID),
-    reach_board = getObjectFromGUID(reach_board_GUID)
-}
+local ambitionMarkers = {}
 
 local action_cards = require("src/ActionCards")
 local ArcsPlayer = require("src/ArcsPlayer")
 local Log = require("src/LOG")
-local reach_board = getObjectFromGUID(reach_board_GUID)
-local marker_zone = getObjectFromGUID(ambition_marker_zone_GUID)
-local zero_marker = getObjectFromGUID(zero_marker_GUID)
 
 -- is_face_down = false = lower (teal) side is face up
 -- is_face_down = true  = higher (yellow) side is face up
@@ -109,6 +103,7 @@ function ambitionMarkers:get_ambition_info(object)
 end
 
 function ambitionMarkers:add_button()
+    local zero_marker = getObjectFromGUID(zero_marker_GUID)
     zero_marker.createButton({
         click_function = 'declare_ambition',
         function_owner = zero_marker,
@@ -120,6 +115,7 @@ function ambitionMarkers:add_button()
 end
 
 function ambitionMarkers:display_declare_button()
+    local zero_marker = getObjectFromGUID(zero_marker_GUID)
     zero_marker.editButton({
         click_function = 'declare_ambition',
         tooltip = 'Declare Ambition'
@@ -127,6 +123,7 @@ function ambitionMarkers:display_declare_button()
 end
 
 function ambitionMarkers:display_undo_button()
+    local zero_marker = getObjectFromGUID(zero_marker_GUID)
     zero_marker.editButton({
         click_function = 'undo_ambition',
         tooltip = 'Undo'
@@ -145,11 +142,13 @@ function ambitionMarkers:undo()
         -- ambitionMarkers.display_declare_button()
         return
     end
+    local reach_board = getObjectFromGUID(reach_board_GUID)
     local undo_pos =
         reach_board.positionToWorld(last_declared_marker.column_pos)
     last_declared_marker.object.setPositionSmooth(undo_pos)
 
     -- move zero marker back
+    local zero_marker = getObjectFromGUID(zero_marker_GUID)
     zero_marker.setPositionSmooth(reach_board.positionToWorld({0.94, 0.2, 1.09}))
     zero_marker.setRotationSmooth({0.00, 180.00, 0.00})
 
@@ -160,14 +159,14 @@ function ambitionMarkers:reset_zero_marker()
     last_declared_marker = nil
     -- ambitionMarkers.display_declare_button()
 
-    zero_marker = getObjectFromGUID(zero_marker_GUID)
-    reach_board = getObjectFromGUID(reach_board_GUID)
+    local zero_marker = getObjectFromGUID(zero_marker_GUID)
+    local reach_board = getObjectFromGUID(reach_board_GUID)
     zero_marker.setPositionSmooth(reach_board.positionToWorld({0.94, 0.2, 1.09}))
     zero_marker.setRotationSmooth({0.00, 180.00, 0.00})
 end
 
 function ambitionMarkers:highest_undeclared()
-
+    local marker_zone = getObjectFromGUID(ambition_marker_zone_GUID)
     local available_markers = marker_zone.getObjects()
     local high_points = 0
     local high_marker = nil
@@ -223,6 +222,7 @@ function declare_ambition(obj, player_color)
     end
 
     local power = high_marker[high_marker.object.is_face_down].power_desc
+    local reach_board = getObjectFromGUID(reach_board_GUID)
 
     local this_ambition
     if (lead_info.real_number == 7 or is_faithful) then
@@ -235,7 +235,7 @@ function declare_ambition(obj, player_color)
     else
         this_ambition = ambitions[lead_info.real_number]
         local pos = high_marker.column_pos + this_ambition.row_pos;
-        pos = ambitionMarkers.reach_board.positionToWorld(pos)
+        pos = reach_board.positionToWorld(pos)
         high_marker.object.setPositionSmooth(pos)
         broadcastToAll("" .. player_color .. " has declared " ..
                            this_ambition.name .. " ambition for " .. power,
@@ -250,9 +250,9 @@ function declare_ambition(obj, player_color)
         return
     end
 
-    ambitionMarkers.zero_marker.setPositionSmooth(
-        ambitionMarkers.reach_board.positionToWorld({1.02, 0.2, 0.67}))
-    ambitionMarkers.zero_marker.setRotationSmooth({0.00, 90.00, 0.00})
+    local zero_marker = getObjectFromGUID(zero_marker_GUID)
+    zero_marker.setPositionSmooth(reach_board.positionToWorld({1.02, 0.2, 0.67}))
+    zero_marker.setRotationSmooth({0.00, 90.00, 0.00})
 
     -- ambitionMarkers.display_undo_button()
 end
