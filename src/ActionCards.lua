@@ -1,25 +1,20 @@
 require("src/GUIDs")
-local Log = require("src/LOG")
+local LOG = require("src/LOG")
 local supplies = require("src/Supplies")
 
 local ActionCards = {}
-
-local played_zone = getObjectFromGUID(action_card_zone_GUID)
-local lead_zone = getObjectFromGUID(lead_card_zone_GUID)
-local seize_zone = getObjectFromGUID(seize_zone_GUID)
 
 -- Face Down Discard
 local fdd_pos = Vector({0.94, 10.00, -1.26})
 local fdd_rot = Vector({0.00, 90.00, 180.00})
 
 -- Face Up Discard
-local fud_marker = getObjectFromGUID(FUDiscard_marker_GUID)
+
 local fud_marker_pos = {
     [true] = Vector({-19.93, 0.96, -2.31}),
     [false] = Vector({-19.93, -1.00, -2.31})
 }
-local fud_discard_action_deck = getObjectFromGUID(
-    face_up_discard_action_deck_GUID)
+
 local fud_pos = Vector({-3.70, 0.10, 0.00})
 local fud_rot = Vector({0.00, 90.00, 0.50})
 local fud_offset = Vector({0.35, 0.00, 0.00})
@@ -102,6 +97,7 @@ end
 function ActionCards.toggle_face_up_discard()
     local is_fud_active = Global.getVar("is_face_up_discard_active")
     is_fud_active = not is_fud_active
+    local fud_marker = getObjectFromGUID(FUDiscard_marker_GUID)
     fud_marker.setPosition(fud_marker_pos[is_fud_active])
     Global.setVar("is_face_up_discard_active", is_fud_active)
     return is_fud_active
@@ -139,7 +135,7 @@ function ActionCards.check_hands()
 end
 
 function ActionCards.clear_played()
-    Log.INFO("ActionCards.clear_played")
+    LOG.INFO("ActionCards.clear_played")
 
     local played_objects = getObjectFromGUID(action_card_zone_GUID).getObjects()
 
@@ -172,7 +168,7 @@ function ActionCards.clear_played()
 end
 
 function ActionCards.to_face_down_discard(card)
-    Log.INFO("ActionCards.to_face_down_discard")
+    LOG.INFO("ActionCards.to_face_down_discard")
     local reach_map = getObjectFromGUID(reach_board_GUID)
     local pos = reach_map.positionToWorld(fdd_pos)
     local rot = fdd_rot
@@ -181,15 +177,19 @@ function ActionCards.to_face_down_discard(card)
 end
 
 function ActionCards.to_face_up_discard(card)
-    Log.INFO("ActionCards.to_face_up_discard")
+    LOG.INFO("ActionCards.to_face_up_discard")
     local count = #ActionCards.get_face_up_discard_cards()
     local pos = fud_pos + count * fud_offset;
+    local fud_marker = getObjectFromGUID(FUDiscard_marker_GUID)
     pos = fud_marker.positionToWorld(pos)
     local rot = fud_rot
 
     local card_name = card.getDescription()
 
     local discarded_card = nil
+    local fud_discard_action_deck = getObjectFromGUID(
+        face_up_discard_action_deck_GUID)
+
     for _, v in ipairs(fud_discard_action_deck.getObjects()) do
         if (v.description == card_name) then
             discarded_card = fud_discard_action_deck.takeObject({
@@ -209,7 +209,10 @@ function ActionCards.to_face_up_discard(card)
 end
 
 function ActionCards.clear_face_up_discard()
-    Log.DEBUG("ActionCards.clear_face_up_discard()")
+    LOG.DEBUG("ActionCards.clear_face_up_discard()")
+    local fud_discard_action_deck = getObjectFromGUID(
+        face_up_discard_action_deck_GUID)
+
     for ct, obj in ipairs(ActionCards.get_face_up_discard_cards()) do
         obj.setLock(false)
         obj.removeTag(fud_tag)
@@ -248,6 +251,7 @@ end
 function ActionCards.get_lead_info()
     local lead = nil
     local is_ambition_declared = false
+    local lead_zone = getObjectFromGUID(lead_card_zone_GUID)
 
     if (lead_zone) then
         for _, obj in ipairs(lead_zone.getObjects()) do
@@ -260,22 +264,30 @@ function ActionCards.get_lead_info()
                 is_ambition_declared = true
             end
         end
+    else
+        LOG.ERROR("Could not find lead zone")
     end
 
     if (is_ambition_declared) then
+        LOG.TRACE("ambition is declared, setting lead number to 0")
         lead.number = 0
+    end
+    if (lead) then
+        LOG.DEBUG("leading card: " .. lead.type .. " " .. lead.number)
     end
     return lead
 end
 
 function ActionCards.get_surpassing_card()
     local lead = ActionCards.get_lead_info()
-    local surpassing_card = nil
-    local max_surpassing_number = 0
-
     if (not lead) then
+        LOG.ERROR("Could not determine lead card")
         return nil
     end
+
+    local surpassing_card = nil
+    local max_surpassing_number = 0
+    local played_zone = getObjectFromGUID(action_card_zone_GUID)
 
     for _, v in ipairs(played_zone.getObjects()) do
         if (v.guid == lead.guid) then
@@ -288,6 +300,9 @@ function ActionCards.get_surpassing_card()
 
         do -- avoid error with goto jumping into surpassing_card scope
             local card = ActionCards.get_info(v)
+            if (card) then
+                LOG.DEBUG("card: " .. card.type .. " " .. card.number)
+            end
             if (card and lead.type == card.type and lead.number < card.number and
                 card.number > max_surpassing_number) then
                 max_surpassing_number = card.number
@@ -297,10 +312,15 @@ function ActionCards.get_surpassing_card()
         ::continue::
     end
 
+    if (surpassing_card) then
+        LOG.INFO("surpassing card: " .. surpassing_card.type .. " " ..
+                     surpassing_card.number)
+    end
     return surpassing_card
 end
 
 function ActionCards.count_seize_cards()
+    local seize_zone = getObjectFromGUID(seize_zone_GUID)
     if (not seize_zone) then
         return 0
     end
@@ -316,6 +336,8 @@ end
 
 function ActionCards.count_action_cards()
     local count = 0
+    local played_zone = getObjectFromGUID(action_card_zone_GUID)
+
     for _, obj in ipairs(played_zone.getObjects()) do
         if obj.hasTag("Action") then
             count = count + 1
@@ -325,6 +347,7 @@ function ActionCards.count_action_cards()
 end
 
 function ActionCards.find_seize_player()
+    local seize_zone = getObjectFromGUID(seize_zone_GUID)
     local seize_zone_objects = seize_zone.getObjects()
     for _, obj in ipairs(seize_zone_objects) do
         if obj.hasTag("Action") and obj.is_face_down then
@@ -361,6 +384,7 @@ function ActionCards.faceup_discard_visibility(show)
 end
 
 function ActionCards.get_fud_marker()
+    local fud_marker = getObjectFromGUID(FUDiscard_marker_GUID)
     return fud_marker
 end
 
