@@ -172,7 +172,6 @@ function onObjectDrop(player_color, object)
         if (is_in_action_zone) then
             local player = get_arcs_player(player_color)
             if (player) then
-                print(player_color .. " played " .. object.getDescription())
                 player:set_last_played_action_card(object.getDescription())
             end
         end
