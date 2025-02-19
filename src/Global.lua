@@ -172,6 +172,7 @@ function onObjectDrop(player_color, object)
         if (is_in_action_zone) then
             local player = get_arcs_player(player_color)
             if (player) then
+                print(player_color .. " played " .. object.getDescription())
                 player:set_last_played_action_card(object.getDescription())
             end
         end
@@ -227,12 +228,6 @@ function onPlayerAction(player, action, targets)
 end
 
 function onPlayerTurn(player, previous_player)
-    if previous_player == nil then
-        print(player.color .. " is going first. It's now their turn.")
-    else
-        print(previous_player.color .. "'s turn is over. It's now " ..
-                  player.color .. "'s turn.")
-    end
 
     turn_count = turn_count + 1
     if is_auto_end_round_enabled then
