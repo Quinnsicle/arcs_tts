@@ -7,6 +7,8 @@ control_GUID = Global.getVar("control_GUID")
 
 -- font_color = {0.8, 0.58, 0.27}, GOLD
 local teal = {0.4, 0.6, 0.6}
+local GREEN = {0.2, 0.5, 0.2}
+local RED = {0.8, 0.3, 0.2}
 
 -- Button Rows
 -- Row 1 - {x, y, -1.17}
@@ -107,7 +109,7 @@ local toggle_auto_end_params = {
     width = 220,
     position = {0.6, 0.5, -0.01},
     font_size = 50,
-    color = {0.2, 0.5, 0.2},
+    color = RED,
     hover_color = {0.34, 0.48, 0.34}
 }
 
@@ -170,14 +172,12 @@ function toggle_auto_end()
     Global.setVar("is_auto_end_round_enabled", toggle)
 
     if (toggle) then
-        local GREEN = {0.2, 0.5, 0.2}
         self.editButton({
             index = 5,
             color = GREEN,
             hover_color = {0.34, 0.48, 0.34}
         })
     else
-        local RED = {0.8, 0.3, 0.2}
         self.editButton({
             index = 5,
             color = RED,
