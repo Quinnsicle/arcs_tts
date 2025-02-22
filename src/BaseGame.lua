@@ -267,6 +267,7 @@ function BaseGame.setup(with_leaders, with_ll_expansion, with_miniatures)
 
     Turns.type = 2
     Turns.order = active_player_colors
+    Turns.turn_color = active_players[1].color
 
     return true
 end
