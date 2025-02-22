@@ -155,6 +155,7 @@ function start_chapter()
         broadcastToAll(initiative_player .. " will start the chapter\n",
             initiative_player)
         Turns.turn_color = initiative_player
+        Global.setVar("turn_count", 0)
     else
         broadcastToAll(
             "\n\n!!Could not determine initiative player!!\nPlease ensure initiative marker is near a player board.\n\n")
