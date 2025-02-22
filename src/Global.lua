@@ -124,6 +124,7 @@ local SetupControl = require("src/SetupControl")
 local Supplies = require("src/Supplies")
 local Camera = require("src/Camera")
 local Timer = require("src/Timer")
+local LOG = require("src/LOG")
 
 function assignPlayerToAvailableColor(player, color)
     local color = table.remove(available_colors, 1)
@@ -155,45 +156,6 @@ function onObjectDrop(player_color, object)
         Wait.time(function()
             player:update_score()
         end, 0.5)
-    end
-
-    -- update last played action card
-    if (object_name == "Action Card" and not object.is_face_down) then
-        -- TODO: check if in play zone
-        local played_zone = getObjectFromGUID(action_card_zone_GUID)
-        local is_in_action_zone = false
-        for i, zone_obj in ipairs(played_zone.getObjects()) do
-            if (zone_obj == object) then
-                is_in_action_zone = true
-                break
-            end
-        end
-
-        if (is_in_action_zone) then
-            local player = get_arcs_player(player_color)
-            if (player) then
-                player:set_last_played_action_card(object.getDescription())
-            end
-        end
-    end
-
-    if (object_name == "Action Card" and object.is_face_down) then
-        local seize_zone = getObjectFromGUID(seize_zone_GUID)
-        local is_in_seize_zone = false
-        for i, zone_obj in ipairs(seize_zone.getObjects()) do
-            if (zone_obj == object) then
-                is_in_seize_zone = true
-                break
-            end
-        end
-        if (is_in_seize_zone) then
-            local player = get_arcs_player(player_color)
-            if (player) then
-                player:set_last_played_seize_card(object.getDescription())
-                broadcastToAll(player.color .. " is seizing the initiative",
-                    player.color)
-            end
-        end
     end
 
     -- ambitions
@@ -256,6 +218,36 @@ function onObjectEnterZone(zone, object)
         local zone_color = zone.getDescription()
         Global.setVar("initiative_player", zone_color)
     end
+
+    local played_zone = getObjectFromGUID(action_card_zone_GUID)
+    local seize_zone = getObjectFromGUID(seize_zone_GUID)
+
+    -- Action card tracking
+    if object and object.tag == "Card" and object.hasTag("Action") then
+        -- create a unique wait ID
+        local wait_id = zone.getGUID() .. object.getGUID()
+        -- add the Wait.condition to the table of waits
+        zoneWaits[wait_id] = Wait.condition(function()
+
+            -- Update last played card
+            local player = get_arcs_player(Turns.turn_color)
+            if (not player) then
+                LOG.WARNING("Could not track last played card for " ..
+                                Turns.turn_color)
+            end
+
+            if (object.is_face_down and zone.guid == seize_zone.guid) then
+                player:set_last_played_seize_card(object.getDescription())
+                broadcastToAll(player.color .. " is seizing the initiative",
+                    player.color)
+            elseif (zone.guid == played_zone.guid) then
+                player:set_last_played_action_card(object.getDescription())
+            end
+
+        end, function()
+            return object.resting
+        end)
+    end
 end
 
 function onObjectSpawn(object)
@@ -275,6 +267,14 @@ function onObjectLeaveZone(zone, object)
                 p:update_score()
             end
         end
+    end
+
+    -- create a unique wait ID
+    local wait_id = zone.getGUID() .. object.getGUID()
+
+    -- check for and remove the Wait.condition if it exists
+    if zoneWaits[wait_id] then
+        Wait.stop(zoneWaits[wait_id])
     end
 end
 
@@ -1364,6 +1364,9 @@ function set_game_in_progress(params)
 end
 
 function onLoad()
+    -- create a blank table to store the Wait.conditions in
+    zoneWaits = {}
+
     Initiative.add_menu()
 
     for _, obj in pairs(getObjectsWithTag("City")) do
