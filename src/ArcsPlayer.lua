@@ -238,6 +238,9 @@ end
 function ArcsPlayer:update_score()
     self.score_board = getObjectFromGUID(
         player_pieces[self.color]["components"]["score_board"])
+    if (self.score_board == nil) then
+        return
+    end
 
     local ambitions = Global.getVar("active_ambitions")
     local white_color = Color.fromString("White")
@@ -270,21 +273,15 @@ function ArcsPlayer:update_score()
     local power_pos_x = power_cube and power_cube.getPosition().x or 0
     local power = math.floor((power_pos_x + 13.26) / 0.655)
     self.power = (power > 0) and power or 0
-    self.hand_size =
-        #getObjectFromGUID(player_pieces[self.color]["hand_zone"]).getObjects()
+    local hand_zone = getObjectFromGUID(player_pieces[self.color]["hand_zone"])
+    self.hand_size = hand_zone and #hand_zone.getObjects() or 0
     self.tycoon = self:count("Fuel") + self:count("Material")
     local captive_zone = getObjectFromGUID(
         player_pieces[self.color]["captives_zone"])
-    if (captive_zone == nil) then
-        return
-    end
-    self.captives = #captive_zone.getObjects()
+    self.captives = captive_zone and #captive_zone.getObjects() or 0
     local trophies_zone = getObjectFromGUID(
         player_pieces[self.color]["trophies_zone"])
-    if (trophies_zone == nil) then
-        return
-    end
-    self.trophies = #trophies_zone.getObjects()
+    self.trophies = trophies_zone and #trophies_zone.getObjects() or 0
     self.keeper = self:count("Relic")
     self.empath = self:count("Psionic")
 
