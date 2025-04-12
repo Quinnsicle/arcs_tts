@@ -199,9 +199,9 @@ function onObjectDrop(player_color, object)
     -- ambitions
     if (object_name == "Ambition") then
 
-        Wait.time(function()
-            AmbitionMarkers.get_ambition_info(object)
-        end, 0.5)
+        -- Wait.time(function()
+        --     AmbitionMarkers.get_ambition_info(object)
+        -- end, 0.5)
     end
 
 end
