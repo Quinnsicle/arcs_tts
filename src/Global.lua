@@ -110,6 +110,7 @@ active_ambitions = {
     b0b4d0 = ""
 }
 
+zoneWaits = {}
 ----------------------------------------------------
 AmbitionMarkers = require("src/AmbitionMarkers")
 local ActionCards = require("src/ActionCards")
@@ -146,6 +147,19 @@ function update_player_scores()
     end
 end
 
+function isObjectInZone(object, zone)
+    if not object or not zone then return false end
+    
+    -- Revert to loop-based implementation since containsObject isn't working
+    local zoneObjects = zone.getObjects()
+    for _, obj in ipairs(zoneObjects) do
+        if obj.guid == object.guid then
+            return true
+        end
+    end
+    return false
+end
+
 function onObjectDrop(player_color, object)
     local object_name = object.getName()
 
@@ -157,12 +171,6 @@ function onObjectDrop(player_color, object)
             player:update_score()
         end, 0.5)
     end
-
-
-    local played_zone = getObjectFromGUID(action_card_zone_GUID)
-    local played_zone_card = false
-    local seize_zone = getObjectFromGUID(seize_zone_GUID)
-    local seize_zone_card = false
 
     -- Action card tracking
     if object and object.tag == "Card" and object.hasTag("Action") then
@@ -178,17 +186,14 @@ function onObjectDrop(player_color, object)
                                 Turns.turn_color)
             end
 
-            for _, zone_obj in ipairs(seize_zone.getObjects()) do
-                if (zone_obj.guid == object.guid) then
-                    seize_zone_card = true
-                end
-            end
+            local played_zone_card = false
+            local played_zone = getObjectFromGUID(action_card_zone_GUID)
+            local seize_zone_card = false
+            local seize_zone = getObjectFromGUID(seize_zone_GUID)
+
+            seize_zone_card = isObjectInZone(object, seize_zone)
             if not seize_zone_card then
-                for _, zone_obj in ipairs(played_zone.getObjects()) do
-                    if (zone_obj.guid == object.guid) then
-                        played_zone_card = true
-                    end
-                end
+                played_zone_card = isObjectInZone(object, played_zone)
             end
 
             if (object.is_face_down and seize_zone_card) then
@@ -206,7 +211,7 @@ function onObjectDrop(player_color, object)
 
     -- ambitions
     if (object_name == "Ambition") then
-
+        -- commenting until we can get the ambition markers working
         -- Wait.time(function()
         --     AmbitionMarkers.get_ambition_info(object)
         -- end, 0.5)
