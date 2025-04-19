@@ -158,6 +158,52 @@ function onObjectDrop(player_color, object)
         end, 0.5)
     end
 
+
+    local played_zone = getObjectFromGUID(action_card_zone_GUID)
+    local played_zone_card = false
+    local seize_zone = getObjectFromGUID(seize_zone_GUID)
+    local seize_zone_card = false
+
+    -- Action card tracking
+    if object and object.tag == "Card" and object.hasTag("Action") then
+        -- create a unique wait ID using just the object GUID
+        local wait_id = object.getGUID()
+        -- add the Wait.condition to the table of waits
+        zoneWaits[wait_id] = Wait.condition(function()
+
+            -- Update last played card
+            local player = get_arcs_player(Turns.turn_color)
+            if (not player) then
+                LOG.WARNING("Could not track last played card for " ..
+                                Turns.turn_color)
+            end
+
+            for _, zone_obj in ipairs(seize_zone.getObjects()) do
+                if (zone_obj.guid == object.guid) then
+                    seize_zone_card = true
+                end
+            end
+            if not seize_zone_card then
+                for _, zone_obj in ipairs(played_zone.getObjects()) do
+                    if (zone_obj.guid == object.guid) then
+                        played_zone_card = true
+                    end
+                end
+            end
+
+            if (object.is_face_down and seize_zone_card) then
+                player:set_last_played_seize_card(object.getDescription())
+                broadcastToAll(player.color .. " is seizing the initiative",
+                    player.color)
+            elseif (not object.is_face_down and played_zone_card) then
+                player:set_last_played_action_card(object.getDescription())
+            end
+
+        end, function()
+            return object.resting
+        end)
+    end
+
     -- ambitions
     if (object_name == "Ambition") then
 
@@ -217,36 +263,6 @@ function onObjectEnterZone(zone, object)
         seized_initiative_GUID) and zone_name == "initiative_zone") then
         local zone_color = zone.getDescription()
         Global.setVar("initiative_player", zone_color)
-    end
-
-    local played_zone = getObjectFromGUID(action_card_zone_GUID)
-    local seize_zone = getObjectFromGUID(seize_zone_GUID)
-
-    -- Action card tracking
-    if object and object.tag == "Card" and object.hasTag("Action") then
-        -- create a unique wait ID
-        local wait_id = zone.getGUID() .. object.getGUID()
-        -- add the Wait.condition to the table of waits
-        zoneWaits[wait_id] = Wait.condition(function()
-
-            -- Update last played card
-            local player = get_arcs_player(Turns.turn_color)
-            if (not player) then
-                LOG.WARNING("Could not track last played card for " ..
-                                Turns.turn_color)
-            end
-
-            if (object.is_face_down and zone.guid == seize_zone.guid) then
-                player:set_last_played_seize_card(object.getDescription())
-                broadcastToAll(player.color .. " is seizing the initiative",
-                    player.color)
-            elseif (object.is_face_up and zone.guid == played_zone.guid) then
-                player:set_last_played_action_card(object.getDescription())
-            end
-
-        end, function()
-            return object.resting
-        end)
     end
 end
 

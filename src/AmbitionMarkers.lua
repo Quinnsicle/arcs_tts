@@ -135,9 +135,6 @@ function ambitionMarkers:display_undo_button()
     })
 end
 
-function ambitionMarkers.declare(obj, player_color)
-
-end
 
 function ambitionMarkers:undo()
     broadcastToAll("Undo Ambition Declaration")
