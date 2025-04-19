@@ -240,7 +240,7 @@ function onObjectEnterZone(zone, object)
                 player:set_last_played_seize_card(object.getDescription())
                 broadcastToAll(player.color .. " is seizing the initiative",
                     player.color)
-            elseif (zone.guid == played_zone.guid) then
+            elseif (object.is_face_up and zone.guid == played_zone.guid) then
                 player:set_last_played_action_card(object.getDescription())
             end
 
