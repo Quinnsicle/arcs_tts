@@ -6094,7 +6094,7 @@
         "scaleY": 1.0,
         "scaleZ": 6.01513433
       },
-      "Nickname": "",
+      "Nickname": "Map",
       "Description": "",
       "GMNotes": "",
       "AltLookAngle": {
@@ -6129,8 +6129,8 @@
       "SidewaysCard": false,
       "CustomDeck": {
         "350": {
-          "FaceURL": "https://dl.dropboxusercontent.com/s/in0balb2kwgo76w/map%28red%29dark.jpg?dl=0",
-          "BackURL": "https://dl.dropboxusercontent.com/s/in0balb2kwgo76w/map%28red%29dark.jpg?dl=0",
+          "FaceURL": "https://steamusercontent-a.akamaihd.net/ugc/15307984780821549/AA2CE545386DB6B3F469E318B86FB006CAD39088/",
+          "BackURL": "https://steamusercontent-a.akamaihd.net/ugc/15307984780821549/AA2CE545386DB6B3F469E318B86FB006CAD39088/",
           "NumWidth": 1,
           "NumHeight": 1,
           "BackIsHidden": true,
