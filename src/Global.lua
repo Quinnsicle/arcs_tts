@@ -110,6 +110,7 @@ active_ambitions = {
     b0b4d0 = ""
 }
 
+zoneWaits = {}
 ----------------------------------------------------
 AmbitionMarkers = require("src/AmbitionMarkers")
 local ActionCards = require("src/ActionCards")
@@ -146,6 +147,19 @@ function update_player_scores()
     end
 end
 
+function isObjectInZone(object, zone)
+    if not object or not zone then return false end
+    
+    -- Revert to loop-based implementation since containsObject isn't working
+    local zoneObjects = zone.getObjects()
+    for _, obj in ipairs(zoneObjects) do
+        if obj.guid == object.guid then
+            return true
+        end
+    end
+    return false
+end
+
 function onObjectDrop(player_color, object)
     local object_name = object.getName()
 
@@ -158,12 +172,49 @@ function onObjectDrop(player_color, object)
         end, 0.5)
     end
 
+    -- Action card tracking
+    if object and object.tag == "Card" and object.hasTag("Action") then
+        -- create a unique wait ID using just the object GUID
+        local wait_id = object.getGUID()
+        -- add the Wait.condition to the table of waits
+        zoneWaits[wait_id] = Wait.condition(function()
+
+            -- Update last played card
+            local player = get_arcs_player(Turns.turn_color)
+            if (not player) then
+                LOG.WARNING("Could not track last played card for " ..
+                                Turns.turn_color)
+            end
+
+            local played_zone_card = false
+            local played_zone = getObjectFromGUID(action_card_zone_GUID)
+            local seize_zone_card = false
+            local seize_zone = getObjectFromGUID(seize_zone_GUID)
+
+            seize_zone_card = isObjectInZone(object, seize_zone)
+            if not seize_zone_card then
+                played_zone_card = isObjectInZone(object, played_zone)
+            end
+
+            if (object.is_face_down and seize_zone_card) then
+                player:set_last_played_seize_card(object.getDescription())
+                broadcastToAll(player.color .. " is seizing the initiative",
+                    player.color)
+            elseif (not object.is_face_down and played_zone_card) then
+                player:set_last_played_action_card(object.getDescription())
+            end
+
+        end, function()
+            return object.resting
+        end)
+    end
+
     -- ambitions
     if (object_name == "Ambition") then
-
-        Wait.time(function()
-            AmbitionMarkers.get_ambition_info(object)
-        end, 0.5)
+        -- commenting until we can get the ambition markers working
+        -- Wait.time(function()
+        --     AmbitionMarkers.get_ambition_info(object)
+        -- end, 0.5)
     end
 
 end
@@ -217,36 +268,6 @@ function onObjectEnterZone(zone, object)
         seized_initiative_GUID) and zone_name == "initiative_zone") then
         local zone_color = zone.getDescription()
         Global.setVar("initiative_player", zone_color)
-    end
-
-    local played_zone = getObjectFromGUID(action_card_zone_GUID)
-    local seize_zone = getObjectFromGUID(seize_zone_GUID)
-
-    -- Action card tracking
-    if object and object.tag == "Card" and object.hasTag("Action") then
-        -- create a unique wait ID
-        local wait_id = zone.getGUID() .. object.getGUID()
-        -- add the Wait.condition to the table of waits
-        zoneWaits[wait_id] = Wait.condition(function()
-
-            -- Update last played card
-            local player = get_arcs_player(Turns.turn_color)
-            if (not player) then
-                LOG.WARNING("Could not track last played card for " ..
-                                Turns.turn_color)
-            end
-
-            if (object.is_face_down and zone.guid == seize_zone.guid) then
-                player:set_last_played_seize_card(object.getDescription())
-                broadcastToAll(player.color .. " is seizing the initiative",
-                    player.color)
-            elseif (zone.guid == played_zone.guid) then
-                player:set_last_played_action_card(object.getDescription())
-            end
-
-        end, function()
-            return object.resting
-        end)
     end
 end
 

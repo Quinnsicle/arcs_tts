@@ -77,12 +77,17 @@ local ambitions = {
 local last_declared_marker = nil
 
 function ambitionMarkers:get_ambition_info(object)
-
     local reach_map = getObjectFromGUID(reach_board_GUID)
     local ambition_pos_z = (reach_map.positionToLocal(object.getPosition()).z)
     local ambition_number = math.floor((ambition_pos_z + 1.83) / 0.39)
 
     local global_ambitions = Global.getVar("active_ambitions")
+
+    -- Initialize global_ambitions if it's nil
+    if global_ambitions == nil then
+        global_ambitions = {}
+        Global.setVar("active_ambitions", global_ambitions)
+    end
 
     if (ambition_number == 1) then -- -1.07 reset
         global_ambitions[object.guid] = ""
@@ -130,9 +135,6 @@ function ambitionMarkers:display_undo_button()
     })
 end
 
-function ambitionMarkers.declare(obj, player_color)
-
-end
 
 function ambitionMarkers:undo()
     broadcastToAll("Undo Ambition Declaration")
