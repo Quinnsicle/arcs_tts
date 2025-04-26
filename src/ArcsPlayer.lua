@@ -235,6 +235,68 @@ function ArcsPlayer:take_resource(name, slot_num)
     Resource:take(name, self.board.positionToWorld(slot_pos))
 end
 
+function ArcsPlayer:power_score(power_cube)
+    -- Calculate base power from cube position
+    local power_pos_x = power_cube and power_cube.getPosition().x or 0
+    local base_power = math.floor((power_pos_x + 13.26) / 0.655)
+    if base_power < 0 then base_power = 0 end
+
+    -- Get bonus from zones
+    local bonus = self:power_bonus()
+
+    -- Calculate total and apply negative modifier if needed
+    local total = base_power + bonus
+    return self:is_power_negative() and -total or total
+end
+
+function ArcsPlayer:power_bonus()
+    local bonus = 0
+    local color_tag = self.color .. "Piece"
+
+    -- Define zones and their bonus values
+    local zones = {
+        {guid = plus_fifty_power_zone_GUID, value = 50},
+        {guid = plus_one_hundred_power_zone_GUID, value = 100}
+    }
+
+    for _, zone_info in ipairs(zones) do
+        local zone = getObjectFromGUID(zone_info.guid)
+        if not zone then
+            Log.warning("Power bonus zone not found: " .. zone_info.guid)
+        else
+            -- Check objects in this zone
+            for _, obj in ipairs(zone.getObjects()) do
+                if obj.hasTag("power") and obj.hasTag(color_tag) then
+                    bonus = bonus + zone_info.value
+                end
+            end
+        end
+    end
+
+    return bonus
+end
+
+function ArcsPlayer:is_power_negative()
+    local negative_zone = getObjectFromGUID(negative_power_zone_GUID)
+
+    if not negative_zone then
+        Log.warning("Negative power zone not found")
+        return false
+    end
+
+    local color_tag = self.color .. "Piece"
+    local objects = negative_zone.getObjects()
+
+    for i = 1, #objects do
+        local obj = objects[i]
+        if obj.hasTag("power") and obj.hasTag(color_tag) then
+            return true
+        end
+    end
+
+    return false
+end
+
 function ArcsPlayer:update_score()
     self.score_board = getObjectFromGUID(
         player_pieces[self.color]["components"]["score_board"])
@@ -269,10 +331,7 @@ function ArcsPlayer:update_score()
 
     local power_cube = getObjectFromGUID(
         player_pieces[self.color]["components"].power)
-    -- account for missing power cube otherwise errors show up when exiting
-    local power_pos_x = power_cube and power_cube.getPosition().x or 0
-    local power = math.floor((power_pos_x + 13.26) / 0.655)
-    self.power = (power > 0) and power or 0
+    self.power = self:power_score(power_cube)
     local hand_zone = getObjectFromGUID(player_pieces[self.color]["hand_zone"])
     self.hand_size = hand_zone and #hand_zone.getObjects() or 0
     self.tycoon = self:count("Fuel") + self:count("Material")
