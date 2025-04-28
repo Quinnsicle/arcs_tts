@@ -17,14 +17,30 @@ function onObjectEnterZone(zone, object)
         end
     end
 
-    -- Check if the object is "SONG OF FREEDOM" and move it 4 units to the right
+    -- Check if the object is "SONG OF FREEDOM" and move it 
     if object.getName() == "SONG OF FREEDOM" then
-        local currentPosition = object.getPosition()
-        object.setPosition({
-            x = currentPosition.x + 4,
-            y = currentPosition.y,
-            z = currentPosition.z
-        })
+        local pos = object.getPosition()
+        object.setPosition({ x = 26, y = pos.y, z = pos.z })
+        broadcastToAll("Shuffle Song Of Freedom into the Court deck.")
+        return
+    end
+
+    -- Special handling for GUILD STRUGGLE (only once per game)
+    if object.getName() == "GUILD STRUGGLE" then
+        object.setName("GUILD STRUGGLE RESOLVED")
+
+        for _, obj in ipairs(zoneObjects) do
+            if obj.type == "Card" then
+                if obj.hasTag("Guild") then
+                    local pos = obj.getPosition()
+                    obj.setPosition({ x = 26, y = pos.y, z = pos.z })
+                end
+            elseif obj.type == "Deck" then
+                splitDeckMoveGuildCardsBottom(obj)
+            end
+        end
+        broadcastToAll("Shuffle all Guild cards from the Court discard pile into the Court deck.")
+
         return
     end
 
@@ -64,5 +80,33 @@ function onObjectEnterZone(zone, object)
                 courtDiscardTopCard = nil
             end
         end, 0.25)
+    end
+end
+function splitDeckMoveGuildCardsBottom(deck)
+    local numCards = deck.getQuantity()
+    for i = 1, numCards + 1 do
+        Wait.time(function()
+            if deck == nil or not deck or deck.type ~= "Deck" then
+                
+                return
+            end
+            local card = deck.takeObject({
+                position = {
+                    x = deck.getPosition().x,
+                    y = deck.getPosition().y + 2,
+                    z = deck.getPosition().z
+                },
+                smooth = false,
+                top = false
+            })
+            if card and card.hasTag("Guild") then
+                local pos = card.getPosition()
+                card.setPosition({
+                    x = 26,
+                    y = pos.y,
+                    z = pos.z
+                })
+            end
+        end, 0.1 * i)
     end
 end
