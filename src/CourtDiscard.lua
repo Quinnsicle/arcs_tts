@@ -17,13 +17,24 @@ function onObjectEnterZone(zone, object)
         end
     end
 
+    -- Check if the object is "SONG OF FREEDOM" and move it 4 units to the right
+    if object.getName() == "SONG OF FREEDOM" then
+        local currentPosition = object.getPosition()
+        object.setPosition({
+            x = currentPosition.x + 4,
+            y = currentPosition.y,
+            z = currentPosition.z
+        })
+        return
+    end
+
     -- if a deck object has yet to form, record the newest card entering discard
     if #courtCards == 3 then 
         courtDiscardTopCard = object
         return
     end
 
-    -- handle situations where a deck object has not yet formed but a third cards enters discard
+    -- handle situations where a deck object has not yet formed but a third card enters discard
     -- we pull the last discarded card from a newly formed deck, place it back on top of the discard pile
     if courtDiscardTopCard and courtDiscardDeck then 
         Wait.time(function()
