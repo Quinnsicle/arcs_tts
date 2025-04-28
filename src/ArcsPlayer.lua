@@ -35,7 +35,7 @@ local player_pieces = {
             mini_agents = "8018da",
             cities = {"dbf4de", "799077", "acfa72", "ac28fb", "b41592"},
             power = "e1edd4",
-            objective = "c5bc19",
+            objective = "c5bc19"
         },
         initiative_zone = "3fc6fd",
         trophies_zone = "7f5014",
