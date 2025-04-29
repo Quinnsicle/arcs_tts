@@ -15,6 +15,11 @@ lead_card_zone_GUID = "9e5eae"
 FUDiscard_marker_GUID = "000207"
 
 zero_marker_GUID = "0289cb"
+zero_marker_zone_GUID = "3984e4"
+negative_power_zone_GUID = "3984e5"
+plus_fifty_power_zone_GUID = "3984e6"
+plus_one_hundred_power_zone_GUID = "3984e7"
+
 ambition_marker_GUIDs = {"c9e0ee", "a9b02a", "b0b4d0"}
 ambition_marker_zone_GUID = "06c552"
 court_deck_zone_GUID = "7a33ff"

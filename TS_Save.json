@@ -1002,6 +1002,36 @@
     },
     {
       "Position": {
+        "x": -13.9095516,
+        "y": 1.01329613,
+        "z": -8.445024
+      },
+      "Tags": [
+        "Power"
+      ]
+    },
+    {
+      "Position": {
+        "x": -12.6089373,
+        "y": 1.01331675,
+        "z": -8.444463
+      },
+      "Tags": [
+        "Power"
+      ]
+    },
+    {
+      "Position": {
+        "x": -11.3171186,
+        "y": 1.01333725,
+        "z": -8.445699
+      },
+      "Tags": [
+        "Power"
+      ]
+    },
+    {
+      "Position": {
         "x": -12.1984358,
         "y": 1.01333582,
         "z": -4.733103
@@ -6099,8 +6129,8 @@
       "SidewaysCard": false,
       "CustomDeck": {
         "350": {
-          "FaceURL": "https://dl.dropboxusercontent.com/s/in0balb2kwgo76w/map%28red%29dark.jpg?dl=0",
-          "BackURL": "https://dl.dropboxusercontent.com/s/in0balb2kwgo76w/map%28red%29dark.jpg?dl=0",
+          "FaceURL": "https://steamusercontent-a.akamaihd.net/ugc/15307984780888675/FFA29AA198FE535536C3A5D9593C0A92D797276C/",
+          "BackURL": "https://steamusercontent-a.akamaihd.net/ugc/15307984780888675/FFA29AA198FE535536C3A5D9593C0A92D797276C/",
           "NumWidth": 1,
           "NumHeight": 1,
           "BackIsHidden": true,
@@ -60968,7 +60998,145 @@
         "scaleY": 1.66667342,
         "scaleZ": 0.8882759
       },
-      "Nickname": "",
+      "Nickname": "Zero Marker Zone",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 0.509803951
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    {
+      "GUID": "3984e5",
+      "Name": "ScriptingTrigger",
+      "Transform": {
+        "posX": -13.59,
+        "posY": 2.93,
+        "posZ": -8.44,
+        "rotX": 0.0,
+        "rotY": 0.0,
+        "rotZ": 0.0,
+        "scaleX": 1.24,
+        "scaleY": 4.00,
+        "scaleZ": 0.51
+      },
+      "Nickname": "Negative Power Zone",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 0.509803951
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    {
+      "GUID": "3984e6",
+      "Name": "ScriptingTrigger",
+      "Transform": {
+        "posX": -12.27,
+        "posY": 2.93,
+        "posZ": -8.44,
+        "rotX": 0.0,
+        "rotY": 0.0,
+        "rotZ": 0.0,
+        "scaleX": 1.24,
+        "scaleY": 4.00,
+        "scaleZ": 0.51
+      },
+      "Nickname": "Plus Fifty Power Zone",
+      "Description": "",
+      "GMNotes": "",
+      "AltLookAngle": {
+        "x": 0.0,
+        "y": 0.0,
+        "z": 0.0
+      },
+      "ColorDiffuse": {
+        "r": 1.0,
+        "g": 1.0,
+        "b": 1.0,
+        "a": 0.509803951
+      },
+      "LayoutGroupSortIndex": 0,
+      "Value": 0,
+      "Locked": true,
+      "Grid": true,
+      "Snap": true,
+      "IgnoreFoW": false,
+      "MeasureMovement": false,
+      "DragSelectable": true,
+      "Autoraise": true,
+      "Sticky": true,
+      "Tooltip": true,
+      "GridProjection": false,
+      "HideWhenFaceDown": false,
+      "Hands": false,
+      "LuaScript": "",
+      "LuaScriptState": "",
+      "XmlUI": ""
+    },
+    {
+      "GUID": "3984e7",
+      "Name": "ScriptingTrigger",
+      "Transform": {
+        "posX": -10.96,
+        "posY": 2.93,
+        "posZ": -8.44,
+        "rotX": 0.0,
+        "rotY": 0.0,
+        "rotZ": 0.0,
+        "scaleX": 1.24,
+        "scaleY": 4.00,
+        "scaleZ": 0.51
+      },
+      "Nickname": "Plus One Hundred Power Zone",
       "Description": "",
       "GMNotes": "",
       "AltLookAngle": {
@@ -65812,9 +65980,9 @@
       "GUID": "3c2ffc",
       "Name": "Custom_Model",
       "Transform": {
-        "posX": -13.7000008,
+        "posX": -10.25,
         "posY": 1.17749512,
-        "posZ": -10.7111158,
+        "posZ": -10.42,
         "rotX": 3.35944577E-07,
         "rotY": 179.9969,
         "rotZ": 4.88200044E-07,
@@ -65891,9 +66059,9 @@
       "GUID": "c5bc19",
       "Name": "Custom_Model",
       "Transform": {
-        "posX": 9.786063,
+        "posX": 13.38,
         "posY": 1.17749512,
-        "posZ": -10.703763,
+        "posZ": -10.42,
         "rotX": 2.865635E-07,
         "rotY": 180.012512,
         "rotZ": 2.10911253E-07,
@@ -65970,9 +66138,9 @@
       "GUID": "59d36b",
       "Name": "Custom_Model",
       "Transform": {
-        "posX": 9.730012,
+        "posX": 13.38,
         "posY": 1.17749548,
-        "posZ": 20.6627522,
+        "posZ": 20.80,
         "rotX": -2.870695E-08,
         "rotY": 180.0247,
         "rotZ": -3.21757142E-07,
@@ -66049,9 +66217,9 @@
       "GUID": "8d76b7",
       "Name": "Custom_Model",
       "Transform": {
-        "posX": -13.7000036,
+        "posX": -10.25,
         "posY": 1.17749536,
-        "posZ": 20.7298145,
+        "posZ": 20.80,
         "rotX": 2.93672251E-08,
         "rotY": 180.011185,
         "rotZ": 6.109155E-07,
@@ -73131,12 +73299,12 @@
       "GUID": "a8e929",
       "Name": "Deck",
       "Transform": {
-        "posX": -15.9100046,
-        "posY": 1.12977576,
-        "posZ": 3.6200006,
-        "rotX": 8.844712E-06,
-        "rotY": 180.000061,
-        "rotZ": 180.000015,
+        "posX": -29.584219,
+        "posY": 1.129778,
+        "posZ": 0.41182512,
+        "rotX": 9.322117E-06,
+        "rotY": 180.000458,
+        "rotZ": 180.000031,
         "scaleX": 1.0,
         "scaleY": 1.0,
         "scaleZ": 1.0
