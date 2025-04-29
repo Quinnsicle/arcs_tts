@@ -312,30 +312,24 @@ function onObjectLeaveContainer(container, leave_object)
 
             -- set snap
             leave_object.use_snap_points = true
+
+            -- ships pulled from supply should always be fresh
+            Wait.time(function()
+                if leave_object.hasTag('Ship') and leave_object.getStateId() == 2 then
+                    leave_object.setState(1)
+                end
+            end, 0.1)
         end
     end
 end
 
 function tryObjectEnterContainer(container, object)
-    if object.hasTag('Ship') and container.hasTag('Ship') and
-        object.getStateId() == 2 then
-        object.setState(1)
-        return true
-    end
-
-    -- Don't allow anything but ships into ship container
-    if container.hasTag('Ship') and not object.hasTag('Ship') then
-        return false
-    end
-
-    -- Don't allow anything but Agents into Agent container
-    if container.hasTag('Agent') and not object.hasTag('Agent') then
-        return false
-    end
-
-    -- Don't allow anything but Starports into Starport container
-    if container.hasTag('Starport') and not object.hasTag('Starport') then
-        return false
+    -- Check for specific tag requirements
+    local container_tags = {'Ship', 'Agent', 'Starport', 'City', 'Blight'}
+    for _, tag in ipairs(container_tags) do
+        if container.hasTag(tag) and not object.hasTag(tag) then
+            return false
+        end
     end
 
     -- allow objects with at least one shared container tag to enter
