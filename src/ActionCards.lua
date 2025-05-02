@@ -369,11 +369,15 @@ end
 function ActionCards.draw_bottom(player_color, position, object)
     local hand_zone = Player[player_color].getHandTransform()
     local deck = ActionCards.get_action_deck()
-    deck.takeObject({
+    local drawn_card = deck.takeObject({
         top = false,
         position = hand_zone.position,
-        rotation = hand_zone.rotation + Vector({0, 180, 0})
+        rotation = hand_zone.rotation + Vector({0, 180, 180})
     })
+    -- wait .75 seconds and flip it face up
+    Wait.time(function()
+        drawn_card.setRotation(Vector({0, 180, 0}))
+    end, 0.75)
 end
 
 function ActionCards.faceup_discard_visibility(show)
