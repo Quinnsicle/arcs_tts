@@ -174,38 +174,35 @@ function onObjectDrop(player_color, object)
 
     -- Action card tracking
     if object and object.tag == "Card" and object.hasTag("Action") then
+        local played_zone = getObjectFromGUID(action_card_zone_GUID)
+        local played_zone_card = isObjectInZone(object, played_zone)
+        if not played_zone_card then
+            return
+        end
         -- create a unique wait ID using just the object GUID
         local wait_id = object.getGUID()
-        -- add the Wait.condition to the table of waits
         zoneWaits[wait_id] = Wait.condition(function()
-
-            -- Update last played card
             local player = get_arcs_player(Turns.turn_color)
             if (not player) then
                 LOG.WARNING("Could not track last played card for " ..
                                 Turns.turn_color)
+                return
             end
 
-            local played_zone_card = false
-            local played_zone = getObjectFromGUID(action_card_zone_GUID)
-            local seize_zone_card = false
             local seize_zone = getObjectFromGUID(seize_zone_GUID)
+            local seize_zone_card = isObjectInZone(object, seize_zone)
 
-            seize_zone_card = isObjectInZone(object, seize_zone)
-            if not seize_zone_card then
-                played_zone_card = isObjectInZone(object, played_zone)
-            end
-
-            if (object.is_face_down and seize_zone_card) then
+            if object.is_face_down and seize_zone_card then
                 player:set_last_played_seize_card(object.getDescription())
                 broadcastToAll(player.color .. " is seizing the initiative",
                     player.color)
-            elseif (not object.is_face_down and played_zone_card) then
+            elseif not object.is_face_down and played_zone_card then
                 player:set_last_played_action_card(object.getDescription())
             end
 
         end, function()
-            return object.resting
+            -- Check if the object still exists
+            return object == nil or object.getGUID == nil or object.resting
         end)
     end
 
@@ -216,7 +213,6 @@ function onObjectDrop(player_color, object)
         --     AmbitionMarkers.get_ambition_info(object)
         -- end, 0.5)
     end
-
 end
 
 function onPlayerAction(player, action, targets)
