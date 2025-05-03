@@ -139,32 +139,45 @@ function ActionCards.clear_played()
 
     local played_objects = getObjectFromGUID(action_card_zone_GUID).getObjects()
 
-    -- Error on union card
-    for _, obj in pairs(played_objects) do
-        if obj.hasTag("Court") then
-            broadcastToAll(
-                "Resolve & remove court cards so we can end round + clean up!",
-                Color.Red)
-            return false
-        end
-    end
+    -- Handle union cards
+    local union_marked_cards = ActionCards.union_handling(played_objects)
+    local union_center_card_offset = 0
 
     -- clean up
-
     for ct, obj in ipairs(played_objects) do
-        if (obj.getName() ~= "Action Card") then
+        if (obj.getName() ~= "Action Card") and obj.hasTag("Resource") then
             supplies.returnObject(obj)
-        elseif (Global.getVar("is_face_up_discard_active") and
-            not obj.is_face_down) then
-            ActionCards.to_face_up_discard(obj)
-            ActionCards.to_face_down_discard(obj)
-        else
-            ActionCards.to_face_down_discard(obj)
+        end
+        if obj.getName() == "Action Card" then
+            if Global.getVar("is_face_up_discard_active") then
+                ActionCards.to_face_up_discard(obj)
+            end
+
+            local is_union_card = false
+            if union_marked_cards and #union_marked_cards > 0 then
+                for _, card_info in ipairs(union_marked_cards) do
+                    if card_info.guid == obj.guid then
+                        ActionCards.to_center_board(obj, union_center_card_offset)
+                        union_center_card_offset = union_center_card_offset + 1
+                        is_union_card = true
+                        break
+                    end
+                end
+            end
+
+            if not is_union_card then
+                ActionCards.to_face_down_discard(obj)
+            end
+        elseif (obj.getName() ~= "Action Card") and obj.hasTag("Court") and not string.find(obj.getDescription(), "Union") then
+            local court_discard = getObjectFromGUID(court_discard_zone_GUID)
+            if court_discard then
+                obj.setPositionSmooth(court_discard.getPosition() + Vector({0, 3, 0}))
+                obj.setRotationSmooth(Vector({0, 270, 0}))
+            end
         end
     end
 
     return true
-
 end
 
 function ActionCards.to_face_down_discard(card)
@@ -206,6 +219,13 @@ function ActionCards.to_face_up_discard(card)
         discarded_card.setRotation(rot)
     end
 
+end
+
+function ActionCards.to_center_board(card, offset)
+    card_shift_offset = offset * -0.05
+    local center_pos = getObjectFromGUID(reach_board_GUID).positionToWorld(Vector({(0.07 + card_shift_offset), 10.00, 0}))
+    card.setPositionSmooth(center_pos)
+    card.setRotationSmooth(Vector({0, 180, 0}))
 end
 
 function ActionCards.clear_face_up_discard()
@@ -390,6 +410,52 @@ end
 function ActionCards.get_fud_marker()
     local fud_marker = getObjectFromGUID(FUDiscard_marker_GUID)
     return fud_marker
+end
+
+-- Returns a list of action card GUIDs marked for union cards
+function ActionCards.union_handling(played_objects)
+    LOG.INFO("ActionCards.union_handling")
+
+    local union_marked_cards = {}
+
+    for _, obj in pairs(played_objects) do
+        -- Check if the card name contains "UNION" instead of checking tags
+        if obj.getName() and string.find(string.upper(obj.getName()), "UNION") then
+            -- Find the closest face up action card
+            local closest_face_up_action_card = nil
+            local min_distance = 20
+
+            for _, card in pairs(played_objects) do
+                if card.getName() == "Action Card" and not card.is_face_down then
+                    local distance = Vector.distance(obj.getPosition(), card.getPosition())
+                    if distance < min_distance then
+                        min_distance = distance
+                        closest_face_up_action_card = card
+                    end
+                end
+            end
+
+            if closest_face_up_action_card then
+                table.insert(union_marked_cards, {
+                    guid = closest_face_up_action_card.guid,
+                    description = closest_face_up_action_card.getDescription(),
+                    reserved_by = obj.getName()
+                })
+                print("Whoever played " .. obj.getName() .. ", please pull " .. closest_face_up_action_card.getDescription() .. " back into your hand.")
+
+                -- Move the union card to court discard
+                local court_discard = getObjectFromGUID(court_discard_zone_GUID)
+                if court_discard then
+                    obj.setPositionSmooth(court_discard.getPosition() + Vector({0, 3, 0}))
+                    obj.setRotationSmooth(Vector({0, 270, 0}))
+                end
+            else
+                broadcastToAll("Union card in play but no face up action cards to mark for union recall", Color.Red)
+            end
+        end
+    end
+
+    return union_marked_cards
 end
 
 return ActionCards
