@@ -66326,15 +66326,15 @@
       "GUID": "3085c9",
       "Name": "ScriptingTrigger",
       "Transform": {
-        "posX": -8.053453,
+        "posX": -8.1,
         "posY": 2,
         "posZ": -15.06,
         "rotX": 0.0,
         "rotY": 180.0,
         "rotZ": 0.0,
-        "scaleX": 3.0,
+        "scaleX": 3.24,
         "scaleY": 2.0,
-        "scaleZ": 2.3
+        "scaleZ": 2.49
       },
       "Nickname": "trophies",
       "Description": "Teal",
@@ -66418,15 +66418,15 @@
       "GUID": "275a50",
       "Name": "ScriptingTrigger",
       "Transform": {
-        "posX": 15.5554686,
+        "posX": 15.51,
         "posY": 2,
-        "posZ": 16.38,
+        "posZ": 16.34,
         "rotX": 0.0,
         "rotY": 180.0,
         "rotZ": 0.0,
-        "scaleX": 3.0,
+        "scaleX": 3.25,
         "scaleY": 2,
-        "scaleZ": 2.3
+        "scaleZ": 2.51
       },
       "Nickname": "trophies",
       "Description": "White",
@@ -66464,15 +66464,15 @@
       "GUID": "48b6fb",
       "Name": "ScriptingTrigger",
       "Transform": {
-        "posX": -8.046913,
+        "posX": -8.1,
         "posY": 2,
-        "posZ": 16.38,
+        "posZ": 16.37,
         "rotX": 0.0,
         "rotY": 180.0,
         "rotZ": 0.0,
-        "scaleX": 3.0,
+        "scaleX": 3.25,
         "scaleY": 2,
-        "scaleZ": 2.3
+        "scaleZ": 2.49
       },
       "Nickname": "trophies",
       "Description": "Red",
@@ -66510,15 +66510,15 @@
       "GUID": "7f5014",
       "Name": "ScriptingTrigger",
       "Transform": {
-        "posX": 15.59,
+        "posX": 15.55,
         "posY": 2,
-        "posZ": -15.06,
+        "posZ": -15.05,
         "rotX": 0.0,
         "rotY": 180.0,
         "rotZ": 0.0,
-        "scaleX": 3.0,
+        "scaleX": 3.27,
         "scaleY": 2,
-        "scaleZ": 2.3
+        "scaleZ": 2.50
       },
       "Nickname": "trophies",
       "Description": "Yellow",
