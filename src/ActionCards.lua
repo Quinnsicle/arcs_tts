@@ -214,9 +214,13 @@ function ActionCards.to_face_up_discard(card)
 
     if (discarded_card) then
         discarded_card.addTag(fud_tag)
-        discarded_card.setLock(true)
         discarded_card.setPosition(pos)
         discarded_card.setRotation(rot)
+        
+        -- Add a small delay before locking the card
+        Wait.time(function()
+            discarded_card.setLock(true)
+        end, 0.02) -- 20ms delay
     end
 
 end
