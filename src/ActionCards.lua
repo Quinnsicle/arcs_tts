@@ -51,7 +51,16 @@ local face_up_discard_guids = {
     ["Mobilization 7"] = "864dd1",
     ["Event"] = "fe7a80",
     ["Event"] = "eff76c",
-    ["Event"] = "39a322"
+    ["Event"] = "39a322",
+    ["Faithful 1"] = "fe9e2d",
+    ["Faithful 2"] = "8a8534",
+    ["Faithful 3"] = "28334e",
+    ["Faithful 4"] = "db3626",
+    ["Faithful 5"] = "d28723",
+    ["Faithful 6"] = "add17e",
+    ["Faithful 7"] = "fd45b2",
+    ["Faithful 8"] = "cf723b",
+    ["Faithful 9"] = "f3e5fe"
 }
 
 function ActionCards.get_action_deck()
@@ -220,7 +229,7 @@ function ActionCards.to_face_up_discard(card)
         -- Add a small delay before locking the card
         Wait.time(function()
             discarded_card.setLock(true)
-        end, 0.02) -- 20ms delay
+        end, 0.20) -- 200ms delay
     end
 
 end
