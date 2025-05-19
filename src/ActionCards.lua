@@ -15,8 +15,8 @@ local fud_marker_pos = {
     [false] = Vector({-19.93, -1.00, -2.31})
 }
 
-local fud_pos = Vector({-3.70, 0.10, 0.00})
-local fud_rot = Vector({0.00, 90.00, 0.50})
+local fud_pos = Vector({-3.70, 0.20, 0.00})
+local fud_rot = Vector({0.00, 90.00, 1.00})
 local fud_offset = Vector({0.35, 0.00, 0.00})
 local fud_tag = "Face Up Discard Action"
 
@@ -204,7 +204,14 @@ function ActionCards.to_face_up_discard(card)
     local pos = fud_pos + count * fud_offset;
     local fud_marker = getObjectFromGUID(FUDiscard_marker_GUID)
     pos = fud_marker.positionToWorld(pos)
-    local rot = fud_rot
+    local rot = card.getRotation() -- get the y rotation of the card and use fud rot for the x and z
+    rot.x = fud_rot.x
+    -- for faithful cards we need to adjust the slight z rotation based on which side is play
+    if rot.y > 180 then
+        rot.z = -fud_rot.z
+    else
+        rot.z = fud_rot.z
+    end
 
     local card_name = card.getDescription()
 
@@ -222,16 +229,13 @@ function ActionCards.to_face_up_discard(card)
     end
 
     if (discarded_card) then
+        discarded_card.setLock(true)
         discarded_card.addTag(fud_tag)
-        discarded_card.setPosition(pos)
         discarded_card.setRotation(rot)
-        
-        -- Add a small delay before locking the card
         Wait.time(function()
-            discarded_card.setLock(true)
+            discarded_card.setPosition(pos)
         end, 0.20) -- 200ms delay
     end
-
 end
 
 function ActionCards.to_center_board(card, offset)
