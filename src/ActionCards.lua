@@ -149,7 +149,7 @@ function ActionCards.clear_played()
             supplies.returnObject(obj)
         end
         if obj.getName() == "Action Card" then
-            if Global.getVar("is_face_up_discard_active") then
+            if Global.getVar("is_face_up_discard_active") and not obj.is_face_down then
                 ActionCards.to_face_up_discard(obj)
             end
 
