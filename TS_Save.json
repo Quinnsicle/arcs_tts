@@ -75332,6 +75332,582 @@
           "LuaScript": "",
           "LuaScriptState": "",
           "XmlUI": ""
+        },
+        {
+          "GUID": "fe9e2d",
+          "Name": "Card",
+          "Transform": {
+            "posX": -23.43765,
+            "posY": 1.21334863,
+            "posZ": 22.837368,
+            "rotX": -0.000210865721,
+            "rotY": 180.000015,
+            "rotZ": -0.000227353376,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Action Card",
+          "Description": "Faithful 1",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Tags": [
+            "Campaign Only",
+            "Action",
+            "Court",
+            "F8"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 45819,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "458": {
+              "FaceURL": "https://dl.dropboxusercontent.com/s/xzhf0izyefvja71/Box8.jpg?dl=0",
+              "BackURL": "https://dl.dropboxusercontent.com/scl/fi/mt5fon33nsr1gmu9qmomg/BoxBack8.jpg?rlkey=zkkkhj4q3h1ctnlq1qqs3kk1k&dl=0",
+              "NumWidth": 7,
+              "NumHeight": 5,
+              "BackIsHidden": true,
+              "UniqueBack": true,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "8a8534",
+          "Name": "Card",
+          "Transform": {
+            "posX": -22.9251766,
+            "posY": 1.22360659,
+            "posZ": 23.59638,
+            "rotX": 9.005866E-05,
+            "rotY": 180.000015,
+            "rotZ": -0.000198548587,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Action Card",
+          "Description": "Faithful 2",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Tags": [
+            "Campaign Only",
+            "Action",
+            "Court",
+            "F8"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 45820,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "458": {
+              "FaceURL": "https://dl.dropboxusercontent.com/s/xzhf0izyefvja71/Box8.jpg?dl=0",
+              "BackURL": "https://dl.dropboxusercontent.com/scl/fi/mt5fon33nsr1gmu9qmomg/BoxBack8.jpg?rlkey=zkkkhj4q3h1ctnlq1qqs3kk1k&dl=0",
+              "NumWidth": 7,
+              "NumHeight": 5,
+              "BackIsHidden": true,
+              "UniqueBack": true,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "28334e",
+          "Name": "Card",
+          "Transform": {
+            "posX": -23.26915,
+            "posY": 1.23391426,
+            "posZ": 23.34692,
+            "rotX": 0.000197832938,
+            "rotY": 180.000015,
+            "rotZ": -9.559029E-05,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Action Card",
+          "Description": "Faithful 3",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Tags": [
+            "Campaign Only",
+            "Action",
+            "Court",
+            "F8"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 45821,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "458": {
+              "FaceURL": "https://dl.dropboxusercontent.com/s/xzhf0izyefvja71/Box8.jpg?dl=0",
+              "BackURL": "https://dl.dropboxusercontent.com/scl/fi/mt5fon33nsr1gmu9qmomg/BoxBack8.jpg?rlkey=zkkkhj4q3h1ctnlq1qqs3kk1k&dl=0",
+              "NumWidth": 7,
+              "NumHeight": 5,
+              "BackIsHidden": true,
+              "UniqueBack": true,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "db3626",
+          "Name": "Card",
+          "Transform": {
+            "posX": -23.3471775,
+            "posY": 1.2435267,
+            "posZ": 22.8820724,
+            "rotX": -0.000184211342,
+            "rotY": 180.000015,
+            "rotZ": -0.000134281392,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Action Card",
+          "Description": "Faithful 4",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Tags": [
+            "Campaign Only",
+            "Action",
+            "F8",
+            "Court"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 45822,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "458": {
+              "FaceURL": "https://dl.dropboxusercontent.com/s/xzhf0izyefvja71/Box8.jpg?dl=0",
+              "BackURL": "https://dl.dropboxusercontent.com/scl/fi/mt5fon33nsr1gmu9qmomg/BoxBack8.jpg?rlkey=zkkkhj4q3h1ctnlq1qqs3kk1k&dl=0",
+              "NumWidth": 7,
+              "NumHeight": 5,
+              "BackIsHidden": true,
+              "UniqueBack": true,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "d28723",
+          "Name": "Card",
+          "Transform": {
+            "posX": -23.0101738,
+            "posY": 1.25228286,
+            "posZ": 23.77442,
+            "rotX": 5.36442167E-05,
+            "rotY": 180.000015,
+            "rotZ": -0.000262032263,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Action Card",
+          "Description": "Faithful 5",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Tags": [
+            "Campaign Only",
+            "Action",
+            "F8",
+            "Court"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 45823,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "458": {
+              "FaceURL": "https://dl.dropboxusercontent.com/s/xzhf0izyefvja71/Box8.jpg?dl=0",
+              "BackURL": "https://dl.dropboxusercontent.com/scl/fi/mt5fon33nsr1gmu9qmomg/BoxBack8.jpg?rlkey=zkkkhj4q3h1ctnlq1qqs3kk1k&dl=0",
+              "NumWidth": 7,
+              "NumHeight": 5,
+              "BackIsHidden": true,
+              "UniqueBack": true,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "add17e",
+          "Name": "Card",
+          "Transform": {
+            "posX": -23.41576,
+            "posY": 1.2623018,
+            "posZ": 22.9269428,
+            "rotX": -0.000176818881,
+            "rotY": 180.000015,
+            "rotZ": -0.0001632171,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Action Card",
+          "Description": "Faithful 6",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Tags": [
+            "Campaign Only",
+            "Action",
+            "Court",
+            "F8"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 45824,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "458": {
+              "FaceURL": "https://dl.dropboxusercontent.com/s/xzhf0izyefvja71/Box8.jpg?dl=0",
+              "BackURL": "https://dl.dropboxusercontent.com/scl/fi/mt5fon33nsr1gmu9qmomg/BoxBack8.jpg?rlkey=zkkkhj4q3h1ctnlq1qqs3kk1k&dl=0",
+              "NumWidth": 7,
+              "NumHeight": 5,
+              "BackIsHidden": true,
+              "UniqueBack": true,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "fd45b2",
+          "Name": "Card",
+          "Transform": {
+            "posX": -23.4930515,
+            "posY": 1.27071106,
+            "posZ": 22.3637657,
+            "rotX": -7.283239E-05,
+            "rotY": 180.000015,
+            "rotZ": -0.0004567995,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Action Card",
+          "Description": "Faithful 7",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Tags": [
+            "Campaign Only",
+            "Action",
+            "Court",
+            "F8"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 45825,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "458": {
+              "FaceURL": "https://dl.dropboxusercontent.com/s/xzhf0izyefvja71/Box8.jpg?dl=0",
+              "BackURL": "https://dl.dropboxusercontent.com/scl/fi/mt5fon33nsr1gmu9qmomg/BoxBack8.jpg?rlkey=zkkkhj4q3h1ctnlq1qqs3kk1k&dl=0",
+              "NumWidth": 7,
+              "NumHeight": 5,
+              "BackIsHidden": true,
+              "UniqueBack": true,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "cf723b",
+          "Name": "Card",
+          "Transform": {
+            "posX": -23.2281342,
+            "posY": 1.28028917,
+            "posZ": 22.8412037,
+            "rotX": 0.0009772117,
+            "rotY": 180.0,
+            "rotZ": -0.0002910659,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Action Card",
+          "Description": "Faithful 8",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Tags": [
+            "Campaign Only",
+            "Action",
+            "Court",
+            "F8"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 45826,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "458": {
+              "FaceURL": "https://dl.dropboxusercontent.com/s/xzhf0izyefvja71/Box8.jpg?dl=0",
+              "BackURL": "https://dl.dropboxusercontent.com/scl/fi/mt5fon33nsr1gmu9qmomg/BoxBack8.jpg?rlkey=zkkkhj4q3h1ctnlq1qqs3kk1k&dl=0",
+              "NumWidth": 7,
+              "NumHeight": 5,
+              "BackIsHidden": true,
+              "UniqueBack": true,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
+        },
+        {
+          "GUID": "f3e5fe",
+          "Name": "Card",
+          "Transform": {
+            "posX": -23.6545982,
+            "posY": 1.29008329,
+            "posZ": 22.69176,
+            "rotX": -9.311062E-05,
+            "rotY": 180.000031,
+            "rotZ": -0.000325132,
+            "scaleX": 1.0,
+            "scaleY": 1.0,
+            "scaleZ": 1.0
+          },
+          "Nickname": "Action Card",
+          "Description": "Faithful 9",
+          "GMNotes": "",
+          "AltLookAngle": {
+            "x": 0.0,
+            "y": 0.0,
+            "z": 0.0
+          },
+          "ColorDiffuse": {
+            "r": 0.713235259,
+            "g": 0.713235259,
+            "b": 0.713235259
+          },
+          "Tags": [
+            "Campaign Only",
+            "Action",
+            "Court",
+            "F8"
+          ],
+          "LayoutGroupSortIndex": 0,
+          "Value": 0,
+          "Locked": false,
+          "Grid": true,
+          "Snap": true,
+          "IgnoreFoW": false,
+          "MeasureMovement": false,
+          "DragSelectable": true,
+          "Autoraise": true,
+          "Sticky": true,
+          "Tooltip": true,
+          "GridProjection": false,
+          "HideWhenFaceDown": true,
+          "Hands": true,
+          "CardID": 45827,
+          "SidewaysCard": false,
+          "CustomDeck": {
+            "458": {
+              "FaceURL": "https://dl.dropboxusercontent.com/s/xzhf0izyefvja71/Box8.jpg?dl=0",
+              "BackURL": "https://dl.dropboxusercontent.com/scl/fi/mt5fon33nsr1gmu9qmomg/BoxBack8.jpg?rlkey=zkkkhj4q3h1ctnlq1qqs3kk1k&dl=0",
+              "NumWidth": 7,
+              "NumHeight": 5,
+              "BackIsHidden": true,
+              "UniqueBack": true,
+              "Type": 0
+            }
+          },
+          "LuaScript": "",
+          "LuaScriptState": "",
+          "XmlUI": ""
         }
       ]
     },
