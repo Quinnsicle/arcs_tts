@@ -37,7 +37,9 @@ function InitiativeMarker.take(player_color, silent)
     local initiative = getObjectFromGUID(initiative_GUID)
     local player_board = getObjectFromGUID(
         player_pieces_GUIDs[player_color]["player_board"])
-    local pos = player_board.positionToWorld(initiative_pos)
+
+    local pos_z = (player_color == "Red" or player_color == "White") and 2.2 or -2.2
+    local pos = player_board.positionToWorld({-2, 0, pos_z})
 
     if (initiative) then
         initiative.setPositionSmooth(pos)
@@ -53,7 +55,9 @@ function InitiativeMarker.seize(player_color,  silent)
     local initiative = getObjectFromGUID(initiative_GUID)
     local player_board = getObjectFromGUID(
         player_pieces_GUIDs[player_color]["player_board"])
-    local pos = player_board.positionToWorld(initiative_pos)
+
+    local pos_z = (player_color == "Red" or player_color == "White") and 2.2 or -2.2
+    local pos = player_board.positionToWorld({-2, 0, pos_z})
 
     if (initiative) then
         initiative.setPositionSmooth(pos)
