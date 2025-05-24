@@ -32,10 +32,10 @@ end
 
 function onMapClick(player, value, id)
     Player[player.color].lookAt({
-        position = {x=2.79, y=0.98, z=-1.35},
+        position = {x=2.79, y=0.98, z=-3.0},
         pitch = 70,
         yaw = 0,
-        distance = 37
+        distance = 42
     })
 end
 
@@ -44,7 +44,7 @@ function onRedBoardClick(player, value, id)
         position = {x=-10.6, y=1.48, z=14.92},
         pitch = 80,
         yaw = 0,
-        distance = 11
+        distance = 13
     })
 end
 
@@ -53,7 +53,7 @@ function onWhiteBoardClick(player, value, id)
         position = {x=13.14, y=1.48, z=14.92},
         pitch = 80,
         yaw = 0,
-        distance = 11
+        distance = 13
     })
 end
 
@@ -62,7 +62,7 @@ function onYellowBoardClick(player, value, id)
         position = {x=13.14, y=1.48, z=-16.12},
         pitch = 80,
         yaw = 0,
-        distance = 11
+        distance = 13
     })
 end
 
@@ -71,7 +71,7 @@ function onTealBoardClick(player, value, id)
         position = {x=-10.6, y=1.48, z=-16.12},
         pitch = 80,
         yaw = 0,
-        distance = 11
+        distance = 13
     })
 end
 
