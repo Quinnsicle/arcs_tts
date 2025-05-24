@@ -194,8 +194,13 @@ function Campaign.setupCampaignGuildCards(player_count, with_ll_expansion)
 
     lore_deck.randomize()
 
-    for i = 1, player_count, 1 do
-        Wait.time(function()
+    Wait.time(function()
+        Global.call("dealGuildCards", player_count == 2 and 3 or 4)
+    end, 2)
+
+
+    Wait.time(function()
+        for i = 1, player_count, 1 do
             lore_deck.takeObject({
                 position = {
                     court_zone_pos.x, court_zone_pos.y + 1, court_zone_pos.z
@@ -204,13 +209,10 @@ function Campaign.setupCampaignGuildCards(player_count, with_ll_expansion)
                 flip = false,
                 smooth = false
             })
-        end, 1)
-    end
-
-    Wait.time(function()
+        end
         campaign_court.randomize()
-        Global.call("dealGuildCards", player_count == 2 and 3 or 4)
-    end, 2)
+    end, 5)
+
 end
 
 -- K
