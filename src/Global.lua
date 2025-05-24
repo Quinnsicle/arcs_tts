@@ -402,6 +402,7 @@ end
 
 function dealGuildCards(qty)
 
+    print("dealGuildCards", qty)
     local court_zone = getObjectFromGUID(court_deck_zone_GUID)
     local court_deck = court_zone.getObjects()[1]
 
