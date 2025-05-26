@@ -158,10 +158,6 @@ function ActionCards.clear_played()
             supplies.returnObject(obj)
         end
         if obj.getName() == "Action Card" then
-            if Global.getVar("is_face_up_discard_active") and not obj.is_face_down then
-                ActionCards.to_face_up_discard(obj)
-            end
-
             local is_union_card = false
             if union_marked_cards and #union_marked_cards > 0 then
                 for _, card_info in ipairs(union_marked_cards) do
@@ -175,6 +171,9 @@ function ActionCards.clear_played()
             end
 
             if not is_union_card then
+                if Global.getVar("is_face_up_discard_active") and not obj.is_face_down then
+                    ActionCards.to_face_up_discard(obj)
+                end
                 ActionCards.to_face_down_discard(obj)
             end
         elseif (obj.getName() ~= "Action Card") and obj.hasTag("Court") and not string.find(obj.getDescription(), "Union") then
