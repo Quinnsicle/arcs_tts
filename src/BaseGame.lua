@@ -449,6 +449,8 @@ function BaseGame.setupOutOfPlayClusters(setup_card)
                 image = component.img
             })
             object.setLock(true)
+
+            object.setPosition({object.getPosition().x, 0.93, object.getPosition().z})
         end
     end
 
