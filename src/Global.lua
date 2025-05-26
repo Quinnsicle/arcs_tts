@@ -400,27 +400,6 @@ function getOrderedPlayers()
     return ordered_players
 end
 
-function dealGuildCards(qty)
-
-    print("dealGuildCards", qty)
-    local court_zone = getObjectFromGUID(court_deck_zone_GUID)
-    local court_deck = court_zone.getObjects()[1]
-
-    court_deck.randomize()
-    local court_deck_pos = court_deck.getPosition()
-    court_deck_pos_z = court_deck_pos.z + 0.35
-
-    for i = 1, qty do
-        court_deck.takeObject({
-            flip = true,
-            position = {
-                court_deck_pos.x, court_deck_pos.y,
-                court_deck_pos_z - (i * -2.41)
-            }
-        })
-    end
-
-end
 
 ----------------------------------------------------
 
