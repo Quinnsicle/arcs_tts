@@ -317,8 +317,21 @@ function BaseGame.setupBaseCourt(player_count)
     base_court.setRotation({0, 270, 180})
 
     Wait.time(function()
+        local qty = (player_count == 2 and 3 or 4)
+
         base_court.randomize()
-        Global.call("dealGuildCards", player_count == 2 and 3 or 4)
+        local court_deck_pos = base_court.getPosition()
+        court_deck_pos_z = court_deck_pos.z + 0.35
+
+        for i = 1, qty do
+            base_court.takeObject({
+                flip = true,
+                position = {
+                    court_deck_pos.x, court_deck_pos.y,
+                    court_deck_pos_z - (i * -2.41)
+                }
+            })
+        end
     end, 1)
 end
 
