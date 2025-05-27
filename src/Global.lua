@@ -319,6 +319,51 @@ function onObjectLeaveContainer(container, leave_object)
     end
 end
 
+function onObjectNumberTyped(number_object, player_color, number_typed)
+    if number_object.type == "Deck" then
+        print(player_color .. " tried to deal a card to themselves from top of deck, which is unusual, please do it manually")
+        return true
+    end
+
+    if number_object.hasTag("Action") then
+        if number_typed == 1 then
+            local player_pieces = {
+                ["White"] = {
+                    hand_zone = "c832bf"
+                },
+                ["Yellow"] = {
+                    hand_zone = "856b9d"
+                },
+                ["Teal"] = {
+                    hand_zone = "c9dd8d"
+                },
+                ["Red"] = {
+                    hand_zone = "54730a"
+                }
+            }
+
+            local hand_zone_guid = player_pieces[player_color].hand_zone
+            local hand_zone = getObjectFromGUID(hand_zone_guid)
+            local hand_pos = hand_zone.getPosition()
+
+            local card_rotation = number_object.getRotation()
+            number_object.setPositionSmooth(hand_pos, false, false)
+            Wait.time(function()
+                number_object.setRotation({0, 180, card_rotation[3]})
+            end, 0.25)
+            -- we set a slight delay on turning the card face up in hand
+            -- this avoids revealing the card when it passes through the played zone
+            Wait.time(function()
+                number_object.setRotation({0, 180, 0})
+            end, 0.75)
+
+        elseif number_typed >= 2 then
+            print(player_color .. ", you're only allowed to pull 1 card at a time to yourself, use key 1 only")
+        end
+        return true
+    end
+end
+
 function tryObjectEnterContainer(container, object)
     -- Check for specific tag requirements
     local container_tags = {'Ship', 'Agent', 'Starport', 'City', 'Blight'}
