@@ -143,16 +143,40 @@ end
 
 function Campaign.setup_regents(players)
     local regent_cards = getObjectFromGUID(Campaign.guids.regent_cards)
+    if not regent_cards then
+        LOG.ERROR("Could not find regent cards object")
+        return
+    end
+
+    local regent_pos = {
+        Red = {-16.04, 0.97, 13.03},
+        White = {7.61, 0.97, 13.03},
+        Yellow = {7.62, 0.97, -12.31},
+        Teal = {-16.0, 0.97, -12.32}
+    }
+
     for i, p in ipairs(players) do
-        local player_board = getObjectFromGUID(
-            player_pieces_GUIDs[p.color]["player_board"])
-        regent_cards.takeObject({
-            position = player_board.positionToWorld({1.4, 0, -1.35})
-        })
-        if (i == 1) then
+        local pos = regent_pos[p.color]
+        if pos then
+            regent_cards.takeObject({
+                position = pos
+            })
+        else
+            LOG.ERROR("No regent position defined for color: " .. tostring(p.color))
+        end
+
+        if i == 1 then
             local first_regent = getObjectFromGUID(Campaign.guids.first_regent)
-            first_regent.setPositionSmooth(
-                player_board.positionToWorld({-2, 0, 0}))
+            if first_regent then
+                local player_board = getObjectFromGUID(player_pieces_GUIDs[p.color]["player_board"])
+                if player_board then
+                    first_regent.setPositionSmooth(player_board.positionToWorld({-2, 0, 0}))
+                else
+                    LOG.ERROR("Could not find player board for first regent placement")
+                end
+            else
+                LOG.ERROR("Could not find first regent object")
+            end
         end
     end
 end
