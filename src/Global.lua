@@ -414,7 +414,9 @@ function getOrderedPlayers()
 
     local player_count = #seated_players
     if (player_count > 4 or player_count < 2) then
-        msg = "\nThis game only supports 2-4 players"
+        msg = "This multiplayer game will only start with 2-4 players. " ..
+        "\nTo explore the mod solo, return to main menu, create the game as 'hotseat', " ..
+        "load the mod from the Games menu, then pick player colors last."
         broadcastToAll(msg, {
             r = 1,
             g = 0,
