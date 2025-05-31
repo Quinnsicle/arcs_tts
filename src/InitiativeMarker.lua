@@ -34,38 +34,34 @@ function InitiativeMarker.unseize()
 end
 
 function InitiativeMarker.take(player_color, silent)
-    local initiative = getObjectFromGUID(initiative_GUID)
-    local player_board = getObjectFromGUID(
-        player_pieces_GUIDs[player_color]["player_board"])
-
-    local pos_z = (player_color == "Red" or player_color == "White") and 2.2 or -2.2
-    local pos = player_board.positionToWorld({-2, 0, pos_z})
-
-    if (initiative) then
-        initiative.setPositionSmooth(pos)
-        if not silent then
-            broadcastToAll(player_color .. " takes the initiative", player_color)
-        end
-    end
-
-    Global.setVar("initiative_player", player_color)
+    InitiativeMarker._move_initiative(player_color, silent, false)
 end
 
-function InitiativeMarker.seize(player_color,  silent)
+function InitiativeMarker.seize(player_color, silent)
+    InitiativeMarker._move_initiative(player_color, silent, true)
+end
+
+function InitiativeMarker._move_initiative(player_color, silent, is_seize)
     local initiative = getObjectFromGUID(initiative_GUID)
     local player_board = getObjectFromGUID(
         player_pieces_GUIDs[player_color]["player_board"])
 
     local pos_z = (player_color == "Red" or player_color == "White") and 2.2 or -2.2
+    local rot_y = (player_color == "Red" or player_color == "White") and 180 or 0
     local pos = player_board.positionToWorld({-2, 0, pos_z})
 
     if (initiative) then
         initiative.setPositionSmooth(pos)
-        Wait.time(function()
-            initiative.setState(2)
-        end, 1.5)
-        if not silent then
-            broadcastToAll(player_color .. " has seized the initiative", player_color)
+        initiative.setRotationSmooth({0, rot_y, 0})
+        if is_seize then
+            Wait.time(function()
+                initiative.setState(2)
+            end, 1.5)
+            if not silent then
+                broadcastToAll(player_color .. " has seized the initiative", player_color)
+            end
+        elseif not silent then
+            broadcastToAll(player_color .. " takes the initiative", player_color)
         end
     else
         broadcastToAll("Initiative has already been seized.", Color.Red)
