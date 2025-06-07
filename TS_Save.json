@@ -36748,7 +36748,7 @@
           "Sticky": true,
           "Tooltip": true,
           "GridProjection": false,
-          "HideWhenFaceDown": true,
+          "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
             "ImageURL": "https://steamusercontent-a.akamaihd.net/ugc/11147826663177087747/2117E88A0B3D8851DBEE19BF0AA51A60A067B13C/",
@@ -36810,7 +36810,7 @@
           "Sticky": true,
           "Tooltip": true,
           "GridProjection": false,
-          "HideWhenFaceDown": true,
+          "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
             "ImageURL": "https://steamusercontent-a.akamaihd.net/ugc/11147826663177087747/2117E88A0B3D8851DBEE19BF0AA51A60A067B13C/",
@@ -36872,7 +36872,7 @@
           "Sticky": true,
           "Tooltip": true,
           "GridProjection": false,
-          "HideWhenFaceDown": true,
+          "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
             "ImageURL": "https://steamusercontent-a.akamaihd.net/ugc/11147826663177087747/2117E88A0B3D8851DBEE19BF0AA51A60A067B13C/",
@@ -36934,7 +36934,7 @@
           "Sticky": true,
           "Tooltip": true,
           "GridProjection": false,
-          "HideWhenFaceDown": true,
+          "HideWhenFaceDown": false,
           "Hands": false,
           "CustomImage": {
             "ImageURL": "https://steamusercontent-a.akamaihd.net/ugc/11147826663177087747/2117E88A0B3D8851DBEE19BF0AA51A60A067B13C/",
