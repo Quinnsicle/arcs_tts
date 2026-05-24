@@ -719,7 +719,7 @@ function SupplyManager.trophyFromMenu(player_color, position, object)
 end
 
 function SupplyManager.addToZone(player_color, zone, object)
-    local area = zone.getScale() * 0.18
+    local area = Vector({0.18, 0, 0.18})
     local sectors = {
         [0] = Vector({1, 0, 1}),
         [1] = Vector({-1, 0, 1}),
