@@ -486,7 +486,7 @@ function SupplyManager.placeResourceMarkerOnCard(player_color, position, object)
     local above = {0, 1.8, 0}
     local target_pos = object.positionToWorld(above)
     pcall(function() marker.setPositionSmooth(target_pos) end)
-    if marker.setRotation then pcall(function() marker.setRotationSmooth({0, 180, 0}) end) end
+    if marker.setRotation then pcall(function() marker.setRotationSmooth({0, 90, 0}) end) end
 
     -- If we have an old marker position, move any objects that were on top of it
     if ok_old and old_pos then
@@ -529,7 +529,7 @@ function SupplyManager.placeMaterialsOnCard(player_color, position, object)
     mat_obj.setPositionSmooth(target_pos)
     -- ensure marker is oriented upright
     if mat_obj.setRotation then
-        mat_obj.setRotationSmooth({0, 180, 0})
+        mat_obj.setRotationSmooth({0, 90, 0})
     end
     -- Also move any object that was sitting on top of the materials marker
     -- so it stays on top of the marker after the move.
@@ -614,7 +614,7 @@ function SupplyManager.returnResourceMarkerToOrigin(player_color, position, obje
     local ok_old, old_pos = pcall(function() return marker.getPosition() end)
 
     pcall(function() marker.setPositionSmooth(target_pos) end)
-    if marker.setRotation then pcall(function() marker.setRotationSmooth({0, 180, 0}) end) end
+    if marker.setRotation then pcall(function() marker.setRotationSmooth({0, 90, 0}) end) end
 
     -- Move any objects that were sitting on top of the marker to remain stacked.
     if ok_old and old_pos then
