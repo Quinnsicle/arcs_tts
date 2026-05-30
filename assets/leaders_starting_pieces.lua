@@ -309,7 +309,7 @@ starting_pieces["Prefect"] = {
     building = "None",
     ships = 2
   },
-  resources = {"Psionic", "Material"},
+  resources = {"Weapon", "Relic"},
   D = {
     building = "None",
     ships = 2
@@ -517,12 +517,12 @@ starting_pieces["Augur"] = {
   },
   C = {
     building = "None",
-    ships = 3
+    ships = 2
   },
   resources = {"Psionic", "Relic"},
   D = {
     building = "None",
-    ships = 3
+    ships = 2
   }
 }
 
@@ -897,7 +897,7 @@ starting_pieces["Hustler"] = {
     building = "None",
     ships = 2
   },
-  resources = {"Psionic", "Relic"},
+  resources = {"Relic", "Relic"},
   D = {
     building = "None",
     ships = 2
@@ -960,7 +960,7 @@ starting_pieces["Custodian"] = {
     building = "None",
     ships = 3
   },
-  resources = {"Material", "Fuel"},
+  resources = {"Relic", "Fuel"},
   D = {
     building = "None",
     ships = 3
@@ -1128,7 +1128,7 @@ starting_pieces["Forager"] = {
     building = "None",
     ships = 2
   },
-  resources = {"Material", "Fuel"},
+  resources = {"Relic", "Fuel"},
   D = {
     building = "None",
     ships = 2
@@ -1632,7 +1632,7 @@ starting_pieces["Champion"] = {
     building = "None",
     ships = 3
   },
-  resources = {"Relic", "Fuel"},
+  resources = {"Relic", "Weapon"},
   D = {
     building = "None",
     ships = 3
@@ -1651,12 +1651,12 @@ starting_pieces["Tribune"] = {
   },
   C = {
     building = "None",
-    ships = 2
+    ships = 3
   },
   resources = {"Relic", "Weapon"},
   D = {
     building = "None",
-    ships = 2
+    ships = 3
   }
 }
 
@@ -1737,7 +1737,7 @@ starting_pieces["Enchanter"] = {
     building = "None",
     ships = 2
   },
-  resources = {"Psionic", "Fuel"},
+  resources = {"Psionic", "Relic"},
   D = {
     building = "None",
     ships = 2
@@ -2284,6 +2284,552 @@ starting_pieces["Merchant"] = {
     ships = 2
   },
   resources = {"Material", "Relic"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Wretch
+starting_pieces["Wretch"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Weapon", "Relic"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Rascal
+starting_pieces["Rascal"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Fuel", "Fuel"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Devourer
+starting_pieces["Devourer"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Fuel", "Weapon"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Swarm
+starting_pieces["Swarm"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 3
+  },
+  resources = {"Material", "Psionic"},
+  D = {
+    building = "None",
+    ships = 3
+  }
+}
+
+-- Predator
+starting_pieces["Predator"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Weapon", "Material"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Reaver
+starting_pieces["Reaver"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Weapon", "Psionic"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Prospector
+starting_pieces["Prospector"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Weapon", "Relic"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Smokecaller
+starting_pieces["Smokecaller"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Fuel", "Psionic"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Dragon
+starting_pieces["Dragon"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Psionic", "Fuel"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Sniper
+starting_pieces["Sniper"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Weapon", "Fuel"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Poltergeist
+starting_pieces["Poltergeist"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Weapon", "Psionic"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Homesteader
+starting_pieces["Homesteader"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 3
+  },
+  resources = {"Material", "Fuel"},
+  D = {
+    building = "None",
+    ships = 3
+  }
+}
+
+-- Instigator
+starting_pieces["Instigator"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Relic", "Weapon"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Replicator
+starting_pieces["Replicator"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Material", "Psionic"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Armsdealer
+starting_pieces["Armsdealer"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Weapon", "Material"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Veteran
+starting_pieces["Veteran"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Weapon", "Fuel"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Evader
+starting_pieces["Evader"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Fuel", "Psionic"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Mathematician
+starting_pieces["Mathematician"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Weapon", "Relic"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Underdog
+starting_pieces["Underdog"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Material", "Psionic"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Mobster
+starting_pieces["Mobster"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Relic", "Fuel"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Glutton
+starting_pieces["Glutton"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Psionic", "Material"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Contrarian
+starting_pieces["Contrarian"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Relic", "Weapon"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Cat
+starting_pieces["Cat"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Psionic", "Fuel"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Cavalier
+starting_pieces["Cavalier"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Relic", "Fuel"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Surveyor
+starting_pieces["Surveyor"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Material", "Relic"},
+  D = {
+    building = "None",
+    ships = 2
+  }
+}
+
+-- Jester
+starting_pieces["Jester"] = {
+  A = {
+    building = "city",
+    ships = 3
+  },
+  B = {
+    building = "starport",
+    ships = 3
+  },
+  C = {
+    building = "None",
+    ships = 2
+  },
+  resources = {"Weapon", "Fuel"},
   D = {
     building = "None",
     ships = 2

@@ -107,11 +107,37 @@ local newCards = {
     "Conqueror",
     "Comedian",
     "Animator",
-    "Merchant"
+    "Merchant",
+    "Wretch",
+    "Rascal",
+    "Devourer",
+    "Swarm",
+    "Predator",
+    "Reaver",
+    "Prospector",
+    "Smokecaller",
+    "Dragon",
+    "Sniper",
+    "Poltergeist",
+    "Homesteader",
+    "Instigator",
+    "Replicator",
+    "Armsdealer",
+    "Veteran",
+    "Evader",
+    "Mathematician",
+    "Underdog",
+    "Mobster",
+    "Glutton",
+    "Contrarian",
+    "Cat",
+    "Cavalier",
+    "Surveyor",
+    "Jester",
 }
 
 -- Bump this to force clients to reload leader face images (cache-bust query param).
-local LEADER_IMAGE_REV = "2026-05-18a"
+local LEADER_IMAGE_REV = "2026-05-30a"
 
 function onLoad()
     -- Only proceed if this is a deck and has less than 3 cards
