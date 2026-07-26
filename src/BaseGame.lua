@@ -5,7 +5,7 @@ local BaseGame = {
         base_exclusive = {
             setup_cards = "f02e75",
             court = "9ac2b3",
-            scavengers_scouts_deck = "a13a10",
+            scavengers_scouts_deck = "94dd8f",
         },
         leaders = "2d243a",
         leaders_expansion = "768d3d",

@@ -9,7 +9,7 @@ available_colors = {"White", "Yellow", "Red", "Teal", "Pink"}
 ----------------------------------------------------
 -- [DEBUG] REMEMBER TO SET TO FALSE BEFORE RELEASE
 ----------------------------------------------------
-debug = false
+debug = true
 debug_player_count = 2
 ----------------------------------------------------
 
