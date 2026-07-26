@@ -8,9 +8,10 @@ setup_control_3 = "5dc1e0"
 more_to_explore_fate_GUID = "768d3d"
 more_to_explore_lore_GUID = "3441e5"
 
-artifact_deck_GUID = "870e15"
-edifice_deck_GUID = "becb7c"
-lost_vaults_marker_bag_GUID = "7f3e2f"
+artifact_deck_GUID = "9c97c9"
+reach_feature_deck_GUID = "a5e8a7"
+windfall_deck_Guid = "8cfcb9"
+lost_vaults_markers_GUID = "7c24cf"
 lost_vaults_rules_GUID = "952d62"
 
 mandate_cards_GUID = "c549b5"

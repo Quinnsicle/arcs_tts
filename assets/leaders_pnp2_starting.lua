@@ -9,32 +9,32 @@ starting_pieces["Imperator"] = {
   },
   C = {
     building = "None",
-    ships = 3
+    ships = 2
   },
   resources = {"Material", "Weapon"},
   D = {
     building = "None",
-    ships = 3
+    ships = 2
   }
 }
 
 starting_pieces["Poet"] = {
   A = {
     building = "city",
-    ships = 3
+    ships = 2
   },
   B = {
     building = "starport",
-    ships = 3
+    ships = 2
   },
   C = {
     building = "None",
-    ships = 3
+    ships = 2
   },
   resources = {"Psionic", "Weapon"},
   D = {
     building = "None",
-    ships = 3
+    ships = 2
   }
 }
 
@@ -49,12 +49,12 @@ starting_pieces["Diplomat"] = {
   },
   C = {
     building = "None",
-    ships = 3
+    ships = 2
   },
   resources = {"Psionic", "Fuel"},
   D = {
     building = "None",
-    ships = 3
+    ships = 2
   }
 }
 starting_pieces["Scavenger"] = {
@@ -68,12 +68,12 @@ starting_pieces["Scavenger"] = {
   },
   C = {
     building = "None",
-    ships = 3
+    ships = 2
   },
   resources = {"Material", "Fuel"},
   D = {
     building = "None",
-    ships = 3
+    ships = 2
   }
 }
 starting_pieces["Oracle"] = {
@@ -87,12 +87,12 @@ starting_pieces["Oracle"] = {
   },
   C = {
     building = "None",
-    ships = 3
+    ships = 2
   },
   resources = {"Psionic", "Material"},
   D = {
     building = "None",
-    ships = 3
+    ships = 2
   }
 }
 starting_pieces["Brainbox"] = {
@@ -106,15 +106,15 @@ starting_pieces["Brainbox"] = {
   },
   C = {
     building = "None",
-    ships = 3
+    ships = 2
   },
   resources = {"Weapon", "Material"},
   D = {
     building = "None",
-    ships = 3
+    ships = 2
   }
 }
-starting_pieces["Abbot"] = {
+starting_pieces["Saint"] = {
   A = {
     building = "city",
     ships = 3
@@ -125,15 +125,15 @@ starting_pieces["Abbot"] = {
   },
   C = {
     building = "None",
-    ships = 3
+    ships = 2
   },
-  resources = {"Relic", "Relic"},
+  resources = {"Psionic", "Relic"},
   D = {
     building = "None",
-    ships = 3
+    ships = 2
   }
 }
-starting_pieces["God's Hand"] = {
+starting_pieces["Lightbringer"] = {
   A = {
     building = "city",
     ships = 3
@@ -144,12 +144,12 @@ starting_pieces["God's Hand"] = {
   },
   C = {
     building = "None",
-    ships = 3
+    ships = 2
   },
-  resources = {"Psionic", "Psionic"},
+  resources = {"Psionic", "Relic"},
   D = {
     building = "None",
-    ships = 3
+    ships = 2
   }
 }
 starting_pieces["Firebrand"] = {
@@ -163,34 +163,34 @@ starting_pieces["Firebrand"] = {
   },
   C = {
     building = "None",
-    ships = 3
+    ships = 2
   },
   resources = {"Weapon", "Psionic"},
   D = {
     building = "None",
-    ships = 3
+    ships = 2
   }
 }
-starting_pieces["Ancient Wraith"] = {
+starting_pieces["Politico"] = {
   A = {
-    building = "None",
-    ships = 4
+    building = "city",
+    ships = 3
   },
   B = {
-    building = "None",
+    building = "starport",
     ships = 3
   },
   C = {
     building = "None",
-    ships = 3
+    ships = 2
   },
-  resources = {"Weapon", "Psionic"},
+  resources = {"Relic", "Material"},
   D = {
     building = "None",
-    ships = 3
+    ships = 2
   }
 }
-starting_pieces["Paladin"] = {
+starting_pieces["Edenlord"] = {
   A = {
     building = "None",
     ships = 4
@@ -220,11 +220,11 @@ starting_pieces["Profiteer"] = {
   },
   C = {
     building = "None",
-    ships = 3
+    ships = 2
   },
   resources = {"Weapon", "Psionic"},
   D = {
     building = "None",
-    ships = 3
+    ships = 2
   }
 }
