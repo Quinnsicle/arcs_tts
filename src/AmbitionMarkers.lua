@@ -120,6 +120,66 @@ local ambitions = {
 }
 
 local last_declared_marker = nil
+local zero_button_hidden = false
+local zero_button_menu_attached = false
+
+function ambitionMarkers:is_zero_button_hidden()
+    return zero_button_hidden or Global.getVar("zero_marker_button_hidden") or false
+end
+
+function ambitionMarkers:set_zero_button_hidden(hidden)
+    zero_button_hidden = hidden
+    if Global and Global.setVar then
+        Global.setVar("zero_marker_button_hidden", hidden)
+    end
+    local zero_marker = getObjectFromGUID(zero_marker_GUID)
+    if not zero_marker then
+        return
+    end
+
+    if hidden then
+        if zero_marker.clearButtons then
+            zero_marker.clearButtons()
+        elseif zero_marker.getButtons then
+            local buttons = zero_marker.getButtons() or {}
+            for index, button in ipairs(buttons) do
+                if button and button.click_function == 'declare_ambition' then
+                    pcall(function() zero_marker.removeButton(index) end)
+                end
+            end
+        end
+    else
+        ambitionMarkers.add_button()
+    end
+end
+
+function ambitionMarkers:toggle_zero_button(player_color, position, clicked_object)
+    local hidden = ambitionMarkers:is_zero_button_hidden()
+    ambitionMarkers:set_zero_button_hidden(not hidden)
+    local status = hidden and "enabled" or "disabled"
+    if type(player_color) == "string" and player_color ~= "" then
+        broadcastToColor("Zero marker ambition button " .. status, player_color, {0.8, 0.8, 0.2})
+    else
+        broadcastToAll("Zero marker ambition button " .. status, {0.8, 0.8, 0.2})
+    end
+end
+
+function ambitionMarkers:ensure_zero_marker_context_menu()
+    if zero_button_menu_attached then
+        return
+    end
+
+    local zero_marker = getObjectFromGUID(zero_marker_GUID)
+    if not zero_marker or not zero_marker.addContextMenuItem then
+        return
+    end
+    pcall(function()
+        zero_marker.addContextMenuItem("Toggle Zero Button", function(player_color, position, clicked_object)
+            ambitionMarkers:toggle_zero_button(player_color, position, clicked_object)
+        end)
+        zero_button_menu_attached = true
+    end)
+end
 
 function ambitionMarkers:get_ambition_info(object)
     -- Guard against missing object or reach board (load-order issues)
@@ -691,6 +751,13 @@ function ambitionMarkers:add_button()
         Wait.time(function()
             ambitionMarkers.add_button()
         end, 0.5)
+        return
+    end
+
+    -- Attach context menu if needed even when the button is hidden
+    ambitionMarkers:ensure_zero_marker_context_menu()
+
+    if ambitionMarkers:is_zero_button_hidden() then
         return
     end
 
