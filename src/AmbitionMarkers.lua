@@ -744,6 +744,61 @@ function ambitionMarkers:build_detailed_estimates()
     return result
 end
 
+function ambitionMarkers:set_zero_marker_button(click_function, tooltip)
+    if ambitionMarkers:is_zero_button_hidden() then
+        return false
+    end
+
+    local zero_marker = getObjectFromGUID(zero_marker_GUID)
+    if not zero_marker then
+        return false
+    end
+
+    local existing_button = nil
+    if zero_marker.getButtons then
+        local buttons = zero_marker.getButtons() or {}
+        for _, button in ipairs(buttons) do
+            if button and (button.click_function == click_function or button.click_function == 'declare_ambition' or button.click_function == 'undo_ambition') then
+                existing_button = button
+                break
+            end
+        end
+    end
+
+    if existing_button then
+        local ok, err = pcall(function()
+            local edit_params = {
+                click_function = click_function,
+                function_owner = zero_marker,
+                position = {0, 0.05, 0},
+                width = 3800,
+                height = 950,
+                tooltip = tooltip
+            }
+            if existing_button.index ~= nil then
+                edit_params.index = existing_button.index
+            end
+            zero_marker.editButton(edit_params)
+        end)
+        if ok then
+            return true
+        end
+    end
+
+    local ok, err = pcall(function()
+        zero_marker.createButton({
+            click_function = click_function,
+            function_owner = zero_marker,
+            position = {0, 0.05, 0},
+            width = 3800,
+            height = 950,
+            tooltip = tooltip
+        })
+    end)
+
+    return ok
+end
+
 function ambitionMarkers:add_button()
     local zero_marker = getObjectFromGUID(zero_marker_GUID)
     -- If the zero marker object isn't present yet (load order), retry shortly
@@ -761,85 +816,34 @@ function ambitionMarkers:add_button()
         return
     end
 
-    -- If a button already exists, edit it rather than creating a duplicate
-    local existing = {}
-    if zero_marker.getButtons then
-        existing = zero_marker.getButtons() or {}
-    end
-    for _, b in ipairs(existing) do
-        if b and b.click_function == 'declare_ambition' then
-            local ok, err = pcall(function()
-                zero_marker.editButton({
-                    click_function = 'declare_ambition',
-                    function_owner = zero_marker,
-                    position = {0, 0.05, 0},
-                    width = 3800,
-                    height = 950,
-                    tooltip = 'Declare Ambition'
-                })
-            end)
-            if ok then return end
-            break
-        end
-    end
-
-    -- Try creating the button, and verify it exists; if not, retry a few times
-    local function try_create(attempt)
-        attempt = attempt or 1
-        local ok, err = pcall(function()
-            zero_marker.createButton({
-                click_function = 'declare_ambition',
-                function_owner = zero_marker,
-                position = {0, 0.05, 0},
-                width = 3800,
-                height = 950,
-                tooltip = 'Declare Ambition'
-            })
-        end)
-
-        -- verify
-        local btn_exists = false
-        if zero_marker.getButtons then
-            local buttons = zero_marker.getButtons() or {}
-            for _, b in ipairs(buttons) do
-                if b and b.click_function == 'declare_ambition' then
-                    btn_exists = true
-                    break
+    local ok = ambitionMarkers:set_zero_marker_button('declare_ambition', 'Declare Ambition')
+    if not ok then
+        Wait.time(function()
+            local zm = getObjectFromGUID(zero_marker_GUID)
+            if zm then
+                ambitionMarkers.add_button_attempts = (ambitionMarkers.add_button_attempts or 0) + 1
+                if ambitionMarkers.add_button_attempts < 8 then
+                    ambitionMarkers.add_button()
                 end
             end
-        end
-
-        if not btn_exists and attempt < 8 then
-            Wait.time(function()
-                -- ensure the zero_marker still exists
-                local zm = getObjectFromGUID(zero_marker_GUID)
-                if zm then
-                    ambitionMarkers.add_button_attempts = (ambitionMarkers.add_button_attempts or 0) + 1
-                    if ambitionMarkers.add_button_attempts < 8 then
-                        ambitionMarkers.add_button()
-                    end
-                end
-            end, 0.5)
-        end
+        end, 0.5)
     end
-
-    try_create(1)
 end
 
 function ambitionMarkers:display_declare_button()
-    local zero_marker = getObjectFromGUID(zero_marker_GUID)
-    zero_marker.editButton({
-        click_function = 'declare_ambition',
-        tooltip = 'Declare Ambition'
-    })
+    if ambitionMarkers:is_zero_button_hidden() then
+        return
+    end
+
+    ambitionMarkers:set_zero_marker_button('declare_ambition', 'Declare Ambition')
 end
 
 function ambitionMarkers:display_undo_button()
-    local zero_marker = getObjectFromGUID(zero_marker_GUID)
-    zero_marker.editButton({
-        click_function = 'undo_ambition',
-        tooltip = 'Undo'
-    })
+    if ambitionMarkers:is_zero_button_hidden() then
+        return
+    end
+
+    ambitionMarkers:set_zero_marker_button('undo_ambition', 'Undo')
 end
 
 
@@ -852,6 +856,9 @@ function ambitionMarkers:undo()
         return
     end
     local reach_board = getObjectFromGUID(reach_board_GUID)
+    if not reach_board then
+        return
+    end
     local undo_pos =
         reach_board.positionToWorld(last_declared_marker.column_pos)
     undo_pos.y = undo_pos.y + 0.3
@@ -878,12 +885,16 @@ function ambitionMarkers:undo()
         undo_pos.x = undo_pos.x - 1.33
     end
 
-    last_declared_marker.object.setPositionSmooth(undo_pos)
+    if last_declared_marker and last_declared_marker.object and last_declared_marker.object.setPositionSmooth then
+        last_declared_marker.object.setPositionSmooth(undo_pos)
+    end
 
     -- move zero marker back
     local zero_marker = getObjectFromGUID(zero_marker_GUID)
-    zero_marker.setPositionSmooth(reach_board.positionToWorld({0.94, 0.2, 1.09}))
-    zero_marker.setRotationSmooth({0.00, 180.00, 0.00})
+    if zero_marker and zero_marker.setPositionSmooth then
+        zero_marker.setPositionSmooth(reach_board.positionToWorld({0.94, 0.2, 1.09}))
+        zero_marker.setRotationSmooth({0.00, 180.00, 0.00})
+    end
     ambitionMarkers.display_declare_button()
 
     -- Immediately mark this marker as undeclared in Global state (safe via Global.call)
@@ -906,8 +917,10 @@ function ambitionMarkers:reset_zero_marker()
 
     local zero_marker = getObjectFromGUID(zero_marker_GUID)
     local reach_board = getObjectFromGUID(reach_board_GUID)
-    zero_marker.setPositionSmooth(reach_board.positionToWorld({0.94, 0.2, 1.09}))
-    zero_marker.setRotationSmooth({0.00, 180.00, 0.00})
+    if zero_marker and reach_board and zero_marker.setPositionSmooth then
+        zero_marker.setPositionSmooth(reach_board.positionToWorld({0.94, 0.2, 1.09}))
+        zero_marker.setRotationSmooth({0.00, 180.00, 0.00})
+    end
     -- Ensure global ambitions reflect reset position after move completes
     Wait.time(function()
         pcall(function() Global.call('ambition_refresh_proxy') end)
