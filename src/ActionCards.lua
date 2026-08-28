@@ -49,9 +49,9 @@ local face_up_discard_guids = {
     ["Mobilization 5"] = "bcf2e7",
     ["Mobilization 6"] = "7981dc",
     ["Mobilization 7"] = "864dd1",
-    ["Event"] = "fe7a80",
-    ["Event"] = "eff76c",
-    ["Event"] = "39a322",
+    ["Event1"] = "fe7a80",
+    ["Event2"] = "eff76c",
+    ["Event3"] = "39a322",
     ["Faithful 1"] = "fe9e2d",
     ["Faithful 2"] = "8a8534",
     ["Faithful 3"] = "28334e",
@@ -65,13 +65,32 @@ local face_up_discard_guids = {
 
 function ActionCards.get_action_deck()
     local action_deck_zone = getObjectFromGUID(action_deck_zone_GUID)
+    if not action_deck_zone then
+        LOG.WARNING("ActionCards.get_action_deck: action_deck_zone not found: " .. tostring(action_deck_zone_GUID))
+        return getObjectFromGUID(action_deck_GUID)
+    end
     local action_deck_zone_objects = action_deck_zone.getObjects()
 
     if (action_deck_zone_objects) then
+        -- Prefer a Deck object, but fall back to a single Card (when deck reduced to 1)
+        local found_card_guid = nil
         for _, v in ipairs(action_deck_zone_objects) do
-            if (v.name == "Deck") then
+            if v.tag == "Deck" or v.name == "Deck" then
                 action_deck_GUID = v.guid
+                return getObjectFromGUID(action_deck_GUID)
             end
+            -- remember any single card fallback; prefer cards that look like action cards
+            if v.tag == "Card" then
+                if not found_card_guid then found_card_guid = v.guid end
+                if (v.getName and v.getName() == "Action Card") or (v.hasTag and v.hasTag("Action")) then
+                    found_card_guid = v.guid
+                    break
+                end
+            end
+        end
+        if found_card_guid then
+            action_deck_GUID = found_card_guid
+            return getObjectFromGUID(action_deck_GUID)
         end
     end
 
@@ -80,15 +99,23 @@ end
 
 function ActionCards.setup_deck(player_count)
     local four_player_deck = getObjectFromGUID(action_deck_4P_GUID)
+    local mandate_deck = getObjectFromGUID(mandate_cards_GUID)
+
     local deck = ActionCards.get_action_deck()
-    if (player_count == 4) then
+    if (player_count >= 4) then
+                LOG.INFO("put in 4p deck")
         deck.putObject(four_player_deck)
         Wait.time(function()
             deck.randomize()
+            if player_count >= 5 then
+                deck.putObject(mandate_deck)
+            end
         end, 1.5)
     else
+        LOG.INFO("destroyed 4p deck")
         destroyObject(four_player_deck)
     end
+
 end
 
 function ActionCards.setup_events(player_count)
@@ -116,18 +143,18 @@ function ActionCards.is_face_up_discard_active()
     return Global.getVar("is_face_up_discard_active")
 end
 
-function ActionCards.deal_hand()
+function ActionCards.deal_hand(num)
     broadcastToAll("Shuffle and deal 6 action cards to all players")
     local deck = ActionCards.get_action_deck()
     deck.randomize()
     Wait.time(function()
-        deck.deal(6)
+        deck.deal(num)
     end, 1)
 end
 
 function ActionCards.check_deck()
     local deck = ActionCards.get_action_deck()
-    local deck_size = #getSeatedPlayers() == 4 and 28 or 20
+    local deck_size = #getSeatedPlayers() >= 4 and 28 or 20
     return deck_size <= #deck.getObjects()
 end
 
@@ -146,11 +173,22 @@ end
 function ActionCards.clear_played()
     LOG.INFO("ActionCards.clear_played")
 
-    local played_objects = getObjectFromGUID(action_card_zone_GUID).getObjects()
+    local action_zone = getObjectFromGUID(action_card_zone_GUID)
+    if not action_zone then
+        LOG.WARNING("ActionCards.clear_played: action_card_zone not found: " .. tostring(action_card_zone_GUID))
+        return true
+    end
+    local played_objects = action_zone.getObjects()
 
     -- Handle union cards
     local union_marked_cards = ActionCards.union_handling(played_objects)
     local union_center_card_offset = 0
+
+    local union_like_names = {
+        ["THE PROPHET"] = true,
+        ["THE YOUNG LIGHT"] = true,
+        ["THE PRODIGAL ONE"] = true
+    }
 
     -- clean up
     for ct, obj in ipairs(played_objects) do
@@ -177,12 +215,19 @@ function ActionCards.clear_played()
                 ActionCards.to_face_down_discard(obj)
             end
         elseif (obj.getName() ~= "Action Card") and obj.hasTag("Court") and not string.find(obj.getDescription(), "Union") then
+            local obj_name = obj.getName and obj.getName() or ""
+            local upper_name = string.upper(obj_name)
+            if union_like_names[upper_name] then
+                -- These cards are handled in union_handling and should stay in center area.
+                goto continue_cleanup
+            end
             local court_discard = getObjectFromGUID(court_discard_zone_GUID)
             if court_discard then
                 obj.setPositionSmooth(court_discard.getPosition() + Vector({0, 3, 0}))
                 obj.setRotationSmooth(Vector({0, 270, 0}))
             end
         end
+        ::continue_cleanup::
     end
 
     return true
@@ -192,6 +237,10 @@ function ActionCards.to_face_down_discard(card)
     LOG.INFO("ActionCards.to_face_down_discard")
     local reach_map = getObjectFromGUID(reach_board_GUID)
     local pos = reach_map.positionToWorld(fdd_pos)
+    local active_players = getSeatedPlayers()
+    if active_players and #active_players >= 5 then
+        pos.z = pos.z + 1.57
+    end
     local rot = fdd_rot
     card.setPositionSmooth(pos)
     card.setRotationSmooth(rot)
@@ -267,12 +316,15 @@ function ActionCards.get_info(card)
         return
     end
 
-    local card_type = string.sub(card.getDescription(), 1, -3)
-    local card_number = tonumber(string.sub(card.getDescription(), -2, -1))
+    local desc = card.getDescription()
+    local card_type = string.sub(desc, 1, -3)
+    local card_number = tonumber(string.sub(desc, -2, -1))
 
-    if (card_type == "Faithful") then
-        card_type = card.getRotation().y < 180 and "Faithful Zeal" or
-                        "Faithful Wisdom"
+    if string.find(desc, "Mandate") then
+        card_type = desc
+        card_number = 0
+    elseif (card_type == "Faithful") then
+        card_type = card.getRotation().y < 180 and "Faithful Zeal" or "Faithful Wisdom"
     end
 
     return {
@@ -290,14 +342,35 @@ function ActionCards.get_lead_info()
     local lead_zone = getObjectFromGUID(lead_card_zone_GUID)
 
     if (lead_zone) then
+        local lead_obj = nil
         for _, obj in ipairs(lead_zone.getObjects()) do
             if (obj.getName() == "Action Card") then
                 lead = ActionCards.get_info(obj)
                 lead.real_number = lead.number
+                lead_obj = obj
             end
 
             if (obj.getName() == "Zero Marker") then
                 is_ambition_declared = true
+            end
+        end
+
+        -- Fallback: if zero marker wasn't reported in the zone, check proximity
+        -- of the global zero marker object to the lead card (covers "on top" cases)
+        if (not is_ambition_declared) and lead_obj then
+            local ok, zm = pcall(function() return getObjectFromGUID(zero_marker_GUID) end)
+            local zero_marker = ok and zm or nil
+            if zero_marker and zero_marker.getPosition and lead_obj.getPosition then
+                local zmp = zero_marker.getPosition()
+                local leadp = lead_obj.getPosition()
+                -- horizontal distance (x,z plane)
+                local dx = zmp.x - leadp.x
+                local dz = zmp.z - leadp.z
+                local horiz_dist = math.sqrt(dx * dx + dz * dz)
+                -- consider it "on top" if horizontally very close and slightly above
+                if horiz_dist <= 1.2 and (zmp.y - leadp.y) > 0.05 then
+                    is_ambition_declared = true
+                end
             end
         end
     else
@@ -324,28 +397,63 @@ function ActionCards.get_surpassing_card()
     local surpassing_card = nil
     local max_surpassing_number = 0
     local played_zone = getObjectFromGUID(action_card_zone_GUID)
+    if not played_zone then
+        LOG.WARNING("ActionCards.get_surpassing_card: action_card_zone not found: " .. tostring(action_card_zone_GUID))
+        return nil
+    end
 
+    LOG.DEBUG("get_surpassing_card: lead card is " .. tostring(lead.type) .. " " .. tostring(lead.number) .. " (guid=" .. tostring(lead.guid) .. ")")
+    local found_mandate_surpass = false
+    local numeric_surpass_found = false
     for _, v in ipairs(played_zone.getObjects()) do
         if (v.guid == lead.guid) then
+            LOG.DEBUG("Skipping lead card itself (guid=" .. tostring(v.guid) .. ")")
             goto continue
         end
 
         if v.getName() ~= "Action Card" then
+            LOG.DEBUG("Skipping non-action card: " .. tostring(v.getName()))
             goto continue
         end
 
         do -- avoid error with goto jumping into surpassing_card scope
             local card = ActionCards.get_info(v)
             if (card) then
-                LOG.DEBUG("card: " .. card.type .. " " .. card.number)
+                LOG.DEBUG("Checking card: " .. tostring(card.type) .. " " .. tostring(card.number) .. " (guid=" .. tostring(card.guid) .. ")")
+            else
+                LOG.DEBUG("get_info returned nil for card with guid " .. tostring(v.guid))
             end
-            if (card and lead.type == card.type and lead.number < card.number and
-                card.number > max_surpassing_number) then
-                max_surpassing_number = card.number
-                surpassing_card = card
+            if card then
+                if lead.type and string.find(lead.type, "Mandate") then
+                    -- Mandate lead: numeric cards outrank mandates; highest numeric wins.
+                    -- Mandates only count if no numeric cards are played.
+                    LOG.DEBUG("Mandate lead: comparing card.number=" .. tostring(card.number) .. " to max_surpassing_number=" .. tostring(max_surpassing_number))
+                    if card.number > 0 then
+                        if card.number > max_surpassing_number then
+                            LOG.DEBUG("Mandate surpass (numeric): setting surpassing_card to " .. tostring(card.type) .. " " .. tostring(card.number) .. " (guid=" .. tostring(card.guid) .. ")")
+                            max_surpassing_number = card.number
+                            surpassing_card = card
+                            numeric_surpass_found = true
+                        end
+                    elseif card.type and string.find(card.type, "Mandate") and not numeric_surpass_found and not found_mandate_surpass then
+                        -- No numeric surpass yet: first non-lead Mandate card found wins among mandates
+                        LOG.DEBUG("Mandate tie-break: first non-lead Mandate card found, setting surpassing_card to " .. tostring(card.type) .. " (guid=" .. tostring(card.guid) .. ")")
+                        surpassing_card = card
+                        found_mandate_surpass = true
+                    end
+                elseif (lead.type == card.type and lead.number < card.number and card.number > max_surpassing_number) then
+                    LOG.DEBUG("Suit match surpass: setting surpassing_card to " .. tostring(card.type) .. " " .. tostring(card.number) .. " (guid=" .. tostring(card.guid) .. ")")
+                    max_surpassing_number = card.number
+                    surpassing_card = card
+                end
             end
         end
         ::continue::
+    end
+    if surpassing_card then
+        LOG.INFO("Final surpassing card: " .. tostring(surpassing_card.type) .. " " .. tostring(surpassing_card.number) .. " (guid=" .. tostring(surpassing_card.guid) .. ")")
+    else
+        LOG.INFO("No surpassing card found.")
     end
 
     if (surpassing_card) then
@@ -373,7 +481,10 @@ end
 function ActionCards.count_action_cards()
     local count = 0
     local played_zone = getObjectFromGUID(action_card_zone_GUID)
-
+    if not played_zone then
+        LOG.WARNING("ActionCards.count_action_cards: action_card_zone not found: " .. tostring(action_card_zone_GUID))
+        return 0
+    end
     for _, obj in ipairs(played_zone.getObjects()) do
         if obj.hasTag("Action") then
             count = count + 1
@@ -384,8 +495,12 @@ end
 
 function ActionCards.find_seize_player()
     local seize_zone = getObjectFromGUID(seize_zone_GUID)
+    if not seize_zone then
+        LOG.WARNING("ActionCards.find_seize_player: seize_zone not found: " .. tostring(seize_zone_GUID))
+        return nil
+    end
     local seize_zone_objects = seize_zone.getObjects()
-    for _, obj in ipairs(seize_zone_objects) do
+    for _, obj in ipairs(seize_zone_objects or {}) do
         if obj.hasTag("Action") and obj.is_face_down then
             local seize_card = ActionCards.get_info(obj)
             local all_players = Global.getVar("active_players")
@@ -418,7 +533,7 @@ end
 
 function ActionCards.faceup_discard_visibility(show)
     local visibility = show and {} or
-                           {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
+                               {"Red", "White", "Yellow", "Teal", "Pink", "Black", "Grey"}
     local discard = getObjectFromGUID(FUDiscard_marker_GUID)
     discard.setInvisibleTo(visibility)
 end
@@ -433,10 +548,26 @@ function ActionCards.union_handling(played_objects)
     LOG.INFO("ActionCards.union_handling")
 
     local union_marked_cards = {}
+    local union_like_names = {
+        ["THE PROPHET"] = true,
+        ["THE YOUNG LIGHT"] = true,
+        ["THE PRODIGAL ONE"] = true
+    }
+    local function move_to_union_like_fixed_spot(trigger_card)
+        if not trigger_card then return end
+        -- Fixed world-space destination for special union-like cards.
+        trigger_card.setPositionSmooth({3.25, 2.06, -0.64})
+        trigger_card.setRotationSmooth(Vector({0, 180, 0}))
+    end
 
     for _, obj in pairs(played_objects) do
-        -- Check if the card name contains "UNION" instead of checking tags
-        if obj.getName() and string.find(string.upper(obj.getName()), "UNION") then
+        local obj_name = obj.getName and obj.getName() or ""
+        local upper_name = string.upper(obj_name)
+        local is_named_union_like = union_like_names[upper_name] == true
+        local is_union_like = string.find(upper_name, "UNION") ~= nil or is_named_union_like
+
+        -- Check if the card name contains "UNION" or matches one of the union-like names.
+        if is_union_like then
             -- Find the closest face up action card
             local closest_face_up_action_card = nil
             local min_distance = 20
@@ -455,18 +586,27 @@ function ActionCards.union_handling(played_objects)
                 table.insert(union_marked_cards, {
                     guid = closest_face_up_action_card.guid,
                     description = closest_face_up_action_card.getDescription(),
-                    reserved_by = obj.getName()
+                    reserved_by = obj_name
                 })
-                print("Whoever played " .. obj.getName() .. ", please pull " .. closest_face_up_action_card.getDescription() .. " back into your hand.")
+                broadcastToAll("Whoever played " .. obj_name .. ", please pull " .. closest_face_up_action_card.getDescription() .. " back into your hand.")
 
-                -- Move the union card to court discard
-                local court_discard = getObjectFromGUID(court_discard_zone_GUID)
-                if court_discard then
-                    obj.setPositionSmooth(court_discard.getPosition() + Vector({0, 3, 0}))
-                    obj.setRotationSmooth(Vector({0, 270, 0}))
+                if is_named_union_like then
+                    -- For specific union-like cards, move to one fixed middle-map spot.
+                    move_to_union_like_fixed_spot(obj)
+                else
+                    -- Move regular union trigger cards to court discard.
+                    local court_discard = getObjectFromGUID(court_discard_zone_GUID)
+                    if court_discard then
+                        obj.setPositionSmooth(court_discard.getPosition() + Vector({0, 3, 0}))
+                        obj.setRotationSmooth(Vector({0, 270, 0}))
+                    end
                 end
             else
                 broadcastToAll("Union card in play but no face up action cards to mark for union recall", Color.Red)
+                if is_named_union_like then
+                    -- Still place these cards in center area even if no action card was marked.
+                    move_to_union_like_fixed_spot(obj)
+                end
             end
         end
     end

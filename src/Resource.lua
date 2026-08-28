@@ -37,10 +37,18 @@ local Resource = {
 }
 
 function Resource:take(name, pos)
-    LOG.DEBUG("name:" .. name)
+    if not name or tostring(name) == "" then
+        return nil
+    end
+    LOG.DEBUG("name:" .. tostring(name))
 
     -- perform a raycast to find the topmost resource on the supply tile
-    local supply_tile = getObjectFromGUID(self.supply_tiles[name:lower()])
+    local key = tostring(name):lower()
+    local supply_guid = self.supply_tiles[key]
+    if not supply_guid then
+        return nil
+    end
+    local supply_tile = getObjectFromGUID(supply_guid)
     local hits = Physics.cast(
         {
             origin = supply_tile.getPosition() + Vector(0, -1, 0),

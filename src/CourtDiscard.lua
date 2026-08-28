@@ -17,8 +17,8 @@ function onObjectEnterZone(zone, object)
         end
     end
 
-    -- Check if the object is "SONG OF FREEDOM" and move it 
-    if object.getName() == "SONG OF FREEDOM" then
+    -- Check if the object is "SONG OF FREEDOM" and move it (only when face-up)
+    if object.getName() == "SONG OF FREEDOM" and not object.is_face_down then
         local pos = object.getPosition()
         object.setPosition({ x = 26, y = pos.y, z = pos.z })
         broadcastToAll("Shuffle Song Of Freedom into the Court deck.")
@@ -26,7 +26,8 @@ function onObjectEnterZone(zone, object)
     end
 
     -- Special handling for GUILD STRUGGLE (only once per game)
-    if object.getName() == "GUILD STRUGGLE" then
+    -- Only resolve Guild Struggle when the card is face-up
+    if object.getName() == "GUILD STRUGGLE" and not object.is_face_down then
         object.setName("GUILD STRUGGLE RESOLVED")
 
         for _, obj in ipairs(zoneObjects) do
@@ -40,6 +41,30 @@ function onObjectEnterZone(zone, object)
             end
         end
         broadcastToAll("Shuffle all Guild cards from the Court discard pile into the Court deck.")
+
+        -- Ensure the resolved Guild Struggle card ends up on top of the Court deck.
+        -- Wait a short moment so other deck operations finish, then put this card on top
+        Wait.time(function()
+            -- re-scan zone for a deck object
+            local zoneObjects2 = zone.getObjects()
+            local foundDeck = nil
+            for _, o in ipairs(zoneObjects2) do
+                if o.type == "Deck" then
+                    foundDeck = o
+                    break
+                end
+            end
+
+            if foundDeck then
+                pcall(function()
+                    -- putObject will place it on top of the deck
+                    foundDeck.putObject(object)
+                end)
+            else
+                local pos = object.getPosition()
+                object.setPosition({ x = pos.x, y = pos.y + 0.4 , z = pos.z })
+            end
+        end, 0.4)
 
         return
     end

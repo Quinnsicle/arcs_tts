@@ -83,6 +83,32 @@ local player_pieces = {
         area_zone = "ee4b6e",
         hand_zone = "c9dd8d"
     },
+    ["Pink"] = {
+        components = {
+            board = "57b06a",
+            score_board = "44f508",
+            ships = "8c5c67",
+            mini_ships = "d623c4",
+            starports = "ab5d17",
+            agents = "673d59",
+            mini_agents = "1ab7b7",
+            cities = {"15943d", "d20e60", "98da52", "bc54f0", "bc2d71"},
+            power = "d25054",
+            objective = "f00e1f",
+            trophy_wall1 = "6e10d3",
+            trophy_wall2 = "62cdb3",
+            trophy_wall3 = "5e4c14",
+            trophy_captive_wall = "109201",
+            captive_wall1 = "8fc894",
+            captive_wall2 = "e2edaa",
+            captive_wall3 = "72e9a9" --not sure if the order is right for the pinktrophy and captive walls, I did bottom right top, but I dont think it matters for now
+        },
+        initiative_zone = "fefc45",
+        trophies_zone = "f57ed0",
+        captives_zone = "755484",
+        area_zone = "33c95d",
+        hand_zone = "965437"
+    },
     ["Red"] = {
         components = {
             board = "c0c8a1",
@@ -121,6 +147,7 @@ ArcsPlayer = {
     warlord = 0,
     keeper = 0,
     empath = 0,
+    objective = 0,
     player_instance = nil,
     last_action_card = nil,
     last_seize_card = nil,
@@ -155,15 +182,16 @@ ArcsPlayer = {
 
 function ArcsPlayer.components_visibility(color, is_visible, is_campaign)
     local visibility = is_visible and {} or
-                           {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
+                           {"Red", "White", "Yellow", "Teal", "Pink", "Black", "Grey"}
     for key, id in pairs(player_pieces[color]["components"]) do
         if (key == "cities") then
             ArcsPlayer._show_cities(color, is_visible)
-        elseif (key == "objective" and is_visible and not is_campaign) then
-            local obj = getObjectFromGUID(id)
-            if (obj) then
-                obj.destroy()
-            end
+        -- elseif (key == "objective" and is_visible and not is_campaign) then
+            elseif (key == "objective" and is_visible and not is_campaign and Global.getVar("is_initial_setup")) then
+                local obj = getObjectFromGUID(id)
+                if (obj) then
+                    obj.destroy()
+                end
         else
             local obj = getObjectFromGUID(id)
             if (obj) then
@@ -175,7 +203,7 @@ end
 
 function ArcsPlayer._show_cities(color, is_visible)
     local visibility = is_visible and {} or
-                           {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
+                           {"Red", "White", "Yellow", "Teal", "Pink", "Black", "Grey"}
 
     for _, id in pairs(player_pieces[color].components.cities) do
         local obj = getObjectFromGUID(id)
@@ -216,6 +244,9 @@ function ArcsPlayer:setup(is_campaign)
     elseif (self.color == "Yellow") then
         y_pos = 2
         x_pos = -13.26
+    elseif (self.color == "Pink") then
+        y_pos = 2
+        x_pos = -13.26
     end
     local power = getObjectFromGUID(player_pieces[self.color].components.power)
     power.setPosition({x_pos, y_pos, -9.36})
@@ -223,24 +254,28 @@ function ArcsPlayer:setup(is_campaign)
     ArcsPlayer.components_visibility(self.color, true, is_campaign)
 end
 
-function ArcsPlayer:set_last_played_action_card(action_card_description)
-    self.last_action_card = {
-        type = string.sub(action_card_description, 1, -3),
-        number = tonumber(string.sub(action_card_description, -1, -1))
-    }
-
+function ArcsPlayer:set_last_played_action_card(card_info)
+    self.last_action_card = card_info
     if (Global.getVar("is_face_up_discard_active")) then
         local gold_color = {1, 0.7, 0.4}
-        broadcastToAll(self.color .. " played " .. action_card_description,
-            gold_color)
+        broadcastToAll(self.color .. " played " .. (card_info and card_info.type or "") .. " " .. (card_info and tostring(card_info.number) or ""), gold_color)
     end
 end
 
 function ArcsPlayer:set_last_played_seize_card(action_card_description)
-    self.last_seize_card = {
-        type = string.sub(action_card_description, 1, -3),
-        number = tonumber(string.sub(action_card_description, -1, -1))
-    }
+    if string.find(action_card_description, "Mandate") then
+        self.last_seize_card = {
+            type = action_card_description,
+            number = 0
+        }
+    else
+        local card_type = string.sub(action_card_description, 1, -3)
+        local card_number = tonumber(string.sub(action_card_description, -2, -1))
+        self.last_seize_card = {
+            type = card_type,
+            number = card_number
+        }
+    end
 end
 
 function ArcsPlayer.has_secret_order(player_color)
@@ -325,6 +360,25 @@ function ArcsPlayer:is_power_negative()
     return false
 end
 
+function ArcsPlayer:objective_score(objective_marker)
+    -- If the objective marker is missing or hidden to players, treat as 0
+    if not objective_marker then return 0 end
+    local ok, invisible_to = pcall(function()
+        if objective_marker.getInvisibleTo then return objective_marker.getInvisibleTo() end
+        return nil
+    end)
+    if ok and invisible_to and type(invisible_to) == "table" and next(invisible_to) ~= nil then
+        return 0
+    end
+
+    -- Calculate objective score from marker position (same pattern as power)
+    local objective_pos_x = 0
+    pcall(function() objective_pos_x = objective_marker.getPosition().x end)
+    local base_objective = math.floor((objective_pos_x + 13.26) / 0.655)
+    if base_objective < 0 then base_objective = 0 end
+    return base_objective
+end
+
 function ArcsPlayer:update_score()
     self.score_board = getObjectFromGUID(
         player_pieces[self.color]["components"]["score_board"])
@@ -371,6 +425,10 @@ function ArcsPlayer:update_score()
     self.trophies = trophies_zone and #trophies_zone.getObjects() or 0
     self.keeper = self:count("Relic")
     self.empath = self:count("Psionic")
+    local objective_marker = getObjectFromGUID(
+    player_pieces[self.color]["components"].objective)
+    self.objective = self:objective_score(objective_marker)
+    local show_objective = not Global.getVar("is_basegame_setup")
 
     self.score_board.editButton({
         index = 0,
@@ -433,6 +491,26 @@ function ArcsPlayer:update_score()
         label = self.empath,
         font_color = (empath_active and gold_color or white_color)
     })
+    if show_objective then
+        self.score_board.editButton({
+            index = 14,
+            label = self.objective
+        })
+        self.score_board.editButton({
+            index = 15,
+            label = self.objective,
+            font_color = (empath_active and gold_color or white_color)
+        })
+    else
+        self.score_board.editButton({
+            index = 14,
+            label = ""
+        })
+        self.score_board.editButton({
+            index = 15,
+            label = ""
+        })
+    end
 end
 
 function ArcsPlayer:count(resource)
@@ -625,6 +703,30 @@ function ArcsPlayer:create_score()
         font_size = 500,
         font_color = text_color
     })
+    -- 7. Objective
+    local objective_pos = Vector({-3.075, 0.11, score_row})
+    self.score_board.createButton({
+        function_owner = self,
+        click_function = "doNothing",
+        position = objective_pos + shadow,
+        rotation = {0, 0, 0},
+        width = 0,
+        height = 0,
+        font_size = 525,
+        font_color = {0, 0, 0}
+    })
+    self.score_board.createButton({
+        function_owner = self,
+        click_function = "doNothing",
+        position = objective_pos,
+        rotation = {0, 0, 0},
+        width = 0,
+        height = 0,
+        font_size = 500,
+        font_color = text_color
+    })
+    
+
 
     self:update_score()
 end

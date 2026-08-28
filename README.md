@@ -21,6 +21,7 @@ This repository is associated with two Tabletop Simulator Workshop items:
 
 - [Arcs - Imperial Edition](https://steamcommunity.com/sharedfiles/filedetails/?id=3037846252) - The primary public release
 - [Arcs - Outlaw Edition](https://steamcommunity.com/sharedfiles/filedetails/?id=3346632934) - Used for development and testing
+- [Arcs: Celestial Edition](https://steamcommunity.com/sharedfiles/filedetails/?id=3683918449) - Laurens' Fork with many fixes and extra features
 
 ## Requirements
 

@@ -70,7 +70,7 @@ local merchant = require("src/Merchant")
 
 function Campaign.components_visibility(is_visible)
     local visibility = is_visible and {} or
-                           {"Red", "White", "Yellow", "Teal", "Black", "Grey"}
+                           {"Red", "White", "Yellow", "Teal", "Pink", "Black", "Grey"}
 
     for _, id in pairs(Campaign.guids) do
         local obj = getObjectFromGUID(id)
@@ -86,14 +86,45 @@ end
 
 function Campaign.setup(with_leaders, with_ll_expansion, with_miniatures)
 
-    local active_players = Global.call("getOrderedPlayers")
-    Global.setVar("active_players", active_players)
-    if (#active_players < 2 or #active_players > 4) then
+    local init_choice_color = Global.getVar("initiative_choice_color")
+    local init_choice_index = Global.getVar("initiative_choice_index") or 0
+
+    local active_players
+    if init_choice_color then
+        active_players = Global.call("getOrderedPlayersStartingWith", init_choice_color)
+    elseif init_choice_index and init_choice_index >= 1 then
+        active_players = Global.call("getOrderedPlayersStartingWith", init_choice_index)
+    else
+        active_players = Global.call("getOrderedPlayers")
+    end
+
+    if (#active_players < 2 or #active_players > 5) then
         return false
     end
 
-    BaseGame.setup_or_destroy_miniatures(with_miniatures)
+    BaseGame.setup_or_destroy_miniatures(with_miniatures, active_players)
 
+    -- determine initiative recipient (respect stored choice or random)
+    local initiative = require("src/InitiativeMarker")
+    local init_choice_color = Global.getVar("initiative_choice_color")
+    local init_choice_index = Global.getVar("initiative_choice_index") or 0
+    local init_choice_pcount = Global.getVar("initiative_choice_player_count")
+
+    local chosen_color
+    if init_choice_color then
+        for _, p in ipairs(active_players) do
+            if p.color == init_choice_color then chosen_color = p.color; break end
+        end
+    elseif init_choice_index and init_choice_index >= 1 and init_choice_pcount == #active_players and init_choice_index <= #active_players then
+        chosen_color = active_players[init_choice_index].color
+    else
+        -- random mode: pick random player to receive initiative and rotate
+        chosen_color = active_players[math.random(#active_players)].color
+        active_players = Global.call("getOrderedPlayersStartingWith", chosen_color)
+    end
+
+    -- store finalized order and set up player boards
+    Global.setVar("active_players", active_players)
     local active_player_colors = {}
     for _, p in pairs(active_players) do
         ArcsPlayer.setup(p, true)
@@ -102,7 +133,7 @@ function Campaign.setup(with_leaders, with_ll_expansion, with_miniatures)
 
     local p = {
         is_campaign = true,
-        is_4p = #active_players == 4,
+        is_4p = #active_players >= 4,
         leaders_and_lore = with_leaders,
         leaders_and_lore_expansion = with_ll_expansion,
         with_faceup_discard = ActionCards.is_face_up_discard_active(),
@@ -110,14 +141,18 @@ function Campaign.setup(with_leaders, with_ll_expansion, with_miniatures)
     }
     Global.call("set_game_in_progress", p)
 
-    -- B
+    -- Place initiative and give first regent to player 1
     local initiative = require("src/InitiativeMarker")
-    initiative.take(active_players[1].color)
+    initiative.take(chosen_color)
     Campaign.setup_regents(active_players)
 
     -- C, D, E
     ActionCards.setup_deck(#active_players)
     ActionCards.setup_events(#active_players)
+
+    if #active_players >= 5 then
+        BaseGame.adjust_action_deck_for_5p()
+    end
 
     Campaign.setupChapterTrack()
     LOG.INFO("setupChapterTrack Complete")
@@ -152,7 +187,8 @@ function Campaign.setup_regents(players)
         Red = {-16.04, 0.97, 13.03},
         White = {7.61, 0.97, 13.03},
         Yellow = {7.62, 0.97, -12.31},
-        Teal = {-16.0, 0.97, -12.32}
+        Teal = {-16.0, 0.97, -12.32},
+        Pink = {31.24, 0.97, -12.32}
     }
 
     for i, p in ipairs(players) do

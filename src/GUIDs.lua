@@ -1,8 +1,20 @@
 reach_board_GUID = "bb7d21"
+setup_table_GUID = "0b4885"
+
+setup_control_2 = "42caeb"
+setup_control_3 = "5dc1e0"
 
 -- leaders and lore
 more_to_explore_fate_GUID = "768d3d"
 more_to_explore_lore_GUID = "3441e5"
+
+artifact_deck_GUID = "9c97c9"
+reach_feature_deck_GUID = "a5e8a7"
+windfall_deck_Guid = "8cfcb9"
+lost_vaults_markers_GUID = "7c24cf"
+lost_vaults_rules_GUID = "952d62"
+
+mandate_cards_GUID = "c549b5"
 
 include_fates_GUID = "be0e27"
 action_deck_GUID = "227406"
@@ -14,13 +26,15 @@ face_up_discard_action_deck_GUID = "a8e929"
 lead_card_zone_GUID = "9e5eae"
 FUDiscard_marker_GUID = "000207"
 
+snaps_5p_GUID = "fc47e1"
+
 zero_marker_GUID = "0289cb"
 zero_marker_zone_GUID = "3984e4"
 negative_power_zone_GUID = "3984e5"
 plus_fifty_power_zone_GUID = "3984e6"
 plus_one_hundred_power_zone_GUID = "3984e7"
 
-ambition_marker_GUIDs = {"c9e0ee", "a9b02a", "b0b4d0"}
+ambition_marker_GUIDs = {"c9e0ee", "a9b02a", "b0b4d0","5b499a", "d7d474", "0f526d"}
 ambition_marker_zone_GUID = "06c552"
 court_deck_zone_GUID = "7a33ff"
 court_discard_zone_GUID = "7a33fa"
@@ -37,6 +51,13 @@ frontiers_4P_GUID = "ec2d75"
 mix_up_1_4P_GUID = "646d5a"
 mix_up_2_4P_GUID = "53671b"
 mix_up_3_4P_GUID = "595066"
+
+-- 5P setup deck (added)
+frontiers_5P_GUID = "2cd1ed"
+mix_up_1_5P_GUID = "b89490"
+mix_up_2_5P_GUID = "e0ea87"
+empires_5P_GUID = "f576ec"
+extension_5P_GUID = "7d62f5"
 
 -- 3P setup deck
 frontiers_3P_GUID = "abc2f1"
@@ -133,7 +154,22 @@ player_pieces_GUIDs = {
         trophies_zone = "3085c9",
         captives_zone = "fe0b0d",
         area_zone = "ee4b6e"
+    },
+    ["Pink"] = {
+        player_board = "57b06a",
+        resource = {"15943d", "d20e60"},
+        ships = "8c5c67",
+        mini_ships = "d623c4",
+        starports = "ab5d17",
+        agents = "673d59",
+        mini_agents = "1ab7b7",
+        cities = {"15943d", "d20e60", "98da52", "bc54f0", "bc2d71"},
+        initiative_zone = "fefc45",
+        trophies_zone = "f57ed0",
+        captives_zone = "755484",
+        area_zone = "33c95d"
     }
+
 }
 
 -- Cluster GUIDs

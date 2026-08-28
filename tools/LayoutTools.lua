@@ -6,9 +6,10 @@ local player_boards = {
     ["White"] = "999dbd",
     ["Yellow"] = "5aa44c",
     ["Teal"] = "ae512a",
-    ["Red"] = "c0c8a1"
+    ["Red"] = "c0c8a1",
+    ["Pink"] = "57b06a"
 }
-
+-- this works by setting it to based on where the player board is apparently --laurens
 -- City snaps on play board
 local cities_layout = {{-0.255, 0.978, -0.828},
                        {-0.628, 0.978, -0.829},

@@ -44,29 +44,41 @@ function RoundManager.endRound()
             return
         end
     else
-        -- Check for highest surpassing card
-        local surpassing = ActionCards.get_surpassing_card()
-        if not surpassing then
-            broadcastToAll("No surpassing card, " .. initiative_player ..
-                               " keeps the initiative", initiative_player)
+        -- If initiative is already seized (marker in seized state) then
+        -- do not attempt to find a surpassing card; the seizing player
+        -- keeps initiative.
+        if Initiative.is_seized() then
+            if initiative_player then
+                broadcastToAll(initiative_player .. " has seized the initiative and keeps it", initiative_player)
+            else
+                LOG.DEBUG("Initiative seized but initiative_player unknown")
+            end
         else
-            -- Assign initiative to player with highest surpassing card
-            for _, p in ipairs(all_players) do
-                if not p.last_action_card then
-                    goto continue
+            -- Check for highest surpassing card
+            local surpassing = ActionCards.get_surpassing_card()
+            if not surpassing then
+                broadcastToAll("No surpassing card, " .. initiative_player ..
+                                   " keeps the initiative", initiative_player)
+            else
+                -- Debug: print all last_action_card values and surpassing card
+                LOG.DEBUG("Surpassing card: type=" .. tostring(surpassing.type) .. ", number=" .. tostring(surpassing.number))
+                for _, p in ipairs(all_players) do
+                    if not p.last_action_card then
+                        LOG.DEBUG("Player " .. tostring(p.color) .. " has no last_action_card")
+                        goto continue
+                    end
+                    LOG.DEBUG("Player " .. tostring(p.color) .. " last_action_card: type=" .. tostring(p.last_action_card.type) .. ", number=" .. tostring(p.last_action_card.number))
+                    if p.last_action_card.type == surpassing.type and p.last_action_card.number == surpassing.number then
+                        LOG.INFO("Initiative assigned to " .. tostring(p.color) .. " for surpassing card match.")
+                        Initiative.unseize()
+                        Initiative.take(p.color, true)
+                        broadcastToAll(string.format(
+                            "%s has surpassed with %s %d and takes the initiative",
+                            p.color, surpassing.type, surpassing.number), p.color)
+                        break
+                    end
+                    ::continue::
                 end
-
-                if string.find(surpassing.type, p.last_action_card.type) and
-                    p.last_action_card.number == surpassing.number then
-                    Initiative.unseize()
-                    Initiative.take(p.color, true)
-                    broadcastToAll(string.format(
-                        "%s has surpassed with %s %d and takes the initiative",
-                        p.color, surpassing.type, surpassing.number), p.color)
-                    break
-                end
-
-                ::continue::
             end
         end
     end
@@ -83,7 +95,12 @@ function RoundManager.endRound()
     end
     broadcastToAll("End Round\n", Color.Purple)
 
-    Turns.turn_color = Global.getVar("initiative_player")
+    local next_turn_color = Global.getVar("initiative_player")
+    if next_turn_color then
+        Turns.turn_color = next_turn_color
+    else
+        LOG.WARNING("Skipping turn color update because initiative player is unknown")
+    end
     Initiative.unseize()
 end
 

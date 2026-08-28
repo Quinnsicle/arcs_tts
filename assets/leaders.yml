@@ -1,0 +1,2867 @@
+- image_name: Kaiju
+  name: Kaiju
+  abilities: '*Devouring.* When you **destroy** a city, repair all your ships in its
+    cluster.
+
+    *Feared.* When you **tax** a city you control, damage it.'
+  resources:
+  - Weapon
+  - Material
+  setup:
+    A:
+      ships: 4
+      building: city
+    B:
+      ships: 4
+      building: city
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.0
+  boundary_shift: 0.0
+- name: Shapeshifter
+  abilities: '*Mimicry.* When any player **declares** **an** **ambition**, gain a
+    resource of its type. *(Weapon for Warlord, you choose Material or Fuel for Tycoon.)*
+
+    *Flickering.* After **scoring**, discard all your resources, then gain 1 Material.'
+  resources:
+  - Psionic
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.1
+  boundary_shift: 0.1
+- name: Sentient
+  abilities: '*Formless.* **At** **the** **start** **of** **each** **chapter**, choose
+    a gate. **This chapter**, you may Catapult move and build there
+    any number of times.
+
+    *Shapeless.* In **setup**, scrap all your starports.'
+  resources:
+  - Material
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 2
+      building: None
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Hierarch
+  abilities: '*Entitled.* At the **end of your turn**, influence a card where you
+    are tied with another player.
+
+    *Rigid.* You cannot Pivot to **influence**.'
+  resources:
+  - Relic
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Smuggler
+  abilities: '*Canny.* In **battle**, if you rolled any {icon:dice_key_black},
+    you may steal 1 resource for free.
+
+    *Hunted.* After you destroy a building in **battle**, the defender may move all
+    your attacking ships into a gate.'
+  resources:
+  - Fuel
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: starport
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Manipulator
+  abilities: '*Clever.* When you **declare** **an** **undeclared** **ambition**, you
+    may move any agents on cards to other cards.
+
+    *Fraudulent.* When you **secure** a card with Rival agents on it, capture/take
+    only 1 and place the rest on other cards.'
+  resources:
+  - Psionic
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Necromancer
+  abilities: '*Arising.* After **any** **battle**, for each piece you destroyed, you
+    may place a matching fresh piece there.
+
+    *Gravebound.* In **setup**, damage both of your buildings. You cannot **build**
+    fresh pieces; place them damaged instead.'
+  resources:
+  - Psionic
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.15
+- name: Composer
+  abilities: '*Elegant.* When you **use a pip to** **repair**, gain 1 resource.
+
+    *Obsessed.* You cannot **build** or **tax** in clusters where any of your pieces
+    are damaged.'
+  resources:
+  - Material
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Maw
+  abilities: '*Voracious.* When you **declare** **an** **ambition**, place a ship
+    in any system.
+
+    *Crushing.* When a Rival **moves** ships into a planet you control, you may destroy
+    1.
+
+    *Starving.* In **scoring**, if Warlord is declared and you don''t win it, scrap
+    2 Loyal ships. If Warlord was not declared this chapter, scrap 1 ship from your supply.'
+  resources:
+  - Weapon
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Saint
+  abilities: '*Sacred.* When a Rival **wins an ambition**, they give you a resource. If
+    they can''t, they give you a Guild card.
+
+    *Blessed.* Before **scoring**, you may **declare** **an** **ambition**.
+
+    *Corrupted.* When you **win an ambition**, discard a resource. If you can''t, discard
+    a Guild card.'
+  resources:
+  - Psionic
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: city
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Seer
+  abilities: '*Prescient.* After you discard a Guild card with its **Prelude** action,
+    you may take an action on the **Lead** **card**.
+
+    *Narrow-minded.* You **cannot** discard a Guild card with its **Prelude** action
+    unless you''re Leading or Surpassing.'
+  resources:
+  - Psionic
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Terrestrial
+  abilities: '*Symbiotic.* You may **build** in adjacent systems with no Rival pieces.
+
+    *Fertile.* Gain 1 Material when you **build** a starport; gain 1 matching resource
+    when you **build** a city.
+
+    *Sprouting.* When you **declare** **an** **ambition**, replace any building you
+    control with a ship.
+
+    *Rooted.* You cannot **battle** in clusters where you have no buildings.'
+  resources:
+  - Material
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: city
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.155
+  boundary_shift: -0.02
+- name: General
+  abilities: '*Blitzing.* In **battle**, you may discard a resource to ignore all
+    {icon:dice_intercept_black}.
+
+    *Insurmountable.* In **battle**, if you have more fresh ships than the defender, collect 1 extra
+    die.
+
+    *Reckless.* In **battle**, you must always roll at least 1 die of each type if
+    you can.'
+  resources:
+  - Weapon
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Sentinel
+  abilities: '*Assertive.* At the start of **any** **battle**, if you control the
+    gate of the cluster the battle is in, deal 1 hit to the attacker or defender.
+
+    *Measured.* In **battle**, you cannot roll more raid and assault dice than you have fresh attacking
+    ships.'
+  resources:
+  - Material
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.3
+  boundary_shift: 0.9
+- name: Prefect
+  abilities: '*Judicious.* In **scoring**, if any players tie for first in an ambition,
+    you gain the initiative.
+
+    *Immunized.* If you **have the initiative** you don''t Provoke Outrage.
+
+    *Fair.* Before **scoring**, you may give any number of resources, Captives and Trophies to other players. You must give at least 1 resource, if you can''t, give 3 Power.'
+  resources:
+  - Weapon
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.45
+  boundary_shift: 0.33
+- name: Ghost
+  abilities: '*Manifested.* Once per turn, when you Catapult **move**, your ships
+    may move through one Rival-controlled gate. If you do, you may influence.
+
+    *Directionless.* You can use at most one **move** action each turn.'
+  resources:
+  - Fuel
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: starport
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1
+  boundary_shift: 0.1
+- name: Chosen
+  abilities: '*Hallowed.* After you **move** a single ship, you may battle with only
+    it. The die it rolls counts its result 3 times.
+
+    *Forsaken.* If you have not attacked this chapter, you cannot **declare** **an**
+    **ambition**.'
+  resources:
+  - Relic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.2
+- name: Sage
+  abilities: '*Arcane.* In **setup**, gain 5 extra lore.
+
+    *Elusive.* Players may influence and secure your lore. When you **secure**
+    your own lore, gain 1 lore.'
+  resources:
+  - Relic
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Gambler
+  abilities: '*Cunning.* You may **pass** the initiative to any player, then guess
+    a suit. If they have it, they must play it, and the card you play this round lets
+    you take 2 extra actions.
+
+    *Compulsive.* You must **pass** the initiative the first time you have it each
+    chapter.'
+  resources:
+  - Weapon
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Engineer
+  abilities: '*Versatile.* Your starports can **move**, **battle**, **intercept** and
+    **control** like a ship. You **place** starports outside building slots.
+
+    *Exorbitant.* You can only **build** starports at cities, damaged, once per city,
+    per turn.
+
+    *Fragile.* After you finish Catapult **moving**, damage the starport you used.'
+  resources:
+  - Material
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: starport
+    B:
+      ships: 3
+      building: city
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.15
+- name: Magician
+  abilities: '*Illusory.* After you **tax** a city, you may place it in any building
+    slot you control or swap it with any Loyal building on the map.
+
+    *Unmasked.* When you **tax** a Rival city, you only gain a resource or Captive,
+    not both.'
+  resources:
+  - Psionic
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: city
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Weaver
+  abilities: '*Interwoven.* When you **secure**, you may influence an adjacent card.
+
+    *Tangled.* You must discard a resource to **influence** a card with only Rival
+    agents on it.'
+  resources:
+  - Relic
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Dreamer
+  abilities: '*Lucid.* When you **declare** **an** **ambition**, gain 1 lore.
+
+    *Blurred.* Your lore have a raid cost of {icon:dice_key_black} {icon:dice_key_black} {icon:dice_key_black} each.'
+  resources:
+  - Psionic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Seeker
+  abilities: '*Inquisitive.* When you **tax**, gain the resource twice if the matching
+    ambition is declared *(Weapon matches Warlord.)*
+
+    *Absent-minded.* After **scoring**, discard 1 resource matching an undeclared ambition.'
+  resources:
+  - Material
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: city
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Augur
+  abilities: '*Baneful.* When you **secure** a card, you may bury it to draw 2 cards from the
+    top of the Court deck instead. Secure 1 and bury the other.
+
+    *Accursed.* After you **secure** a card, if you already had a card or resource matching its type, discard 1 of its type.'
+  resources:
+  - Psionic
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.2
+  boundary_shift: 0.25
+- name: Alchemist
+  abilities: '*Transformative.* When you **declare** **an** **ambition**, discard
+    1 resource to gain 2 resources of different types other than the one you discarded.
+
+    *Conservative.* You cannot **spend** your last resource.'
+  resources:
+  - Psionic
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Architect
+  abilities: '*Visionary.* You can **build** at Loyal cities and **tax** Loyal starports, once with each per turn.
+
+    *Diligent.* You cannot **move** if you would lose control of a building.'
+  resources:
+  - Relic
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Martyr
+  abilities: '*Venerated.* After defending in a **battle**, if the attacker took any
+    Trophies, gain any resource.
+
+    *Selfless.* In **any** **battle** in a system with your ships, any hits that would
+    damage a city damage your fresh ships first instead.'
+  resources:
+  - Psionic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: city
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+  zoom: 1.2
+- name: Scourge
+  abilities: '*Pyromaniacal.* When attacking in **battle**, at the start, you may
+    return any number of Trophies to the defender; deal 1 hit for each.
+
+    *Insatiable.* Before **scoring**, if you have no cities as Trophies, destroy a
+    city you control.'
+  resources:
+  - Weapon
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.2
+  boundary_shift: 0.2
+- name: Beggar
+  abilities: '*Frugal.* If you start your **Prelude** with no resources and no Guild
+    cards, gain any resource.
+
+    *Communal.* If you **start your turn** with any resources, discard a resource or any
+    card.'
+  resources:
+  - None
+  - None
+  setup:
+    A:
+      ships: 3
+      building: starport
+    B:
+      ships: 3
+      building: None
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Feral
+  abilities: '*Savage.* In **battle** in a system with no buildings, collect 2 extra
+    dice.
+
+    *Uncivilized.* When you **secure** (not ransack) a card with a Rival agent
+    on it, destroy a building you control.'
+  resources:
+  - Weapon
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Conduit
+  abilities: '*Conductive.* Once per turn, you may **spend** a resource as a resource
+    no player has Outrage in.
+
+    *Overloaded.* In **setup**, Provoke Weapon Outrage.'
+  resources:
+  - Psionic
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Puppeteer
+  abilities: '*Guiding.* Once per turn, when a Rival tries to **influence** a card
+    with any of your agents on it, you may force them to influence any other card instead.
+
+    *Straining.* To **secure** a card with any Rival agents on it, you must have 2
+    more agents on it than them instead of 1.'
+  resources:
+  - Psionic
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Automaton
+  abilities: '*Overclocked.* If you spend 2 or more resources, you may influence at
+    the end of your **Prelude**.
+
+    *Wasteful.* After you **secure** a card using 3 or more agents, scrap an agent
+    from your supply.'
+  resources:
+  - Material
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Golem
+  abilities: '*Ironclad.* After **any** **battle**, you may discard a resource to
+    keep all Loyal destroyed ships from that battle damaged instead.
+
+    *Cold.* In **clean up**, destroy all your damaged ships.'
+  resources:
+  - Material
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.2
+  boundary_shift: 0.2
+- name: Solian
+  abilities: '*Settled.* **Prelude:** You may move from a planet any number of times.
+
+    *Grounded.* When you **move** into a Rival-controlled gate, 1 of your moving ships takes a hit.'
+  resources:
+  - Relic
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.2
+  boundary_shift: 0.4
+- name: Racketeer
+  abilities: '*Unscrupulous.* When you **tax**, you may return a Rival''s Captive or Trophy to
+    tax one of their cities instead.
+
+    *Crooked.* In **clean up**, return all your Captives, even if Tyrant wasn''t declared.'
+  resources:
+  - Weapon
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Terraformer
+  abilities: '*Genesiacal.* **At** **the** **start** **of** **each** **chapter** and when you **declare** **an** **ambition**,
+    place a resource from the supply on a planet with a city you control to
+    change its type. If you choose a planet with a resource already on it, swap it with one of a different type.
+
+    *Codependent.* When you **tax**, only gain resources from planets with altered types.'
+  resources:
+  - Psionic
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Trickster
+  abilities: '*Misdirecting.* When you **declare** **an** **ambition**, draw up to 2 cards
+    from the bottom of the action card deck, then discard as many.
+
+    *Revealed.* When you Copy or play an extra card, place it face-up.'
+  resources:
+  - Psionic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1
+  boundary_shift: 0.25
+- name: Nomad
+  abilities: '*Unadorned.* While you don''t have **more** **resources** **than** **each** **Rival**, you may tax starports in systems with Loyal pieces like cities. You ignore the tax limit when taxing starports.
+
+    *Appeasing.* When you **tax** a Rival city, its owner gains 1 resource of your choice.'
+  resources:
+  - Material
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Iconoclast
+  abilities: '*Radical.* When you **declare** **an** **ambition**, you may destroy
+    a city you control or a Loyal city to steal a Guild card matching that city''s type.
+
+    *Fervent.* In **setup**, destroy 1 of your cities.'
+  resources:
+  - Psionic
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: city
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+  zoom: 1.2
+  boundary_shift: 0.25
+- name: Fiend
+  abilities: '*Gluttonous.* When you **Provoke** **Outrage**, if you already have
+    it outraged, clear it instead and gain that resource thrice.
+
+    *Wrathful.* In **setup**, **Provoke** **Outrage** in 3 types.
+
+    *Greedy.* In **setup**, gain 3 resources.'
+  resources:
+  - None
+  - None
+  setup:
+    A:
+      ships: 3
+      building: None
+    B:
+      ships: 3
+      building: None
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+  zoom: 1
+  boundary_shift: 0.35
+- name: Hustler
+  abilities: '*Devious.* When you **declare** **an** **ambition**, you may Provoke
+    Outrage in a non-Outraged type to clear Outrage in a different type.
+    Then, gain 1 resource from the cleared type''s supply. If it is empty steal it instead.
+
+    *Irate.* In **setup**, place an agent on your starting city''s type Outrage slot.'
+  resources:
+  - Relic
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1
+  boundary_shift: 0.1
+- name: Curator
+  abilities: '*Meticulous.* When you **secure** a card, you may discard it to gain
+    2 lore.
+
+    *Ascetic.* After **scoring**, give 1 lore to another player.'
+  resources:
+  - Psionic
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1
+- name: Cartographer
+  abilities: '*Exploratory.* After you **move** from a starport, gain 1 Fuel.
+
+    *Distracted.* When you Catapult **move**, after each move you must drop off 1
+    ship.'
+  resources:
+  - Fuel
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: starport
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Custodian
+  abilities: '*Vigilant.* When a Rival **moves** into a gate you control, gain 1 resource
+    matching any planet in that gate''s cluster.
+
+    *Heedless.* After damaged Rival ships **move** into a gate you control, those ships may
+    move again.'
+  resources:
+  - Relic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Salvager
+  abilities: '*Opportunistic.* After **any** **battle** in a system adjacent to one
+    of your ships, if any ship was destroyed in that battle, you may place 1 ship
+    in that system.
+
+    *Grimy.* You cannot **build** more than 1 ship per turn.'
+  resources:
+  - Relic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.25
+  boundary_shift: 0.25
+- name: Chief
+  abilities: '*Imposing.* After any Rival of whom you control a building **taxes**
+    or **builds**, you may tax or build respectively.
+
+    *Bountiful.* Before **scoring**, give 1 resource to each player of whom you control
+    a building.'
+  resources:
+  - Relic
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Duelist
+  abilities: '*Daring.* In **battle**, if you attack with exactly 1 ship, collect
+    3 extra dice.
+
+    *Honor-bound.* In **battle**, if you attack a smaller fleet, you cannot roll assault
+    dice.'
+  resources:
+  - Weapon
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Prophet
+  abilities: '*Revelatory.* When you **declare** **an** **ambition**, you may secure
+    a Guild card in the Court discard pile whose type matches the declared ambition.
+
+    *Fatalistic.* You cannot **seize the initiative**.'
+  resources:
+  - Psionic
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Broker
+  abilities: '*Mercantile.* When you **influence** a card, you may place 1 of your
+    resources on it to influence it again. When anyone **secures** it, they also gain those
+    resources.
+
+    *Indebted.* To **declare** **an** **ambition**, you must return a piece or give
+    a resource to a Rival.'
+  resources:
+  - Material
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Siegebreaker
+  abilities: '*Ruinous.* In **battle**, if the defender has any buildings in the system, collect 2 extra dice.
+
+    *Brutal.* In **battle**, {icon:dice_intercept_black} you roll
+    also count as {icon:dice_self_hit_black}.'
+  resources:
+  - Weapon
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Courier
+  abilities: '*Swift.* **At** **the** **start** **of** **each** **chapter**, place
+    3 agents on planets with no Loyal pieces. When you **move** into one, return the
+    agent and gain 1 resource matching that planet. (The agent cannot be battled or
+    used to build at.)
+
+    *Careless.* You **cannot** gain bonus city Power if you have not returned all
+    agents on the map.'
+  resources:
+  - Fuel
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: starport
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Forager
+  abilities: '*Rooting.* When you **move** into a planet with no pieces, gain 1 matching
+    resource.
+
+    *Territorial.* When you **move** out of a planet, if it''s left empty, place a
+    building there.'
+  resources:
+  - Relic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.25
+- name: Punter
+  abilities: '*Audacious.* When attacking in **battle**, you may damage 1 of
+    your ships to reroll **all** dice.
+
+    *Feverish.* After you reroll dice in **battle**, Provoke Outrage in any
+    resource type.'
+  resources:
+  - Weapon
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Insurgent
+  abilities: '*Seditious.* After any **battle** with you, you may influence a card
+    with any of your opponent''s agents on it.
+
+    *Decentralized.* You cannot **repair** ships.'
+  resources:
+  - Weapon
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: starport
+    B:
+      ships: 3
+      building: None
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Bomber
+  abilities: '*Incendiary.* When attacking in **battle**, before collecting dice,
+    you may destroy 1 attacking ship to destroy 2 defending pieces.
+
+    *Infamous.* When you **destroy** a starport, Provoke Outrage of that
+    starport''s type.'
+  resources:
+  - Weapon
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Musician
+  abilities: '*Inspiring.* To **seize the initiative**, you may give 2 resources to
+    the player with the initiative.
+
+    *Temperamental.* When you **gain** **the** **initiative**, damage 1 Loyal piece.'
+  resources:
+  - Material
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  boundary_shift: 0.09
+  zoom: 1.15
+- name: Ozymandias
+  abilities: '*Hubristic.* When you **control** all gates, secure all cards in the Court,
+    returning any agents on them, then return all Loyal ships in all gates.
+
+    *Forgotten.* You cannot **influence** unless you control a gate.'
+  resources:
+  - Fuel
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Collector
+  abilities: '*Acquisitive.* When you **secure** a card, gain 1 resource matching
+    its type.
+
+    *Jaded.* After **scoring**, discard a Guild card or resource.'
+  resources:
+  - Relic
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.15
+- name: Samurai
+  abilities: '*Perfected.* In **battle**, you may change 1 assault die you rolled to any face, like a reroll.
+
+    *Honorable.* When attacking in **battle**, you cannot take more than 1 Trophy.'
+  resources:
+  - Weapon
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.3
+  boundary_shift: 0.4
+- name: Assassin
+  abilities: '*Lethal.* After you **influence**, if you have the most agents on the
+    card, you destroy 1 Rival agent on it.
+
+    *Bloodthirsty.* If you have a Loyal agent on a card with a Rival agent, you can only **influence** cards with Rival agents on them.'
+  resources:
+  - Weapon
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Witch
+  abilities: '*Malefic.* When you **secure**, you may capture a Rival agent on an
+    adjacent card.
+
+    *Covenbound.* You cannot **secure** unless there is an agent on another card.'
+  resources:
+  - Psionic
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.15
+- name: Ambassador
+  abilities: '*Diplomatic.* When you **declare** **an** **ambition**, you may secure
+    any number of times.
+
+    *Unauthorized.* You cannot **secure** unless an ambition is declared.'
+  resources:
+  - Psionic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Shaman
+  abilities: '*Holistic.* When you **declare** **an** **ambition**, you may repair
+    all of your pieces.
+
+    *Ritualistic.* When you **repair** a piece, you may damage a Rival piece in its system.
+
+    *Disruptive.* You cannot **repair** using pips or resources.'
+  resources:
+  - Material
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Mediator
+  abilities: '*Conciliatory.* When you **secure** a Guild card, you may discard it
+    to clear its type''s Outrage and gain 1 matching resource.
+
+    *Dilatory.* If you **Provoke** **Outrage** in a type you already have outraged,
+    Provoke Outrage in a type you don''t have outraged.'
+  resources:
+  - Psionic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.1
+- name: Despot
+  abilities: '*Autocratic.* When you **declare** **an** **ambition**, you may tax
+    1 city and build using 1 starport you control of each player.
+
+    *Merciless.* In **clean up**, damage 1 Loyal ship in each system with a building.'
+  resources:
+  - Fuel
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.15
+- name: Viceroy
+  abilities: '*Delegated.* When any player **builds** a building, you may place 1 of your
+    ships in that building''s cluster.
+
+    *Administrative.* In **setup**, scrap 4 starports and 2 ships from your supply.'
+  resources:
+  - Relic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: starport
+    B:
+      ships: 3
+      building: None
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Artificer
+  abilities: '*Proficient.* After you Copy or Pivot to **build** or **repair**, you
+    may build or repair.
+
+    *Diligent.* You cannot **Pivot** if the Lead suit is Construction or Administration.'
+  resources:
+  - Material
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Warmonger
+  abilities: '*Bloodsoaked.* When you Copy or Pivot to **battle**, you may declare
+    Warlord, and each {icon:dice_hit_black} you roll counts twice.
+
+    *Hellbent.* In **scoring**, if you win no ambitions, lose 3 Power.'
+  resources:
+  - Weapon
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.15
+- name: Extortioner
+  abilities: '*Predatory.* **Prelude:** You may return 3 Trophies/Captives
+    of a Rival to steal 1 of their resources.
+
+    *Amateurish.* In **scoring**, when you **get second place**, you may return a Trophy or Captive. If you don''t, gain no Power.'
+  resources:
+  - Psionic
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Emperor
+  abilities: '*Imperial.* In **scoring**, your city bonus is 2 Power per city you
+    control instead.
+
+    *Exacting.* In **scoring**, you don''t gain Power for second place unless you
+    tied for first.'
+  resources:
+  - Weapon
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Titan
+  abilities: '*Immovable.* In any **battle** with you, each of your ships cannot be damaged twice.
+
+    *Stationary.* Your damaged ships cannot Catapult **move**.'
+  resources:
+  - Relic
+  - Weapon
+  setup:
+    A:
+      ships: 4
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Egoist
+  abilities: '*Willful.* When you **Pivot**, instead take any action not on your played card.
+
+    *Inflexible.* You can only **Copy** with cards of the Lead suit, face up.'
+  resources:
+  - Psionic
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Enforcer
+  abilities: '*Mandating.* When you **declare** **an** **ambition**, take one action
+    on your played card twice. (Show it if you copied.)
+
+    *Unpopular.* You cannot **influence** if no ambitions have been declared.'
+  resources:
+  - Relic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Treasurer
+  abilities: '*Bankrolled.* **At the start of each chapter**, tax all cities you control.
+
+    *Deskbound.* You can **tax** at most once per turn.'
+  resources:
+  - Material
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: city
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Wayfinder
+  abilities: '*Bridging.* You treat systems with a building of the same color as adjacent.
+
+    *Anchored.* When you Catapult **move**, stop after 2 moves.'
+  resources:
+  - Psionic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 4
+      building: city
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Champion
+  abilities: '*Victorious.* In **clean up**, for each ambition you won this chapter, place 3 ships in a matching
+    system or gate, or gain 2 matching resources.
+
+    *Humbled.* When you **get second place**, discard a resource matching that
+    ambition.'
+  resources:
+  - Relic
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Tribune
+  abilities: '*Endorsed.* After you **destroy** a starport, Ransack the Court like you
+    destroyed a city.
+
+    *Sanctioned.* When you **destroy** a city, return it and don''t Ransack the Court.'
+  resources:
+  - Relic
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+  zoom: 1.15
+- name: Dissector
+  abilities: '*Incisive.* When you **take an action**, you may return 1 Captive or scrap
+    1 agent from your supply to take any different action instead.
+
+    *Sadistic.* Before **scoring**, scrap an agent from your supply or return a Captive.'
+  resources:
+  - Relic
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Schemer
+  abilities: '*Manipulative.* After you **influence**, you may move any agent on a card to a card with no agents.
+
+    *Compromised.* In **clean up**, return a Loyal agent on a card.'
+  resources:
+  - Psionic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.15
+- name: Hydra
+  abilities: '*Regenerative.* After **any** **battle**, if 2+ of your pieces
+    were destroyed, you may place 1 Loyal ship from any Trophy box in a system with a Loyal piece.
+
+    *Unwieldy.* You cannot Catapult **move** from a gate with a Rival ship in it.'
+  resources:
+  - Weapon
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Enchanter
+  abilities: '*Alluring.* When you Copy or Pivot to **influence** a card with a Rival
+    agent on it, you may replace one of their ships with a Loyal one.
+
+    *Resisted.* If you have exactly 1 ship in a system, it doesn''t count for control.'
+  resources:
+  - Psionic
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.15
+- name: Creator
+  abilities: '*Cosmic.* When you **build**, you may instead take a ship from a Rival''s
+    supply and place it fresh at one of their starports. If you do, gain any resource.
+
+    *Detached.* In **clean up**, return all your Trophies, even if Warlord was
+    not declared.'
+  resources:
+  - Material
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.15
+  boundary_shift: 0.0
+- name: Messiah
+  abilities: '*Salvific.* When you **build** a city in a system with damaged ships,
+    you may repair all ships in that system, then replace all repaired Rival ships
+    with Loyal ships.
+
+    *Reckoned.* In **scoring**, if you win no ambitions, return all your buildings
+    on the map.'
+  resources:
+  - Weapon
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Abomination
+  abilities: '*Frenzied.* When you **Copy** or **Pivot**, you may discard an action card to
+    triple your pips this turn. When you **Surpass**, you may discard an action card to
+    double your pips this turn.
+
+    *Possessed.* When you **declare** **an** **ambition** or use *Frenzied*, reveal your entire hand.'
+  resources:
+  - Psionic
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.15
+- name: Crusader
+  abilities: '*Zealous.* Once per turn, in **battle**, after you destroy a city, Ransack the Court an extra time.
+
+    *Fanatical.* When you **Ransack the Court**, you can secure a card with no agents on it.
+
+    *Dogmatic.* You cannot **influence** a card with no agents on it if a Rival has
+    more agents than you on any card with your agents.'
+  resources:
+  - Weapon
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Phantom
+  abilities: '*Spectral.* In **battle**, you may choose to ignore any
+    {icon:dice_hit_black} you roll; at the end of the **battle**, you may take move
+    actions with your attacking ships, once per ignored {icon:dice_hit_black}.
+
+    *Tethered.* You cannot **move** if you don''t control the system you''re in.'
+  resources:
+  - Fuel
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.15
+  boundary_shift: 0.0
+- name: Harbormaster
+  abilities: '*Portwide.* When you **tax** a city, you may also tax all other cities
+    in its system. When you **build** at a starport, you may also build at all other
+    starports in its system. *(Even Rival ones!)*
+
+    *Methodical.* You cannot have 2 Loyal buildings of different types on a planet.'
+  resources:
+  - Material
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: starport
+    B:
+      ships: 3
+      building: None
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Investor
+  abilities: '*Capitalizing.* In **setup**, gain any 2 resources, place them on this
+    card. This card holds any number of resources. Their raid cost is {icon:dice_key_black} {icon:dice_key_black}
+    each.
+
+    *Yielding.* When you **declare an ambition**, gain 1 resource of each type on
+    this card.
+
+    *Apprehensive.* When you **tax**, don''t gain a resource if you already have a
+    resource of that type.'
+  resources:
+  - None
+  - None
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Envoy
+  abilities: '*Parleyed.* When defending in **battle**, at the start, you may discard
+    a resource. If you do, the attacker can only collect skirmish dice.
+
+    *Unwary.* When defending in **battle**, if the attacker rolled any {icon:dice_key_black},
+    they gain 1 extra {icon:dice_key_black}.'
+  resources:
+  - Fuel
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Syndic
+  abilities: '*Networked.* You can **tax** any city in a cluster where you control
+    2 systems.
+
+    *Compartmental.* You cannot **build** a city in a system adjacent to a Loyal city.'
+  resources:
+  - Psionic
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: None
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Solicitor
+  abilities: '*Entreating.* When you **declare** **an** **ambition**, you may ask
+    a Rival for a suit. They must give you the highest value card of that suit
+    they have. If they did, give them an action card back.
+
+    *Compelled.* When you **Lead**, you must declare an ambition.'
+  resources:
+  - Relic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Seraph
+  abilities: '*Celestial.* After you collect dice in **battle**, say a positive number.
+    You must reroll that many.
+
+    *Ardent.* You can only reroll dice with {icon:dice_hit_black} or {icon:dice_building_hit_black}
+    on them.'
+  resources:
+  - Fuel
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+  zoom: 1.15
+- name: Paragon
+  abilities: '*Exemplary.* When you **Pivot** and play a card of equal rank to the Lead
+    card, you may use all pips on your played card.
+
+    *Immutable.* You cannot **Pivot** with cards of a lower rank than the Lead card.'
+  resources:
+  - Psionic
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.15
+- name: Tactician
+  abilities: '*Calculative.* Before attacking in **battle**, roll a die. You may reroll any dice that match that die''s face.
+
+    *Cautious.* You cannot have ships in more than 4 different systems.'
+  resources:
+  - Weapon
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Purist
+  abilities: '*Peaceful.* When attacking in **battle**, you may reroll any dice if the same face appears on another die you rolled.
+
+    *Minimalistic.* In **clean up**, return 1 Captive and 2 Trophies.'
+  resources:
+  - Psionic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Marauder
+  abilities: '*Predatory.* When attacking in **battle**, if you roll only raid dice,
+    you may swap the amounts of {icon:dice_self_hit_black}, {icon:dice_building_hit_black},
+    {icon:dice_key_black} and {icon:dice_intercept_black}. *(You* *may* *swap* *all*
+    *4.)*
+
+    *Forbearing.* In **battle**, you cannot collect raid dice if there are any fresh defending ships.'
+  resources:
+  - Weapon
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+- name: Berserker
+  abilities: '*Ravenous.* In **battle**, each {icon:dice_intercept_black} you
+    roll also counts as {icon:dice_hit_black} {icon:dice_hit_black}.
+
+    *Raging.* In **battle**, you cannot collect fewer assault dice than skirmish dice.'
+  resources:
+  - Weapon
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.14
+  boundary_shift: -0.01
+
+- name: Underwriter
+  abilities: '*Assured.* After attacking in **battle**, if half or more of the rolled dice have {icon:dice_self_hit_black}, or nothing on them, gain any resource.
+
+    *Levied.* After attacking in **battle**, if you did not trigger *Assured*, discard a resource.'
+  resources:
+  - Material
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Doppelganger
+  abilities: '*Mimetic.* **Prelude:** Once per chapter, you may scrap an agent or ship from your supply to gain all of a Rival leader''s abilities until the end of the chapter.
+
+    *Unsettling.* In **setup**, scrap a city, starport, ship, and agent, each from your supply.'
+  resources:
+  - Psionic
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Bulwark
+  abilities: '*Immortal.* **Prelude:** You may discard a resource onto here,
+    then roll 6-"resources on here" (≥1) skirmish dice. If all {icon:dice_hit_black},
+    gain all resources here. Until your next turn: your ships instantly repair if damaged,
+    your pips let you battle, and you can spend resources as any type, ignoring *Confident*.
+
+    *Confident.* You cannot **spend** resources for normal Prelude actions.'
+  resources:
+  - Psionic
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Demon
+  abilities: '*Cataclysmic.* After any **battle** with you, damage 1 Rival piece in the battle system per city you control.
+
+    *Malevolent.* In **clean up**, destroy a city you control.'
+  resources:
+  - Weapon
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: city
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+- name: Soulbinder
+  abilities: '*Syncopated.* Before or after attacking in **battle**, you may swap the positions of 2 ships on planets or 2 ships on gates.
+
+    *Fragmented.* When attacking in **battle**, you collect 1 fewer die if you don''t control the battle system.'
+  resources:
+  - Psionic
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  boundary_shift: -0.05
+- name: Vessel
+  abilities: '*Mimetic.* **Prelude:** You may return a Captive or Trophy to a Rival to use all of the non-discard abilities on all cards they have this turn.
+
+    *Identityless.* Only players with less Power than you can use **new** **actions** on your cards. You can only use them yourself if you used *Mimetic* on your Rival with the least Power this turn.'
+  resources:
+  - Psionic
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Conqueror
+  abilities: '*Relentless.* You can use any **pip** to battle.
+
+    *Armed.* You can **spend** Weapons to battle.
+
+    *Instinctive.* You must **spend a pip** to battle if you can.'
+  resources:
+  - Weapon
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.15
+- name: Comedian
+  abilities: '*Hilarious.* In any **battle** with you, if assigning all damage would destroy all your ships in the system, repair them instead.
+
+    *Laughing.* In any **battle** with you, you cannot **destroy** the last Rival ship in each system.'
+  resources:
+  - Psionic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Animator
+  abilities: '*Framing.* After **taking an action**, you may move 1 Loyal ship.
+
+    *Static.* You cannot **battle** in systems you haven''t moved into this turn.'
+  resources:
+  - Material
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Merchant
+  abilities: '*Mercantile.* When you **declare** **an** **ambition**, you may swap any card you have (except this one) with one in the court. (Agents on the taken card are put on the swapped card.)
+
+    *Dependent.* You cannot **declare** **an** **ambition**, unless you have at least 1 of the thing it is counting.'
+  resources:
+  - Material
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Wretch
+  abilities: '*Vengeful.* In **battle**, collect 1 extra die per damaged attacking ship.
+
+    *Shackled.* Your damaged ships cannot **move** into Rival-controlled gates.'
+  resources:
+  - Weapon
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.15
+  image_shift_x: 65
+
+- name: Rascal
+  abilities: '*Mischievous.* After you **move** into a system, you may battle there.
+
+    *Fickle.* You cannot attack in **battle** in the same system twice in one turn.'
+  resources:
+  - Fuel
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Devourer
+  abilities: '*Assimilating.* In **battle**, you may choose to collect dice up to the number of Trophies you have instead.
+
+    *Grisly.* When you **take** **a** **Captive**, you may take it as a Trophy instead.
+
+    *Hungry.* You cannot **move** from systems with damaged Rival pieces.'
+  resources:
+  - Fuel
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Swarm
+  abilities: '*Brooding.* **Prelude:** Once per turn, you may return a Loyal piece to place up to 2 damaged pieces in its system.
+
+    *Hivebound.* Only your buildings and damaged ships count for **control**.'
+  resources:
+  - Material
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+
+- name: Predator
+  abilities: '*Rapacious.* In **battle**, collect 1 extra die per damaged defending ship.
+
+    *Sanguivorous.* In **battle**, collect 1 fewer die if all defending ships are fresh.'
+  resources:
+  - Weapon
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Reaver
+  abilities: '*Ravaging.* In **battle**, collect 2 extra dice for each previous battle this turn.
+
+    *Unrestrained.* After you use a pip or Psionic to **battle**, you must do so again if able.'
+  resources:
+  - Weapon
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Prospector
+  abilities: '*Opportunistic.* When you **declare** **an** **ambition**, roll 1 skirmish die + 1 more per ambition you are winning, declared or not. Gain each reward at your total {icon:dice_hit_black} or fewer:
+
+    - 1 {icon:dice_hit_black}: Gain 1 resource.
+
+    - 2 {icon:dice_hit_black}: Take one action 2 times.
+
+    - 3 {icon:dice_hit_black}: Place 3 ships in any gate.
+
+    - 4 {icon:dice_hit_black}: Steal 4 resources.
+
+    - 5 {icon:dice_hit_black}: Roll 5 skirmish dice for this ability again.
+
+    *Cursed.* If you roll 0 icons, discard 6 resources.'
+  resources:
+  - Weapon
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 17
+
+- name: Smokecaller
+  abilities: '*Shrouding.* When defending in **battle**, the attacker collects 1 fewer die.
+
+    *Billowing.* When defending in **battle**, if the attacker rolls any assault or raid dice, add 1 {icon:dice_intercept_black} to the roll.
+
+    *Sooted.* Each of your resources has a raid cost of {icon:dice_key_black}. Each of your Guild cards'' raid cost is no more than {icon:dice_key_black} {icon:dice_key_black}.'
+  resources:
+  - Fuel
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Dragon
+  abilities: '*Descending.* After you **move** into a planet, damage up to 2 Rival ships there.
+
+    *Cumbersome.* Each turn, you cannot **move** into or from the same planet more than once.'
+  resources:
+  - Psionic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.15
+- name: Sniper
+  abilities: '*Precise.* After attacking in **battle**, your unused {icon:dice_hit_black} may target any ships in other systems.
+
+    *Exposed.* After you **battle**, you cannot move for the rest of the turn.'
+  resources:
+  - Weapon
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Poltergeist
+  abilities: '*Rupturing.* In any **battle** with you, when you destroy a Rival piece, roll a skirmish die. If you roll {icon:dice_hit_black}, hit any ship in the battle system.
+
+    *Indiscriminate.* In any **battle** with you, after you destroy the last Rival piece in the battle system, roll a skirmish die. If you roll {icon:dice_hit_black}, hit a Loyal ship in the battle system.'
+  resources:
+  - Weapon
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Homesteader
+  abilities: '*Resettling.* Once per turn, before you **move** from a system, you may take any number of moves from adjacent systems into it first, then take any number of non-Catapult moves from it.
+
+    *Isolated.* In **clean up**, return 1 Loyal ship from each system where you have exactly 1 ship.'
+  resources:
+  - Material
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 3
+      building: None
+  body_font_size: 18
+  zoom: 1.15
+
+- name: Instigator
+  abilities: '*Seditious.* After any building is **destroyed**, gain 1 resource.
+
+    *Disavowed.* When one of your buildings is **destroyed**, discard all your matching resources.'
+  resources:
+  - Relic
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Replicator
+  abilities: '*Conjuring.* Up to 3 times per turn, you may spend a pip or discard a resource to place a conjurable ship in any system.
+
+    *Hollow.* In **setup**, scrap 3 Loyal ships. Obtain a supply of 3 conjurable ships. They act exactly like your Loyal ships, except they return to your supply at the start of your turn.'
+  resources:
+  - Material
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Armsdealer
+  abilities: '*Well-Stocked.* When attacking in **battle**, you may discard a resource to reroll any dice.
+
+    *Profiteering.* When a Rival player is attacking in **battle**, before they roll, they may give you a resource so they can reroll any dice.'
+  resources:
+  - Weapon
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Veteran
+  abilities: '*Seasoned.* When attacking in **battle**, you may reroll 1 die. If after rerolling it has {icon:dice_self_hit_black} or nothing on it, activate this ability again.
+
+    *Prudent.* You cannot initiate a **battle** against a fleet that has at least twice as many ships as your attacking fleet.'
+  resources:
+  - Weapon
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Evader
+  abilities: '*Elusive.* When defending in **battle**, after the attacker collects dice, you may move half your defending ships to an adjacent system, removing them from the battle.
+
+    *Skittish.* When attacking in **battle**, you cannot collect assault dice unless you have more ships in the battle system than the defender.'
+  resources:
+  - Fuel
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Mathematician
+  abilities: '*Analytical.* In **battle**, if the number of icons you roll is a prime number (2, 3, 5, 7...), deal 1 extra hit and repair an attacking ship.
+
+    *Overcalculating.* In **battle**, if the number of icons you roll is a composite number (4, 6, 8, 9...), damage an attacking ship.'
+  resources:
+  - Weapon
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.18
+
+- name: Underdog
+  abilities: '*Subversive.* You can **Surpass** with cards of a lower rank than the Lead card. At the end of the round, if your card is lower than the Lead card by more than the highest Surpassing card is higher, gain the initiative.
+
+    *Modest.* You cannot **Surpass** with cards higher than all played cards of its suit this round.'
+  resources:
+  - Material
+  - Psionic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Mobster
+  abilities: '*Intimidating.* After you **tax**, you may influence, move, battle, or place 1 ship at the taxed city.
+  
+    *Stubborn.* You can **tax** at most 1 city of each color per turn.'
+  resources:
+  - Relic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Glutton
+  abilities: '*Famished.* After you **tax**, you may destroy the taxed city. If you have not Provoked Outrage in the city''s type before, gain resources up to your empty slots.
+    
+    *Overfed.* In **clean up**, discard resources until you have 2 or fewer on your player board.'
+  resources:
+  - Psionic
+  - Material
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Contrarian
+  abilities: '*Unorthodox.* When you **declare** **an** **ambition**, your played card lets you take any actions not on it instead.
+  
+    *Single-Minded.* When you **Pivot**, you can only take the leftmost action on your played action card.'
+  resources:
+  - Relic
+  - Weapon
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+- name: Cat
+  abilities: '*Nine-Lived.* Once per turn, when one of your ships is **destroyed**, you may scrap an agent from your supply to repair it instead.
+
+    *Fated.* In **setup**, scrap 1 agent from your supply. When your **agent supply** is empty, destroy a Loyal ship and scrap this card.'
+  resources:
+  - Psionic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+
+- name: Cavalier
+  abilities: '*Mounted.* When you **move** from a planet, move to a system 2 or 3 systems away from you. *(Even when you Catapult move.)*
+  
+    *Unruly.* You cannot **move** from planets to systems adjacent to you.'
+  resources:
+  - Relic
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+  zoom: 1.15 
+
+- name: Surveyor
+  abilities: '*Expansive.* When you **build** a building, you may place it on an intersection with an adjacent planet to gain a matching resource. Each intersection can have at most 1 building. Buildings on intersections are in both systems.
+    *Sprawling.* You cannot **build** buildings in a planet''s second slot if there is already a building in the first slot.'
+  resources:
+  - Material
+  - Relic
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+
+- name: Jester
+  abilities: '*Entertaining.* Before attacking in **battle**, roll a 6-sided die:
+
+    1: Collect 1 extra die.
+
+    2: Ignore 1 {icon:dice_self_hit_black}.
+
+    3: Gain 1 extra {icon:dice_key_black}.
+      
+    4: Deal 1 hit to any ship in the battle system.
+
+    5: Damage all defending buildings.
+
+    6: Repair all ships in the battle system.'
+  resources:
+  - Weapon
+  - Fuel
+  setup:
+    A:
+      ships: 3
+      building: city
+    B:
+      ships: 3
+      building: starport
+    C:
+      ships: 2
+      building: None
+  body_font_size: 18
+
+
+# - name: zz1 Patron
+#   abilities: '*Committed.* You may **spend** resources as resources matching a declared ambition, ignoring Outrage.'
+#   resources:
+#   - Relic
+#   - Material
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
+
+# - name: zx
+#   abilities: '*Foreseeing.* Before **moving** into a system, you may discard all resources to choose a Rival you can battle there, then collect and roll dice as if you were going to battle them there with your next action. After you see the result, you may choose not to move there.
+
+#     *Predestined.* If you battle the chosen Rival there with your next action before any dice are collected outside of this foreseen battle, collect only those rolled dice. Resolve the rest of the battle as if you rolled the dice during the battle.
+
+#     *Psionic.* In **setup**, Provoke Psionic Outrage.'
+#   resources:
+#   - None
+#   - None
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
+
+# - name: zz5 Underdog
+#   abilities: '*Scrappy.* At the end of **battle**, if you have the fewest Trophies, destroy 1 Rival ship in the battle system.
+
+#     *Opportunistic.* When you capture any number of agents, if you have the fewest Captives, capture 1 agent from a Rival supply.'
+#   resources:
+#   - Weapon
+#   - Psionic
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
+
+# when you declare an ambition, you may discard all your resources and return a Loyal city from the map, to gain 2 resources matching that city.
+
+#when you discard cards due to outrage, discard other cards (resources?)
+
+# when you tax a rival city take a ship instead
+
+# when you tax a rival city take an agent from the court
+
+# secure on ties (auto?)
+
+# attaching guilds or lore to court
+
+# build 3 damaged ships instead of 1 fresh
+
+# give 1 fewer key
+
+# move into middle gate
+
+# raid always but only resources
+
+# win ambitions on ties
+
+# damaged ships control
+
+# all your ships start damaged and become fresh after being hit
+
+# do not cover outrage slot
+
+# Judge When defending in battle, at the start, if the attacker has any of your trophies,
+# they must either return them or provoke outrage of the battle system's Type.
+
+# Speedster: You may use any pip to move
+# In battle, collect 1 extra die for each move action this turn Downside: idk
+
+# Wheelbearer
+# Adaptive
+# . After defending in battle, adapt to a die type rolled by the attacker until your next defense:
+# skirmish  the attacker collects 1 fewer battle die.
+# assault  you automatically intercept.
+# raid  the attacker gets 1 fewer key.
+# in the next battle against you a die type rolled in the previous can not be rolled at all now.?
+# Sequential
+# . You cannot gain the same adaptation twice in a row.
+
+# build a city on a guild card
+
+# - name: zv
+#   abilities: '*Granting.* Once per chapter, after a Rival takes an action, you may make them repeat it.
+
+#     *Escalating.* Afterward, place 1 Demand token on them, plus 1 more for each Demand already on all Rivals.
+
+#     *Payment.* At the start of their turns, Rivals remove 1 Demand by giving you 1 resource, destroying 1 Loyal ship, or discarding 1 card.
+
+#     *Calamity.* Rivals with 4+ Demands cannot **declare** **an** **ambition**.
+
+#     *Catastrophic.* Rivals that cannot remove a Demand destroy all Loyal ships in one system.'
+#   resources:
+#   - None
+#   - None
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18
+
+# - name: zz2 Highroller
+#   abilities: '*Swingy.* Before collecting dice in **battle**, you may roll the 6-sided die. You must collect dice equal to its result.'
+#   resources:
+#   - Weapon
+#   - Relic
+#   setup:
+#     A:
+#       ships: 3
+#       building: city
+#     B:
+#       ships: 3
+#       building: starport
+#     C:
+#       ships: 2
+#       building: None
+#   body_font_size: 18

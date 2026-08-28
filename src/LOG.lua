@@ -1,5 +1,5 @@
 local LOG = {
-    logLevel = 5
+    logLevel = 4 --remember to set to 4 before uploading
 }
 
 function LOG.TRACE(message)
@@ -16,7 +16,7 @@ end
 
 function LOG.INFO(message)
     if LOG.logLevel <= 3 then
-        print("[INFO]" .. message)
+        print("[INFO] " .. message)
     end
 end
 

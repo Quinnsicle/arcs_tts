@@ -1,0 +1,206 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>ARCS TTS Overlay</title>
+  <style>
+    html,body{margin:0;padding:0;background:transparent}
+    body{font-family:Segoe UI,Arial,Helvetica,sans-serif;color:white}
+    .container{position:fixed;top:8px;left:8px;padding:8px;background:transparent;z-index:9999}
+    .player{display:flex;align-items:flex-start;padding:8px 0 0 0;margin:4px 0;border-radius:6px;overflow:visible;width:-moz-fit-content;width:fit-content}
+    .color{width:10px;flex:0 0 10px;border-radius:0;margin-right:8px;box-shadow:none}
+    .name{display:none}
+    .hand{font-size:14px;opacity:0.95;display:flex;align-items:flex-start;justify-content:flex-start;gap:0;margin-left:8px;overflow:hidden}
+    .hand img{width:80px;height:120px;object-fit:cover;border-radius:4px;margin:0;box-shadow:0 2px 6px rgba(0,0,0,0.6);transform:scale(3.2);transform-origin:top left;overflow:hidden}
+    .blank-card{width:80px;height:120px;border-radius:4px;margin:0;background:rgba(255,255,255,0.10);border:1px solid rgba(255,255,255,0.22);box-shadow:0 2px 6px rgba(0,0,0,0.35);transform:scale(3.2);transform-origin:top left}
+      /* Slight overlap: move every card except the first a bit left so later cards sit on top */
+      .hand > * { position: relative; z-index: 1 }
+      .hand > *:not(:first-child) { margin-left: -17px; z-index: 2 }
+    .hand span{margin:0 6px}
+    /* When overlay is on the left, reverse player layout so color stripe appears on right */
+    .overlay-left .player { flex-direction: row-reverse; padding: 8px 0 0 0; }
+    .overlay-left .color { margin-right: 0; margin-left: 8px; }
+    .overlay-left .hand { margin-left: 0; }
+  </style>
+</head>
+<body>
+  <div class="container" id="root">
+    <div id="players"></div>
+  </div>
+  <script>
+    function colorToCss(col){
+      if(!col) return '#888';
+      const palette = {
+        white: [1,1,1],
+        brown: [0.443,0.231,0.09],
+        red: [0.856,0.1,0.094],
+        orange: [0.956,0.392,0.113],
+        yellow: [0.905,0.898,0.172],
+        green: [0.192,0.701,0.168],
+        teal: [0.129,0.694,0.607],
+        blue: [0.118,0.53,1],
+        purple: [0.627,0.125,0.941],
+        pink: [0.96,0.439,0.807],
+        grey: [0.5,0.5,0.5],
+        gray: [0.5,0.5,0.5],
+        black: [0.25,0.25,0.25]
+      };
+      try{
+        const key = String(col).trim().toLowerCase();
+        if(palette[key]){
+          const rgb = palette[key].map(v=>Math.round(v*255));
+          return 'rgb(' + rgb.join(',') + ')';
+        }
+        // If value already looks like a CSS color (hex, rgb, etc.), return as-is
+        return col;
+      }catch(e){ return '#888'; }
+    }
+
+    function colorToRgba(col, alpha){
+      if(!col) return 'rgba(136,136,136,' + (alpha||0.12) + ')';
+      const key = String(col).trim().toLowerCase();
+      const palette = {
+        white: [1,1,1], brown: [0.443,0.231,0.09], red: [0.856,0.1,0.094],
+        orange: [0.956,0.392,0.113], yellow: [0.905,0.898,0.172], green: [0.192,0.701,0.168],
+        teal: [0.129,0.694,0.607], blue: [0.118,0.53,1], purple: [0.627,0.125,0.941],
+        pink: [0.96,0.439,0.807], grey: [0.5,0.5,0.5], gray: [0.5,0.5,0.5], black: [0.25,0.25,0.25]
+      };
+      if(palette[key]){
+        const rgb = palette[key].map(v=>Math.round(v*255));
+        return 'rgba(' + rgb.join(',') + ',' + (alpha||0.12) + ')';
+      }
+      // try to parse simple rgb(...) or hex; if not, fallback to semi-transparent grey
+      if(col.startsWith('rgb')){
+        return col.replace('rgb','rgba').replace(')',',' + (alpha||0.12) + ')');
+      }
+      return 'rgba(136,136,136,' + (alpha||0.12) + ')';
+    }
+
+    function isLight(col, alpha){
+      try{
+        const key = String(col).trim().toLowerCase();
+        const palette = {
+          white: [1,1,1], brown: [0.443,0.231,0.09], red: [0.856,0.1,0.094],
+          orange: [0.956,0.392,0.113], yellow: [0.905,0.898,0.172], green: [0.192,0.701,0.168],
+          teal: [0.129,0.694,0.607], blue: [0.118,0.53,1], purple: [0.627,0.125,0.941],
+          pink: [0.96,0.439,0.807], grey: [0.5,0.5,0.5], gray: [0.5,0.5,0.5], black: [0.25,0.25,0.25]
+        };
+        let rgb;
+        if(palette[key]) rgb = palette[key].map(v=>Math.round(v*255));
+        else if(String(col).startsWith('rgb')){
+          const nums = String(col).replace(/[^0-9,]/g,'').split(',').map(Number);
+          rgb = nums.slice(0,3);
+        } else if(/^#/.test(String(col))){
+          let hex = String(col).replace('#','');
+          if(hex.length===3) hex = hex.split('').map(ch=>ch+ch).join('');
+          const r = parseInt(hex.slice(0,2),16), g = parseInt(hex.slice(2,4),16), b = parseInt(hex.slice(4,6),16);
+          rgb = [r,g,b];
+        } else {
+          return false;
+        }
+        const a = (typeof alpha === 'number') ? alpha : 0.12;
+        // composite the semi-transparent color over white to approximate visible background
+        const rc = a * rgb[0] + (1 - a) * 255;
+        const gc = a * rgb[1] + (1 - a) * 255;
+        const bc = a * rgb[2] + (1 - a) * 255;
+        // relative luminance approximation
+        const rLin = rc / 255, gLin = gc / 255, bLin = bc / 255;
+        const lum = 0.2126 * rLin + 0.7152 * gLin + 0.0722 * bLin;
+        // threshold tuned for semi-transparent backgrounds
+        return lum > 0.65;
+      }catch(e){ return false; }
+    }
+
+    function sortByTurnOrder(players, turnOrder){
+      if(!Array.isArray(turnOrder) || turnOrder.length === 0){
+        return players;
+      }
+      return players.slice().sort((a, b) => {
+        const aIdx = turnOrder.indexOf(a.color);
+        const bIdx = turnOrder.indexOf(b.color);
+        const aPos = aIdx >= 0 ? aIdx : 999;
+        const bPos = bIdx >= 0 ? bIdx : 999;
+        return aPos - bPos;
+      });
+    }
+
+    function render(payload){
+      const root = document.getElementById('root');
+      // Position overlay container left or right based on payload.align (default right)
+      try{
+        if(payload && payload.align === 'left'){
+          root.style.left = '8px';
+          root.style.right = 'auto';
+          root.classList.add('overlay-left');
+        } else {
+          root.style.right = '8px';
+          root.style.left = 'auto';
+          root.classList.remove('overlay-left');
+        }
+      }catch(e){}
+      const container = document.getElementById('players');
+      container.innerHTML = '';
+      if(!payload || !payload.players) return;
+      const sortedPlayers = sortByTurnOrder(payload.players, payload.turn_order);
+      sortedPlayers.forEach(p=>{
+        const el = document.createElement('div'); el.className='player';
+        const c = document.createElement('div'); c.className='color'; c.style.background = colorToCss(p.color || '#666');
+        // set player row background to solid color
+        el.style.background = colorToCss(p.color || '#666');
+        const h = document.createElement('div'); h.className='hand';
+        if(Array.isArray(p.hand) && p.hand.length>0){
+          h.innerHTML = '';
+          if(payload.hide_cards){
+            const count = p.hand_size || p.hand.length;
+            for(let i = 0; i < count; i++){
+              const blank = document.createElement('div');
+              blank.className = 'blank-card';
+              h.appendChild(blank);
+            }
+          } else {
+            p.hand.forEach((cardName, idx)=>{
+              // If card name/description is missing, render a blank placeholder (no text)
+              if(!cardName || String(cardName).trim().length === 0){
+                const blank = document.createElement('div');
+                blank.className = 'blank-card';
+                h.appendChild(blank);
+                return;
+              }
+              const img = document.createElement('img');
+              img.className = '';
+              img.alt = cardName;
+              // try multiple common extensions before falling back to blank placeholder
+              const exts = ['.png', '.jpg', '.jpeg', '.webp'];
+              let tried = 0;
+              function tryExt(){
+                if(tried>=exts.length){ const blank = document.createElement('div'); blank.className = 'blank-card'; img.replaceWith(blank); return; }
+                img.src = '/card_images/' + encodeURIComponent(cardName) + exts[tried];
+                tried++;
+              }
+              img.onerror = tryExt;
+              tryExt();
+              h.appendChild(img);
+            });
+          }
+        } else {
+          // no cards: render nothing (no "0 cards" text)
+          h.innerHTML = '';
+        }
+        el.appendChild(c); el.appendChild(h);
+        container.appendChild(el);
+      });
+    }
+
+    // SSE connection
+    const evt = new EventSource('/events');
+    evt.onmessage = function(e){
+      try{ const data = JSON.parse(e.data); if(data && data.type==='overlay_update'){ render(data.payload); } }
+      catch(err){ console.warn('parse',err);
+    }};
+
+    // On load, fetch last payload if any
+    fetch('/last').then(r=>r.json()).then(p=>{ if(p && p.players) render(p); }).catch(()=>{});
+  </script>
+</body>
+</html>
