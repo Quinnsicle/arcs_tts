@@ -1,4 +1,5 @@
 local Timer = require("src/Timer")
+local SheetsSender = require("src/SheetsSender")
 
 local Camera = {}
 
@@ -75,6 +76,15 @@ function onTealBoardClick(player, value, id)
     })
 end
 
+function onPinkBoardClick(player, value, id)
+    Player[player.color].lookAt({
+        position = {x=36.7, y=1.48, z=-16.5},
+        pitch = 80,
+        yaw = 0,
+        distance = 13
+    })
+end
+
 function loadCameraTimerMenu(menuOpen)
     -- if menuOpen is nil, leave the cameraControls active state alone
     if menuOpen == nil then
@@ -82,7 +92,8 @@ function loadCameraTimerMenu(menuOpen)
     end
 
     local controlsXml = Camera.generateControlsXml(active_players, Timer.running)
-    local menuXml = Camera.generateMenuXml(menuOpen, controlsXml)
+    local sheetsXml = SheetsSender.generateButtonXml()
+    local menuXml = Camera.generateMenuXml(menuOpen, controlsXml, sheetsXml)
     UI.setXml(menuXml)
 end
 
@@ -115,7 +126,7 @@ function Camera.generateControlsXml(active_players, timer_running)
     )
 end
 
-function Camera.generateMenuXml(menuOpen, controlsXml)
+function Camera.generateMenuXml(menuOpen, controlsXml, sheetsXml)
     return string.format([[
         <Defaults>
             <Button color="black" fontSize="12" />
@@ -146,6 +157,7 @@ function Camera.generateMenuXml(menuOpen, controlsXml)
                 tooltipTextColor="Black"
                 >
             </Button>
+            
             <VerticalLayout
                 id="cameraControls"
                 height="320"
@@ -155,7 +167,9 @@ function Camera.generateMenuXml(menuOpen, controlsXml)
                 %s
             </VerticalLayout>
         </VerticalLayout>
-    ]], tostring(menuOpen), controlsXml)
+
+        %s
+    ]], tostring(menuOpen), controlsXml, sheetsXml)
 end
 
 return Camera

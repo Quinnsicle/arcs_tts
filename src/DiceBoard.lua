@@ -138,6 +138,13 @@ local SCALE_SPECIAL = {2.50, 2.50, 2.50}
 
 local MAX_COMBAT = 6
 local MAX_SPECIAL = 1
+local AUTO_CALC_CHECK_INTERVAL_SECONDS = 0.25
+local AUTO_CALC_REQUIRED_STABLE_CHECKS = 2
+local AUTO_CALC_ROLL_THRESHOLD = 0.05
+local AUTO_CALC_ANGULAR_THRESHOLD = 0.05
+local auto_calculate_after_roll = false
+local auto_calculate_roll_token = 0
+local context_menu_added = false
 
 local DICE = {
     ["skirmish"] = {
@@ -182,6 +189,191 @@ local DICE = {
     }
 }
 
+-- Image URLs for each combat die type.
+local skirmishDieImage = "https://dl.dropboxusercontent.com/s/3kr0xkvssrwuckb/bombard-die.png"
+local assaultDieImage = "https://dl.dropboxusercontent.com/s/6g633hq8t6ba403/asssault-die.png"
+local raidDieImage = "https://dl.dropboxusercontent.com/s/m777tcc1unmox8w/raid-die.png"
+
+local function get_broadcast_color(color_name)
+    local ok, col = pcall(function() return Color.fromString(color_name) end)
+    if ok and col and type(col) == "table" then
+        return col
+    end
+    return {1, 1, 1}
+end
+
+local function vector_magnitude(v)
+    if type(v) ~= "table" then
+        return 0
+    end
+    local x = v.x or v[1] or 0
+    local y = v.y or v[2] or 0
+    local z = v.z or v[3] or 0
+    return math.sqrt((x * x) + (y * y) + (z * z))
+end
+
+local function is_die_moving(die)
+    if not die or (die.isDestroyed and die.isDestroyed()) then
+        return false
+    end
+
+    local linear_speed = 0
+    local angular_speed = 0
+    local resting = nil
+
+    pcall(function()
+        if die.getVelocity then
+            linear_speed = vector_magnitude(die.getVelocity())
+        end
+    end)
+
+    pcall(function()
+        if die.getAngularVelocity then
+            angular_speed = vector_magnitude(die.getAngularVelocity())
+        end
+    end)
+
+    pcall(function()
+        if die.resting ~= nil then
+            resting = die.resting
+        end
+    end)
+
+    if resting == false then
+        return true
+    end
+
+    return linear_speed > AUTO_CALC_ROLL_THRESHOLD or angular_speed > AUTO_CALC_ANGULAR_THRESHOLD
+end
+
+function DiceBoard.AreDiceStillRolling()
+    local dice = DiceBoard.GetDiePool()
+    for _, die in ipairs(dice) do
+        if is_die_moving(die) then
+            return true
+        end
+    end
+    return false
+end
+
+function DiceBoard.ScheduleAutoCalculateAfterRoll(token, player_color)
+    local stable_checks = 0
+
+    local function poll()
+        if token ~= auto_calculate_roll_token then
+            return
+        end
+
+        if DiceBoard.AreDiceStillRolling() then
+            stable_checks = 0
+        else
+            stable_checks = stable_checks + 1
+            if stable_checks >= AUTO_CALC_REQUIRED_STABLE_CHECKS then
+                DiceBoard.UpdateDiceValues(player_color)
+                return
+            end
+        end
+
+        Wait.time(poll, AUTO_CALC_CHECK_INTERVAL_SECONDS)
+    end
+
+    Wait.time(poll, AUTO_CALC_CHECK_INTERVAL_SECONDS)
+end
+
+function DiceBoard.UpdateDiceValues(player_color)
+    local turn_color = nil
+    pcall(function()
+        if Turns and Turns.turn_color and Turns.turn_color ~= "" then
+            turn_color = Turns.turn_color
+        end
+    end)
+    local broadcast_color = get_broadcast_color(turn_color or player_color)
+    local totalSelfHits = 0
+    local totalIntercepts = 0
+    local totalHits = 0
+    local totalBuildingHits = 0
+    local totalKeys = 0
+
+    local dice = getAllObjects()
+    for _, die in ipairs(dice) do
+        if die and die.tag == "Dice" then
+            local customData = nil
+            pcall(function() customData = die.getCustomObject() end)
+            if customData ~= nil then
+                local texture = customData.image
+                local roll = nil
+                pcall(function() roll = die.getValue() end)
+
+                if texture == skirmishDieImage then
+                    if roll == 1 or roll == 3 or roll == 6 then
+                        totalHits = totalHits + 1
+                    end
+                elseif texture == assaultDieImage then
+                    if roll == 1 then
+                        totalHits = totalHits + 2
+                        totalSelfHits = totalSelfHits + 1
+                    elseif roll == 4 then
+                        totalHits = totalHits + 1
+                        totalSelfHits = totalSelfHits + 1
+                    elseif roll == 5 then
+                        totalHits = totalHits + 1
+                        totalIntercepts = totalIntercepts + 1
+                    elseif roll == 6 then
+                        totalHits = totalHits + 1
+                        totalSelfHits = totalSelfHits + 1
+                    elseif roll == 3 then
+                        totalHits = totalHits + 2
+                    end
+                elseif texture == raidDieImage then
+                    if roll == 1 then
+                        totalBuildingHits = totalBuildingHits + 1
+                        totalSelfHits = totalSelfHits + 1
+                    elseif roll == 2 then
+                        totalKeys = totalKeys + 2
+                        totalIntercepts = totalIntercepts + 1
+                    elseif roll == 3 then
+                        totalKeys = totalKeys + 1
+                        totalBuildingHits = totalBuildingHits + 1
+                    elseif roll == 4 then
+                        totalSelfHits = totalSelfHits + 1
+                        totalKeys = totalKeys + 1
+                    elseif roll == 5 then
+                        totalIntercepts = totalIntercepts + 1
+                    elseif roll == 6 then
+                        totalBuildingHits = totalBuildingHits + 1
+                        totalSelfHits = totalSelfHits + 1
+                    end
+                end
+            end
+        end
+    end
+
+    broadcastToAll("-------------------", broadcast_color)
+    broadcastToAll("Self-Hits: " .. totalSelfHits, broadcast_color)
+    broadcastToAll("Intercepts: " .. totalIntercepts, broadcast_color)
+    broadcastToAll("-------------------", broadcast_color)
+    broadcastToAll("Hits: " .. totalHits, broadcast_color)
+    broadcastToAll("Building Hits: " .. totalBuildingHits, broadcast_color)
+    broadcastToAll("-------------------", broadcast_color)
+    broadcastToAll("Keys: " .. totalKeys, broadcast_color)
+    broadcastToAll("-------------------", broadcast_color)
+end
+
+function DiceBoard.AddCalculatorContextMenu()
+    if context_menu_added then
+        return
+    end
+    DICE_BOARD.addContextMenuItem("Chat Results", function(player_color)
+        DiceBoard.UpdateDiceValues(player_color)
+    end)
+    DICE_BOARD.addContextMenuItem("Toggle Chat Auto", function(player_color)
+        auto_calculate_after_roll = not auto_calculate_after_roll
+        local status = auto_calculate_after_roll and "ON" or "OFF"
+        broadcastToAll("Dice Board auto-calculate after roll: " .. status, get_broadcast_color(player_color))
+    end)
+    context_menu_added = true
+end
+
 function DiceBoard.setup(object)
     DICE_BOARD.createButton(UI_skirmish)
     DICE_BOARD.createButton(UI_assault)
@@ -193,6 +385,7 @@ function DiceBoard.setup(object)
     spawns_combat = DiceBoard.CreatePositioningGrid(GRID_COMBAT)
     spawns_special = DiceBoard.CreatePositioningGrid(GRID_SPECIAL)
     DiceBoard.ClearDice()
+    DiceBoard.AddCalculatorContextMenu()
 end
 
 function DiceBoard.SpawnCombatDie(type)
@@ -245,9 +438,13 @@ function DiceBoard.SpawnDie(die, spawn_points)
 
 end
 
-function DiceBoard.RollDice()
+function DiceBoard.RollDice(player_color)
+    auto_calculate_roll_token = auto_calculate_roll_token + 1
     for _, die in pairs(DiceBoard.GetDiePool()) do
         die.randomize()
+    end
+    if auto_calculate_after_roll then
+        DiceBoard.ScheduleAutoCalculateAfterRoll(auto_calculate_roll_token, player_color)
     end
 end
 

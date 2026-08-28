@@ -96,6 +96,27 @@ local function initializeCounters()
             font_size = 365,
             font_color = {1, 1, 1}
         }, {
+            container_GUID = player_pieces_guids["Pink"]["ships"],
+            position = {0.5, 0.06, 0.03},
+            shadow = {0.03, 0, 0.02},
+            scale = {1, 1, 1},
+            font_size = 365,
+            font_color = {1, 1, 1}
+        }, {
+            container_GUID = player_pieces_guids["Pink"]["agents"],
+            position = {0.5, 0.06, 0.03},
+            shadow = {0.03, 0, 0.02},
+            scale = {1, 1, 1},
+            font_size = 365,
+            font_color = {1, 1, 1}
+        }, {
+            container_GUID = player_pieces_guids["Pink"]["starports"],
+            position = {0.5, 0.06, 0.03},
+            shadow = {0.03, 0, 0.02},
+            scale = {1, 1, 1},
+            font_size = 365,
+            font_color = {1, 1, 1}
+        }, {
             container_GUID = Global.getVar("imperial_ships_GUID"),
             position = {0.5, 0.06, 0.03},
             shadow = {0.03, 0, 0.02},
@@ -130,12 +151,39 @@ end
 function ObjectCounters.setup()
     the_counters = initializeCounters()
     for _, counter in pairs(the_counters) do
-        ObjectCounters.add(getObjectFromGUID(counter.container_GUID), counter)
+        local container = nil
+        if counter and counter.container_GUID then
+            container = getObjectFromGUID(counter.container_GUID)
+        end
+        if not container then
+            LOG.WARNING("ObjectCounters.setup: missing container for GUID " .. tostring(counter and counter.container_GUID))
+        else
+            ObjectCounters.add(container, counter)
+        end
     end
 end
 
 function ObjectCounters.add(container, button)
+    if not container then
+        LOG.WARNING("ObjectCounters.add called with nil container")
+        return
+    end
+    local ok, guid = pcall(function() return container.getGUID() end)
+    if not ok or not guid then
+        LOG.WARNING("ObjectCounters.add: could not get GUID from container")
+        return
+    end
+    local existing = container.getButtons() or {}
+
     if (container.type == "Infinite") then
+        -- If buttons already exist, edit them instead of creating duplicates
+        if #existing >= 2 then
+            has_counter[guid] = true
+            container.editButton({index = 0, label = "∞"})
+            container.editButton({index = 1, label = "∞"})
+            return
+        end
+
         container.createButton({
             function_owner = self,
             click_function = "doNothing",
@@ -160,14 +208,23 @@ function ObjectCounters.add(container, button)
             font_size = button.font_size,
             font_color = button.font_color
         })
+        has_counter[guid] = true
         return
     end
 
-    has_counter[container.getGUID()] = true
+    local label = "" .. #container.getObjects()
+    if #existing >= 2 then
+        has_counter[guid] = true
+        container.editButton({index = 0, label = label})
+        container.editButton({index = 1, label = label})
+        return
+    end
+
+    has_counter[guid] = true
     container.createButton({
         function_owner = self,
         click_function = "doNothing",
-        label = "" .. #container.getObjects(),
+        label = label,
         position = Vector(button.shadow) + Vector(button.position),
         rotation = button.rotation and button.rotation or {0, 0, 0},
         width = 0,
@@ -179,7 +236,7 @@ function ObjectCounters.add(container, button)
     container.createButton({
         function_owner = self,
         click_function = "doNothing",
-        label = "" .. #container.getObjects(),
+        label = label,
         position = button.position,
         rotation = button.rotation and button.rotation or {0, 0, 0},
         width = 0,

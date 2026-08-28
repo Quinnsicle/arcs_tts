@@ -55,7 +55,7 @@ end
 function Timer.reset()
     Timer.running = false
     Timer.start_time = 0
-    for _, color in ipairs({"Red", "White", "Yellow", "Teal"}) do
+    for _, color in ipairs({"Red", "White", "Yellow", "Teal", "Pink"}) do
         Timer.player_timers[color] = 0
         Timer.updateDisplay(color)
     end
@@ -105,7 +105,8 @@ function Timer.generatePlayerTimerDisplays(active_players)
         Red = "#FF0000",
         White = "#FFFFFF",
         Yellow = "#FFFF00",
-        Teal = "#00FFFF"
+        Teal = "#00FFFF",
+        Pink = "#FF69B4"
     }
 
     for _, player in ipairs(active_players) do
@@ -134,7 +135,7 @@ end
 
 function Timer.getTotalTime()
     local total = 0
-    for _, color in ipairs({"Red", "White", "Yellow", "Teal"}) do
+    for _, color in ipairs({"Red", "White", "Yellow", "Teal", "Pink"}) do
         total = total + (Timer.player_timers[color] or 0)
     end
     return total
